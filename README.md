@@ -21,7 +21,7 @@ Deactivate by:\
 
 ## Usage
 Using the script is as follows, start with:\
-`./pd/demo_remote_comments.py [l/rx]`
+`python3 pd/demo_remote_comments.py [l/rx]`
 
 The options are:\
 l = local\

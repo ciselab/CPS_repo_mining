@@ -19,3 +19,4 @@ pytest-mock==3.3.1
 six==1.15.0
 toml==0.10.1
 zipp==3.4.0
+mutmut==2.1.0
