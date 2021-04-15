@@ -18,20 +18,36 @@ remote = ["https://github.com/nasa-jpl/open-source-rover.git",
 local = ""
 
 
-def print_repository_info(url):
-    """Print information about current run"""
+def print_repository_info(url: str):
+    """
+    Print information about current run
+
+    Args:
+        url: Repository url
+    """
     print(f"Repository: {url}")
     print(f"Searching for: {keyword_list}")
 
 
-def print_commit_header(commit):
-    """Print information about the commit"""
+def print_commit_header(commit: object):
+    """
+    Print information about the commit
+
+    Args:
+        commit: The full commit.
+    """
     print(f"\nhash: {commit.hash}\ndate: {commit.committer_date}\nmessage: {commit.msg}")
     print("modified file(s):")
 
 
-def choose_repository(option):
-    """Returns the repository URL for the given option"""
+def choose_repository(option: str) -> str:
+    """
+    Returns the repository URL for the given option
+
+    Args:
+        option: Choice for local or remote repository.
+                With remote option, added which one.
+    """
     if "r" in option:
         n = int(option.replace('r', ''))
         if (n >= 1) and (n <= len(remote)):
@@ -50,11 +66,17 @@ def choose_repository(option):
             return None
     else:
         print("Invalid option, options are l (for local) or r (for remote).")
+        return None
     return url
 
 
-def dig(url):
-    """Starts the mining process on the repository indicated by the given URL"""
+def dig(url: str):
+    """
+    Starts the mining process on the repository indicated by the given URL
+
+    Args:
+        url: Url of chosen repository.
+    """
     mine = RepositoryMining(url, since=starting_date)
 
     for commit in mine.traverse_commits():
@@ -67,16 +89,27 @@ def dig(url):
             continue
 
 
-def main():
-    """Main entry point when run as script"""
-    if len(sys.argv) > 1:
-        print(f"Input: {sys.argv[1]}")
-        url = choose_repository(sys.argv[1])
+def main(user_input: list = None):
+    """
+    Main entry point when run as script
+
+    Args:
+        user_input: argv[1]: Input from user, local vs remote repository.<br/>
+        [l] = local; [rx] = remote, where x is the number in the list.
+    """
+    if not user_input:
+        user_input = sys.argv
+    if len(user_input) > 1:
+        print(f"Input: {user_input[1]}")
+        url = choose_repository(user_input[1])
         if url is not None:
             print_repository_info(url)
             dig(url)
     else:
-        print("Expected: l=local, r1=remote NASA robot, r2=remote netdata")
+        print("Expected: l for local, or rx for remote.")
+        print(f"l: {local}")
+        for i, url in enumerate(remote):
+            print(f"r{i}: {url}")
 
 
 if __name__ == "__main__":

@@ -28,6 +28,28 @@ l = local\
 r1 = remote NASA robot\
 r2 = remote netdata
 
-## Pytest
+## Generate reports
+To generate coverage, mutation and docstring reports, run:\
+`./generate_reports`
+
+## Manual generating reports
+Be aware that the location for the reports that are made for pdoc and mutmut end in the same diractory.\
+Run pdoc with --force to run it anyway.
+
+### Pytest
 In order to run pytest:\
 `pytest`
+
+To generate the pytest report:\
+`pytest --cov-report html --cov=pd`
+
+### Mutation testing
+In order to run mutmut:\
+`mutmut run`
+
+To generate the mutmut report:\
+`mutmut html`
+
+### PDoc
+In order to run python docstring documentation report:\
+`pdoc --html pdoc`
