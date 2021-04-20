@@ -44,7 +44,8 @@ def choose_repository(option: str) -> Tuple[str, list]:
 
     Args:
         option: Choice for local or remote repository.
-                With remote option, added which one or all.
+                Value behind l/r to choose which repository from the list.
+                Possible to choose all remote repositories.
     """
     url = None
     urls = None
@@ -60,11 +61,20 @@ def choose_repository(option: str) -> Tuple[str, list]:
             return None
     elif option == 'a':
         urls = ls.remote
-    elif option == 'l':
-        if ls.local and path.exists(path.expanduser(ls.local)):
-            url = ls.local
+    elif 'l' in option:
+        n = int(option.replace('l', ''))
+        if (n >= 1) and (n <= len(ls.local)):
+            url_check = ls.local[n-1]
         else:
-            print("Empty string for local repository.")
+            if not ls.remote:
+                print("Empty list of repositories.")
+            else:
+                print(f"Invalid option, out of range, options 1 to {len(ls.remote)}.")
+            return None
+        if path.exists(path.expanduser(url_check)):
+            url = url_check
+        else:
+            print(f"Path {url_check} does not exist.")
             return None
     else:
         print("Invalid option, options are l (for local) or r (for remote).")
@@ -97,7 +107,8 @@ def main(user_input: list = None):
 
     Args:
         user_input: argv[1]: Input from user, local vs remote repository.<br/>
-        [l] = local; [rx] = remote, where x is the number in the list; [a] = all remote repositorie.
+        [lx] = local, [rx] = remote: where x is the number in the list;
+        [a] = all remote repositories.
     """
     if not user_input:
         user_input = sys.argv
@@ -112,8 +123,9 @@ def main(user_input: list = None):
                 print_repository_info(url)
                 dig(url)
     else:
-        print("Expected: [l] for local, [rx] for remote or [a] for all remote repositories.")
-        print(f"l: {ls.local}")
+        print("Expected: [lx] for local, [rx] for remote or [a] for all remote repositories.")
+        for i, url in enumerate(ls.local):
+            print(f"l{i}: {url}")
         for i, url in enumerate(ls.remote):
             print(f"r{i}: {url}")
 

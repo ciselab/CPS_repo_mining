@@ -1,11 +1,13 @@
 #!/usr/bin/env python
 """
 List of the remote repositories,
-string of the local repository.
+list of local repositories.
 """
 
 remote = ["https://github.com/carla-simulator/carla.git",
           "https://github.com/microsoft/AirSim.git",
           "https://github.com/BeamNG/BeamNGpy"]
 
-local = ""
+local = ["~/repo/AirSim",
+         "~/repo/BeamNGpy",
+         "~/repo/carla"]
