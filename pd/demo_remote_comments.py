@@ -5,15 +5,11 @@ Focus on the content of commit messages.
 """
 
 from pydriller import RepositoryMining
-import datetime
 import sys
 from os import path
 import pd.repo_lists as ls
 from pd.key_list import keyword_list
 from typing import Tuple
-
-
-starting_date = datetime.datetime(2020, 2, 1, 0, 0)
 
 
 def print_repository_info(url: str):
@@ -50,31 +46,45 @@ def choose_repository(option: str) -> Tuple[str, list]:
     url = None
     urls = None
     if "r" in option:
-        n = int(option.replace('r', ''))
-        if (n >= 1) and (n <= len(ls.remote)):
-            url = ls.remote[n-1]
-        else:
-            if not ls.remote:
-                print("Empty list of repositories.")
+        if len(option) > 1:
+            n = int(option.replace('r', ''))
+            if (n >= 1) and (n <= len(ls.remote)):
+                url = ls.remote[n-1]
             else:
-                print(f"Invalid option, out of range, options 1 to {len(ls.remote)}.")
+                if not ls.remote:
+                    print("Empty list of repositories.")
+                else:
+                    print(f"Invalid option, out of range, options 1 to {len(ls.remote)}.")
+                return None
+        else:
+            print("Invalid option, no repository selected.")
+            print("Options for remote are:")
+            for i, url in enumerate(ls.remote):
+                print(f"r{i}: {url}")
             return None
     elif option == 'a':
         urls = ls.remote
     elif 'l' in option:
-        n = int(option.replace('l', ''))
-        if (n >= 1) and (n <= len(ls.local)):
-            url_check = ls.local[n-1]
-        else:
-            if not ls.remote:
-                print("Empty list of repositories.")
+        if len(option) > 1:
+            n = int(option.replace('l', ''))
+            if (n >= 1) and (n <= len(ls.local)):
+                url_check = ls.local[n-1]
             else:
-                print(f"Invalid option, out of range, options 1 to {len(ls.remote)}.")
-            return None
-        if path.exists(path.expanduser(url_check)):
-            url = url_check
+                if not ls.local:
+                    print("Empty list of repositories.")
+                else:
+                    print(f"Invalid option, out of range, options 1 to {len(ls.local)}.")
+                return None
+            if path.exists(path.expanduser(url_check)):
+                url = url_check
+            else:
+                print(f"Path {url_check} does not exist.")
+                return None
         else:
-            print(f"Path {url_check} does not exist.")
+            print("Invalid option, no repository selected.")
+            print("Options for local are:")
+            for i, url in enumerate(ls.local):
+                print(f"l{i}: {url}")
             return None
     else:
         print("Invalid option, options are l (for local) or r (for remote).")
@@ -89,7 +99,7 @@ def dig(url: str):
     Args:
         url: Url of chosen repository.
     """
-    mine = RepositoryMining(url, since=starting_date)
+    mine = RepositoryMining(url)
 
     for commit in mine.traverse_commits():
         if any(keyword.lower() in commit.msg.lower() for keyword in keyword_list):
