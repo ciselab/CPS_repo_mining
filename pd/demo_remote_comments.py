@@ -8,14 +8,12 @@ from pydriller import RepositoryMining
 import datetime
 import sys
 from os import path
+import pd.repo_lists as ls
+from pd.key_list import keyword_list
+from typing import Tuple
 
 
-keyword_list = ['performance', 'Added', 'Ubuntu']
 starting_date = datetime.datetime(2020, 2, 1, 0, 0)
-
-remote = ["https://github.com/nasa-jpl/open-source-rover.git",
-          "https://github.com/netdata/netdata.git"]
-local = ""
 
 
 def print_repository_info(url: str):
@@ -40,34 +38,38 @@ def print_commit_header(commit: object):
     print("modified file(s):")
 
 
-def choose_repository(option: str) -> str:
+def choose_repository(option: str) -> Tuple[str, list]:
     """
-    Returns the repository URL for the given option
+    Returns the repository URL(s) for the given option
 
     Args:
         option: Choice for local or remote repository.
-                With remote option, added which one.
+                With remote option, added which one or all.
     """
+    url = None
+    urls = None
     if "r" in option:
         n = int(option.replace('r', ''))
-        if (n >= 1) and (n <= len(remote)):
-            url = remote[n-1]
+        if (n >= 1) and (n <= len(ls.remote)):
+            url = ls.remote[n-1]
         else:
-            if not remote:
+            if not ls.remote:
                 print("Empty list of repositories.")
             else:
-                print(f"Invalid option, out of range, options 1 to {len(remote)}.")
+                print(f"Invalid option, out of range, options 1 to {len(ls.remote)}.")
             return None
+    elif option == 'a':
+        urls = ls.remote
     elif option == 'l':
-        if local and path.exists(path.expanduser(local)):
-            url = local
+        if ls.local and path.exists(path.expanduser(ls.local)):
+            url = ls.local
         else:
             print("Empty string for local repository.")
             return None
     else:
         print("Invalid option, options are l (for local) or r (for remote).")
         return None
-    return url
+    return url, urls
 
 
 def dig(url: str):
@@ -95,20 +97,24 @@ def main(user_input: list = None):
 
     Args:
         user_input: argv[1]: Input from user, local vs remote repository.<br/>
-        [l] = local; [rx] = remote, where x is the number in the list.
+        [l] = local; [rx] = remote, where x is the number in the list; [a] = all remote repositorie.
     """
     if not user_input:
         user_input = sys.argv
     if len(user_input) > 1:
         print(f"Input: {user_input[1]}")
-        url = choose_repository(user_input[1])
+        url, urls = choose_repository(user_input[1])
         if url is not None:
             print_repository_info(url)
             dig(url)
+        elif urls is not None:
+            for url in urls:
+                print_repository_info(url)
+                dig(url)
     else:
-        print("Expected: l for local, or rx for remote.")
-        print(f"l: {local}")
-        for i, url in enumerate(remote):
+        print("Expected: [l] for local, [rx] for remote or [a] for all remote repositories.")
+        print(f"l: {ls.local}")
+        for i, url in enumerate(ls.remote):
             print(f"r{i}: {url}")
 
 
