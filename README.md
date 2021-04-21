@@ -24,9 +24,9 @@ Using the script is as follows, start with:\
 `python3 pd/demo_remote_comments.py [l/rx]`
 
 The options are:\
-l = local\
-r1 = remote NASA robot\
-r2 = remote netdata
+lx = local\
+rx = remote\
+Where x stands for the number in the reposotory list.
 
 ## Generate reports
 To generate coverage, mutation and docstring reports, run:\
