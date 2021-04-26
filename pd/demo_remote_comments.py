@@ -5,11 +5,12 @@ Focus on the content of commit messages.
 """
 
 from pydriller import RepositoryMining
+from pydriller.domain.commit import Commit
 import sys
 from os import path
 import pd.repo_lists as ls
 from pd.key_list import keyword_list
-from typing import Tuple
+from typing import Tuple, Optional
 
 
 def print_repository_info(url: str):
@@ -23,7 +24,7 @@ def print_repository_info(url: str):
     print(f"Searching for: {keyword_list}")
 
 
-def print_commit_header(commit: object):
+def print_commit_header(commit: Commit):
     """
     Print information about the commit
 
@@ -34,7 +35,26 @@ def print_commit_header(commit: object):
     print("modified file(s):")
 
 
-def choose_repository(option: str) -> Tuple[str, list]:
+def repository_from_list(location: list, n: int) -> Optional[str]:
+    """
+    Returns one URL from the list of urls.
+
+    Args:
+        location: List of repositories, can be the local or remote list.
+        n: Place number of the repository in the list.
+    """
+    if (n >= 1) and (n <= len(location)):
+        url = location[n - 1]
+    else:
+        if not location:
+            print("Empty list of repositories.")
+        else:
+            print(f"Invalid option, out of range, options 1 to {len(location)}.")
+        return None
+    return url
+
+
+def choose_repository(option: str) -> Optional[Tuple[str, list]]:
     """
     Returns the repository URL(s) for the given option
 
@@ -48,13 +68,8 @@ def choose_repository(option: str) -> Tuple[str, list]:
     if "r" in option:
         if len(option) > 1:
             n = int(option.replace('r', ''))
-            if (n >= 1) and (n <= len(ls.remote)):
-                url = ls.remote[n-1]
-            else:
-                if not ls.remote:
-                    print("Empty list of repositories.")
-                else:
-                    print(f"Invalid option, out of range, options 1 to {len(ls.remote)}.")
+            url = repository_from_list(ls.remote, n)
+            if not url:
                 return None
         else:
             print("Invalid option, no repository selected.")
@@ -67,18 +82,11 @@ def choose_repository(option: str) -> Tuple[str, list]:
     elif 'l' in option:
         if len(option) > 1:
             n = int(option.replace('l', ''))
-            if (n >= 1) and (n <= len(ls.local)):
-                url_check = ls.local[n-1]
-            else:
-                if not ls.local:
-                    print("Empty list of repositories.")
-                else:
-                    print(f"Invalid option, out of range, options 1 to {len(ls.local)}.")
+            url = repository_from_list(ls.local, n)
+            if not url:
                 return None
-            if path.exists(path.expanduser(url_check)):
-                url = url_check
-            else:
-                print(f"Path {url_check} does not exist.")
+            if not path.exists(path.expanduser(url)):
+                print(f"Path {url} does not exist.")
                 return None
         else:
             print("Invalid option, no repository selected.")
