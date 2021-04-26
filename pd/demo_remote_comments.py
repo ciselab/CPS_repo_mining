@@ -4,6 +4,7 @@ Tryout of PyDriller for remote & local repositories.
 Focus on the content of commit messages.
 """
 
+import re
 from pydriller import RepositoryMining
 from pydriller.domain.commit import Commit
 import sys
@@ -110,14 +111,15 @@ def dig(url: str):
     mine = RepositoryMining(url)
 
     for commit in mine.traverse_commits():
-        if any(keyword.lower() in commit.msg.lower() for keyword in keyword_list):
-            # Ignore merge pull request commits
-            if commit.modifications:
-                print_commit_header(commit)
-            for file_number, modified_file in enumerate(commit.modifications):
-                print(f">>> {modified_file.filename}")
-        else:
-            continue
+        for keyword in keyword_list:
+            if re.search(r"\b" + keyword.lower() + r"\b", commit.msg.lower()):
+                # Ignore merge pull request commits
+                if commit.modifications:
+                    print_commit_header(commit)
+                    print(f"First found keyword: {keyword}")
+                for file_number, modified_file in enumerate(commit.modifications):
+                    print(f">>> {modified_file.filename}")
+                break
 
 
 def main(user_input: list = None):
