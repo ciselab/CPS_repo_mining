@@ -80,6 +80,8 @@ def choose_repository(option: str) -> Optional[Tuple[str, list]]:
             return None
     elif option == 'a':
         urls = ls.remote
+    elif option == 'h':
+        urls = ls.local
     elif 'l' in option:
         if len(option) > 1:
             n = int(option.replace('l', ''))
@@ -96,7 +98,8 @@ def choose_repository(option: str) -> Optional[Tuple[str, list]]:
                 print(f"l{i}: {url}")
             return None
     else:
-        print("Invalid option, options are l (for local) or r (for remote).")
+        print("Invalid option: options are l (for local) or r (for remote),")
+        print("h (for all local) or a (for all remote).")
         return None
     return url, urls
 
@@ -129,7 +132,8 @@ def main(user_input: list = None):
     Args:
         user_input: argv[1]: Input from user, local vs remote repository.<br/>
         [lx] = local, [rx] = remote: where x is the number in the list;
-        [a] = all remote repositories.
+        [a] = all remote repositories;
+        [h] = all local repositories.
     """
     if not user_input:
         user_input = sys.argv
@@ -144,7 +148,7 @@ def main(user_input: list = None):
                 print_repository_info(url)
                 dig(url)
     else:
-        print("Expected: [lx] for local, [rx] for remote or [a] for all remote repositories.")
+        print("Expected: [lx] for local, [rx] for remote, [a] for all remote and [h] for all local repositories.")
         for i, url in enumerate(ls.local):
             print(f"l{i}: {url}")
         for i, url in enumerate(ls.remote):
