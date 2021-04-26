@@ -32,7 +32,7 @@ def print_commit_header(commit: Commit):
         commit: The full commit.
     """
     print(f"\nhash: {commit.hash}\ndate: {commit.committer_date}\nmessage: {commit.msg}")
-    print("modified file(s):")
+    print(f"modified file(s): {commit.files}")
 
 
 def repository_from_list(location: list, n: int) -> Optional[str]:
@@ -111,8 +111,9 @@ def dig(url: str):
 
     for commit in mine.traverse_commits():
         if any(keyword.lower() in commit.msg.lower() for keyword in keyword_list):
-            print_commit_header(commit)
-
+            # Ignore merge pull request commits
+            if commit.modifications:
+                print_commit_header(commit)
             for file_number, modified_file in enumerate(commit.modifications):
                 print(f">>> {modified_file.filename}")
         else:
