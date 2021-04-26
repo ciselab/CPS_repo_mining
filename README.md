@@ -26,14 +26,16 @@ Using the script is as follows, start with:\
 The options are:\
 lx = local\
 rx = remote\
-Where x stands for the number in the reposotory list.
+h = all local\
+a = all remote\
+Where x stands for the number in the repository list.
 
 ## Generate reports
 To generate coverage, mutation and docstring reports, run:\
 `./generate_reports`
 
 ## Manual generating reports
-Be aware that the location for the reports that are made for pdoc and mutmut end in the same diractory.\
+Be aware that the location for the reports that are made for pdoc and mutmut end in the same directory.\
 Run pdoc with --force to run it anyway.
 
 ### Pytest
