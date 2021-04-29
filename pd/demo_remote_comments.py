@@ -112,6 +112,7 @@ def dig(url: str):
         url: Url of chosen repository.
     """
     mine = RepositoryMining(url)
+    number_of_commits = 0
 
     for commit in mine.traverse_commits():
         for keyword in keyword_list:
@@ -119,10 +120,12 @@ def dig(url: str):
                 # Ignore merge pull request commits
                 if commit.modifications:
                     print_commit_header(commit)
+                    number_of_commits += 1
                     print(f"First found keyword: {keyword}")
-                for file_number, modified_file in enumerate(commit.modifications):
+                for modified_file in commit.modifications:
                     print(f">>> {modified_file.filename}")
                 break
+    return number_of_commits
 
 
 def main(user_input: list = None):
