@@ -1,6 +1,7 @@
 import pytest
 from pd.repository_commits_mining import choose_repository as cr
 from pd.repository_commits_mining import dig
+from pd.repository_commits_mining import user_input_is_valid as uiv
 import data_repo_lists as drl
 import mock_git as nc
 import data_commit as dm
@@ -197,3 +198,46 @@ def test_keywords(new_keywords: list, hs: Tuple, messages: Tuple,
 
     mocker.patch("pydriller.RepositoryMining.traverse_commits", return_new_commits)
     assert dig("TEST") == response
+
+
+@pytest.mark.parametrize("user_input, response", [
+    pytest.param("la", True, id="la"),
+    pytest.param("ra", True, id="ra"),
+    pytest.param("l1", True, id="l1"),
+    pytest.param("l2", True, id="l2"),
+    pytest.param("r1", True, id="r1"),
+    pytest.param("r9", True, id="r9"),
+    pytest.param("l99", True, id="l99"),
+    pytest.param("r99", True, id="r99"),
+    pytest.param("l101", True, id="l101"),
+    pytest.param("r101", True, id="r101"),
+    pytest.param("a", False, id="False: a"),
+    pytest.param("aa", False, id="False: aa"),
+    pytest.param("1", False, id="False: 1"),
+    pytest.param("11", False, id="False: 11"),
+    pytest.param("l", False, id="False: l"),
+    pytest.param("r", False, id="False: r"),
+    pytest.param("l0", False, id="False: l0"),
+    pytest.param("r0", False, id="False: r0"),
+    pytest.param("00", False, id="False: 00"),
+    pytest.param("lb", False, id="False: lb"),
+    pytest.param("rb", False, id="False: rb"),
+    pytest.param("l1l2", False, id="False: l1l2"),
+    pytest.param("r1r2", False, id="False: r1r2"),
+    pytest.param("l1r2", False, id="False: l1r2"),
+    pytest.param("r1l2", False, id="False: r1l2"),
+    pytest.param("", False, id="False: EMPTY"),
+    pytest.param("l-1", False, id="False: l-1"),
+    pytest.param("r-1", False, id="False: r-1"),
+])
+def test_user_input_is_valid(user_input: str, response: bool):
+    """
+    Tests the user_input_is_valid function against expected accepted and rejected input.
+
+    Args:
+        user_input: Different valid and invalid user input.
+        response: Expected return.
+
+    """
+    assert uiv(user_input) == response
+
