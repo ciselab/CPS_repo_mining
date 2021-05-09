@@ -6,67 +6,55 @@ import data_repo_lists as drl
 import mock_git as nc
 import data_commit as dm
 import pd.key_list as key_list
-from typing import Tuple
+from typing import Tuple, Any, Optional
 
 
 @pytest.mark.parametrize("remote_p, option, response", [
-    pytest.param(drl.remote,
-                 "r1", [drl.remote[0]],
-                 id="input=r1"),
-    pytest.param(drl.remote,
-                 "r2", [drl.remote[1]],
-                 id="input=r2"),
-    pytest.param(drl.remote,
-                 "r3", [drl.remote[2]],
-                 id="input=r3"),
-    pytest.param(drl.remote,
-                 "r4", None,
-                 id="invalid input=r4"),
-    pytest.param(drl.remote,
-                 "r-1", None,
-                 id="invalid input=r-1"),
-    pytest.param([],
-                 "r1", None,
-                 id="input=r1, empty remote list"),
-    pytest.param([],
-                 "r", None,
-                 id="invalid input=r, missing number"),
+    pytest.param(drl.remote, "r1", [drl.remote[0]], id="input=r1"),
+    pytest.param(drl.remote, "r2", [drl.remote[1]], id="input=r2"),
+    pytest.param(drl.remote, "r3", [drl.remote[2]], id="input=r3"),
+    pytest.param(drl.remote, "r4", None, id="invalid input=r4"),
+    pytest.param(drl.remote, "r-1", None, id="invalid input=r-1"),
+    pytest.param([], "r1", None, id="input=r1, empty remote list"),
+    pytest.param([], "r", None, id="invalid input=r, missing number"),
 ])
-def test_remote_url_list_length(remote_p, option, response, mocker):
+def test_remote_url_list_length(remote_p: list, option: str, response: Optional[list], mocker):
     """
     Checks remote list usage with rx options.
+
+    Args:
+        remote_p: List of the remote repository
+        option: User input
+        response: Expected response
+        mocker: Using a mocker
+
     """
     mocker.patch('pd.repo_lists.remote', remote_p)
     print(f"{cr(option)}")
     assert cr(option) == response
 
 
-@pytest.mark.parametrize("local_p, name, option, number, response", [
-    pytest.param(drl.local, drl.local[0],
-                 "l1", 0, [drl.local[0]],
-                 id="input=l1"),
-    pytest.param(drl.local, drl.local[1],
-                 "l2", 1, [drl.local[1]],
-                 id="input=l2"),
-    pytest.param(drl.local, drl.local[2],
-                 "l3", 2, [drl.local[2]],
-                 id="input=l3"),
-    pytest.param(drl.local, "foo",
-                 "l-1", 1, None,
-                 id="invalid input=l-1"),
-    pytest.param(drl.local, "foo",
-                 "l4", 4, None,
-                 id="invalid input=l4"),
-    pytest.param([], "foo",
-                 "l1", 1, None,
-                 id="input=l1, empty local list"),
-    pytest.param([], "foo",
-                 "l", 1, None,
-                 id="input=l, missing number"),
+@pytest.mark.parametrize("local_p, option, number, response", [
+    pytest.param(drl.local, "l1", 0, [drl.local[0]], id="input=l1"),
+    pytest.param(drl.local, "l2", 1, [drl.local[1]], id="input=l2"),
+    pytest.param(drl.local, "l3", 2, [drl.local[2]], id="input=l3"),
+    pytest.param(drl.local, "l-1", 1, None, id="invalid input=l-1"),
+    pytest.param(drl.local, "l4", 4, None, id="invalid input=l4"),
+    pytest.param([], "l1", 1, None, id="input=l1, empty local list"),
+    pytest.param([], "l", 1, None, id="input=l, missing number"),
 ])
-def test_local_url_list_length(local_p, name, option, number, response, mocker, tmpdir):
+def test_local_url_list_length(local_p: list, option: str, number: int, response: Optional[list], mocker, tmpdir):
     """
     Checks local list usage with lx options.
+
+    Args:
+        local_p: List of the local repository
+        option: User input
+        number: Location in the list of the requested repository
+        response: Expected response
+        mocker: Using a mocker
+        tmpdir: Using a temporary directory
+
     """
     new_local_p = []
     response_new = []
@@ -85,35 +73,47 @@ def test_local_url_list_length(local_p, name, option, number, response, mocker, 
 def test_local_non_existing_dir(mocker):
     """
     Non-existing directory
+
+    Args:
+        mocker: Using a mocker
+
     """
     mocker.patch('pd.repo_lists.local', ["non-existing-repo"])
     assert cr("l1") is None
 
 
-@pytest.mark.parametrize("option, response", [
-    pytest.param("z", None, id="Invalid input=z"),
-    pytest.param("1", None, id="Invalid input=1"),
-    pytest.param("&", None, id="Invalid input=&"),
+@pytest.mark.parametrize("option", [
+    pytest.param("z", id="Invalid input=z"),
+    pytest.param("1", id="Invalid input=1"),
+    pytest.param("&", id="Invalid input=&"),
 ])
-def test_other_input(option, response):
+def test_other_input(option: str):
     """
     Invalid input
+
+    Args:
+        option: Invalid user input.
+
     """
     print(f"{cr(option)}")
-    assert cr(option) == response
+    assert cr(option) is None
 
 
 @pytest.mark.parametrize("type_list, list_p, option, response", [
-    pytest.param("remote", drl.remote,
-                 "ra", drl.remote,
-                 id="input=ra"),
-    pytest.param("local", drl.local,
-                 "la", drl.local,
-                 id="input=la"),
+    pytest.param("remote", drl.remote, "ra", drl.remote, id="input=ra"),
+    pytest.param("local", drl.local, "la", drl.local, id="input=la"),
 ])
-def test_input_all(type_list, list_p, option, response, mocker):
+def test_input_all(type_list: str, list_p: list, option: str, response: list, mocker):
     """
     Input: all remote repositories
+
+    Args:
+        type_list: Using a remote or local repository
+        list_p: Given the repository list
+        option: User input
+        response: List of the expected repository
+        mocker: Using a mocker
+
     """
     patch_list = "pd.repo_lists."+type_list
     mocker.patch(patch_list, list_p)
@@ -179,6 +179,7 @@ def test_keywords(new_keywords: list, hs: Tuple, messages: Tuple,
                   files_name: Tuple, committer_date: Tuple, response: int, mocker):
     """
     Tests for keywords in a commit message.
+    Response of the dig function with the test input.
 
     Args:
         new_keywords: List of keywords
@@ -189,11 +190,8 @@ def test_keywords(new_keywords: list, hs: Tuple, messages: Tuple,
         response: expected result from test
         mocker: mocker is being used in this test
 
-    Returns:
-        Response of the dig function with the test input.
-
     """
-    def return_new_commits(_foo):
+    def return_new_commits(_foo: Any) -> list:
         return use_new_commits(hs, messages, committer_date, files_name)
 
     mocker.patch("pydriller.RepositoryMining.traverse_commits", return_new_commits)
@@ -240,4 +238,3 @@ def test_user_input_is_valid(user_input: str, response: bool):
 
     """
     assert uiv(user_input) == response
-
