@@ -21,7 +21,7 @@ Deactivate by:\
 
 ## Usage
 Using the script is as follows, start with:\
-`python3 pd/demo_remote_comments.py [lx/rx/h/a]`
+`python3 pd/repository_commits_mining.py [lx/rx/la/ra]`
 
 The options are:\
 lx = local\

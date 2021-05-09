@@ -1,6 +1,6 @@
 import pytest
-from pd.demo_remote_comments import choose_repository as cr
-from pd.demo_remote_comments import dig
+from pd.repository_commits_mining import choose_repository as cr
+from pd.repository_commits_mining import dig
 import data_repo_lists as drl
 import mock_git as nc
 import data_commit as dm
