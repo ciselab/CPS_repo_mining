@@ -38,11 +38,14 @@ def print_commit_header(commit: Commit):
 
 def repository_from_list(location: list, n: int) -> Optional[str]:
     """
-    Returns one URL from the list of urls.
+    Use a list of repositories for selecting a single repository.
 
     Args:
         location: List of repositories, can be the local or remote list.
         n: Place number of the repository in the list.
+
+    Returns:
+        One URL from the list of urls.
     """
     if (n >= 1) and (n <= len(location)):
         url = location[n - 1]
@@ -57,12 +60,15 @@ def repository_from_list(location: list, n: int) -> Optional[str]:
 
 def choose_repository(option: str) -> Optional[Tuple[str, list]]:
     """
-    Returns the repository URL(s) for the given option
+    Choose which repositories to use.
 
     Args:
         option: Choice for local or remote repository.
                 Value behind l/r to choose which repository from the list.
                 Possible to choose all remote repositories.
+
+    Returns:
+        The repository URL(s) for the given option.
     """
     url = None
     urls = None
@@ -97,12 +103,15 @@ def choose_repository(option: str) -> Optional[Tuple[str, list]]:
     return url, urls
 
 
-def dig(url: str):
+def dig(url: str) -> int:
     """
     Starts the mining process on the repository indicated by the given URL
 
     Args:
         url: Url of chosen repository.
+
+    Returns:
+        Number of commits.
     """
     mine = RepositoryMining(url)
     number_of_commits = 0
