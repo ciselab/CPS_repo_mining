@@ -10,13 +10,13 @@ from typing import Tuple
 
 @pytest.mark.parametrize("remote_p, option, response", [
     pytest.param(drl.remote,
-                 "r1", (drl.remote[0], None),
+                 "r1", [drl.remote[0]],
                  id="input=r1"),
     pytest.param(drl.remote,
-                 "r2", (drl.remote[1], None),
+                 "r2", [drl.remote[1]],
                  id="input=r2"),
     pytest.param(drl.remote,
-                 "r3", (drl.remote[2], None),
+                 "r3", [drl.remote[2]],
                  id="input=r3"),
     pytest.param(drl.remote,
                  "r4", None,
@@ -42,13 +42,13 @@ def test_remote_url_list_length(remote_p, option, response, mocker):
 
 @pytest.mark.parametrize("local_p, name, option, number, response", [
     pytest.param(drl.local, drl.local[0],
-                 "l1", 0, [drl.local[0], None],
+                 "l1", 0, [drl.local[0]],
                  id="input=l1"),
     pytest.param(drl.local, drl.local[1],
-                 "l2", 1, [drl.local[1], None],
+                 "l2", 1, [drl.local[1]],
                  id="input=l2"),
     pytest.param(drl.local, drl.local[2],
-                 "l3", 2, [drl.local[2], None],
+                 "l3", 2, [drl.local[2]],
                  id="input=l3"),
     pytest.param(drl.local, "foo",
                  "l-1", 1, None,
@@ -68,14 +68,14 @@ def test_local_url_list_length(local_p, name, option, number, response, mocker, 
     Checks local list usage with lx options.
     """
     new_local_p = []
-    response_new = ()
+    response_new = []
     for each in range(len(local_p)):
         new = tmpdir.mkdir(local_p[each])
         new_local_p.append(new)
     mocker.patch('pd.repo_lists.local', new_local_p)
     if type(response) is list:
         if response[0] is not None:
-            response_new = (new_local_p[number], None)
+            response_new = [new_local_p[number]]
     else:
         response_new = response
     assert cr(option) == response_new
@@ -104,11 +104,11 @@ def test_other_input(option, response):
 
 @pytest.mark.parametrize("type_list, list_p, option, response", [
     pytest.param("remote", drl.remote,
-                 "ra", (None, drl.remote),
-                 id="input=a"),
+                 "ra", drl.remote,
+                 id="input=ra"),
     pytest.param("local", drl.local,
-                 "la", (None, drl.local),
-                 id="input=h"),
+                 "la", drl.local,
+                 id="input=la"),
 ])
 def test_input_all(type_list, list_p, option, response, mocker):
     """

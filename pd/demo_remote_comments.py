@@ -11,7 +11,7 @@ import sys
 from os import path
 import pd.repo_lists as ls
 from pd.key_list import keyword_list
-from typing import Tuple, Optional
+from typing import Optional
 
 
 def print_repository_info(url: str):
@@ -36,7 +36,7 @@ def print_commit_header(commit: Commit):
     print(f"modified file(s): {commit.files}")
 
 
-def repository_from_list(location: list, n: int) -> Optional[str]:
+def repository_from_list(location: list, n: int) -> Optional[list]:
     """
     Use a list of repositories for selecting a single repository.
 
@@ -45,10 +45,10 @@ def repository_from_list(location: list, n: int) -> Optional[str]:
         n: Place number of the repository in the list.
 
     Returns:
-        One URL from the list of urls.
+        One URL from the given list of urls.
     """
     if (n >= 1) and (n <= len(location)):
-        url = location[n - 1]
+        url = [location[n - 1]]
     else:
         if not location:
             print("Empty list of repositories.")
@@ -58,7 +58,7 @@ def repository_from_list(location: list, n: int) -> Optional[str]:
     return url
 
 
-def choose_repository(option: str) -> Optional[Tuple[str, list]]:
+def choose_repository(option: str) -> Optional[list]:
     """
     Choose which repositories to use.
 
@@ -70,37 +70,33 @@ def choose_repository(option: str) -> Optional[Tuple[str, list]]:
     Returns:
         The repository URL(s) for the given option.
     """
-    url = None
-    urls = None
     if re.fullmatch(r"[r]([1-9][0-9]*)", option):
-        if len(option) > 1:
-            n = int(option.replace('r', ''))
-            url = repository_from_list(ls.remote, n)
-            if not url:
-                return None
-        else:
+        """ Remote repository """
+        n = int(option.replace('r', ''))
+        urls = repository_from_list(ls.remote, n)
+        if not urls:
             print_help()
             return None
     elif option == "ra":
+        """ All remote repositories """
         urls = ls.remote
     elif option == "la":
+        """ All local repositories """
         urls = ls.local
     elif re.fullmatch(r"[l]([1-9][0-9]*)", option):
-        if len(option) > 1:
-            n = int(option.replace('l', ''))
-            url = repository_from_list(ls.local, n)
-            if not url:
-                return None
-            if not path.exists(path.expanduser(url)):
-                print(f"Path {url} does not exist.")
-                return None
-        else:
+        """ Local repository """
+        n = int(option.replace('l', ''))
+        urls = repository_from_list(ls.local, n)
+        if not urls:
             print_help()
+            return None
+        if not path.exists(path.expanduser(urls[0])):
+            print(f"Path {urls[0]} does not exist.")
             return None
     else:
         print_help()
         return None
-    return url, urls
+    return urls
 
 
 def dig(url: str) -> int:
@@ -119,7 +115,7 @@ def dig(url: str) -> int:
     for commit in mine.traverse_commits():
         for keyword in keyword_list:
             if re.search(r"\b" + keyword.lower() + r"\b", commit.msg.lower()):
-                # Ignore merge pull request commits
+                """ Ignore merge pull request commits """
                 if commit.modifications:
                     print_commit_header(commit)
                     number_of_commits += 1
@@ -162,11 +158,8 @@ def main(user_input: list = None):
     if len(user_input) > 1:
         print(f"Input: {user_input[1]}")
         if user_input_is_valid(user_input[1]):
-            url, urls = choose_repository(user_input[1])
-            if url is not None:
-                print_repository_info(url)
-                dig(url)
-            elif urls is not None:
+            urls = choose_repository(user_input[1])
+            if urls is not None:
                 for url in urls:
                     print_repository_info(url)
                     dig(url)
