@@ -66,23 +66,20 @@ def choose_repository(option: str) -> Optional[Tuple[str, list]]:
     """
     url = None
     urls = None
-    if "r" in option:
+    if re.fullmatch(r"[r]([1-9][0-9]*)", option):
         if len(option) > 1:
             n = int(option.replace('r', ''))
             url = repository_from_list(ls.remote, n)
             if not url:
                 return None
         else:
-            print("Invalid option, no repository selected.")
-            print("Options for remote are:")
-            for i, url in enumerate(ls.remote):
-                print(f"r{i}: {url}")
+            print_help()
             return None
-    elif option == 'a':
+    elif option == "ra":
         urls = ls.remote
-    elif option == 'h':
+    elif option == "la":
         urls = ls.local
-    elif 'l' in option:
+    elif re.fullmatch(r"[l]([1-9][0-9]*)", option):
         if len(option) > 1:
             n = int(option.replace('l', ''))
             url = repository_from_list(ls.local, n)
@@ -92,14 +89,10 @@ def choose_repository(option: str) -> Optional[Tuple[str, list]]:
                 print(f"Path {url} does not exist.")
                 return None
         else:
-            print("Invalid option, no repository selected.")
-            print("Options for local are:")
-            for i, url in enumerate(ls.local):
-                print(f"l{i}: {url}")
+            print_help()
             return None
     else:
-        print("Invalid option: options are l (for local) or r (for remote),")
-        print("h (for all local) or a (for all remote).")
+        print_help()
         return None
     return url, urls
 
@@ -128,6 +121,23 @@ def dig(url: str):
     return number_of_commits
 
 
+def user_input_is_valid(user_input: str) -> bool:
+    """
+    User input validation.
+
+    Args:
+        user_input: Input the user has given for running against which repositories.
+
+    Returns:
+        If the user input matches the possible options.
+    """
+    if re.fullmatch(r"[lr]([1-9][0-9]*|[a])", user_input):
+        return True
+    else:
+        print_help()
+        return False
+
+
 def main(user_input: list = None):
     """
     Main entry point when run as script
@@ -135,27 +145,33 @@ def main(user_input: list = None):
     Args:
         user_input: argv[1]: Input from user, local vs remote repository.<br/>
         [lx] = local, [rx] = remote: where x is the number in the list;
-        [a] = all remote repositories;
-        [h] = all local repositories.
+        [ra] = all remote repositories;
+        [la] = all local repositories.
     """
     if not user_input:
         user_input = sys.argv
     if len(user_input) > 1:
         print(f"Input: {user_input[1]}")
-        url, urls = choose_repository(user_input[1])
-        if url is not None:
-            print_repository_info(url)
-            dig(url)
-        elif urls is not None:
-            for url in urls:
+        if user_input_is_valid(user_input[1]):
+            url, urls = choose_repository(user_input[1])
+            if url is not None:
                 print_repository_info(url)
                 dig(url)
+            elif urls is not None:
+                for url in urls:
+                    print_repository_info(url)
+                    dig(url)
     else:
-        print("Expected: [lx] for local, [rx] for remote, [a] for all remote and [h] for all local repositories.")
-        for i, url in enumerate(ls.local):
-            print(f"l{i}: {url}")
-        for i, url in enumerate(ls.remote):
-            print(f"r{i}: {url}")
+        print_help()
+
+
+def print_help():
+    """
+    Print help text for wrong user input.
+    """
+    print("Expected: [lx] for local, [rx] for remote")
+    print("Where x can be a number for selecting a repository, or 'a' for all of that type.")
+    print(f"Maximum length: local:{len(ls.local)}, remote:{len(ls.remote)}")
 
 
 if __name__ == "__main__":

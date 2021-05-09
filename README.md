@@ -26,8 +26,8 @@ Using the script is as follows, start with:\
 The options are:\
 lx = local\
 rx = remote\
-h = all local\
-a = all remote\
+la = all local\
+ra = all remote\
 Where x stands for the number in the repository list.
 
 ## Generate reports

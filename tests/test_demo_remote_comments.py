@@ -104,10 +104,10 @@ def test_other_input(option, response):
 
 @pytest.mark.parametrize("type_list, list_p, option, response", [
     pytest.param("remote", drl.remote,
-                 "a", (None, drl.remote),
+                 "ra", (None, drl.remote),
                  id="input=a"),
     pytest.param("local", drl.local,
-                 "h", (None, drl.local),
+                 "la", (None, drl.local),
                  id="input=h"),
 ])
 def test_input_all(type_list, list_p, option, response, mocker):
