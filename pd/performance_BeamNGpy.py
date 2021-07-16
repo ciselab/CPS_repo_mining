@@ -6,10 +6,12 @@ Small performance checks.
 import cProfile
 import pstats
 import os
+import pathlib
 
 # result with 10000, lot of with 100000
 # BIG_NUMBER = 1000000
 BIG_NUMBER = 100000000
+path_results = os.path.join(pathlib.Path.home(), "CPS_repo_mining", "results")
 
 """
 Project: BeamNGpy
@@ -40,14 +42,18 @@ def dict_lines():
     """
 
     print("dict one line")
-    cProfile.run("one_line_dict()", 'results/profile_results_dol')
-    results("results/profile_results_dol", "results/formatted_profile_dol.txt")
-    print_results("results/formatted_profile_dol.txt")
+    file_dol = os.path.join(path_results, "profile_results_dol")
+    cProfile.run("one_line_dict()", file_dol)
+    formatted_file_dol = os.path.join(path_results, "formatted_profile_dol.txt")
+    results(file_dol, formatted_file_dol)
+    print_results(formatted_file_dol)
 
     print("dict two line")
-    cProfile.run("two_line_dict()", 'results/profile_results_dtl')
-    results("results/profile_results_dtl", "results/formatted_profile_dtl.txt")
-    print_results("results/formatted_profile_dtl.txt")
+    file_dtl = os.path.join(path_results, "profile_results_dtl")
+    cProfile.run("two_line_dict()", file_dtl)
+    formatted_file_dtl = os.path.join(path_results, "formatted_profile_dtl.txt")
+    results(file_dtl, formatted_file_dtl)
+    print_results(formatted_file_dtl)
 
 
 def dict_not_written():
@@ -71,17 +77,28 @@ def dict_writing_style():
     """
 
     print("dict not written")
-    cProfile.run("dict_not_written()", 'results/profile_results_dnw')
-    results("results/profile_results_dnw", "results/formatted_profile_dnw.txt")
-    print_results("results/formatted_profile_dnw.txt")
+    file_dnw = os.path.join(path_results, "profile_results_dnw")
+    cProfile.run("dict_not_written()", file_dnw)
+    formatted_file_dnw = os.path.join(path_results, "formatted_profile_dnw.txt")
+    results(file_dnw, formatted_file_dnw)
+    print_results(formatted_file_dnw)
 
     print("dict written")
-    cProfile.run("dict_written()", 'results/profile_results_dw')
-    results("results/profile_results_dw", "results/formatted_profile_dw.txt")
-    print_results("results/formatted_profile_dw.txt")
+    file_dw = os.path.join(path_results, "profile_results_dw")
+    cProfile.run("dict_written()", file_dw)
+    formatted_file_dw = os.path.join(path_results, "formatted_profile_dw.txt")
+    results(file_dw, formatted_file_dw)
+    print_results(formatted_file_dw)
 
 
 def results(name_file: str, name_new_file: str):
+    """
+    Convert profile data to readable data.
+
+    Args:
+        name_file: Location file with profile data.
+        name_new_file:  Location where the readable profile data will be stored.
+    """
     file = open(name_new_file, 'w')
     profile = pstats.Stats(name_file, stream=file)
     profile.sort_stats('cumulative')
@@ -90,25 +107,20 @@ def results(name_file: str, name_new_file: str):
 
 
 def print_results(formatted_file_name: str):
+    """
+    Print the results.
+
+    Args:
+        formatted_file_name: Location of the results.
+    """
     f = open(formatted_file_name, "r")
     print(f.read())
-
-
-def create_results_dir():
-    path = "results"
-    if not os.path.exists(path):
-        try:
-            os.mkdir(path)
-        except OSError:
-            print(f"Failed to create directory at {path}.")
-        else:
-            print(f"Directory {path} created.")
-    else:
-        print(f"Directory already existed at {path}.")
+    f.close()
 
 
 def main():
-    create_results_dir()
+    if not os.path.exists(os.path.abspath(path_results)):
+        os.makedirs(path_results)
     print("dict one line (new) VS dict two lines (old)")
     dict_lines()
     print("dict not written(old) VS dict written(new)")

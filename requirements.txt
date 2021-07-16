@@ -21,3 +21,6 @@ toml==0.10.1
 zipp==3.4.0
 mutmut==2.1.0
 pdoc3==0.9.2
+numpy==1.20.0
+matplotlib==3.4.2
+chardet==4.0.0

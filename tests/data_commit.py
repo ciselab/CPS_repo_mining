@@ -21,3 +21,6 @@ fn = ("file1.py", "file2.py", "file3.py", "file4.py", "file5.py", "file6.py")
 
 """Commit date"""
 cd = ("01-01-2021", "02-02-2021", "03-03-2021", "04-04-2021", "05-05-2021", "06-06-2021")
+
+"""Project name"""
+pn = ("Test-Project", "test-project", "TestProject", "testproject", "Test_Project", "Test4Project", )

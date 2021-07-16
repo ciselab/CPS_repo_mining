@@ -3,15 +3,19 @@
 Tryout of PyDriller for remote & local repositories.
 Focus on the content of commit messages.
 """
-
+import glob
+import os
+import pathlib
 import re
+import sys
 from pydriller import RepositoryMining
 from pydriller.domain.commit import Commit
-import sys
-from os import path
-import pd.repo_lists as ls
+import pd.dict_repo_list
 from pd.key_list import keyword_list
 from typing import Optional
+
+location_sourcefile = os.path.join(pathlib.Path.home(), "CPS_repo_mining", "results", "resultsOutput.txt")
+dir_projects = os.path.join(pathlib.Path.home(), "CPS_repo_mining", "results", "repo")
 
 
 def print_repository_info(url: str):
@@ -21,8 +25,10 @@ def print_repository_info(url: str):
     Args:
         url: Repository url
     """
-    print(f"Repository: {url}")
-    print(f"Searching for: {keyword_list}")
+    sourcefile = open(location_sourcefile, 'a')
+    print(f"Repository: {url}", file=sourcefile)
+    print(f"Searching for: {keyword_list}", file=sourcefile)
+    sourcefile.close()
 
 
 def print_commit_header(commit: Commit):
@@ -31,9 +37,27 @@ def print_commit_header(commit: Commit):
 
     Args:
         commit: The full commit.
+
+    Returns:
+        The commit hash.
     """
-    print(f"\nhash: {commit.hash}\ndate: {commit.committer_date}\nmessage: {commit.msg}")
-    print(f"modified file(s): {commit.files}")
+    sourcefile = open(location_sourcefile, 'a')
+    print(f"\nhash: {commit.hash}\ndate: {commit.committer_date}\nmessage: {commit.msg}", file=sourcefile)
+    print(f"modified file(s): {commit.files}", file=sourcefile)
+    sourcefile.close()
+
+    """ Ready for search_selection.py """
+    project_name = commit.project_name
+    if not os.path.exists(os.path.abspath(dir_projects)):
+        os.makedirs(dir_projects)
+    file_name = str(project_name + '.txt')
+    project_file_name = os.path.join(dir_projects, file_name)
+    try:
+        hash_file = open(project_file_name, 'a')
+        print(f"{commit.hash}", file=hash_file)
+        hash_file.close()
+    except FileNotFoundError:
+        print("File does not exist.")
 
 
 def repository_from_list(location: list, n: int) -> Optional[list]:
@@ -73,29 +97,48 @@ def choose_repository(option: str) -> Optional[list]:
     if re.fullmatch(r"[r]([1-9][0-9]*)", option):
         """ Remote repository """
         n = int(option.replace('r', ''))
-        urls = repository_from_list(ls.remote, n)
+        remote_dict_repo = pd.dict_repo_list.build_repo_dict(type_remote=True)
+        if not remote_dict_repo:
+            print_help()
+            return None
+        url_list = list(remote_dict_repo.values())
+        urls = repository_from_list(url_list, n)
         if not urls:
             print_help()
             return None
     elif option == "ra":
         """ All remote repositories """
-        urls = ls.remote
+        remote_dict_repo = pd.dict_repo_list.build_repo_dict(type_remote=True)
+        if not remote_dict_repo:
+            print_help()
+            return None
+        urls = list(remote_dict_repo.values())
     elif option == "la":
         """ All local repositories """
-        urls = ls.local
+        local_dict_repo = pd.dict_repo_list.build_repo_dict()
+        if not local_dict_repo:
+            print_help()
+            return None
+        urls = list(local_dict_repo.values())
     elif re.fullmatch(r"[l]([1-9][0-9]*)", option):
         """ Local repository """
         n = int(option.replace('l', ''))
-        urls = repository_from_list(ls.local, n)
+        local_dict_repo = pd.dict_repo_list.build_repo_dict()
+        if not local_dict_repo:
+            print_help()
+            return None
+        url_list = list(local_dict_repo.values())
+        urls = repository_from_list(url_list, n)
         if not urls:
             print_help()
             return None
-        if not path.exists(path.expanduser(urls[0])):
+        if not os.path.exists(os.path.expanduser(urls[0])):
             print(f"Path {urls[0]} does not exist.")
             return None
     else:
         print_help()
         return None
+    print(f"URL: {urls}")
     return urls
 
 
@@ -107,7 +150,7 @@ def dig(url: str) -> int:
         url: Url of chosen repository.
 
     Returns:
-        Number of commits.
+        Number of commits and list of commit hashes.
     """
     mine = RepositoryMining(url)
     number_of_commits = 0
@@ -119,10 +162,15 @@ def dig(url: str) -> int:
                 if commit.modifications:
                     print_commit_header(commit)
                     number_of_commits += 1
-                    print(f"First found keyword: {keyword}")
+                    sourcefile = open(location_sourcefile, 'a')
+                    print(f"First found keyword: {keyword}", file=sourcefile)
+                    sourcefile.close()
                 for modified_file in commit.modifications:
-                    print(f">>> {modified_file.filename}")
+                    sourcefile = open(location_sourcefile, 'a')
+                    print(f">>> {modified_file.filename}", file=sourcefile)
+                    sourcefile.close()
                 break
+    print(f"Number of commits: {number_of_commits}")
     return number_of_commits
 
 
@@ -142,6 +190,34 @@ def user_input_is_valid(user_input: str) -> bool:
         print_help()
         return False
 
+ 
+def restart_results_file(check_file: str):
+    """
+    Check if a file exists and remove this file.
+
+    Args:
+        check_file: File to check, remove if exists.
+
+    """
+    if os.path.isfile(check_file):
+        os.remove(check_file)
+
+
+def remove_files_in_dir(check_dir: str):
+    """
+    Remove all files in dir, keep dir.
+
+    Args:
+        check_dir: Dir to check for files.
+    """
+    files_location = glob.glob(os.path.join(check_dir, "*"))
+    files = files_location
+    for f in files:
+        try:
+            os.remove(f)
+        except OSError as e:
+            print(f"Error: {f}, {e.strerror}")
+
 
 def main(user_input: list = None):
     """
@@ -153,10 +229,19 @@ def main(user_input: list = None):
         [ra] = all remote repositories;
         [la] = all local repositories.
     """
+    restart_results_file(os.path.join(pathlib.Path.home(), "CPS_repo_mining", "resultsOutput.txt"))
+    remove_files_in_dir(os.path.join(pathlib.Path.home(), "CPS_repo_mining", "results", "repo"))
+
     if not user_input:
         user_input = sys.argv
     if len(user_input) > 1:
-        print(f"Input: {user_input[1]}")
+        print(f"Input: {user_input[1:]}")
+        dir_location = os.path.join(pathlib.Path.home(), "CPS_repo_mining", "results")
+        if not os.path.exists(os.path.abspath(dir_location)):
+            os.makedirs(dir_location)
+        sourcefile = open(location_sourcefile, 'w')
+        print(f"Start with input: {user_input[1:]}", file=sourcefile)
+        sourcefile.close()
         if user_input_is_valid(user_input[1]):
             urls = choose_repository(user_input[1])
             if urls is not None:
@@ -173,7 +258,7 @@ def print_help():
     """
     print("Expected: [lx] for local, [rx] for remote")
     print("Where x can be a number for selecting a repository, or 'a' for all of that type.")
-    print(f"Maximum length: local:{len(ls.local)}, remote:{len(ls.remote)}")
+    print(f"Maximum length: local:{len(pd.dict_repo_list.projects)}, remote:{len(pd.dict_repo_list.remote)}")
 
 
 if __name__ == "__main__":

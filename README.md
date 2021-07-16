@@ -20,7 +20,10 @@ Deactivate by:\
 `deactivate`
 
 ## Usage
-Using the script is as follows, start with:\
+There are multiple scripts that can be used.
+
+### Commit message
+Mining the repository on content from commit messages, based on an input list of keywords:\
 `python3 pd/repository_commits_mining.py [lx/rx/la/ra]`
 
 The options are:\
@@ -29,6 +32,14 @@ rx = remote\
 la = all local\
 ra = all remote\
 Where x stands for the number in the repository list.
+
+### Commit diffs
+Searching through the commit diffs, from the above script result, for specific code snippet.\
+`python3 pd/search_selection.py`
+
+### Current code state
+Searching through the current state of the full repositories, for code snippets.\
+`python3 pd/search_current.py`
 
 ## Generate reports
 To generate coverage, mutation and docstring reports, run:\

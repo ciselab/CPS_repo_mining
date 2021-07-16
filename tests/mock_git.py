@@ -5,12 +5,13 @@ Classes for mocking git commits.
 
 
 class MockableCommit:
-    def __init__(self, hash, msg, modifications, committer_date, files):
+    def __init__(self, hash, msg, modifications, committer_date, files, project_name):
         self.hash = hash
         self.msg = msg
         self.modifications = modifications
         self.committer_date = committer_date
         self.files = files
+        self.project_name = project_name
 
 
 class MockableModifications:
