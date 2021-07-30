@@ -33,6 +33,10 @@ la = all local\
 ra = all remote\
 Where x stands for the number in the repository list.
 
+#### Setup
+Change in the `dict_repo_list.py` file the variable `location_github` to match where on your system the repositories are located. This will be the general path used to find all the repositories described in the 'project' dictionary, located in the same file.
+It is possible to manually overwrite the location for a specific repository by changing it in the `projects` dictionary. Replace `None` by the system path to the repository for the selected repository.
+
 ### Commit diffs
 Searching through the commit diffs, from the above script result, for specific code snippet.\
 `python3 pd/search_selection.py`

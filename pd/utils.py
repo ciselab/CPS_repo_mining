@@ -46,16 +46,3 @@ def list_file_content(file_location: str) -> list:
         list_content_file.append(line)
     content_file.close()
     return list_content_file
-
-
-def path_project() -> pathlib.Path:
-    """
-    Used to return the path of the root of this project.
-
-    Returns:
-        root_project: Location of the root of this project.
-
-    """
-    init_path = path.abspath(__file__)
-    root_project = pathlib.Path(init_path).parent.parent
-    return root_project

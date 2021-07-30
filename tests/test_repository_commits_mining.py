@@ -3,40 +3,43 @@ import pytest
 import os
 import pathlib
 import tempfile
+import copy
 from pd.repository_commits_mining import choose_repository as cr
 from pd.repository_commits_mining import dig
 from pd.repository_commits_mining import user_input_is_valid as uiv
 from pd.repository_commits_mining import restart_results_file
 from pd.repository_commits_mining import remove_files_in_dir
+from pd.dict_repo_list import build_repo_dict
 import data_repo_dict as drl
 import mock_git as nc
 import data_commit as dm
-import pd.key_list as key_list
+from data_key_list import keyword_list as key_list
 from typing import Tuple, Any, Optional
 from test_utils import create_file_name_timestamped
 
 
-@pytest.mark.parametrize("remote_p, option, response", [
-    pytest.param(drl.remote, "r1", ["https://github.com/carla-simulator/carla"], id="input=r1"),
-    pytest.param(drl.remote, "r2", ["https://github.com/microsoft/AirSim"], id="input=r2"),
-    pytest.param(drl.remote, "r3", ["https://github.com/BeamNG/BeamNGpy.git"], id="input=r3"),
-    pytest.param(drl.remote, "r4", None, id="invalid input=r4"),
-    pytest.param(drl.remote, "r-1", None, id="invalid input=r-1"),
+@pytest.mark.parametrize("project_dict, option, response", [
+    pytest.param(drl.projects, "r1", {'carla': 'https://github.com/carla-simulator/carla'}, id="input=r1"),
+    pytest.param(drl.projects, "r2", {'AirSim': 'https://github.com/microsoft/AirSim'}, id="input=r2"),
+    pytest.param(drl.projects, "r3", {'BeamNGpy': 'https://github.com/BeamNG/BeamNGpy.git'}, id="input=r3"),
+    pytest.param(drl.projects, "r4", None, id="invalid input=r4"),
+    pytest.param(drl.projects, "r-1", None, id="invalid input=r-1"),
     pytest.param([], "r1", None, id="input=r1, empty remote list"),
     pytest.param([], "r", None, id="invalid input=r, missing number"),
 ])
-def test_remote_url_list_length(remote_p: dict, option: str, response: Optional[list], mocker):
+def test_remote_url_list_length(project_dict: dict, option: str, response: Optional[list], mocker):
     """
     Checks remote list usage with rx options.
 
     Args:
-        remote_p: List of the remote repository
+        project_dict: List of the remote repository
         option: User input
         response: Expected response
         mocker: Using a mocker
 
     """
-    mocker.patch('pd.dict_repo_list.remote', remote_p)
+    mocker.patch('pd.dict_repo_list.projects', project_dict)
+    print(f"\nresult: {cr(option)}")
     assert cr(option) == response
 
 
@@ -44,7 +47,7 @@ def test_remote_url_list_length(remote_p: dict, option: str, response: Optional[
     pytest.param(drl.projects, "l1", 0, drl.projects, id="input=l1"),
     pytest.param(drl.projects, "l2", 1, drl.projects, id="input=l2"),
     pytest.param(drl.projects, "l3", 2, drl.projects, id="input=l3"),
-    pytest.param(drl.projects, "l-1", 1, None, id="invalid input=l-1"),
+    pytest.param(drl.projects, "l-1", -1, None, id="invalid input=l-1"),
     pytest.param(drl.projects, "l4", 4, None, id="invalid input=l4"),
     pytest.param([], "l1", 1, None, id="input=l1, empty local list"),
     pytest.param([], "l", 1, None, id="input=l, missing number"),
@@ -64,17 +67,21 @@ def test_local_url_list_length(local_p: dict, option: str, number: int, response
         tmpdir: Using a temporary directory
 
     """
-    for each in local_p:
-        new = tmpdir.mkdir(each)
-        local_p[each] = new
-    mocker.patch('pd.dict_repo_list.projects', drl.projects)
-    mocker.patch('pd.dict_repo_list.build_repo_dict', return_value=local_p)
-    if response_dict is not None:
-        values_response = list(local_p.values())
-        response_new = [values_response[number]]
-    else:
-        response_new = response_dict
-    assert cr(option) == response_new
+    this_one = 0
+    use_response_dict = copy.deepcopy(local_p)
+    response = response_dict
+    if use_response_dict is not None:
+        for project in use_response_dict:
+            new = tmpdir.mkdir(project)
+            new_location = os.path.join(new)
+            use_response_dict[project].update({"local": new_location})
+            if this_one == number:
+                response = {project: use_response_dict[project]["local"]}
+            this_one += 1
+
+    mocker.patch('pd.dict_repo_list.projects', use_response_dict)
+
+    assert cr(option) == response
 
 
 def test_local_non_existing_dir(mocker):
@@ -85,8 +92,10 @@ def test_local_non_existing_dir(mocker):
         mocker: Using a mocker
 
     """
-    mocker.patch('pd.dict_repo_list.projects', {"non-existing-repo": None})
-    assert cr("l1") is None
+    patch = {"non-existing-repo": {"local": None, "remote": None}}
+    mocker.patch('pd.dict_repo_list.projects', patch)
+    result = {"non-existing-repo": None}
+    assert cr("l1") == result
 
 
 @pytest.mark.parametrize("option", [
@@ -105,26 +114,23 @@ def test_other_input(option: str):
     assert cr(option) is None
 
 
-@pytest.mark.parametrize("type_list, list_p, option, response", [
-    pytest.param("remote", drl.remote, "ra", drl.remote, id="input=ra"),
-    pytest.param("projects", drl.projects, "la", drl.projects, id="input=la"),
+@pytest.mark.parametrize("list_p, option, response", [
+    pytest.param(drl.projects, "ra", drl.remote_result, id="input=ra"),
+    pytest.param(drl.projects, "la", drl.local_results, id="input=la"),
 ])
-def test_input_all(type_list: str, list_p: list, option: str, response: dict, mocker):
+def test_input_all(list_p: list, option: str, response: dict, mocker):
     """
     Input: all remote repositories
 
     Args:
-        type_list: Using a remote or local repository
         list_p: Given the repository list
         option: User input
         response: Dictionary of the expected repository
         mocker: Using a mocker
 
     """
-    compare_results = response.values()
-    patch_list = "pd.dict_repo_list." + type_list
-    mocker.patch(patch_list, list_p)
-    assert cr(option) == list(compare_results)
+    mocker.patch("pd.dict_repo_list.projects", list_p)
+    assert cr(option) == response
 
 
 def use_new_commits(hs: Tuple, messages: Tuple, committer_date: Tuple, files_name: Tuple, project_name: Tuple) -> list:
@@ -226,6 +232,7 @@ def test_keywords(new_keywords: list, hs: Tuple, messages: Tuple,
 
     """ Creating the starting file """
     create_file("Testing: test_keywords")
+    mocker.patch("pd.key_list.keyword_list", new_keywords)
 
     mocker.patch("pydriller.RepositoryMining.traverse_commits", return_new_commits)
 
@@ -236,7 +243,7 @@ def test_keywords(new_keywords: list, hs: Tuple, messages: Tuple,
     patched_dir_projects = os.path.join(pathlib.Path.home(), "CPS_repo_mining", "test_results", "repo")
     mocker.patch("pd.repository_commits_mining.dir_projects", patched_dir_projects)
 
-    assert dig("TEST") == response
+    assert dig("FOO", "BAR") == response
     main_dir = os.path.join(pathlib.Path.home(), "CPS_repo_mining", "test_results")
     try:
         shutil.rmtree(main_dir)
@@ -339,3 +346,18 @@ def test_remove_files_in_dir():
     assert os.path.isdir(dir_location_start) is True
 
     os.removedirs(dir_location_start)
+
+
+def test_build_repo_dict(mocker):
+    """
+    Test that the build_repo_dict function adds the local path to the dictionary, without losing the remote information.
+    Args:
+        mocker: mocker is being used in this test
+    """
+    patched_location_github = "FooBar"
+    mocker.patch("pd.dict_repo_list.location_github", patched_location_github)
+    copy_test_dict = copy.deepcopy(drl.projects)
+    mocker.patch("pd.dict_repo_list.projects", copy_test_dict)
+    build_repo_dict()
+    assert copy_test_dict["carla"]["local"] == os.path.join(patched_location_github, "carla")
+    assert copy_test_dict["carla"]["remote"] == "https://github.com/carla-simulator/carla"
