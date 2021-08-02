@@ -23,7 +23,7 @@ def dig_for_code(key_project: str, search_for_pattern: str, repo_dictionary: dic
     Returns:
         count: How often the keyword occurs in the code of specified project.
     """
-    url = repo_dictionary[key_project]
+    url = repo_dictionary[key_project]["local"]
     hash_file_location = build_results_path(key_project)
 
     count = 0
@@ -58,8 +58,9 @@ def start_searching(search_for_pattern: str, title_graph: str, search_type: str)
 
     """
     data_graph = {}
-    repo_dictionary = pd.dict_repo_list.build_repo_dict()
-    for key_repo_name in repo_dictionary:
+    pd.dict_repo_list.build_repo_dict()
+    repo_dictionary = pd.dict_repo_list.projects
+    for key_repo_name in repo_dictionary.keys():
         counted = dig_for_code(key_repo_name, search_for_pattern, repo_dictionary)
         print(f"{key_repo_name}: {counted}")
         if counted > 0:
