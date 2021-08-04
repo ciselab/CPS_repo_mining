@@ -7,4 +7,3 @@ python3 -m venv env
 python3 -m pip install --upgrade pip virtualenv
 python3 -m pip install -r requirements.txt
 pip install --editable .
-pip install GitPython
