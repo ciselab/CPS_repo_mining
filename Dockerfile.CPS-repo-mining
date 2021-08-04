@@ -1,0 +1,36 @@
+FROM    python:3.9.1
+
+# Set user
+ARG USER_ID
+ARG GROUP_ID
+
+# RUN addgroup --gid $GROUP_ID user
+RUN adduser --disabled-password --gecos '' --uid $USER_ID --gid $GROUP_ID user
+USER user
+
+# set work directory
+WORKDIR /home/user/repo-mining
+
+# Copy files required for setting up virtual env
+COPY    setup.py /home/user/repo-mining
+COPY    setup.cfg /home/user/repo-mining
+COPY    requirements.txt /home/user/repo-mining
+
+# Copy files related to testing and reporting
+COPY    pyproject.toml /home/user/repo-mining
+COPY    build_virtual_env.sh /home/user/repo-mining
+
+# Copy the module
+COPY    /pd /home/user/repo-mining/pd
+COPY    /tests /home/user/repo-mining/tests 
+
+# Set virtual environment
+ENV VIRTUAL_ENV=venv
+RUN python3 -m venv $VIRTUAL_ENV
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+
+# Install dependencies
+RUN python3 -m pip install --upgrade pip virtualenv
+RUN pip install --upgrade pip setuptools wheel
+RUN pip install -r requirements.txt
+RUN pip install --editable /home/user/repo-mining
