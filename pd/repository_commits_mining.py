@@ -14,8 +14,8 @@ import pd.dict_repo_list
 from pd.key_list import keyword_list
 from typing import Optional
 
-location_sourcefile = os.path.join(pathlib.Path.home(), "repo-mining","CPS_repo_mining", "results", "resultsOutput.txt")
-dir_projects = os.path.join(pathlib.Path.home(),"repo-mining", "CPS_repo_mining", "results", "repo")
+location_sourcefile = os.path.join(pathlib.Path.home(), "repo-mining", "results", "resultsOutput.txt")
+dir_projects = os.path.join(pathlib.Path.home(),"repo-mining", "results", "repo")
 
 
 def print_repository_info(project: str, location: str):
