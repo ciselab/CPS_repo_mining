@@ -2,29 +2,29 @@
 Repository mining using PyDriller.
 
 ## Setup
-To make the setup a bit faster, a script has been created.
+For portability and replicability of this tool, we use docker.
+For easier docker setup, we provide two scripts for building docker image and running the docker container.
 
-Execute the script as follows:\
-`./build_virtual_env.sh`
+### Docker image setup
+Execute the following script for building the docker image:
 
-After this script has run, activate the virtual environment:\
-`. env/bin/activate`
+`. docker_scripts/build-cps-repo-mining.sh`
 
-Everything is now setup and ready to go!
+### Docker image container
+The script `docker_scripts/run-cps-repo-mining-container.sh` is created for this task. 
+For running the the mining for remote repositories, this script can be executed without any input parameter.
+However, to perform the mining process for local repositories, we should pass the the directory of local repositories as the input argument:
 
-## Virtual Environment usage
-Start the virtual environment by:\
-`. env/bin/activate`
+`. docker_scripts/run-cps-repo-mining-container.sh [local_repositories]`
 
-Deactivate by:\
-`deactivate`
+__! Note:__ This input argument should be an absolute path.
 
 ## Usage
 There are multiple scripts that can be used.
 
 ### Commit message
 Mining the repository on content from commit messages, based on an input list of keywords:\
-`python3 pd/repository_commits_mining.py [lx/rx/la/ra]`
+`docker exec -it cps-repo-mining-container bash -c "python3 pd/repository_commits_mining.py [lx/rx/la/ra]"`
 
 The options are:\
 lx = local\
@@ -33,21 +33,19 @@ la = all local\
 ra = all remote\
 Where x stands for the number in the repository list.
 
-#### Setup
-Change in the `dict_repo_list.py` file the variable `location_github` to match where on your system the repositories are located. This will be the general path used to find all the repositories described in the 'project' dictionary, located in the same file.
-It is possible to manually overwrite the location for a specific repository by changing it in the `projects` dictionary. Replace `None` by the system path to the repository for the selected repository.
-
 ### Commit diffs
 Searching through the commit diffs, from the above script result, for specific code snippet.\
-`python3 pd/search_selection.py`
+`docker exec -it cps-repo-mining-container bash -c "python3 pd/search_selection.py"`
+
 
 ### Current code state
 Searching through the current state of the full repositories, for code snippets.\
-`python3 pd/search_current.py`
+`docker exec -it cps-repo-mining-container bash -c "python3 pd/search_current.py"`
+
 
 ## Generate reports
 To generate coverage, mutation and docstring reports, run:\
-`./generate_reports`
+`docker exec -it cps-repo-mining-container bash -c "./generate_reports"`
 
 ## Manual generating reports
 Be aware that the location for the reports that are made for pdoc and mutmut end in the same directory.\
