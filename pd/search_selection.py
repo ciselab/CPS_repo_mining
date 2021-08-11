@@ -37,6 +37,13 @@ def dig_for_code(key_project: str, search_for_pattern: str, repo_dictionary: dic
     count = 0
 
     if hash_file_location:
+        try:
+            results_file = open(location_results_file, 'a')
+            print(f"\nProject: {key_project}", file=results_file)
+            results_file.close()
+        except FileNotFoundError:
+            print("File to print results does not exist.")
+
         list_of_hashes_project = list_file_content(hash_file_location)
 
         for each_hash in list_of_hashes_project:
@@ -68,6 +75,14 @@ def dig_for_code(key_project: str, search_for_pattern: str, repo_dictionary: dic
                     count += len(check)
     else:
         print(f"No file found for project: {key_project}")
+
+        try:
+            results_file = open(location_results_file, 'a')
+            print(f"\nNo file found for project: {key_project}", file=results_file)
+            results_file.close()
+        except FileNotFoundError:
+            print("File to print results does not exist.")
+
         return None
     return count
 
@@ -87,7 +102,13 @@ def start_searching(search_for_pattern: str, title_graph: str, search_type: str)
     repo_dictionary = pd.dict_repo_list.projects
     for key_repo_name in repo_dictionary.keys():
         counted = dig_for_code(key_repo_name, search_for_pattern, repo_dictionary)
-        if counted:
+        if counted is not None:
+            try:
+                results_file = open(location_results_file, 'a')
+                print(f"\nNumber of results: {key_repo_name}: {counted}", file=results_file)
+                results_file.close()
+            except FileNotFoundError:
+                print("File to print results does not exist.")
             print(f"{key_repo_name}: {counted}")
             if counted > 0:
                 data_graph[key_repo_name] = counted
