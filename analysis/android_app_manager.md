@@ -5,11 +5,11 @@ remote: https://github.com/ros-android/android_app_manager
 ## Commit #1 
 [980febbe5e1af05a21c9f08a8133e8b2804f2265](https://github.com/ros-android/android_app_manager/commit/980febbe5e1af05a21c9f08a8133e8b2804f2265)
 
-__message:__ Increase wifi timeout.
+message: Increase wifi timeout.
 
-__Antipattern Category:__ Smith:Where_Was_I
+Antipattern Category: Smith:Where_Was_I
 
-__keyword:__ increase
+keyword: increase
 
 This commit increases the timeout for waiting for a wifi from 30 seconds to 90 seconds.
  
@@ -21,11 +21,11 @@ This commit increases the timeout for waiting for a wifi from 30 seconds to 90 s
 ## Commit #2 
 [feaf968ca40f8869989d7fa899a3dca678fb741c](https://github.com/ros-android/android_app_manager/commit/feaf968ca40f8869989d7fa899a3dca678fb741c)
 
-__message:__ Fix a variety of potential hang-ups with the starting application dialog
+message: Fix a variety of potential hang-ups with the starting application dialog
 
-__Antipattern Category:__ X
+Antipattern Category: X
 
-__keyword:__ hang
+keyword: hang
 
 This commit is not performance-related. Also, I could not find any sign of antipatterns here.
 
