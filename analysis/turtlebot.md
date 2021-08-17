@@ -62,29 +62,48 @@ the [next commit](https://github.com/turtlebot/turtlebot/commit/90fc0a687f1b88cb
 
 ## Commit #4
 ### Hash
-[288c08370a41757a4612a5a118b049e40f9b9631]()
+[288c08370a41757a4612a5a118b049e40f9b9631](https://github.com/turtlebot/turtlebot/commit/288c08370a41757a4612a5a118b049e40f9b9631)
+
+### PR
+https://github.com/turtlebot/turtlebot/pull/230
 
 ### Message
+Add support for Intel R200 camera
 
 ### Antipattern Category
+X
 
 ### Keyword
-
+runtime
 
 ### Note
-
+This commit does not addressing any performance issue.
 
 ## Commit #5
 ### Hash
 [bf3e001b8d1e91269c61d9b22b969f438545fa3c]()
 
 ### Message
-
+Refactor urdf.xacro files to stop loading unnecessary content.
 
 ### Antipattern Category
-
+General:Performance:Extraneous_Fetching
 
 ### Keyword
-
+memory
 
 ### Note
+This is a [general performance antipattern](https://docs.microsoft.com/en-us/azure/architecture/antipatterns/extraneous-fetching/) when the system fetch and load unnecessary data.
+
+commit description:
+
+Currently, every robot configuration (e.g.,
+turtlebot_description/robots/kobuki_hexagons_kinect.urdf.xacro)
+simply includes a catch-all turtlebot_library.urdf.xacro file.
+This file includes EVERY base, stacks, and sensor combination,
+and thus a lot of unnecessary data is loaded into memory.
+
+Refactored the turtlebot_library.urdf.xacro to include only
+the data common to all turtlebot configurations, and modified
+each robot configuration file to include only the additional base,
+stacks, and sensor urdf files that apply.
