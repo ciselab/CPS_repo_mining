@@ -26,13 +26,18 @@ According to Smith's study, Smith:Where_Was_I antipattern happens when the follo
 
 
 ## Commit #2 
+### Hash
 [feaf968ca40f8869989d7fa899a3dca678fb741c](https://github.com/ros-android/android_app_manager/commit/feaf968ca40f8869989d7fa899a3dca678fb741c)
 
-message: Fix a variety of potential hang-ups with the starting application dialog
+### Message
+Fix a variety of potential hang-ups with the starting application dialog
 
-Antipattern Category: X
+### Antipattern Category
+X
 
-keyword: hang
+### Keyword
+hang
 
+### Note
 This commit is not performance-related. Also, I could not find any sign of antipatterns here.
 
