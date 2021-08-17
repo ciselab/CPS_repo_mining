@@ -186,3 +186,29 @@ Increase
 
 ### Note
 This is a functionality-related commit. This commit is mistakenly considered as performance-related because its description contains the keyword "increase".
+
+## Commit #11
+
+### Hash
+[a128a91499d94f0e75d17f87396571f6c889a7ac](https://github.com/Hypfer/Valetudo/commit/a128a91499d94f0e75d17f87396571f6c889a7ac)
+
+
+### Message
+fix(vendor.viomi): Increase timeout for set_timezone 
+
+
+## PR
+https://github.com/Hypfer/Valetudo/pull/806
+
+### Antipattern Category
+Smith:General:Falling_Dominoes 
+
+
+### Keyword
+Increase
+
+### Note
+The failure to change timezone on time (i.e., it can take about 10 seconds) leads to the failure of the entire connection.
+Commit description:
+It looks like sometimes set_timezone takes ~1s to execute in some cases.
+We have time. Increase timeout so it doesn't take the entire connection down.
