@@ -1,8 +1,11 @@
 # Android app manager
 
-remote: https://github.com/ros-android/android_app_manager
+### remote
+https://github.com/ros-android/android_app_manager
 
 ## Commit #1 
+
+### Hash
 [980febbe5e1af05a21c9f08a8133e8b2804f2265](https://github.com/ros-android/android_app_manager/commit/980febbe5e1af05a21c9f08a8133e8b2804f2265)
 
 ### message
