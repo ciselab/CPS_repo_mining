@@ -387,7 +387,7 @@ ll40ls: increase the sleep time after resetting registers\
 ### Keyword
 increase
 ### Note
-Similar to Commit #20.\
+Similar to Commit [#20](https://github.com/ciselab/CPS_repo_mining/blob/imara_analysis/analysis/PX4-Autopilot.md#commit-20).\
 Increased sleep duration, from 1000 to 50000:
 ```C++
 // wait for sensor reset to complete
@@ -399,8 +399,8 @@ usleep(50000);
 ### Hash
 [8b629454de069c835ad086b78e498f955c5193fd](https://github.com/PX4/PX4-Autopilot/commit/8b629454de069c835ad086b78e498f955c5193fd?w=1)
 ### Message
-esc_calibration: increase safety and initialise all data\
-- do not do calibration if not very sure that battery is not connected\
+esc_calibration: increase safety and initialise all data
+- do not do calibration if not very sure that battery is not connected
 - initialise all structs and variables\
 ...
 ### Antipattern Category
@@ -431,9 +431,9 @@ usleep(50*1000);
 [0c5c741b1a63ff90b9137d6327ccdd10fab6c084](https://github.com/PX4/PX4-Autopilot/commit/0c5c741b1a63ff90b9137d6327ccdd10fab6c084?w=1)
 ### Message
 add posix shell\
-squashed & rebased version, not including:\
-- listener changes\
-- src/firmware renaming\
+squashed & rebased version, not including:
+- listener changes
+- src/firmware renaming
 
 Commits:\
 tag_to_version.py: fix Python3 error\
@@ -444,7 +444,7 @@ The folder src/firmware was not intuitive. Why would the binaries for
 SITL be inside a src and why even inside a src/firmware folder. Also,
 the rootfs was put there which made it even more confusing.\
 The CMakeLists.txt files are moved into cmake/ and get now called from
-the main CMakeLists.txt.\
+the main CMakeLists.txt.
 
 qshell: support for return value
 
@@ -759,9 +759,9 @@ Have been removed, but check returns on lines 135 and 137.
 ### Hash
 [828e31d3a914166c8bb3897c6191f4203f151b7a](https://github.com/PX4/PX4-Autopilot/commit/828e31d3a914166c8bb3897c6191f4203f151b7a?w=1)
 ### Message
-lockstep_scheduler: optimize performance\
+lockstep_scheduler: optimize performance
 - use a linked-list instead of std::vector. Insertion and removal are now
-  O(1)\
+  O(1)
 - avoid malloc and use a thread_local instance of TimedWait.
   It gets destroyed when the thread exits, so we have to add protection
   in case a thread exits too quickly. This in turn requires a fix to the
@@ -796,8 +796,8 @@ fast
 ### Hash
 [1d932f6ec9d4a59ba4c68a59fc134bcd925328af](https://github.com/PX4/PX4-Autopilot/commit/1d932f6ec9d4a59ba4c68a59fc134bcd925328af?w=1)
 ### Message
-IMU drivers using FIFOs increase max length to 16 and sync similar implementations\
- - this provides some extra space when the FIFO transfers don't align perfectly\
+IMU drivers using FIFOs increase max length to 16 and sync similar implementations
+ - this provides some extra space when the FIFO transfers don't align perfectly
  - I've also made an effort to keep the different drivers (icm20602, icm20608g, ism330ldc) in sync so we can factor out the common portions later once we've confident in the pattern.
 ### Antipattern Category
 X
@@ -828,15 +828,15 @@ faster
 ### Message
 SMbus battery driver - a lot of updates and optimizations
 
-- added support for BQ40Z80 based battery\
-- added performance counter for interface errors\
-- added SMART_BATTERY_INFO mavlink message\
-- general code cleanups and optimization\
-- fixed: void flooding the log in case of interface error\
-- fixed: using _batt_startup_capacity instead of _batt_capacity for discharged_mah\
-- update: read manufacture_date\
-- update: get _cell_count from parameter and not const 4\
-- update: avoid re-reading data that has already been read and stored on class already\
+- added support for BQ40Z80 based battery
+- added performance counter for interface errors
+- added SMART_BATTERY_INFO mavlink message
+- general code cleanups and optimization
+- fixed: void flooding the log in case of interface error
+- fixed: using _batt_startup_capacity instead of _batt_capacity for discharged_mah
+- update: read manufacture_date
+- update: get _cell_count from parameter and not const 4
+- update: avoid re-reading data that has already been read and stored on class already
 - currently the battery type defined by BAT_SMBUS_MODEL parameter and not by auto detection
 ### Antipattern Category
 X
@@ -863,10 +863,10 @@ Adjustments needed for gps module.
 ### Hash
 [3924792c2025316a55ffa01a7f4fd15e3ee071d9](https://github.com/PX4/PX4-Autopilot/commit/3924792c2025316a55ffa01a7f4fd15e3ee071d9?w=1)
 ### Message
-Jenkins: HIL improve run_tests.py and run_nsh_cmd.py helper\
- - switch to python3\
- - run_nsh_cmd.py return error if command fails\
- - decrease timeout in checking for output\
+Jenkins: HIL improve run_tests.py and run_nsh_cmd.py helper
+ - switch to python3
+ - run_nsh_cmd.py return error if command fails
+ - decrease timeout in checking for output
  - Jenkins hardware tests tolerate certain command failures that aren't available on all boards (flash constrained, etc)
 ### Antipattern Category
 ?
