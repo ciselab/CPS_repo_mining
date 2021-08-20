@@ -824,7 +824,7 @@ faster
 
 ## Commit #28
 ### Hash
-[8](https://github.com/PX4/PX4-Autopilot/commit/8?w=1)
+[190b96a46c3540ec03823ac4370e166a79e1f811](https://github.com/PX4/PX4-Autopilot/commit/190b96a46c3540ec03823ac4370e166a79e1f811?w=1)
 ### Message
 SMbus battery driver - a lot of updates and optimizations
 
