@@ -176,8 +176,254 @@ __Commit desc:__ This increases the rate when entering the screen, and reset's t
 
 This commit makes the streaming rate dynamic according to the user activity. Before this commit, the stream rate was hard-coded and fixed. To improve the performance of the system, this commit make sure that the stream rate increases between the controller and drone when a specifig app fragment (TUNING fragment) is opened by the user.
 
------
-## Commit #1 
+
+## Commit #11
+### Hash
+[d022d2b75934df71798424e11b6db13f25ed93ee](https://github.com/dronekit/dronekit-android/commit/d022d2b75934df71798424e11b6db13f25ed93ee)
+
+### Message
+Parameters: sip - ListView / Adapter model for much faster and more resource efficient parameter list
+
+
+### Antipattern Category
+X
+
+### Keyword
+faster
+
+### Note
+This commit makes the UI more efficient. Thid commit does not address any CPS-related performance issue. 
+
+
+## Commit #12 
+### Hash
+[f4698eb55964af88f8aa4e31de6646c97349527f](https://github.com/dronekit/dronekit-android/commit/f4698eb55964af88f8aa4e31de6646c97349527f)
+
+### Message
+UI update - increase the size of the drawer in flight screen
+
+### Antipattern Category
+X
+
+### Keyword
+increase
+
+### Note
+This commit is a small change to UI.
+
+
+## Commit #13
+### Hash
+[26cc1ab9febfb0ffa1f69c5af1d2b644c6c977ec](https://github.com/dronekit/dronekit-android/commit/26cc1ab9febfb0ffa1f69c5af1d2b644c6c977ec)
+
+### Message
+Feature: Fast Increment
+
+### Antipattern Category
+X
+
+### Keyword
+increase
+
+### Note
+This commit add a new feature to UI.
+
+
+## Commit #14
+### Hash
+[ce5fad7c8d6adef7065fede1f2bc6f2c2532f267](https://github.com/dronekit/dronekit-android/commit/ce5fad7c8d6adef7065fede1f2bc6f2c2532f267)
+
+### Message
+Fast ince: Layout test
+
+### Antipattern Category
+X
+
+### Keyword
+Fast
+
+### Note
+This commit does not address any performance issue.
+
+## Commit #15
+### Hash
+[ffc8e75d7c692c5977516339bb2575c4a1266d5d](https://github.com/dronekit/dronekit-android/commit/ffc8e75d7c692c5977516339bb2575c4a1266d5d)
+
+### Message
+Removed UiLanguage as functionality can be achieved by a static method using an application context object. This avoids memory allocation for the creation of the UiLanguage object, and prevent possible leakage of Activity object, as only an application context is needed to make the config update.
+
+### Antipattern Category
+General:recreate_objects
+### Keyword
+memory
+
+### Note
+The commit message is representative itself. This commit replaces a class by a static method with the same functionality. This change prevent the creation (and thereby memory allocation) of `UiLanguage`.
+
+## Commit #16
+### Hash
+[05fdbfeff89736a3f16ad52d04383ebc03d23bfe](https://github.com/dronekit/dronekit-android/commit/05fdbfeff89736a3f16ad52d04383ebc03d23bfe)
+
+### Message
+increase features of the map interface.
+
+### Antipattern Category
+X
+
+### Keyword
+increase
+
+### Note
+This commit add new features to a UI.
+
+## Commit #17
+### Hash
+[f82ad37e86517611fd5bf5185dc6328158983791](https://github.com/dronekit/dronekit-android/commit/f82ad37e86517611fd5bf5185dc6328158983791)
+
+### Message
+Huge performance gain by using Buffered streams
+
+### Antipattern Category
+General:java:Unbuffered_Streams
+### Keyword
+performance
+
+### Note
+Look at [list of antipatterns for java](https://www.odi.ch/prog/design/newbies.php). As explained here, using unbuffered streams can be expensive. This commit address this antipattern. it replaces the unbuffered streams to the buffered ones
+
+
+## Commit #18
+### Hash
+[9c057a7b3fabe4777538b9cd965513f1310a2eff](https://github.com/dronekit/dronekit-android/commit/9c057a7b3fabe4777538b9cd965513f1310a2eff)
+
+### Message
+Using ByteBuffers to read the data improves even more the performance.
+
+### Antipattern Category
+X
+
+### Keyword
+performance
+
+### Note
+This commit change the previous commit to a faster buffer (bytebuffer)
+
+
+## Commit #19
+### Hash
+[086575e9e07baca5d0439bb49c96a97db6e29efb](https://github.com/dronekit/dronekit-android/commit/086575e9e07baca5d0439bb49c96a97db6e29efb)
+
+### Message
+Making the Srtm clas just read a single value to increase the performance, instead of an entire array
+### Antipattern Category
+General:performance:using_massive_arrays_likes
+
+### Keyword
+performance
+
+### Note
+This commit is a general antipattern. The commit message is self-explanatory.
+
+
+## Commit #20
+### Hash
+[4e87f94f41a4927872c91d7c029d8a72090e8e98](https://github.com/dronekit/dronekit-android/commit/4e87f94f41a4927872c91d7c029d8a72090e8e98)
+
+### Message
+decrease size of follow type selection spinner.
+
+### Antipattern Category
+X
+### Keyword
+decrease
+
+### Note
+A minor change to UI.
+
+
+## Commit #21
+### Hash
+[700aa17674e2b6c91272c39a03b5be543d301f4f](https://github.com/dronekit/dronekit-android/commit/700aa17674e2b6c91272c39a03b5be543d301f4f)
+
+### Message
+Fix possible memory leak
+
+### Antipattern Category
+?
+### Keyword
+memory leak
+
+### Note
+???
+
+## Commit #22 
+### Hash
+[5fa1d5313ecbc6a13ce6b6f69eb057bfdf72e60c](https://github.com/dronekit/dronekit-android/commit/5fa1d5313ecbc6a13ce6b6f69eb057bfdf72e60c)
+
+### Message
+improved calibration code. runs much faster on android devices.
+
+### Antipattern Category
+X
+### Keyword
+faster
+
+### Note
+I could not find any CPS related antipatterns in this commit.
+
+
+## Commit #23 
+### Hash
+[cadaf1fb46f9de615df75f17b03b951c9ee0102a](https://github.com/dronekit/dronekit-android/commit/cadaf1fb46f9de615df75f17b03b951c9ee0102a)
+
+### Message
+Dronie: Slow down the drone as it reaches the final dronie mission
+
+### Antipattern Category
+X
+
+### Keyword
+Slow
+
+### Note
+It changes the speed of drone in on of the pre-defined Dronie missions.
+
+
+## Commit #24 
+### Hash
+[aedc7902acf37b63b052f458b034fce6fe42619f](https://github.com/dronekit/dronekit-android/commit/aedc7902acf37b63b052f458b034fce6fe42619f)
+
+### Message
+update the method signature for the 'changeVehicleMode' metho
+
+### Antipattern Category
+X
+
+### Keyword
+increase
+
+### Note
+increase the visibility of changeVehicleMode for VehicleMode class.
+
+
+## Commit #25 
+### Hash
+[e29a5fde6f5c871ce956ffe6659e8b34f3d8a5b2](https://github.com/dronekit/dronekit-android/commit/e29a5fde6f5c871ce956ffe6659e8b34f3d8a5b2)
+
+### Message
+increase resolution of latitude, longitude and altitude.
+
+### Antipattern Category
+New:rounded_numbers
+
+### Keyword
+increase
+### Note
+This comment change float to double for pass a more accurate number for latitude, longitude and altitude.
+
+
+_____
+## Commit #2 
 ### Hash
 []()
 
