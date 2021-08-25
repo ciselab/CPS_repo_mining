@@ -421,16 +421,234 @@ increase
 ### Note
 This comment change float to double for pass a more accurate number for latitude, longitude and altitude.
 
-
-_____
-## Commit #2 
+## Commit #26 
 ### Hash
-[]()
+[675898195440663b00e8fef17c25f16e61601326](https://github.com/dronekit/dronekit-android/commit/675898195440663b00e8fef17c25f16e61601326)
 
 ### Message
+Increase the number of threads used to retrieve drone properties.
 
 ### Antipattern Category
+X
 
 ### Keyword
+Increase
 
 ### Note
+This commit increase the number of threads for collecting drone properties. It does not address any antipattern.
+
+## Commit #27
+### Hash
+[19a5c29337da5d104733dbb1c4be6d8fb8b0c834](https://github.com/dronekit/dronekit-android/commit/19a5c29337da5d104733dbb1c4be6d8fb8b0c834)
+
+### Message
+increase altitude precision.
+
+### Antipattern Category
+New:rounded_numbers
+
+### Keyword
+increase
+
+### Note
+Same as Commit #25.
+
+
+## Commit #28 
+### Hash
+[8d1c6819f3929093df8bf1b0388e76b047e5b068](https://github.com/dronekit/dronekit-android/commit/8d1c6819f3929093df8bf1b0388e76b047e5b068?w=1)
+
+### Message
+improved performance of the mavlink processing and dispatching of events.
+### Antipattern Category
+New:Impatient_requester
+
+### Keyword
+performance
+
+### Note
+Timeout issue. The timeout was hardcoded to 3 seconds. This commit change it to 15 seconds (5 times more) to increase the chance of communication success. So, it is both impatient requester and hardcoded timeout.
+
+
+## Commit #29
+### Hash
+[304d4f13b711dade2d882a4a32183b1b909d00e5](https://github.com/dronekit/dronekit-android/commit/304d4f13b711dade2d882a4a32183b1b909d00e5)
+
+### Message
+increasing travis vm memory allocation.
+
+### Antipattern Category
+X
+
+### Keyword
+memory
+
+### Note
+This is a build related (travis) change.
+
+
+## Commit #30
+### Hash
+[03b9f063861914c243c082e9c9c41d55cd9db2d7](https://github.com/dronekit/dronekit-android/commit/03b9f063861914c243c082e9c9c41d55cd9db2d7)
+
+### Message
+increasing gradle memory allocation.
+
+### Antipattern Category
+X
+
+### Keyword
+memory
+
+### Note
+This is a build related (gradle) change.
+
+
+## Commit #31 
+### Hash
+[ea3ddf18d4a295e2f6afb7dad0e4994724dc8c9e](https://github.com/dronekit/dronekit-android/commit/ea3ddf18d4a295e2f6afb7dad0e4994724dc8c9e)
+
+### Message
+increasing travis vm memory allocation.
+
+### Antipattern Category
+X
+
+### Keyword
+memory
+
+### Note
+This is a build related (travis) change.
+
+
+## Commit #32 
+### Hash
+[0cc25085be89f67bf2ef7d9ed562f6cbb84bb6bf](https://github.com/dronekit/dronekit-android/commit/0cc25085be89f67bf2ef7d9ed562f6cbb84bb6bf)
+
+### Message
+testing with larger memory increase.
+
+### Antipattern Category
+X
+
+### Keyword
+memory
+
+### Note
+This is a build related (travis) change.
+
+
+## Commit #33 
+### Hash
+[655b400a1a1732f7d4b79d1606b47eca463f8d62](https://github.com/dronekit/dronekit-android/commit/655b400a1a1732f7d4b79d1606b47eca463f8d62)
+
+### Message
+increase logging for easy debugging.
+
+### Antipattern Category
+X
+
+### Keyword
+increase
+
+### Note
+This commit increase the logging. It does not address any performance issue.
+
+
+
+## Commit #34 
+### Hash
+[4c954e7d95af483393aa8f1f1f91b35b29a4018b](https://github.com/dronekit/dronekit-android/commit/4c954e7d95af483393aa8f1f1f91b35b29a4018b)
+
+### Message
+increased the size of the memory heap.
+
+### Antipattern Category
+X
+
+### Keyword
+memory
+### Note
+This commit increase the size of the heap memory.
+
+
+## Commit #35 
+### Hash
+[27b16751ffad6dccda2fb45717e61377fce28f78](https://github.com/dronekit/dronekit-android/commit/27b16751ffad6dccda2fb45717e61377fce28f78)
+
+### Message
+mavlink library update to fix spurious memory allocations.
+
+### Antipattern Category
+Network:performance:large_payload_sizes
+
+### Keyword
+memory
+
+### Note
+This commit reduces the maximum size of the payloads which are crated and sent by MAVLINK (a protocol for communicating with small unmanned vehicle). This is a performance issue but it is a networking antipattern, which can be seen in CPSs as well. The MAVLink max size was 512 bytes. However, in the new version of the MAVLink this threshold is [reduced to 256](https://mavlink.io/en/guide/serialization.html#payload_truncation). The large payloads lead to more memory and I/O consumption.
+
+
+
+## Commit #36 
+### Hash
+[abef06d707e79d30fcbc0a8053df377035541162](https://github.com/dronekit/dronekit-android/commit/abef06d707e79d30fcbc0a8053df377035541162)
+
+### Message
+Version increase for the hotfix release for release 1.5.0.
+
+### Antipattern Category
+X
+
+### Keyword
+increase
+
+### Note
+Update one of the dependencies.
+
+
+## Commit #37
+### Hash
+[8f62427612d394a633ade3bb31bc61a5f7c51a09](https://github.com/dronekit/dronekit-android/commit/8f62427612d394a633ade3bb31bc61a5f7c51a09)
+
+### Message
+Update the connection logic for the ControlTower instance. The new logic reuse any existing services runtime, otherwise it fires its local version.
+### Antipattern Category
+X
+
+### Keyword
+runtime
+
+### Note
+This commit does not address any CPS performance issue. It make sure that the class create a local service if it does not exist.
+
+## Commit #38
+### Hash
+[8aa313d34c658040492f91d8bee8d05fe08e17af](https://github.com/dronekit/dronekit-android/commit/8aa313d34c658040492f91d8bee8d05fe08e17af)
+
+### Message
+Increase max heap size from 2g to 4g
+### Antipattern Category
+X
+
+### Keyword
+Increase
+
+### Note
+Increase heap memory size.
+
+## Commit #39 
+### Hash
+[ba936869a5aa894892bf51bc6df581f173e22040](https://github.com/dronekit/dronekit-android/commit/ba936869a5aa894892bf51bc6df581f173e22040)
+
+### Message
+Fix infinite loop when heightStep is 0
+
+### Antipattern Category
+X
+
+### Keyword
+infinite
+
+### Note
+this is a fix for an infinite loop. This commit fixes it by adding a simple if condition before for loop.
