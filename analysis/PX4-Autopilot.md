@@ -1,5 +1,7 @@
 # PX4-Autopilot
 
+## Sleep
+
 ### Remote
 https://github.com/PX4/PX4-Autopilot
 
@@ -9,7 +11,7 @@ https://github.com/PX4/PX4-Autopilot
 ### Message
 Out of memory warning, flash and RAM optimizations
 ### Antipattern Category
-?
+New:Delayed_Sync_With_Physical_Events
 ### Keyword
 memory
 ### Note
@@ -22,11 +24,20 @@ sleep before starting the i2c handler
 Formatting changes to make the Python style checker happy (copied from the bootloader project).\
 Increase the erase timeout to avoid issues with large/slow flash.
 ### Antipattern Category
-X
+New:Delayed_Sync_With_Physical_Events
 ### Keyword
 slow
 ### Note
--
+From commit message: Increase the erase timeout to avoid issues with large/slow flash.
+```Python
+- # erase is very slow, give it 10s
+- deadline = time.time() + 10
++ # erase is very slow, give it 20s
++ deadline = time.time() + 20
+```
+Manually adjusting the waiting time for erasing flash chips to work for the selection of flash chips supported.
+Note: Different solution possible? Know when done with erasing flash chip?
+mPossible solution: Add a configuration file with matching durations for each supporting flash chips. Default value to fall back to.
 
 
 ## Commit #3
@@ -36,7 +47,7 @@ slow
 Add retry-on-error for non-protocol errors.\
 Add more performance counters; run test #1 faster.
 ### Antipattern Category
-?
+New:Hard-coded-timing
 ### Keyword
 performance
 ### Note
@@ -48,10 +59,15 @@ decreased sleep from 10000 -> 1000, increased number for count
 ### Message
 mavlink: HIL fixes, performance optimization
 ### Antipattern Category
-?
+New:Hard-coded-timing
 ### Keyword
 performance
 ### Note
+Performance improvement, but the number is based on what?
+```
+- mavlink start -r 10000 -d /dev/ttyACM0
++ mavlink start -r 5000 -d /dev/ttyACM0
+```
 added:
 ```C++
 _main_loop_delay(1000)
@@ -67,13 +83,20 @@ still here:
 ### Message
 sdlog2: use orb_check() instead of poll() to minimize polling overhead, bugs and compiler warnings fixed
 ### Antipattern Category
-?
+X
 ### Keyword
 overhead
 ### Note
 added:
 ```C
 useconds_t sleep_delay = 10000;		// default log rate: 100 Hz
+```
+Notes:
+```C
+/* work around some stupidity in task_create's argv handling */
+```
+```C
+/* warning! using union here to save memory, elements should be used separately! */
 ```
 
 ## Commit #6
@@ -82,22 +105,22 @@ useconds_t sleep_delay = 10000;		// default log rate: 100 Hz
 ### Message
 commander: Accel calibration: Reduce memory footprint, be more responsive
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
 ```C++
 /* allow user enough time to read the message */
-sleep(3);
-sleep(1);
+- sleep(3);
++ sleep(1);
 ```
 
 ```C++
 /* inform user about already handled side */
 if (data_collected[orient]) {
 	mavlink_and_console_log_info(mavlink_fd, "%s side done, rotate to a different side", orientation_strs[orient]);
-	sleep(3);
-	sleep(1);
+- 	sleep(3);
++ 	sleep(1);
 ```
 
 How long is long enough for a user?
@@ -113,7 +136,7 @@ Some interrupt events in Nuttx occur at about 1ms so a more\
 granular workqueue is needed for POSIX.\
 ...
 ### Antipattern Category
-?
+X
 ### Keyword
 fast
 ### Note
@@ -132,7 +155,7 @@ next  = 1000000;
 ### Message
 POSIX: Increase app start spacing
 ### Antipattern Category
-
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
@@ -152,7 +175,7 @@ X
 ### Keyword
 memory
 ### Note
-Print usage, not performance intersting.
+Print usage, not performance interesting.
 
 ## Commit #10
 ### Hash
@@ -160,14 +183,16 @@ Print usage, not performance intersting.
 ### Message
 Correct float parsing args and increase altitude monitoring frequency
 ### Antipattern Category
-?
+Smith:Are_we_there_yet?
 ### Keyword
 increase
 ### Note
 increasesd monitoring frequency, not explained why this is needed....
 ```python
-time.sleep(1)
-time.sleep(.2)
+# Wait for completion of mission items
+while (current_sequence < len(missionlist)-1 and elapsed_time < max_execution_time):
+-    time.sleep(1)
++    time.sleep(.2)
 ```
 
 ## Commit #11
@@ -176,7 +201,7 @@ time.sleep(.2)
 ### Message
 increase sleep time in accel calibration routine to make accel calibration work on snapdragon
 ### Antipattern Category
-?
+New:Delayed_Sync_With_Physical_Events
 ### Keyword
 increase
 ### Note
@@ -198,7 +223,7 @@ This test failed on the pixracer because the subscriber thread was too slow\
 and thus orb messages got lost. This behavior is expected, but the test\
 should not fail because of that, so we increase the sleeping time.
 ### Antipattern Category
-?
+New:build:Slow_Simulation/Hardware_Tests
 ### Keyword
 slow
 ### Note
@@ -222,7 +247,7 @@ sensors: move voting into sensors module
   the voted result
 - this also adds voting to baro
 ### Antipattern Category
-?
+New:Hard-coded-timing
 ### Keyword
 overhead
 ### Note
@@ -252,7 +277,7 @@ this will be needed for fast replay. In addition, this option disables\
 the orb interval.\
 It can be removed again once we have time simulation.
 ### Antipattern Category
-?
+X
 ### Keyword
 fast
 ### Note
@@ -268,11 +293,11 @@ increase fmu_servo task priority to max and enable true oneshot\
 use lowest FMU priority which minimizes jitter\
 constrain oneshot updates to control group 0 events
 ### Antipattern Category
-?
+X
 ### Keyword
 increase
 ### Note
-Interesting need for:
+Interesting:
 ```C++
 /* wait until the task is up and running or has failed */
 while (_task > 0 && _task_should_exit) {
@@ -307,9 +332,11 @@ Fixed memory leaks
 ### Keyword
 memory
 ### Note
+Consistend typo:
 ```C++
 gpio_led_state = Falied;
 ```
+Note: where is the memory leak that was fixed?
 
 ## Commit #18
 ### Hash
@@ -317,11 +344,11 @@ gpio_led_state = Falied;
 ### Message
 hrt test decrease time
 ### Antipattern Category
-X
+New:Hard-coded-timing
 ### Keyword
 decrease
 ### Note
-Branch number changed.
+Shortend timing.
 
 ## Commit #19
 ### Hash
@@ -340,14 +367,14 @@ improve mavros SITL tests (#8652)
 -get MAV_TYPE param and use FW radius for pure fixed-wing mission position check
 -remove unused vehicle arg from test in multiple tests launch, clearing runtime warning
 ### Antipattern Category
-?
+X
 ### Keyword
 runtime
 ### Note
 Changed queue size from 10 to 1, for AttitudeTarget and PoseStamped.
 ```Python
-'mavros/setpoint_raw/attitude', AttitudeTarget, queue_size=10) # removed line
-'mavros/setpoint_raw/attitude', AttitudeTarget, queue_size=1) # added line
+- 'mavros/setpoint_raw/attitude', AttitudeTarget, queue_size=10)
++ 'mavros/setpoint_raw/attitude', AttitudeTarget, queue_size=1)
 ```
 ```Python
 # ROS services
@@ -361,7 +388,7 @@ service_timeout = 30
 ll40ls: increase the number of samples used to find a correlation peak for LitarLite\
 ...
 ### Antipattern Category
-?
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
@@ -383,7 +410,7 @@ usleep(1000);
 ll40ls: increase the sleep time after resetting registers\
 ...
 ### Antipattern Category
-?
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
@@ -404,7 +431,8 @@ esc_calibration: increase safety and initialise all data
 - initialise all structs and variables\
 ...
 ### Antipattern Category
-?
+Smith:Where_am_I_?\
+General:Hard-coding
 ### Keyword
 increase
 ### Note
@@ -733,7 +761,7 @@ posix platform: fixes after rebase
 
 test_mixer: fix screwed up rebase
 ### Antipattern Category
-?
+CI/CD:Too_many_changes
 ### Keyword
 memory
 ### Note
@@ -767,7 +795,7 @@ lockstep_scheduler: optimize performance
   in case a thread exits too quickly. This in turn requires a fix to the
   unit-tests.
 ### Antipattern Category
-?
+New:Hard-coded-timing
 ### Keyword
 performance
 ### Note
@@ -853,7 +881,8 @@ module: increase max timeout for stopping modules from 2s to 5s\
 The gps module might take up to 4s to stop (if stopped during module
 configuration).
 ### Antipattern Category
-?
+New:Hard-coded-timing
+General:Hard-coding
 ### Keyword
 increase
 ### Note
@@ -869,7 +898,8 @@ Jenkins: HIL improve run_tests.py and run_nsh_cmd.py helper
  - decrease timeout in checking for output
  - Jenkins hardware tests tolerate certain command failures that aren't available on all boards (flash constrained, etc)
 ### Antipattern Category
-?
+New:Hard-coded-timing
+General:Hard-coding
 ### Keyword
 decrease
 ### Note
@@ -882,7 +912,8 @@ Encoding/decoding usage of utf-8 enforced. Multiple timeouts hardcoded.
 Simulator: Increase stack, publication affinity
 This commit increases the send thread stack size and changes the thread affinity of the lockstep clocking topic. It also improves verbosity in case error states occur.
 ### Antipattern Category
-?
+New:Hard-coded-timing
+General:Hard-coding
 ### Keyword
 increase
 ### Note
