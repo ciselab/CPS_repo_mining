@@ -5,6 +5,8 @@ Repository mining using PyDriller.
 For portability and replicability of this tool, we use docker.
 For easier docker setup, we provide two scripts for building docker image and running the docker container.
 
+__! Note:__ For Windows, first install **_Docker for Windows_**. Then use **_Git Bash_** to run the following scripts.
+
 ### Docker image setup
 Execute the following script for building the docker image:
 
@@ -12,8 +14,8 @@ Execute the following script for building the docker image:
 
 ### Docker image container
 The script `docker_scripts/run-cps-repo-mining-container.sh` is created for this task. 
-For running the the mining for remote repositories, this script can be executed without any input parameter.
-However, to perform the mining process for local repositories, we should pass the the directory of local repositories as the input argument:
+For running the mining for remote repositories, this script can be executed without any input parameter.
+However, to perform the mining process for local repositories, we should pass the directory of local repositories as the input argument:
 
 `. docker_scripts/run-cps-repo-mining-container.sh [local_repositories]`
 
