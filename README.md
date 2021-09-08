@@ -5,7 +5,7 @@ Repository mining using PyDriller.
 For portability and replicability of this tool, we use docker.
 For easier docker setup, we provide two scripts for building docker image and running the docker container.
 
-__! Note:__ For Windows, first install **_Docker for Windows_**. Then use **_Git Bash_** to run the following scripts.
+__! Note:__ For Windows, first install (and have it running) **_Docker for Windows_**. Then use **_Git Bash_** to run the following scripts.
 
 ### Docker image setup
 Execute the following script for building the docker image:

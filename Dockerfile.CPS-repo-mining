@@ -2,6 +2,7 @@ FROM    python:3.9.1
 
 RUN adduser --disabled-password --gecos '' user
 USER user
+RUN mkdir ~/repo-mining
 
 # set work directory
 WORKDIR /home/user/repo-mining
