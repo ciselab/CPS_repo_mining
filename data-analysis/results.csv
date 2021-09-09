@@ -1,0 +1,1504 @@
+project,commit,hash,message,antipattern,keyword
+"dronekit-android
+"," #1 
+",[b1d67d71e7b1d637b314d00d8602cdc8cd674fd9](https://github.com/dronekit/dronekit-android/commit/b1d67d71e7b1d637b314d00d8602cdc8cd674fd9),Shrink joystick handle a little to increase move resolution,X,increase
+"dronekit-android
+"," #2
+",[faf8f09a5a9eeaeca02ce59f9ecb842e7c2f0794](https://github.com/dronekit/dronekit-android/commit/faf8f09a5a9eeaeca02ce59f9ecb842e7c2f0794),Removing the need to clear the map in PlanningActivity.,Smith:General:Unnecessary_Processing,performance
+"dronekit-android
+"," #3
+",[e41fec48360cc4720eb08f827c9a25740dc603b5](https://github.com/dronekit/dronekit-android/commit/e41fec48360cc4720eb08f827c9a25740dc603b5),"Changing the way to start a path, now you do it with a fast click.",X,fast
+"dronekit-android
+"," #4
+",[f1ef0aea6f46b65661a4d824560cd567c6be5d2d](https://github.com/dronekit/dronekit-android/commit/f1ef0aea6f46b65661a4d824560cd567c6be5d2d),Fix the problem where you always added two waypoints when doing a fast click.,X,fast
+"dronekit-android
+"," #5
+",[1f605c0e51de179f564b8478f68027f10be102ea](https://github.com/dronekit/dronekit-android/commit/1f605c0e51de179f564b8478f68027f10be102ea),Changing layout to increase the map size,X,increase
+"dronekit-android
+"," #6
+",[eea6fbc8c065daef7394158504f7608f7f2440aa](https://github.com/dronekit/dronekit-android/commit/eea6fbc8c065daef7394158504f7608f7f2440aa),"Increase mission row height, so they are easier to handle",X,Increase
+"dronekit-android
+"," #7
+",[ecf355c7f58be415934fdf05da87762c66991857](https://github.com/dronekit/dronekit-android/commit/ecf355c7f58be415934fdf05da87762c66991857),Zoom: Increase padding around bounded coords to prevent markers being positioned off-screen,X,Increase
+"dronekit-android
+"," #8
+",[6bb4e0460ece576a7ac8a652a3e5bab33de91557](https://github.com/dronekit/dronekit-android/commit/6bb4e0460ece576a7ac8a652a3e5bab33de91557),better text layout in the telemetry. Getting the hang of it.,X,hang
+"dronekit-android
+"," #9
+",[8f8084d3ca4f7bc6a9d584a483a60e14c8163bbb](https://github.com/dronekit/dronekit-android/commit/8f8084d3ca4f7bc6a9d584a483a60e14c8163bbb),better text layout in the telemetry. Getting the hang of it.,X,hang
+"dronekit-android
+"," #10
+",[2c9d9bc08147b0952eba4b6ef28701641a99bb21](https://github.com/dronekit/dronekit-android/commit/2c9d9bc08147b0952eba4b6ef28701641a99bb21),TUNING: Adding code to setup the streaming rate when in the Tuning screen,New:Fixed_Communication_Rate,increases
+"dronekit-android
+"," #11
+",[d022d2b75934df71798424e11b6db13f25ed93ee](https://github.com/dronekit/dronekit-android/commit/d022d2b75934df71798424e11b6db13f25ed93ee),Parameters: sip - ListView / Adapter model for much faster and more resource efficient parameter list,X,faster
+"dronekit-android
+"," #12 
+",[f4698eb55964af88f8aa4e31de6646c97349527f](https://github.com/dronekit/dronekit-android/commit/f4698eb55964af88f8aa4e31de6646c97349527f),UI update - increase the size of the drawer in flight screen,X,increase
+"dronekit-android
+"," #13
+",[26cc1ab9febfb0ffa1f69c5af1d2b644c6c977ec](https://github.com/dronekit/dronekit-android/commit/26cc1ab9febfb0ffa1f69c5af1d2b644c6c977ec),Feature: Fast Increment,X,increase
+"dronekit-android
+"," #14
+",[ce5fad7c8d6adef7065fede1f2bc6f2c2532f267](https://github.com/dronekit/dronekit-android/commit/ce5fad7c8d6adef7065fede1f2bc6f2c2532f267),Fast ince: Layout test,X,Fast
+"dronekit-android
+"," #15
+",[ffc8e75d7c692c5977516339bb2575c4a1266d5d](https://github.com/dronekit/dronekit-android/commit/ffc8e75d7c692c5977516339bb2575c4a1266d5d),"Removed UiLanguage as functionality can be achieved by a static method using an application context object. This avoids memory allocation for the creation of the UiLanguage object, and prevent possible leakage of Activity object, as only an application context is needed to make the config update.",General:recreate_objects,memory
+"dronekit-android
+"," #16
+",[05fdbfeff89736a3f16ad52d04383ebc03d23bfe](https://github.com/dronekit/dronekit-android/commit/05fdbfeff89736a3f16ad52d04383ebc03d23bfe),increase features of the map interface.,X,increase
+"dronekit-android
+"," #17
+",[f82ad37e86517611fd5bf5185dc6328158983791](https://github.com/dronekit/dronekit-android/commit/f82ad37e86517611fd5bf5185dc6328158983791),Huge performance gain by using Buffered streams,General:java:Unbuffered_Streams,performance
+"dronekit-android
+"," #18
+",[9c057a7b3fabe4777538b9cd965513f1310a2eff](https://github.com/dronekit/dronekit-android/commit/9c057a7b3fabe4777538b9cd965513f1310a2eff),Using ByteBuffers to read the data improves even more the performance.,X,performance
+"dronekit-android
+"," #19
+",[086575e9e07baca5d0439bb49c96a97db6e29efb](https://github.com/dronekit/dronekit-android/commit/086575e9e07baca5d0439bb49c96a97db6e29efb),"Making the Srtm clas just read a single value to increase the performance, instead of an entire array",General:performance:using_massive_arrays_likes,performance
+"dronekit-android
+"," #20
+",[4e87f94f41a4927872c91d7c029d8a72090e8e98](https://github.com/dronekit/dronekit-android/commit/4e87f94f41a4927872c91d7c029d8a72090e8e98),decrease size of follow type selection spinner.,X,decrease
+"dronekit-android
+"," #21
+",[700aa17674e2b6c91272c39a03b5be543d301f4f](https://github.com/dronekit/dronekit-android/commit/700aa17674e2b6c91272c39a03b5be543d301f4f),Fix possible memory leak,?,memory leak
+"dronekit-android
+"," #22 
+",[5fa1d5313ecbc6a13ce6b6f69eb057bfdf72e60c](https://github.com/dronekit/dronekit-android/commit/5fa1d5313ecbc6a13ce6b6f69eb057bfdf72e60c),improved calibration code. runs much faster on android devices.,X,faster
+"dronekit-android
+"," #23 
+",[cadaf1fb46f9de615df75f17b03b951c9ee0102a](https://github.com/dronekit/dronekit-android/commit/cadaf1fb46f9de615df75f17b03b951c9ee0102a),Dronie: Slow down the drone as it reaches the final dronie mission,X,Slow
+"dronekit-android
+"," #24 
+",[aedc7902acf37b63b052f458b034fce6fe42619f](https://github.com/dronekit/dronekit-android/commit/aedc7902acf37b63b052f458b034fce6fe42619f),update the method signature for the 'changeVehicleMode' metho,X,increase
+"dronekit-android
+"," #25 
+",[e29a5fde6f5c871ce956ffe6659e8b34f3d8a5b2](https://github.com/dronekit/dronekit-android/commit/e29a5fde6f5c871ce956ffe6659e8b34f3d8a5b2),"increase resolution of latitude, longitude and altitude.",New:rounded_numbers,increase
+"dronekit-android
+"," #26 
+",[675898195440663b00e8fef17c25f16e61601326](https://github.com/dronekit/dronekit-android/commit/675898195440663b00e8fef17c25f16e61601326),Increase the number of threads used to retrieve drone properties.,X,Increase
+"dronekit-android
+"," #27
+",[19a5c29337da5d104733dbb1c4be6d8fb8b0c834](https://github.com/dronekit/dronekit-android/commit/19a5c29337da5d104733dbb1c4be6d8fb8b0c834),increase altitude precision.,New:rounded_numbers,increase
+"dronekit-android
+"," #28 
+",[8d1c6819f3929093df8bf1b0388e76b047e5b068](https://github.com/dronekit/dronekit-android/commit/8d1c6819f3929093df8bf1b0388e76b047e5b068?w=1),improved performance of the mavlink processing and dispatching of events.,New:Impatient_requester,performance
+"dronekit-android
+"," #29
+",[304d4f13b711dade2d882a4a32183b1b909d00e5](https://github.com/dronekit/dronekit-android/commit/304d4f13b711dade2d882a4a32183b1b909d00e5),increasing travis vm memory allocation.,X,memory
+"dronekit-android
+"," #30
+",[03b9f063861914c243c082e9c9c41d55cd9db2d7](https://github.com/dronekit/dronekit-android/commit/03b9f063861914c243c082e9c9c41d55cd9db2d7),increasing gradle memory allocation.,X,memory
+"dronekit-android
+"," #31 
+",[ea3ddf18d4a295e2f6afb7dad0e4994724dc8c9e](https://github.com/dronekit/dronekit-android/commit/ea3ddf18d4a295e2f6afb7dad0e4994724dc8c9e),increasing travis vm memory allocation.,X,memory
+"dronekit-android
+"," #32 
+",[0cc25085be89f67bf2ef7d9ed562f6cbb84bb6bf](https://github.com/dronekit/dronekit-android/commit/0cc25085be89f67bf2ef7d9ed562f6cbb84bb6bf),testing with larger memory increase.,X,memory
+"dronekit-android
+"," #33 
+",[655b400a1a1732f7d4b79d1606b47eca463f8d62](https://github.com/dronekit/dronekit-android/commit/655b400a1a1732f7d4b79d1606b47eca463f8d62),increase logging for easy debugging.,X,increase
+"dronekit-android
+"," #34 
+",[4c954e7d95af483393aa8f1f1f91b35b29a4018b](https://github.com/dronekit/dronekit-android/commit/4c954e7d95af483393aa8f1f1f91b35b29a4018b),increased the size of the memory heap.,X,memory
+"dronekit-android
+"," #35 
+",[27b16751ffad6dccda2fb45717e61377fce28f78](https://github.com/dronekit/dronekit-android/commit/27b16751ffad6dccda2fb45717e61377fce28f78),mavlink library update to fix spurious memory allocations.,Network:performance:large_payload_sizes,memory
+"dronekit-android
+"," #36 
+",[abef06d707e79d30fcbc0a8053df377035541162](https://github.com/dronekit/dronekit-android/commit/abef06d707e79d30fcbc0a8053df377035541162),Version increase for the hotfix release for release 1.5.0.,X,increase
+"dronekit-android
+"," #37
+",[8f62427612d394a633ade3bb31bc61a5f7c51a09](https://github.com/dronekit/dronekit-android/commit/8f62427612d394a633ade3bb31bc61a5f7c51a09),"Update the connection logic for the ControlTower instance. The new logic reuse any existing services runtime, otherwise it fires its local version.",X,runtime
+"dronekit-android
+"," #38
+",[8aa313d34c658040492f91d8bee8d05fe08e17af](https://github.com/dronekit/dronekit-android/commit/8aa313d34c658040492f91d8bee8d05fe08e17af),Increase max heap size from 2g to 4g,X,Increase
+"dronekit-android
+"," #39 
+",[ba936869a5aa894892bf51bc6df581f173e22040](https://github.com/dronekit/dronekit-android/commit/ba936869a5aa894892bf51bc6df581f173e22040),Fix infinite loop when heightStep is 0,X,infinite
+"cylon
+"," #1 
+",[6e3d7c66677f84b384d03c1803ac74fe74c4865d](https://github.com/hybridgroup/cylon/commit/6e3d7c66677f84b384d03c1803ac74fe74c4865d),"Add helpers to replace some lodash functionality
+
+
+## PR
+https://github.com/hybridgroup/cylon/pull/271",X,slower
+"robonomics_contracts
+"," #1 
+",[b0c6d713f5355a850cdc7c0cb4b00f5fb088c587](https://github.com/airalab/robonomics_contracts/commit/b0c6d713f5355a850cdc7c0cb4b00f5fb088c587),Fix keepalive deadlock when sender is not in memebers,X,deadlock
+"robonomics_contracts
+"," #2
+",[ca2262837e070a3ea011b1faef014f44d2c0d6b7](https://github.com/airalab/robonomics_contracts/commit/ca2262837e070a3ea011b1faef014f44d2c0d6b7),Fixed deadlock when marker point out of members,X,deadlock
+"node-ar-drone
+"," #1 
+",[32c37f8f3da4aab358073a4f8f0456da7e933845](https://github.com/felixge/node-ar-drone/commit/32c37f8f3da4aab358073a4f8f0456da7e933845),Instructions to install from Github. Makes a lot of sense for this lib which is changing fast.,X,fast
+"node-ar-drone
+"," #2
+",[5d5a3745cf8fc8485b36d075a82bafb7a1e547ba](https://github.com/felixge/node-ar-drone/commit/5d5a3745cf8fc8485b36d075a82bafb7a1e547ba),Reverting to approach that allows test to pass.,X,increase
+"node-ar-drone
+"," #3
+",[2a3331c115d7288acd20b7862b833d9af7e15ec9](https://github.com/felixge/node-ar-drone/commit/2a3331c115d7288acd20b7862b833d9af7e15ec9#diff-7ae45ad102eab3b6d7e7896acd08c427a9b25b346470d7bc6507b6481575d519),update to latest buffy (performance),X,performance
+"PX4-Autopilot
+"," #1
+",[a704acc2a20936d7e6d6828ae0ddf2cf7dc3578b](https://github.com/PX4/PX4-Autopilot/commit/a704acc2a20936d7e6d6828ae0ddf2cf7dc3578b?w=1),"Out of memory warning, flash and RAM optimizations",New:Delayed_Sync_With_Physical_Events,memory
+"PX4-Autopilot
+"," #2
+",[7e0f8b3edaf584a48cd3bc3351e3205fd0106cdc](https://github.com/PX4/PX4-Autopilot/commit/7e0f8b3edaf584a48cd3bc3351e3205fd0106cdc?w=1),"Formatting changes to make the Python style checker happy (copied from the bootloader project).\
+Increase the erase timeout to avoid issues with large/slow flash.",New:Delayed_Sync_With_Physical_Events,slow
+"PX4-Autopilot
+"," #3
+",[a4b0e3ecbe2d012eac7545cce14829866bacc813](https://github.com/PX4/PX4-Autopilot/commit/a4b0e3ecbe2d012eac7545cce14829866bacc813?w=1),"Add retry-on-error for non-protocol errors.\
+Add more performance counters; run test #1 faster.",New:Hard-coded-timing,performance
+"PX4-Autopilot
+"," #4
+",[6948defdb26711fd8336b5e0173664bf98517406](https://github.com/PX4/PX4-Autopilot/commit/6948defdb26711fd8336b5e0173664bf98517406?w=1),"mavlink: HIL fixes, performance optimization",New:Hard-coded-timing,performance
+"PX4-Autopilot
+"," #5
+",[e505f4fae5596b2b53c120a7cb2a03d2d974c83a](https://github.com/PX4/PX4-Autopilot/commit/e505f4fae5596b2b53c120a7cb2a03d2d974c83a?w=1),"sdlog2: use orb_check() instead of poll() to minimize polling overhead, bugs and compiler warnings fixed",X,overhead
+"PX4-Autopilot
+"," #6
+",[1e54dc4409df700b8b4c4a4480238db27b270dfc](https://github.com/PX4/PX4-Autopilot/commit/1e54dc4409df700b8b4c4a4480238db27b270dfc?w=1),"commander: Accel calibration: Reduce memory footprint, be more responsive",X,memory
+"PX4-Autopilot
+"," #7
+",[cced8ed69e046cacd5949757d5f33b5e885f8d10](https://github.com/PX4/PX4-Autopilot/commit/cced8ed69e046cacd5949757d5f33b5e885f8d10?w=1),"POSIX: added hrt_queue for handling fast periodic events
+
+The workqueues measure time in ticks  which is typically 10ms.\
+Some interrupt events in Nuttx occur at about 1ms so a more\
+granular workqueue is needed for POSIX.\
+...",X,fast
+"PX4-Autopilot
+"," #8
+",[16cb971d6306884e3d238d24e32bf2ca5afcafee](https://github.com/PX4/PX4-Autopilot/commit/16cb971d6306884e3d238d24e32bf2ca5afcafee?w=1),POSIX: Increase app start spacing,New:Hard-coded-timing,increase
+"PX4-Autopilot
+"," #9
+",[b70c9a84c621af6d0a48c0f1ba99e9385426e4ff](https://github.com/PX4/PX4-Autopilot/commit/b70c9a84c621af6d0a48c0f1ba99e9385426e4ff?w=1),systemlib: Add ability to dump memory usage,X,memory
+"PX4-Autopilot
+"," #10
+",[fa590bbe8038941423ddb8ecb36d94dc7298b167](https://github.com/PX4/PX4-Autopilot/commit/fa590bbe8038941423ddb8ecb36d94dc7298b167?w=1),Correct float parsing args and increase altitude monitoring frequency,Smith:Are_we_there_yet?,increase
+"PX4-Autopilot
+"," #11
+",[94aaf0d298467596e7c6e067e3252dc0f937b429](https://github.com/PX4/PX4-Autopilot/commit/94aaf0d298467596e7c6e067e3252dc0f937b429?w=1),increase sleep time in accel calibration routine to make accel calibration work on snapdragon,New:Delayed_Sync_With_Physical_Events,increase
+"PX4-Autopilot
+"," #12
+",[acc40c82173d8bae9569f7833cd0f00173ccbc63](https://github.com/PX4/PX4-Autopilot/commit/acc40c82173d8bae9569f7833cd0f00173ccbc63?w=1),"orb unittest: increase waiting time so that test does not fail on slow devices
+
+This test failed on the pixracer because the subscriber thread was too slow\
+and thus orb messages got lost. This behavior is expected, but the test\
+should not fail because of that, so we increase the sleeping time.",New:build:Slow_Simulation/Hardware_Tests,slow
+"PX4-Autopilot
+"," #13
+",[d846ad5dacfa4ab89fd611116d0ea8d21b9bc181](https://github.com/PX4/PX4-Autopilot/commit/d846ad5dacfa4ab89fd611116d0ea8d21b9bc181?w=1),"sensors: move voting into sensors module
+
+- voting is now at a central place instead of duplicated within the
+  estimators
+  -> this also means that estimators that did not do voting so far,
+     now have voting, like ekf2
+- estimators requiring more than that can still subscribe to the raw
+  sensors
+- allows sensors_combined to be 3 times smaller
+  - reduces logger, memcpy (cache) & RAM overhead
+- all modules requiring only 1 or 2 sensor values now automatically get
+  the voted result
+- this also adds voting to baro",New:Hard-coded-timing,overhead
+"PX4-Autopilot
+"," #14
+",[45ffb190e32b8ae8970940c24554e99f0eb2e275](https://github.com/PX4/PX4-Autopilot/commit/45ffb190e32b8ae8970940c24554e99f0eb2e275?w=1),"logger: add -p <topic> option to poll on a topic instead of running at fixed rate
+
+this will be needed for fast replay. In addition, this option disables\
+the orb interval.\
+It can be removed again once we have time simulation.",X,fast
+"PX4-Autopilot
+"," #15
+",[aa9fbbedd54a7a0e346ea03f439dcdf4f90c6113](https://github.com/PX4/PX4-Autopilot/commit/aa9fbbedd54a7a0e346ea03f439dcdf4f90c6113?w=1),"add oneshot mode capability\
+change fmu to task\
+increase fmu_servo task priority to max and enable true oneshot\
+use lowest FMU priority which minimizes jitter\
+constrain oneshot updates to control group 0 events",X,increase
+"PX4-Autopilot
+"," #16
+",[1c0dd8ba497d109fb9cd3a82f4526b9e466d6c2b](https://github.com/PX4/PX4-Autopilot/commit/1c0dd8ba497d109fb9cd3a82f4526b9e466d6c2b?w=1),"Simulator: Add scaling API to adjust for slow simulators
+
+The simulation engine had the ability to pause already and properly handled load spikes, however, it was not hardened against constant drift. This addition enables it to run at a constant slower-than-realtime rate successfully.",X,slow
+"PX4-Autopilot
+"," #17
+",[1e0489f48b4a4dd1c953ec4f514d01114eb4d7da](https://github.com/PX4/PX4-Autopilot/commit/1e0489f48b4a4dd1c953ec4f514d01114eb4d7da?w=1),"PX4 System gpio_led:Code cleanup
+
+Use PX4 log and module documantation\
+Fixed memory leaks",?,memory
+"PX4-Autopilot
+"," #18
+",[4e5b223a0889871f4c321bc853522371d9c7827a](https://github.com/PX4/PX4-Autopilot/commit/4e5b223a0889871f4c321bc853522371d9c7827a?w=1),hrt test decrease time,"New:Hard-coded-timing\
+New:build:Slow_Simulation/Hardware_Tests",decrease
+"PX4-Autopilot
+"," #19
+",[d375880c4bee5b4f7c287bfd2921f3a1e9d648a7](https://github.com/PX4/PX4-Autopilot/commit/d375880c4bee5b4f7c287bfd2921f3a1e9d648a7?w=1),"improve mavros SITL tests (#8652)
+-created a test base class to centralize redundant methods among the different tests
+-added mission waypoint list topic listener (this also helps make sure the simulation is ready)
+-check number of mission waypoints in FCU against mission
+-increase time for mavros topics to be ready from 30 to 60 seconds
+-reduce position check loop rates
+-clean up logging
+-support QGC plan for mission file format, see #8619
+-vehicle is an arg for mission test launch file, working toward other airframes
+-Jenkins: fix vtol vehicle arg value
+-get MAV_TYPE param and use FW radius for pure fixed-wing mission position check
+-remove unused vehicle arg from test in multiple tests launch, clearing runtime warning",X,runtime
+"PX4-Autopilot
+"," #20
+",[cbf3cee0961fbe8c17fb0aa9468f25564f286c08](https://github.com/PX4/PX4-Autopilot/commit/cbf3cee0961fbe8c17fb0aa9468f25564f286c08?w=1),"ll40ls: increase the number of samples used to find a correlation peak for LitarLite\
+...",New:Hard-coded-timing,increase
+"PX4-Autopilot
+"," #21
+",[56150c28ddbf941ec28254cd679a46da9ff8e16e](https://github.com/PX4/PX4-Autopilot/commit/56150c28ddbf941ec28254cd679a46da9ff8e16e?w=1),"ll40ls: increase the sleep time after resetting registers\
+...",New:Hard-coded-timing,increase
+"PX4-Autopilot
+"," #22
+",[8b629454de069c835ad086b78e498f955c5193fd](https://github.com/PX4/PX4-Autopilot/commit/8b629454de069c835ad086b78e498f955c5193fd?w=1),"esc_calibration: increase safety and initialise all data
+- do not do calibration if not very sure that battery is not connected
+- initialise all structs and variables\
+...","Smith:Where_am_I_?\
+General:Hard-coding",increase
+"PX4-Autopilot
+"," #23
+",[0c5c741b1a63ff90b9137d6327ccdd10fab6c084](https://github.com/PX4/PX4-Autopilot/commit/0c5c741b1a63ff90b9137d6327ccdd10fab6c084?w=1),"add posix shell\
+squashed & rebased version, not including:
+- listener changes
+- src/firmware renaming
+
+Commits:\
+tag_to_version.py: fix Python3 error\
+subprocess.communicate returns bytes instead of a str which is not the
+same for Python3. Therefore, we need to decode the bytes.\
+cmake: remove folder src/firmware\
+The folder src/firmware was not intuitive. Why would the binaries for
+SITL be inside a src and why even inside a src/firmware folder. Also,
+the rootfs was put there which made it even more confusing.\
+The CMakeLists.txt files are moved into cmake/ and get now called from
+the main CMakeLists.txt.
+
+qshell: support for return value
+
+Instead of just sending commands, qshell will now also wait until
+the command has finished on QURT and sent back a return value. This will
+allow all modules on the DSP side to be spawned from the Linux side
+meaning that we only need one config/startup file instead of two.
+
+adb_upload: create folders before pushing
+
+Previously the script failed if the folder on the destination was not
+already existing. This therefore makes pushing easier.
+
+posix: spawn PX4 modules in bash
+
+This adds the possibility to spawn PX4 modules out of bash. Basically,
+the main executable can now be started as a server/daemon or as a
+client.
+The server replaces the existing functionality of the main exe with
+the pxh shell, however, it also opens a pipe that clients can talk to.
+
+Clients can run or spawn PX4 modules or commands by connecting to the
+server over the pipe. They clients will get the stdout and return value
+of their commands via a client specific pipe back.
+
+This work will allow to start all modules using a bash script similar to
+the way it is done in NuttX where the NuttShell scripts the startup
+scripts and starts the modules.
+
+SITL: use new client shell in SITL
+
+This is a first step to use the new shell capabilities for SITL.
+The new startup bash script rcS merges (and therefore replaces) the two
+existing scripts rcS_gazebo_iris and rcS_jmavsim_iris.
+
+More cleanup will be necessary for the rest of the SITL startup scripts.
+
+Snapdragon: use new shell to start all modules
+
+Instead of different mainapp.config and px4.config files, we can now use
+a unified rcS bash script which starts all the modules based on
+parameters, mainly the SYS_AUTOSTART param.
+
+Snapdragon: fix the airframe description
+
+pxh: argv needs to end with a nullptr
+
+The comment was wrong that argv needs an additional 0 termination.
+Instead it needs a nullptr at the end.
+
+px4_posix_tasks: variable cleanup
+
+The px4_task_spawn_cmd function got a cleanup while debugging, however,
+no functional changes.
+
+Snapdragon: move some drivers to 4100 config
+
+These drivers are supported by the community, so they go into the 4100
+config.
+
+Snapdragon: update 210qc platform
+
+px4_daemon: use doxygen comments
+
+apps.h_in: fix string printf: use .c_str()
+
+px4_daemon: \b -> \n in printf
+
+px4_daemon: handle error in generate_uuid (close the file on error)
+
+posix main: some clarifications in comment (it's the symlinks not the script aliases)
+
+cmake: remove new install command again
+
+This one was probably wrong and untested. Installing needs revisiting.
+
+POSIX: remove argument USES_TERMINAL
+
+POSIX: copy init and mixer files for SITL
+
+Instead of using non-working install commands, the mixer and startup
+files are now copied as part of the build in cmake.
+
+adb_upload.sh: remove leftover commented printf
+
+POSIX main: just the pointer instead of memmove
+
+POSIX main: remove chroot
+
+chroot is removed because it hasn't been used anywhere and seems
+untested.
+
+px4_daemon: remove client pipe when cleaning up
+
+px4_daemon: fail if the client pipe already exists
+
+The client pipe is supposed to be specific (by UUID), so the path
+shouldn't exist already.
+
+history: limit the number of history entries
+
+This is a protection to avoid filling the memory if we are entering a
+lot of commands (e.g. auto-generated).
+
+px4_daemon: add a threadsafe map and use it
+
+px4_daemon: whitespace
+
+px4_daemon: fix client parsing
+
+Sometimes the client ends up reading more than one packet in one read.
+The parsing is not made for this and would require a (ring)buffer for
+it.
+
+The solution of this commit just reads as much as needed from the pipe
+which avoids having to do buffering and parsing.
+
+posix: changes sitl_run.sh and main.cpp cleanup
+
+This changes the paths in sitl_run.sh quite a bit to allow the px4
+binary to run in the rootfs directory which should make it convenient
+and very close to the NuttX variant.
+
+Also main.cpp got a big cleanup after the big rebase with some
+conflicts. Quite some functionality was removed but it has yet to be
+seen if it needs to be re-added.
+
+px4_log: cleanup log levels, now they make sense
+
+Before DEBUG and INFO log levels where inverted which didn't make much
+sense in my eyes.
+
+dataman: fix path for bash shell
+
+logger: fix paths for bash shell
+
+mavlink: fix paths for bash shell
+
+param: fix path for bash shell
+
+inav: fix paths for bash shell
+
+sdlog2: fix paths for bash shell
+
+ROMFS: add forgotten mixer to list
+
+SITL init: more models, more options
+
+- Support for different models using the unified startup
+script rcS.
+- Support to choose the estimator by setting the environment variable
+  PX4_ESTIMATOR.
+- Support to choose the logger by setting the environment variable
+  PX4_LOGGER.
+
+rcS: fix string comparison
+
+listener: use template file
+
+Instead of having all of the C++ code inside the Python file it is
+nicer to have a separate template file with the C++ headers, etc.
+
+px4_log: add PX4_INFO_RAW for raw printfs
+
+This allows to do custom formatting but is still transported over
+sockets to clients.
+
+topic_listener: use PX4_INFO_RAW instead of printf
+
+commander: use PX4_INFO_RAW for status
+
+listener: rewrite to classes and factory
+
+posix: fix some argument warnings
+
+generate_listener.py: by accident changed shebang
+
+listener: big refactor of the generator
+
+Hopefully this makes it easier to read and change in the future.
+
+rcS: manually take over rebase changes
+
+listener: remove leftover try
+
+listener: properly clean up topic instance
+
+rcS: take over some vehicle specific changes
+
+posix-configs: vehicle specifics to separate files
+
+posix-configs: remove leftover lines
+
+uORBDevices: new PX4_INFO_RAW instead of printf
+
+px4_log: just use printf on NuttX
+
+listener: use less binary space, strip on NuttX
+
+generate_listener.py: remove commented code
+
+cmake: fix syntax error from merge
+
+px4_daemon: fixes after rebase of apps.h/cpp fix
+
+px4_daemon: namespace missing
+
+posix: only create stub for fsync on QURT
+
+unitests: reduce dependencies of param test
+
+This makes the unit test compile and link again after the bash changes.
+
+QURT: some compile fixes after a rebase
+
+SITL: arg change for sitl_run.sh to use rcS_test
+
+This allows to use a custom startup file for testing.
+
+SITL: add the folder test_data
+
+SITL: implement shutdown command as systemcmd
+
+The shutdown command needs to be a proper systemcmd, otherwise the alias
+and symlink generation doesn't work and we end up calling shutdown of
+the host computer which is to be avoided.
+
+px4fmu_test: same IO_pass mixer as px4fmu_default
+
+px4fmu_test: use normal quad x mixer
+
+There is no good reason to use a specific test mixer, except more cmake
+code around it. Therefore just use the same mixer as default, and at
+some point px4fmu_test and px4fmu_default can get merged
+
+POSIX: cleanup, dir and symlink fixes
+
+This cleans up the logic behind the symlinking and creating directories.
+
+POSIX: correct arg order in usage info
+
+tests: fix paths for SITL tests
+
+POSIX: printf fix
+
+sitl_run.sh: try to make this run on Mac as well
+
+cmake: try to make jenkins happier
+
+Path cleanup, the bin is no longer in src/firmware
+
+POSIX: fix symlink logic
+
+SITL: prefix all exported env variables
+
+cmake: fix path for ROS tests
+
+integrationtests: fix log path
+
+launch: try to make tets with ROS working again
+
+px4_defines: fix after wrong merge deconflicting
+
+px4_defines: get paths for POSIX correct
+
+cmake: fix cmake arguments
+
+This was fine with cmake 3.6 but did not work with cmake 3.2.2
+
+cmake: use cp instead of cmake -E copy
+
+cmake -E copy does not support copying multiple files with versions <
+3.5. Therefore, just use cp for now.
+
+ROMFS: fix build error after rebase
+
+cmake: fix paths in configs
+
+launch: use `spawn_model` again
+
+cmake: various fixes after big rebase
+
+param: path fixes after rebase
+
+posix platform: fixes after rebase
+
+test_mixer: fix screwed up rebase",CI/CD:Too_many_changes,memory
+"PX4-Autopilot
+"," #24
+",[828e31d3a914166c8bb3897c6191f4203f151b7a](https://github.com/PX4/PX4-Autopilot/commit/828e31d3a914166c8bb3897c6191f4203f151b7a?w=1),"lockstep_scheduler: optimize performance
+- use a linked-list instead of std::vector. Insertion and removal are now
+  O(1)
+- avoid malloc and use a thread_local instance of TimedWait.
+  It gets destroyed when the thread exits, so we have to add protection
+  in case a thread exits too quickly. This in turn requires a fix to the
+  unit-tests.","New:Hard-coded-timing\
+New:build:Slow_Simulation/Hardware_Tests",performance
+"PX4-Autopilot
+"," #25
+",[721f9f901f7e2725318b30fc64d5448070fa09af](https://github.com/PX4/PX4-Autopilot/commit/721f9f901f7e2725318b30fc64d5448070fa09af?w=1),log_writer_file: fix race condition for fast consecutive stop & start calls,X,fast
+"PX4-Autopilot
+"," #26
+",[1d932f6ec9d4a59ba4c68a59fc134bcd925328af](https://github.com/PX4/PX4-Autopilot/commit/1d932f6ec9d4a59ba4c68a59fc134bcd925328af?w=1),"IMU drivers using FIFOs increase max length to 16 and sync similar implementations
+ - this provides some extra space when the FIFO transfers don't align perfectly
+ - I've also made an effort to keep the different drivers (icm20602, icm20608g, ism330ldc) in sync so we can factor out the common portions later once we've confident in the pattern.",X,increase
+"PX4-Autopilot
+"," #27
+",[7e39ef8b8fc871abbd4f5f7ab5a450580d893345](https://github.com/PX4/PX4-Autopilot/commit/7e39ef8b8fc871abbd4f5f7ab5a450580d893345?w=1),"MAVLink sim: Start faster\
+This reduces test times across the board.",X,faster
+"PX4-Autopilot
+"," #28
+",[190b96a46c3540ec03823ac4370e166a79e1f811](https://github.com/PX4/PX4-Autopilot/commit/190b96a46c3540ec03823ac4370e166a79e1f811?w=1),"SMbus battery driver - a lot of updates and optimizations
+
+- added support for BQ40Z80 based battery
+- added performance counter for interface errors
+- added SMART_BATTERY_INFO mavlink message
+- general code cleanups and optimization
+- fixed: void flooding the log in case of interface error
+- fixed: using _batt_startup_capacity instead of _batt_capacity for discharged_mah
+- update: read manufacture_date
+- update: get _cell_count from parameter and not const 4
+- update: avoid re-reading data that has already been read and stored on class already
+- currently the battery type defined by BAT_SMBUS_MODEL parameter and not by auto detection",X,performance
+"PX4-Autopilot
+"," #29
+",[2956aa340e480396fd5a37d558477f6e7ce9878b](https://github.com/PX4/PX4-Autopilot/commit/2956aa340e480396fd5a37d558477f6e7ce9878b?w=1),"module: increase max timeout for stopping modules from 2s to 5s\
+The gps module might take up to 4s to stop (if stopped during module
+configuration).","New:Hard-coded-timing
+General:Hard-coding",increase
+"PX4-Autopilot
+"," #30
+",[3924792c2025316a55ffa01a7f4fd15e3ee071d9](https://github.com/PX4/PX4-Autopilot/commit/3924792c2025316a55ffa01a7f4fd15e3ee071d9?w=1),"Jenkins: HIL improve run_tests.py and run_nsh_cmd.py helper
+ - switch to python3
+ - run_nsh_cmd.py return error if command fails
+ - decrease timeout in checking for output
+ - Jenkins hardware tests tolerate certain command failures that aren't available on all boards (flash constrained, etc)","New:Hard-coded-timing
+General:Hard-coding",decrease
+"PX4-Autopilot
+"," #31
+",[a34e57a4cc8817186327436edc1aa14d2174be67](https://github.com/PX4/PX4-Autopilot/commit/a34e57a4cc8817186327436edc1aa14d2174be67?w=1),"Simulator: Increase stack, publication affinity
+This commit increases the send thread stack size and changes the thread affinity of the lockstep clocking topic. It also improves verbosity in case error states occur.","New:Hard-coded-timing
+General:Hard-coding",increase
+"PX4-Autopilot
+"," #32
+",[4ce72e03b6ddd0894b2e96c2d6791e3317820462](https://github.com/PX4/PX4-Autopilot/commit/4ce72e03b6ddd0894b2e96c2d6791e3317820462?w=1),"Increase range of pulse count in PWM driver
+...",X,increase
+"PX4-Autopilot
+"," #33
+",[0362fd4c2229ac1cf9b2743d28e4389a6b8e1722](https://github.com/PX4/PX4-Autopilot/commit/0362fd4c2229ac1cf9b2743d28e4389a6b8e1722?w=1),"(1) Fix a critical memory leak in the TCP read-ahead buffering logic; Add an option to suppress SDIO multi-block transfers in order to work around a buggy SDIO driver
+...",?,memory
+"PX4-Autopilot
+"," #34
+",[9c338d809eaf32ae4a51fc74661f7d86a81a7d74](https://github.com/PX4/PX4-Autopilot/commit/9c338d809eaf32ae4a51fc74661f7d86a81a7d74?w=1),"STM32 quad encoder: Don't calculate the timer prescaler value at runtime; pre-calculate it at compiler time
+...",X,runtime
+"PX4-Autopilot
+"," #35
+",[227b5d0f56b4aacb68a53b07664f41565de53879](https://github.com/PX4/PX4-Autopilot/commit/227b5d0f56b4aacb68a53b07664f41565de53879?w=1),Fix a deadlock when using the NSH ifconfig command over Telnet,General: Deadlock,deadlock
+"PX4-Autopilot
+"," #36
+",[5b83507116be57e0c84daea74d30dea382f20f97](https://github.com/PX4/PX4-Autopilot/commit/5b83507116be57e0c84daea74d30dea382f20f97?w=1),"Fix infinite loop in CDC/ACM driver
+...",?,infinite
+"PX4-Autopilot
+"," #37
+",[b66dd903b6b5d1d6a72d53be54cca36fdfb3d653](https://github.com/PX4/PX4-Autopilot/commit/b66dd903b6b5d1d6a72d53be54cca36fdfb3d653?w=1),"NxWidgets: Fix a potential deadlock that can occur waiting for toolbard geometry data
+...",General: Deadlock,deadlock
+"PX4-Autopilot
+"," #38
+",[47125132adb0ef34b429f2563b860c713a037032](https://github.com/PX4/PX4-Autopilot/commit/47125132adb0ef34b429f2563b860c713a037032?w=1),Calypso update from Denis Carkiki.  Adds UWire driver and support for external memory in NuttX heap,X,memory
+"PX4-Autopilot
+"," #39
+",[55c75c6ba007f72e98e6b47c63e85d6f0482d339](https://github.com/PX4/PX4-Autopilot/commit/55c75c6ba007f72e98e6b47c63e85d6f0482d339?w=1),"Update STM3240G-EVAL defconfig to support NxConsole keyboard input; increase spacing of icons on the start window
+...",X,increase
+"PX4-Autopilot
+"," #40
+",[0e3afd21b0f44f81c4f2befca6da6d2914f06e80](https://github.com/PX4/PX4-Autopilot/commit/0e3afd21b0f44f81c4f2befca6da6d2914f06e80?w=1),"The SST25 driver now works with SST25 (at least using the slow write mode)
+...",New:Hard-coded-timing,slow
+"PX4-Autopilot
+"," #41
+",[d09ff7e1f92d3842f6716c4fce1f8e98026057b9](https://github.com/PX4/PX4-Autopilot/commit/d09ff7e1f92d3842f6716c4fce1f8e98026057b9?w=1),"Add LPC32xx memory map and interrupt numbers
+...",X,memory
+"PX4-Autopilot
+"," #42
+",[139cd091768c57272fe1f80d725d4a3a24d2e3d0](https://github.com/PX4/PX4-Autopilot/commit/139cd091768c57272fe1f80d725d4a3a24d2e3d0?w=1),"Faster sensor bus resets on timeouts, massively reworked fixed wing app, tested","CI/CD:Large_change
+New:Hard-coded-timing",faster
+"PX4-Autopilot
+"," #43
+",[6c4aadedf42de266e592f84cda27d8af1bbe56b5](https://github.com/PX4/PX4-Autopilot/commit/6c4aadedf42de266e592f84cda27d8af1bbe56b5?w=1),Switch back from max performance to size as the default optimization level.  Individual modules can still override this if they need to.,X,performance
+"PX4-Autopilot
+"," #44
+",[0472eeae0533c06d42d82d12176c575f0cdeddf0](https://github.com/PX4/PX4-Autopilot/commit/0472eeae0533c06d42d82d12176c575f0cdeddf0?w=1),Add EEPROM read/write performance counters.,?,performance
+"PX4-Autopilot
+"," #45
+",[0dc0a0539dafdf1727763cc145f02faa8a8e7d22](https://github.com/PX4/PX4-Autopilot/commit/0dc0a0539dafdf1727763cc145f02faa8a8e7d22?w=1),Increase the retry count while probing for I2C sensors.  This will also unwedge stuck sensors.,X,increase
+"PX4-Autopilot
+"," #46
+",[704679d7b1a8338d656f3ce6565390568ef876b4](https://github.com/PX4/PX4-Autopilot/commit/704679d7b1a8338d656f3ce6565390568ef876b4?w=1),"Removed delay after receiving in recvfrom().  This was killing network performance
+...",?,performance
+"PX4-Autopilot
+"," #47
+",[648420e67a546b33400fd2fe5b6a50410276ae3d](https://github.com/PX4/PX4-Autopilot/commit/648420e67a546b33400fd2fe5b6a50410276ae3d?w=1),"Add support for DMA memory allocator to FAT file system
+...",X,memory
+"PX4-Autopilot
+"," #48
+",[491a83acb40aa1fa87c1c6894c3ecbe957c19e54](https://github.com/PX4/PX4-Autopilot/commit/491a83acb40aa1fa87c1c6894c3ecbe957c19e54?w=1),Fix for recvfrom() hang when the new CONFIG_NET_TCP_RECVDELAY is set to zero (from Max Holtzberg),X,hang
+"PX4-Autopilot
+"," #49
+",[d7fb2175eb73fc7ec1616c3ad78fffd1bc1590ab](https://github.com/PX4/PX4-Autopilot/commit/d7fb2175eb73fc7ec1616c3ad78fffd1bc1590ab?w=1),A simple file write performance test,X,performance
+"PX4-Autopilot
+"," #50
+",[731b466aca72e22039f46678e890a50dd59b59b4](https://github.com/PX4/PX4-Autopilot/commit/731b466aca72e22039f46678e890a50dd59b59b4?w=1),"If server fails to create a thread because of lack-of-resources (EAGAIN), don't terminate.  Keep serving... Memory may become available again later.
+...",?,memory
+"PX4-Autopilot
+"," #51
+",[8de1d1d182bed68c075f279541c32a7493aef0bc](https://github.com/PX4/PX4-Autopilot/commit/8de1d1d182bed68c075f279541c32a7493aef0bc?w=1),"Update Olimex-LPC1766STK setenv.sh to make it faster to use CodeSourcery.
+...",General:Code_Duplication,faster
+"PX4-Autopilot
+"," #52
+",[642f3426a7aadd9fd345590a4c0881d7e64014a7](https://github.com/PX4/PX4-Autopilot/commit/642f3426a7aadd9fd345590a4c0881d7e64014a7?w=1),"Added mag calibration routine, fixed minor typos without runtime effects",X,runtime
+"PX4-Autopilot
+"," #53
+",[f9a8818d1e040bdf1a4bb62041a469ceee67dbf4](https://github.com/PX4/PX4-Autopilot/commit/f9a8818d1e040bdf1a4bb62041a469ceee67dbf4?w=1),"Switch from -Os to -O3.  This generates *much* faster code, although at a ~50% size penalty.  We can afford the space.",X,faster
+"PX4-Autopilot
+"," #54
+",[c522b5446dd4e692d15b37de8ad199765259e35b](https://github.com/PX4/PX4-Autopilot/commit/c522b5446dd4e692d15b37de8ad199765259e35b?w=1),Work in progress on to/from memory BSON coding.,X,memory
+"PX4-Autopilot
+"," #55
+",[edd2715f84532f6c4c748cc97f0fe8a2982aa885](https://github.com/PX4/PX4-Autopilot/commit/edd2715f84532f6c4c748cc97f0fe8a2982aa885?w=1),"reverted memory change, sdlog app needs more than 2K",?,memory
+"PX4-Autopilot
+"," #56
+",[7961d6ce58b0567f4c24cb0b242e2cd875a70c5b](https://github.com/PX4/PX4-Autopilot/commit/7961d6ce58b0567f4c24cb0b242e2cd875a70c5b?w=1),Make ostest RR scheduler test use less memory from Freddie Chopin; Plus build fix from...,X,memory
+"PX4-Autopilot
+"," #57
+",[dca3bce1ca89595f5df3788da34afe3b30bfb35a](https://github.com/PX4/PX4-Autopilot/commit/dca3bce1ca89595f5df3788da34afe3b30bfb35a?w=1),Add a new performance counter for measuring periodic/interval events.,X,performance
+"PX4-Autopilot
+"," #58
+",[14d874f4a15653fce2902f016b1e75373afadd51](https://github.com/PX4/PX4-Autopilot/commit/14d874f4a15653fce2902f016b1e75373afadd51?w=1),Fix some memory corruption bugs.,"New:Rounded_numbers
+General:Hard-coding",memory
+"PX4-Autopilot
+"," #59
+",[92e1d5eb78d9d04a89b0413718c8bab6e9af7f63](https://github.com/PX4/PX4-Autopilot/commit/92e1d5eb78d9d04a89b0413718c8bab6e9af7f63?w=1),"Possible fix for #78 - increase the wait timeout for discard when flashing PX4IO. It's not clear this solves the issue, but I can't reproduce it with this added.",New:Hard-coded-timing,increase
+"PX4-Autopilot
+"," #60
+",[35c82ff2fc63ab823770f9776e6b6a0f81cd4452](https://github.com/PX4/PX4-Autopilot/commit/35c82ff2fc63ab823770f9776e6b6a0f81cd4452?w=1),Make mixer ioctls load from a memory buffer rather than a file. This is prep for uploading the memory buffer to IO to be processed there.,?,memory
+"PX4-Autopilot
+"," #61
+",[375d3c14d742248b434c080527886a95ea1d563f](https://github.com/PX4/PX4-Autopilot/commit/375d3c14d742248b434c080527886a95ea1d563f?w=1),"increase the UART buffer sizes to 256
+
+The most critical one is the GPS serial port receive buffer size,
+which needs to be at least 128 to support the UBLOX protocol, but it
+seems a good idea for people running a FMU without a IO board to
+increase the UART buffer sizes generally",?,increase
+"PX4-Autopilot
+"," #62
+",[ca690f60272b5330f632cd18b58ee9af89fbc9ae](https://github.com/PX4/PX4-Autopilot/commit/ca690f60272b5330f632cd18b58ee9af89fbc9ae?w=1),"Fixed #153 - when no microSD card is present, test used to hang, now aborts with error.",X,hang
+"PX4-Autopilot
+"," #63
+",[070651221f4f60c2074e7641affa10e2b8714f07](https://github.com/PX4/PX4-Autopilot/commit/070651221f4f60c2074e7641affa10e2b8714f07?w=1),"Add split package logic to improve TCP send performance with delayed ACKs
+...",X,performance
+"PX4-Autopilot
+"," #64
+",[1094575ce544860bc66b7c88d6b5eaf419d5ed7d](https://github.com/PX4/PX4-Autopilot/commit/1094575ce544860bc66b7c88d6b5eaf419d5ed7d?w=1),"Fix a bug where recv[from]() would hang when remote host gracefully closed connection
+...",?,hang
+"PX4-Autopilot
+"," #65
+",[3bec164b3ae1cd7f9b5dcec532e7d073be96d45d](https://github.com/PX4/PX4-Autopilot/commit/3bec164b3ae1cd7f9b5dcec532e7d073be96d45d?w=1),"Fix a recently introduced memory leak
+...",X,memory
+"PX4-Autopilot
+"," #66
+",[e0f83af96fdab2cd5b239dec3a842c4a2a92ad85](https://github.com/PX4/PX4-Autopilot/commit/e0f83af96fdab2cd5b239dec3a842c4a2a92ad85?w=1),"Reset the collection state machine on all I2C errors, increase the retry count.",?,increase
+"PX4-Autopilot
+"," #67
+",[621063ac084954bba11189c8566776aff25bfaeb](https://github.com/PX4/PX4-Autopilot/commit/621063ac084954bba11189c8566776aff25bfaeb?w=1),Increase the number of I2C retries.,?,increase
+"PX4-Autopilot
+"," #68
+",[b620136af4f8de913fd12872a91a80f62861dc4c](https://github.com/PX4/PX4-Autopilot/commit/b620136af4f8de913fd12872a91a80f62861dc4c?w=1),"Added support for MTK revision 19, working condition but configuration of MTK is very slow and needs improvement",X,slow
+"PX4-Autopilot
+"," #69
+",[e896944adcce3d0d5e333186a76b35850e5f9bc9](https://github.com/PX4/PX4-Autopilot/commit/e896944adcce3d0d5e333186a76b35850e5f9bc9?w=1),ms5611: try to measure the performance cost of I2C timeouts,X,performance
+"PX4-Autopilot
+"," #70
+",[8c7e2546ed5222145a6d1745e77d01f7c21c24fc](https://github.com/PX4/PX4-Autopilot/commit/8c7e2546ed5222145a6d1745e77d01f7c21c24fc?w=1),Simplify the PX4IO main loop to cut down on memory consumption.,New:Hard-coded-timing,memory
+"PX4-Autopilot
+"," #71
+",[5b93ab0372dd1208112156850908b87143a0c0dd](https://github.com/PX4/PX4-Autopilot/commit/5b93ab0372dd1208112156850908b87143a0c0dd?w=1),"Clean up and compact the output to fit inside a 80 column display.
+
+Bug fix:
+- running/sleeping count
+
+Plus:
+- added task state
+- show the idle task (to make the number of tasks match the reported number)
+- convert some calc to floating point where it doesn't hurt performance (for clarity)
+- accept 'q' (standard) and escape to exit the program",X,performance
+"PX4-Autopilot
+"," #72
+",[52bb5e561c2407937d80545c127e37da6d2c3a04](https://github.com/PX4/PX4-Autopilot/commit/52bb5e561c2407937d80545c127e37da6d2c3a04?w=1),Fix memory sizing so that we get the extra 64K we promised.,X,memory
+"PX4-Autopilot
+"," #73
+",[7e8d8f9e7226bcc04a5f8dd4b01c9a6a4f1f9910](https://github.com/PX4/PX4-Autopilot/commit/7e8d8f9e7226bcc04a5f8dd4b01c9a6a4f1f9910?w=1),"Call sub-makes with -r to make them start faster (mostly on Windows, where this inhibits an enormous amount of silly scanning for things).\
+Force non-parallel builds for the NuttX archives.",X,faster
+"PX4-Autopilot
+"," #74
+",[8fcbb4f669d8c9003f778f35a94278383e0360ac](https://github.com/PX4/PX4-Autopilot/commit/8fcbb4f669d8c9003f778f35a94278383e0360ac?w=1),"Merge SDIO changes and hack config to make it work.\
+We need to resolve the DMA-safe memory allocation story, but until then let's disable the CCM. We still have as much RAM as the v1.x boards in this mode.",X,memory
+"PX4-Autopilot
+"," #75
+",[af27101ffecf2ad4642b1ced23640ff133c7246f](https://github.com/PX4/PX4-Autopilot/commit/af27101ffecf2ad4642b1ced23640ff133c7246f?w=1),"px4io: changed adc_measure() to return 0xffff on error, and lower timeout\
+the timeout of 1ms was far too long, and could impact flight
+performance\
+Returning 0xffff on error matches the FMU code, and allows bad values
+to be discarded",New:Hard-coded-timing,performance
+"PX4-Autopilot
+"," #76
+",[dca844a808643131ee299a46a7cb82aea933822f](https://github.com/PX4/PX4-Autopilot/commit/dca844a808643131ee299a46a7cb82aea933822f?w=1),"Based on comments in:\
+http://answers.px4.ethz.ch/question/1337/px4io-receiver-connection-problem/?answer=1346#post-id-1346
+
+increase the longest PPM pulse we recognize out to 550µs.",General:Lack_of_documentation,increase
+"PX4-Autopilot
+"," #77
+",[eab01a2efd0c1f1fc9cf32181c63a7e5494f0004](https://github.com/PX4/PX4-Autopilot/commit/eab01a2efd0c1f1fc9cf32181c63a7e5494f0004?w=1),Hotfix: Generate map files for modules as well for more in-depth memory-use debugging.,X,memory
+"PX4-Autopilot
+"," #78
+",[1bf8f7b47ec8dd8f2f494fe40f193b3d1712e025](https://github.com/PX4/PX4-Autopilot/commit/1bf8f7b47ec8dd8f2f494fe40f193b3d1712e025?w=1),"sdlog2 performance increased, fixes and cleanup",CI/CD:Large_change,performance
+"PX4-Autopilot
+"," #79
+",[4253c16b3f3eeb9ed05d2b80c8ce9531a11ffad3](https://github.com/PX4/PX4-Autopilot/commit/4253c16b3f3eeb9ed05d2b80c8ce9531a11ffad3?w=1),Increase array size.,General:Lack_of_documentation,increase
+"PX4-Autopilot
+"," #80
+",[b5f4f1ee808c176c5dc0705b76584b438f151650](https://github.com/PX4/PX4-Autopilot/commit/b5f4f1ee808c176c5dc0705b76584b438f151650?w=1),Adressed performance concern and fixed a copy paste bug,General:Hard-coding,performance
+"PX4-Autopilot
+"," #81
+",[5cb1f4662fb28f68e539f2c8930c0f48ccea3521](https://github.com/PX4/PX4-Autopilot/commit/5cb1f4662fb28f68e539f2c8930c0f48ccea3521?w=1),"multirotor_attitude_control performance improved, tested in flight. PID library new functionality and bugfixes.",New:Rounded_numbers,performance
+"PX4-Autopilot
+"," #82
+",[87c3d1a8c14e9d97bb98d8255c1ba35e875b6c81](https://github.com/PX4/PX4-Autopilot/commit/87c3d1a8c14e9d97bb98d8255c1ba35e875b6c81?w=1),More link performance counters.,X,performance
+"PX4-Autopilot
+"," #83
+",[40c56ab61e04fe73aff3a84d20ffc81e102373f3](https://github.com/PX4/PX4-Autopilot/commit/40c56ab61e04fe73aff3a84d20ffc81e102373f3?w=1),Corrected bug in px4io driver that lead to hang of FMU-IO communication,?,hang
+"PX4-Autopilot
+"," #84
+",[53d69f9e919445d13fe1c98a0164d238b7ff4af6](https://github.com/PX4/PX4-Autopilot/commit/53d69f9e919445d13fe1c98a0164d238b7ff4af6?w=1),Added highlighting of current line to make editing and double-clicking warnings/errors faster,X,faster
+"PX4-Autopilot
+"," #85
+",[70f272bd22e9ccdb9dbc1c15dd76fce4449ea0ab](https://github.com/PX4/PX4-Autopilot/commit/70f272bd22e9ccdb9dbc1c15dd76fce4449ea0ab?w=1),"Disabled SDIO DMA, enabled CCM memory",X,memory
+"PX4-Autopilot
+"," #86
+",[e88d63ef272124e8c0ee9574506d14866feadb8b](https://github.com/PX4/PX4-Autopilot/commit/e88d63ef272124e8c0ee9574506d14866feadb8b?w=1),Increased USB buffer size to cope with fast transfers,X,fast
+"PX4-Autopilot
+"," #87
+",[3f4315b4767ff221936e135b3252794a952f2b95](https://github.com/PX4/PX4-Autopilot/commit/3f4315b4767ff221936e135b3252794a952f2b95?w=1),Hotfix: Increase stack size for low prio commander task,?,increase
+"PX4-Autopilot
+"," #88
+",[0810b264e5679795f100df3a7363ba3ad9d7765e](https://github.com/PX4/PX4-Autopilot/commit/0810b264e5679795f100df3a7363ba3ad9d7765e?w=1),Hotfix: Increase work stack sizes,?,increase
+"PX4-Autopilot
+"," #89
+",[3851bf5c10181fe0f56af40fc7e35a3b72bbb845](https://github.com/PX4/PX4-Autopilot/commit/3851bf5c10181fe0f56af40fc7e35a3b72bbb845?w=1),Hotfix: Improve UART1 receive performance,?,performance
+"PX4-Autopilot
+"," #90
+",[81a4df0953e738041d9fdc2b2eb353a635f3003b](https://github.com/PX4/PX4-Autopilot/commit/81a4df0953e738041d9fdc2b2eb353a635f3003b?w=1),sensors: slow down updates rate to 200Hz to free some CPU time,"New:Delayed_Sync_With_Physical_Events
+?",slow
+"PX4-Autopilot
+"," #91
+",[537484f60d37f7f04d2ecaeb4139e2c316565eb2](https://github.com/PX4/PX4-Autopilot/commit/537484f60d37f7f04d2ecaeb4139e2c316565eb2?w=1),"Revert ""sensors: slow down updates rate to 200Hz to free some CPU time""\
+This reverts commit 81a4df0953e738041d9fdc2b2eb353a635f3003b.",?,slow
+"PX4-Autopilot
+"," #92
+",[c0c366d6ee076ca812fa9672709c1e66fafdb32b](https://github.com/PX4/PX4-Autopilot/commit/c0c366d6ee076ca812fa9672709c1e66fafdb32b?w=1),"position_estimator_inav: estimate distance to bottom rate, increase time of position estimation on only accelerometer, reduce weight for GPS if flow available",New:Hard-coded-timing,increase
+"PX4-Autopilot
+"," #93
+",[937b502d4c3fd582f7be736240f5971e8c0f7c2b](https://github.com/PX4/PX4-Autopilot/commit/937b502d4c3fd582f7be736240f5971e8c0f7c2b?w=1),increase landing speed to v_min * 1.3 for more safety,New:Hard-coded-timing,increase
+"PX4-Autopilot
+"," #94
+",[881c89dd1b55f5e2dbb355562665a94dcc618217](https://github.com/PX4/PX4-Autopilot/commit/881c89dd1b55f5e2dbb355562665a94dcc618217?w=1),increase safety margin for takeoff speed,New:Hard-coded-timing,increase
+"PX4-Autopilot
+"," #95
+",[3ad9dd030c01e233a78aebfd2e20e67168962255](https://github.com/PX4/PX4-Autopilot/commit/3ad9dd030c01e233a78aebfd2e20e67168962255?w=1),Added performance counter for write IOCTL,X,performance
+"PX4-Autopilot
+"," #96
+",[5b302fef59354f536e83a0b14572d2f954a6e682](https://github.com/PX4/PX4-Autopilot/commit/5b302fef59354f536e83a0b14572d2f954a6e682?w=1),HOTFIX: Increased attitude control updates to 50 Hz - was less than 10 Hz and unintended slow,New:Hard-coded-timing,slow
+"PX4-Autopilot
+"," #97
+",[70d4ef480ac5461ef54ac72a54bd335007e233cc](https://github.com/PX4/PX4-Autopilot/commit/70d4ef480ac5461ef54ac72a54bd335007e233cc?w=1),geofence: do not keep fence in memory,X,memory
+"PX4-Autopilot
+"," #98
+",[c4fc730acad12b74f51d9ba7d3ff267e3e1a1ab3](https://github.com/PX4/PX4-Autopilot/commit/c4fc730acad12b74f51d9ba7d3ff267e3e1a1ab3?w=1),"FMUv2: make all UARTs use 512 byte buffer, 2048 for CDCACM output\
+this is important when using UARTs for things like secondary GPS
+modules, which may produce large enough transfers that 128 bytes is
+not enough.\
+The 2048 buffer for CDCACM transmit makes mavlink log and parameter
+transfer faster",X,faster
+"PX4-Autopilot
+"," #99
+",[3be1a5182db7bd3802b77e7c03fc14f00ca218c3](https://github.com/PX4/PX4-Autopilot/commit/3be1a5182db7bd3802b77e7c03fc14f00ca218c3?w=1),FMUv1: use larger CDCACM buffer size for faster log transfer on FMUv1,X,faster
+"PX4-Autopilot
+"," #100
+",[480d31f7548d2a4dc7ad55dc2de1f9733045bbd3](https://github.com/PX4/PX4-Autopilot/commit/480d31f7548d2a4dc7ad55dc2de1f9733045bbd3?w=1),fw: increase invalid airspeed threshold,"New:Hard-coded-timing
+General:Hard-coding",increase
+"PX4-Autopilot
+"," #101
+",[8c8e9a4ff9584de9d48c1773ead49054ae538b06](https://github.com/PX4/PX4-Autopilot/commit/8c8e9a4ff9584de9d48c1773ead49054ae538b06?w=1),"Enable the PX4IO self check and debug interfaces. No reason to disable them, since they are runtime-configured (and needed, for the case of memory)",X,memory
+"PX4-Autopilot
+"," #102
+",[c3e4e4ee68f1f31d3ae281b0afb281fc7c58bc27](https://github.com/PX4/PX4-Autopilot/commit/c3e4e4ee68f1f31d3ae281b0afb281fc7c58bc27?w=1),"Build fix, replaced usleep with up_udelay in memory lockdown state",?,memory
+"PX4-Autopilot
+"," #103
+",[2aa76f1a3c4eb99074b38d287e0f18a98973671d](https://github.com/PX4/PX4-Autopilot/commit/2aa76f1a3c4eb99074b38d287e0f18a98973671d?w=1),"Fixes to memory check handling, split out switch handling to allow separate initialization",X,memory
+"PX4-Autopilot
+"," #104
+",[dda50c62bfd26463718f50d2f9c1cdbecc7de4ac](https://github.com/PX4/PX4-Autopilot/commit/dda50c62bfd26463718f50d2f9c1cdbecc7de4ac?w=1),"hmc5883: much faster calibration code with bug fixes\
+this fixes two bugs in ""hmc5883 calibrate"" and also makes it much
+faster, so it can be run on every boot. It now uses the correct 2.5Ga
+range when calibrating, and fixes the expected values for X/Y/Z axes\
+The basic calibration approach is similar to the APM2 driver, waiting
+for 10 good samples after discarding some initial samples. That allows
+the calibration to run fast enough that it can be done on every boot
+without causing too much boot delay.",X,fast
+"PX4-Autopilot
+"," #105
+",[08a6057ef8c4aa796751c5ac07ab8efa7529b150](https://github.com/PX4/PX4-Autopilot/commit/08a6057ef8c4aa796751c5ac07ab8efa7529b150?w=1),Increase SPI GPIO speed for FMUv1 analog to v2,X,increase
+"PX4-Autopilot
+"," #106
+",[44cd82e2fef20a3fc5aa61711b4cc06012a1e21d](https://github.com/PX4/PX4-Autopilot/commit/44cd82e2fef20a3fc5aa61711b4cc06012a1e21d?w=1),Set default autoland wait time to -1 (infinite wait),X,infinite
+"PX4-Autopilot
+"," #107
+",[3d21a73ddf18b89552aa9bd65965ff6b311487b8](https://github.com/PX4/PX4-Autopilot/commit/3d21a73ddf18b89552aa9bd65965ff6b311487b8?w=1),navigator: fixed infinite RTL->LOITER->RTL... loop on failsafe,X,infinite
+"PX4-Autopilot
+"," #108
+",[f6694c2cef62ee3284598ed1b4d8c6954effab4e](https://github.com/PX4/PX4-Autopilot/commit/f6694c2cef62ee3284598ed1b4d8c6954effab4e?w=1),rc.fw_defaults: increase acceptance radius which is used by navigator to generate virtual waypoints (RTL etc.),X,increase
+"PX4-Autopilot
+"," #109
+",[ccfe476326d8b01e33a3a7ea115054a31fa7a2b9](https://github.com/PX4/PX4-Autopilot/commit/ccfe476326d8b01e33a3a7ea115054a31fa7a2b9?w=1),decrease MC_PITCHRATE_P for TBS Discovery,X,decrease
+"PX4-Autopilot
+"," #110
+",[8425b9bef21e310d1cbd29aad65d34e9dd974d55](https://github.com/PX4/PX4-Autopilot/commit/8425b9bef21e310d1cbd29aad65d34e9dd974d55?w=1),Increase NFILE_DESCRIPTORS to 36,General:Lack_of_documentation,increase
+"PX4-Autopilot
+"," #111
+",[9e41f6af18d3d84413501ce37737d574fd20816d](https://github.com/PX4/PX4-Autopilot/commit/9e41f6af18d3d84413501ce37737d574fd20816d?w=1),"mavlink: memory leaks on exit fixed, minor fixes",?,memory
+"PX4-Autopilot
+"," #112
+",[4cee3614c7bc2e960ac52e59014bc4d08b8da11e](https://github.com/PX4/PX4-Autopilot/commit/4cee3614c7bc2e960ac52e59014bc4d08b8da11e?w=1),rc.usb: increase data rate to 10000bytes/s for USB,General:Lack_of_documentation,increase
+"PX4-Autopilot
+"," #103
+",[183a0cdb22fd824d87912ea3d2c2470f0d28ed39](https://github.com/PX4/PX4-Autopilot/commit/183a0cdb22fd824d87912ea3d2c2470f0d28ed39?w=1),"MC: default MC_YAWRATE_I changed for all setups, navigator: increase yaw acceptance to 0.2rad ~ 11deg",General:Code_Duplication,increase
+"PX4-Autopilot
+"," #104
+",[e075d05f579091fb9c605c856650cbfd1587a044](https://github.com/PX4/PX4-Autopilot/commit/e075d05f579091fb9c605c856650cbfd1587a044?w=1),Move Pauls EKF into a class and instantiate only when / if needed. Checking for low memory conditions as we should.,New:Hard-coded-timing,memory
+"PX4-Autopilot
+"," #105
+",[7b95d36405cb63b53fd1fea2c25e29aedca5a3a2](https://github.com/PX4/PX4-Autopilot/commit/7b95d36405cb63b53fd1fea2c25e29aedca5a3a2?w=1),navigator hotfix: Increase acceptance range for yaw setpoints.,X,increase
+"PX4-Autopilot
+"," #106
+",[b770c9fc1edc570fc216bdf849f84519e4e3513f](https://github.com/PX4/PX4-Autopilot/commit/b770c9fc1edc570fc216bdf849f84519e4e3513f?w=1),"position_estimator_inav: increase acceptable EPH/EPV, in commander use EPH/EPV to decide if global position valid",X,increase
+"PX4-Autopilot
+"," #107
+",[595eb679b30442b52ccc7a2c2ce7ade7b5e5c6c9](https://github.com/PX4/PX4-Autopilot/commit/595eb679b30442b52ccc7a2c2ce7ade7b5e5c6c9?w=1),"ekf_att_pos_estimator: Fixed mag initialization, now starts with initial measurement instead of defaults for faster convergence",X,faster
+"PX4-Autopilot
+"," #108
+",[d1bd4b0a45ec0f6f081560fbadf675e21ce53d83](https://github.com/PX4/PX4-Autopilot/commit/d1bd4b0a45ec0f6f081560fbadf675e21ce53d83?w=1),qu4d increase pwm max,General:Lack_of_documentation,increase
+"PX4-Autopilot
+"," #109
+",[8d3fed09443faa6a3c79b68b7800ed3472877a1c](https://github.com/PX4/PX4-Autopilot/commit/8d3fed09443faa6a3c79b68b7800ed3472877a1c?w=1),"Reduce potential dataman memory fragmentation\
+The data manager dynamically allocates relatively small work item blocks
+on an as needed basis. It never frees these, instead maintaining then in
+a list of available block for reuse when needed. Even if these blocks
+are small, the are required at non-deterministic times and can end up
+scattered in memory thus causing memory fragmentation. In order to
+mitigate this problems work item blocks are allocated in groups of 8 in
+contiguous memory to reduce the number of scattered memory allocations.
+In reality, based on current usage, rarely will more than one group of 8
+be allocated.",?,memory
+"PX4-Autopilot
+"," #110
+",[18ed3cbbb8ba4eabd32db3d07c7480c1af22ebc0](https://github.com/PX4/PX4-Autopilot/commit/18ed3cbbb8ba4eabd32db3d07c7480c1af22ebc0?w=1),Increase servo out rate via USB,General:Lack_of_documentation,increase
+"PX4-Autopilot
+"," #111
+",[0655aeb7ecb73eeaedfbd41171f07f9a247b32db](https://github.com/PX4/PX4-Autopilot/commit/0655aeb7ecb73eeaedfbd41171f07f9a247b32db?w=1),"startup: NuttX seems to free memory only AFTER the next command is issued, requiring us to give it some time to do memory management so it does not keep starting tasks on top of each other. May need some consideration on main startup script as well.",New:Hard-coded-timing,memory
+"PX4-Autopilot
+"," #112
+",[b43f2e8be95417cdb58b670e549cffc6445b8f81](https://github.com/PX4/PX4-Autopilot/commit/b43f2e8be95417cdb58b670e549cffc6445b8f81?w=1),USB startup: Give NuttX enough time to tear down an app and free memory before starting the next,New:Hard-coded-timing,memory
+"PX4-Autopilot
+"," #113
+",[aa312f96f8d682c85b422ef8c5fbc89b9391712e](https://github.com/PX4/PX4-Autopilot/commit/aa312f96f8d682c85b422ef8c5fbc89b9391712e?w=1),drivers: Fix compile warnings and non-standard performance counter names,New:Rounded_numbers,performance
+"PX4-Autopilot
+"," #114
+",[b9b81beb17eb449921f11f46bc419056dce03852](https://github.com/PX4/PX4-Autopilot/commit/b9b81beb17eb449921f11f46bc419056dce03852?w=1),fw att: add performance counter,X,performance
+"PX4-Autopilot
+"," #115
+",[b3d6dcb2e5a1f66c42d575f13cbc5a7eef16db27](https://github.com/PX4/PX4-Autopilot/commit/b3d6dcb2e5a1f66c42d575f13cbc5a7eef16db27?w=1),Pre-emptively increase the log buffer - after the last cleanup we got again plenty of RAM,General:Hard-coding,increase
+"PX4-Autopilot
+"," #116
+",[fe28069effe77dcac143c0194b982028438068f3](https://github.com/PX4/PX4-Autopilot/commit/fe28069effe77dcac143c0194b982028438068f3?w=1),"Increase UART1 & UART5 RX&Tx buffer sizes\
+To fix MAVLink message garbling problems.",General:Hard-coding,increase
+"PX4-Autopilot
+"," #117
+",[d0f4232ac6e2ff9d796df9d995e749734edc32ee](https://github.com/PX4/PX4-Autopilot/commit/d0f4232ac6e2ff9d796df9d995e749734edc32ee?w=1),Build and runtime fixes for matlab csv serial bridge,X,runtime
+"PX4-Autopilot
+"," #118
+",[72afa2ca2bb7ce85262dd201b7620e310484f6c5](https://github.com/PX4/PX4-Autopilot/commit/72afa2ca2bb7ce85262dd201b7620e310484f6c5?w=1),Capture TX issues in performance counter instead of spamming console in mavlink app,X,performance
+"PX4-Autopilot
+"," #119
+",[092ede366a531ad68f7ccc2f372f83b8d2993242](https://github.com/PX4/PX4-Autopilot/commit/092ede366a531ad68f7ccc2f372f83b8d2993242?w=1),"Estimator: Clean up delta quat calculations, put them in a sweet spot between accuracy and runtime.",X,runtime
+"PX4-Autopilot
+"," #120
+",[fea4845ed97ca5219ceb8af0b0fb6d68603eea17](https://github.com/PX4/PX4-Autopilot/commit/fea4845ed97ca5219ceb8af0b0fb6d68603eea17?w=1),"SPI: make _bus protected\
+this allows runtime use of internal/external bus to determine if DRDY
+should be used on the L3GD20",X,runtime
+"PX4-Autopilot
+"," #121
+",[d6632ee2dda39de78be1bbfa6754af8b59c58655](https://github.com/PX4/PX4-Autopilot/commit/d6632ee2dda39de78be1bbfa6754af8b59c58655?w=1),"ardrone: Optimize for size, since performance is good at any rate",X,performance
+"PX4-Autopilot
+"," #122
+",[2de38d0628f3146caea28cd42b30840241269f41](https://github.com/PX4/PX4-Autopilot/commit/2de38d0628f3146caea28cd42b30840241269f41?w=1),"Improve update performance and clean up compiler warnings in px4io driver\
+- Fix compiler warnings in px4io_serial.cpp
+- Fix compiler warnings in px4io_uploader.cpp
+- Rename confusing overloaded send method with nearly identical
+parameters in px4io_uploader.cpp
+- Improve update performance by using maximum size programming buffer
+since we are no longer limited by stack size.",X,performance
+"PX4-Autopilot
+"," #123
+",[8e12d79ef4b32da98dfb13af1321a6855ecbdc3d](https://github.com/PX4/PX4-Autopilot/commit/8e12d79ef4b32da98dfb13af1321a6855ecbdc3d?w=1),Increase GPS position timeout to real-life timeouts. More work needed.,New:Hard-coded-timing,increase
+"PX4-Autopilot
+"," #124
+",[3b3e6f5aaafd1247447cad7070e3488e5798ce3c](https://github.com/PX4/PX4-Autopilot/commit/3b3e6f5aaafd1247447cad7070e3488e5798ce3c?w=1),Increase filter pass-band,X,increase
+"PX4-Autopilot
+"," #125
+",[c9eea8fbfaad7bfb3eee36a49588c9ac3a42ddc6](https://github.com/PX4/PX4-Autopilot/commit/c9eea8fbfaad7bfb3eee36a49588c9ac3a42ddc6?w=1),nshterm: increase stack size to fix crash on 'ls -l',New:Hard-coded-timing,increase
+"PX4-Autopilot
+"," #126
+",[1dc23d0c49d99fa93284a277a6bc4970ac0e7b3b](https://github.com/PX4/PX4-Autopilot/commit/1dc23d0c49d99fa93284a277a6bc4970ac0e7b3b?w=1),Disable mTECS until runtime error is better understood,?,runtime
+"PX4-Autopilot
+"," #127
+",[7f293be7d77603768899aedb438821dd19b8b4d7](https://github.com/PX4/PX4-Autopilot/commit/7f293be7d77603768899aedb438821dd19b8b4d7?w=1),"mavlink, rc.usb: increase HIL_CONTROLS rate and datarate on USB to allow HIL simulation @ 200Hz",New:Hard-coded-timing,increase
+"PX4-Autopilot
+"," #128
+",[3f4aef60c88b1e570dd30bc47a13d5340073e9a9](https://github.com/PX4/PX4-Autopilot/commit/3f4aef60c88b1e570dd30bc47a13d5340073e9a9?w=1),Increase timeout in an attempt to prevent timout python failure,New:Hard-coded-timing,increase
+"PX4-Autopilot
+"," #129
+",[54fc6aa6788a125b387926a45023844daa42ec48](https://github.com/PX4/PX4-Autopilot/commit/54fc6aa6788a125b387926a45023844daa42ec48?w=1),Hotfix: Optimize shell commands for size - we do not need massive performance there,X,performance
+"PX4-Autopilot
+"," #130
+",[a54ef70a207cd892a9ef406df6f1aa0732035537](https://github.com/PX4/PX4-Autopilot/commit/a54ef70a207cd892a9ef406df6f1aa0732035537?w=1),Decrease I2C timeout in config so it matches the previous 500 us timeout as close as possible. This is necessary after fixing the NuttX I2C timeout logic,New:Hard-coded-timing,decrease
+"PX4-Autopilot
+"," #131
+",[6791ab72a910b00818026ac60d95d8df20bfa0d3](https://github.com/PX4/PX4-Autopilot/commit/6791ab72a910b00818026ac60d95d8df20bfa0d3?w=1),Run faster for better accuracy.,New:Hard-coded-timing,faster
+"PX4-Autopilot
+"," #132
+",[bc23b6239c50527aa550eed3bc6f17dec15c5c97](https://github.com/PX4/PX4-Autopilot/commit/bc23b6239c50527aa550eed3bc6f17dec15c5c97?w=1),increase ram,?,increase
+"PX4-Autopilot
+"," #133
+",[0553771f4fd6fbdba43669a8f17185ed61f96a51](https://github.com/PX4/PX4-Autopilot/commit/0553771f4fd6fbdba43669a8f17185ed61f96a51?w=1),Adapted for sharded library use with ROS. Problems to solve: error library from PX4 does not work yet. math functions such as isfinite need to be shared as well. performance library needs to be shared as well (commented for now),?,performance
+"PX4-Autopilot
+"," #134
+",[cfe14d78c5a9d2f80ebc0282e4bc400dcba6a795](https://github.com/PX4/PX4-Autopilot/commit/cfe14d78c5a9d2f80ebc0282e4bc400dcba6a795?w=1),Adapted for sharded library use with ROS. Problems to solve: error library from PX4 does not work yet. math functions such as isfinite need to be shared as well. performance library needs to be shared as well (commented for now),?,performance
+"PX4-Autopilot
+"," #135
+",[77c823d3cd0f49014a33632ec9ef3efdd7d3dfa5](https://github.com/PX4/PX4-Autopilot/commit/77c823d3cd0f49014a33632ec9ef3efdd7d3dfa5?w=1),Adapted for sharded library use with ROS. Problems to solve: error library from PX4 does not work yet. math functions such as isfinite need to be shared as well. performance library needs to be shared as well (commented for now),?,performance
+"PX4-Autopilot
+"," #136
+",[2b8a9b632555708731d93f4aa7945d19e83d3134](https://github.com/PX4/PX4-Autopilot/commit/2b8a9b632555708731d93f4aa7945d19e83d3134?w=1),"Restored performance counter functionality, ROS package used own source file for function definitions but per_counter.h stays the same",?,performance
+"PX4-Autopilot
+"," #137
+",[038e1cac03198259d6f7630c6bb7c65c35f44fae](https://github.com/PX4/PX4-Autopilot/commit/038e1cac03198259d6f7630c6bb7c65c35f44fae?w=1),increase default engine failure threshold,New:Hard-coded-timing,increase
+"PX4-Autopilot
+"," #138
+",[ba2f55c3d7f5872aaf07e20b58b15df85417d43a](https://github.com/PX4/PX4-Autopilot/commit/ba2f55c3d7f5872aaf07e20b58b15df85417d43a?w=1),"Revert ""increase ram""\
+This reverts commit bc23b6239c50527aa550eed3bc6f17dec15c5c97.",New:Hard-coded-timing,increase
+"PX4-Autopilot
+"," #139
+",[5bc2b34e482fe8c4b0cab8f9748bd97dc3e17291](https://github.com/PX4/PX4-Autopilot/commit/5bc2b34e482fe8c4b0cab8f9748bd97dc3e17291?w=1),Reset performance counters on arming to allow better resolution during flight,X,performance
+"PX4-Autopilot
+"," #140
+",[acb739655d5c2ebf50449842ae2b7b9b7c76dbd1](https://github.com/PX4/PX4-Autopilot/commit/acb739655d5c2ebf50449842ae2b7b9b7c76dbd1?w=1),"Remove huge memory overhead in RC channels topic, was completely unnecessary",X,memory
+"PX4-Autopilot
+"," #141
+",[2f271888d2ed934c271637c22554b503ce68e535](https://github.com/PX4/PX4-Autopilot/commit/2f271888d2ed934c271637c22554b503ce68e535?w=1),Added performance counter for SD log performance of write() call,X,performance
+"PX4-Autopilot
+"," #142
+",[08d6cbe6bf0b5b04f63e42c6c60f5b1fe6167547](https://github.com/PX4/PX4-Autopilot/commit/08d6cbe6bf0b5b04f63e42c6c60f5b1fe6167547?w=1),commander: Decrease RC-signal-regained message length to stay within 50 character length limit at all times,X,decrease
+"PX4-Autopilot
+"," #143
+",[c906c2123822ef127026eeaf272b3aceed9f8995](https://github.com/PX4/PX4-Autopilot/commit/c906c2123822ef127026eeaf272b3aceed9f8995?w=1),"px4io: prevent use of uninitialised memory in io_set_arming_state()\
+the vehicle may not have setup a control_mode. We need to check the
+return of orb_copy() to ensure we are getting initialised values",X,memory
+"PX4-Autopilot
+"," #144
+",[5bb03f1c2db3eb5620caf806b053f8194490969a](https://github.com/PX4/PX4-Autopilot/commit/5bb03f1c2db3eb5620caf806b053f8194490969a?w=1),subscriber example increase stack size,General:Hard-coding,increase
+"PX4-Autopilot
+"," #145
+",[71f6a34367794a887704e2898f8a10101bacfb12](https://github.com/PX4/PX4-Autopilot/commit/71f6a34367794a887704e2898f8a10101bacfb12?w=1),mc att: increase stack size,General:Hard-coding,increase
+"PX4-Autopilot
+"," #146
+",[262b9fc7545805c7b93a15cbb80a2f67db5ecdf0](https://github.com/PX4/PX4-Autopilot/commit/262b9fc7545805c7b93a15cbb80a2f67db5ecdf0?w=1),fw pos ctl: make loop performance counter more meaningful,X,performance
+"PX4-Autopilot
+"," #147
+",[c9ca61ef5b23a370fcaf3e2a0546ab5452b65733](https://github.com/PX4/PX4-Autopilot/commit/c9ca61ef5b23a370fcaf3e2a0546ab5452b65733?w=1),"mavlink: don't slow mission updates down like this, otherwise we might miss mission results",New:Hard-coded-timing,slow
+"PX4-Autopilot
+"," #148
+",[9292c8f405b0ed208443df0b1f9ebd497bb518ab](https://github.com/PX4/PX4-Autopilot/commit/9292c8f405b0ed208443df0b1f9ebd497bb518ab?w=1),add interrupt latency printout command and mean/variance to interval performance counter,New:Hard-coded-timing,performance
+"PX4-Autopilot
+"," #149
+",[c583f1fe8b9e66b42dd4697a5908541dfdd57f69](https://github.com/PX4/PX4-Autopilot/commit/c583f1fe8b9e66b42dd4697a5908541dfdd57f69?w=1),increase commander framesize,General:Hard-coding,increase
+"PX4-Autopilot
+"," #150
+",[ee7e008008caa04f905654cb18e6d68fd980f8cd](https://github.com/PX4/PX4-Autopilot/commit/ee7e008008caa04f905654cb18e6d68fd980f8cd?w=1),increase commander framesize,X,increase
+"PX4-Autopilot
+"," #151
+",[59e0b67c8eaa4295c23f53500ff5c8e3b34ff5a8](https://github.com/PX4/PX4-Autopilot/commit/59e0b67c8eaa4295c23f53500ff5c8e3b34ff5a8?w=1),NuttxConfig: increase I2C timeout to 10ms,New:Hard-coded-timing,increase
+"PX4-Autopilot
+"," #152
+",[ca47952281cfe66732b08d3878eb6c8b1613abeb](https://github.com/PX4/PX4-Autopilot/commit/ca47952281cfe66732b08d3878eb6c8b1613abeb?w=1),"l3gd20: added register checking\
+this checks at runtime that key registers have correct values",X,runtime
+"PX4-Autopilot
+"," #153
+",[04c273bca6c99f31fd04741234d9c8efa849b553](https://github.com/PX4/PX4-Autopilot/commit/04c273bca6c99f31fd04741234d9c8efa849b553?w=1),sdlog2: slow down the free space check a bit more,New:Hard-coded-timing,slow
+"PX4-Autopilot
+"," #154
+",[e8eff3061f5e9c451c94d081932cac0e62e1a9b9](https://github.com/PX4/PX4-Autopilot/commit/e8eff3061f5e9c451c94d081932cac0e62e1a9b9?w=1),"Revert ""sdlog2: slow down the free space check a bit more""\
+This reverts commit 04c273bca6c99f31fd04741234d9c8efa849b553.",New:Hard-coded-timing,slow
+"PX4-Autopilot
+"," #155
+",[a3bce71b97b6e958737d11414cce2609e5d4848d](https://github.com/PX4/PX4-Autopilot/commit/a3bce71b97b6e958737d11414cce2609e5d4848d?w=1),"Performance counters: Estimate RMS for elapsed counters. Allow to use a perf counter across processes, deal with overruns and other resulting inconsistencies from cross-process use.",X,performance
+"PX4-Autopilot
+"," #156
+",[2bff39d562f1d7c0ffa5e8875d355eb3271c70fe](https://github.com/PX4/PX4-Autopilot/commit/2bff39d562f1d7c0ffa5e8875d355eb3271c70fe?w=1),"MPU6K driver: Start performance counters for system latency, as its commonly the main sensor",X,performance
+"PX4-Autopilot
+"," #157
+",[172dbf37070e2dccadc8779d6e0926d3f8d60706](https://github.com/PX4/PX4-Autopilot/commit/172dbf37070e2dccadc8779d6e0926d3f8d60706?w=1),Performance counters: Add option to set otherwise estimated time interval,?,performance
+"PX4-Autopilot
+"," #158
+",[05367f8a006ae6e36fec0911c97490c31033551b](https://github.com/PX4/PX4-Autopilot/commit/05367f8a006ae6e36fec0911c97490c31033551b?w=1),Handle slight increase of frame size in example,General:Hard-coding,increase
+"PX4-Autopilot
+"," #159
+",[ae6198b0bad801535c879d3269920e12781cea92](https://github.com/PX4/PX4-Autopilot/commit/ae6198b0bad801535c879d3269920e12781cea92?w=1),"sdlog2: Made sdlog writer performance available in log fiiles, reduced telemetry messages",X,performance
+"PX4-Autopilot
+"," #160
+",[1cff86b0b562301020973f354043f27272d29f5b](https://github.com/PX4/PX4-Autopilot/commit/1cff86b0b562301020973f354043f27272d29f5b?w=1),ros mixer: increase number of controls to default to fix undefined behaviour,?,increase
+"PX4-Autopilot
+"," #161
+",[f23e603d02ba416ae250770cdaad6a859d6bae69](https://github.com/PX4/PX4-Autopilot/commit/f23e603d02ba416ae250770cdaad6a859d6bae69?w=1),mc attctl multiplatform: increase stack size,General:Hard-coding,increase
+"PX4-Autopilot
+"," #162
+",[9c627255ccc980270fe56b6c4ddeb494e1ce0f50](https://github.com/PX4/PX4-Autopilot/commit/9c627255ccc980270fe56b6c4ddeb494e1ce0f50?w=1),MPU6000: Increase gyro offset tolerance to 7 dps,New:General:Hard-coded-fine-tuning,increase
+"PX4-Autopilot
+"," #163
+",[3b07890361d56ce80d881e3969ff097b5cd96af4](https://github.com/PX4/PX4-Autopilot/commit/3b07890361d56ce80d881e3969ff097b5cd96af4?w=1),"update sitl default params, make posctrl very slow for now",?,slow
+"PX4-Autopilot
+"," #164
+",[28e943ca28f10cc1ea205a0e18cf814c8a2afa52](https://github.com/PX4/PX4-Autopilot/commit/28e943ca28f10cc1ea205a0e18cf814c8a2afa52?w=1),setting parameters at runtime to get rid of the designated union initializer,X,runtime
+"PX4-Autopilot
+"," #165
+",[c7d0cb6bd72deef810cfe1a16ac7b78810f8036b](https://github.com/PX4/PX4-Autopilot/commit/c7d0cb6bd72deef810cfe1a16ac7b78810f8036b?w=1),lsm303d: Fix memory initialization and error_count not set,X,memory
+"PX4-Autopilot
+"," #166
+",[74177a2688f1163ec9659f3847d7cd17d0eb325f](https://github.com/PX4/PX4-Autopilot/commit/74177a2688f1163ec9659f3847d7cd17d0eb325f?w=1),px4_uploader: Push program bytes faster by using bigger blocks,"General:Hard-coding
+General:Lack_of_documentation",faster
+"PX4-Autopilot
+"," #167
+",[81648f84cd97ec865ba7f20cebeb6285f7ef6d18](https://github.com/PX4/PX4-Autopilot/commit/81648f84cd97ec865ba7f20cebeb6285f7ef6d18?w=1),increase RTL descend altitude,"General:Hard-coding
+General:Lack_of_documentation",increase
+"PX4-Autopilot
+"," #168
+",[48bf84ff3754109fe6cf8e0e161eb70ae0987bfe](https://github.com/PX4/PX4-Autopilot/commit/48bf84ff3754109fe6cf8e0e161eb70ae0987bfe?w=1),"oreoled: support send_bytes ioctl\
+Also increase maximum command length to 24 bytes","General:Hard-coding
+General:Lack_of_documentation",increase
+"PX4-Autopilot
+"," #169
+",[3e5b8ded8cdd650e961008ce65c93dd64a326554](https://github.com/PX4/PX4-Autopilot/commit/3e5b8ded8cdd650e961008ce65c93dd64a326554?w=1),Increase rate of MAVLink output on companion link,"General:Hard-coding
+General:Lack_of_documentation",increase
+"PX4-Autopilot
+"," #170
+",[5c3f4d21944fb779feade46e1aba81ca5705462f](https://github.com/PX4/PX4-Autopilot/commit/5c3f4d21944fb779feade46e1aba81ca5705462f?w=1),"GPIO led: Do not allocate memory statically, but only when module loads",?,memory
+"PX4-Autopilot
+"," #171
+",[61437a5587b20e7e3c79fd1ab91e945dc0c316fb](https://github.com/PX4/PX4-Autopilot/commit/61437a5587b20e7e3c79fd1ab91e945dc0c316fb?w=1),"MAVLink app: Do no allocate memory statically, but only on execution on stack.",?,memory
+"PX4-Autopilot
+"," #172
+",[2883edaecd442e3049ad3224989cb384096e637a](https://github.com/PX4/PX4-Autopilot/commit/2883edaecd442e3049ad3224989cb384096e637a?w=1),ros sitl: increase Z gains for ardrone and iris,"General:Hard-coding
+General:Lack_of_documentation",increase
+"PX4-Autopilot
+"," #173
+",[9db48df3d63836c5cca4480d847777c166bb31e8](https://github.com/PX4/PX4-Autopilot/commit/9db48df3d63836c5cca4480d847777c166bb31e8?w=1),Slightly increase commander stack size to accomodate any additional printf calls,New:General:Hard-coded-fine-tuning,increase
+"PX4-Autopilot
+"," #174
+",[37de377dcffb07ef49bacc0ec6ff722dadba1154](https://github.com/PX4/PX4-Autopilot/commit/37de377dcffb07ef49bacc0ec6ff722dadba1154?w=1),commander: Increase stack size for low prio task to accomodate accel cal.,New:General:Hard-coded-fine-tuning,increase
+"PX4-Autopilot
+"," #175
+",[ad54ff616dc83a703fe51c2a80a0662618116782](https://github.com/PX4/PX4-Autopilot/commit/ad54ff616dc83a703fe51c2a80a0662618116782?w=1),commander: Increase frame size limit,New:General:Hard-coded-fine-tuning,increase
+"PX4-Autopilot
+"," #176
+",[78741c87e5415c9e894f619e28b145e127576a56](https://github.com/PX4/PX4-Autopilot/commit/78741c87e5415c9e894f619e28b145e127576a56?w=1),"MAVLink app: 1) only transmit active params, 2) send params faster, 3) ensure no overflow occurs on buffer when sending at higher rate.",New:General:Hard-coded-fine-tuning,faster
+"PX4-Autopilot
+"," #177
+",[9a9efdaaa5a1a67be9a0939495503f222a1f3987](https://github.com/PX4/PX4-Autopilot/commit/9a9efdaaa5a1a67be9a0939495503f222a1f3987?w=1),commander: Increase timeout on airspeed sensor for the prearm_check,New:General:Hard-coded-fine-tuning,increase
+"PX4-Autopilot
+"," #178
+",[f1b2efeeaf1ca41fa20263af37b94485dcb9cee6](https://github.com/PX4/PX4-Autopilot/commit/f1b2efeeaf1ca41fa20263af37b94485dcb9cee6?w=1),increase default roll/pitch rate limits to 360dps,New:General:Hard-coded-fine-tuning,increase
+"PX4-Autopilot
+"," #179
+",[f23bc38d3ec45c2b3d2d72b06e2426d40cefd10c](https://github.com/PX4/PX4-Autopilot/commit/f23bc38d3ec45c2b3d2d72b06e2426d40cefd10c?w=1),increase default roll/pitch rate limits to 360dps,New:General:Hard-coded-fine-tuning,increase
+"PX4-Autopilot
+"," #180
+",[6e060c01a76401172e452e562993f79acfef9d1a](https://github.com/PX4/PX4-Autopilot/commit/6e060c01a76401172e452e562993f79acfef9d1a?w=1),SDLOG2: Optimize runtime efficiency,?,runtime
+"PX4-Autopilot
+"," #181
+",[5299f767069be3bd8014a86a11a1748371e952a3](https://github.com/PX4/PX4-Autopilot/commit/5299f767069be3bd8014a86a11a1748371e952a3?w=1),"POSIX: initialize before running script\
+The initialization functions were called after the script
+commands were run causing a deadlock waiting for an
+uninitialized semaphore.
+...",X,deadlock
+"PX4-Autopilot
+"," #182
+",[6db77dc8bbae32ee15a17e7a5caa90f7e6191b2c](https://github.com/PX4/PX4-Autopilot/commit/6db77dc8bbae32ee15a17e7a5caa90f7e6191b2c?w=1),"Experimental virtual file support\
+QuRT does not have a filesystem, so creating a virtual filesystem
+that could be implemented as an in-memory file or a remote file
+over fastRPC.
+...","New:General:Hard-coded-fine-tuning
+New:?",memory
+"PX4-Autopilot
+"," #183
+",[3ac95fb5816dcbdce4a269767c3f6019c434811f](https://github.com/PX4/PX4-Autopilot/commit/3ac95fb5816dcbdce4a269767c3f6019c434811f?w=1),"lsm303d: run sampling 200usec faster to avoid aliasing\
+this runs the sampling of the accelerometer 200usec faster than
+requested and then throw away duplicates using the accelerometer
+status register data ready bit. This avoids aliasing due to drift in
+the stm32 clock compared to the lsm303d clock",Smith:Are_we_there_yet?,faster
+"PX4-Autopilot
+"," #184
+",[a710159263ea5f561d352073504958a9a9f85c81](https://github.com/PX4/PX4-Autopilot/commit/a710159263ea5f561d352073504958a9a9f85c81?w=1),"mpu6000: sample at 200usec faster rate to avoid aliasing
+
+this runs the mpu6000 200usec faster than requested then detects and
+disccards duplicates by comparing accel values. This avoids a nasty
+aliasing issue due to clock drift between the stm32 and mpu6000","Smith:Are_we_there_yet?
+New:Hard-coded-timing",faster
+"PX4-Autopilot
+"," #185
+",[dc4d5619eae2bb6eebfe2f11ee97f5734a35d731](https://github.com/PX4/PX4-Autopilot/commit/dc4d5619eae2bb6eebfe2f11ee97f5734a35d731?w=1),"Reduced the amount of memory used by params to only that that is needed
+
+Conflicts:
+	src/modules/systemlib/param/param.c",X,memory
+"PX4-Autopilot
+"," #186
+",[f154f6e5e7598b02c2a5c5bb87e646a3425421a8](https://github.com/PX4/PX4-Autopilot/commit/f154f6e5e7598b02c2a5c5bb87e646a3425421a8?w=1),MAVLink transmission: Allow faster overall transmissions.,New:Hard-coded-timing,faster
+"PX4-Autopilot
+"," #187
+",[5c53d38652dc6c97e216ea6b70215a95890df572](https://github.com/PX4/PX4-Autopilot/commit/5c53d38652dc6c97e216ea6b70215a95890df572?w=1),FMUv2 config: Increase USB TX buf size further to speed up MAVLink FTP transfers,New:General:Hard-coded-fine-tuning,increase
+"PX4-Autopilot
+"," #188
+",[03ef6a30ec5fa7c09b0de3ba00d577ccca5d39e6](https://github.com/PX4/PX4-Autopilot/commit/03ef6a30ec5fa7c09b0de3ba00d577ccca5d39e6?w=1),Speed up param transmit now that we are faster on USB,New:General:Hard-coded-fine-tuning,faster
+"PX4-Autopilot
+"," #189
+",[38004cdd955dad01801b750e18e45ac5dd3000e4](https://github.com/PX4/PX4-Autopilot/commit/38004cdd955dad01801b750e18e45ac5dd3000e4?w=1),PreflightCheck: Increase GPS timeout to 4 sec,New:General:Hard-coded-fine-tuning,increase
+"PX4-Autopilot
+"," #190
+",[a90caf7b7b3e70fb61b57c6dce6710d78debbfcd](https://github.com/PX4/PX4-Autopilot/commit/a90caf7b7b3e70fb61b57c6dce6710d78debbfcd?w=1),l3gd20: faster gyro interrupts,New:General:Hard-coded-fine-tuning,faster
+"PX4-Autopilot
+"," #191
+",[bc75814d500c673fa8699f8d242c88e610ecded2](https://github.com/PX4/PX4-Autopilot/commit/bc75814d500c673fa8699f8d242c88e610ecded2?w=1),Increase buffer sizes on companion link,New:General:Hard-coded-fine-tuning,increase
+"PX4-Autopilot
+"," #192
+",[d43b0513cec925125e0cef00b9df8ffbe1801f72](https://github.com/PX4/PX4-Autopilot/commit/d43b0513cec925125e0cef00b9df8ffbe1801f72?w=1),Increase buffer sizes on companion link,New:General:Hard-coded-fine-tuning,increase
+"PX4-Autopilot
+"," #193
+",[a734fc96d117a732e5584e758ccff52fe041e828](https://github.com/PX4/PX4-Autopilot/commit/a734fc96d117a732e5584e758ccff52fe041e828?w=1),"extensive orb_advert_t fixes\
+The calls to orb_advertise were being mishandled throughout the code.
+There were ::close() calls on memory pointers, there were checks
+against < 0 when it is a pointer to a object and values larger than
+0x7ffffffff are valid. Some places orb_advert_t variables were
+being initialized as 0 other places as -1.\
+The orb_advert_t type was changed to uintptr_t so the pointer value
+would not be wrapped as a negative number. This was causing a failure
+on ARM.\
+Tests for < 0 were changed to == 0 since a null pointer is the valid
+representation for error, or uninitialized.
+...",CI/CD:Too_many_changes,memory
+"PX4-Autopilot
+"," #194
+",[b7986e6fdd103064128d0933f7cb32ab4252159b](https://github.com/PX4/PX4-Autopilot/commit/b7986e6fdd103064128d0933f7cb32ab4252159b?w=1),land detector: Improve performance for fixed wing setups,New:General:Hard-coded-fine-tuning,performance
+"PX4-Autopilot
+"," #195
+",[acfd1ea51976300b5b89a7dc0f8c5158b3150604](https://github.com/PX4/PX4-Autopilot/commit/acfd1ea51976300b5b89a7dc0f8c5158b3150604?w=1),"POSIX: added hrt_queue for handling fast periodic events\
+The workqueues measure time in ticks  which is typically 10ms.
+Some interrupt events in Nuttx occur at about 1ms so a more
+granular workqueue is needed for POSIX.
+...",?,fast
+"PX4-Autopilot
+"," #196
+",[fb778af8b3274be5ae5963382af0161ac6c7848e](https://github.com/PX4/PX4-Autopilot/commit/fb778af8b3274be5ae5963382af0161ac6c7848e?w=1),increase max file descriptors to 100,New:General:Hard-coded-fine-tuning,increase
+"PX4-Autopilot
+"," #197
+",[4aa4038e270c33e36ba2f8db866db3c6abec6222](https://github.com/PX4/PX4-Autopilot/commit/4aa4038e270c33e36ba2f8db866db3c6abec6222?w=1),increase number of arguments passable to apps,?,increase
+"PX4-Autopilot
+"," #198
+",[9155e8a7fe2a7611c6b1ed136b5691475546a65c](https://github.com/PX4/PX4-Autopilot/commit/9155e8a7fe2a7611c6b1ed136b5691475546a65c?w=1),FX79: Increase travel,"General:Lack_of_documentation
+?",increase
+"PX4-Autopilot
+"," #199
+",[8838b18da75d6f4354f73b38152c2ca98f9197aa](https://github.com/PX4/PX4-Autopilot/commit/8838b18da75d6f4354f73b38152c2ca98f9197aa?w=1),FW attitude control: Run attitude controller as fast as we can to minimize latency,"New:General:Hard-coded-fine-tuning
+New:Hard-coded-timing
+New:Delayed_Sync_With_Physical_Events",fast
+"PX4-Autopilot
+"," #200
+",[55ed9e96126cab150dbad1d9bd9db392b75781d9](https://github.com/PX4/PX4-Autopilot/commit/55ed9e96126cab150dbad1d9bd9db392b75781d9?w=1),"ECL: Run TECS filter faster, adjust gains accordingly",New:General:Hard-coded-fine-tuning,faster
+"PX4-Autopilot
+"," #201
+",[9ecf4345a5cacc05f3c434d3c7516ade700d000f](https://github.com/PX4/PX4-Autopilot/commit/9ecf4345a5cacc05f3c434d3c7516ade700d000f?w=1),"ORBMap: bugfix, got rid of infinite Looping Louie",X,infinite
+"PX4-Autopilot
+"," #202
+",[3d92364d9eb391d3f0d615df7092d96194e2d5b0](https://github.com/PX4/PX4-Autopilot/commit/3d92364d9eb391d3f0d615df7092d96194e2d5b0?w=1),camera trigger : increase free cycling time when we are not enabled,-,increase
+"PX4-Autopilot
+"," #203
+",[1a8703ec1c0aee86aa2440fc8b7cd627f65854a9](https://github.com/PX4/PX4-Autopilot/commit/1a8703ec1c0aee86aa2440fc8b7cd627f65854a9?w=1),"Improved logging with both compile and runtime level filtering\
+The device level debug will have to be removed and the debugging
+can be based on this new logging structure which can tell where
+an error (or debug output) occured whch the current implmentation
+cannot.\
+The one limitation is the new macros cannot take a char* for the
+format parameter. It must be an actual string literal because it
+is concatenated with other strings.
+...",X,runtime
+"PX4-Autopilot
+"," #204
+",[552c9800a9a394e5ad351309d62278aecd44073f](https://github.com/PX4/PX4-Autopilot/commit/552c9800a9a394e5ad351309d62278aecd44073f?w=1),"px4_log: Fixed compiler warning when using PX4_LOG\
+If __px4_log_level_current is unsigned then the runtime filter
+comparison warns because an unsigned value can't be less than zero.\
+Changed typed to signed so compiler will not issue a warning.
+...",X,runtime
+"PX4-Autopilot
+"," #205
+",[52b0f17ff31213e1c073cf53c069e8883a3ca0e9](https://github.com/PX4/PX4-Autopilot/commit/52b0f17ff31213e1c073cf53c069e8883a3ca0e9?w=1),increase highest pwm to 2150,New:General:Hard-coded-fine-tuning,increase
+"PX4-Autopilot
+"," #206
+",[5cf20c8dcfeba450bcc926f4a73b81c382a9ad43](https://github.com/PX4/PX4-Autopilot/commit/5cf20c8dcfeba450bcc926f4a73b81c382a9ad43?w=1),increase fw idle for ATTCTL and POSCTL to 0.2,New:General:Hard-coded-fine-tuning,increase
+"PX4-Autopilot
+"," #207
+",[7043869237b5294233ca8dfaa613ceaaaf3d95bd](https://github.com/PX4/PX4-Autopilot/commit/7043869237b5294233ca8dfaa613ceaaaf3d95bd?w=1),"VDev:
+- increase max number of devices to 200
+- increase max number of file descriptors to 200
+- add warning if number of file descriptor exceeds max value",New:General:Hard-coded-fine-tuning,increase
+"PX4-Autopilot
+"," #208
+",[640024357f3b3a261031b750cf7a7b5a82e53a78](https://github.com/PX4/PX4-Autopilot/commit/640024357f3b3a261031b750cf7a7b5a82e53a78?w=1),Land detector: increase ground speed threshold,New:General:Hard-coded-fine-tuning,increase
+"PX4-Autopilot
+"," #209
+",[cae604ac1f8177775048dacdc899d4372efaf0ec](https://github.com/PX4/PX4-Autopilot/commit/cae604ac1f8177775048dacdc899d4372efaf0ec?w=1),HMC5883: Increase the number of calibration cycles to ensure a stable result,New:General:Hard-coded-fine-tuning,increase
+"PX4-Autopilot
+"," #210
+",[5bec38b37dbdf87720b98021850141e817de4191](https://github.com/PX4/PX4-Autopilot/commit/5bec38b37dbdf87720b98021850141e817de4191?w=1),MC land detector: Slightly decrease allowed vertical motion during landed state. This is important so that fast descends do not result in a false positive landed state,New:General:Hard-coded-fine-tuning,fast
+"PX4-Autopilot
+"," #211
+",[b1b555ceb6f8121cfa87e6dbed1274a232a45006](https://github.com/PX4/PX4-Autopilot/commit/b1b555ceb6f8121cfa87e6dbed1274a232a45006?w=1),MAVLink app: Increase max data rate,New:General:Hard-coded-fine-tuning,increase
+"PX4-Autopilot
+"," #212
+",[ec21a71b369ff609fa74ccb5b71a4d275e9e5068](https://github.com/PX4/PX4-Autopilot/commit/ec21a71b369ff609fa74ccb5b71a4d275e9e5068?w=1),Commander: increase mag cal timeout,New:General:Hard-coded-fine-tuning,increase
+"PX4-Autopilot
+"," #213
+",[06c45aadfbca55d88ff643a1ca526065a1d357e7](https://github.com/PX4/PX4-Autopilot/commit/06c45aadfbca55d88ff643a1ca526065a1d357e7?w=1),FW attitude control: Increase default integrator gains to compensate common airframe trim issues,New:General:Hard-coded-fine-tuning,increase
+"PX4-Autopilot
+"," #214
+",[0321f416a0f31e75234b32d86094b6898d77439c](https://github.com/PX4/PX4-Autopilot/commit/0321f416a0f31e75234b32d86094b6898d77439c?w=1),Increase allowance for vertical velocity in landed mode,New:General:Hard-coded-fine-tuning,increase
+"PX4-Autopilot
+"," #215
+",[e443a3f3be42ed9ebfcf0ca588d7b0a4d359f582](https://github.com/PX4/PX4-Autopilot/commit/e443a3f3be42ed9ebfcf0ca588d7b0a4d359f582?w=1),"Harmonize FW default gains, increase TECS height rate default gain considerably",New:General:Hard-coded-fine-tuning,increase
+"PX4-Autopilot
+"," #216
+",[e09771be17d8965f8928b6d577e4222c01e67fa6](https://github.com/PX4/PX4-Autopilot/commit/e09771be17d8965f8928b6d577e4222c01e67fa6?w=1),NSH terminal: Increase hold-off time to ensure USB is up and running,New:General:Hard-coded-fine-tuning,increase
+"PX4-Autopilot
+"," #217
+",[a589d15c5212c3249599932080f656ce2b7a0044](https://github.com/PX4/PX4-Autopilot/commit/a589d15c5212c3249599932080f656ce2b7a0044?w=1),"Refactored debug() and log() in CDev\
+These functions used vprintf which is not available on all platforms.
+They also do not enable line and file debug output.\
+Changed to macros that preserve the output format.  Uses new macro that
+can be used to implement per object, runtime selectable logging
+...","?
+CI/CD:Too_many_changes",runtime
+"PX4-Autopilot
+"," #218
+",[1ef7d1348794d0d55d1799b6a7ae29a2c0debfc5](https://github.com/PX4/PX4-Autopilot/commit/1ef7d1348794d0d55d1799b6a7ae29a2c0debfc5?w=1),Increase NSH back-off time,New:General:Hard-coded-fine-tuning,increase
+"PX4-Autopilot
+"," #219
+",[c5ec4de6eab8aa7639f263aa42c88f0d76061820](https://github.com/PX4/PX4-Autopilot/commit/c5ec4de6eab8aa7639f263aa42c88f0d76061820?w=1),Increase NSH back-off time,X,increase
+"PX4-Autopilot
+"," #220
+",[eea2f61f02bb7ea092770a956f64443f1f190496](https://github.com/PX4/PX4-Autopilot/commit/eea2f61f02bb7ea092770a956f64443f1f190496?w=1),Retire attitude-only EKF due to performance and memory consumption considerations,X,performance
+"Android app manager
+"," #1 
+",[980febbe5e1af05a21c9f08a8133e8b2804f2265](https://github.com/ros-android/android_app_manager/commit/980febbe5e1af05a21c9f08a8133e8b2804f2265),Increase wifi timeout.,Smith:Where_Was_I,increase
+"Android app manager
+"," #2 
+",[feaf968ca40f8869989d7fa899a3dca678fb741c](https://github.com/ros-android/android_app_manager/commit/feaf968ca40f8869989d7fa899a3dca678fb741c),Fix a variety of potential hang-ups with the starting application dialog,X,hang
+"johnny-five
+"," #1 
+",[47a67671f1ef93c2b3887f8dd0fd998c411e539c](https://github.com/rwaldron/johnny-five/commit/47a67671f1ef93c2b3887f8dd0fd998c411e539c),Update readme to include note about serial line hang,X,hang
+"johnny-five
+"," #2
+",[d3541a70d7767e52fb9aa67b32d9f32669abf45f](https://github.com/rwaldron/johnny-five/commit/d3541a70d7767e52fb9aa67b32d9f32669abf45f),update median computation,New:unstable_and_slow_noise_handling,faster
+"johnny-five
+"," #3
+",[c97bb0c818dfe18cee69ae11b090d73de416a6ba](https://github.com/rwaldron/johnny-five/commit/c97bb0c818dfe18cee69ae11b090d73de416a6ba),Slow down on turns,X,slow
+"johnny-five
+"," #4
+",[d2d7e8eda9eb1b0ae046f11f58417e89b06130be](https://github.com/rwaldron/johnny-five/commit/d2d7e8eda9eb1b0ae046f11f58417e89b06130be),Refactor Led state.isOn fix to avoid getting stuck in an infinite interval,X,stuck
+"johnny-five
+"," #5
+",[d235c79da6908b8e00a892da85aaf4c0f9095685](https://github.com/rwaldron/johnny-five/commit/d235c79da6908b8e00a892da85aaf4c0f9095685),Refactor animation for easier/faster unit testing,New:build:Slow_Simulation/Hardware_Tests,faster
+"johnny-five
+"," #6 
+",[339d8de98a6b4d8d85aa720c79e85aa05422fd00](https://github.com/rwaldron/johnny-five/pull/529/commits/339d8de98a6b4d8d85aa720c79e85aa05422fd00),Make easing tests more tolerant,X,slow
+"johnny-five
+"," #7
+",[99a7d3504cbe40b5622e65c69ee47bcb971d30a5](https://github.com/loadbxh/Arduino-Uno/commit/99a7d3504cbe40b5622e65c69ee47bcb971d30a5),Removing board.breakouts and resolving IMU.Drivers at runtime,X,runtime
+"johnny-five
+"," #8
+",[e5b65aaed92ec924d81fc7a653a9257d70795988](https://github.com/rwaldron/johnny-five/commit/e5b65aaed92ec924d81fc7a653a9257d70795988),Explicit 'test' task; extended slow tests,New:build:Slow_Simulation/Hardware_Tests,slow
+"johnny-five
+"," #9
+",[5d763415ec8f7dc45ed04d5931455f7bef24edd0](https://github.com/rwaldron/johnny-five/pull/965/commits/5d763415ec8f7dc45ed04d5931455f7bef24edd0),Increase PWM frequency for PCA9685,X,increase
+"johnny-five
+"," #10
+",[79a715443e8a229a2ad7b71a5a352bac31f2246f](https://github.com/rwaldron/johnny-five/commit/79a715443e8a229a2ad7b71a5a352bac31f2246f),Servo: limit history to 5 records to prevent potential memory leaks,General:performance:using_massive_arrays_likes,memory
+"johnny-five
+"," #11
+",[6f8def6d6a41a30e95c0c6aafdf09c31c8f748b1](https://github.com/loadbxh/Arduino-Uno/commit/6f8def6d6a41a30e95c0c6aafdf09c31c8f748b1),Use more then 8 predefined characters,X,memory
+"johnny-five
+"," #12
+",[5d9a46252b52363d069d8f8eb402313044553200](https://github.com/loadbxh/Arduino-Uno/commit/5d9a46252b52363d069d8f8eb402313044553200),LCD: add test for memory leak fix,X,memory
+"johnny-five
+"," #13
+",[bedcbe3933bec91e793d0d1363f11b8c0a1b5432](https://github.com/loadbxh/Arduino-Uno/commit/bedcbe3933bec91e793d0d1363f11b8c0a1b5432),LCD: Wait for fast instructions to complete,New:Impatient_requester,fast
+"johnny-five
+"," #14
+",[0d5ca14723d12fce82ac417fee2e1cf08b683c94](https://github.com/eric-erki/JavaScript-Robotics-and-IoT-programming-framework/commit/0d5ca14723d12fce82ac417fee2e1cf08b683c94),"ESC: deprecate speed(percent), introduce throttle(us).",General:performance:using_massive_arrays_likes,speed
+"turtlebot
+"," #1 
+",[b9ab8e2c7e6c8c067c74ed6b7b05f27c09a639f5](https://github.com/turtlebot/turtlebot/commit/b9ab8e2c7e6c8c067c74ed6b7b05f27c09a639f5),Limit joint_states to 10hz for performance.,Smith:Is_Everything_OK,performance
+"turtlebot
+"," #2
+",[f2d46b705722b61948313e3f2ec167dcaeeb3359](https://github.com/turtlebot/turtlebot/commit/f2d46b705722b61948313e3f2ec167dcaeeb3359),node now fast-fails if USB disconnected and has a --respawnable option to throttle restarting,New:Delayed_Sync_With_Physical_Events,fast
+"turtlebot
+"," #3
+",[eadff801651b25ffc7114df7d48bb3be417464a6](https://github.com/turtlebot/turtlebot/commit/eadff801651b25ffc7114df7d48bb3be417464a6),trying a lower resolution depth mode to run faster,General:Hard-coding,fast
+"turtlebot
+"," #4
+",[288c08370a41757a4612a5a118b049e40f9b9631](https://github.com/turtlebot/turtlebot/commit/288c08370a41757a4612a5a118b049e40f9b9631),Add support for Intel R200 camera,X,runtime
+"turtlebot
+"," #5
+",[bf3e001b8d1e91269c61d9b22b969f438545fa3c](),Refactor urdf.xacro files to stop loading unnecessary content.,General:Performance:Extraneous_Fetching,memory
+"Valetudo
+"," #1 
+",[ddc1c5f74ec06d63d2438932220e369678998342](https://github.com/Hypfer/Valetudo/commit/ddc1c5f74ec06d63d2438932220e369678998342),applied some performance improvement,Smith:General:How_Many_Times_Do_I_Have_to_Tell_You,performance
+"Valetudo
+"," #2
+",[0845ce1ba4d31eeaf723e21cae3744c638c0dc59](https://github.com/Hypfer/Valetudo/commit/0845ce1ba4d31eeaf723e21cae3744c638c0dc59),Change config file location to /mnt/data,X,memory
+"Valetudo
+"," #3
+",[9a847a42b8382288180c0b2335a8f3aba32d7bd0](https://github.com/Hypfer/Valetudo/commit/9a847a42b8382288180c0b2335a8f3aba32d7bd0),"Downgrade Build to Node 8 since Node 10 seems to be leaking memory
+There was a memory leak in node version up to 11.12 iirc. Thats why Valetudo was downgraded to Node 8.",X,memory
+"Valetudo
+"," #4
+",[0ea6addff0aa945e55857289270cb8e22f3fae44](https://github.com/Hypfer/Valetudo/commit/0ea6addff0aa945e55857289270cb8e22f3fae44),Changed Node Version to 8 + Memory Limit,X,memory
+"Valetudo
+"," #5
+","[91088195f869d6d6f96bb612770e3bcc7a1d00b8](https://github.com/Hypfer/Valetudo/commit/91088195f869d6d6f96bb612770e3bcc7a1d00b8)
+
+## PR
+https://github.com/Hypfer/Valetudo/pull/198",Limit memory allocation,Smith:General:Falling_Dominoes,memory
+"Valetudo
+"," #6
+",[2b8e4e354a092cdb5e7aa0c5f68ce00a58c57e17](https://github.com/Hypfer/Valetudo/commit/2b8e4e354a092cdb5e7aa0c5f68ce00a58c57e17),Might fix memory leak,X,memory
+"Valetudo
+"," #7
+",,More attempts to prevent Valetudo from going out of memory,General:recreate_objects,memory
+"Valetudo
+"," #8
+",[d96eb15c8f299ff49d98f9d6661c6f44225bc633](https://github.com/Hypfer/Valetudo/commit/d96eb15c8f299ff49d98f9d6661c6f44225bc633),feat: Added debug config option to continuously log memory usage,X,memory
+"Valetudo
+"," #9
+",[890120c76930bb8941459a7e0d1baa0af8577d83](https://github.com/Hypfer/Valetudo/commit/890120c76930bb8941459a7e0d1baa0af8577d83),Fix map coloring,X,Increase
+"Valetudo
+"," #10
+",[a0fa7f49f7f0779357c3ce61d354badd5bac07ed](https://github.com/Hypfer/Valetudo/commit/a0fa7f49f7f0779357c3ce61d354badd5bac07ed),fix(vendor.viomi): Fix basic control functionality,X,Increase
+"Valetudo
+"," #11
+",[a128a91499d94f0e75d17f87396571f6c889a7ac](https://github.com/Hypfer/Valetudo/commit/a128a91499d94f0e75d17f87396571f6c889a7ac),"fix(vendor.viomi): Increase timeout for set_timezone 
+
+
+## PR
+https://github.com/Hypfer/Valetudo/pull/806",New:Impatient_requester,Increase
+"Valetudo
+"," #12
+",[a3905106347c1640f1817302e881de1dfce22133](https://github.com/Hypfer/Valetudo/commit/a3905106347c1640f1817302e881de1dfce22133),feat!(mqtt): Homie-compatible implementation,X,Increase
+"Valetudo
+"," #13
+",[5f6068d7790a8f3f322f4825493608605ed80a63](https://github.com/Hypfer/Valetudo/commit/5f6068d7790a8f3f322f4825493608605ed80a63),"fix(vendor.viomi): Raise default miIO timeout
+
+
+## PR
+https://github.com/Hypfer/Valetudo/pull/817",New:Impatient_requester,slow
+"Valetudo
+"," #14
+",[e6fd6e4534db0366078b7cd7797dc0f0051ade99](https://github.com/Hypfer/Valetudo/commit/e6fd6e4534db0366078b7cd7797dc0f0051ade99),feat(mqtt): Remove increase/decrease from intensity capability,X,Increase
+"Valetudo
+"," #15
+",[f7b42edbb65e3860248e81e6c6b365d0f6be978c](https://github.com/Hypfer/Valetudo/commit/f7b42edbb65e3860248e81e6c6b365d0f6be978c),refactor(vendor.roborock): Improve map parser performance,General:Performance:for_if,performance
+"Valetudo
+"," #16
+",[2f46d77a7d69c55cf744f78c47f1bec5681e8287](https://github.com/Hypfer/Valetudo/commit/2f46d77a7d69c55cf744f78c47f1bec5681e8287),refactor(vendor.roborock): Further improve map parser performance,X,performance
+"Valetudo
+"," #17
+",[a05dcfec6ad6de3732430d561f4c68cc485133f8](https://github.com/Hypfer/Valetudo/commit/a05dcfec6ad6de3732430d561f4c68cc485133f8),chore(core): Increase the amount of allowed log requests,X,increase
+"Valetudo
+"," #18
+",[98b2757aec0af94392038577eead7749ef659e17](https://github.com/Hypfer/Valetudo/commit/98b2757aec0af94392038577eead7749ef659e17),feat(mqtt): Stream map serialization to improve memory usage with large maps,X,memory
+"Valetudo
+"," #19
+",[9000f51eaf818ca465ad0b2ef9f91ca421ac2da4](https://github.com/Hypfer/Valetudo/commit/9000f51eaf818ca465ad0b2ef9f91ca421ac2da4),fix(webserver): Properly report memory info for kernels older than 3.14 but newer than 2.6,X,memory
+"Valetudo
+"," #20
+",[6578a99344a6d087450a0e4b45a630398fb3a544](https://github.com/Hypfer/Valetudo/commit/6578a99344a6d087450a0e4b45a630398fb3a544),fix: Try logging everything we can get about process memory before committing sudoku,X,memory
+"Valetudo
+"," #21
+",[021213e8cd3b932685b590d896dcf640c311a2fc](https://github.com/Hypfer/Valetudo/commit/021213e8cd3b932685b590d896dcf640c311a2fc),feat(vendor.dreame): Map fast mapping status,X,fast
+"Valetudo
+"," #22
+",[51ee17d601a65e83e1bf81b7031e501a2195ca7b](https://github.com/Hypfer/Valetudo/commit/51ee17d601a65e83e1bf81b7031e501a2195ca7b),Revert feat(mqtt): Stream map serialization to improve memory usage with large maps,X,memory
+"Valetudo
+"," #23
+",[5202164714ae8cb9759529511fa9e9ec3c7eab7c](https://github.com/Hypfer/Valetudo/commit/5202164714ae8cb9759529511fa9e9ec3c7eab7c),chore(build): Bump pkg version and allow reuse of the bundled runtime,X,runtime
