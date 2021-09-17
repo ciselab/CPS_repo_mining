@@ -2891,7 +2891,7 @@ New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
--
+This increase the maximm acceptable Gyro offset's dynamic range to 7dps (degress per second).
 
 ## Commit #163
 ### Hash
@@ -3061,7 +3061,7 @@ See commit hash: 05367f8a006ae6e36fec0911c97490c31033551b, Commit #158.
 ### Message
 MAVLink app: 1) only transmit active params, 2) send params faster, 3) ensure no overflow occurs on buffer when sending at higher rate.
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+New:Fixed_Communication_Rate
 ### Keyword
 faster
 ### Note
@@ -3073,7 +3073,7 @@ faster
 ### Message
 commander: Increase timeout on airspeed sensor for the prearm_check
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
@@ -3233,7 +3233,7 @@ faster
 ### Message
 FMUv2 config: Increase USB TX buf size further to speed up MAVLink FTP transfers
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+New:Fixed_Communication_Rate
 ### Keyword
 increase
 ### Note
@@ -3245,11 +3245,11 @@ increase
 ### Message
 Speed up param transmit now that we are faster on USB
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+New:Fixed_Communication_Rate
 ### Keyword
 faster
 ### Note
--
+The change in USB makes it possible to have a faster communication.
 
 ## Commit #189
 ### Hash
@@ -3257,7 +3257,7 @@ faster
 ### Message
 PreflightCheck: Increase GPS timeout to 4 sec
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
@@ -3269,7 +3269,7 @@ increase
 ### Message
 l3gd20: faster gyro interrupts
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 faster
 ### Note
@@ -3393,7 +3393,7 @@ TODO: reread
 ### Message
 FW attitude control: Run attitude controller as fast as we can to minimize latency
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+New:Fixed_Communication_Rate
 New:Hard-coded-timing
 New:Delayed_Sync_With_Physical_Events
 ### Keyword
@@ -3483,7 +3483,7 @@ New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
--
+This commit increases the maximum speed of the motor.
 
 ## Commit #206
 ### Hash
@@ -3534,7 +3534,7 @@ New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
--
+The calibration cycle checks the results if we have enough good results it stops the calibration. This value is hard-coded and is changed by this commit because it was not the best number of cycles and good results for calibration of a hardware.
 
 ## Commit #210
 ### Hash
@@ -3546,7 +3546,7 @@ New:General:Hard-coded-fine-tuning
 ### Keyword
 fast
 ### Note
--
+The commit message is quite clear and self explanatory.
 
 ## Commit #211
 ### Hash
@@ -3554,11 +3554,11 @@ fast
 ### Message
 MAVLink app: Increase max data rate
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+New:Fixed_Communication_Rate
 ### Keyword
 increase
 ### Note
--
+This commit changes the communication rate in MAVLink (a protocol for communicating with small unmanned vehicle).
 
 ## Commit #212
 ### Hash
@@ -3566,7 +3566,7 @@ increase
 ### Message
 Commander: increase mag cal timeout
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
@@ -3614,7 +3614,7 @@ increase
 ### Message
 NSH terminal: Increase hold-off time to ensure USB is up and running
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
@@ -3644,7 +3644,7 @@ Due to platform, specific changes. The CI/CD:Too_many_changes was needed due to 
 ### Message
 Increase NSH back-off time
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
