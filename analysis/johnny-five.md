@@ -240,6 +240,8 @@ New:Impatient_requester
 fast
 
 ### Note
+This commit fixes [Issue #1295](https://github.com/rwaldron/johnny-five/issues/1295).
+
 The execution time for the vast majority of instructions is at least
 37 microseconds. See datasheet pages 24 and 25.
 https://www.sparkfun.com/datasheets/LCD/HD44780.pdf

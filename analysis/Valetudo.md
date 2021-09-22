@@ -210,7 +210,7 @@ Increase
 ### Note
 
 __Commit description:__
-It looks like sometimes set_timezone takes ~1s to execute in some cases.
+It looks like sometimes set_timezone takes ~10s to execute in some cases.
 We have time. Increase timeout so it doesn't take the entire connection down.
 
 __Analyzer note:__

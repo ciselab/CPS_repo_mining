@@ -11,11 +11,11 @@ https://github.com/PX4/PX4-Autopilot
 ### Message
 Out of memory warning, flash and RAM optimizations
 ### Antipattern Category
-New:Delayed_Sync_With_Physical_Events
+X
 ### Keyword
 memory
 ### Note
-sleep before starting the i2c handler
+Sleep 0.3 seconds after the memory shortage lockdown. We dont see any antipattern but even the full file changed in this commit has lots of code smells. For instance, there is no evidence why they waited for 0.3 seconds and assure that the memory will be free after this time.
 
 ## Commit #2
 ### Hash
@@ -24,7 +24,8 @@ sleep before starting the i2c handler
 Formatting changes to make the Python style checker happy (copied from the bootloader project).\
 Increase the erase timeout to avoid issues with large/slow flash.
 ### Antipattern Category
-New:Delayed_Sync_With_Physical_Events
+New:Hard-coded-timing
+
 ### Keyword
 slow
 ### Note
@@ -201,7 +202,7 @@ while (current_sequence < len(missionlist)-1 and elapsed_time < max_execution_ti
 ### Message
 increase sleep time in accel calibration routine to make accel calibration work on snapdragon
 ### Antipattern Category
-New:Delayed_Sync_With_Physical_Events
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
@@ -328,7 +329,7 @@ PX4 System gpio_led:Code cleanup
 Use PX4 log and module documantation\
 Fixed memory leaks
 ### Antipattern Category
-?
+X
 ### Keyword
 memory
 ### Note
@@ -336,7 +337,11 @@ Consistend typo:
 ```C++
 gpio_led_state = Falied;
 ```
-Note: where is the memory leak that was fixed?
+Memory leak is fixed by adding the the following statement:
+```C++
+free (gpio_led_data);
+```
+The CPS developers did not free up the memory before this commit, but now they fixed it. There is no perfromance antipatterns.
 
 ## Commit #18
 ### Hash
@@ -943,11 +948,11 @@ increase
 (1) Fix a critical memory leak in the TCP read-ahead buffering logic; Add an option to suppress SDIO multi-block transfers in order to work around a buggy SDIO driver
 ...
 ### Antipattern Category
-?
+X
 ### Keyword
 memory
 ### Note
-Memory leak fix; TODO: reread
+Memory leak fixed by defining a customized buffering logic.
 
 ## Commit #34
 ### Hash
@@ -981,13 +986,16 @@ TODO: reread
 Fix infinite loop in CDC/ACM driver
 ...
 ### Antipattern Category
-?
+Smith:General:Museum_Checkroom
 ### Keyword
 infinite
 ### Note
 ```
 * drivers/usbdev/cdcacm.c: Fix an infinite loop that occurs when the serial device is unregisters.
 ```
+
+ As mentioned in the documentation, "The driver needs to reset the software (in order to flush the requests) and to disable the software connection when the device is unregistered".
+ Also, it mentioned that "All requests must be canceled while the class driver is still bound".
 
 ## Commit #37
 ### Hash
@@ -1111,7 +1119,7 @@ Only change:
 ### Message
 Add EEPROM read/write performance counters.
 ### Antipattern Category
-?
+X
 ### Keyword
 performance
 ### Note
@@ -1132,6 +1140,7 @@ for (;;)
 	  usleep(1000);
 	}
 ```
+There is no CPS-related performance antipatterns.
 
 ## Commit #45
 ### Hash
@@ -1152,7 +1161,7 @@ increase
 Removed delay after receiving in recvfrom().  This was killing network performance
 ...
 ### Antipattern Category
-?
+X
 ### Keyword
 performance
 ### Note
@@ -1160,7 +1169,7 @@ performance
 - /* No timeout */
 + /* No timeout -- hang forever waiting for data. */
 ```
-TODO: reread
+This commit fixes a bug in network connection.
 
 ## Commit #47
 ### Hash
@@ -1206,7 +1215,7 @@ performance
 If server fails to create a thread because of lack-of-resources (EAGAIN), don't terminate.  Keep serving... Memory may become available again later.
 ...
 ### Antipattern Category
-?
+X
 ### Keyword
 memory
 ### Note
@@ -1226,7 +1235,7 @@ if (ret == EAGAIN)
 
 break;
 ```
-TODO: reread
+This is not an performance antipattern. This commit make sure that the connection waits for resources to be available.
 
 ## Commit #51
 ### Hash
@@ -1283,11 +1292,11 @@ memory
 ### Message
 reverted memory change, sdlog app needs more than 2K
 ### Antipattern Category
-?
+New:Hard-coded-fine-tuning
 ### Keyword
 memory
 ### Note
-Increased memory size, which was previously decreased (hash: b82d303d296aec26f2cd78e3b2f1ab56399b2626a3e83027381c00c5ad9bd0be, message: Reducing stack sizes to free some RAM ).
+Increased memory size in the drone, which was previously decreased (hash: [ab63a77edf78a198117757a1d5e2dbe34cde1263](https://github.com/PX4/PX4-Autopilot/commit/ab63a77edf78a198117757a1d5e2dbe34cde1263), message: Reducing stack sizes to free some RAM ).
 
 ## Commit #56
 ### Hash
@@ -1361,11 +1370,12 @@ Change:
 ### Message
 Make mixer ioctls load from a memory buffer rather than a file. This is prep for uploading the memory buffer to IO to be processed there.
 ### Antipattern Category
-?
+General:Performance:Unbuffered_Streams
 ### Keyword
 memory
+
 ### Note
-TODO: reread
+This commit change the file reading to using buffered stream to save IO resources.
 
 ## Commit #61
 ### Hash
@@ -1378,11 +1388,11 @@ which needs to be at least 128 to support the UBLOX protocol, but it
 seems a good idea for people running a FMU without a IO board to
 increase the UART buffer sizes generally
 ### Antipattern Category
-?
+X
 ### Keyword
 increase
 ### Note
-Hardware requirements.
+Before this commit, the CPS developers did not follow the documentation regarding the Hardware requirements for the buffer size. This commit fixes this issue.
 
 ## Commit #62
 ### Hash
@@ -1416,7 +1426,7 @@ performance
 Fix a bug where recv[from]() would hang when remote host gracefully closed connection
 ...
 ### Antipattern Category
-?
+X
 ### Keyword
 hang
 ### Note
@@ -1427,6 +1437,8 @@ Interesting note:
 was never detected.  Hmmm.. I don't know why the network monitor
 did not catch this event.  This is an important bug fix.
 ```
+
+This commit fixes a bug. There is not performance antipattern exposed here.
 
 ## Commit #65
 ### Hash
@@ -1446,11 +1458,11 @@ memory
 ### Message
 Reset the collection state machine on all I2C errors, increase the retry count.
 ### Antipattern Category
-?
+X
 ### Keyword
 increase
 ### Note
-Why the need to increase the retry rate?
+There is no antipattern detected here.
 
 ## Commit #67
 ### Hash
@@ -1458,7 +1470,7 @@ Why the need to increase the retry rate?
 ### Message
 Increase the number of I2C retries.
 ### Antipattern Category
-?
+X
 ### Keyword
 increase
 ### Note
@@ -1681,7 +1693,7 @@ performance
 ### Message
 Corrected bug in px4io driver that lead to hang of FMU-IO communication
 ### Antipattern Category
-?
+X
 ### Keyword
 hang
 ### Note
@@ -1732,7 +1744,7 @@ fast
 ### Message
 Hotfix: Increase stack size for low prio commander task
 ### Antipattern Category
-?
+General:Lack_of_documentation
 ### Keyword
 increase
 ### Note
@@ -1748,7 +1760,7 @@ Why this number?
 ### Message
 Hotfix: Increase work stack sizes
 ### Antipattern Category
-?
+General:Lack_of_documentation
 ### Keyword
 increase
 ### Note
@@ -1760,11 +1772,11 @@ Same question as in Commit #87.
 ### Message
 Hotfix: Improve UART1 receive performance
 ### Antipattern Category
-?
+X
 ### Keyword
 performance
 ### Note
-Forgotten setting to turn on. Antipattern?
+Forgotten setting to turn on.
 
 ## Commit #90
 ### Hash
@@ -1772,8 +1784,8 @@ Forgotten setting to turn on. Antipattern?
 ### Message
 sensors: slow down updates rate to 200Hz to free some CPU time
 ### Antipattern Category
-New:Delayed_Sync_With_Physical_Events
-?
+New:Fixed_Communication_Rate
+
 ### Keyword
 slow
 ### Note
@@ -1786,7 +1798,8 @@ Maybe a different antipattern.
 Revert "sensors: slow down updates rate to 200Hz to free some CPU time"\
 This reverts commit 81a4df0953e738041d9fdc2b2eb353a635f3003b.
 ### Antipattern Category
-?
+New:Hard-coded-fine-tuning
+
 ### Keyword
 slow
 ### Note
@@ -1924,11 +1937,11 @@ memory
 ### Message
 Build fix, replaced usleep with up_udelay in memory lockdown state
 ### Antipattern Category
-?
+X
 ### Keyword
 memory
 ### Note
-Renaming issue?
+This commit changes usleep to up_udelay to make sure that the system works even in memory lockdown state. However, according to our research, up_udelay is only a loop and should not be considered as an alternative for usleep. It is not an antipattern, but it can be considered as an smell.
 ```C
 - usleep(300000);
 + up_udelay(300000);
@@ -2056,11 +2069,11 @@ increase
 ### Message
 mavlink: memory leaks on exit fixed, minor fixes
 ### Antipattern Category
-?
+X
 ### Keyword
 memory
 ### Note
-TODO: reread
+This commit fixes a bug in the communication.
 
 ## Commit #112
 ### Hash
@@ -2177,11 +2190,12 @@ contiguous memory to reduce the number of scattered memory allocations.
 In reality, based on current usage, rarely will more than one group of 8
 be allocated.
 ### Antipattern Category
-?
+X
 ### Keyword
 memory
 ### Note
 Fix: see commit message.
+This commit fixes a potential memory fragmentation. this is fixed by grouping the blocks. This is not an antipattern.
 
 ## Commit #110
 ### Hash
@@ -2431,11 +2445,11 @@ increase
 ### Message
 Disable mTECS until runtime error is better understood
 ### Antipattern Category
-?
+X
 ### Keyword
 runtime
 ### Note
-Commenting bits of code, untill a better solution is found. TODO: reread
+Commenting bits of code, untill a better solution is found.
 
 ## Commit #127
 ### Hash
@@ -2509,11 +2523,11 @@ faster
 ### Message
 increase ram
 ### Antipattern Category
-?
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-TODO: reread
+They just increased the RAM size without mentioning any reason.
 
 ## Commit #133
 ### Hash
@@ -2521,11 +2535,11 @@ TODO: reread
 ### Message
 Adapted for sharded library use with ROS. Problems to solve: error library from PX4 does not work yet. math functions such as isfinite need to be shared as well. performance library needs to be shared as well (commented for now)
 ### Antipattern Category
-?
+X
 ### Keyword
 performance
 ### Note
-Commenting bits of code, to temporaarely fix issue. TODO: reread
+Commenting bits of code, to temporarily fix issue.
 
 ## Commit #134
 ### Hash
@@ -2533,7 +2547,7 @@ Commenting bits of code, to temporaarely fix issue. TODO: reread
 ### Message
 Adapted for sharded library use with ROS. Problems to solve: error library from PX4 does not work yet. math functions such as isfinite need to be shared as well. performance library needs to be shared as well (commented for now)
 ### Antipattern Category
-?
+X
 ### Keyword
 performance
 ### Note
@@ -2545,7 +2559,7 @@ See commit #133.
 ### Message
 Adapted for sharded library use with ROS. Problems to solve: error library from PX4 does not work yet. math functions such as isfinite need to be shared as well. performance library needs to be shared as well (commented for now)
 ### Antipattern Category
-?
+X
 ### Keyword
 performance
 ### Note
@@ -2557,7 +2571,7 @@ See commit #134 & #133.
 ### Message
 Restored performance counter functionality, ROS package used own source file for function definitions but per_counter.h stays the same
 ### Antipattern Category
-?
+X
 ### Keyword
 performance
 ### Note
@@ -2823,12 +2837,11 @@ performance
 ### Message
 Performance counters: Add option to set otherwise estimated time interval
 ### Antipattern Category
-?
+X
 ### Keyword
 performance
 ### Note
-Single case in a switch case (C).
-TODO: reread
+It add a non performance-related option.
 
 ## Commit #158
 ### Hash
@@ -2863,11 +2876,11 @@ performance
 ### Message
 ros mixer: increase number of controls to default to fix undefined behaviour
 ### Antipattern Category
-?
+X
 ### Keyword
 increase
 ### Note
-TODO: reread
+This commit changes size of an array to consider two more behaviors. It is not related to performance of the CPS.
 
 ## Commit #161
 ### Hash
@@ -2899,11 +2912,11 @@ This increase the maximm acceptable Gyro offset's dynamic range to 7dps (degress
 ### Message
 update sitl default params, make posctrl very slow for now
 ### Antipattern Category
-?
+New:Hard-coded-fine-tuning
 ### Keyword
 slow
 ### Note
--
+This commit reverts back to use the default paramaters for the drone. 
 
 ## Commit #164
 ### Hash
@@ -2988,11 +3001,11 @@ increase
 ### Message
 GPIO led: Do not allocate memory statically, but only when module loads
 ### Antipattern Category
-?
+X
 ### Keyword
 memory
 ### Note
-Memory usage imrovement.
+This is an issue in handling memory in C. It is not considered as an antipattern.
 
 ## Commit #171
 ### Hash
@@ -3000,11 +3013,11 @@ Memory usage imrovement.
 ### Message
 MAVLink app: Do no allocate memory statically, but only on execution on stack.
 ### Antipattern Category
-?
+X
 ### Keyword
 memory
 ### Note
-Memory usage imrovement. Related to Commit #170.
+Memory usage improvement. Related to Commit #170.
 
 ## Commit #172
 ### Hash
@@ -3049,11 +3062,11 @@ See commit #173.
 ### Message
 commander: Increase frame size limit
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+X
 ### Keyword
 increase
 ### Note
-See commit hash: 05367f8a006ae6e36fec0911c97490c31033551b, Commit #158.
+This is a change in config file.
 
 ## Commit #176
 ### Hash
@@ -3109,11 +3122,11 @@ See Commit #178.
 ### Message
 SDLOG2: Optimize runtime efficiency
 ### Antipattern Category
-?
+X
 ### Keyword
 runtime
 ### Note
-TODO: reread
+This commit improves the efficiency of the project by improving the memory allocation. However, this change is dedicated only to C. So, it is not a performance antipattern specifically for CPSs.
 
 ## Commit #181
 ### Hash
@@ -3141,11 +3154,12 @@ that could be implemented as an in-memory file or a remote file
 over fastRPC.
 ...
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
-New:?
+X
 ### Keyword
 memory
 ### Note
+QuRT is an os for Qualcomm Technologies processors. It does not have filesystem so this commit makes a virtual FS for it. 
+
 ```C++
 #define PX4_MAX_DEV 100
 #define PX4_MAX_DEV 30
@@ -3281,11 +3295,11 @@ faster
 ### Message
 Increase buffer sizes on companion link
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+X
 ### Keyword
 increase
 ### Note
--
+it is a change in a config file 
 
 ## Commit #192
 ### Hash
@@ -3293,11 +3307,11 @@ increase
 ### Message
 Increase buffer sizes on companion link
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+X
 ### Keyword
 increase
 ### Note
--
+it is a change in a config file 
 
 ## Commit #193
 ### Hash
@@ -3344,11 +3358,11 @@ Some interrupt events in Nuttx occur at about 1ms so a more
 granular workqueue is needed for POSIX.
 ...
 ### Antipattern Category
-?
+General:bottleneck
 ### Keyword
 fast
 ### Note
-TODO: reread
+This process makes abottleneck since it is slower than the periodic event occurance.
 
 ## Commit #196
 ### Hash
@@ -3356,11 +3370,11 @@ TODO: reread
 ### Message
 increase max file descriptors to 100
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+General:Hard-coding 
 ### Keyword
 increase
 ### Note
--
+ it is changig the number of file description (OS config). Not related to CPS.
 
 ## Commit #197
 ### Hash
@@ -3368,11 +3382,11 @@ increase
 ### Message
 increase number of arguments passable to apps
 ### Antipattern Category
-?
+X
 ### Keyword
 increase
 ### Note
-TODO: reread
+Not a performance-related change.
 
 ## Commit #198
 ### Hash
@@ -3395,7 +3409,6 @@ FW attitude control: Run attitude controller as fast as we can to minimize laten
 ### Antipattern Category
 New:Fixed_Communication_Rate
 New:Hard-coded-timing
-New:Delayed_Sync_With_Physical_Events
 ### Keyword
 fast
 ### Note
@@ -3506,11 +3519,11 @@ VDev:
 - increase max number of file descriptors to 200
 - add warning if number of file descriptor exceeds max value
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+General:Hard-coding
 ### Keyword
 increase
 ### Note
--
+Same as Commit #196
 
 ## Commit #208
 ### Hash
