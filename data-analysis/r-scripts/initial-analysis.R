@@ -6,7 +6,10 @@ raw_df <-getRawData()
 
 
 # hard coded timing
-raw_df$antipattern <- ifelse(raw_df$antipattern == "New:Impatient_requester","New:Hard-coded-timing",as.character(raw_df$antipattern))
+raw_df$antipattern <- ifelse(raw_df$antipattern == "New:Impatient_requester","New:Magical-Waiting-Number",as.character(raw_df$antipattern))
+raw_df$antipattern <- ifelse(raw_df$antipattern == "New:Hard-coded-timing","New:Magical-Waiting-Number",as.character(raw_df$antipattern))
+
+# hard coded tuning
 raw_df$antipattern <- ifelse(raw_df$antipattern == "New:General:Hard-coded-fine-tuning","New:Hard-coded-fine-tuning",as.character(raw_df$antipattern))
 
 
@@ -96,8 +99,8 @@ ggplot(bigger_picture_df, aes(x = "", y = total_count, fill = high_level_cat)) +
         legend.text = element_text( size = 16, face = "bold"))
 
 cps_antipatterns_df <- cps_antipatterns_df %>%
-  mutate(performance_cat = ifelse(str_starts(antipattern,"New:"),"New CPS SPAs",
-                                  ifelse(str_starts(antipattern,"Smith:"),"Known CPS  SPAs","General SPAs")
+  mutate(performance_cat = ifelse(str_starts(antipattern,"New:"),"New CPS-PAs",
+                                  ifelse(str_starts(antipattern,"Smith:"),"Known CPS-PAs","General SPAs")
                                   ))
 
 cps_antipatterns_df$antipattern <- ifelse(str_starts(cps_antipatterns_df$antipattern,"New:"),substring(cps_antipatterns_df$antipattern,5),cps_antipatterns_df$antipattern)
@@ -109,20 +112,20 @@ cps_antipatterns_df$antipattern <- ifelse(cps_antipatterns_df$antipattern == "Wh
 
 ggplot(cps_antipatterns_df, aes(x=reorder(antipattern, -count), y=as.numeric(count), fill = performance_cat)) + 
   geom_bar(stat = "identity") + 
-  theme(axis.text.x = element_text(angle=50, vjust=1, hjust=1,face = "bold", size=12)) +
+  theme(axis.text.x = element_text(angle=50, vjust=1, hjust=1,face = "bold", size=16)) +
   geom_label(aes(label = count),
              position = position_stack(vjust = 0.5),
              fill ="white",
-             size = 5,
+             size = 9,
              show.legend = FALSE)+
   scale_fill_manual(values=c("#ffeda0","#fc8d59","#d7301f")) +
   guides(fill=guide_legend(title="Performance Issues Categories")) +
-  theme(legend.title = element_text( size=12, face="bold"),
-        legend.text = element_text( size = 12, face = "bold"),
+  theme(legend.title = element_text( size=17, face="bold"),
+        legend.text = element_text( size = 17, face = "bold"),
         legend.position = "top")+
   xlab("Identified Performance issues and antipatterns") +
   ylab("Number of occurance") +
-  theme(axis.title=element_text(size=14,face="bold"))
+  theme(axis.title=element_text(size=25,face="bold"))
 
 
 venn_df <- raw_df %>%
