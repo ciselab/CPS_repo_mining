@@ -28,10 +28,42 @@ raw_df$antipattern <- ifelse(raw_df$antipattern == "New:Rounded_numbers","New:ro
 # replace - with X
 raw_df$antipattern <- ifelse(raw_df$antipattern == "-","X",as.character(raw_df$antipattern))
 
+# FI where was I antipattern
+raw_df$antipattern <- ifelse(raw_df$antipattern == "Smith:Where_am_I_?","Smith:Where_Was_I",as.character(raw_df$antipattern))
+
 # general performance antipatterns
 # categorizing  antipatterns starting with General:performance in this category
 #General:recreate_objects is also a general performance antipattern
 #Network:performance should also be considered as general performance antipattern
+
+genera_performance_ap_df <- raw_df %>%
+  filter(str_starts(raw_df$antipattern,"General:performance") | str_starts(raw_df$antipattern,"General:Performance") | 
+           str_starts(raw_df$antipattern,"Network:performance") | str_starts(raw_df$antipattern,"Smith:General") |
+           raw_df$antipattern == "General:recreate_objects")
+
+genera_performance_ap_df <- genera_performance_ap_df %>%
+  mutate(introduced_by_Smith = ifelse(str_starts(antipattern,"Smith:General"), "Yes","No"))
+
+genera_performance_ap_df$antipattern <- ifelse(str_starts(genera_performance_ap_df$antipattern,"General:performance:"),substring(genera_performance_ap_df$antipattern,21),genera_performance_ap_df$antipattern)
+genera_performance_ap_df$antipattern <- ifelse(str_starts(genera_performance_ap_df$antipattern,"General:Performance:"),substring(genera_performance_ap_df$antipattern,21),genera_performance_ap_df$antipattern)
+genera_performance_ap_df$antipattern <- ifelse(str_starts(genera_performance_ap_df$antipattern,"Network:performance:"),substring(genera_performance_ap_df$antipattern,21),genera_performance_ap_df$antipattern)
+genera_performance_ap_df$antipattern <- ifelse(str_starts(genera_performance_ap_df$antipattern,"General:"),substring(genera_performance_ap_df$antipattern,9),genera_performance_ap_df$antipattern)
+genera_performance_ap_df$antipattern <- ifelse(str_starts(genera_performance_ap_df$antipattern,"Smith:General:"),substring(genera_performance_ap_df$antipattern,15),genera_performance_ap_df$antipattern)
+genera_performance_ap_df$antipattern <- str_replace_all(genera_performance_ap_df$antipattern,"_"," ")
+
+genera_performance_ap_df <- genera_performance_ap_df %>%
+  group_by(antipattern,introduced_by_Smith) %>%
+  summarise(count = n())
+
+
+ggplot(genera_performance_ap_df, aes(x = reorder(antipattern, -count), y = as.numeric(count), fill=introduced_by_Smith)) + geom_bar(stat = "identity") +   theme(axis.text.x = element_text(angle=65, vjust=1, hjust=1,face = "bold", size=20), axis.text.y = element_text(face = "bold", size=16)) +
+  scale_fill_grey(start = 0, end = .7) +   theme(legend.title = element_text( size=17, face="bold"),
+                                                 legend.text = element_text( size = 17, face = "bold"),
+                                                 legend.position = "top") +  
+  guides(fill=guide_legend(title="Reported by Smith"))+
+  xlab("Identified General Performance antipatterns") +
+  ylab("Number of occurance") +
+  theme(axis.title=element_text(size=25,face="bold"))
 
 raw_df$antipattern <- ifelse(
   str_starts(raw_df$antipattern,"General:performance") | str_starts(raw_df$antipattern,"General:Performance") | 
@@ -151,3 +183,63 @@ for (ap in unique(test2$antipattern)){
 }
 
 ggVennDiagram(venn_list)
+
+
+###
+
+raw_df$keyword <- ifelse(raw_df$keyword == "Slow","slow",raw_df$keyword)
+raw_df$keyword <- ifelse(raw_df$keyword == "Fast","fast",raw_df$keyword)
+raw_df$keyword <- ifelse(raw_df$keyword == "Increase" | raw_df$keyword == "increases","increase",raw_df$keyword)
+
+keywords_df <- raw_df %>%
+  mutate(is_ap = ifelse(antipattern == "X","No","Yes")) %>%
+  group_by(keyword,is_ap) %>%
+  summarise(count = n())
+
+
+keywords_df$is_ap <- as.factor(keywords_df$is_ap)
+
+
+answers <- unique(keywords_df$is_ap)
+kws <- unique(keywords_df$keyword)
+
+final_keywords_df <- keywords_df[0,]
+final_keywords_df$count <- as.integer(final_keywords_df$count)
+for (kw in kws){
+  for (ans in answers){
+    temp_df <- keywords_df %>%
+      filter(is_ap == ans & keyword == kw)
+    print(nrow(temp_df))
+    if (nrow(temp_df) == 1){
+      final_keywords_df <- rbind(final_keywords_df, temp_df)
+    }else{
+      final_keywords_df <- rbind(final_keywords_df, as.dataframe(c(keyword = kw,is_ap = ans,count = as.integer(0))))
+    }
+  }
+}
+
+
+
+ggplot(data = keywords_df, mapping = aes(x = keyword, y = as.numeric(count), fill = is_ap)) +
+  geom_bar(stat = "identity",  position = "dodge") +
+  scale_fill_manual(values=c("#fc8d59","#d7301f")) +
+  ylab("Number of occurance") +
+  theme(legend.title = element_text( size=17, face="bold"),
+        legend.text = element_text( size = 17, face = "bold"),
+        legend.position = "top") +
+  guides(fill=guide_legend(title="Is it an antipattern?")) +
+  theme(axis.text.x = element_text(angle=50, vjust=1, hjust=1,face = "bold", size=16),
+        axis.text.y = element_text(face= "bold", size = 16),
+        axis.title = element_text(face = "bold", size = 16)) +
+  geom_text(aes( label=count), position = position_dodge(0.9),
+            vjust = -0.5,
+            color="black", size=7)
+  
+  geom_label(aes(label = count),
+
+             fill ="white",
+             size = 9,
+             show.legend = FALSE)
+  
+
+  
