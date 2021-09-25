@@ -184,11 +184,11 @@ Print usage, not performance interesting.
 ### Message
 Correct float parsing args and increase altitude monitoring frequency
 ### Antipattern Category
-Smith:Are_we_there_yet?
+X
 ### Keyword
 increase
 ### Note
-increasesd monitoring frequency, not explained why this is needed....
+increasesd monitoring frequency.
 ```python
 # Wait for completion of mission items
 while (current_sequence < len(missionlist)-1 and elapsed_time < max_execution_time):
@@ -437,8 +437,7 @@ esc_calibration: increase safety and initialise all data
 - initialise all structs and variables\
 ...
 ### Antipattern Category
-Smith:Where_am_I_?\
-General:Hard-coding
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
@@ -986,7 +985,7 @@ TODO: reread
 Fix infinite loop in CDC/ACM driver
 ...
 ### Antipattern Category
-Smith:General:Museum_Checkroom
+New:Delayed_Sync_With_Physical_Events
 ### Keyword
 infinite
 ### Note
@@ -3181,14 +3180,12 @@ requested and then throw away duplicates using the accelerometer
 status register data ready bit. This avoids aliasing due to drift in
 the stm32 clock compared to the lsm303d clock
 ### Antipattern Category
-Smith:Are_we_there_yet?
+X
 ### Keyword
 faster
 ### Note
-Line 1390/1401:
-```C++
-/* start polling at the specified rate */
-```
+They increase the polling frequency for the reason that they mentioned in the commit message ("This avoids aliasing due to drift in the stm32 clock compared to the lsm303d clock")
+
 
 ## Commit #194
 ### Hash
@@ -3200,11 +3197,11 @@ this runs the mpu6000 200usec faster than requested then detects and
 disccards duplicates by comparing accel values. This avoids a nasty
 aliasing issue due to clock drift between the stm32 and mpu6000
 ### Antipattern Category
-Smith:Are_we_there_yet?
 New:Hard-coded-timing
 ### Keyword
 faster
 ### Note
+They increase the polling frequency for the reason that they mentioned in the commit message ("This avoids aliasing due to drift in the stm32 clock compared to the lsm303d clock")
 ```C++
 /*
   we set the timer interrupt to run a bit faster than the desired

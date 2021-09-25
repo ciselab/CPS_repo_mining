@@ -174,7 +174,7 @@ granular workqueue is needed for POSIX.\
 ",[b70c9a84c621af6d0a48c0f1ba99e9385426e4ff](https://github.com/PX4/PX4-Autopilot/commit/b70c9a84c621af6d0a48c0f1ba99e9385426e4ff?w=1),systemlib: Add ability to dump memory usage,X,memory
 "PX4-Autopilot
 "," #10
-",[fa590bbe8038941423ddb8ecb36d94dc7298b167](https://github.com/PX4/PX4-Autopilot/commit/fa590bbe8038941423ddb8ecb36d94dc7298b167?w=1),Correct float parsing args and increase altitude monitoring frequency,Smith:Are_we_there_yet?,increase
+",[fa590bbe8038941423ddb8ecb36d94dc7298b167](https://github.com/PX4/PX4-Autopilot/commit/fa590bbe8038941423ddb8ecb36d94dc7298b167?w=1),Correct float parsing args and increase altitude monitoring frequency,X,increase
 "PX4-Autopilot
 "," #11
 ",[94aaf0d298467596e7c6e067e3252dc0f937b429](https://github.com/PX4/PX4-Autopilot/commit/94aaf0d298467596e7c6e067e3252dc0f937b429?w=1),increase sleep time in accel calibration routine to make accel calibration work on snapdragon,New:Hard-coded-timing,increase
@@ -256,8 +256,7 @@ New:build:Slow_Simulation/Hardware_Tests",decrease
 ",[8b629454de069c835ad086b78e498f955c5193fd](https://github.com/PX4/PX4-Autopilot/commit/8b629454de069c835ad086b78e498f955c5193fd?w=1),"esc_calibration: increase safety and initialise all data
 - do not do calibration if not very sure that battery is not connected
 - initialise all structs and variables\
-...","Smith:Where_am_I_?\
-General:Hard-coding",increase
+...",New:Hard-coded-timing,increase
 "PX4-Autopilot
 "," #23
 ",[0c5c741b1a63ff90b9137d6327ccdd10fab6c084](https://github.com/PX4/PX4-Autopilot/commit/0c5c741b1a63ff90b9137d6327ccdd10fab6c084?w=1),"add posix shell\
@@ -635,7 +634,7 @@ General:Hard-coding",increase
 "PX4-Autopilot
 "," #36
 ",[5b83507116be57e0c84daea74d30dea382f20f97](https://github.com/PX4/PX4-Autopilot/commit/5b83507116be57e0c84daea74d30dea382f20f97?w=1),"Fix infinite loop in CDC/ACM driver
-...",Smith:General:Museum_Checkroom,infinite
+...",New:Delayed_Sync_With_Physical_Events,infinite
 "PX4-Autopilot
 "," #37
 ",[b66dd903b6b5d1d6a72d53be54cca36fdfb3d653](https://github.com/PX4/PX4-Autopilot/commit/b66dd903b6b5d1d6a72d53be54cca36fdfb3d653?w=1),"NxWidgets: Fix a potential deadlock that can occur waiting for toolbard geometry data
@@ -1197,15 +1196,14 @@ over fastRPC.
 this runs the sampling of the accelerometer 200usec faster than
 requested and then throw away duplicates using the accelerometer
 status register data ready bit. This avoids aliasing due to drift in
-the stm32 clock compared to the lsm303d clock",Smith:Are_we_there_yet?,faster
+the stm32 clock compared to the lsm303d clock",X,faster
 "PX4-Autopilot
 "," #194
 ",[a710159263ea5f561d352073504958a9a9f85c81](https://github.com/PX4/PX4-Autopilot/commit/a710159263ea5f561d352073504958a9a9f85c81?w=1),"mpu6000: sample at 200usec faster rate to avoid aliasing
 
 this runs the mpu6000 200usec faster than requested then detects and
 disccards duplicates by comparing accel values. This avoids a nasty
-aliasing issue due to clock drift between the stm32 and mpu6000","Smith:Are_we_there_yet?
-New:Hard-coded-timing",faster
+aliasing issue due to clock drift between the stm32 and mpu6000",New:Hard-coded-timing,faster
 "PX4-Autopilot
 "," #195
 ",[dc4d5619eae2bb6eebfe2f11ee97f5734a35d731](https://github.com/PX4/PX4-Autopilot/commit/dc4d5619eae2bb6eebfe2f11ee97f5734a35d731?w=1),"Reduced the amount of memory used by params to only that that is needed
