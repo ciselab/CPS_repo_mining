@@ -27,7 +27,7 @@ def print_repository_info(project: str, location: str):
         location: Repository url
     """
     try:
-        sourcefile = open(location_sourcefile, 'a')
+        sourcefile = open(location_sourcefile, 'a', encoding='utf-8')
         print(f"Name: {project}", file=sourcefile)
         print(f"Repository: {location}", file=sourcefile)
         print(f"Searching for: {keyword_list}", file=sourcefile)
@@ -44,7 +44,7 @@ def print_commit_header(commit: Commit):
         commit: The full commit.
     """
     try:
-        sourcefile = open(location_sourcefile, 'a')
+        sourcefile = open(location_sourcefile, 'a', encoding='utf-8')
         print(f"\nhash: {commit.hash}\ndate: {commit.committer_date}\nmessage: {commit.msg}", file=sourcefile)
         print(f"modified file(s): {commit.files}", file=sourcefile)
         sourcefile.close()
@@ -58,7 +58,7 @@ def print_commit_header(commit: Commit):
     file_name = str(project_name + '.txt')
     project_file_name = os.path.join(dir_projects, file_name)
     try:
-        hash_file = open(project_file_name, 'a')
+        hash_file = open(project_file_name, 'a', encoding='utf-8')
         print(f"{commit.hash}", file=hash_file)
         hash_file.close()
     except FileNotFoundError:
@@ -126,14 +126,14 @@ def dig(project: str, url: str) -> int:
                     print_commit_header(commit)
                     number_of_commits += 1
                     try:
-                        sourcefile = open(location_sourcefile, 'a')
+                        sourcefile = open(location_sourcefile, 'a', encoding='utf-8')
                         print(f"First found keyword: {keyword}", file=sourcefile)
                         sourcefile.close()
                     except FileNotFoundError:
                         print("File for commit information, to add keyword list, does not exist.")
                 for modified_file in commit.modifications:
                     try:
-                        sourcefile = open(location_sourcefile, 'a')
+                        sourcefile = open(location_sourcefile, 'a', encoding='utf-8')
                         print(f">>> {modified_file.filename}", file=sourcefile)
                         sourcefile.close()
                     except FileNotFoundError:
@@ -212,7 +212,7 @@ def main(user_input: list = None):
             print(dir_location)
             os.makedirs(dir_location)
         try:
-            sourcefile = open(location_sourcefile, 'w')
+            sourcefile = open(location_sourcefile, 'w', encoding='utf-8')
             print(f"Start with input: {user_input[1:]}", file=sourcefile)
             sourcefile.close()
         except OSError as e:
