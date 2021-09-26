@@ -14,8 +14,8 @@ import pd.dict_repo_list
 from pd.key_list import keyword_list
 from typing import Optional
 
-location_sourcefile = os.path.join(pathlib.Path.home(), "CPS_repo_mining", "results", "resultsOutput.txt")
-dir_projects = os.path.join(pathlib.Path.home(), "CPS_repo_mining", "results", "repo")
+location_sourcefile = os.path.join(pathlib.Path.home(), "repo-mining", "results", "resultsOutput.txt")
+dir_projects = os.path.join(pathlib.Path.home(),"repo-mining", "results", "repo")
 
 
 def print_repository_info(project: str, location: str):
@@ -198,8 +198,8 @@ def main(user_input: list = None):
         [ra] = all remote repositories;
         [la] = all local repositories.
     """
-    restart_results_file(os.path.join(pathlib.Path.home(), "CPS_repo_mining", "resultsOutput.txt"))
-    remove_files_in_dir(os.path.join(pathlib.Path.home(), "CPS_repo_mining", "results", "repo"))
+    restart_results_file(os.path.join(pathlib.Path.home(), "repo-mining", "CPS_repo_mining", "resultsOutput.txt"))
+    remove_files_in_dir(os.path.join(pathlib.Path.home(), "repo-mining", "CPS_repo_mining", "results", "repo"))
 
     pd.dict_repo_list.build_repo_dict()
 
@@ -207,8 +207,9 @@ def main(user_input: list = None):
         user_input = sys.argv
     if len(user_input) > 1:
         print(f"Input: {user_input[1:]}")
-        dir_location = os.path.join(pathlib.Path.home(), "CPS_repo_mining", "results")
+        dir_location = os.path.join(pathlib.Path.home(), "repo-mining", "CPS_repo_mining", "results")
         if not os.path.exists(os.path.abspath(dir_location)):
+            print(dir_location)
             os.makedirs(dir_location)
         try:
             sourcefile = open(location_sourcefile, 'w', encoding='utf-8')

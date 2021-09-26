@@ -175,3 +175,7 @@ htmlpdoc/
 
 ### PyCharm ###
 .idea/
+
+### Results directory ###
+# These directories should be removed from gitignore in replication packages
+results/

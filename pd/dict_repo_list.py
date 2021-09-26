@@ -6,7 +6,7 @@ import os
 import pathlib
 
 """ If the location of the local repositories are on a different location, change this here. """
-location_github = os.path.join(pathlib.Path.home(), "Documents", "GitHub")
+location_github = os.path.join(pathlib.Path.home(),"repo-mining", "projects")
 
 """
 It is possible to manually set the location to a different path.
