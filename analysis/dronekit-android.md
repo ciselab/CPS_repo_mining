@@ -284,7 +284,7 @@ This commit add new features to a UI.
 Huge performance gain by using Buffered streams
 
 ### Antipattern Category
-General:java:Unbuffered_Streams
+General:Performance:Unbuffered_Streams
 ### Keyword
 performance
 
@@ -349,12 +349,12 @@ A minor change to UI.
 Fix possible memory leak
 
 ### Antipattern Category
-?
+X
 ### Keyword
 memory leak
 
 ### Note
-???
+This commit moves a return statement to the if-else structure. We dont see any reason how this change might tackle a performance issue.
 
 ## Commit #22 
 ### Hash

@@ -13,6 +13,7 @@ Increase wifi timeout.
 
 ### Antipattern Category
 Smith:Where_Was_I
+New:Hard-coded-timing
 
 ### Keyword
 increase

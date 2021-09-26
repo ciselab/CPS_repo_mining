@@ -11,11 +11,11 @@ https://github.com/PX4/PX4-Autopilot
 ### Message
 Out of memory warning, flash and RAM optimizations
 ### Antipattern Category
-New:Delayed_Sync_With_Physical_Events
+X
 ### Keyword
 memory
 ### Note
-sleep before starting the i2c handler
+Sleep 0.3 seconds after the memory shortage lockdown. We dont see any antipattern but even the full file changed in this commit has lots of code smells. For instance, there is no evidence why they waited for 0.3 seconds and assure that the memory will be free after this time.
 
 ## Commit #2
 ### Hash
@@ -24,7 +24,8 @@ sleep before starting the i2c handler
 Formatting changes to make the Python style checker happy (copied from the bootloader project).\
 Increase the erase timeout to avoid issues with large/slow flash.
 ### Antipattern Category
-New:Delayed_Sync_With_Physical_Events
+New:Hard-coded-timing
+
 ### Keyword
 slow
 ### Note
@@ -183,11 +184,11 @@ Print usage, not performance interesting.
 ### Message
 Correct float parsing args and increase altitude monitoring frequency
 ### Antipattern Category
-Smith:Are_we_there_yet?
+X
 ### Keyword
 increase
 ### Note
-increasesd monitoring frequency, not explained why this is needed....
+increasesd monitoring frequency.
 ```python
 # Wait for completion of mission items
 while (current_sequence < len(missionlist)-1 and elapsed_time < max_execution_time):
@@ -201,7 +202,7 @@ while (current_sequence < len(missionlist)-1 and elapsed_time < max_execution_ti
 ### Message
 increase sleep time in accel calibration routine to make accel calibration work on snapdragon
 ### Antipattern Category
-New:Delayed_Sync_With_Physical_Events
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
@@ -328,7 +329,7 @@ PX4 System gpio_led:Code cleanup
 Use PX4 log and module documantation\
 Fixed memory leaks
 ### Antipattern Category
-?
+X
 ### Keyword
 memory
 ### Note
@@ -336,7 +337,11 @@ Consistend typo:
 ```C++
 gpio_led_state = Falied;
 ```
-Note: where is the memory leak that was fixed?
+Memory leak is fixed by adding the the following statement:
+```C++
+free (gpio_led_data);
+```
+The CPS developers did not free up the memory before this commit, but now they fixed it. There is no perfromance antipatterns.
 
 ## Commit #18
 ### Hash
@@ -432,8 +437,7 @@ esc_calibration: increase safety and initialise all data
 - initialise all structs and variables\
 ...
 ### Antipattern Category
-Smith:Where_am_I_?\
-General:Hard-coding
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
@@ -943,11 +947,11 @@ increase
 (1) Fix a critical memory leak in the TCP read-ahead buffering logic; Add an option to suppress SDIO multi-block transfers in order to work around a buggy SDIO driver
 ...
 ### Antipattern Category
-?
+X
 ### Keyword
 memory
 ### Note
-Memory leak fix; TODO: reread
+Memory leak fixed by defining a customized buffering logic.
 
 ## Commit #34
 ### Hash
@@ -981,13 +985,16 @@ TODO: reread
 Fix infinite loop in CDC/ACM driver
 ...
 ### Antipattern Category
-?
+New:Delayed_Sync_With_Physical_Events
 ### Keyword
 infinite
 ### Note
 ```
 * drivers/usbdev/cdcacm.c: Fix an infinite loop that occurs when the serial device is unregisters.
 ```
+
+ As mentioned in the documentation, "The driver needs to reset the software (in order to flush the requests) and to disable the software connection when the device is unregistered".
+ Also, it mentioned that "All requests must be canceled while the class driver is still bound".
 
 ## Commit #37
 ### Hash
@@ -1111,7 +1118,7 @@ Only change:
 ### Message
 Add EEPROM read/write performance counters.
 ### Antipattern Category
-?
+X
 ### Keyword
 performance
 ### Note
@@ -1132,6 +1139,7 @@ for (;;)
 	  usleep(1000);
 	}
 ```
+There is no CPS-related performance antipatterns.
 
 ## Commit #45
 ### Hash
@@ -1152,7 +1160,7 @@ increase
 Removed delay after receiving in recvfrom().  This was killing network performance
 ...
 ### Antipattern Category
-?
+X
 ### Keyword
 performance
 ### Note
@@ -1160,7 +1168,7 @@ performance
 - /* No timeout */
 + /* No timeout -- hang forever waiting for data. */
 ```
-TODO: reread
+This commit fixes a bug in network connection.
 
 ## Commit #47
 ### Hash
@@ -1206,7 +1214,7 @@ performance
 If server fails to create a thread because of lack-of-resources (EAGAIN), don't terminate.  Keep serving... Memory may become available again later.
 ...
 ### Antipattern Category
-?
+X
 ### Keyword
 memory
 ### Note
@@ -1226,7 +1234,7 @@ if (ret == EAGAIN)
 
 break;
 ```
-TODO: reread
+This is not an performance antipattern. This commit make sure that the connection waits for resources to be available.
 
 ## Commit #51
 ### Hash
@@ -1283,11 +1291,11 @@ memory
 ### Message
 reverted memory change, sdlog app needs more than 2K
 ### Antipattern Category
-?
+New:Hard-coded-fine-tuning
 ### Keyword
 memory
 ### Note
-Increased memory size, which was previously decreased (hash: b82d303d296aec26f2cd78e3b2f1ab56399b2626a3e83027381c00c5ad9bd0be, message: Reducing stack sizes to free some RAM ).
+Increased memory size in the drone, which was previously decreased (hash: [ab63a77edf78a198117757a1d5e2dbe34cde1263](https://github.com/PX4/PX4-Autopilot/commit/ab63a77edf78a198117757a1d5e2dbe34cde1263), message: Reducing stack sizes to free some RAM ).
 
 ## Commit #56
 ### Hash
@@ -1361,11 +1369,12 @@ Change:
 ### Message
 Make mixer ioctls load from a memory buffer rather than a file. This is prep for uploading the memory buffer to IO to be processed there.
 ### Antipattern Category
-?
+General:Performance:Unbuffered_Streams
 ### Keyword
 memory
+
 ### Note
-TODO: reread
+This commit change the file reading to using buffered stream to save IO resources.
 
 ## Commit #61
 ### Hash
@@ -1378,11 +1387,11 @@ which needs to be at least 128 to support the UBLOX protocol, but it
 seems a good idea for people running a FMU without a IO board to
 increase the UART buffer sizes generally
 ### Antipattern Category
-?
+X
 ### Keyword
 increase
 ### Note
-Hardware requirements.
+Before this commit, the CPS developers did not follow the documentation regarding the Hardware requirements for the buffer size. This commit fixes this issue.
 
 ## Commit #62
 ### Hash
@@ -1416,7 +1425,7 @@ performance
 Fix a bug where recv[from]() would hang when remote host gracefully closed connection
 ...
 ### Antipattern Category
-?
+X
 ### Keyword
 hang
 ### Note
@@ -1427,6 +1436,8 @@ Interesting note:
 was never detected.  Hmmm.. I don't know why the network monitor
 did not catch this event.  This is an important bug fix.
 ```
+
+This commit fixes a bug. There is not performance antipattern exposed here.
 
 ## Commit #65
 ### Hash
@@ -1446,11 +1457,11 @@ memory
 ### Message
 Reset the collection state machine on all I2C errors, increase the retry count.
 ### Antipattern Category
-?
+X
 ### Keyword
 increase
 ### Note
-Why the need to increase the retry rate?
+There is no antipattern detected here.
 
 ## Commit #67
 ### Hash
@@ -1458,7 +1469,7 @@ Why the need to increase the retry rate?
 ### Message
 Increase the number of I2C retries.
 ### Antipattern Category
-?
+X
 ### Keyword
 increase
 ### Note
@@ -1681,7 +1692,7 @@ performance
 ### Message
 Corrected bug in px4io driver that lead to hang of FMU-IO communication
 ### Antipattern Category
-?
+X
 ### Keyword
 hang
 ### Note
@@ -1732,7 +1743,7 @@ fast
 ### Message
 Hotfix: Increase stack size for low prio commander task
 ### Antipattern Category
-?
+General:Lack_of_documentation
 ### Keyword
 increase
 ### Note
@@ -1748,7 +1759,7 @@ Why this number?
 ### Message
 Hotfix: Increase work stack sizes
 ### Antipattern Category
-?
+General:Lack_of_documentation
 ### Keyword
 increase
 ### Note
@@ -1760,11 +1771,11 @@ Same question as in Commit #87.
 ### Message
 Hotfix: Improve UART1 receive performance
 ### Antipattern Category
-?
+X
 ### Keyword
 performance
 ### Note
-Forgotten setting to turn on. Antipattern?
+Forgotten setting to turn on.
 
 ## Commit #90
 ### Hash
@@ -1772,8 +1783,8 @@ Forgotten setting to turn on. Antipattern?
 ### Message
 sensors: slow down updates rate to 200Hz to free some CPU time
 ### Antipattern Category
-New:Delayed_Sync_With_Physical_Events
-?
+New:Fixed_Communication_Rate
+
 ### Keyword
 slow
 ### Note
@@ -1786,7 +1797,8 @@ Maybe a different antipattern.
 Revert "sensors: slow down updates rate to 200Hz to free some CPU time"\
 This reverts commit 81a4df0953e738041d9fdc2b2eb353a635f3003b.
 ### Antipattern Category
-?
+New:Hard-coded-fine-tuning
+
 ### Keyword
 slow
 ### Note
@@ -1924,11 +1936,11 @@ memory
 ### Message
 Build fix, replaced usleep with up_udelay in memory lockdown state
 ### Antipattern Category
-?
+X
 ### Keyword
 memory
 ### Note
-Renaming issue?
+This commit changes usleep to up_udelay to make sure that the system works even in memory lockdown state. However, according to our research, up_udelay is only a loop and should not be considered as an alternative for usleep. It is not an antipattern, but it can be considered as an smell.
 ```C
 - usleep(300000);
 + up_udelay(300000);
@@ -2056,11 +2068,11 @@ increase
 ### Message
 mavlink: memory leaks on exit fixed, minor fixes
 ### Antipattern Category
-?
+X
 ### Keyword
 memory
 ### Note
-TODO: reread
+This commit fixes a bug in the communication.
 
 ## Commit #112
 ### Hash
@@ -2074,7 +2086,7 @@ increase
 ### Note
 Why the change right now?
 
-## Commit #103
+## Commit #113
 ### Hash
 [183a0cdb22fd824d87912ea3d2c2470f0d28ed39](https://github.com/PX4/PX4-Autopilot/commit/183a0cdb22fd824d87912ea3d2c2470f0d28ed39?w=1)
 ### Message
@@ -2086,7 +2098,7 @@ increase
 ### Note
 Antipattern General:Code_Duplication might not be avoidable?
 
-## Commit #104
+## Commit #114
 ### Hash
 [e075d05f579091fb9c605c856650cbfd1587a044](https://github.com/PX4/PX4-Autopilot/commit/e075d05f579091fb9c605c856650cbfd1587a044?w=1)
 ### Message
@@ -2114,7 +2126,7 @@ _ekf->storedStates[0][0] = nan_val;
 usleep(100000);
 ```
 
-## Commit #105
+## Commit #115
 ### Hash
 [7b95d36405cb63b53fd1fea2c25e29aedca5a3a2](https://github.com/PX4/PX4-Autopilot/commit/7b95d36405cb63b53fd1fea2c25e29aedca5a3a2?w=1)
 ### Message
@@ -2126,7 +2138,7 @@ increase
 ### Note
 -
 
-## Commit #106
+## Commit #116
 ### Hash
 [b770c9fc1edc570fc216bdf849f84519e4e3513f](https://github.com/PX4/PX4-Autopilot/commit/b770c9fc1edc570fc216bdf849f84519e4e3513f?w=1)
 ### Message
@@ -2138,7 +2150,7 @@ increase
 ### Note
 -
 
-## Commit #107
+## Commit #117
 ### Hash
 [595eb679b30442b52ccc7a2c2ce7ade7b5e5c6c9](https://github.com/PX4/PX4-Autopilot/commit/595eb679b30442b52ccc7a2c2ce7ade7b5e5c6c9?w=1)
 ### Message
@@ -2150,7 +2162,7 @@ faster
 ### Note
 -
 
-## Commit #108
+## Commit #118
 ### Hash
 [d1bd4b0a45ec0f6f081560fbadf675e21ce53d83](https://github.com/PX4/PX4-Autopilot/commit/d1bd4b0a45ec0f6f081560fbadf675e21ce53d83?w=1)
 ### Message
@@ -2162,7 +2174,7 @@ increase
 ### Note
 -
 
-## Commit #109
+## Commit #119
 ### Hash
 [8d3fed09443faa6a3c79b68b7800ed3472877a1c](https://github.com/PX4/PX4-Autopilot/commit/8d3fed09443faa6a3c79b68b7800ed3472877a1c?w=1)
 ### Message
@@ -2177,13 +2189,14 @@ contiguous memory to reduce the number of scattered memory allocations.
 In reality, based on current usage, rarely will more than one group of 8
 be allocated.
 ### Antipattern Category
-?
+X
 ### Keyword
 memory
 ### Note
 Fix: see commit message.
+This commit fixes a potential memory fragmentation. this is fixed by grouping the blocks. This is not an antipattern.
 
-## Commit #110
+## Commit #120
 ### Hash
 [18ed3cbbb8ba4eabd32db3d07c7480c1af22ebc0](https://github.com/PX4/PX4-Autopilot/commit/18ed3cbbb8ba4eabd32db3d07c7480c1af22ebc0?w=1)
 ### Message
@@ -2195,7 +2208,7 @@ increase
 ### Note
 -
 
-## Commit #111
+## Commit #121
 ### Hash
 [0655aeb7ecb73eeaedfbd41171f07f9a247b32db](https://github.com/PX4/PX4-Autopilot/commit/0655aeb7ecb73eeaedfbd41171f07f9a247b32db?w=1)
 ### Message
@@ -2221,7 +2234,7 @@ mavlink stream -d /dev/ttyACM0 -s SERVO_OUTPUT_RAW_0 -r 20
 + usleep 1000
 ```
 
-## Commit #112
+## Commit #122
 ### Hash
 [b43f2e8be95417cdb58b670e549cffc6445b8f81](https://github.com/PX4/PX4-Autopilot/commit/b43f2e8be95417cdb58b670e549cffc6445b8f81?w=1)
 ### Message
@@ -2253,7 +2266,7 @@ mavlink stream -d /dev/ttyACM0 -s SERVO_OUTPUT_RAW_0 -r 20
 + usleep 100000
 ```
 
-## Commit #113
+## Commit #123
 ### Hash
 [aa312f96f8d682c85b422ef8c5fbc89b9391712e](https://github.com/PX4/PX4-Autopilot/commit/aa312f96f8d682c85b422ef8c5fbc89b9391712e?w=1)
 ### Message
@@ -2265,7 +2278,7 @@ performance
 ### Note
 -
 
-## Commit #114
+## Commit #124
 ### Hash
 [b9b81beb17eb449921f11f46bc419056dce03852](https://github.com/PX4/PX4-Autopilot/commit/b9b81beb17eb449921f11f46bc419056dce03852?w=1)
 ### Message
@@ -2277,7 +2290,7 @@ performance
 ### Note
 -
 
-## Commit #115
+## Commit #125
 ### Hash
 [b3d6dcb2e5a1f66c42d575f13cbc5a7eef16db27](https://github.com/PX4/PX4-Autopilot/commit/b3d6dcb2e5a1f66c42d575f13cbc5a7eef16db27?w=1)
 ### Message
@@ -2288,7 +2301,7 @@ General:Hard-coding
 increase
 ### Note
 
-## Commit #116
+## Commit #126
 ### Hash
 [fe28069effe77dcac143c0194b982028438068f3](https://github.com/PX4/PX4-Autopilot/commit/fe28069effe77dcac143c0194b982028438068f3?w=1)
 ### Message
@@ -2302,7 +2315,7 @@ increase
 Check the comments on the commit.
 TODO: reread, maybe a new antipattern?
 
-## Commit #117
+## Commit #127
 ### Hash
 [d0f4232ac6e2ff9d796df9d995e749734edc32ee](https://github.com/PX4/PX4-Autopilot/commit/d0f4232ac6e2ff9d796df9d995e749734edc32ee?w=1)
 ### Message
@@ -2314,7 +2327,7 @@ runtime
 ### Note
 -
 
-## Commit #118
+## Commit #128
 ### Hash
 [72afa2ca2bb7ce85262dd201b7620e310484f6c5](https://github.com/PX4/PX4-Autopilot/commit/72afa2ca2bb7ce85262dd201b7620e310484f6c5?w=1)
 ### Message
@@ -2326,7 +2339,7 @@ performance
 ### Note
 -
 
-## Commit #119
+## Commit #129
 ### Hash
 [092ede366a531ad68f7ccc2f372f83b8d2993242](https://github.com/PX4/PX4-Autopilot/commit/092ede366a531ad68f7ccc2f372f83b8d2993242?w=1)
 ### Message
@@ -2338,7 +2351,7 @@ runtime
 ### Note
 -
 
-## Commit #120
+## Commit #130
 ### Hash
 [fea4845ed97ca5219ceb8af0b0fb6d68603eea17](https://github.com/PX4/PX4-Autopilot/commit/fea4845ed97ca5219ceb8af0b0fb6d68603eea17?w=1)
 ### Message
@@ -2352,7 +2365,7 @@ runtime
 ### Note
 -
 
-## Commit #121
+## Commit #131
 ### Hash
 [d6632ee2dda39de78be1bbfa6754af8b59c58655](https://github.com/PX4/PX4-Autopilot/commit/d6632ee2dda39de78be1bbfa6754af8b59c58655?w=1)
 ### Message
@@ -2364,7 +2377,7 @@ performance
 ### Note
 -
 
-## Commit #122
+## Commit #132
 ### Hash
 [2de38d0628f3146caea28cd42b30840241269f41](https://github.com/PX4/PX4-Autopilot/commit/2de38d0628f3146caea28cd42b30840241269f41?w=1)
 ### Message
@@ -2382,7 +2395,7 @@ performance
 ### Note
 -
 
-## Commit #123
+## Commit #133
 ### Hash
 [8e12d79ef4b32da98dfb13af1321a6855ecbdc3d](https://github.com/PX4/PX4-Autopilot/commit/8e12d79ef4b32da98dfb13af1321a6855ecbdc3d?w=1)
 ### Message
@@ -2398,7 +2411,7 @@ Manually adjusted timeout.
 + #define POSITION_TIMEOUT		(2 * 1000 * 1000)	/**< consider the local or global position estimate invalid after 600ms */
 ```
 
-## Commit #124
+## Commit #134
 ### Hash
 [3b3e6f5aaafd1247447cad7070e3488e5798ce3c](https://github.com/PX4/PX4-Autopilot/commit/3b3e6f5aaafd1247447cad7070e3488e5798ce3c?w=1)
 ### Message
@@ -2410,7 +2423,7 @@ increase
 ### Note
 -
 
-## Commit #125
+## Commit #135
 ### Hash
 [c9eea8fbfaad7bfb3eee36a49588c9ac3a42ddc6](https://github.com/PX4/PX4-Autopilot/commit/c9eea8fbfaad7bfb3eee36a49588c9ac3a42ddc6?w=1)
 ### Message
@@ -2425,19 +2438,19 @@ increase
 + MODULE_STACKSIZE = 1400
 ```
 
-## Commit #126
+## Commit #136
 ### Hash
 [1dc23d0c49d99fa93284a277a6bc4970ac0e7b3b](https://github.com/PX4/PX4-Autopilot/commit/1dc23d0c49d99fa93284a277a6bc4970ac0e7b3b?w=1)
 ### Message
 Disable mTECS until runtime error is better understood
 ### Antipattern Category
-?
+X
 ### Keyword
 runtime
 ### Note
-Commenting bits of code, untill a better solution is found. TODO: reread
+Commenting bits of code, untill a better solution is found.
 
-## Commit #127
+## Commit #137
 ### Hash
 [7f293be7d77603768899aedb438821dd19b8b4d7](https://github.com/PX4/PX4-Autopilot/commit/7f293be7d77603768899aedb438821dd19b8b4d7?w=1)
 ### Message
@@ -2452,7 +2465,7 @@ increase
 + #define MAX_DATA_RATE	20000	// max data rate in bytes/s
 ```
 
-## Commit #128
+## Commit #138
 ### Hash
 [3f4aef60c88b1e570dd30bc47a13d5340073e9a9](https://github.com/PX4/PX4-Autopilot/commit/3f4aef60c88b1e570dd30bc47a13d5340073e9a9?w=1)
 ### Message
@@ -2467,7 +2480,7 @@ increase
 + self.port = serial.Serial(portname, baudrate, timeout=2.0)
 ```
 
-## Commit #129
+## Commit #139
 ### Hash
 [54fc6aa6788a125b387926a45023844daa42ec48](https://github.com/PX4/PX4-Autopilot/commit/54fc6aa6788a125b387926a45023844daa42ec48?w=1)
 ### Message
@@ -2479,7 +2492,7 @@ performance
 ### Note
 -
 
-## Commit #130
+## Commit #140
 ### Hash
 [a54ef70a207cd892a9ef406df6f1aa0732035537](https://github.com/PX4/PX4-Autopilot/commit/a54ef70a207cd892a9ef406df6f1aa0732035537?w=1)
 ### Message
@@ -2491,7 +2504,7 @@ decrease
 ### Note
 -
 
-## Commit #131
+## Commit #141
 ### Hash
 [6791ab72a910b00818026ac60d95d8df20bfa0d3](https://github.com/PX4/PX4-Autopilot/commit/6791ab72a910b00818026ac60d95d8df20bfa0d3?w=1)
 ### Message
@@ -2503,67 +2516,67 @@ faster
 ### Note
 -
 
-## Commit #132
+## Commit #142
 ### Hash
 [bc23b6239c50527aa550eed3bc6f17dec15c5c97](https://github.com/PX4/PX4-Autopilot/commit/bc23b6239c50527aa550eed3bc6f17dec15c5c97?w=1)
 ### Message
 increase ram
 ### Antipattern Category
-?
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-TODO: reread
+They just increased the RAM size without mentioning any reason.
 
-## Commit #133
+## Commit #143
 ### Hash
 [0553771f4fd6fbdba43669a8f17185ed61f96a51](https://github.com/PX4/PX4-Autopilot/commit/0553771f4fd6fbdba43669a8f17185ed61f96a51?w=1)
 ### Message
 Adapted for sharded library use with ROS. Problems to solve: error library from PX4 does not work yet. math functions such as isfinite need to be shared as well. performance library needs to be shared as well (commented for now)
 ### Antipattern Category
-?
+X
 ### Keyword
 performance
 ### Note
-Commenting bits of code, to temporaarely fix issue. TODO: reread
+Commenting bits of code, to temporarily fix issue.
 
-## Commit #134
+## Commit #144
 ### Hash
 [cfe14d78c5a9d2f80ebc0282e4bc400dcba6a795](https://github.com/PX4/PX4-Autopilot/commit/cfe14d78c5a9d2f80ebc0282e4bc400dcba6a795?w=1)
 ### Message
 Adapted for sharded library use with ROS. Problems to solve: error library from PX4 does not work yet. math functions such as isfinite need to be shared as well. performance library needs to be shared as well (commented for now)
 ### Antipattern Category
-?
+X
 ### Keyword
 performance
 ### Note
 See commit #133.
 
-## Commit #135
+## Commit #145
 ### Hash
 [77c823d3cd0f49014a33632ec9ef3efdd7d3dfa5](https://github.com/PX4/PX4-Autopilot/commit/77c823d3cd0f49014a33632ec9ef3efdd7d3dfa5?w=1)
 ### Message
 Adapted for sharded library use with ROS. Problems to solve: error library from PX4 does not work yet. math functions such as isfinite need to be shared as well. performance library needs to be shared as well (commented for now)
 ### Antipattern Category
-?
+X
 ### Keyword
 performance
 ### Note
 See commit #134 & #133.
 
-## Commit #136
+## Commit #146
 ### Hash
 [2b8a9b632555708731d93f4aa7945d19e83d3134](https://github.com/PX4/PX4-Autopilot/commit/2b8a9b632555708731d93f4aa7945d19e83d3134?w=1)
 ### Message
 Restored performance counter functionality, ROS package used own source file for function definitions but per_counter.h stays the same
 ### Antipattern Category
-?
+X
 ### Keyword
 performance
 ### Note
 See commit #135 & #134 & #133.
 
-## Commit #137
+## Commit #147
 ### Hash
 [038e1cac03198259d6f7630c6bb7c65c35f44fae](https://github.com/PX4/PX4-Autopilot/commit/038e1cac03198259d6f7630c6bb7c65c35f44fae?w=1)
 ### Message
@@ -2578,7 +2591,7 @@ increase
 + PARAM_DEFINE_FLOAT(COM_EF_TIME, 10.0f);
 ```
 
-## Commit #138
+## Commit #148
 ### Hash
 [ba2f55c3d7f5872aaf07e20b58b15df85417d43a](https://github.com/PX4/PX4-Autopilot/commit/ba2f55c3d7f5872aaf07e20b58b15df85417d43a?w=1)
 ### Message
@@ -2591,7 +2604,7 @@ increase
 ### Note
 See commit #132.
 
-## Commit #139
+## Commit #149
 ### Hash
 [5bc2b34e482fe8c4b0cab8f9748bd97dc3e17291](https://github.com/PX4/PX4-Autopilot/commit/5bc2b34e482fe8c4b0cab8f9748bd97dc3e17291?w=1)
 ### Message
@@ -2603,7 +2616,7 @@ performance
 ### Note
 -
 
-## Commit #140
+## Commit #150
 ### Hash
 [acb739655d5c2ebf50449842ae2b7b9b7c76dbd1](https://github.com/PX4/PX4-Autopilot/commit/acb739655d5c2ebf50449842ae2b7b9b7c76dbd1?w=1)
 ### Message
@@ -2615,7 +2628,7 @@ memory
 ### Note
 -
 
-## Commit #141
+## Commit #151
 ### Hash
 [2f271888d2ed934c271637c22554b503ce68e535](https://github.com/PX4/PX4-Autopilot/commit/2f271888d2ed934c271637c22554b503ce68e535?w=1)
 ### Message
@@ -2627,7 +2640,7 @@ performance
 ### Note
 -
 
-## Commit #142
+## Commit #152
 ### Hash
 [08d6cbe6bf0b5b04f63e42c6c60f5b1fe6167547](https://github.com/PX4/PX4-Autopilot/commit/08d6cbe6bf0b5b04f63e42c6c60f5b1fe6167547?w=1)
 ### Message
@@ -2639,7 +2652,7 @@ decrease
 ### Note
 -
 
-## Commit #143
+## Commit #153
 ### Hash
 [c906c2123822ef127026eeaf272b3aceed9f8995](https://github.com/PX4/PX4-Autopilot/commit/c906c2123822ef127026eeaf272b3aceed9f8995?w=1)
 ### Message
@@ -2653,7 +2666,7 @@ memory
 ### Note
 -
 
-## Commit #144
+## Commit #154
 ### Hash
 [5bb03f1c2db3eb5620caf806b053f8194490969a](https://github.com/PX4/PX4-Autopilot/commit/5bb03f1c2db3eb5620caf806b053f8194490969a?w=1)
 ### Message
@@ -2668,7 +2681,7 @@ increase
 + MODULE_STACKSIZE = 2400
 ```
 
-## Commit #145
+## Commit #155
 ### Hash
 [71f6a34367794a887704e2898f8a10101bacfb12](https://github.com/PX4/PX4-Autopilot/commit/71f6a34367794a887704e2898f8a10101bacfb12?w=1)
 ### Message
@@ -2680,7 +2693,7 @@ increase
 ### Note
 -
 
-## Commit #146
+## Commit #156
 ### Hash
 [262b9fc7545805c7b93a15cbb80a2f67db5ecdf0](https://github.com/PX4/PX4-Autopilot/commit/262b9fc7545805c7b93a15cbb80a2f67db5ecdf0?w=1)
 ### Message
@@ -2692,7 +2705,7 @@ performance
 ### Note
 -
 
-## Commit #147
+## Commit #157
 ### Hash
 [c9ca61ef5b23a370fcaf3e2a0546ab5452b65733](https://github.com/PX4/PX4-Autopilot/commit/c9ca61ef5b23a370fcaf3e2a0546ab5452b65733?w=1)
 ### Message
@@ -2704,7 +2717,7 @@ slow
 ### Note
 Removed antipattern.
 
-## Commit #148
+## Commit #158
 ### Hash
 [9292c8f405b0ed208443df0b1f9ebd497bb518ab](https://github.com/PX4/PX4-Autopilot/commit/9292c8f405b0ed208443df0b1f9ebd497bb518ab?w=1)
 ### Message
@@ -2716,7 +2729,7 @@ performance
 ### Note
 -
 
-## Commit #149
+## Commit #159
 ### Hash
 [c583f1fe8b9e66b42dd4697a5908541dfdd57f69](https://github.com/PX4/PX4-Autopilot/commit/c583f1fe8b9e66b42dd4697a5908541dfdd57f69?w=1)
 ### Message
@@ -2731,7 +2744,7 @@ increase
 + EXTRACXXFLAGS = -Wframe-larger-than=2000
 ```
 
-## Commit #150
+## Commit #160
 ### Hash
 [ee7e008008caa04f905654cb18e6d68fd980f8cd](https://github.com/PX4/PX4-Autopilot/commit/ee7e008008caa04f905654cb18e6d68fd980f8cd?w=1)
 ### Message
@@ -2743,7 +2756,7 @@ increase
 ### Note
 Same as Commit #149.
 
-## Commit #151
+## Commit #161
 ### Hash
 [59e0b67c8eaa4295c23f53500ff5c8e3b34ff5a8](https://github.com/PX4/PX4-Autopilot/commit/59e0b67c8eaa4295c23f53500ff5c8e3b34ff5a8?w=1)
 ### Message
@@ -2755,7 +2768,7 @@ increase
 ### Note
 -
 
-## Commit #152
+## Commit #162
 ### Hash
 [ca47952281cfe66732b08d3878eb6c8b1613abeb](https://github.com/PX4/PX4-Autopilot/commit/ca47952281cfe66732b08d3878eb6c8b1613abeb?w=1)
 ### Message
@@ -2768,7 +2781,7 @@ runtime
 ### Note
 -
 
-## Commit #153
+## Commit #163
 ### Hash
 [04c273bca6c99f31fd04741234d9c8efa849b553](https://github.com/PX4/PX4-Autopilot/commit/04c273bca6c99f31fd04741234d9c8efa849b553?w=1)
 ### Message
@@ -2780,7 +2793,7 @@ slow
 ### Note
 -
 
-## Commit #154
+## Commit #164
 ### Hash
 [e8eff3061f5e9c451c94d081932cac0e62e1a9b9](https://github.com/PX4/PX4-Autopilot/commit/e8eff3061f5e9c451c94d081932cac0e62e1a9b9?w=1)
 ### Message
@@ -2793,7 +2806,7 @@ slow
 ### Note
 See Commit #153.
 
-## Commit #155
+## Commit #165
 ### Hash
 [a3bce71b97b6e958737d11414cce2609e5d4848d](https://github.com/PX4/PX4-Autopilot/commit/a3bce71b97b6e958737d11414cce2609e5d4848d?w=1)
 ### Message
@@ -2805,7 +2818,7 @@ performance
 ### Note
 -
 
-## Commit #156
+## Commit #166
 ### Hash
 [2bff39d562f1d7c0ffa5e8875d355eb3271c70fe](https://github.com/PX4/PX4-Autopilot/commit/2bff39d562f1d7c0ffa5e8875d355eb3271c70fe?w=1)
 ### Message
@@ -2817,20 +2830,19 @@ performance
 ### Note
 -
 
-## Commit #157
+## Commit #167
 ### Hash
 [172dbf37070e2dccadc8779d6e0926d3f8d60706](https://github.com/PX4/PX4-Autopilot/commit/172dbf37070e2dccadc8779d6e0926d3f8d60706?w=1)
 ### Message
 Performance counters: Add option to set otherwise estimated time interval
 ### Antipattern Category
-?
+X
 ### Keyword
 performance
 ### Note
-Single case in a switch case (C).
-TODO: reread
+It add a non performance-related option.
 
-## Commit #158
+## Commit #168
 ### Hash
 [05367f8a006ae6e36fec0911c97490c31033551b](https://github.com/PX4/PX4-Autopilot/commit/05367f8a006ae6e36fec0911c97490c31033551b?w=1)
 ### Message
@@ -2845,7 +2857,7 @@ increase
 + EXTRACFLAGS = -Wframe-larger-than=1300
 ```
 
-## Commit #159
+## Commit #169
 ### Hash
 [ae6198b0bad801535c879d3269920e12781cea92](https://github.com/PX4/PX4-Autopilot/commit/ae6198b0bad801535c879d3269920e12781cea92?w=1)
 ### Message
@@ -2857,19 +2869,19 @@ performance
 ### Note
 -
 
-## Commit #160
+## Commit #170
 ### Hash
 [1cff86b0b562301020973f354043f27272d29f5b](https://github.com/PX4/PX4-Autopilot/commit/1cff86b0b562301020973f354043f27272d29f5b?w=1)
 ### Message
 ros mixer: increase number of controls to default to fix undefined behaviour
 ### Antipattern Category
-?
+X
 ### Keyword
 increase
 ### Note
-TODO: reread
+This commit changes size of an array to consider two more behaviors. It is not related to performance of the CPS.
 
-## Commit #161
+## Commit #171
 ### Hash
 [f23e603d02ba416ae250770cdaad6a859d6bae69](https://github.com/PX4/PX4-Autopilot/commit/f23e603d02ba416ae250770cdaad6a859d6bae69?w=1)
 ### Message
@@ -2881,7 +2893,7 @@ increase
 ### Note
 -
 
-## Commit #162
+## Commit #172
 ### Hash
 [9c627255ccc980270fe56b6c4ddeb494e1ce0f50](https://github.com/PX4/PX4-Autopilot/commit/9c627255ccc980270fe56b6c4ddeb494e1ce0f50?w=1)
 ### Message
@@ -2891,21 +2903,21 @@ New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
--
+This increase the maximm acceptable Gyro offset's dynamic range to 7dps (degress per second).
 
-## Commit #163
+## Commit #173
 ### Hash
 [3b07890361d56ce80d881e3969ff097b5cd96af4](https://github.com/PX4/PX4-Autopilot/commit/3b07890361d56ce80d881e3969ff097b5cd96af4?w=1)
 ### Message
 update sitl default params, make posctrl very slow for now
 ### Antipattern Category
-?
+New:Hard-coded-fine-tuning
 ### Keyword
 slow
 ### Note
--
+This commit reverts back to use the default paramaters for the drone. 
 
-## Commit #164
+## Commit #174
 ### Hash
 [28e943ca28f10cc1ea205a0e18cf814c8a2afa52](https://github.com/PX4/PX4-Autopilot/commit/28e943ca28f10cc1ea205a0e18cf814c8a2afa52?w=1)
 ### Message
@@ -2917,7 +2929,7 @@ runtime
 ### Note
 -
 
-## Commit #165
+## Commit #175
 ### Hash
 [c7d0cb6bd72deef810cfe1a16ac7b78810f8036b](https://github.com/PX4/PX4-Autopilot/commit/c7d0cb6bd72deef810cfe1a16ac7b78810f8036b?w=1)
 ### Message
@@ -2929,7 +2941,7 @@ memory
 ### Note
 -
 
-## Commit #166
+## Commit #176
 ### Hash
 [74177a2688f1163ec9659f3847d7cd17d0eb325f](https://github.com/PX4/PX4-Autopilot/commit/74177a2688f1163ec9659f3847d7cd17d0eb325f?w=1)
 ### Message
@@ -2942,7 +2954,7 @@ faster
 ### Note
 -
 
-## Commit #167
+## Commit #177
 ### Hash
 [81648f84cd97ec865ba7f20cebeb6285f7ef6d18](https://github.com/PX4/PX4-Autopilot/commit/81648f84cd97ec865ba7f20cebeb6285f7ef6d18?w=1)
 ### Message
@@ -2955,7 +2967,7 @@ increase
 ### Note
 -
 
-## Commit #168
+## Commit #178
 ### Hash
 [48bf84ff3754109fe6cf8e0e161eb70ae0987bfe](https://github.com/PX4/PX4-Autopilot/commit/48bf84ff3754109fe6cf8e0e161eb70ae0987bfe?w=1)
 ### Message
@@ -2969,7 +2981,7 @@ increase
 ### Note
 -
 
-## Commit #169
+## Commit #179
 ### Hash
 [3e5b8ded8cdd650e961008ce65c93dd64a326554](https://github.com/PX4/PX4-Autopilot/commit/3e5b8ded8cdd650e961008ce65c93dd64a326554?w=1)
 ### Message
@@ -2982,31 +2994,31 @@ increase
 ### Note
 -
 
-## Commit #170
+## Commit #180
 ### Hash
 [5c3f4d21944fb779feade46e1aba81ca5705462f](https://github.com/PX4/PX4-Autopilot/commit/5c3f4d21944fb779feade46e1aba81ca5705462f?w=1)
 ### Message
 GPIO led: Do not allocate memory statically, but only when module loads
 ### Antipattern Category
-?
+X
 ### Keyword
 memory
 ### Note
-Memory usage imrovement.
+This is an issue in handling memory in C. It is not considered as an antipattern.
 
-## Commit #171
+## Commit #181
 ### Hash
 [61437a5587b20e7e3c79fd1ab91e945dc0c316fb](https://github.com/PX4/PX4-Autopilot/commit/61437a5587b20e7e3c79fd1ab91e945dc0c316fb?w=1)
 ### Message
 MAVLink app: Do no allocate memory statically, but only on execution on stack.
 ### Antipattern Category
-?
+X
 ### Keyword
 memory
 ### Note
-Memory usage imrovement. Related to Commit #170.
+Memory usage improvement. Related to Commit #170.
 
-## Commit #172
+## Commit #182
 ### Hash
 [2883edaecd442e3049ad3224989cb384096e637a](https://github.com/PX4/PX4-Autopilot/commit/2883edaecd442e3049ad3224989cb384096e637a?w=1)
 ### Message
@@ -3019,7 +3031,7 @@ increase
 ### Note
 Hardware support.
 
-## Commit #173
+## Commit #183
 ### Hash
 [9db48df3d63836c5cca4480d847777c166bb31e8](https://github.com/PX4/PX4-Autopilot/commit/9db48df3d63836c5cca4480d847777c166bb31e8?w=1)
 ### Message
@@ -3031,7 +3043,7 @@ increase
 ### Note
 -
 
-## Commit #174
+## Commit #184
 ### Hash
 [37de377dcffb07ef49bacc0ec6ff722dadba1154](https://github.com/PX4/PX4-Autopilot/commit/37de377dcffb07ef49bacc0ec6ff722dadba1154?w=1)
 ### Message
@@ -3043,43 +3055,43 @@ increase
 ### Note
 See commit #173.
 
-## Commit #175
+## Commit #185
 ### Hash
 [ad54ff616dc83a703fe51c2a80a0662618116782](https://github.com/PX4/PX4-Autopilot/commit/ad54ff616dc83a703fe51c2a80a0662618116782?w=1)
 ### Message
 commander: Increase frame size limit
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+X
 ### Keyword
 increase
 ### Note
-See commit hash: 05367f8a006ae6e36fec0911c97490c31033551b, Commit #158.
+This is a change in config file.
 
-## Commit #176
+## Commit #186
 ### Hash
 [78741c87e5415c9e894f619e28b145e127576a56](https://github.com/PX4/PX4-Autopilot/commit/78741c87e5415c9e894f619e28b145e127576a56?w=1)
 ### Message
 MAVLink app: 1) only transmit active params, 2) send params faster, 3) ensure no overflow occurs on buffer when sending at higher rate.
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+New:Fixed_Communication_Rate
 ### Keyword
 faster
 ### Note
 -
 
-## Commit #177
+## Commit #187
 ### Hash
 [9a9efdaaa5a1a67be9a0939495503f222a1f3987](https://github.com/PX4/PX4-Autopilot/commit/9a9efdaaa5a1a67be9a0939495503f222a1f3987?w=1)
 ### Message
 commander: Increase timeout on airspeed sensor for the prearm_check
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
 -
 
-## Commit #178
+## Commit #188
 ### Hash
 [f1b2efeeaf1ca41fa20263af37b94485dcb9cee6](https://github.com/PX4/PX4-Autopilot/commit/f1b2efeeaf1ca41fa20263af37b94485dcb9cee6?w=1)
 ### Message
@@ -3091,7 +3103,7 @@ increase
 ### Note
 -
 
-## Commit #179
+## Commit #189
 ### Hash
 [f23bc38d3ec45c2b3d2d72b06e2426d40cefd10c](https://github.com/PX4/PX4-Autopilot/commit/f23bc38d3ec45c2b3d2d72b06e2426d40cefd10c?w=1)
 ### Message
@@ -3103,19 +3115,19 @@ increase
 ### Note
 See Commit #178.
 
-## Commit #180
+## Commit #190
 ### Hash
 [6e060c01a76401172e452e562993f79acfef9d1a](https://github.com/PX4/PX4-Autopilot/commit/6e060c01a76401172e452e562993f79acfef9d1a?w=1)
 ### Message
 SDLOG2: Optimize runtime efficiency
 ### Antipattern Category
-?
+X
 ### Keyword
 runtime
 ### Note
-TODO: reread
+This commit improves the efficiency of the project by improving the memory allocation. However, this change is dedicated only to C. So, it is not a performance antipattern specifically for CPSs.
 
-## Commit #181
+## Commit #191
 ### Hash
 [5299f767069be3bd8014a86a11a1748371e952a3](https://github.com/PX4/PX4-Autopilot/commit/5299f767069be3bd8014a86a11a1748371e952a3?w=1)
 ### Message
@@ -3131,7 +3143,7 @@ deadlock
 ### Note
 -
 
-## Commit #182
+## Commit #192
 ### Hash
 [6db77dc8bbae32ee15a17e7a5caa90f7e6191b2c](https://github.com/PX4/PX4-Autopilot/commit/6db77dc8bbae32ee15a17e7a5caa90f7e6191b2c?w=1)
 ### Message
@@ -3141,11 +3153,12 @@ that could be implemented as an in-memory file or a remote file
 over fastRPC.
 ...
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
-New:?
+X
 ### Keyword
 memory
 ### Note
+QuRT is an os for Qualcomm Technologies processors. It does not have filesystem so this commit makes a virtual FS for it. 
+
 ```C++
 #define PX4_MAX_DEV 100
 #define PX4_MAX_DEV 30
@@ -3157,7 +3170,7 @@ printf("Files:\n");
 for (; i<PX4_MAX_DEV; ++i) {
 ```
 
-## Commit #183
+## Commit #193
 ### Hash
 [3ac95fb5816dcbdce4a269767c3f6019c434811f](https://github.com/PX4/PX4-Autopilot/commit/3ac95fb5816dcbdce4a269767c3f6019c434811f?w=1)
 ### Message
@@ -3167,16 +3180,14 @@ requested and then throw away duplicates using the accelerometer
 status register data ready bit. This avoids aliasing due to drift in
 the stm32 clock compared to the lsm303d clock
 ### Antipattern Category
-Smith:Are_we_there_yet?
+X
 ### Keyword
 faster
 ### Note
-Line 1390/1401:
-```C++
-/* start polling at the specified rate */
-```
+They increase the polling frequency for the reason that they mentioned in the commit message ("This avoids aliasing due to drift in the stm32 clock compared to the lsm303d clock")
 
-## Commit #184
+
+## Commit #194
 ### Hash
 [a710159263ea5f561d352073504958a9a9f85c81](https://github.com/PX4/PX4-Autopilot/commit/a710159263ea5f561d352073504958a9a9f85c81?w=1)
 ### Message
@@ -3186,11 +3197,11 @@ this runs the mpu6000 200usec faster than requested then detects and
 disccards duplicates by comparing accel values. This avoids a nasty
 aliasing issue due to clock drift between the stm32 and mpu6000
 ### Antipattern Category
-Smith:Are_we_there_yet?
 New:Hard-coded-timing
 ### Keyword
 faster
 ### Note
+They increase the polling frequency for the reason that they mentioned in the commit message ("This avoids aliasing due to drift in the stm32 clock compared to the lsm303d clock")
 ```C++
 /*
   we set the timer interrupt to run a bit faster than the desired
@@ -3200,7 +3211,7 @@ faster
  */
  ```
  
-## Commit #185
+## Commit #195
 ### Hash
 [dc4d5619eae2bb6eebfe2f11ee97f5734a35d731](https://github.com/PX4/PX4-Autopilot/commit/dc4d5619eae2bb6eebfe2f11ee97f5734a35d731?w=1)
 ### Message
@@ -3215,7 +3226,7 @@ memory
 ### Note
 -
 
-## Commit #186
+## Commit #196
 ### Hash
 [f154f6e5e7598b02c2a5c5bb87e646a3425421a8](https://github.com/PX4/PX4-Autopilot/commit/f154f6e5e7598b02c2a5c5bb87e646a3425421a8?w=1)
 ### Message
@@ -3227,79 +3238,79 @@ faster
 ### Note
 -
 
-## Commit #187
+## Commit #197
 ### Hash
 [5c53d38652dc6c97e216ea6b70215a95890df572](https://github.com/PX4/PX4-Autopilot/commit/5c53d38652dc6c97e216ea6b70215a95890df572?w=1)
 ### Message
 FMUv2 config: Increase USB TX buf size further to speed up MAVLink FTP transfers
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+New:Fixed_Communication_Rate
 ### Keyword
 increase
 ### Note
 -
 
-## Commit #188
+## Commit #198
 ### Hash
 [03ef6a30ec5fa7c09b0de3ba00d577ccca5d39e6](https://github.com/PX4/PX4-Autopilot/commit/03ef6a30ec5fa7c09b0de3ba00d577ccca5d39e6?w=1)
 ### Message
 Speed up param transmit now that we are faster on USB
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+New:Fixed_Communication_Rate
 ### Keyword
 faster
 ### Note
--
+The change in USB makes it possible to have a faster communication.
 
-## Commit #189
+## Commit #199
 ### Hash
 [38004cdd955dad01801b750e18e45ac5dd3000e4](https://github.com/PX4/PX4-Autopilot/commit/38004cdd955dad01801b750e18e45ac5dd3000e4?w=1)
 ### Message
 PreflightCheck: Increase GPS timeout to 4 sec
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
 -
 
-## Commit #190
+## Commit #200
 ### Hash
 [a90caf7b7b3e70fb61b57c6dce6710d78debbfcd](https://github.com/PX4/PX4-Autopilot/commit/a90caf7b7b3e70fb61b57c6dce6710d78debbfcd?w=1)
 ### Message
 l3gd20: faster gyro interrupts
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 faster
 ### Note
 -
 
-## Commit #191
+## Commit #201
 ### Hash
 [bc75814d500c673fa8699f8d242c88e610ecded2](https://github.com/PX4/PX4-Autopilot/commit/bc75814d500c673fa8699f8d242c88e610ecded2?w=1)
 ### Message
 Increase buffer sizes on companion link
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+X
 ### Keyword
 increase
 ### Note
--
+it is a change in a config file 
 
-## Commit #192
+## Commit #202
 ### Hash
 [d43b0513cec925125e0cef00b9df8ffbe1801f72](https://github.com/PX4/PX4-Autopilot/commit/d43b0513cec925125e0cef00b9df8ffbe1801f72?w=1)
 ### Message
 Increase buffer sizes on companion link
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+X
 ### Keyword
 increase
 ### Note
--
+it is a change in a config file 
 
-## Commit #193
+## Commit #203
 ### Hash
 [a734fc96d117a732e5584e758ccff52fe041e828](https://github.com/PX4/PX4-Autopilot/commit/a734fc96d117a732e5584e758ccff52fe041e828?w=1)
 ### Message
@@ -3322,7 +3333,7 @@ memory
 ### Note
 Many changes, but needed due to the type of change.
 
-## Commit #194
+## Commit #204
 ### Hash
 [b7986e6fdd103064128d0933f7cb32ab4252159b](https://github.com/PX4/PX4-Autopilot/commit/b7986e6fdd103064128d0933f7cb32ab4252159b?w=1)
 ### Message
@@ -3334,7 +3345,7 @@ performance
 ### Note
 -
 
-## Commit #195
+## Commit #205
 ### Hash
 [acfd1ea51976300b5b89a7dc0f8c5158b3150604](https://github.com/PX4/PX4-Autopilot/commit/acfd1ea51976300b5b89a7dc0f8c5158b3150604?w=1)
 ### Message
@@ -3344,37 +3355,37 @@ Some interrupt events in Nuttx occur at about 1ms so a more
 granular workqueue is needed for POSIX.
 ...
 ### Antipattern Category
-?
+General:bottleneck
 ### Keyword
 fast
 ### Note
-TODO: reread
+This process makes abottleneck since it is slower than the periodic event occurance.
 
-## Commit #196
+## Commit #206
 ### Hash
 [fb778af8b3274be5ae5963382af0161ac6c7848e](https://github.com/PX4/PX4-Autopilot/commit/fb778af8b3274be5ae5963382af0161ac6c7848e?w=1)
 ### Message
 increase max file descriptors to 100
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+General:Hard-coding 
 ### Keyword
 increase
 ### Note
--
+ it is changig the number of file description (OS config). Not related to CPS.
 
-## Commit #197
+## Commit #207
 ### Hash
 [4aa4038e270c33e36ba2f8db866db3c6abec6222](https://github.com/PX4/PX4-Autopilot/commit/4aa4038e270c33e36ba2f8db866db3c6abec6222?w=1)
 ### Message
 increase number of arguments passable to apps
 ### Antipattern Category
-?
+X
 ### Keyword
 increase
 ### Note
-TODO: reread
+Not a performance-related change.
 
-## Commit #198
+## Commit #208
 ### Hash
 [9155e8a7fe2a7611c6b1ed136b5691475546a65c](https://github.com/PX4/PX4-Autopilot/commit/9155e8a7fe2a7611c6b1ed136b5691475546a65c?w=1)
 ### Message
@@ -3387,21 +3398,20 @@ increase
 ### Note
 TODO: reread
 
-## Commit #199
+## Commit #209
 ### Hash
 [8838b18da75d6f4354f73b38152c2ca98f9197aa](https://github.com/PX4/PX4-Autopilot/commit/8838b18da75d6f4354f73b38152c2ca98f9197aa?w=1)
 ### Message
 FW attitude control: Run attitude controller as fast as we can to minimize latency
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+New:Fixed_Communication_Rate
 New:Hard-coded-timing
-New:Delayed_Sync_With_Physical_Events
 ### Keyword
 fast
 ### Note
 -
 
-## Commit #200
+## Commit #210
 ### Hash
 [55ed9e96126cab150dbad1d9bd9db392b75781d9](https://github.com/PX4/PX4-Autopilot/commit/55ed9e96126cab150dbad1d9bd9db392b75781d9?w=1)
 ### Message
@@ -3413,7 +3423,7 @@ faster
 ### Note
 -
 
-## Commit #201
+## Commit #211
 ### Hash
 [9ecf4345a5cacc05f3c434d3c7516ade700d000f](https://github.com/PX4/PX4-Autopilot/commit/9ecf4345a5cacc05f3c434d3c7516ade700d000f?w=1)
 ### Message
@@ -3425,7 +3435,7 @@ infinite
 ### Note
 -
 
-## Commit #202
+## Commit #212
 ### Hash
 [3d92364d9eb391d3f0d615df7092d96194e2d5b0](https://github.com/PX4/PX4-Autopilot/commit/3d92364d9eb391d3f0d615df7092d96194e2d5b0?w=1)
 ### Message
@@ -3437,7 +3447,7 @@ increase
 ### Note
 -
 
-## Commit #203
+## Commit #213
 ### Hash
 [1a8703ec1c0aee86aa2440fc8b7cd627f65854a9](https://github.com/PX4/PX4-Autopilot/commit/1a8703ec1c0aee86aa2440fc8b7cd627f65854a9?w=1)
 ### Message
@@ -3457,7 +3467,7 @@ runtime
 ### Note
 -
 
-## Commit #204
+## Commit #214
 ### Hash
 [552c9800a9a394e5ad351309d62278aecd44073f](https://github.com/PX4/PX4-Autopilot/commit/552c9800a9a394e5ad351309d62278aecd44073f?w=1)
 ### Message
@@ -3473,7 +3483,7 @@ runtime
 ### Note
 -
 
-## Commit #205
+## Commit #215
 ### Hash
 [52b0f17ff31213e1c073cf53c069e8883a3ca0e9](https://github.com/PX4/PX4-Autopilot/commit/52b0f17ff31213e1c073cf53c069e8883a3ca0e9?w=1)
 ### Message
@@ -3483,9 +3493,9 @@ New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
--
+This commit increases the maximum speed of the motor.
 
-## Commit #206
+## Commit #216
 ### Hash
 [5cf20c8dcfeba450bcc926f4a73b81c382a9ad43](https://github.com/PX4/PX4-Autopilot/commit/5cf20c8dcfeba450bcc926f4a73b81c382a9ad43?w=1)
 ### Message
@@ -3497,7 +3507,7 @@ increase
 ### Note
 -
 
-## Commit #207
+## Commit #217
 ### Hash
 [7043869237b5294233ca8dfaa613ceaaaf3d95bd](https://github.com/PX4/PX4-Autopilot/commit/7043869237b5294233ca8dfaa613ceaaaf3d95bd?w=1)
 ### Message
@@ -3506,13 +3516,13 @@ VDev:
 - increase max number of file descriptors to 200
 - add warning if number of file descriptor exceeds max value
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+General:Hard-coding
 ### Keyword
 increase
 ### Note
--
+Same as Commit #196
 
-## Commit #208
+## Commit #218
 ### Hash
 [640024357f3b3a261031b750cf7a7b5a82e53a78](https://github.com/PX4/PX4-Autopilot/commit/640024357f3b3a261031b750cf7a7b5a82e53a78?w=1)
 ### Message
@@ -3524,7 +3534,7 @@ increase
 ### Note
 -
 
-## Commit #209
+## Commit #219
 ### Hash
 [cae604ac1f8177775048dacdc899d4372efaf0ec](https://github.com/PX4/PX4-Autopilot/commit/cae604ac1f8177775048dacdc899d4372efaf0ec?w=1)
 ### Message
@@ -3534,9 +3544,9 @@ New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
--
+The calibration cycle checks the results if we have enough good results it stops the calibration. This value is hard-coded and is changed by this commit because it was not the best number of cycles and good results for calibration of a hardware.
 
-## Commit #210
+## Commit #220
 ### Hash
 [5bec38b37dbdf87720b98021850141e817de4191](https://github.com/PX4/PX4-Autopilot/commit/5bec38b37dbdf87720b98021850141e817de4191?w=1)
 ### Message
@@ -3546,33 +3556,33 @@ New:General:Hard-coded-fine-tuning
 ### Keyword
 fast
 ### Note
--
+The commit message is quite clear and self explanatory.
 
-## Commit #211
+## Commit #221
 ### Hash
 [b1b555ceb6f8121cfa87e6dbed1274a232a45006](https://github.com/PX4/PX4-Autopilot/commit/b1b555ceb6f8121cfa87e6dbed1274a232a45006?w=1)
 ### Message
 MAVLink app: Increase max data rate
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+New:Fixed_Communication_Rate
 ### Keyword
 increase
 ### Note
--
+This commit changes the communication rate in MAVLink (a protocol for communicating with small unmanned vehicle).
 
-## Commit #212
+## Commit #222
 ### Hash
 [ec21a71b369ff609fa74ccb5b71a4d275e9e5068](https://github.com/PX4/PX4-Autopilot/commit/ec21a71b369ff609fa74ccb5b71a4d275e9e5068?w=1)
 ### Message
 Commander: increase mag cal timeout
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
 -
 
-## Commit #213
+## Commit #223
 ### Hash
 [06c45aadfbca55d88ff643a1ca526065a1d357e7](https://github.com/PX4/PX4-Autopilot/commit/06c45aadfbca55d88ff643a1ca526065a1d357e7?w=1)
 ### Message
@@ -3584,7 +3594,7 @@ increase
 ### Note
 -
 
-## Commit #214
+## Commit #224
 ### Hash
 [0321f416a0f31e75234b32d86094b6898d77439c](https://github.com/PX4/PX4-Autopilot/commit/0321f416a0f31e75234b32d86094b6898d77439c?w=1)
 ### Message
@@ -3596,7 +3606,7 @@ increase
 ### Note
 -
 
-## Commit #215
+## Commit #225
 ### Hash
 [e443a3f3be42ed9ebfcf0ca588d7b0a4d359f582](https://github.com/PX4/PX4-Autopilot/commit/e443a3f3be42ed9ebfcf0ca588d7b0a4d359f582?w=1)
 ### Message
@@ -3608,19 +3618,19 @@ increase
 ### Note
 -
 
-## Commit #216
+## Commit #226
 ### Hash
 [e09771be17d8965f8928b6d577e4222c01e67fa6](https://github.com/PX4/PX4-Autopilot/commit/e09771be17d8965f8928b6d577e4222c01e67fa6?w=1)
 ### Message
 NSH terminal: Increase hold-off time to ensure USB is up and running
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
 -
 
-## Commit #217
+## Commit #227
 ### Hash
 [a589d15c5212c3249599932080f656ce2b7a0044](https://github.com/PX4/PX4-Autopilot/commit/a589d15c5212c3249599932080f656ce2b7a0044?w=1)
 ### Message
@@ -3638,19 +3648,19 @@ runtime
 ### Note
 Due to platform, specific changes. The CI/CD:Too_many_changes was needed due to the type of change.
 
-## Commit #218
+## Commit #228
 ### Hash
 [1ef7d1348794d0d55d1799b6a7ae29a2c0debfc5](https://github.com/PX4/PX4-Autopilot/commit/1ef7d1348794d0d55d1799b6a7ae29a2c0debfc5?w=1)
 ### Message
 Increase NSH back-off time
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
 -
 
-## Commit #219
+## Commit #229
 ### Hash
 [c5ec4de6eab8aa7639f263aa42c88f0d76061820](https://github.com/PX4/PX4-Autopilot/commit/c5ec4de6eab8aa7639f263aa42c88f0d76061820?w=1)
 ### Message
@@ -3662,7 +3672,7 @@ increase
 ### Note
 Same as Commit #218.
 
-## Commit #220
+## Commit #230
 ### Hash
 [eea2f61f02bb7ea092770a956f64443f1f190496](https://github.com/PX4/PX4-Autopilot/commit/eea2f61f02bb7ea092770a956f64443f1f190496?w=1)
 ### Message
