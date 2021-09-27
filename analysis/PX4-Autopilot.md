@@ -2960,7 +2960,7 @@ faster
 ### Message
 increase RTL descend altitude
 ### Antipattern Category
-General:Hard-coding
+New:Hard-coded-fine-tuning
 General:Lack_of_documentation
 ### Keyword
 increase
