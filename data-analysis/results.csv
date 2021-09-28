@@ -1131,7 +1131,7 @@ This reverts commit 04c273bca6c99f31fd04741234d9c8efa849b553.",New:Hard-coded-ti
 General:Lack_of_documentation",faster
 "PX4-Autopilot
 "," #177
-",[81648f84cd97ec865ba7f20cebeb6285f7ef6d18](https://github.com/PX4/PX4-Autopilot/commit/81648f84cd97ec865ba7f20cebeb6285f7ef6d18?w=1),increase RTL descend altitude,"General:Hard-coding
+",[81648f84cd97ec865ba7f20cebeb6285f7ef6d18](https://github.com/PX4/PX4-Autopilot/commit/81648f84cd97ec865ba7f20cebeb6285f7ef6d18?w=1),increase RTL descend altitude,"New:Hard-coded-fine-tuning
 General:Lack_of_documentation",increase
 "PX4-Autopilot
 "," #178
