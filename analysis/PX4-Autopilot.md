@@ -3765,11 +3765,11 @@ With this commit UAVCAN has access to the global memory pool. Not a performance 
 ### Message
 UAVCAN memory usage status and shrink
 ### Antipattern Category
-
+General:performance:using_massive_arrays_likes
 ### Keyword
 memory
 ### Note
-
+This commit makes sure that the memory pool gets shrinked during the process.
 
 ## Commit #237
 ### Hash
@@ -3778,10 +3778,11 @@ memory
 ### Message
 Deallocating memory used by UAVCAN virtual iface on destruction
 ### Antipattern Category
-
+General:C:not_deallocating
 ### Keyword
 memory
 ### Note
+This commit pop all of the franmes that are already stored in the queue before node destruction. This manual deallocation is only needed in C and C++.
 
 
 ## Commit #238
@@ -3791,11 +3792,11 @@ memory
 ### Message
 UAVCAN allocator as a dedicated type; reporting a warning if memory leak is deetcted upon destruction
 ### Antipattern Category
-
+General:C:not_deallocating
 ### Keyword
 memory
 ### Note
-
+Same as previous Commit, this one also check if the blocks are deallocated duting the destruction.
 
 ## Commit #239
 ### Hash
@@ -3804,11 +3805,11 @@ memory
 ### Message
 Node on leaked memory in UAVCAN driver
 ### Antipattern Category
-
+General:C:not_deallocating
 ### Keyword
 memory
 ### Note
-
+Same as previous Commit, this memory leak comes from memory allocation and dellocation in C.
 
 ## Commit #240
 ### Hash
@@ -3817,11 +3818,11 @@ memory
 ### Message
 Fixed memory leak in UAVCAN baro driver
 ### Antipattern Category
-
+General:C:not_deallocating
 ### Keyword
 memory
 ### Note
-
+Same as previous Commit, this memory leak comes from memory allocation and dellocation in C.
 
 ## Commit #241
 ### Hash
@@ -3830,11 +3831,11 @@ memory
 ### Message
 Fixed memory leaks in the primary UAVCAN thread
 ### Antipattern Category
-
+General:C:not_deallocating
 ### Keyword
 memory
 ### Note
-
+Same as previous Commit, this memory leak comes from memory allocation and dellocation in C.
 
 ## Commit #242
 ### Hash
@@ -3845,11 +3846,11 @@ Logging rate was limited to 1 Hz
 
 I set the maximum to 100 Hz, since most SD cards are not fast enough for more. (but more is still possible with forcing)
 ### Antipattern Category
-
+New:Fixed_Communication_Rate
 ### Keyword
 fast
 ### Note
-
+This commit set the max logging rate to 100HZ since the previous value (1HZ) was too slow. This limitation should reflect the minimum speed of the SD card used in this system
 
 ## Commit #243
 ### Hash
@@ -3858,11 +3859,11 @@ fast
 ### Message
 Commander: Increase stack for commandline calibration
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+Changes a variable in build framework (cmake)
 
 ## Commit #244
 ### Hash
@@ -3871,11 +3872,11 @@ increase
 ### Message
 Simulator: Add performance counters for delay
 ### Antipattern Category
-
+X
 ### Keyword
 performance
 ### Note
-
+This commit adds performance counters for logging purposes and monitoring the reason behind a delay.
 
 ## Commit #245
 ### Hash
@@ -3884,10 +3885,11 @@ performance
 ### Message
 Attitude estimator Q: Add performance counters for delay
 ### Antipattern Category
-
+X
 ### Keyword
 performance
 ### Note
+This commit adds performance counters for logging purposes and monitoring the reason behind a delay.
 
 
 ## Commit #246
@@ -3897,10 +3899,11 @@ performance
 ### Message
 MAVLink: Output RC inputs faster
 ### Antipattern Category
-
+New:Fixed_Communication_Rate
 ### Keyword
 faster
 ### Note
+RC input is a key part of any autopilot, giving the pilot control of the airframe, allowing them to change modes and also giving them control of auxiliary equipment such as camera mounts. This commit increase the speed of tese inputs.
 
 
 ## Commit #247
@@ -3910,11 +3913,11 @@ faster
 ### Message
 FMU driver: Run slightly faster to accomodate S.BUS
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 faster
 ### Note
-
+This commit make the system compatible with  S.BUS. This commit reduce the intervals in FMU driver from 2K to 1500. Net commit will change it again.
 
 ## Commit #248
 ### Hash
@@ -3923,10 +3926,13 @@ faster
 ### Message
 FMU driver: Slightly increase run interval to save load
 ### Antipattern Category
+New:Hard-coded-fine-tuning
+New:Hard-coded-timing
 
 ### Keyword
 increase
 ### Note
+This commit changes the same value as the previous commit. it changes it from 1500 to 1800.
 
 
 ## Commit #249
@@ -3936,11 +3942,15 @@ increase
 ### Message
 Q estimator: Increase stack size as needed
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+stack size is an input parameter for task_create method.
+task_create is a method from Apache NuttX (a real-time embedded operating system (RTOS)). NuttX is the primary RTOS for running PX4 on a flight-control board.
+ This method creates and activates a new task with a specified priority and returns its system-assigned ID.
+ Stack size is the size (in bytes) of the stack needed for the task. the amount of stack required is dependent on many parameters such as function call nesting depth.
+ This commit change the stack size for Q estimator task.
 
 ## Commit #250
 ### Hash
@@ -3949,11 +3959,11 @@ increase
 ### Message
 INAV: Increase stack size as needed
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Look at commit 249.  This commit change the stack size for INAV task.
 
 ## Commit #251
 ### Hash
@@ -3962,10 +3972,11 @@ increase
 ### Message
 SDLOG2: increase stack size as needed
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
+Look at commit 249.  This commit change the stack size for SDLOG2 task.
 
 
 ## Commit #252
@@ -3975,11 +3986,12 @@ increase
 ### Message
 Q estimator: Increase phase margin
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+the phase margin is the difference between the phase lag φ and -180°, for an amplifier's output signal at zero dB gain.
+This commit changes this value.
 
 ## Commit #253
 ### Hash
@@ -3988,11 +4000,12 @@ increase
 ### Message
 Commander: Allow setting home position faster
 ### Antipattern Category
-
+New:Hard-coded-timing
 ### Keyword
 faster
 ### Note
-
+The commander node should  update home position on arming if at least an X amount of time spent from commander initialization. This timing is to avoid setting home on in-air restart
+This value changed from various values to 500ms.
 
 ## Commit #254
 ### Hash
@@ -4001,11 +4014,11 @@ faster
 ### Message
 Q estimator: Increase phase margin
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Same as commit 252.
 
 ## Commit #255
 ### Hash
@@ -4014,11 +4027,13 @@ increase
 ### Message
 FMU driver: Update faster
 ### Antipattern Category
+New:Hard-coded-fine-tuning
+New:Hard-coded-timing
 
 ### Keyword
 faster
 ### Note
-
+Same as Commit 248
 
 ## Commit #256
 ### Hash
