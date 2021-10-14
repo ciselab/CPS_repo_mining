@@ -3764,7 +3764,6 @@ With this commit UAVCAN has access to the global memory pool. Not a performance 
 
 ### Message
 UAVCAN memory usage status and shrink
-message: UAVCAN memory usage status and shrink
 ### Antipattern Category
 
 ### Keyword
@@ -3778,7 +3777,6 @@ memory
 
 ### Message
 Deallocating memory used by UAVCAN virtual iface on destruction
-message: Deallocating memory used by UAVCAN virtual iface on destruction
 ### Antipattern Category
 
 ### Keyword
@@ -3792,7 +3790,6 @@ memory
 
 ### Message
 UAVCAN allocator as a dedicated type; reporting a warning if memory leak is deetcted upon destruction
-message: UAVCAN allocator as a dedicated type; reporting a warning if memory leak is deetcted upon destruction
 ### Antipattern Category
 
 ### Keyword
@@ -3806,7 +3803,6 @@ memory
 
 ### Message
 Node on leaked memory in UAVCAN driver
-message: Node on leaked memory in UAVCAN driver
 ### Antipattern Category
 
 ### Keyword
@@ -3820,7 +3816,6 @@ memory
 
 ### Message
 Fixed memory leak in UAVCAN baro driver
-message: Fixed memory leak in UAVCAN baro driver
 ### Antipattern Category
 
 ### Keyword
@@ -3834,7 +3829,6 @@ memory
 
 ### Message
 Fixed memory leaks in the primary UAVCAN thread
-message: Fixed memory leaks in the primary UAVCAN thread
 ### Antipattern Category
 
 ### Keyword
@@ -3848,7 +3842,6 @@ memory
 
 ### Message
 Logging rate was limited to 1 Hz
-message: Logging rate was limited to 1 Hz
 
 I set the maximum to 100 Hz, since most SD cards are not fast enough for more. (but more is still possible with forcing)
 ### Antipattern Category
@@ -3864,7 +3857,6 @@ fast
 
 ### Message
 Commander: Increase stack for commandline calibration
-message: Commander: Increase stack for commandline calibration
 ### Antipattern Category
 
 ### Keyword
@@ -3878,7 +3870,6 @@ increase
 
 ### Message
 Simulator: Add performance counters for delay
-message: Simulator: Add performance counters for delay
 ### Antipattern Category
 
 ### Keyword
@@ -3892,7 +3883,6 @@ performance
 
 ### Message
 Attitude estimator Q: Add performance counters for delay
-message: Attitude estimator Q: Add performance counters for delay
 ### Antipattern Category
 
 ### Keyword
@@ -3906,7 +3896,6 @@ performance
 
 ### Message
 MAVLink: Output RC inputs faster
-message: MAVLink: Output RC inputs faster
 ### Antipattern Category
 
 ### Keyword
@@ -3920,7 +3909,6 @@ faster
 
 ### Message
 FMU driver: Run slightly faster to accomodate S.BUS
-message: FMU driver: Run slightly faster to accomodate S.BUS
 ### Antipattern Category
 
 ### Keyword
@@ -3934,7 +3922,6 @@ faster
 
 ### Message
 FMU driver: Slightly increase run interval to save load
-message: FMU driver: Slightly increase run interval to save load
 ### Antipattern Category
 
 ### Keyword
@@ -3948,7 +3935,6 @@ increase
 
 ### Message
 Q estimator: Increase stack size as needed
-message: Q estimator: Increase stack size as needed
 ### Antipattern Category
 
 ### Keyword
@@ -3962,7 +3948,6 @@ increase
 
 ### Message
 INAV: Increase stack size as needed
-message: INAV: Increase stack size as needed
 ### Antipattern Category
 
 ### Keyword
@@ -3976,7 +3961,6 @@ increase
 
 ### Message
 SDLOG2: increase stack size as needed
-message: SDLOG2: increase stack size as needed
 ### Antipattern Category
 
 ### Keyword
@@ -3990,7 +3974,6 @@ increase
 
 ### Message
 Q estimator: Increase phase margin
-message: Q estimator: Increase phase margin
 ### Antipattern Category
 
 ### Keyword
@@ -4004,7 +3987,6 @@ increase
 
 ### Message
 Commander: Allow setting home position faster
-message: Commander: Allow setting home position faster
 ### Antipattern Category
 
 ### Keyword
@@ -4018,7 +4000,6 @@ faster
 
 ### Message
 Q estimator: Increase phase margin
-message: Q estimator: Increase phase margin
 ### Antipattern Category
 
 ### Keyword
@@ -4032,7 +4013,6 @@ increase
 
 ### Message
 FMU driver: Update faster
-message: FMU driver: Update faster
 ### Antipattern Category
 
 ### Keyword
@@ -4046,7 +4026,6 @@ faster
 
 ### Message
 added takeoff logic for position controller to get the uav off the ground fast and transition smoothly to poctl after takeoff, added landing logic to reduce thrust to zero once on the ground
-message: added takeoff logic for position controller to get the uav off the ground fast and transition smoothly to poctl after takeoff, added landing logic to reduce thrust to zero once on the ground
 ### Antipattern Category
 
 ### Keyword
@@ -4060,7 +4039,6 @@ fast
 
 ### Message
 Simulator: Add performance counter for incoming packet interval
-message: Simulator: Add performance counter for incoming packet interval
 ### Antipattern Category
 
 ### Keyword
@@ -4074,7 +4052,6 @@ performance
 
 ### Message
 Fixes for qurt build
-message: Fixes for qurt build
 
 Added missing functions that were added for other targets but not for qurt.
 
@@ -4097,7 +4074,6 @@ performance
 
 ### Message
 Yaw fix: increase threshold
-message: Yaw fix: increase threshold
 ### Antipattern Category
 
 ### Keyword
@@ -4111,7 +4087,6 @@ increase
 
 ### Message
 quick fix:
-message: quick fix:
 Remove throttle non-increase condition for landing since this has lead to
 quads falling out of the sky.
 ### Antipattern Category
@@ -4127,7 +4102,6 @@ increase
 
 ### Message
 Change arming transfer to only set the register if the local configuration changed. Move its write operation to the fast rate so that arming / disarming is instantaneous
-message: Change arming transfer to only set the register if the local configuration changed. Move its write operation to the fast rate so that arming / disarming is instantaneous
 ### Antipattern Category
 
 ### Keyword
@@ -4141,7 +4115,6 @@ fast
 
 ### Message
 Param command: Increase stack as needed
-message: Param command: Increase stack as needed
 ### Antipattern Category
 
 ### Keyword
@@ -4155,7 +4128,6 @@ increase
 
 ### Message
 Param: Increase robustness of default save command
-message: Param: Increase robustness of default save command
 ### Antipattern Category
 
 ### Keyword
@@ -4169,7 +4141,6 @@ increase
 
 ### Message
 FMUv4: Run FRAM bus faster
-message: FMUv4: Run FRAM bus faster
 ### Antipattern Category
 
 ### Keyword
@@ -4183,7 +4154,6 @@ faster
 
 ### Message
 MS5611: Run SPI bus faster
-message: MS5611: Run SPI bus faster
 ### Antipattern Category
 
 ### Keyword
@@ -4197,7 +4167,6 @@ faster
 
 ### Message
 increase priority of sPort_telemetry to 200
-message: increase priority of sPort_telemetry to 200
 ### Antipattern Category
 
 ### Keyword
@@ -4211,7 +4180,6 @@ increase
 
 ### Message
 MC att control: Slightly increase max yaw rate
-message: MC att control: Slightly increase max yaw rate
 ### Antipattern Category
 
 ### Keyword
@@ -4225,7 +4193,6 @@ increase
 
 ### Message
 Libuavcan update: Reduces STM32 CAN IRQ overhead with new error handling logic
-message: Libuavcan update: Reduces STM32 CAN IRQ overhead with new error handling logic
 ### Antipattern Category
 
 ### Keyword
@@ -4239,7 +4206,6 @@ overhead
 
 ### Message
 Pre-empt HRT execution in SITL if simulator is slow
-message: Pre-empt HRT execution in SITL if simulator is slow
 ### Antipattern Category
 
 ### Keyword
@@ -4253,7 +4219,6 @@ slow
 
 ### Message
 FMUv2: Increase USB buffer to speed up log transfers
-message: FMUv2: Increase USB buffer to speed up log transfers
 ### Antipattern Category
 
 ### Keyword
@@ -4267,7 +4232,6 @@ increase
 
 ### Message
 FMUv4: Increase USB and UART buffers to speed up log transfers
-message: FMUv4: Increase USB and UART buffers to speed up log transfers
 ### Antipattern Category
 
 ### Keyword
@@ -4281,7 +4245,6 @@ increase
 
 ### Message
 Add memory debugging switch support
-message: Add memory debugging switch support
 ### Antipattern Category
 
 ### Keyword
@@ -4295,7 +4258,6 @@ memory
 
 ### Message
 Pixracer: Increase streams and data rate via Wifi
-message: Pixracer: Increase streams and data rate via Wifi
 ### Antipattern Category
 
 ### Keyword
@@ -4309,7 +4271,6 @@ increase
 
 ### Message
 increase stack size for frsky telemetry daemon
-message: increase stack size for frsky telemetry daemon
 ### Antipattern Category
 
 ### Keyword
@@ -4323,7 +4284,6 @@ increase
 
 ### Message
 Changes to improve performance
-message: Changes to improve performance
 
 The work queue processing was causing too much overhead so a more
 efficient check was implemented.
@@ -4342,7 +4302,6 @@ performance
 
 ### Message
 Changes to improve performance
-message: Changes to improve performance
 
 The work queue processing was causing too much overhead so a more
 efficient check was implemented.
@@ -4361,7 +4320,6 @@ performance
 
 ### Message
 Added param shared memory support
-message: Added param shared memory support
 
 Signed-off-by: Mark Charlebois <charlebm@gmail.com>
 ### Antipattern Category
@@ -4377,7 +4335,6 @@ memory
 
 ### Message
 px4_qurt_tasks: fix hang because of absolute time
-message: px4_qurt_tasks: fix hang because of absolute time
 
 The timeout was triggered using absolute time instead of a delay in
 usec. This lead to the system hanging. With the fix it continues after
@@ -4395,7 +4352,6 @@ hang
 
 ### Message
 param: workaround for QURT
-message: param: workaround for QURT
 
 There is no such thing as set_param_no_autosave on QURT, therefore just
 save it anyway. On the Snapdragon the overhead should not be a problem.
@@ -4412,7 +4368,6 @@ overhead
 
 ### Message
 Resolved shared memory parameter problems and removed additional debug code.
-message: Resolved shared memory parameter problems and removed additional debug code.
 ### Antipattern Category
 
 ### Keyword
@@ -4426,7 +4381,6 @@ memory
 
 ### Message
 Fixed problem causing a failure to obtain the shared memory lock on the AppsProc.
-message: Fixed problem causing a failure to obtain the shared memory lock on the AppsProc.
 ### Antipattern Category
 
 ### Keyword
@@ -4440,7 +4394,6 @@ memory
 
 ### Message
 ESC cal: Increase timeouts
-message: ESC cal: Increase timeouts
 ### Antipattern Category
 
 ### Keyword
@@ -4454,7 +4407,6 @@ increase
 
 ### Message
 sdlog2:
-message: sdlog2:
 increase stack size and fix indentation
 ### Antipattern Category
 
@@ -4469,7 +4421,6 @@ increase
 
 ### Message
 do not allocate unnecessary memory in logging app
-message: do not allocate unnecessary memory in logging app
 ### Antipattern Category
 
 ### Keyword
@@ -4483,7 +4434,6 @@ memory
 
 ### Message
 make structs static and decrease stack size, run astyle
-message: make structs static and decrease stack size, run astyle
 ### Antipattern Category
 
 ### Keyword
@@ -4497,7 +4447,6 @@ decrease
 
 ### Message
 decrease stack allocation to 1100
-message: decrease stack allocation to 1100
 ### Antipattern Category
 
 ### Keyword
@@ -4511,7 +4460,6 @@ decrease
 
 ### Message
 LPE: comment out gps delay handling, too much memory required.
-message: LPE: comment out gps delay handling, too much memory required.
 ### Antipattern Category
 
 ### Keyword
@@ -4525,7 +4473,6 @@ memory
 
 ### Message
 mavlink: send out parameters faster over UDP
-message: mavlink: send out parameters faster over UDP
 ### Antipattern Category
 
 ### Keyword
@@ -4539,7 +4486,6 @@ faster
 
 ### Message
 Revert "mavlink: send out parameters faster over UDP"
-message: Revert "mavlink: send out parameters faster over UDP"
 
 This reverts commit 213cdf1a9139488f156721a72feded53d839d964.
 
@@ -4559,7 +4505,6 @@ slow
 
 ### Message
 Increase stack size by 100 bytes. From @tridge
-message: Increase stack size by 100 bytes. From @tridge
 ### Antipattern Category
 
 ### Keyword
@@ -4573,7 +4518,6 @@ increase
 
 ### Message
 fix sdlog2 self deadlock bug
-message: fix sdlog2 self deadlock bug
 ### Antipattern Category
 
 ### Keyword
@@ -4587,7 +4531,6 @@ deadlock
 
 ### Message
 make replay faster
-message: make replay faster
 ### Antipattern Category
 
 ### Keyword
@@ -4601,7 +4544,6 @@ faster
 
 ### Message
 Increase Wifi data rate
-message: Increase Wifi data rate
 ### Antipattern Category
 
 ### Keyword
@@ -4615,7 +4557,6 @@ increase
 
 ### Message
 Update rcS to run Wifi faster
-message: Update rcS to run Wifi faster
 ### Antipattern Category
 
 ### Keyword
@@ -4629,7 +4570,6 @@ faster
 
 ### Message
 gps: make sure the gps module compiles for POSIX & add it to the posix_sitl_default cmake
-message: gps: make sure the gps module compiles for POSIX & add it to the posix_sitl_default cmake
 
 - Note that the simulator still uses gpssim by default
 - now the gps module can be used in the SITL. this makes it possible to test
@@ -4653,7 +4593,6 @@ memory
 
 ### Message
 orb: fix memory leaks, forgotten unlock & wrong exit condition in advertisement
-message: orb: fix memory leaks, forgotten unlock & wrong exit condition in advertisement
 
 How can someone just add a FIXME for such a simple case?!
 ### Antipattern Category
@@ -4669,7 +4608,6 @@ memory
 
 ### Message
 make iris move a bit faster in gazebo and removed broken assertion from posctl test
-message: make iris move a bit faster in gazebo and removed broken assertion from posctl test
 ### Antipattern Category
 
 ### Keyword
@@ -4683,7 +4621,6 @@ faster
 
 ### Message
 drivers/gps: fix segfault when parsing arguments
-message: drivers/gps: fix segfault when parsing arguments
 
 running gps command without parameters results in segfault
 due to illegal access to unallocated memory
@@ -4702,7 +4639,6 @@ memory
 
 ### Message
 Increase sending of navstate and gpsfix to 2 Hz
-message: Increase sending of navstate and gpsfix to 2 Hz
 ### Antipattern Category
 
 ### Keyword
@@ -4716,7 +4652,6 @@ increase
 
 ### Message
 fix bug in the logging app:
-message: fix bug in the logging app:
 - either sensor combined or the replay topic where copied into
 the union buffer but at times the memory was overwritten by other
 topics which updated below
@@ -4735,7 +4670,6 @@ memory
 
 ### Message
 implement ekf instance and block parameter instance as class members
-message: implement ekf instance and block parameter instance as class members
 in order to avoid memory management
 ### Antipattern Category
 
@@ -4750,7 +4684,6 @@ memory
 
 ### Message
 fix px4_task_spawn_cmd: memory leak, if one of the pthread_* calls fails
-message: fix px4_task_spawn_cmd: memory leak, if one of the pthread_* calls fails
 ### Antipattern Category
 
 ### Keyword
@@ -4764,7 +4697,6 @@ memory
 
 ### Message
 fix position_estimator_inav_main: put terrain_estimator on the stack
-message: fix position_estimator_inav_main: put terrain_estimator on the stack
 
 This fixes a memory leak
 ### Antipattern Category
@@ -4780,7 +4712,6 @@ memory
 
 ### Message
 Revert "ESC cal: Increase timeouts"
-message: Revert "ESC cal: Increase timeouts"
 
 This reverts commit d2575c25563d5731f6db0a1607d096198d32cabe.
 ### Antipattern Category
@@ -4796,7 +4727,6 @@ increase
 
 ### Message
 Navigator: Run faster
-message: Navigator: Run faster
 ### Antipattern Category
 
 ### Keyword
@@ -4810,7 +4740,6 @@ faster
 
 ### Message
 Commander: Fix reposition handling,  run faster to allow catching of consecutive commands
-message: Commander: Fix reposition handling,  run faster to allow catching of consecutive commands
 ### Antipattern Category
 
 ### Keyword
@@ -4824,7 +4753,6 @@ faster
 
 ### Message
 px4_task_spawn_cmd: fix memory leak on posix
-message: px4_task_spawn_cmd: fix memory leak on posix
 ### Antipattern Category
 
 ### Keyword
@@ -4838,7 +4766,6 @@ memory
 
 ### Message
 sdlog2: log normal data and replay on Snapdragon
-message: sdlog2: log normal data and replay on Snapdragon
 
 In SITL and on Snapdragon, the logging performance is high enough, so we
 can log both: the usual topics, as well as the ekf2 replay fields.
@@ -4857,7 +4784,6 @@ performance
 
 ### Message
 fix infinite loop when not logging
-message: fix infinite loop when not logging
 ### Antipattern Category
 
 ### Keyword
@@ -4871,7 +4797,6 @@ infinite
 
 ### Message
 logger: move _writer.lock() call after write_changed_parameters()
-message: logger: move _writer.lock() call after write_changed_parameters()
 
 write_changed_parameters() also takes the lock and thus would deadlock
 otherwise.
@@ -4888,7 +4813,6 @@ deadlock
 
 ### Message
 tests: increase stack size from 8000 to 9000
-message: tests: increase stack size from 8000 to 9000
 
 clang failed with:
 ../src/systemcmds/tests/test_mathlib.cpp:56:5: fatal error: stack frame
@@ -4907,7 +4831,6 @@ increase
 
 ### Message
 Added support for external shared libraries
-message: Added support for external shared libraries
 
 The FC_ADDON drivers are shared libraries that have PX4 wrappers.
 The wrappers are built as modules which are static libraries and
@@ -4930,7 +4853,6 @@ runtime
 
 ### Message
 orb: add optional queuing of messages
-message: orb: add optional queuing of messages
 
 This adds two uORB API calls:
 - orb_advertise_queue
@@ -4958,7 +4880,6 @@ fast
 
 ### Message
 nuttx px4fmu-v4 config: increase CONFIG_NFILE_DESCRIPTORS to 52
-message: nuttx px4fmu-v4 config: increase CONFIG_NFILE_DESCRIPTORS to 52
 
 necessary for mavlink receiver. It had the following output:
  mavlink_rcv_if0: node_open as advertiser failed.
@@ -4975,7 +4896,6 @@ increase
 
 ### Message
 logger: don't use uint8_t buffer[msg_size]; (it's C99 not C++)
-message: logger: don't use uint8_t buffer[msg_size]; (it's C99 not C++)
 
 Also, it's not clear where the allocation was. It looks like it was on
 the heap, but the compiler could decide to put it on the stack. This is
@@ -4997,7 +4917,6 @@ memory
 
 ### Message
 logger: reduce memory usage, by limiting the nr of added topics to 64 (was 128)
-message: logger: reduce memory usage, by limiting the nr of added topics to 64 (was 128)
 ### Antipattern Category
 
 ### Keyword
@@ -5011,7 +4930,6 @@ memory
 
 ### Message
 logger: reduce maximum logged string length to 128 (use less memory)
-message: logger: reduce maximum logged string length to 128 (use less memory)
 ### Antipattern Category
 
 ### Keyword
@@ -5025,7 +4943,6 @@ memory
 
 ### Message
 err/px4_log: switch everything to static function
-message: err/px4_log: switch everything to static function
 
 Instead of having separate log functions for NuttX and POSIX, this now
 switches everything to px4_log.h and PX4_INFO/WARN/ERR/DEBUG.
@@ -5045,7 +4962,6 @@ increase
 
 ### Message
 sdlog2: no new sessXXX folder on every arm (#4775)
-message: sdlog2: no new sessXXX folder on every arm (#4775)
 
 Previously, if no time was set, sdlog2 created a folder like sess001,
 
@@ -5069,7 +4985,6 @@ increase
 
 ### Message
 MavlinkReceiver::handle_message_request_data_stream walks into deleted memory when you send the "stop" bit on a stream.  It also fails to restart the stream because it deletes the stream when you send the stop command, so restart needs to use stream_list to find the stream again.
-message: MavlinkReceiver::handle_message_request_data_stream walks into deleted memory when you send the "stop" bit on a stream.  It also fails to restart the stream because it deletes the stream when you send the stop command, so restart needs to use stream_list to find the stream again.
 ### Antipattern Category
 
 ### Keyword
@@ -5083,7 +4998,6 @@ memory
 
 ### Message
 Fixes shared memory locking bug and eliminates the need for an AppsProm driver to reserve a shared memory region.
-message: Fixes shared memory locking bug and eliminates the need for an AppsProm driver to reserve a shared memory region.
 ### Antipattern Category
 
 ### Keyword
@@ -5097,7 +5011,6 @@ memory
 
 ### Message
 orb: reduce size of SubscriberData struct (#4771)
-message: orb: reduce size of SubscriberData struct (#4771)
 
 - priority field uses only the lower 8 bits, so we can merge with the
 
@@ -5127,7 +5040,6 @@ memory
 
 ### Message
 EKF2 HIL gps decrease s_variance_m_s 5.0 -> 1.0 (#4973)
-message: EKF2 HIL gps decrease s_variance_m_s 5.0 -> 1.0 (#4973)
 ### Antipattern Category
 
 ### Keyword
@@ -5141,7 +5053,6 @@ decrease
 
 ### Message
 sdlog2: select MIN < MAX bytes to write
-message: sdlog2: select MIN < MAX bytes to write
 
 Previously, the MAX and MIN were both 512 meaning that usually it would
 start writing at > 512 bytes but only write 512 bytes which results in
@@ -5162,7 +5073,6 @@ performance
 
 ### Message
 sdlog2: poll for sensor and replay on Snappy
-message: sdlog2: poll for sensor and replay on Snappy
 
 This brings better performance, so less missed updates on Snappy, as
 well as a bit of a cleanup of the poll and orb_copy logic.
@@ -5179,7 +5089,6 @@ performance
 
 ### Message
 Snapdragon: set CPUs scaling to performance mode
-message: Snapdragon: set CPUs scaling to performance mode
 
 Sdlog2 misses least updates when the CPU scaling governor is set at
 maximum performance. This is not optimal to save power but the best
@@ -5197,7 +5106,6 @@ performance
 
 ### Message
 RPi: just use RPI instead of RPI2.
-message: RPi: just use RPI instead of RPI2.
 
 The reason for this change is that RPi2 and RPi3 are compatible, and
 hopefully all differences coming up can be resolved without ifdefs but
@@ -5215,7 +5123,6 @@ runtime
 
 ### Message
 nuttx defconfig: increase nr of file descriptors, due to mavlink shell
-message: nuttx defconfig: increase nr of file descriptors, due to mavlink shell
 ### Antipattern Category
 
 ### Keyword
@@ -5229,7 +5136,6 @@ increase
 
 ### Message
 NuttX: Add file change which allows really fast log download
-message: NuttX: Add file change which allows really fast log download
 ### Antipattern Category
 
 ### Keyword
@@ -5243,7 +5149,6 @@ fast
 
 ### Message
 attitude_estimator_q: filter accel and gyro data
-message: attitude_estimator_q: filter accel and gyro data
 
 Since accel and gyro are not filtered in the drivers anymore, we need to
 filter them in this estimator in order to achieve a similar performance.
@@ -5260,7 +5165,6 @@ performance
 
 ### Message
 attitude_estimator_q: don't spam console
-message: attitude_estimator_q: don't spam console
 
 We should not spam the console just because the input data is
 degenerate, it would only make things worse because everything would
@@ -5278,7 +5182,6 @@ slow
 
 ### Message
 Disable EKF2 3D fusion temporarily in SITL, fix missing fast-init params for some configs
-message: Disable EKF2 3D fusion temporarily in SITL, fix missing fast-init params for some configs
 ### Antipattern Category
 
 ### Keyword
@@ -5292,7 +5195,6 @@ fast
 
 ### Message
 TAP power: Shut down faster
-message: TAP power: Shut down faster
 ### Antipattern Category
 
 ### Keyword
@@ -5306,7 +5208,6 @@ faster
 
 ### Message
 Include memory in CPU load message
-message: Include memory in CPU load message
 ### Antipattern Category
 
 ### Keyword
@@ -5320,7 +5221,6 @@ memory
 
 ### Message
 Load mon: populate memory usage i field for NuttX
-message: Load mon: populate memory usage i field for NuttX
 ### Antipattern Category
 
 ### Keyword
@@ -5334,7 +5234,6 @@ memory
 
 ### Message
 Commander: signal high memory usage
-message: Commander: signal high memory usage
 ### Antipattern Category
 
 ### Keyword
@@ -5348,7 +5247,6 @@ memory
 
 ### Message
 Tweak startup order for memory
-message: Tweak startup order for memory
 ### Antipattern Category
 
 ### Keyword
@@ -5362,7 +5260,6 @@ memory
 
 ### Message
 Make altitude more efficient and estimator status safe in terms of memory overflow
-message: Make altitude more efficient and estimator status safe in terms of memory overflow
 ### Antipattern Category
 
 ### Keyword
@@ -5376,7 +5273,6 @@ memory
 
 ### Message
 Use less memory for ESC driver
-message: Use less memory for ESC driver
 ### Antipattern Category
 
 ### Keyword
@@ -5390,7 +5286,6 @@ memory
 
 ### Message
 EKF2: Only use the memory it needs
-message: EKF2: Only use the memory it needs
 ### Antipattern Category
 
 ### Keyword
@@ -5404,7 +5299,6 @@ memory
 
 ### Message
 MAVLink: use only the memory it needs
-message: MAVLink: use only the memory it needs
 ### Antipattern Category
 
 ### Keyword
@@ -5418,7 +5312,6 @@ memory
 
 ### Message
 px4_log: remove __px4_log_level_current
-message: px4_log: remove __px4_log_level_current
 
 - there is no way to change it at runtime
 - it was implemented wrong (<= comparison disabled the PANIC log level)
@@ -5435,7 +5328,6 @@ runtime
 
 ### Message
 Commander: Increase stack space
-message: Commander: Increase stack space
 ### Antipattern Category
 
 ### Keyword
@@ -5449,7 +5341,6 @@ increase
 
 ### Message
 printf format fixes. (#5444)
-message: printf format fixes. (#5444)
 
 After I got a compiler warning for a printf format in this file
 
@@ -5493,7 +5384,6 @@ faster
 
 ### Message
 Increase stack space on posix 64bit architectures. (#5447)
-message: Increase stack space on posix 64bit architectures. (#5447)
 
 When running a simulation with, for example,
 
@@ -5531,7 +5421,6 @@ increase
 
 ### Message
 SITL: Tune standard VTOL to have better position control performance & update gazebo
-message: SITL: Tune standard VTOL to have better position control performance & update gazebo
 ### Antipattern Category
 
 ### Keyword
@@ -5545,7 +5434,6 @@ performance
 
 ### Message
 filtering files for code check seperately to enable fast use of git pre-commit hook to check code style
-message: filtering files for code check seperately to enable fast use of git pre-commit hook to check code style
 ask user to install pre-commit hook when code style is checked
 ### Antipattern Category
 
@@ -5560,7 +5448,6 @@ fast
 
 ### Message
 Syslink memory/deck interface
-message: Syslink memory/deck interface
 ### Antipattern Category
 
 ### Keyword
@@ -5574,7 +5461,6 @@ memory
 
 ### Message
 Increase sensors stack
-message: Increase sensors stack
 ### Antipattern Category
 
 ### Keyword
@@ -5588,7 +5474,6 @@ increase
 
 ### Message
 hrt_work_queue posix: only send a wake-up signal if not called from own thread
-message: hrt_work_queue posix: only send a wake-up signal if not called from own thread
 
 The simulated timer interrupt always adds a new scheduled work task, which
 is called from the work queue thread. Sending the signal creates measurable
@@ -5607,7 +5492,6 @@ runtime
 
 ### Message
 navio_sysfs_rc_in: avoid dynamic memory allocation for path
-message: navio_sysfs_rc_in: avoid dynamic memory allocation for path
 ### Antipattern Category
 
 ### Keyword
@@ -5621,7 +5505,6 @@ memory
 
 ### Message
 navio_sysfs_pwm_out: avoid dynamic memory allocation & fix a memory leak
-message: navio_sysfs_pwm_out: avoid dynamic memory allocation & fix a memory leak
 
 memory leak was in send_outputs_pwm()
 ### Antipattern Category
@@ -5637,7 +5520,6 @@ memory
 
 ### Message
 Fix sensor rail reset on Pixracer. Increase the reset duration to 50 ms to ensure the sensor power has bled off.
-message: Fix sensor rail reset on Pixracer. Increase the reset duration to 50 ms to ensure the sensor power has bled off.
 ### Antipattern Category
 
 ### Keyword
@@ -5651,7 +5533,6 @@ increase
 
 ### Message
 Increase RC buffer size
-message: Increase RC buffer size
 ### Antipattern Category
 
 ### Keyword
@@ -5665,7 +5546,6 @@ increase
 
 ### Message
 commander: don't auto-disarm as fast if not flown
-message: commander: don't auto-disarm as fast if not flown
 
 It was found inconvenient that auto-disarm triggers too quickly right
 after arming when the vehicle has not actually taken off yet.
@@ -5685,7 +5565,6 @@ fast
 
 ### Message
 Increase min agl for flow from 5 to 30 cm to prevent drift on ground.
-message: Increase min agl for flow from 5 to 30 cm to prevent drift on ground.
 ### Antipattern Category
 
 ### Keyword
@@ -5699,7 +5578,6 @@ increase
 
 ### Message
 Add suport for Memory Constrained systems
-message: Add suport for Memory Constrained systems
 ### Antipattern Category
 
 ### Keyword
@@ -5713,7 +5591,6 @@ memory
 
 ### Message
 Define tap as a Memory Constrained system
-message: Define tap as a Memory Constrained system
 ### Antipattern Category
 
 ### Keyword
@@ -5727,7 +5604,6 @@ memory
 
 ### Message
 Reduce the binary size Bebop
-message: Reduce the binary size Bebop
 
 The firmware binary is to large to fit into the onboard memory of the Parrot
 Bebop. It could be uploaded to the emmc, but for ease of use it would be nice
@@ -5745,7 +5621,6 @@ memory
 
 ### Message
 logger: increase default queue size for mavlink logging to 14
-message: logger: increase default queue size for mavlink logging to 14
 
 tested on Pixracer: 14 still produces some dropouts once in a while, but I
 think it's a fair tradefoff between RAM usage & dropouts. The queue needs
@@ -5765,7 +5640,6 @@ increase
 
 ### Message
 logger: increase stack size
-message: logger: increase stack size
 
 evaluated with: logger start -e -t -m all
 and then make sure to get an error printf in the mavlink writer backend,
@@ -5783,7 +5657,6 @@ increase
 
 ### Message
 Fixed hardfault on fast proc
-message: Fixed hardfault on fast proc
 
 _baro_topic can be null in init sequence
    init call collect before the topic is inited.
@@ -5803,7 +5676,6 @@ fast
 
 ### Message
 Printing all online nodes within UAVCAN status output. This feature increased memory footprint by about 150 bytes.
-message: Printing all online nodes within UAVCAN status output. This feature increased memory footprint by about 150 bytes.
 ### Antipattern Category
 
 ### Keyword
@@ -5817,7 +5689,6 @@ memory
 
 ### Message
 Navigator: Leverage overlapping fields in logic to save RAM by makeing them overlap in memory as well
-message: Navigator: Leverage overlapping fields in logic to save RAM by makeing them overlap in memory as well
 ### Antipattern Category
 
 ### Keyword
@@ -5831,7 +5702,6 @@ memory
 
 ### Message
 uavcan: use math::min instead of std::min
-message: uavcan: use math::min instead of std::min
 
 Avoid including <memory> which can cause problems on NuttX
 ### Antipattern Category
@@ -5847,7 +5717,6 @@ memory
 
 ### Message
 incorporate Bill Premerlani's fast rotation handling from MatrixPilot
-message: incorporate Bill Premerlani's fast rotation handling from MatrixPilot
 ### Antipattern Category
 
 ### Keyword
@@ -5861,7 +5730,6 @@ fast
 
 ### Message
 Clean up Crazyflie
-message: Clean up Crazyflie
    1) Remove uneeded spi and reset code
    2) Use the Board commin for providing the BOARD_NAME
    3) Add PX4_PWM_ALTERNATE_RANGES in suport of a board agnostic
@@ -5887,7 +5755,6 @@ fast
 
 ### Message
 PX4 System change to Remove #ifdefs from the IO timers
-message: PX4 System change to Remove #ifdefs from the IO timers
 
    Update the comment, to explain how to achive a different perescale
    value.
@@ -5912,7 +5779,6 @@ fast
 
 ### Message
 ekf2: Don't send un-usable mag and baro data to the EKF
-message: ekf2: Don't send un-usable mag and baro data to the EKF
 
 Fixes:
 
@@ -5932,7 +5798,6 @@ faster
 
 ### Message
 ulog_stream_ack.msg: lower timeout & increase max retries
-message: ulog_stream_ack.msg: lower timeout & increase max retries
 
 We expect a short round-trip time, so lowering the retry timeout will
 increase throughput on links with high drop rate.
@@ -5949,7 +5814,6 @@ increase
 
 ### Message
 Log download: fix memory leak in generating the list
-message: Log download: fix memory leak in generating the list
 ### Antipattern Category
 
 ### Keyword
@@ -5963,7 +5827,6 @@ memory
 
 ### Message
 vtol_att_control: initialise pointers and free memory
-message: vtol_att_control: initialise pointers and free memory
 
 Signed-off-by: Roman <bapstroman@gmail.com>
 ### Antipattern Category
@@ -5979,7 +5842,6 @@ memory
 
 ### Message
 flashparams: fix memory leak when saving parameters
-message: flashparams: fix memory leak when saving parameters
 
 A large buffer on the heap was not deallocated when parameters were saved,
 but there were no changes to the parameters. In that case
@@ -6001,7 +5863,6 @@ memory
 
 ### Message
 px4fmu rcS: increase mavlink rate to 100000 for SYS_COMPANION 1500000
-message: px4fmu rcS: increase mavlink rate to 100000 for SYS_COMPANION 1500000
 
 Needed for log streaming
 ### Antipattern Category
@@ -6017,7 +5878,6 @@ increase
 
 ### Message
 Disable LPE in px4fmu-v2_default
-message: Disable LPE in px4fmu-v2_default
 
 With GCC 4.9 the binary is to large for the flash memory.
 This is why we disabled LPE on that platform.
@@ -6034,7 +5894,6 @@ memory
 
 ### Message
 Load monitor: optimize performance of stack checking
-message: Load monitor: optimize performance of stack checking
 ### Antipattern Category
 
 ### Keyword
@@ -6048,7 +5907,6 @@ performance
 
 ### Message
 Load monitor: lock scheduler for stack check and added performance counter for stack checking
-message: Load monitor: lock scheduler for stack check and added performance counter for stack checking
 ### Antipattern Category
 
 ### Keyword
@@ -6062,7 +5920,6 @@ performance
 
 ### Message
 navigator: increase stack
-message: navigator: increase stack
 
 The stack size was generally ok but seemed to get exhausted in the case
 of a waypoint which is too far away and therefore exercises some more
@@ -6083,7 +5940,6 @@ increase
 
 ### Message
 Revert "navigator: increase stack"
-message: Revert "navigator: increase stack"
 
 This reverts commit 6a6e9d02a312bad94cd164ff7928336472576fec.
 ### Antipattern Category
@@ -6099,7 +5955,6 @@ increase
 
 ### Message
 navigator: increase stack
-message: navigator: increase stack
 The stack size was generally ok but seemed to get exhausted in the case
 of a waypoint which is too far away and therefore exercises some more
 code in the mission feasability checker.
@@ -6119,7 +5974,6 @@ increase
 
 ### Message
 bebop2 config: updated some positon control params for decent performance
-message: bebop2 config: updated some positon control params for decent performance
 
 - this is not the final tune!!!
 
@@ -6137,7 +5991,6 @@ performance
 
 ### Message
 bebop config: increase logger buffer from 20kB to 200kB
-message: bebop config: increase logger buffer from 20kB to 200kB
 
 Signed-off-by: Roman <bapstroman@gmail.com>
 ### Antipattern Category
@@ -6153,7 +6006,6 @@ increase
 
 ### Message
 LPE: Increase stack to allow enough safe margin
-message: LPE: Increase stack to allow enough safe margin
 ### Antipattern Category
 
 ### Keyword
@@ -6167,7 +6019,6 @@ increase
 
 ### Message
 Sensors app mag voter: Increase stale value detection threshold to accomodate low-noise mag setups
-message: Sensors app mag voter: Increase stale value detection threshold to accomodate low-noise mag setups
 ### Antipattern Category
 
 ### Keyword
@@ -6181,7 +6032,6 @@ increase
 
 ### Message
 GPS app: Increase stack to ensure 300 bytes headroom
-message: GPS app: Increase stack to ensure 300 bytes headroom
 ### Antipattern Category
 
 ### Keyword
@@ -6195,7 +6045,6 @@ increase
 
 ### Message
 Revert "px4fmu rcS: increase mavlink rate to 100000 for SYS_COMPANION 1500000"
-message: Revert "px4fmu rcS: increase mavlink rate to 100000 for SYS_COMPANION 1500000"
 
 This reverts commit e3537ca6c25ba50b8c0665138a1d833861b1b5f7.
 
@@ -6213,7 +6062,6 @@ increase
 
 ### Message
 bebop config: updated some gains for decent performance
-message: bebop config: updated some gains for decent performance
 
 Signed-off-by: Roman <bapstroman@gmail.com>
 ### Antipattern Category
@@ -6229,7 +6077,6 @@ performance
 
 ### Message
 HOTFIX:For Data loss on Nuttx serial w/ DMA &  GPIO Flow Control
-message: HOTFIX:For Data loss on Nuttx serial w/ DMA &  GPIO Flow Control
 
    This hot fix essentialy revert commit 265af481209d60033f7cd4c4216048b1ce3eb435
    in NuttX/nuttx. The commit STM32 serial: Make input hardware flow-control work with RX DMA.
@@ -6250,7 +6097,6 @@ memory
 
 ### Message
 MAVLink app: Fix VTOL reporting and prevent mission reached spam
-message: MAVLink app: Fix VTOL reporting and prevent mission reached spam
 
 The VTOL status reporting and the mission status reporting were both suboptimal. VTOL was too slow, mission reporting too fast
 ### Antipattern Category
@@ -6266,7 +6112,6 @@ slow
 
 ### Message
 Fix Simulator: Set correct rotor count for standard VTOL
-message: Fix Simulator: Set correct rotor count for standard VTOL
 
 The rotor count was incorrect which meant that control surfaces like elevons were scaled incorrectly. This was the main reason for really bad SITL performance
 ### Antipattern Category
@@ -6282,7 +6127,6 @@ performance
 
 ### Message
 controllib decrease blockNameLengthMax to 40
-message: controllib decrease blockNameLengthMax to 40
 ### Antipattern Category
 
 ### Keyword
@@ -6296,7 +6140,6 @@ decrease
 
 ### Message
 mc_att_control: Sync attitude loops to gyro data
-message: mc_att_control: Sync attitude loops to gyro data
 
 Sync the attitude controller to the raw gyro data to remove the latency in the rate loops caused by the sensor and estimator modules.
 Attitude data latency will increase as it will be from the previous EKF update, however attitude loops are less latency sensitive.
@@ -6314,7 +6157,6 @@ increase
 
 ### Message
 sensors & mc_att_control: increase stack sizes due to recent changes
-message: sensors & mc_att_control: increase stack sizes due to recent changes
 ### Antipattern Category
 
 ### Keyword
@@ -6328,7 +6170,6 @@ increase
 
 ### Message
 init shmem early to avoid random crash in fastrpc (#6407)
-message: init shmem early to avoid random crash in fastrpc (#6407)
 
 * init shmem early to avoid possible crash
 
@@ -6352,7 +6193,6 @@ memory
 
 ### Message
 qurt px4_layer initialize shared memory (#6453)
-message: qurt px4_layer initialize shared memory (#6453)
 ### Antipattern Category
 
 ### Keyword
@@ -6366,7 +6206,6 @@ memory
 
 ### Message
 clang-tidy performance-unnecessary-value-param
-message: clang-tidy performance-unnecessary-value-param
 ### Antipattern Category
 
 ### Keyword
@@ -6380,7 +6219,6 @@ performance
 
 ### Message
 clang-tidy performance-unnecessary-copy-initialization
-message: clang-tidy performance-unnecessary-copy-initialization
 ### Antipattern Category
 
 ### Keyword
@@ -6394,7 +6232,6 @@ performance
 
 ### Message
 land_detector: Hotfix to prevent ground contact detection when descending velocity is very slow with manual stick all the way down
-message: land_detector: Hotfix to prevent ground contact detection when descending velocity is very slow with manual stick all the way down
 Now the stick down check is only done in manual control and the thrust low is again mandatory to detect ground in any case.
 ### Antipattern Category
 
@@ -6409,7 +6246,6 @@ slow
 
 ### Message
 mavlink : track time offset faster
-message: mavlink : track time offset faster
 ### Antipattern Category
 
 ### Keyword
@@ -6423,7 +6259,6 @@ faster
 
 ### Message
 param & param_shmem: enable locking
-message: param & param_shmem: enable locking
 
 We need to protect access to the param_values array. This is dynamically
 allocated and resized (utarray_reserve() calls realloc). If some thread
@@ -6448,7 +6283,6 @@ memory
 
 ### Message
 WIP: valgrind runtime analysis and fixes (#6521)
-message: WIP: valgrind runtime analysis and fixes (#6521)
 
 * Fix several valgrind identified mem leaks
 
@@ -6472,7 +6306,6 @@ runtime
 
 ### Message
 FW att control: Increase stack size to ensure limits
-message: FW att control: Increase stack size to ensure limits
 ### Antipattern Category
 
 ### Keyword
@@ -6486,7 +6319,6 @@ increase
 
 ### Message
 Convergence: increase yaw output in mixer
-message: Convergence: increase yaw output in mixer
 ### Antipattern Category
 
 ### Keyword
@@ -6500,7 +6332,6 @@ increase
 
 ### Message
 MC pos ctrl: Force slow landing speed below min loiter altitude
-message: MC pos ctrl: Force slow landing speed below min loiter altitude
 ### Antipattern Category
 
 ### Keyword
@@ -6514,7 +6345,6 @@ slow
 
 ### Message
 ROMFS: common: AeroFC: Do not start MAVLink over USB
-message: ROMFS: common: AeroFC: Do not start MAVLink over USB
 
 STM32 pins are not exposed in AeroFC, so lets save some memory here.
 ### Antipattern Category
@@ -6530,7 +6360,6 @@ memory
 
 ### Message
 boards: AeroFC: Make it a memory constrained system
-message: boards: AeroFC: Make it a memory constrained system
 
 The maximum number of missions was increased in almost 8 times in
 recent commit: 9369262e63 navigator: allow more mission items.
@@ -6552,7 +6381,6 @@ memory
 
 ### Message
 param_get: add null-pointer check
-message: param_get: add null-pointer check
 
 If param_find() returned PARAM_INVALID, and this was directly passed to
 param_get(), param_get_value_ptr() returned null and we read garbage data
@@ -6575,7 +6403,6 @@ memory
 
 ### Message
 commander: fix excessive orb_advertise calls for vehicle_status_flags
-message: commander: fix excessive orb_advertise calls for vehicle_status_flags
 
 vehicle_status_flags_pub passed to publish_status_flags() was always null,
 thus orb_advertise() was called each time.
@@ -6594,7 +6421,6 @@ memory
 
 ### Message
 ekf2: use sensors timestamp for published topics when in replay mode
-message: ekf2: use sensors timestamp for published topics when in replay mode
 
 when doing fast replay, hrt_absolute_time() will not match the replayed time
 thus we just use the same timestamp as the input sensors.
@@ -6611,7 +6437,6 @@ fast
 
 ### Message
 nuttx configs: increase CONFIG_NFILE_DESCRIPTORS from 51 to 53
-message: nuttx configs: increase CONFIG_NFILE_DESCRIPTORS from 51 to 53
 
 this is needed due to the additional topics logged with the logger
 ### Antipattern Category
@@ -6627,7 +6452,6 @@ increase
 
 ### Message
 voted_sensors_update: increase accel & gyro timeout in HIL mode
-message: voted_sensors_update: increase accel & gyro timeout in HIL mode
 ### Antipattern Category
 
 ### Keyword
@@ -6641,7 +6465,6 @@ increase
 
 ### Message
 simulator: handle ctrl-c during startup correctly
-message: simulator: handle ctrl-c during startup correctly
 
 This makes sure the px4 process does not hang when Ctrl-C is pressed
 during startup.
@@ -6658,7 +6481,6 @@ hang
 
 ### Message
 mavlink shell: check if there's enough free buffer to send the mavlink message
-message: mavlink shell: check if there's enough free buffer to send the mavlink message
 
 if there is not, the process on the other end of the pipe will just block.
 This improves reliability over slow links.
@@ -6675,7 +6497,6 @@ slow
 
 ### Message
 modules: dataman: Share memory between backends
-message: modules: dataman: Share memory between backends
 
 Also having just a boolean to track if backend is running.
 ### Antipattern Category
@@ -6691,7 +6512,6 @@ memory
 
 ### Message
 modules: dataman: Add a ram_flash backend
-message: modules: dataman: Add a ram_flash backend
 
 This backend will keep all updated data in RAM and
 persist the data between reboots using flash memory.
@@ -6719,7 +6539,6 @@ performance
 
 ### Message
 nuttx-configs: aerofc: Enable CONFIG_STM32_FLASH_WORKAROUND_DATA_CACHE_CORRUPTION_ON_RWW
-message: nuttx-configs: aerofc: Enable CONFIG_STM32_FLASH_WORKAROUND_DATA_CACHE_CORRUPTION_ON_RWW
 
 Now AeroFC is making use of both flash memory banks so it need this
 workaround.
@@ -6736,7 +6555,6 @@ memory
 
 ### Message
 HOTFIX:Backport Memory corruption due to stack coloring overreach
-message: HOTFIX:Backport Memory corruption due to stack coloring overreach
 
    Backport of upstream NuttX PR 264
 
@@ -6757,7 +6575,6 @@ memory
 
 ### Message
 commander: fix abs bug / trigger POSCTL both ways
-message: commander: fix abs bug / trigger POSCTL both ways
 
 The check if stick were touched was only working in one direction (per
 axis) because fabsf was used incorrectly.
@@ -6780,7 +6597,6 @@ fast
 
 ### Message
 mavlink: increase parameter rate from 120 to 300Hz
-message: mavlink: increase parameter rate from 120 to 300Hz
 
 This speeds up parameter loading. Slow links like telemetry are unaffected,
 since the mavlink loop runs only with ~100Hz.
@@ -6803,7 +6619,6 @@ slow
 
 ### Message
 params: make param_t uint16_t on NuttX
-message: params: make param_t uint16_t on NuttX
 
 param_t is only used as an offset and we have <1000 params, so an uint16_t
 is enough.
@@ -6823,7 +6638,6 @@ performance
 
 ### Message
 param: implement RW locking
-message: param: implement RW locking
 
 This allows concurrent read access, which are much more common; reducing
 potential lock contention and increasing concurrency.
@@ -6847,7 +6661,6 @@ overhead
 
 ### Message
 UAVCAN performance audit (#6829)
-message: UAVCAN performance audit (#6829)
 
 * UAVCAN ESC output: removing ESC output channels from published message that are always zero. This allows the UAVCAN stack to always transfer only the minimum number of output values, avoiding redundant zeroes and the associated increase in bus load and CPU time
 
@@ -6887,7 +6700,6 @@ performance
 
 ### Message
 Revert "UAVCAN performance audit (#6829)" (#6846)
-message: Revert "UAVCAN performance audit (#6829)" (#6846)
 
 This reverts commit 21e04c9f7afd56adf21d02b76c89ae06fe1fc5a7.
 ### Antipattern Category
@@ -6903,7 +6715,6 @@ performance
 
 ### Message
 Performance audit (intentionally duplicates #6829) (#6847)
-message: Performance audit (intentionally duplicates #6829) (#6847)
 
 * UAVCAN ESC output: removing ESC output channels from published message that are always zero. This allows the UAVCAN stack to always transfer only the minimum number of output values, avoiding redundant zeroes and the associated increase in bus load and CPU time
 
@@ -6947,7 +6758,6 @@ performance
 
 ### Message
 HOTFIX:Backport Memory corruption due to stack coloring overreach complete (#6848)
-message: HOTFIX:Backport Memory corruption due to stack coloring overreach complete (#6848)
 
 Backport of upstream NuttX
 
@@ -7013,7 +6823,6 @@ memory
 
 ### Message
 HOTFIX:Fixes improper restoration of base_priority
-message: HOTFIX:Fixes improper restoration of base_priority
 
    Backport of upstream:
 
@@ -7065,7 +6874,6 @@ overhead
 
 ### Message
 mc_pos_control: slow down in auto when close to target
-message: mc_pos_control: slow down in auto when close to target
 
 mc_pos_control: move limit vel xy after velocity controller
 ### Antipattern Category
@@ -7081,7 +6889,6 @@ slow
 
 ### Message
 mc_pos_control: added gradual landing speed logic
-message: mc_pos_control: added gradual landing speed logic
 depending on two altitudes that can get set as parameter
 the logic linearly slows down from higher land altitude 1 to slower land altitude 2
 ### Antipattern Category
@@ -7097,7 +6904,6 @@ slower
 
 ### Message
 Backport of stm32f7 add DTCM to heap and use it on F7 (#6865)
-message: Backport of stm32f7 add DTCM to heap and use it on F7 (#6865)
 
 * Backport:stm32f7: stm32_allocateheap: allow use DTCM memory for heap
 
@@ -7137,7 +6943,6 @@ memory
 
 ### Message
 Backport:stm32_flash changes from upsteam
-message: Backport:stm32_flash changes from upsteam
 
   PX4 contrib from <jose.souza@intel.com>
 
@@ -7178,7 +6983,6 @@ memory
 
 ### Message
 rcS: increase log buffer by 4kB
-message: rcS: increase log buffer by 4kB
 
 To reduce dropouts, and because we have enough RAM :)
 ### Antipattern Category
@@ -7194,7 +6998,6 @@ increase
 
 ### Message
 visibility.h: add #pragma GCC poison getenv setenv putenv
-message: visibility.h: add #pragma GCC poison getenv setenv putenv
 
 Just to make sure that it will never be used on NuttX. This is not an
 architectural limitation, just a memory optimization, since we call
@@ -7212,7 +7015,6 @@ memory
 
 ### Message
 clang-tidy enable performance-type-promotion-in-math-fn
-message: clang-tidy enable performance-type-promotion-in-math-fn
 ### Antipattern Category
 
 ### Keyword
@@ -7226,7 +7028,6 @@ performance
 
 ### Message
 printload: use sched_lock to protect access to tcb
-message: printload: use sched_lock to protect access to tcb
 
 what could have gone wrong before? A scheduling switch during the printload
 could have led to a task exit, rendering the tcb invalid. After switching
@@ -7247,7 +7048,6 @@ memory
 
 ### Message
 printload: reduce memory usage of print_load_s
-message: printload: reduce memory usage of print_load_s
 
 assuming CONFIG_MAX_TASKS = 32, this saves 256B of RAM
 ### Antipattern Category
@@ -7263,7 +7063,6 @@ memory
 
 ### Message
 printload: add print_load_buffer() method
-message: printload: add print_load_buffer() method
 
 Instead of printing to an fd, this prints to a buffer and calls a callback
 for each line. To avoid code duplication, the print_load has been refactored
@@ -7282,7 +7081,6 @@ overhead
 
 ### Message
 perf_counter: use a mutex to protect concurrent access to the perf_counters linked list
-message: perf_counter: use a mutex to protect concurrent access to the perf_counters linked list
 
 perf_counters is read from and written to by different threads and thus
 requires synchronization. Without it we risk accessing invalid memory.
@@ -7302,7 +7100,6 @@ memory
 
 ### Message
 VTOL Standard transition improvements (#6904)
-message: VTOL Standard transition improvements (#6904)
 
 
 
@@ -7326,7 +7123,6 @@ increase
 
 ### Message
 Increase max yawrate default parameters for standard delta VTOL
-message: Increase max yawrate default parameters for standard delta VTOL
 
 MC_YAWRATE_MAX 20  => 50
 
@@ -7344,7 +7140,6 @@ increase
 
 ### Message
 Reduce USART1 tx buffer by 8 bytes to fix aligment issue
-message: Reduce USART1 tx buffer by 8 bytes to fix aligment issue
 
    The recent changes to the timers increased memory by 8 bytes.
    and should have ONLY added 8 bytes
@@ -7375,7 +7170,6 @@ memory
 
 ### Message
 Land detector: Since multicopters take off and land slower than 0.7 m/s, setting the default detection threshold to 0.5 m/s is a much safer default
-message: Land detector: Since multicopters take off and land slower than 0.7 m/s, setting the default detection threshold to 0.5 m/s is a much safer default
 ### Antipattern Category
 
 ### Keyword
@@ -7389,7 +7183,6 @@ slower
 
 ### Message
 MC position control: Smoother takeoff
-message: MC position control: Smoother takeoff
 
 This patch ramps up the throttle to hover throttle instead of a fixed value and limits the vertical takeoff speed to the value set in the parameter. This should ensure smoother, slower takeoffs, in particular in autonomous flight modes.
 ### Antipattern Category
@@ -7405,7 +7198,6 @@ slower
 
 ### Message
 logger: reduce CPU load by ~1.5%
-message: logger: reduce CPU load by ~1.5%
 
 Reduces CPU load from ~6.9% to 5.3% (tested on Pixracer & Pixhawk). The
 method is only used once, so it does not increase flash usage.
@@ -7422,7 +7214,6 @@ increase
 
 ### Message
 Support calibration of fast+slow gyros #6998
-message: Support calibration of fast+slow gyros #6998
 ### Antipattern Category
 
 ### Keyword
@@ -7436,7 +7227,6 @@ slow
 
 ### Message
 Fix top output, indentation for #7020
-message: Fix top output, indentation for #7020
 
 Previously load stats were stored outside of the printloop, but
 with the refactoring to save memory state was reset and used in
@@ -7458,7 +7248,6 @@ memory
 
 ### Message
 Fixes problem preventing params on snapdragon platforms from being saved to flash memory.
-message: Fixes problem preventing params on snapdragon platforms from being saved to flash memory.
 ### Antipattern Category
 
 ### Keyword
@@ -7472,7 +7261,6 @@ memory
 
 ### Message
 Tools/ecl_ekf: Update EKF log analysis
-message: Tools/ecl_ekf: Update EKF log analysis
 
 Add assessment of IMU bias and mag field estimation
 Reduce warning false positives by adjusting thresholds and eliminating use of peak value plots for output observer monitoring
@@ -7490,7 +7278,6 @@ memory
 
 ### Message
 Potentially infinite and deleted loops found by PVS-Studio (#7100)
-message: Potentially infinite and deleted loops found by PVS-Studio (#7100)
 
  - Fixed V712
 
@@ -7510,7 +7297,6 @@ infinite
 
 ### Message
 commander : preflight checks increase max_mags to 4
-message: commander : preflight checks increase max_mags to 4
 ### Antipattern Category
 
 ### Keyword
@@ -7524,7 +7310,6 @@ increase
 
 ### Message
 sensors HIL increase gyro and accel timeout
-message: sensors HIL increase gyro and accel timeout
 
  - fixes #7050
 ### Antipattern Category
@@ -7540,7 +7325,6 @@ increase
 
 ### Message
 mc_pos_control: improved smooth takeoff and used it for manual takeoff as well
-message: mc_pos_control: improved smooth takeoff and used it for manual takeoff as well
 adresses:
 there were setpoint twitches at the beginning and end of my smooth takeoff routine
 it was to slow and not configurable
@@ -7558,7 +7342,6 @@ slow
 
 ### Message
 IO v2: disable interrupt stack
-message: IO v2: disable interrupt stack
 
 This avoids burning significant memory in a configuration that is not actually using parallel tasks
 ### Antipattern Category
@@ -7574,7 +7357,6 @@ memory
 
 ### Message
 ROMFS: If UAVCAN is enabled, reduce log buffer size
-message: ROMFS: If UAVCAN is enabled, reduce log buffer size
 
 This is necessary to make the space for UAVCAN in memory and doing it this way avoids negatively impacting users who do not use UAVCAN.
 ### Antipattern Category
@@ -7590,7 +7372,6 @@ memory
 
 ### Message
 px4fmu-v4:Configure timer IO pins with pull downs
-message: px4fmu-v4:Configure timer IO pins with pull downs
 
   When the CCER is cleared the IO pin tends to float. The FMUV4
   HW has no TXS0108 and if cut off while high will decay.
@@ -7610,7 +7391,6 @@ faster
 
 ### Message
 commander: rework posvel validity checks
-message: commander: rework posvel validity checks
 
 Move into functions.
 Reset probation time and recalculate checks if a mode change is demanded to give the operator ability to regain control as soon as possible after nav performance is regained. (+11 squashed commits)
@@ -7654,7 +7434,6 @@ performance
 
 ### Message
 ecl: minor updates
-message: ecl: minor updates
 
 Initialisation changes to address valgrind errors
 Change to default GPS and Airspeed time delay (these are overwritten by ekf2_main parameter settings)
@@ -7672,7 +7451,6 @@ increase
 
 ### Message
 Logger hotfix: Allocate buffer on logging
-message: Logger hotfix: Allocate buffer on logging
 
 This enables to use the RAM normally consumed by the log buffer to be used for calibration and other memory-intense tasks.
 These run typically only disarmed when logging is not enabled.
@@ -7689,7 +7467,6 @@ memory
 
 ### Message
 IO: Fix access to free memory
-message: IO: Fix access to free memory
 
 The free memory was accessed from interrupt context where it should not be accessed from. We build the statistic now at a fixed rate while not armed.
 ### Antipattern Category
@@ -7705,7 +7482,6 @@ memory
 
 ### Message
 Navigator: Increase RAM size
-message: Navigator: Increase RAM size
 ### Antipattern Category
 
 ### Keyword
@@ -7719,7 +7495,6 @@ increase
 
 ### Message
 FMUv5: Increase logging throughput considerably.
-message: FMUv5: Increase logging throughput considerably.
 
 This will help to understand the sensor selection on FMUv5 in different airframes. We do have the RAM and CPU to do this on this platform.
 ### Antipattern Category
@@ -7735,7 +7510,6 @@ increase
 
 ### Message
 stm32:drv_input_capture bug fixes.
-message: stm32:drv_input_capture bug fixes.
 
    Filter for channel 4 was modifying channel 1
    capture and overflow reads were using wrong paramaters
@@ -7754,7 +7528,6 @@ memory
 
 ### Message
 MavlinkReceiver: add mission manager, param manager, ftp and log handler
-message: MavlinkReceiver: add mission manager, param manager, ftp and log handler
 
 This makes also a slight stack size increase necessary (was 284 bytes left)
 ### Antipattern Category
@@ -7770,7 +7543,6 @@ increase
 
 ### Message
 MavlinkLogHandler: increase MAX_BYTES_SEND to 256kb
-message: MavlinkLogHandler: increase MAX_BYTES_SEND to 256kb
 
 It increases the throughput on UDP (from around 2Mb to 2.5Mb), while the
 rate via USB & telemetry stay the same.
@@ -7787,7 +7559,6 @@ increase
 
 ### Message
 sensors : fix race condition triggered by slow-to-boot external sensors
-message: sensors : fix race condition triggered by slow-to-boot external sensors
 ### Antipattern Category
 
 ### Keyword
@@ -7801,7 +7572,6 @@ slow
 
 ### Message
 px4io increase stack
-message: px4io increase stack
 ### Antipattern Category
 
 ### Keyword
@@ -7815,7 +7585,6 @@ increase
 
 ### Message
 ekf2: Increase RAM to remove stack space warnings
-message: ekf2: Increase RAM to remove stack space warnings
 ### Antipattern Category
 
 ### Keyword
@@ -7829,7 +7598,6 @@ increase
 
 ### Message
 F7 nuttx configs: increase CONFIG_STM32F7_BBSRAM_FILES to 5
-message: F7 nuttx configs: increase CONFIG_STM32F7_BBSRAM_FILES to 5
 ### Antipattern Category
 
 ### Keyword
@@ -7843,7 +7611,6 @@ increase
 
 ### Message
 Extend the delay ensure post reset pulse delayed.
-message: Extend the delay ensure post reset pulse delayed.
 
 Given the original poster's comment that "It happens very consistently for us." I suspect the motor spin observed in https://github.com/PX4/Firmware/issues/7457 is not caused by the original issue of slow decay on the PWM pins at reset, but the post reset pulse of 3.1 Ms arriving in a window that the ESC considers it valid.
 
@@ -7867,7 +7634,6 @@ slow
 
 ### Message
 GPS driver increase stack (244 bytes left)
-message: GPS driver increase stack (244 bytes left)
 ### Antipattern Category
 
 ### Keyword
@@ -7881,7 +7647,6 @@ increase
 
 ### Message
 Preflight checks: Increase accel warn limit range
-message: Preflight checks: Increase accel warn limit range
 ### Antipattern Category
 
 ### Keyword
@@ -7895,7 +7660,6 @@ increase
 
 ### Message
 fmuservo increase stack
-message: fmuservo increase stack
 ### Antipattern Category
 
 ### Keyword
@@ -7909,7 +7673,6 @@ increase
 
 ### Message
 modules: dataman: Optimize memory usage
-message: modules: dataman: Optimize memory usage
 
 Use the size of each item type instead of the biggest one.
 
@@ -7928,7 +7691,6 @@ memory
 
 ### Message
 Log_writer_file: Increase stack size
-message: Log_writer_file: Increase stack size
 
 Test flights reported the warning `[load_mon] log_writer_file low on stack! (292 bytes left)`
 
@@ -7946,7 +7708,6 @@ increase
 
 ### Message
 mavlink_ftp: fix stack overflow & add root dir prefix
-message: mavlink_ftp: fix stack overflow & add root dir prefix
 
 - change memory allocation from stack to a malloc'd buffer. This avoids
   increasing the stack size. And since FTP is rarely used, the buffers
@@ -7967,7 +7728,6 @@ memory
 
 ### Message
 UAVCAN: Reduce memory footprint
-message: UAVCAN: Reduce memory footprint
 ### Antipattern Category
 
 ### Keyword
@@ -7981,7 +7741,6 @@ memory
 
 ### Message
 fix power button shutdown: use an orb topic instead of a work queue call
-message: fix power button shutdown: use an orb topic instead of a work queue call
 
 px4_shutdown_request() was called from the power button IRQ callback, which
 invoked a work queue callback. But on NuttX, the work queue uses a
@@ -8004,7 +7763,6 @@ increase
 
 ### Message
 shutdown: increase the max timeout to 5s
-message: shutdown: increase the max timeout to 5s
 
 To make sure slow param writes will finish before we hit the timeout. I've
 seen param write durations of around 2s.
@@ -8021,7 +7779,6 @@ slow
 
 ### Message
 CMake / Clang: Increase warning level
-message: CMake / Clang: Increase warning level
 ### Antipattern Category
 
 ### Keyword
@@ -8035,7 +7792,6 @@ increase
 
 ### Message
 landdetector: decrease land detection to 0.3
-message: landdetector: decrease land detection to 0.3
 ### Antipattern Category
 
 ### Keyword
@@ -8049,7 +7805,6 @@ decrease
 
 ### Message
 geofence: remove fence & fence_vertex messages
-message: geofence: remove fence & fence_vertex messages
 
 - this was never read
 - it was implemented wrong, leading to memory access violations in
@@ -8067,7 +7822,6 @@ memory
 
 ### Message
 msg: Fix build in python3
-message: msg: Fix build in python3
 
 We can afford a slower performance in this parsers with python2 to
 keep compability with python3.
@@ -8085,7 +7839,6 @@ performance
 
 ### Message
 px4fmu-v2:Use simple HW versioning API to differentiate V2 variant at runtime.
-message: px4fmu-v2:Use simple HW versioning API to differentiate V2 variant at runtime.
 
    There are several boards that share the px4fmu-v2 build as px4fmu-v3 build.
 
@@ -8133,7 +7886,6 @@ runtime
 
 ### Message
 Sensors: Use temperature for airspeed validation to avoid false positives for high-performance airspeed sensors
-message: Sensors: Use temperature for airspeed validation to avoid false positives for high-performance airspeed sensors
 
 This is required to enable new high-performance sensors which otherwise would provide incorrect readings.
 ### Antipattern Category
@@ -8149,7 +7901,6 @@ performance
 
 ### Message
 Fix memory leaks identified by cppcheck
-message: Fix memory leaks identified by cppcheck
 
 * Add `free` / `delete`
 * Add comment explaining the (presumed) motivation for the use of new instead of
@@ -8167,7 +7918,6 @@ memory
 
 ### Message
 frsky_telemetry S.Port: refactor to use less memory & allocations
-message: frsky_telemetry S.Port: refactor to use less memory & allocations
 ### Antipattern Category
 
 ### Keyword
@@ -8181,7 +7931,6 @@ memory
 
 ### Message
 frsky_telemetry D protocol: refactor to use less memory & allocations
-message: frsky_telemetry D protocol: refactor to use less memory & allocations
 
 Also add the vehicle_gps_position & flight mode information
 ### Antipattern Category
@@ -8197,7 +7946,6 @@ memory
 
 ### Message
 frsky_telemetry: cleanup static vars, use less memory & fix process priority
-message: frsky_telemetry: cleanup static vars, use less memory & fix process priority
 ### Antipattern Category
 
 ### Keyword
@@ -8211,7 +7959,6 @@ memory
 
 ### Message
 common:Define default BOARD_NUMBER_I2C_BUSES and BOARD_I2C_BUS_CLOCK_INIT
-message: common:Define default BOARD_NUMBER_I2C_BUSES and BOARD_I2C_BUS_CLOCK_INIT
 
    Define the default I2C buss frequncies that are backward compatible
    with the existing code. While allowing it the defaults to be overridden
@@ -8250,7 +7997,6 @@ fast
 
 ### Message
 vmount: increase stack size
-message: vmount: increase stack size
 ### Antipattern Category
 
 ### Keyword
@@ -8264,7 +8010,6 @@ increase
 
 ### Message
 vmount: reduce stack size to 1900 as recommended by @bkueng (maximum used memory observed: 1552)
-message: vmount: reduce stack size to 1900 as recommended by @bkueng (maximum used memory observed: 1552)
 ### Antipattern Category
 
 ### Keyword
@@ -8278,7 +8023,6 @@ memory
 
 ### Message
 nuttx config: increase CONFIG_NFILE_DESCRIPTORS from 53 to 54
-message: nuttx config: increase CONFIG_NFILE_DESCRIPTORS from 53 to 54
 
 This is needed when logger is logging to file and ulog streaming gets
 activated.
@@ -8295,7 +8039,6 @@ increase
 
 ### Message
 bugfix:px4fmu-v5 (STM32F7) random sd write failures
-message: bugfix:px4fmu-v5 (STM32F7) random sd write failures
 
    This is a back port of upstream NuttX PX4 contrib of
 
@@ -8335,7 +8078,6 @@ memory
 
 ### Message
 Changed the default behavior for the client launching as a infinite loop
-message: Changed the default behavior for the client launching as a infinite loop
 ### Antipattern Category
 
 ### Keyword
@@ -8349,7 +8091,6 @@ infinite
 
 ### Message
 Use updated micro-CDR with memory leak fix (#7838)
-message: Use updated micro-CDR with memory leak fix (#7838)
 
 * Fixed memory leak (indicated by cppcheck) upstream
 ### Antipattern Category
@@ -8365,7 +8106,6 @@ memory
 
 ### Message
 vdev: replace static list with an std::map
-message: vdev: replace static list with an std::map
 
 VDev::getDev() is used in px4_access, which is used in orb_exists. And if
 the topic does not exist, it iterates over all 500 indexes, which is slow.
@@ -8385,7 +8125,6 @@ runtime
 
 ### Message
 driver: vdev_posix, increase PX4_MAX_FD (#7905)
-message: driver: vdev_posix, increase PX4_MAX_FD (#7905)
 
  - avoid "exceeded maximum number of file descriptors" when "make posix gazebo_typhoon_h480"
 
@@ -8403,7 +8142,6 @@ increase
 
 ### Message
 mc_pos_control auto: use current velocity if smaller than velocity setpoint when slowing down
-message: mc_pos_control auto: use current velocity if smaller than velocity setpoint when slowing down
 ### Antipattern Category
 
 ### Keyword
@@ -8417,7 +8155,6 @@ slowing
 
 ### Message
 mc_pos_control: accelerate faster
-message: mc_pos_control: accelerate faster
 ### Antipattern Category
 
 ### Keyword
@@ -8431,7 +8168,6 @@ faster
 
 ### Message
 mc_pos_control: accelerate faster in auto and increase speed at 90degrees angle
-message: mc_pos_control: accelerate faster in auto and increase speed at 90degrees angle
 ### Antipattern Category
 
 ### Keyword
@@ -8445,7 +8181,6 @@ faster
 
 ### Message
 mc_pos_control slowing down close to target take over previous setpoint if low
-message: mc_pos_control slowing down close to target take over previous setpoint if low
 ### Antipattern Category
 
 ### Keyword
@@ -8459,7 +8194,6 @@ slowing
 
 ### Message
 param: use separate param save lock
-message: param: use separate param save lock
 
 param save is an expensive operation that can take several 100ms. And
 previously it was possible that a param_get() caller was blocked on a
@@ -8488,7 +8222,6 @@ performance
 
 ### Message
 param MPC_MAN_TILT_MAX: decrease maximum from 90 to 85 degrees
-message: param MPC_MAN_TILT_MAX: decrease maximum from 90 to 85 degrees
 
 At 90 degrees the yaw is extremely unstable (tested with HIL), it
 overshoots and only very slowly converges to the correct value.
@@ -8508,7 +8241,6 @@ decrease
 
 ### Message
 esc35-v1 nsh: increase CONFIG_NFILE_DESCRIPTORS from 53 to 54
-message: esc35-v1 nsh: increase CONFIG_NFILE_DESCRIPTORS from 53 to 54
 
    Updated to match master
    This is needed when logger is logging to file and ulog streaming gets
@@ -8526,7 +8258,6 @@ increase
 
 ### Message
 nxphlite-v3 nsh: increase CONFIG_NFILE_DESCRIPTORS from 53 to 54
-message: nxphlite-v3 nsh: increase CONFIG_NFILE_DESCRIPTORS from 53 to 54
 
    Updated to match master
    This is needed when logger is logging to file and ulog streaming gets
@@ -8544,7 +8275,6 @@ increase
 
 ### Message
 px4-stm32f4discovery nsh: increase CONFIG_NFILE_DESCRIPTORS from 53 to 54
-message: px4-stm32f4discovery nsh: increase CONFIG_NFILE_DESCRIPTORS from 53 to 54
 
    Updated to match master
    This is needed when logger is logging to file and ulog streaming gets
@@ -8562,7 +8292,6 @@ increase
 
 ### Message
 px4esc-v1 nsh: increase CONFIG_NFILE_DESCRIPTORS from 53 to 54
-message: px4esc-v1 nsh: increase CONFIG_NFILE_DESCRIPTORS from 53 to 54
 
    Updated to match master
    This is needed when logger is logging to file and ulog streaming gets
@@ -8580,7 +8309,6 @@ increase
 
 ### Message
 px4nucleoF767ZI-v1 nsh: increase CONFIG_NFILE_DESCRIPTORS from 53 to 54
-message: px4nucleoF767ZI-v1 nsh: increase CONFIG_NFILE_DESCRIPTORS from 53 to 54
 
    Updated to match master
    This is needed when logger is logging to file and ulog streaming gets
@@ -8598,7 +8326,6 @@ increase
 
 ### Message
 sim nsh: increase CONFIG_NFILE_DESCRIPTORS from 53 to 54
-message: sim nsh: increase CONFIG_NFILE_DESCRIPTORS from 53 to 54
 
    Updated to match master
    This is needed when logger is logging to file and ulog streaming gets
@@ -8616,7 +8343,6 @@ increase
 
 ### Message
 tap-v1 nsh: increase CONFIG_NFILE_DESCRIPTORS from 53 to 54
-message: tap-v1 nsh: increase CONFIG_NFILE_DESCRIPTORS from 53 to 54
 
    Updated to match master
    This is needed when logger is logging to file and ulog streaming gets
@@ -8634,7 +8360,6 @@ increase
 
 ### Message
 px4-same70xplained-v1 nsh: increase CONFIG_NFILE_DESCRIPTORS from 53 to 54
-message: px4-same70xplained-v1 nsh: increase CONFIG_NFILE_DESCRIPTORS from 53 to 54
 
    Updated to match master
    This is needed when logger is logging to file and ulog streaming gets
@@ -8652,7 +8377,6 @@ increase
 
 ### Message
 Updated nuttx submodule 7.22+
-message: Updated nuttx submodule 7.22+
 
   Updated to latest upstream with PX4 contrib for STM32 I2C that
   fixes an hang in driver.
@@ -8669,7 +8393,6 @@ hang
 
 ### Message
 Updated nuttx submoulde 7.22+ w/i2c fix ==px4_firmware_nuttx-master
-message: Updated nuttx submoulde 7.22+ w/i2c fix ==px4_firmware_nuttx-master
 
    Latest nuttx 7.22+ with PX4 contrib for stm32 f4 I2C hang.
 ### Antipattern Category
@@ -8685,7 +8408,6 @@ hang
 
 ### Message
 mc_att_control: fix computation of yaw weight for attitude control
-message: mc_att_control: fix computation of yaw weight for attitude control
 
 Previously, the yaw weight was based on the tilt angle of the attitude
 setpoint (R_sp(2, 2) == cos(tilt angle)). This makes no sense, it means
@@ -8715,7 +8437,6 @@ slow
 
 ### Message
 mc_att_control params: reduce default max acro rates from 360 to 120 deg/s
-message: mc_att_control params: reduce default max acro rates from 360 to 120 deg/s
 
 360 is too fast if you just want to hover. Next step is to add expo(),
 so that we still have fine-grained control at the center and high rates
@@ -8733,7 +8454,6 @@ fast
 
 ### Message
 mc_att_control params: increase max roll/pitch/yaw rates to 1800
-message: mc_att_control params: increase max roll/pitch/yaw rates to 1800
 
 If you want to go to the limit of what the vehicle can do, you need to be
 able to set it so large that it is guaranteed that it's never limited by
@@ -8753,7 +8473,6 @@ increase
 
 ### Message
 Revert "param MPC_MAN_TILT_MAX: decrease maximum from 90 to 85 degrees"
-message: Revert "param MPC_MAN_TILT_MAX: decrease maximum from 90 to 85 degrees"
 
 This reverts commit d6df692b7a69460642f1efaad967538f8b6ef1c2.
 
@@ -8771,7 +8490,6 @@ decrease
 
 ### Message
 FMUv5: Increase USB buffer to increase transfer rates
-message: FMUv5: Increase USB buffer to increase transfer rates
 ### Antipattern Category
 
 ### Keyword
@@ -8785,7 +8503,6 @@ increase
 
 ### Message
 increase max num params per block because of ekf2
-message: increase max num params per block because of ekf2
 ### Antipattern Category
 
 ### Keyword
@@ -8799,7 +8516,6 @@ increase
 
 ### Message
 vdev_posix: change filemap into a static list of objects instead of pointers
-message: vdev_posix: change filemap into a static list of objects instead of pointers
 
 to avoid dynamic memory allocations & frees (specifically in orb_exists)
 ### Antipattern Category
@@ -8815,7 +8531,6 @@ memory
 
 ### Message
 mavlink_orb_subscription: reduce orb_exists() check from 10Hz to 3Hz
-message: mavlink_orb_subscription: reduce orb_exists() check from 10Hz to 3Hz
 
 Checking with 3Hz for new topics should be fast enough.
 ### Antipattern Category
@@ -8831,7 +8546,6 @@ fast
 
 ### Message
 jmavsim_run.sh: add more aggressive GC option
-message: jmavsim_run.sh: add more aggressive GC option
 
 This reduces memory usage by roughly 100MB on my laptop
 ### Antipattern Category
@@ -8847,7 +8561,6 @@ memory
 
 ### Message
 fw_pos_control_l1 increase stack by 110 Bytes (#8348)
-message: fw_pos_control_l1 increase stack by 110 Bytes (#8348)
 ### Antipattern Category
 
 ### Keyword
@@ -8861,7 +8574,6 @@ increase
 
 ### Message
 Increase fixed-wing l1 navigation radius limit
-message: Increase fixed-wing l1 navigation radius limit
 ### Antipattern Category
 
 ### Keyword
@@ -8875,7 +8587,6 @@ increase
 
 ### Message
 Jenkins increase timeout to 30 minutes for now
-message: Jenkins increase timeout to 30 minutes for now
 ### Antipattern Category
 
 ### Keyword
@@ -8889,7 +8600,6 @@ increase
 
 ### Message
 Jenkins increase test timeout
-message: Jenkins increase test timeout
 ### Antipattern Category
 
 ### Keyword
@@ -8903,7 +8613,6 @@ increase
 
 ### Message
 vtol_att_control increase stack by 30 Bytes (1200 -> 1230)
-message: vtol_att_control increase stack by 30 Bytes (1200 -> 1230)
 ### Antipattern Category
 
 ### Keyword
@@ -8917,7 +8626,6 @@ increase
 
 ### Message
 Jenkinsfile parallel builds fail fast
-message: Jenkinsfile parallel builds fail fast
 ### Antipattern Category
 
 ### Keyword
@@ -8931,7 +8639,6 @@ fast
 
 ### Message
 Jenkins remove fast fail
-message: Jenkins remove fast fail
 
  - this saves build resources, but makes finding the actual failure rather hard (with the current blue ocean gui).
 ### Antipattern Category
@@ -8947,7 +8654,6 @@ fast
 
 ### Message
 uorb_graph: add .gitignore, change graph file for sitl runtime config
-message: uorb_graph: add .gitignore, change graph file for sitl runtime config
 ### Antipattern Category
 
 ### Keyword
@@ -8961,7 +8667,6 @@ runtime
 
 ### Message
 FW land detector increase trigger time and cleanup (#8486)
-message: FW land detector increase trigger time and cleanup (#8486)
 ### Antipattern Category
 
 ### Keyword
@@ -8975,7 +8680,6 @@ increase
 
 ### Message
 Commander: increase stack to ensure enough margin remains
-message: Commander: increase stack to ensure enough margin remains
 ### Antipattern Category
 
 ### Keyword
@@ -8989,7 +8693,6 @@ increase
 
 ### Message
 PWM out sim: Increase stack as needed
-message: PWM out sim: Increase stack as needed
 ### Antipattern Category
 
 ### Keyword
@@ -9003,7 +8706,6 @@ increase
 
 ### Message
 libled: allow infinite flashing mode
-message: libled: allow infinite flashing mode
 ### Antipattern Category
 
 ### Keyword
@@ -9017,7 +8719,6 @@ infinite
 
 ### Message
 commander increase stack by 90 bytes (3160 -> 3250)
-message: commander increase stack by 90 bytes (3160 -> 3250)
 ### Antipattern Category
 
 ### Keyword
@@ -9031,7 +8732,6 @@ increase
 
 ### Message
 px4fmu-v2: Build individual distance sensors
-message: px4fmu-v2: Build individual distance sensors
 
 We are running out of flash memory in px4fmu-v2 so removing all the
 distance sensors from binary and adding then individually.
@@ -9049,7 +8749,6 @@ memory
 
 ### Message
 MC_ROLL_P, MC_PITCH_P: increase maximum value to 12
-message: MC_ROLL_P, MC_PITCH_P: increase maximum value to 12
 
 - use the same value for both
 - lower control latency allows increasing these gains
@@ -9066,7 +8765,6 @@ increase
 
 ### Message
 logger: fix potential semaphore counter overflow
-message: logger: fix potential semaphore counter overflow
 
 When the timer callback is called at a higher rate than the logger can
 execute the main loop (which is never the case under normal conditions),
@@ -9092,7 +8790,6 @@ increase
 
 ### Message
 convergence config: increase idle speed in mc mode
-message: convergence config: increase idle speed in mc mode
 
 - this makes sure that all motors are idling in mc mode. having this too
 low can lead to a motor stopping in flight which is critical for
@@ -9114,7 +8811,6 @@ increase
 
 ### Message
 fmu: fix PPM publication if RC_SERIAL_PORT is not defined
-message: fmu: fix PPM publication if RC_SERIAL_PORT is not defined
 
 Before, the RC channel was published as fast as the fmu was running
 (around 200Hz in unarmed state).
@@ -9133,7 +8829,6 @@ fast
 
 ### Message
 Fix: Increase pwmsim module stack by 100 bytes again because load_mon was giving warning about low stack
-message: Fix: Increase pwmsim module stack by 100 bytes again because load_mon was giving warning about low stack
 ### Antipattern Category
 
 ### Keyword
@@ -9147,7 +8842,6 @@ increase
 
 ### Message
 imu filter defaults: set IMU_GYRO_CUTOFF to 80 and MC_DTERM_CUTOFF to 30
-message: imu filter defaults: set IMU_GYRO_CUTOFF to 80 and MC_DTERM_CUTOFF to 30
 
 tested on at least 5 different vehicles, including AeroFC. The values
 should be conservative, good setups (with low vibrations) can increase
@@ -9167,7 +8861,6 @@ increase
 
 ### Message
 convergence config: increase multirotor idle speed
-message: convergence config: increase multirotor idle speed
 
 - increase the minimum pwm value for multirotor mode since we experienced
 the rear motor stalling in certain situations when throttle was low
@@ -9186,7 +8879,6 @@ increase
 
 ### Message
 update vtol mission tests to increase length
-message: update vtol mission tests to increase length
 ### Antipattern Category
 
 ### Keyword
@@ -9200,7 +8892,6 @@ increase
 
 ### Message
 Jenkins cleanup build creation
-message: Jenkins cleanup build creation
 
  - cleanup workspace when done and increase retention
 ### Antipattern Category
@@ -9216,7 +8907,6 @@ increase
 
 ### Message
 FlightTasks: replaced all hrt_elapsed() calls and unneeded hrt_ calls to safe performance
-message: FlightTasks: replaced all hrt_elapsed() calls and unneeded hrt_ calls to safe performance
 ### Antipattern Category
 
 ### Keyword
@@ -9230,7 +8920,6 @@ performance
 
 ### Message
 flight tasks: use placement new to reduce memory overhead and the need for dynamic allocations
-message: flight tasks: use placement new to reduce memory overhead and the need for dynamic allocations
 
 In addition, we will need some shared data structure for the uorb
 subscriptions.
@@ -9247,7 +8936,6 @@ memory
 
 ### Message
 FlightTaskManual: fix for the sideways oscillations in fast foward flight when using the vehicle yaw estimate
-message: FlightTaskManual: fix for the sideways oscillations in fast foward flight when using the vehicle yaw estimate
 ### Antipattern Category
 
 ### Keyword
@@ -9261,7 +8949,6 @@ fast
 
 ### Message
 ManualSmoothingXY: velocity as criteria for direction change to prenvent fast acceleration at low spped
-message: ManualSmoothingXY: velocity as criteria for direction change to prenvent fast acceleration at low spped
 ### Antipattern Category
 
 ### Keyword
@@ -9274,7 +8961,6 @@ fast
 
 ### Message
 Improve the Crazyflie MAVLink tunnel to increase efficiency
-message: Improve the Crazyflie MAVLink tunnel to increase efficiency
 
 This change fragments MAVLink packets more efficiently and therefore increases the net throughput. This in turn makes the connection significantly more stable and the Crazyflie experience overall more usable.
 ### Antipattern Category
@@ -9290,7 +8976,6 @@ increase
 
 ### Message
 Increase the MavLink module stack size
-message: Increase the MavLink module stack size
 ### Antipattern Category
 
 ### Keyword
@@ -9304,7 +8989,6 @@ increase
 
 ### Message
 mag_calibration: only allocate as much memory as needed
-message: mag_calibration: only allocate as much memory as needed
 ### Antipattern Category
 
 ### Keyword
@@ -9318,7 +9002,6 @@ memory
 
 ### Message
 tailsitter: use forward transition throttle for climb-rate controlled mode
-message: tailsitter: use forward transition throttle for climb-rate controlled mode
 
 - the mc pos controller will decrease throttle during the transition
 and thus the vehicle will not pick up enough airspeed to complete the
@@ -9338,7 +9021,6 @@ decrease
 
 ### Message
 posix-configs: better tailsitter front transition parameters
-message: posix-configs: better tailsitter front transition parameters
 
 - reduce height increase during front transition
 
@@ -9356,7 +9038,6 @@ increase
 
 ### Message
 posix-configs: increase tailsitter land speed
-message: posix-configs: increase tailsitter land speed
 
 Signed-off-by: Roman <bapstroman@gmail.com>
 ### Antipattern Category
@@ -9372,7 +9053,6 @@ increase
 
 ### Message
 mc_att_control_params: increase max acro rates to 1800
-message: mc_att_control_params: increase max acro rates to 1800
 
 This matches the maximum rates for the attitude controller.
 ### Antipattern Category
@@ -9388,7 +9068,6 @@ increase
 
 ### Message
 top: increase process priority to 255
-message: top: increase process priority to 255
 
 Helps debugging busy-looping tasks.
 ### Antipattern Category
@@ -9404,7 +9083,6 @@ increase
 
 ### Message
 crazyflie: increase imu reading rate
-message: crazyflie: increase imu reading rate
 ### Antipattern Category
 
 ### Keyword
@@ -9418,7 +9096,6 @@ increase
 
 ### Message
 mpu9250: decrease sampling rate when using i2c
-message: mpu9250: decrease sampling rate when using i2c
 ### Antipattern Category
 
 ### Keyword
@@ -9432,7 +9109,6 @@ decrease
 
 ### Message
 decrease rollrate P gain due to gimbal oscillations
-message: decrease rollrate P gain due to gimbal oscillations
 ### Antipattern Category
 
 ### Keyword
@@ -9446,7 +9122,6 @@ decrease
 
 ### Message
 FMU: Increase stack space as needed (shown by instrumentation) to retain a 300 bytes buffer.
-message: FMU: Increase stack space as needed (shown by instrumentation) to retain a 300 bytes buffer.
 ### Antipattern Category
 
 ### Keyword
@@ -9460,7 +9135,6 @@ increase
 
 ### Message
 airframes: update 4050 generic 250 racer defaults
-message: airframes: update 4050 generic 250 racer defaults
 
 - P and D gains are too high for a racer
 - default I gain is too low (0.25 is still quite low)
@@ -9482,7 +9156,6 @@ increase
 
 ### Message
 Update submodule ecl to latest Sat Jun  9 15:26:38 CDT 2018
-message: Update submodule ecl to latest Sat Jun  9 15:26:38 CDT 2018
 
     - ecl in PX4/Firmware (f7937d783496e954efc52439148ef66824d9c80a): https://github.com/PX4/ecl/commit/1fdf33b343e361de6410515a0359f3cb7f34d499
     - ecl current upstream: https://github.com/PX4/ecl/commit/d177e96508d2572f6fa8eb7ff41852749c882548
@@ -9528,7 +9201,6 @@ slow
 
 ### Message
 Fixed-wing autoland: Fix bug that could cause a steep pitch increase and thus aircraft stall during the flare (#9674)
-message: Fixed-wing autoland: Fix bug that could cause a steep pitch increase and thus aircraft stall during the flare (#9674)
 ### Antipattern Category
 
 ### Keyword
@@ -9542,7 +9214,6 @@ increase
 
 ### Message
 mavlink: allow resetting mavlink streams to default via MAV_CMD_SET_MESSAGE_INTERVAL
-message: mavlink: allow resetting mavlink streams to default via MAV_CMD_SET_MESSAGE_INTERVAL
 
 This implementation does not need more resources.
 It's not super efficient in terms of runtime, but it's also not something
@@ -9560,7 +9231,6 @@ runtime
 
 ### Message
 mc_att_control: keep integral enabled based on land detector
-message: mc_att_control: keep integral enabled based on land detector
 
 Previously the rate controller disabled updating the integral below 20%
 throttle. This is not ideal for several reasons:
@@ -9580,7 +9250,6 @@ performance
 
 ### Message
 Increase the stack size for the IridiumSBD driver
-message: Increase the stack size for the IridiumSBD driver
 ### Antipattern Category
 
 ### Keyword
@@ -9594,7 +9263,6 @@ increase
 
 ### Message
 Decrease default flare altitude. The previous value was way too high for any small aircraft. It was also unsafe because after the flar, pitch is currently controlled open-loop, which means that stall can potentially happen during the flare
-message: Decrease default flare altitude. The previous value was way too high for any small aircraft. It was also unsafe because after the flar, pitch is currently controlled open-loop, which means that stall can potentially happen during the flare
 ### Antipattern Category
 
 ### Keyword
@@ -9608,7 +9276,6 @@ decrease
 
 ### Message
 ADIS16477 reset on init and increase delay
-message: ADIS16477 reset on init and increase delay
 ### Antipattern Category
 
 ### Keyword
@@ -9622,7 +9289,6 @@ increase
 
 ### Message
 frsky_telemetry: increase stack size by 52 bytes
-message: frsky_telemetry: increase stack size by 52 bytes
 
 As indicated in previous logs (268 bytes left).
 ### Antipattern Category
@@ -9638,7 +9304,6 @@ increase
 
 ### Message
 GPS driver increase stack
-message: GPS driver increase stack
 ### Antipattern Category
 
 ### Keyword
@@ -9652,7 +9317,6 @@ increase
 
 ### Message
 MavlinkOrbSubscription::update: improve performance & fix corner case
-message: MavlinkOrbSubscription::update: improve performance & fix corner case
 
 - reorders operations, such that the most expensive one (orb_copy) is done
   only when really needed.
@@ -9677,7 +9341,6 @@ performance
 
 ### Message
 position control: fix failsafe thrust
-message: position control: fix failsafe thrust
 
 invert direction to point upwards and increase to 70% of throttle range between min and hover
 ### Antipattern Category
@@ -9693,7 +9356,6 @@ increase
 
 ### Message
 px4fmu-v5:Comment and define SAFETY LED and Button so FMU can use
-message: px4fmu-v5:Comment and define SAFETY LED and Button so FMU can use
 
   Safety Switch is HW version dependent on having an PX4IO
   So we init to a benign state with the _INIT definition
@@ -9716,7 +9378,6 @@ runtime
 
 ### Message
 px4fmu-v5:Runtime Safety LED support.
-message: px4fmu-v5:Runtime Safety LED support.
 
    Safety Switch is HW version dependent on having an PX4IO
    So we init to a benign state with the _INIT definition
@@ -9735,7 +9396,6 @@ runtime
 
 ### Message
 spektrum_rssi: initialize rssi lookup as constexpr
-message: spektrum_rssi: initialize rssi lookup as constexpr
 
 Rather than initializing the rssi percentage lookup table at runtime
 on the heap, we would like it to be stored in flash.
@@ -9754,7 +9414,6 @@ runtime
 
 ### Message
 refactor uorb: inline orb_publish_auto
-message: refactor uorb: inline orb_publish_auto
 
 It is a very small core function that needs to be fast.
 ### Antipattern Category
@@ -9770,7 +9429,6 @@ fast
 
 ### Message
 FlightTask StraightLine: replace powf(x,2) with x*x
-message: FlightTask StraightLine: replace powf(x,2) with x*x
 
 Apparently this is faster
 ### Antipattern Category
@@ -9786,7 +9444,6 @@ faster
 
 ### Message
 tap_esc increase stack 1100 -> 1180 bytes
-message: tap_esc increase stack 1100 -> 1180 bytes
 ### Antipattern Category
 
 ### Keyword
@@ -9800,7 +9457,6 @@ increase
 
 ### Message
 px4fmu increase actuator controls poll timeout
-message: px4fmu increase actuator controls poll timeout
 ### Antipattern Category
 
 ### Keyword
@@ -9814,7 +9470,6 @@ increase
 
 ### Message
 uorb tests: run at max priority & increase stack size
-message: uorb tests: run at max priority & increase stack size
 
 - running at max priority significantly decreases jitter for the latency
   test, providing more consistent results
@@ -9832,7 +9487,6 @@ increase
 
 ### Message
 replay: fix potential invalid memory access
-message: replay: fix potential invalid memory access
 
 _subscriptions is a vector that is resized when needed. However there could
 still be references to elements in the vector when the resize happens.
@@ -9851,7 +9505,6 @@ memory
 
 ### Message
 logger increase log_writer_file stack 1072 -> 1150
-message: logger increase log_writer_file stack 1072 -> 1150
 ### Antipattern Category
 
 ### Keyword
@@ -9865,7 +9518,6 @@ increase
 
 ### Message
 SYS_COMPANION: add 1500000 baud to metadata & increase the data rate
-message: SYS_COMPANION: add 1500000 baud to metadata & increase the data rate
 ### Antipattern Category
 
 ### Keyword
@@ -9879,7 +9531,6 @@ increase
 
 ### Message
 fmu-v5 defconfig: increase USART3 from 1500 to 3000
-message: fmu-v5 defconfig: increase USART3 from 1500 to 3000
 
 This is needed for companions with high baudrate and high data rate.
 Tested with 1500000 Baudrate and mavlink TX rate of ~120KB/s: no drops.
@@ -9899,7 +9550,6 @@ increase
 
 ### Message
 CI mission tests add FW and cleanup (#10250)
-message: CI mission tests add FW and cleanup (#10250)
 
 * jenkins: decrease VTOL mission alt and FW mission use simple land wps
 
@@ -9919,7 +9569,6 @@ decrease
 
 ### Message
 FlightTaskManual: increase rc timeout to 1.5 x COM_RC_LOSS_T
-message: FlightTaskManual: increase rc timeout to 1.5 x COM_RC_LOSS_T
 ### Antipattern Category
 
 ### Keyword
@@ -9933,7 +9582,6 @@ increase
 
 ### Message
 px4_impl_os:Use the defconfig CONFIG_ARMV7M_STACKCHECK
-message: px4_impl_os:Use the defconfig CONFIG_ARMV7M_STACKCHECK
 
   To enable coherent runtime stack checking use the boards
   CONFIG_ARMV7M_STACKCHECK setting
@@ -9950,7 +9598,6 @@ runtime
 
 ### Message
 Make.defs.in:Runtime Stack Checking in Nuttx Build
-message: Make.defs.in:Runtime Stack Checking in Nuttx Build
 
   Use CONFIG_ARMV7M_STACKCHECK to add the instrumentation
   for runtime stack checking
@@ -9967,7 +9614,6 @@ runtime
 
 ### Message
 nuttx-configs increase idle thread stack size to 750 bytes
-message: nuttx-configs increase idle thread stack size to 750 bytes
 ### Antipattern Category
 
 ### Keyword
@@ -9981,7 +9627,6 @@ increase
 
 ### Message
 bmp280 increase MAIN stack
-message: bmp280 increase MAIN stack
 ### Antipattern Category
 
 ### Keyword
@@ -9995,7 +9640,6 @@ increase
 
 ### Message
 mpu6000 increase MAIN stack
-message: mpu6000 increase MAIN stack
 ### Antipattern Category
 
 ### Keyword
@@ -10009,7 +9653,6 @@ increase
 
 ### Message
 sensors increase MAIN stack
-message: sensors increase MAIN stack
 ### Antipattern Category
 
 ### Keyword
@@ -10023,7 +9666,6 @@ increase
 
 ### Message
 uORB tests increase stack sizes
-message: uORB tests increase stack sizes
 ### Antipattern Category
 
 ### Keyword
@@ -10037,7 +9679,6 @@ increase
 
 ### Message
 BMI055 increase MAIN stack
-message: BMI055 increase MAIN stack
 ### Antipattern Category
 
 ### Keyword
@@ -10051,7 +9692,6 @@ increase
 
 ### Message
 IST8310 increase MAIN stack
-message: IST8310 increase MAIN stack
 ### Antipattern Category
 
 ### Keyword
@@ -10065,7 +9705,6 @@ increase
 
 ### Message
 rgbled increase MAIN stack
-message: rgbled increase MAIN stack
 ### Antipattern Category
 
 ### Keyword
@@ -10079,7 +9718,6 @@ increase
 
 ### Message
 rgbled_pwm increase MAIN stack
-message: rgbled_pwm increase MAIN stack
 ### Antipattern Category
 
 ### Keyword
@@ -10093,7 +9731,6 @@ increase
 
 ### Message
 px4fmu-v5 increase CONFIG_USERMAIN_STACKSIZE slightly
-message: px4fmu-v5 increase CONFIG_USERMAIN_STACKSIZE slightly
 ### Antipattern Category
 
 ### Keyword
@@ -10107,7 +9744,6 @@ increase
 
 ### Message
 frsky_telemetry increase MAIN stack
-message: frsky_telemetry increase MAIN stack
 ### Antipattern Category
 
 ### Keyword
@@ -10121,7 +9757,6 @@ increase
 
 ### Message
 mission test temporarily increase landed timeout 60s -> 120s (#10596)
-message: mission test temporarily increase landed timeout 60s -> 120s (#10596)
 
  - revert once #10590 is resolved properly
 ### Antipattern Category
@@ -10137,7 +9772,6 @@ increase
 
 ### Message
 ekf2: Handle blending of dissimilar rate GPS data (#10570)
-message: ekf2: Handle blending of dissimilar rate GPS data (#10570)
 
 A filtered update update interval is calculated for each receiver.
 
@@ -10159,7 +9793,6 @@ slower
 
 ### Message
 Update submodule DriverFramework to latest Sun Sep 30 08:37:23 EDT 2018 (#10604)
-message: Update submodule DriverFramework to latest Sun Sep 30 08:37:23 EDT 2018 (#10604)
 
     - DriverFramework in PX4/Firmware (1ce7e8d89a16262afe07d7487e55a2ec05985627): https://github.com/PX4/DriverFramework/commit/721ace3e797f141f0950144bace6a30f6aa1325a
 
@@ -10183,7 +9816,6 @@ increase
 
 ### Message
 ekf2: increase maximum of EKF2_MAG_YAWLIM. This is needed on some fw platforms
-message: ekf2: increase maximum of EKF2_MAG_YAWLIM. This is needed on some fw platforms
 in order to not constantly switch mag fusion mode in gusty winds.
 ### Antipattern Category
 
@@ -10198,7 +9830,6 @@ increase
 
 ### Message
 logger: add mission file to LogWriterFile backend
-message: logger: add mission file to LogWriterFile backend
 
 Not used yet, it should not affect anything, except for slight RAM
 increase.
@@ -10215,7 +9846,6 @@ increase
 
 ### Message
 logger: add mission log to frontend, configurable via SDLOG_MISSION
-message: logger: add mission log to frontend, configurable via SDLOG_MISSION
 
 - mission logs are stored in a separate directory mission_log
 - It's disabled by default
@@ -10234,7 +9864,6 @@ increase
 
 ### Message
 mc_att_control: separate attitude controller from rate controller update
-message: mc_att_control: separate attitude controller from rate controller update
 
 This will allow to run the rate controller faster than the attitude
 controller.
@@ -10251,7 +9880,6 @@ faster
 
 ### Message
 mc_att_control: run rate controller first and increase fmu prio by one
-message: mc_att_control: run rate controller first and increase fmu prio by one
 
 The rate controller is now run directly after a gyro publication, and
 as soon as it publishes the actuator controls, the output driver (fmu/...)
@@ -10280,7 +9908,6 @@ increase
 
 ### Message
 mavlink: always acknowledge a param write
-message: mavlink: always acknowledge a param write
 
 This change has two effects:
 1. We always acknowledge a param write no matter if the value was
@@ -10305,7 +9932,6 @@ memory
 
 ### Message
 uORBDeviceNode: move flags from SubscriberData to UpdateIntervalData
-message: uORBDeviceNode: move flags from SubscriberData to UpdateIntervalData
 
 As there is only one bit used in 'flags', and it is only used in case
 update_interval is not null, we can move the bit to UpdateIntervalData.
@@ -10326,7 +9952,6 @@ increase
 
 ### Message
 MPC_MAN_TILT_MAX: increase max limit from 90 to 180 degrees
-message: MPC_MAN_TILT_MAX: increase max limit from 90 to 180 degrees
 
 This is especially useful for testing (the vehicle must behave correctly
 even at high tilt angles).
@@ -10343,7 +9968,6 @@ increase
 
 ### Message
 MPC - Increase max velocity integral gain to 3.0
-message: MPC - Increase max velocity integral gain to 3.0
 ### Antipattern Category
 
 ### Keyword
@@ -10357,7 +9981,6 @@ increase
 
 ### Message
 AV-X increase logger buffer
-message: AV-X increase logger buffer
 ### Antipattern Category
 
 ### Keyword
@@ -10371,7 +9994,6 @@ increase
 
 ### Message
 hysteresis test increase time on cygwin (#10958)
-message: hysteresis test increase time on cygwin (#10958)
 ### Antipattern Category
 
 ### Keyword
@@ -10385,7 +10007,6 @@ increase
 
 ### Message
 mixer multirotor: add unit-tests
-message: mixer multirotor: add unit-tests
 
 To run:
 cd src/lib/mixer
@@ -10415,7 +10036,6 @@ faster
 
 ### Message
 Update Nuttx with env out of memory fix
-message: Update Nuttx with env out of memory fix
 ### Antipattern Category
 
 ### Keyword
@@ -10429,7 +10049,6 @@ memory
 
 ### Message
 pmw3901 increase publish rate and max_ground_distance (#11066)
-message: pmw3901 increase publish rate and max_ground_distance (#11066)
 
 * increase pmw3901 publish rate and max_ground_distance
 
@@ -10447,7 +10066,6 @@ increase
 
 ### Message
 lockstep_scheduler: simplify LockstepScheduler::cond_timedwait & reduce locking
-message: lockstep_scheduler: simplify LockstepScheduler::cond_timedwait & reduce locking
 
 - the loop is not needed
 - we optimize for the fast case and lock only if really needed
@@ -10464,7 +10082,6 @@ fast
 
 ### Message
 drv_hrt posix: improve performance for hrt_absolute_time()
-message: drv_hrt posix: improve performance for hrt_absolute_time()
 
 Previously hrt_absolute_time() was at around 5% of the total CPU usage, now
 it's around 0.35%.
@@ -10481,7 +10098,6 @@ performance
 
 ### Message
 GPS increase task stack 1530 -> 1600 bytes
-message: GPS increase task stack 1530 -> 1600 bytes
 ### Antipattern Category
 
 ### Keyword
@@ -10495,7 +10111,6 @@ increase
 
 ### Message
 HRT: Create new separate call for atomic HRT elapsed time calculation
-message: HRT: Create new separate call for atomic HRT elapsed time calculation
 This call rarely needs to be truly atomic and the involved CPU overhead in making it atomic was unnecessary and introduces a lot of IRQ jitter with no value-add. The call has been moved to be non-atomic and the codebase will be inspected and changed in follow-up commits for the few instances where it is truly needed.
 ### Antipattern Category
 
@@ -10510,7 +10125,6 @@ overhead
 
 ### Message
 HRT: Drop volatile specifier from function call for non-atomic mode
-message: HRT: Drop volatile specifier from function call for non-atomic mode
 
 This allows the compiler to optimize better without loosing any performance / accuracy.
 ### Antipattern Category
@@ -10526,7 +10140,6 @@ performance
 
 ### Message
 common:board_crashdump must end in reset!
-message: common:board_crashdump must end in reset!
 
    Upstream changes defer the board reset based on the vaule of
    CONFIG_BOARD_RESET_ON_ASSERT
@@ -10558,7 +10171,6 @@ memory
 
 ### Message
 px4_nuttx_tasks:Support future removal of env.
-message: px4_nuttx_tasks:Support future removal of env.
 
    CONFIG_DISABLE_ENVIRON can prevent task having to allocate
    memory for the env.
@@ -10575,7 +10187,6 @@ memory
 
 ### Message
 mavlink increase STACK_MAIN and STACK_MAX
-message: mavlink increase STACK_MAIN and STACK_MAX
 
  - needed if NuttX networking enabled
 ### Antipattern Category
@@ -10591,7 +10202,6 @@ increase
 
 ### Message
 px4_fmu-v4: add runtime external SPI4 detection to support pmw3901 (#11301)
-message: px4_fmu-v4: add runtime external SPI4 detection to support pmw3901 (#11301)
 
  * The build is built with SPI4. At run time the signal GPIO_8266_GPIO2 it tested. If it is low the SPI4 is configured. If it is high SPI4 is not configured.
 
@@ -10609,7 +10219,6 @@ runtime
 
 ### Message
 px4_fmu-v4_stackcheck sync with default and increase pmw3901 main stack
-message: px4_fmu-v4_stackcheck sync with default and increase pmw3901 main stack
 ### Antipattern Category
 
 ### Keyword
@@ -10623,7 +10232,6 @@ increase
 
 ### Message
 Update submodule ecl to latest Sun Feb  3 07:37:55 EST 2019
-message: Update submodule ecl to latest Sun Feb  3 07:37:55 EST 2019
 
     - ecl in PX4/Firmware (0dc2ccb130e891b387b4e0d6ea4492473339e142): https://github.com/PX4/ecl/commit/721f5e61a5965a08a34b2875d2bdc0b5d3b80601
     - ecl current upstream: https://github.com/PX4/ecl/commit/dd58e695494acab73fb6fcec7074291edb5c226b
@@ -10663,7 +10271,6 @@ increase
 
 ### Message
 Jenkins hardware increase test timeout and update container version
-message: Jenkins hardware increase test timeout and update container version
 ### Antipattern Category
 
 ### Keyword
@@ -10677,7 +10284,6 @@ increase
 
 ### Message
 Jenkins hardware test remove px4_fmu-v4 stackcheck
-message: Jenkins hardware test remove px4_fmu-v4 stackcheck
 
 - the stackcheck build is too slow to be useful
 
@@ -10695,7 +10301,6 @@ slow
 
 ### Message
 Jenkins SITL tests increase test history from 2 -> 5
-message: Jenkins SITL tests increase test history from 2 -> 5
 ### Antipattern Category
 
 ### Keyword
@@ -10709,7 +10314,6 @@ increase
 
 ### Message
 refactor ecl ekf analysis (#11412)
-message: refactor ecl ekf analysis (#11412)
 
 * refactor ekf analysis part 1: move plotting to functions
 
@@ -10829,7 +10433,6 @@ memory
 
 ### Message
 Jenkins increase history retention
-message: Jenkins increase history retention
 ### Antipattern Category
 
 ### Keyword
@@ -10843,7 +10446,6 @@ increase
 
 ### Message
 px4_fmuv5:Stack Check build Increase to 2624
-message: px4_fmuv5:Stack Check build Increase to 2624
 
    The cause of the stack detection fault is because of the
    level of nesting in the start up script. We need to
@@ -10882,7 +10484,6 @@ runtime
 
 ### Message
 FlightTaskManualAltitude: slow down when landing manually
-message: FlightTaskManualAltitude: slow down when landing manually
 ### Antipattern Category
 
 ### Keyword
@@ -10896,7 +10497,6 @@ slow
 
 ### Message
 FlightTaskManualAltitude: add slow upwards start
-message: FlightTaskManualAltitude: add slow upwards start
 
 when still close to ground
 ### Antipattern Category
@@ -10912,7 +10512,6 @@ slow
 
 ### Message
 fix bmi055: increase DLPF from 62.5 to 500
-message: fix bmi055: increase DLPF from 62.5 to 500
 
 With a DLPF of 62.5 Hz, the sampling rate is apperently not 1 kHz anymore,
 because the driver got duplicate samples and published only at 128 Hz.
@@ -10931,7 +10530,6 @@ increase
 
 ### Message
 logger increase stack 3600 -> 3700 bytes
-message: logger increase stack 3600 -> 3700 bytes
 ### Antipattern Category
 
 ### Keyword
@@ -10945,7 +10543,6 @@ increase
 
 ### Message
 Update submodule ecl to latest Thu Apr  4 00:38:15 UTC 2019
-message: Update submodule ecl to latest Thu Apr  4 00:38:15 UTC 2019
 
     - ecl in PX4/Firmware (3a004d13dc13d81403ae3873d5109c0503a4f964): https://github.com/PX4/ecl/commit/a892ececf8490b21aa8917bc243b2bc441af6a87
     - ecl current upstream: https://github.com/PX4/ecl/commit/f95cd4b3584d029c35b288a39180ddf25b2dd004
@@ -10971,7 +10568,6 @@ increase
 
 ### Message
 increase stacks in drivers identified by stackcheck builds
-message: increase stacks in drivers identified by stackcheck builds
 ### Antipattern Category
 
 ### Keyword
@@ -10985,7 +10581,6 @@ increase
 
 ### Message
 FlightTaskAuto: separate default speed and limit
-message: FlightTaskAuto: separate default speed and limit
 
 It wasn't possible to fly faster than cruise speed even if planned
 in the mission.
@@ -11007,7 +10602,6 @@ faster
 
 ### Message
 Fix uninitialized memory found using Valgrind
-message: Fix uninitialized memory found using Valgrind
 ### Antipattern Category
 
 ### Keyword
@@ -11021,7 +10615,6 @@ memory
 
 ### Message
 mavlink_system: set update_counter for safe points
-message: mavlink_system: set update_counter for safe points
 
 This variable was not set and lead to uninitialized memory being written
 to dataman.
@@ -11038,7 +10631,6 @@ memory
 
 ### Message
 init.d-posix: raise timeouts for fast SITL
-message: init.d-posix: raise timeouts for fast SITL
 
 When simulating with lockstep we can raise the speed by setting the env
 variable `PX4_SIM_SPEED_FACTOR`. Some inputs like RC, MAVLink heartbeats
@@ -11060,7 +10652,6 @@ fast
 
 ### Message
 mc_pos_control: switch back to velocity ramp
-message: mc_pos_control: switch back to velocity ramp
 
 But fix the two crucial problems:
 - When to begin the ramp?
@@ -11083,7 +10674,6 @@ slower
 
 ### Message
 log_writer_file: increase stack size by 20 bytes
-message: log_writer_file: increase stack size by 20 bytes
 
 Seems to be due to the console buffer.
 ### Antipattern Category
@@ -11099,7 +10689,6 @@ increase
 
 ### Message
 WQ increase stacks from 1200 to 1250 bytes
-message: WQ increase stacks from 1200 to 1250 bytes
 ### Antipattern Category
 
 ### Keyword
@@ -11113,7 +10702,6 @@ increase
 
 ### Message
 FailureDetector - Increase min value of FD_FAIL_P/R to 60 degrees
-message: FailureDetector - Increase min value of FD_FAIL_P/R to 60 degrees
 ### Antipattern Category
 
 ### Keyword
@@ -11127,7 +10715,6 @@ increase
 
 ### Message
 px4_fmu-v4: increase uart buffer sizes for vision algorithms (#12199)
-message: px4_fmu-v4: increase uart buffer sizes for vision algorithms (#12199)
 ### Antipattern Category
 
 ### Keyword
@@ -11141,7 +10728,6 @@ increase
 
 ### Message
 NuttX boards increase task limit 32 -> 64 (#12230)
-message: NuttX boards increase task limit 32 -> 64 (#12230)
 ### Antipattern Category
 
 ### Keyword
@@ -11155,7 +10741,6 @@ increase
 
 ### Message
 Jenkins HIL increase boot timeout for stackcheck build
-message: Jenkins HIL increase boot timeout for stackcheck build
 
  - px4_fmu-v5_stackcheck remove extra drivers (to try and get the system
 usuable)
@@ -11172,7 +10757,6 @@ increase
 
 ### Message
 mc rate controller: add I term reduction factor
-message: mc rate controller: add I term reduction factor
 
 Reduce the I gain for high rate errors to reduce bounce-back effects after
 flips. Up to 200 degrees the gain is almost not reduced (<25%), so this
@@ -11200,7 +10784,6 @@ increase
 
 ### Message
 mc airframes: increase I gains a bit
-message: mc airframes: increase I gains a bit
 
 Previous commit allows to increase them again.
 Partially reverts commit 6c3e79f3614f0060d5998c39be358512101252ff.
@@ -11217,7 +10800,6 @@ increase
 
 ### Message
 mc_att_control: Increase default rate integral gain
-message: mc_att_control: Increase default rate integral gain
 
 @bkueang and me realized that on every frame we tune the integral gain for
 the roll and pitch rate controller is much too low. Usually it needs to be
@@ -11236,7 +10818,6 @@ performance
 
 ### Message
 systemcmds/top: increase stack 200 bytes
-message: systemcmds/top: increase stack 200 bytes
 
  - this is necessary after most boards increased CONFIG_MAX_TASKS 32 -> 64
 ### Antipattern Category
@@ -11252,7 +10833,6 @@ increase
 
 ### Message
 Upated Babyshark VTOL config and vtol_defaults
-message: Upated Babyshark VTOL config and vtol_defaults
 
 Updated the babyshark default  parameters for improved flight performance,
 as well as two MPC parameters in vtol_defaults for smoother hovering with VTOLS"
@@ -11271,7 +10851,6 @@ performance
 
 ### Message
 Jenkins hardware increase timeout 10 -> 20 minutes
-message: Jenkins hardware increase timeout 10 -> 20 minutes
 ### Antipattern Category
 
 ### Keyword
@@ -11285,7 +10864,6 @@ increase
 
 ### Message
 srf02 driver: Move member variable initialization to declarations, standardize against other drivers and format. (#11891)
-message: srf02 driver: Move member variable initialization to declarations, standardize against other drivers and format. (#11891)
 
 * Migrate variable initialization from constructor list to declarations, standardize whitespace formatting, and alphabetize/organize order of methods and variables in srf02.cpp.
 
@@ -11305,7 +10883,6 @@ increase
 
 ### Message
 mc_pos_control: increase stack size by 100 bytes
-message: mc_pos_control: increase stack size by 100 bytes
 ### Antipattern Category
 
 ### Keyword
@@ -11319,7 +10896,6 @@ increase
 
 ### Message
 increase cutoff margin for alias matching
-message: increase cutoff margin for alias matching
 ### Antipattern Category
 
 ### Keyword
@@ -11333,7 +10909,6 @@ increase
 
 ### Message
 MPC_Z_VEL_I: changed default from 0.02 to 0.1
-message: MPC_Z_VEL_I: changed default from 0.02 to 0.1
 - generally better attitude tracking
 - much better altitude control immediately after takeoff (hover throttle offset)
 - faster landing detection
@@ -11352,7 +10927,6 @@ faster
 
 ### Message
 increase default fixed wing rate controller I term
-message: increase default fixed wing rate controller I term
 
 Signed-off-by: RomanBapst <bapstroman@gmail.com>
 ### Antipattern Category
@@ -11368,7 +10942,6 @@ increase
 
 ### Message
 task_stack_info increase task_name length to match NuttX CONFIG_TASK_NAME_SIZE
-message: task_stack_info increase task_name length to match NuttX CONFIG_TASK_NAME_SIZE
 ### Antipattern Category
 
 ### Keyword
@@ -11382,7 +10955,6 @@ increase
 
 ### Message
 increase mc_pos_control stack from 1300 to 1500
-message: increase mc_pos_control stack from 1300 to 1500
 ### Antipattern Category
 
 ### Keyword
@@ -11396,7 +10968,6 @@ increase
 
 ### Message
 NuttX increase HPWORK and LPWORK stack by 256 bytes
-message: NuttX increase HPWORK and LPWORK stack by 256 bytes
 ### Antipattern Category
 
 ### Keyword
@@ -11410,7 +10981,6 @@ increase
 
 ### Message
 GTest functional tests that include parameters and uORB messaging (#12521)
-message: GTest functional tests that include parameters and uORB messaging (#12521)
 
 * Add kdevelop to gitignore
 
@@ -11450,7 +11020,6 @@ memory
 
 ### Message
 logger: unconditionally call _writer.notify()
-message: logger: unconditionally call _writer.notify()
 
 The file writer thread could get into a state where it blocked infinitely
 on pthread_cond_wait() (or rather until the logging stops).
@@ -11482,7 +11051,6 @@ increase
 
 ### Message
 WQ decrease att_pos_ctrl stack
-message: WQ decrease att_pos_ctrl stack
 ### Antipattern Category
 
 ### Keyword
@@ -11496,7 +11064,6 @@ decrease
 
 ### Message
 drivers/gps: increase task stack
-message: drivers/gps: increase task stack
 ### Antipattern Category
 
 ### Keyword
@@ -11510,7 +11077,6 @@ increase
 
 ### Message
 STACK_MAIN increase default 1024 -> 2048
-message: STACK_MAIN increase default 1024 -> 2048
 ### Antipattern Category
 
 ### Keyword
@@ -11524,7 +11090,6 @@ increase
 
 ### Message
 commander increase cpu overload threshold
-message: commander increase cpu overload threshold
 
  * the large 20% margin is no longer appropriate now that nearly all work in the system is
 
@@ -11544,7 +11109,6 @@ increase
 
 ### Message
 Update submodule matrix to latest Sun Sep 22 08:37:30 EDT 2019
-message: Update submodule matrix to latest Sun Sep 22 08:37:30 EDT 2019
 
     - matrix in PX4/Firmware (8b1f9546aabfe6ab2a0431f1d5af6dcc976d4f59): https://github.com/PX4/Matrix/commit/60c9c99dcc44ea12bed0c3f9b95d01e2aa6d7d9e
     - matrix current upstream: https://github.com/PX4/Matrix/commit/c34e8dc98fd05ea55dcd4c9fc551b11a3d23a601
@@ -11571,7 +11135,6 @@ infinite
 
 ### Message
 Guidance feature for Collision Prevention (#13017)
-message: Guidance feature for Collision Prevention (#13017)
 
 * add guidance
 
@@ -11615,7 +11178,6 @@ increase
 
 ### Message
 frsky_telemetry: increase stack by 60 bytes
-message: frsky_telemetry: increase stack by 60 bytes
 ### Antipattern Category
 
 ### Keyword
@@ -11629,7 +11191,6 @@ increase
 
 ### Message
 dshot: move implementation to a separate directory & library
-message: dshot: move implementation to a separate directory & library
 
 So that the static memory overhead is not added to targets w/o dshot
 ### Antipattern Category
@@ -11645,7 +11206,6 @@ memory
 
 ### Message
 dshot: reduce static buffer size
-message: dshot: reduce static buffer size
 
 And handle failures of up_dshot_init().
 
@@ -11664,7 +11224,6 @@ memory
 
 ### Message
 io_timer: fix potential invalid memory access
-message: io_timer: fix potential invalid memory access
 ### Antipattern Category
 
 ### Keyword
@@ -11678,7 +11237,6 @@ memory
 
 ### Message
 WorkQueue: avoid potential semaphore counter overflow
-message: WorkQueue: avoid potential semaphore counter overflow
 
 This could happen in the following cases:
 - IRQ/publisher rate is faster than the processing rate, and therefore
@@ -11700,7 +11258,6 @@ faster
 
 ### Message
 top: decrease priority below IMU sensor WQ threads
-message: top: decrease priority below IMU sensor WQ threads
 
  - otherwise top can potentially disrupt with sensor sampling
 ### Antipattern Category
@@ -11716,7 +11273,6 @@ decrease
 
 ### Message
 systemcmds/tests: IntrusiveQueue and List fix memory leaks
-message: systemcmds/tests: IntrusiveQueue and List fix memory leaks
 ### Antipattern Category
 
 ### Keyword
@@ -11730,7 +11286,6 @@ memory
 
 ### Message
 px4_posix: increase posix stack overhead (mostly for ASan)
-message: px4_posix: increase posix stack overhead (mostly for ASan)
 
  - sync address sanitizer SITL tests
 ### Antipattern Category
@@ -11746,7 +11301,6 @@ increase
 
 ### Message
 boards: increase CONFIG_MAX_TASKS 32->64 on all F7s (#13285)
-message: boards: increase CONFIG_MAX_TASKS 32->64 on all F7s (#13285)
 
 On more complicated setups it's still possible to exceed 32 tasks. For example fmu-v5 with mavlink on every telem (+ USB), external spi usage (pmw3901), gimbal (vmount), multiple i2c sensors, and camera feedback is 35 tasks (with top running). This is a fairly extreme case, so I'm only going to increase CONFIG_MAX_TASKS on newer F7 boards.
 ### Antipattern Category
@@ -11762,7 +11316,6 @@ increase
 
 ### Message
 clang-tidy: enable performance-unnecessary-value-param and fix
-message: clang-tidy: enable performance-unnecessary-value-param and fix
 ### Antipattern Category
 
 ### Keyword
@@ -11776,7 +11329,6 @@ performance
 
 ### Message
 px_uploader.py: increase estimated erase time
-message: px_uploader.py: increase estimated erase time
 
 The 9 seconds to erase a board probably still come from the FMU-v1 and
 Pixhawks with only 1 MB flash. By now, many targets have 2 MB flash and
@@ -11795,7 +11347,6 @@ increase
 
 ### Message
 smbus: fix invalid memory access in read_word()
-message: smbus: fix invalid memory access in read_word()
 
 read_word() expected 3 bytes (uint16_t + PEC byte), but was passed an
 address to an uint16_t value.
@@ -11814,7 +11365,6 @@ memory
 
 ### Message
 fmuk66-v3:Fix hang on SDIO card removal/reinsertion
-message: fmuk66-v3:Fix hang on SDIO card removal/reinsertion
 
    The interrupt driven card detect logic was enabled
    but the auto mounter was not. That interrupt was
@@ -11837,7 +11387,6 @@ hang
 
 ### Message
 px4io-v2:Resonable Def config memory - verified by inspection
-message: px4io-v2:Resonable Def config memory - verified by inspection
 ### Antipattern Category
 
 ### Keyword
@@ -11851,7 +11400,6 @@ memory
 
 ### Message
 NuttX cmake improve dependencies between configure and runtime
-message: NuttX cmake improve dependencies between configure and runtime
 
  - attempting to make the build slightly more robust to incomplete configures or other bad states.
 ### Antipattern Category
@@ -11867,7 +11415,6 @@ runtime
 
 ### Message
 cmake NuttX linker print memory usage
-message: cmake NuttX linker print memory usage
 ### Antipattern Category
 
 ### Keyword
@@ -11881,7 +11428,6 @@ memory
 
 ### Message
 navigator: fix triplet resetting/publication logic (#13534)
-message: navigator: fix triplet resetting/publication logic (#13534)
 
 The navigator has a notion of resetting the triplets which means the
 
@@ -11945,7 +11491,6 @@ slower
 
 ### Message
 px4_work_queue: increase wq:hp_default stack 1500->1800 bytes (found by stackcheck)
-message: px4_work_queue: increase wq:hp_default stack 1500->1800 bytes (found by stackcheck)
 ### Antipattern Category
 
 ### Keyword
@@ -11959,7 +11504,6 @@ increase
 
 ### Message
 gyro calibration: speedup from 20s to 1s
-message: gyro calibration: speedup from 20s to 1s
 
 It's not required to take that many samples, 1 second is enough.
 This is confirmed by looking at the standard deviation over 10 calibrations:
@@ -11978,7 +11522,6 @@ increase
 
 ### Message
 bloaty show full demangle, increase number of lines, and combine segments + sections
-message: bloaty show full demangle, increase number of lines, and combine segments + sections
 ### Antipattern Category
 
 ### Keyword
@@ -11992,7 +11535,6 @@ increase
 
 ### Message
 tiltrotor SITL config: increase transition time from 1.5 to 5 seconds
-message: tiltrotor SITL config: increase transition time from 1.5 to 5 seconds
 - avoids tilting the motors forward too fast
 
 Signed-off-by: RomanBapst <bapstroman@gmail.com>
@@ -12009,7 +11551,6 @@ fast
 
 ### Message
 px4_fmu-v5x:Add 4096 for ism330dlc to BOARD_DMA_ALLOC_POOL_SIZE
-message: px4_fmu-v5x:Add 4096 for ism330dlc to BOARD_DMA_ALLOC_POOL_SIZE
 
    ISM330DLC uses 4096 of memory allocated from DMA pool.
    This depleted the pool to the point the next allocation
@@ -12028,7 +11569,6 @@ memory
 
 ### Message
 px4_work_queue: increase hp_default stack 1800 -> 1900 bytes
-message: px4_work_queue: increase hp_default stack 1800 -> 1900 bytes
 ### Antipattern Category
 
 ### Keyword
@@ -12042,7 +11582,6 @@ increase
 
 ### Message
 PreFlightChecker: add spike limit argument for innovation check and
-message: PreFlightChecker: add spike limit argument for innovation check and
 increase optical flow test limits.
 ### Antipattern Category
 
@@ -12057,7 +11596,6 @@ increase
 
 ### Message
 Revert "SITL shell: Do math using the shell"
-message: Revert "SITL shell: Do math using the shell"
 
 This reverts commit be35c4857be2483050d9a34987aeda3c6935b516.
 
@@ -12076,7 +11614,6 @@ slower
 
 ### Message
 mavsdk_tests: don't constrain speed factor to int
-message: mavsdk_tests: don't constrain speed factor to int
 
 Speed factors slower than 1 should also be possible.
 ### Antipattern Category
@@ -12092,7 +11629,6 @@ slower
 
 ### Message
 mc_pos_control: do not ignore EKF vz with terrain following
-message: mc_pos_control: do not ignore EKF vz with terrain following
 
 This caused bad altitude control performance when enabling
 terrain following. It even leads to complete vertical control
@@ -12113,7 +11649,6 @@ performance
 
 ### Message
 create temperature_compensation module
-message: create temperature_compensation module
 
  - this is a new module for temperature compensation that consolidates the functionality previously handled in the sensors module (calculating runtime thermal corrections) and the events module (online thermal calibration)
 
@@ -12131,7 +11666,6 @@ memory
 
 ### Message
 Coverage tests: Run faster
-message: Coverage tests: Run faster
 We want the coverage tests to run at the maximum speedup factor the CI machine can deliver.
 ### Antipattern Category
 
@@ -12146,7 +11680,6 @@ faster
 
 ### Message
 nxp_fmurt1062-v1:Performance tuning
-message: nxp_fmurt1062-v1:Performance tuning
 ### Antipattern Category
 
 ### Keyword
@@ -12160,7 +11693,6 @@ performance
 
 ### Message
 nxp_fmurt1062-v1:Memory Reorg
-message: nxp_fmurt1062-v1:Memory Reorg
 ### Antipattern Category
 
 ### Keyword
@@ -12174,7 +11706,6 @@ memory
 
 ### Message
 px4io: fix array regs[] size (#14135)
-message: px4io: fix array regs[] size (#14135)
 
 may cause memory override if _max_controls larger then _max_actuators
 ### Antipattern Category
@@ -12190,7 +11721,6 @@ memory
 
 ### Message
 invensense icm20602 improvements
-message: invensense icm20602 improvements
 
  - checked register mechanism and simple watchdog
     - driver checks for errors gradually and can reconfigure itself
@@ -12211,7 +11741,6 @@ slower
 
 ### Message
 uORB_tests increase stack
-message: uORB_tests increase stack
 ### Antipattern Category
 
 ### Keyword
@@ -12225,7 +11754,6 @@ increase
 
 ### Message
 logger: fix thread deadlock
-message: logger: fix thread deadlock
 ### Antipattern Category
 
 ### Keyword
@@ -12239,7 +11767,6 @@ deadlock
 
 ### Message
 boards: increase LPWORKSTACKSIZE 1536 -> 1600
-message: boards: increase LPWORKSTACKSIZE 1536 -> 1600
 ### Antipattern Category
 
 ### Keyword
@@ -12253,7 +11780,6 @@ increase
 
 ### Message
 uORB: add bitset for faster orb_exists check and remove uORB::Subscription lazy subscribe hack/optimization
-message: uORB: add bitset for faster orb_exists check and remove uORB::Subscription lazy subscribe hack/optimization
 
  - add PX4 bitset and atomic_bitset with testing
 
@@ -12273,7 +11799,6 @@ faster
 
 ### Message
 Update submodule sitl_gazebo to latest Wed Mar 11 12:38:07 UTC 2020
-message: Update submodule sitl_gazebo to latest Wed Mar 11 12:38:07 UTC 2020
 
     - sitl_gazebo in PX4/Firmware (88c9761f1fd6124955a9c218bdc5528a4ee15ab1): https://github.com/PX4/sitl_gazebo/commit/8569aec5bb709acb2fec7ccb5a5a4405f0cdec2a
     - sitl_gazebo current upstream: https://github.com/PX4/sitl_gazebo/commit/458e58f7973df2e211648e78b7277deefa59eca6
@@ -12312,7 +11837,6 @@ increase
 
 ### Message
 sensors: move to WQ
-message: sensors: move to WQ
 
 Running the sensors module out of the same WQ thread as the estimator, position, and attitude controllers is a bit safer and prevents potential priority and starvation issues. There is a very small increase in latency (~50 us) between sensors and ekf2 execution (on average). This also saves a little bit of memory (~ 3 kB) and cpu (~1-1.5% depending on the board).
 ### Antipattern Category
@@ -12328,7 +11852,6 @@ memory
 
 ### Message
 boards: increase STDIO buffer size where we can afford it
-message: boards: increase STDIO buffer size where we can afford it
 ### Antipattern Category
 
 ### Keyword
@@ -12342,7 +11865,6 @@ increase
 
 ### Message
 uavcan:Support runtime setting of CAN interfaces
-message: uavcan:Support runtime setting of CAN interfaces
 ### Antipattern Category
 
 ### Keyword
@@ -12356,7 +11878,6 @@ runtime
 
 ### Message
 Gazebo plane model: Enable tighter turns
-message: Gazebo plane model: Enable tighter turns
 This helps to fly smaller / faster test missions.
 ### Antipattern Category
 
@@ -12371,7 +11892,6 @@ faster
 
 ### Message
 MC_HTE: Stability improvements
-message: MC_HTE: Stability improvements
 
 - Use a low-passed value of the signed innovation test ratio to trigger
 the state variance boost. The threshold of 0.2 has been chosen using log
@@ -12398,7 +11918,6 @@ increase
 
 ### Message
 MPC: add updateHoverThrust function
-message: MPC: add updateHoverThrust function
 
 This function updates the vertical velocity integrator with the change
 in hover thrust to avoid propagating discontinuities through the
@@ -12419,7 +11938,6 @@ faster
 
 ### Message
 i2c spi: add type to I2CSPIInstance
-message: i2c spi: add type to I2CSPIInstance
 
 Needed to distinguish runtime instance types of the same driver (e.g.
 bmi055 accel vs gyro).
@@ -12436,7 +11954,6 @@ runtime
 
 ### Message
 refactor I2CSPIInstance: store running instances in a global linked list
-message: refactor I2CSPIInstance: store running instances in a global linked list
 
 instead of a static per-driver array.
 
@@ -12460,7 +11977,6 @@ runtime
 
 ### Message
 refactor atxxxx: use driver base class
-message: refactor atxxxx: use driver base class
 
 and increase update rate to 20Hz
 ### Antipattern Category
@@ -12476,7 +11992,6 @@ increase
 
 ### Message
 navigator: fix edge case with valid idle setpoint
-message: navigator: fix edge case with valid idle setpoint
 
 This is an attempt to fix an edge case in the triplet publication which
 can lead to crashes on autopilots with slow SD cards.
@@ -12507,7 +12022,6 @@ slow
 
 ### Message
 boards: enable NuttX SPI DMA buffers
-message: boards: enable NuttX SPI DMA buffers
 
  - update to NuttX with stm32f4 and stm32f7 SPI DMA internal buffers
 
@@ -12529,7 +12043,6 @@ decrease
 
 ### Message
 px4_work_queue: increase SPI stack uniformly to silence warnings
-message: px4_work_queue: increase SPI stack uniformly to silence warnings
 ### Antipattern Category
 
 ### Keyword
@@ -12543,7 +12056,6 @@ increase
 
 ### Message
 AutoSmoothVel: desynchronize XY from Z for small changes in speed
-message: AutoSmoothVel: desynchronize XY from Z for small changes in speed
 
 This fixes the issue that makes the drone slow-down even in straight
 lines due to the Z component being constrained to a really small value
@@ -12560,7 +12072,6 @@ slow
 
 ### Message
 sensor_accel_fifo increase to 32 samples
-message: sensor_accel_fifo increase to 32 samples
 ### Antipattern Category
 
 ### Keyword
@@ -12574,7 +12085,6 @@ increase
 
 ### Message
 SMBus battery (a.k.a. smart battery) enhancement. (#14496)
-message: SMBus battery (a.k.a. smart battery) enhancement. (#14496)
 
  * Enhancement: State of health, and max_error value is added. Both shows battery health of SMBUS smart battery.
 
@@ -12616,7 +12126,6 @@ fast
 
 ### Message
 SITL configs: improve L1 tracking and increase backtransition duration
-message: SITL configs: improve L1 tracking and increase backtransition duration
 -decrease L1 period for tighter mission tracking in fw mode
 - increase backtransition duration, we can now do this is we have active
 deceleration control
@@ -12635,7 +12144,6 @@ increase
 
 ### Message
 arch.sh: use binary repository for gazebo
-message: arch.sh: use binary repository for gazebo
 
 This makes installation a lot faster and less error prone.
 ### Antipattern Category
@@ -12651,7 +12159,6 @@ faster
 
 ### Message
 boards: STM32F76xxx/STM32F77xxx linker add ITCM RAM and .ramfuncs handling
-message: boards: STM32F76xxx/STM32F77xxx linker add ITCM RAM and .ramfuncs handling
 
  - this doesn't currently change anything, but gets us ready to start
 experimenting with using the small amount of instruction tightly memory
@@ -12670,7 +12177,6 @@ memory
 
 ### Message
 px4_fmu-v5_stackcheck: update stack sizes and add to Jenkins
-message: px4_fmu-v5_stackcheck: update stack sizes and add to Jenkins
 
  - increase stack sizes to run cleanly under stackcheck
 
@@ -12690,7 +12196,6 @@ increase
 
 ### Message
 Jenkins: increase history for remaining builds
-message: Jenkins: increase history for remaining builds
 ### Antipattern Category
 
 ### Keyword
@@ -12704,7 +12209,6 @@ increase
 
 ### Message
 boards: px4_io-v2 defconfig optimizations to save memory
-message: boards: px4_io-v2 defconfig optimizations to save memory
 
 * disable CONFIG_ARMV7M_MEMCPY to save flash
 
@@ -12736,7 +12240,6 @@ memory
 
 ### Message
 Update submodule nuttx to latest Sat Apr 25 12:38:14 UTC 2020
-message: Update submodule nuttx to latest Sat Apr 25 12:38:14 UTC 2020
 
     - nuttx in PX4/Firmware (2c938af28051250f90baf7c411179b9b01dc5d0c): https://github.com/PX4/NuttX/commit/7fffab1610d2ea08a95383febd0579e0037b6b51
     - nuttx current upstream: https://github.com/PX4/NuttX/commit/66b4f2c4f2128994f8e8a908d4888f6d37565cfd
@@ -12757,7 +12260,6 @@ memory
 
 ### Message
 Update submodule ecl to latest Mon Apr 27 12:39:40 UTC 2020
-message: Update submodule ecl to latest Mon Apr 27 12:39:40 UTC 2020
 
     - ecl in PX4/Firmware (27232514fcaf04924ecb405e144615c23ac6e2e0): https://github.com/PX4/ecl/commit/8a9d961f0d7b0cf6371ab1fcd6d0d2ccb581d3d1
     - ecl current upstream: https://github.com/PX4/ecl/commit/8b6d665a1331f94091caf2f262e09d508eb8975c
@@ -12782,7 +12284,6 @@ increase
 
 ### Message
 px4_work_queue: increase wq:attitude_ctrl stack
-message: px4_work_queue: increase wq:attitude_ctrl stack
 ### Antipattern Category
 
 ### Keyword
@@ -12796,7 +12297,6 @@ increase
 
 ### Message
 bmm150: more explicit data conversion & reduce to 30Hz
-message: bmm150: more explicit data conversion & reduce to 30Hz
 
 - 30Hz is the sensors max update rate in continous mode
   (though not in forced mode as we are using it)
@@ -12814,7 +12314,6 @@ increase
 
 ### Message
 bmm150: cleanup, slightly increase data accuracy
-message: bmm150: cleanup, slightly increase data accuracy
 
 - increased REP_XY and REP_Z: improves accuracy a bit, while increasing
   measurement time (still allows to go to 50Hz, previous max was 100Hz)
@@ -12834,7 +12333,6 @@ increase
 
 ### Message
 pwm_out: update pwm outputs up to twice as fast as actual pwm frequency
-message: pwm_out: update pwm outputs up to twice as fast as actual pwm frequency
 
  - this is done to minimize real end-to-end latency
  - actual pulse width only updated for next period regardless of output module
@@ -12852,7 +12350,6 @@ fast
 
 ### Message
 Update submodule ecl to latest Tue May 12 00:39:54 UTC 2020
-message: Update submodule ecl to latest Tue May 12 00:39:54 UTC 2020
 
     - ecl in PX4/Firmware (286bf4f0b911fcc040788117ea79c432f6a95a83): https://github.com/PX4/ecl/commit/97b437233e6aad5ddb8a4511697a38ced7bc9b87
     - ecl current upstream: https://github.com/PX4/ecl/commit/03191847f9c162dedc2cb45ff775b75cbc9c8b36
@@ -12873,7 +12370,6 @@ increase
 
 ### Message
 Support odometry velocity in body and local frame (#14703)
-message: Support odometry velocity in body and local frame (#14703)
 
 * Update submodule ECL
 
@@ -12893,7 +12389,6 @@ increase
 
 ### Message
 v5x defconfig: increase TELEM2 UART TX buffer size to 3000
-message: v5x defconfig: increase TELEM2 UART TX buffer size to 3000
 
 Required for very high-rate log streaming @3MBit baudrate.
 ### Antipattern Category
@@ -12909,7 +12404,6 @@ increase
 
 ### Message
 px4_work_queue: minor status changes
-message: px4_work_queue: minor status changes
 
  - only record start time on first run rather than init
  - increase name length
@@ -12928,7 +12422,6 @@ increase
 
 ### Message
 ROMFS: holybro s500 decrease filter defaults
-message: ROMFS: holybro s500 decrease filter defaults
 ### Antipattern Category
 
 ### Keyword
@@ -12942,7 +12435,6 @@ decrease
 
 ### Message
 ekf2: increase default baro noise 2 -> 3.5 m
-message: ekf2: increase default baro noise 2 -> 3.5 m
 ### Antipattern Category
 
 ### Keyword
@@ -12956,7 +12448,6 @@ increase
 
 ### Message
 ekf2: decrease default GPS horizontal velocity noise
-message: ekf2: decrease default GPS horizontal velocity noise
 ### Antipattern Category
 
 ### Keyword
@@ -12970,7 +12461,6 @@ decrease
 
 ### Message
 selectively increase optimization -Os -> -O2
-message: selectively increase optimization -Os -> -O2
 
  - targetted at modules/libraries that benefit without drastically
 increasing flash usage
@@ -12988,7 +12478,6 @@ increase
 
 ### Message
 Jenkins HIL test fix sensor timeouts
-message: Jenkins HIL test fix sensor timeouts
 
  - stop logger when running tests
  - decrease test priorities
@@ -13006,7 +12495,6 @@ decrease
 
 ### Message
 imu/invensense/mpu6000: minor improvements
-message: imu/invensense/mpu6000: minor improvements
 
  - at start perform full sensor signal path reset and wait for max time
  - issue full sensor reset on any error
@@ -13025,7 +12513,6 @@ faster
 
 ### Message
 Hex/Proficnc Cube Yellow: align firmware location in flash memory to be able to use the default bootloader
-message: Hex/Proficnc Cube Yellow: align firmware location in flash memory to be able to use the default bootloader
 ### Antipattern Category
 
 ### Keyword
@@ -13039,7 +12526,6 @@ memory
 
 ### Message
 mc_pos_control_params: set the ground slow down speed to the default maximum speed
-message: mc_pos_control_params: set the ground slow down speed to the default maximum speed
 
 This results in no change with defaults but a slow down to 10m/s if the maxiumum speed is set higher than that.
 ### Antipattern Category
@@ -13055,7 +12541,6 @@ slow
 
 ### Message
 wq:attitude_ctrl small stack increase
-message: wq:attitude_ctrl small stack increase
 ### Antipattern Category
 
 ### Keyword
@@ -13069,7 +12554,6 @@ increase
 
 ### Message
 decrease all wq:SPIx stack
-message: decrease all wq:SPIx stack
 ### Antipattern Category
 
 ### Keyword
@@ -13083,7 +12567,6 @@ decrease
 
 ### Message
 add support to FastRTPS 2.0.0 (Fast-DDS)
-message: add support to FastRTPS 2.0.0 (Fast-DDS)
 ### Antipattern Category
 
 ### Keyword
@@ -13097,7 +12580,6 @@ fast
 
 ### Message
 Update submodule ecl to latest Tue Jun 30 00:38:47 UTC 2020
-message: Update submodule ecl to latest Tue Jun 30 00:38:47 UTC 2020
 
     - ecl in PX4/Firmware (bd4d3f2b9929271b2616d2e1d6952059a7e8bc72): https://github.com/PX4/ecl/commit/e4b44f704bb641fa93bedc81734c5249fcd9ed42
     - ecl current upstream: https://github.com/PX4/ecl/commit/5356077a3244a9a29adfae4aeaaab900cd28e9e8
@@ -13133,7 +12615,6 @@ increase
 
 ### Message
 load_mon: decrease warning threshold for stack check builds
-message: load_mon: decrease warning threshold for stack check builds
 
  - enabling stack check increases stack usage and will assert if there's
 any overflow
@@ -13150,7 +12631,6 @@ decrease
 
 ### Message
 mavsdk_tests: increase the poll time resolution
-message: mavsdk_tests: increase the poll time resolution
 
 With only 10 steps for e.g. 60 seconds we are likely to miss updates.
 ### Antipattern Category
@@ -13166,7 +12646,6 @@ increase
 
 ### Message
 FlightTaskAuto: allow rc assist to stop descend
-message: FlightTaskAuto: allow rc assist to stop descend
 
 Before the autohority was only enough to slow down the descend but not
 stop to zero vertical velocity.
@@ -13183,7 +12662,6 @@ slow
 
 ### Message
 load_mon updates
-message: load_mon updates
 
  - increase rate
  - cpu load calculation grab timestamp atomically
@@ -13203,7 +12681,6 @@ increase
 
 ### Message
 fw_pos_control_l1: if using air data (baro) copy every cycle
-message: fw_pos_control_l1: if using air data (baro) copy every cycle
 
  - vehicle_air_data won't necessary have an update every iteration and these adjusted throttle values aren't stored
 
@@ -13221,7 +12698,6 @@ faster
 
 ### Message
 logger: add full commander and safety logging by default
-message: logger: add full commander and safety logging by default
 
  - increase battery_status rate to be useful
 ### Antipattern Category
@@ -13237,7 +12713,6 @@ increase
 
 ### Message
 wq:attitude_ctrl: small stack increase to silence warning
-message: wq:attitude_ctrl: small stack increase to silence warning
 ### Antipattern Category
 
 ### Keyword
@@ -13251,7 +12726,6 @@ increase
 
 ### Message
 Tools: abort SITL start if gzserver fails
-message: Tools: abort SITL start if gzserver fails
 
 Sometimes gzserver seems to not start or not start fast enough. In this
 case, instead of stalling forever, it would be nice to abort.
@@ -13268,7 +12742,6 @@ fast
 
 ### Message
 cmake: only allow gold linker for posix builds
-message: cmake: only allow gold linker for posix builds
 
  - the gold linker doesn't currently work for NuttX builds
  - NuttX skip --print-memory-usage if using the GOLD linker
@@ -13286,7 +12759,6 @@ memory
 
 ### Message
 logger: decrease try subsribe interval 1000 ms -> 20 ms
-message: logger: decrease try subsribe interval 1000 ms -> 20 ms
 ### Antipattern Category
 
 ### Keyword
@@ -13300,7 +12772,6 @@ decrease
 
 ### Message
 logger: SDLOG_PROFILE remove estimator replay from default to minimize log rate
-message: logger: SDLOG_PROFILE remove estimator replay from default to minimize log rate
 
  - log full sensor_combined by default for now
 
@@ -13320,7 +12791,6 @@ decrease
 
 ### Message
 cdev: remove unnecessary virtuals and increase opt level
-message: cdev: remove unnecessary virtuals and increase opt level
 
  - poll, poll_notify, register_class_devname, unregister_class_devname aren't virtual
  - increase max optimization level on platforms that aren't flash constrained (MAX_CUSTOM_OPT_LEVEL)
@@ -13337,7 +12807,6 @@ increase
 
 ### Message
 wq:attitude_ctrl increase stack
-message: wq:attitude_ctrl increase stack
 ### Antipattern Category
 
 ### Keyword
@@ -13351,7 +12820,6 @@ increase
 
 ### Message
 wq:attitude_ctrl increase stack by 16 bytes (again)
-message: wq:attitude_ctrl increase stack by 16 bytes (again)
 ### Antipattern Category
 
 ### Keyword
@@ -13365,7 +12833,6 @@ increase
 
 ### Message
 Only use roll/pitch not centered for RC override, and increase override threshold
-message: Only use roll/pitch not centered for RC override, and increase override threshold
 ### Antipattern Category
 
 ### Keyword
@@ -13379,7 +12846,6 @@ increase
 
 ### Message
 commander: increase COM_ARM_MAG_ANG 35 -> 45 degrees
-message: commander: increase COM_ARM_MAG_ANG 35 -> 45 degrees
 
  - in practice this is mostly useful for identifying incorrect rotations
 which we mostly have in 45 degree increments
@@ -13397,7 +12863,6 @@ increase
 
 ### Message
 boards: px4/fmu-v5_debug increase interrupt stack 512 -> 768 bytes
-message: boards: px4/fmu-v5_debug increase interrupt stack 512 -> 768 bytes
 ### Antipattern Category
 
 ### Keyword
@@ -13411,7 +12876,6 @@ increase
 
 ### Message
 Jenkins: hardware increase timeout
-message: Jenkins: hardware increase timeout
 ### Antipattern Category
 
 ### Keyword
@@ -13425,7 +12889,6 @@ increase
 
 ### Message
 boards: px4_fmu-v5_debug increase LPWORK stack 1632 -> 1728 bytes
-message: boards: px4_fmu-v5_debug increase LPWORK stack 1632 -> 1728 bytes
 ### Antipattern Category
 
 ### Keyword
@@ -13439,7 +12902,6 @@ increase
 
 ### Message
 gps: fix memory leak on module exit (delete _helper)
-message: gps: fix memory leak on module exit (delete _helper)
 ### Antipattern Category
 
 ### Keyword
@@ -13453,7 +12915,6 @@ memory
 
 ### Message
 mavsdk_tests: use speed factor, increase timeouts
-message: mavsdk_tests: use speed factor, increase timeouts
 
 We had not actually properly adjusted the timeout to the lockstep speed
 factor. Once we did that, we had to increase the timeouts quite a bit to
@@ -13471,7 +12932,6 @@ increase
 
 ### Message
 mavsdk_tests: increase timeouts yet again
-message: mavsdk_tests: increase timeouts yet again
 
 This is after using PX4 time to check for timeouts.
 ### Antipattern Category
@@ -13487,7 +12947,6 @@ increase
 
 ### Message
 mavsdk_tests: try with faster RC rate
-message: mavsdk_tests: try with faster RC rate
 ### Antipattern Category
 
 ### Keyword
@@ -13501,7 +12960,6 @@ faster
 
 ### Message
 mavsdk_tests: fly forward a bit longer
-message: mavsdk_tests: fly forward a bit longer
 
 Hopefully, that's long enough for slow VTOLs.
 ### Antipattern Category
@@ -13517,7 +12975,6 @@ slow
 
 ### Message
 mavsdk_tests: increase time for manual tests
-message: mavsdk_tests: increase time for manual tests
 ### Antipattern Category
 
 ### Keyword
@@ -13531,7 +12988,6 @@ increase
 
 ### Message
 logger: log_writer_file increase stack 1170 -> 1472 bytes (#15765)
-message: logger: log_writer_file increase stack 1170 -> 1472 bytes (#15765)
 ### Antipattern Category
 
 ### Keyword
@@ -13545,7 +13001,6 @@ increase
 
 ### Message
 uORB: increase ORB_MULTI_MAX_INSTANCES 4 -> 10
-message: uORB: increase ORB_MULTI_MAX_INSTANCES 4 -> 10
 
  - put more realistic bounds on maximum number of battery instances, gps, etc
 ### Antipattern Category
@@ -13561,7 +13016,6 @@ increase
 
 ### Message
 Jenkins: SITL tests disable ninja build to reduce build parallelism
-message: Jenkins: SITL tests disable ninja build to reduce build parallelism
 
  - test slaves have limited memory
 ### Antipattern Category
@@ -13577,7 +13031,6 @@ memory
 
 ### Message
 mavlink: increase stack 2650 -> 2848 bytes (#15821)
-message: mavlink: increase stack 2650 -> 2848 bytes (#15821)
 ### Antipattern Category
 
 ### Keyword
@@ -13591,7 +13044,6 @@ increase
 
 ### Message
 uavcan: Increase uavcan main stack size
-message: uavcan: Increase uavcan main stack size
 
 I observed stack overflows when executing `uavcan params list`, so the
 stack size probably needs to be increased.
@@ -13610,7 +13062,6 @@ increase
 
 ### Message
 logger: increase logging rate of airspeed_validated from 1Hz to 5Hz
-message: logger: increase logging rate of airspeed_validated from 1Hz to 5Hz
 
 Signed-off-by: Silvan Fuhrer <silvan@auterion.com>
 ### Antipattern Category
@@ -13626,7 +13077,6 @@ increase
 
 ### Message
 Revert "logger: log_writer_file increase stack 1170 -> 1472 bytes (#15765)"
-message: Revert "logger: log_writer_file increase stack 1170 -> 1472 bytes (#15765)"
 
 This reverts commit d676e65294b27b592e06381a12b0f3b40b6139f0.
 ### Antipattern Category
@@ -13642,7 +13092,6 @@ increase
 
 ### Message
 Revert "mavlink: increase stack 2650 -> 2848 bytes (#15821)"
-message: Revert "mavlink: increase stack 2650 -> 2848 bytes (#15821)"
 
 This reverts commit e792c46f20bb6709afc4a1151df29546b165d1d1.
 ### Antipattern Category
@@ -13658,7 +13107,6 @@ increase
 
 ### Message
 experimental/gyro_fft: improve peak detection, add start parameter
-message: experimental/gyro_fft: improve peak detection, add start parameter
 
  - add new parameter `IMU_GYRO_FFT_EN` to start
 
@@ -13682,7 +13130,6 @@ increase
 
 ### Message
 Tools/check_submodules.sh: always update if within vscode cmake configure
-message: Tools/check_submodules.sh: always update if within vscode cmake configure
 
  - the interactive portion of check_git_submodule with hang waiting for user input
 ### Antipattern Category
@@ -13698,7 +13145,6 @@ hang
 
 ### Message
 gps: add GPS_{1,2}_PROTOCOL param to select protocol, default to u-blox
-message: gps: add GPS_{1,2}_PROTOCOL param to select protocol, default to u-blox
 
 u-blox is the most widely used GPS, so module detection should be a bit
 faster in general.
@@ -13715,7 +13161,6 @@ faster
 
 ### Message
 Fix non-determinstic boot hang with crashdumps
-message: Fix non-determinstic boot hang with crashdumps
 
 On boot, if board_hardfault_init finds a hardfault stored in BBSRAM, it
 checks if there is any data available on stdin to see if there is
@@ -13738,7 +13183,6 @@ hang
 
 ### Message
 boards: NuttX increase file name max 32 -> 40
-message: boards: NuttX increase file name max 32 -> 40
 ### Antipattern Category
 
 ### Keyword
@@ -13752,7 +13196,6 @@ increase
 
 ### Message
 uORB: tests decrease stack
-message: uORB: tests decrease stack
 
  - save a bit of memory for running on older boards
 ### Antipattern Category
@@ -13768,7 +13211,6 @@ memory
 
 ### Message
 boards: fmu-v5 debug and stackcheck increase interrupt stack
-message: boards: fmu-v5 debug and stackcheck increase interrupt stack
 ### Antipattern Category
 
 ### Keyword
@@ -13782,7 +13224,6 @@ increase
 
 ### Message
 platforms/posix: mlockall() support
-message: platforms/posix: mlockall() support
 
  * add basic mlock support to increase stability when system is under high load and RAM is almost full
 
@@ -13800,7 +13241,6 @@ increase
 
 ### Message
 mavlink: STATUSTEXT directly use mavlink_log subscription
-message: mavlink: STATUSTEXT directly use mavlink_log subscription
 
  - ORB_ID(mavlink_log) increase queue depth now that mavlink ringbuffer is gone
 ### Antipattern Category
@@ -13816,7 +13256,6 @@ increase
 
 ### Message
 mavlink: decrease task stack
-message: mavlink: decrease task stack
 ### Antipattern Category
 
 ### Keyword
@@ -13830,7 +13269,6 @@ decrease
 
 ### Message
 parameters: don't keep in memory if set to default
-message: parameters: don't keep in memory if set to default
 ### Antipattern Category
 
 ### Keyword
@@ -13844,7 +13282,6 @@ memory
 
 ### Message
 mtd:Reduce functionality on memory constrained systems
-message: mtd:Reduce functionality on memory constrained systems
 ### Antipattern Category
 
 ### Keyword
@@ -13858,7 +13295,6 @@ memory
 
 ### Message
 WorkQueueManager:Increase stack size
-message: WorkQueueManager:Increase stack size
 ### Antipattern Category
 
 ### Keyword
@@ -13872,7 +13308,6 @@ increase
 
 ### Message
 nxp_fmurt1062-v1:Fix memory overflow
-message: nxp_fmurt1062-v1:Fix memory overflow
 ### Antipattern Category
 
 ### Keyword
@@ -13886,7 +13321,6 @@ memory
 
 ### Message
 land_detector: decrease default LNDFW_AIRSPD_MAX 8 -> 6 m/s
-message: land_detector: decrease default LNDFW_AIRSPD_MAX 8 -> 6 m/s
 ### Antipattern Category
 
 ### Keyword
@@ -13900,7 +13334,6 @@ decrease
 
 ### Message
 HTE: do not update the estimator during fast up/down motions
-message: HTE: do not update the estimator during fast up/down motions
 
 Drag and prop wash effects produce significant forces at high speed
 that can bias the estimator when applied for an extended period of time
@@ -13917,7 +13350,6 @@ fast
 
 ### Message
 HTE: remove dist_bottom validity check
-message: HTE: remove dist_bottom validity check
 
 Without range finder, the validity flag goes to false quite quickly and
 if can be that a vehicle never starts HTE is the takeoff is too slow.
@@ -13936,7 +13368,6 @@ slow
 
 ### Message
 Update submodule sitl_gazebo to latest Mon Dec 21 00:39:43 UTC 2020
-message: Update submodule sitl_gazebo to latest Mon Dec 21 00:39:43 UTC 2020
 
     - sitl_gazebo in PX4/Firmware (5868463d069eb652ff341427d3714133dde3c19d): https://github.com/PX4/PX4-SITL_gazebo/commit/563f0876a52d5c0fba1b7cd1aa420c613ec7025b
     - sitl_gazebo current upstream: https://github.com/PX4/PX4-SITL_gazebo/commit/4043287bbe07a9d091d579b755796e70d45058e8
@@ -13957,7 +13388,6 @@ increase
 
 ### Message
 MAVSDK test: Increase timeout
-message: MAVSDK test: Increase timeout
 ### Antipattern Category
 
 ### Keyword
@@ -13971,7 +13401,6 @@ increase
 
 ### Message
 invensense/icm42688p: use full 20 bit data, increase ODR, disable all filters
-message: invensense/icm42688p: use full 20 bit data, increase ODR, disable all filters
 ### Antipattern Category
 
 ### Keyword
@@ -13985,7 +13414,6 @@ increase
 
 ### Message
 log_message increase queue depth 2->4
-message: log_message increase queue depth 2->4
 ### Antipattern Category
 
 ### Keyword
@@ -13999,7 +13427,6 @@ increase
 
 ### Message
 rotation: use Dcmf for all rotations that aren't direct swaps
-message: rotation: use Dcmf for all rotations that aren't direct swaps
 
  - increase optimization to ${MAX_CUSTOM_OPT_LEVEL} (max per board)
 ### Antipattern Category
@@ -14015,7 +13442,6 @@ increase
 
 ### Message
 rate limit most parameter_update subscriptions
-message: rate limit most parameter_update subscriptions
 
  - parameter updates can be quite expensive because they trigger nearly all modules to reload all of their parameters immediately
 
@@ -14033,7 +13459,6 @@ faster
 
 ### Message
 can-gps-v1:Correct Memory size used by app and bootloader size
-message: can-gps-v1:Correct Memory size used by app and bootloader size
 ### Antipattern Category
 
 ### Keyword
@@ -14047,7 +13472,6 @@ memory
 
 ### Message
 ROMFS: increase max distance between waypoints for VTOL and FW to 5km
-message: ROMFS: increase max distance between waypoints for VTOL and FW to 5km
 
 Signed-off-by: Silvan Fuhrer <silvan@auterion.com>
 ### Antipattern Category
@@ -14063,7 +13487,6 @@ increase
 
 ### Message
 rtps: increase non-alias ID range by reducing the alias space ID
-message: rtps: increase non-alias ID range by reducing the alias space ID
 ### Antipattern Category
 
 ### Keyword
@@ -14077,7 +13500,6 @@ increase
 
 ### Message
 fix control_allocator: use 'delete' instead of 'free', guard against out-of-memory
-message: fix control_allocator: use 'delete' instead of 'free', guard against out-of-memory
 ### Antipattern Category
 
 ### Keyword
@@ -14091,7 +13513,6 @@ memory
 
 ### Message
 Control Zero F7 - RSSI Fix - SBUS Only/PPM Partial
-message: Control Zero F7 - RSSI Fix - SBUS Only/PPM Partial
 
 This fixes RSSI for the Control Zero F7 but I have noticed that while this works perfectly for SBUS receivers, for PPM receivers it does not decrease the RSSI visual value in QGC when removing the RC transmitter connection.
 
@@ -14121,7 +13542,6 @@ decrease
 
 ### Message
 vehicle_command: increase queue depth 4 -> 8
-message: vehicle_command: increase queue depth 4 -> 8
 
  - prevent slower modules from missing commands
 ### Antipattern Category
@@ -14137,7 +13557,6 @@ slower
 
 ### Message
 px4_work_queue: wq:nav_and_controllers increase stack 1730 -> 1760 bytes
-message: px4_work_queue: wq:nav_and_controllers increase stack 1730 -> 1760 bytes
 ### Antipattern Category
 
 ### Keyword
@@ -14151,7 +13570,6 @@ increase
 
 ### Message
 Simulator: Fix for arg count increase breaking remote host option.
-message: Simulator: Fix for arg count increase breaking remote host option.
 
 The number of arguments was increased by one, see: https://github.com/PX4/PX4-Autopilot/commit/1719ff9892f3c3d034f2b44e94d15527ab09cec6
 
@@ -14173,7 +13591,6 @@ increase
 
 ### Message
 Increase corridor check thresholds for mission tests
-message: Increase corridor check thresholds for mission tests
 ### Antipattern Category
 
 ### Keyword
@@ -14187,7 +13604,6 @@ increase
 
 ### Message
 Disable unmaintained MAVROS tests
-message: Disable unmaintained MAVROS tests
 The overhead of the MAVROS setup means that most developers are not using it, leading to tests that are not suitable for day-to-day workflows. We are replacing these with MAVSDK tests that can be run locally pre-commit.
 ### Antipattern Category
 
@@ -14202,7 +13618,6 @@ overhead
 
 ### Message
 FMUK66 Decrease telnetd ram usage
-message: FMUK66 Decrease telnetd ram usage
 ### Antipattern Category
 
 ### Keyword
@@ -14216,7 +13631,6 @@ decrease
 
 ### Message
 state_machine_helper: fix infinite delay with intermittent failsafes
-message: state_machine_helper: fix infinite delay with intermittent failsafes
 ### Antipattern Category
 
 ### Keyword
@@ -14230,7 +13644,6 @@ infinite
 
 ### Message
 MC auto: add parameter to set the trajectory slow-down
-message: MC auto: add parameter to set the trajectory slow-down
 
 In some cases e.g.: (VTOL in wind) a good tracking cannot be
 achieved. This condition then needs to be relaxed, otherwise the
@@ -14248,7 +13661,6 @@ slow
 
 ### Message
 VTOL defaults: increase tracking tolerance for VTOL planes
-message: VTOL defaults: increase tracking tolerance for VTOL planes
 ### Antipattern Category
 
 ### Keyword
@@ -14262,7 +13674,6 @@ increase
 
 ### Message
 mavlink: speed up ftp transfers on POSIX
-message: mavlink: speed up ftp transfers on POSIX
 
 Around 900 KB/s - not fast, but should be fast enough for the use-cases.
 ### Antipattern Category
@@ -14278,7 +13689,6 @@ fast
 
 ### Message
 uORB: tests increase priorities to minimize failures with stackcheck/debug enabled
-message: uORB: tests increase priorities to minimize failures with stackcheck/debug enabled
 
  - also relax the maximum mean by 50%
 ### Antipattern Category
@@ -14294,7 +13704,6 @@ increase
 
 ### Message
 parameters runtime defaults
-message: parameters runtime defaults
 ### Antipattern Category
 
 ### Keyword
@@ -14308,7 +13717,6 @@ runtime
 
 ### Message
 Support for gimbal v2 protocol
-message: Support for gimbal v2 protocol
 
 - add command to request a message
 - add gimbal attitude message
@@ -14456,7 +13864,6 @@ fast
 
 ### Message
 mavlink: reduce GIMBAL_MANAGER_STATUS message rate
-message: mavlink: reduce GIMBAL_MANAGER_STATUS message rate
 
 This was way too fast.
 ### Antipattern Category
@@ -14472,7 +13879,6 @@ fast
 
 ### Message
 mavlink: limit mavlink channels based on memory
-message: mavlink: limit mavlink channels based on memory
 ### Antipattern Category
 
 ### Keyword
@@ -14486,7 +13892,6 @@ memory
 
 ### Message
 Non-compliant nodes support
-message: Non-compliant nodes support
 
 WorkQueueManager:Increase UAVCAN stack size
 ### Antipattern Category
@@ -14502,7 +13907,6 @@ increase
 
 ### Message
 uavcan_servers:Reworked file naming and use ROM fs as fall back
-message: uavcan_servers:Reworked file naming and use ROM fs as fall back
 
    Supporting direct down loads from ROMFS with preferece give to the
    files fould on the SD card first. This will allow a user to provide
@@ -14521,7 +13925,6 @@ overhead
 
 ### Message
 batt_smbus: Pass device address to base class
-message: batt_smbus: Pass device address to base class
 
 Fixes a warning printed at runtime
 
@@ -14539,7 +13942,6 @@ runtime
 
 ### Message
 drivers/smbus: Increase max block size to 34
-message: drivers/smbus: Increase max block size to 34
 
 batt_smbus for BQ40Z80 transfers up to 34 bytes (32 byte block + 2 byte
 address), but this was overflowing and failing the PEC check.
@@ -14559,7 +13961,6 @@ increase
 
 ### Message
 px4_work_queue: increase wq:nav_and_controllers stack 1760->1824
-message: px4_work_queue: increase wq:nav_and_controllers stack 1760->1824
 ### Antipattern Category
 
 ### Keyword
@@ -14573,7 +13974,6 @@ increase
 
 ### Message
 github actions decrease max ccache size
-message: github actions decrease max ccache size
 
  - lower compression level to 5 as recommended by ccache manual
 ### Antipattern Category
@@ -14589,7 +13989,6 @@ decrease
 
 ### Message
 sensor_calibration: increase threshold for updating calibration offsets or scale
-message: sensor_calibration: increase threshold for updating calibration offsets or scale
 
  - this is to minimize needlessly writing negligible parameter changes and triggering unnecessary estimator bias resets
 ### Antipattern Category
@@ -14605,7 +14004,6 @@ increase
 
 ### Message
 mc_pos_control_params: increase velocity limits a bit
-message: mc_pos_control_params: increase velocity limits a bit
 
 I hit those on my vehicle
 ### Antipattern Category
@@ -14621,7 +14019,6 @@ increase
 
 ### Message
 StickAccelerationXY: brake a bit faster
-message: StickAccelerationXY: brake a bit faster
 
 The drag is based on max_acc/max_vel, which means that increasing the
 maximum velocity leads to slower braking (at the same starting speed).
@@ -14642,7 +14039,6 @@ slow
 
 ### Message
 nxp_ucans32k146:Add Can Bootloader build
-message: nxp_ucans32k146:Add Can Bootloader build
 
 nxp_ucans32k146:Relocation for Bootloader
 
@@ -14674,7 +14070,6 @@ increase
 
 ### Message
 uavcan_v1: More work on subscribers and reg access
-message: uavcan_v1: More work on subscribers and reg access
 
 Now running into issues with running out of stack frame memory
 For now I'm going to leave the relevant code in so it's at least
@@ -14692,7 +14087,6 @@ memory
 
 ### Message
 uavcan_v1: Increase stack size
-message: uavcan_v1: Increase stack size
 
 Also increases stack frame size limit, which was what the compiler was
 throwing an error on.
@@ -14709,7 +14103,6 @@ increase
 
 ### Message
 px4_work_queue: increase wq:nav_and_controllers stack
-message: px4_work_queue: increase wq:nav_and_controllers stack
 ### Antipattern Category
 
 ### Keyword
@@ -14723,7 +14116,6 @@ increase
 
 ### Message
 Update submodule sitl_gazebo to latest Sat Mar  6 00:39:04 UTC 2021
-message: Update submodule sitl_gazebo to latest Sat Mar  6 00:39:04 UTC 2021
 
     - sitl_gazebo in PX4/Firmware (263b00b65fc89c7fd9383f0364760fceb15ea12a): https://github.com/PX4/PX4-SITL_gazebo/commit/bebb9a95f0b61bf9e4c3de345fab70985c1329b3
     - sitl_gazebo current upstream: https://github.com/PX4/PX4-SITL_gazebo/commit/c7524aa977539d8cc972d9336355bc82e2f2cfa5
@@ -14744,7 +14136,6 @@ increase
 
 ### Message
 parameters: fix runtime default edge case
-message: parameters: fix runtime default edge case
 ### Antipattern Category
 
 ### Keyword
@@ -14758,7 +14149,6 @@ runtime
 
 ### Message
 px4_work_queue: increase wq:rate_ctrl stack
-message: px4_work_queue: increase wq:rate_ctrl stack
 ### Antipattern Category
 
 ### Keyword
@@ -14772,7 +14162,6 @@ increase
 
 ### Message
 gyro_fft: increase default range and length to improve test data
-message: gyro_fft: increase default range and length to improve test data
 ### Antipattern Category
 
 ### Keyword
@@ -14786,7 +14175,6 @@ increase
 
 ### Message
 boards: holybro/kakutef7 disable CONSTRAINED_FLASH to increase optimization
-message: boards: holybro/kakutef7 disable CONSTRAINED_FLASH to increase optimization
 ### Antipattern Category
 
 ### Keyword
@@ -14800,7 +14188,6 @@ increase
 
 ### Message
 commander: increase nav_test_failed hysteresis time
-message: commander: increase nav_test_failed hysteresis time
 
 This is to avoid race condition with the yaw emergency estimator having
 the same trigger delay of 1 second. Commander will now give more time to
@@ -14818,7 +14205,6 @@ increase
 
 ### Message
 boards: NuttX disable all NSH memory debug commands (mb, mh, mw) by default
-message: boards: NuttX disable all NSH memory debug commands (mb, mh, mw) by default
 
  - closes https://github.com/PX4/PX4-Autopilot/issues/17062
 ### Antipattern Category
@@ -14834,7 +14220,6 @@ memory
 
 ### Message
 IMU_DGYRO_CUTOFF increase default 10 -> 20 Hz
-message: IMU_DGYRO_CUTOFF increase default 10 -> 20 Hz
 ### Antipattern Category
 
 ### Keyword
@@ -14848,7 +14233,6 @@ increase
 
 ### Message
 Commander: Increase auto-disarm timeout to 25 seconds after arming
-message: Commander: Increase auto-disarm timeout to 25 seconds after arming
 ### Antipattern Category
 
 ### Keyword
@@ -14862,7 +14246,6 @@ increase
 
 ### Message
 mavsdk_tests: report speed factor every second
-message: mavsdk_tests: report speed factor every second
 
 This helps in debugging slow CI.
 ### Antipattern Category
@@ -14878,7 +14261,6 @@ slow
 
 ### Message
 sensors/vehicle_imu: increase threshold for clipping warning
-message: sensors/vehicle_imu: increase threshold for clipping warning
 ### Antipattern Category
 
 ### Keyword
@@ -14892,7 +14274,6 @@ increase
 
 ### Message
 px4_work_queue: increase nav_and_controllers stack
-message: px4_work_queue: increase nav_and_controllers stack
 ### Antipattern Category
 
 ### Keyword
@@ -14906,7 +14287,6 @@ increase
 
 ### Message
 commander: temporarily increase worker thread stack substantially
-message: commander: temporarily increase worker thread stack substantially
 ### Antipattern Category
 
 ### Keyword
@@ -14920,7 +14300,6 @@ increase
 
 ### Message
 Update submodule ecl to latest Sun May  2 12:39:08 UTC 2021
-message: Update submodule ecl to latest Sun May  2 12:39:08 UTC 2021
 
     - ecl in PX4/Firmware (cb999f37d4891ebfbbc21b4ce9b3851888b39ad4): https://github.com/PX4/PX4-ECL/commit/5d34d7a24ef72b826c320a3259ee0ec68b1936df
     - ecl current upstream: https://github.com/PX4/PX4-ECL/commit/a7b8afe420f438554ad90bcba0f1f4872325e75b
@@ -14941,7 +14320,6 @@ increase
 
 ### Message
 MulticopterLandDetector: use setpoint generation to infer decend intent
-message: MulticopterLandDetector: use setpoint generation to infer decend intent
 
 For any normal use case where a downwards velocity setpoint is set
 this works exactly the same as before.
@@ -14975,7 +14353,6 @@ fast
 
 ### Message
 px4_work_queue: increase wq:rate_ctrl stack slightly
-message: px4_work_queue: increase wq:rate_ctrl stack slightly
 ### Antipattern Category
 
 ### Keyword
@@ -14989,7 +14366,6 @@ increase
 
 ### Message
 Update submodule ecl to latest Thu May  6 12:39:12 UTC 2021
-message: Update submodule ecl to latest Thu May  6 12:39:12 UTC 2021
 
     - ecl in PX4/Firmware (a300d32523e24df3f366a0d564b764261e1c1909): https://github.com/PX4/PX4-ECL/commit/a7b8afe420f438554ad90bcba0f1f4872325e75b
     - ecl current upstream: https://github.com/PX4/PX4-ECL/commit/29243ac5cbb5d27ac71744e88afcd786df6f748d
@@ -15010,7 +14386,6 @@ increase
 
 ### Message
 ekf2: selector increase status rate before potential instance change
-message: ekf2: selector increase status rate before potential instance change
 ### Antipattern Category
 
 ### Keyword
@@ -15024,7 +14399,6 @@ increase
 
 ### Message
 Jenkins: increase timeout and build history
-message: Jenkins: increase timeout and build history
 ### Antipattern Category
 
 ### Keyword
@@ -15038,7 +14412,6 @@ increase
 
 ### Message
 IMU_GYRO_CUTOFF and IMU_DGYRO_CUTOFF increase default slightly
-message: IMU_GYRO_CUTOFF and IMU_DGYRO_CUTOFF increase default slightly
 ### Antipattern Category
 
 ### Keyword
@@ -15052,7 +14425,6 @@ increase
 
 ### Message
 drivers/imu/analog_devices/adis16448: minor fixes and compatibility with older model
-message: drivers/imu/analog_devices/adis16448: minor fixes and compatibility with older model
 
  - increase SPI stall time slightly
 
@@ -15076,7 +14448,6 @@ increase
 
 ### Message
 sensors/vehicle_angular_velocity: accumualted notch filtering and reset improvements
-message: sensors/vehicle_angular_velocity: accumualted notch filtering and reset improvements
 
  - apply sensor scaling immediately to keep things simple (FIFO vs regular)
  - inline filter helpers (minor performance improvement)
@@ -15098,7 +14469,6 @@ performance
 
 ### Message
 px4_work_queue: increase UART stack
-message: px4_work_queue: increase UART stack
 ### Antipattern Category
 
 ### Keyword
@@ -15112,7 +14482,6 @@ increase
 
 ### Message
 drv_pwm_output.h: increase highest max pwm limit from 2150 to 2500
-message: drv_pwm_output.h: increase highest max pwm limit from 2150 to 2500
 
  - servo linkages in vtol often need further travel of the servos to cover the full tilt travel
 ### Antipattern Category

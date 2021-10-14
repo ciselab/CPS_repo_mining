@@ -41,6 +41,7 @@ def main(user_input: list = None):
                 msg = line.split("message: ")[1]
                 out_file.write(msg)
                 in_the_middle_of_the_msg = True
+                continue
 
             if line.startswith("modified file(s): "):
                 in_the_middle_of_the_msg = False
