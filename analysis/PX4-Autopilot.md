@@ -25,7 +25,6 @@ Formatting changes to make the Python style checker happy (copied from the bootl
 Increase the erase timeout to avoid issues with large/slow flash.
 ### Antipattern Category
 New:Hard-coded-timing
-
 ### Keyword
 slow
 ### Note
@@ -228,7 +227,7 @@ New:build:Slow_Simulation/Hardware_Tests
 ### Keyword
 slow
 ### Note
-Interesting
+Interesting, increased sleep duration to not have the tests fail. Why it was increased by set amount is not explained.
 
 ## Commit #13
 ### Hash
@@ -838,7 +837,7 @@ X
 ### Keyword
 increase
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #27
 ### Hash
@@ -877,7 +876,8 @@ X
 ### Keyword
 performance
 ### Note
--
+A lot of changes in this commit (335 additions with 192 deletions over 7 files).
+Added support; not interesting for CSP-PA.
 
 ## Commit #29
 ### Hash
@@ -938,7 +938,7 @@ X
 ### Keyword
 increase
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #33
 ### Hash
@@ -964,7 +964,7 @@ X
 ### Keyword
 runtime
 ### Note
--
+Moved calculation to at coompiler time, no (CPS performance) antipattern was found in this commit.
 
 ## Commit #35
 ### Hash
@@ -1019,7 +1019,8 @@ X
 ### Keyword
 memory
 ### Note
--
+Added support and changes made to make use of added implementation.
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #39
 ### Hash
@@ -1032,7 +1033,7 @@ X
 ### Keyword
 increase
 ### Note
--
+Visualization changes, no (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #40
 ### Hash
@@ -1067,7 +1068,7 @@ X
 ### Keyword
 memory
 ### Note
--
+Added memory map, see commit message.
 
 ## Commit #42
 ### Hash
@@ -1151,7 +1152,7 @@ X
 ### Keyword
 increase
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #46
 ### Hash
@@ -1193,7 +1194,7 @@ X
 ### Keyword
 hang
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #49
 ### Hash
@@ -1205,7 +1206,7 @@ X
 ### Keyword
 performance
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #50
 ### Hash
@@ -1247,7 +1248,19 @@ General:Code_Duplication
 ### Keyword
 faster
 ### Note
--
+These files all contain the same code additions and changes:
+> nuttx/configs/olimex-lpc1766stk/ftpc/setenv.sh
+> nuttx/configs/olimex-lpc1766stk/hidkbd/setenv.sh
+> nuttx/configs/olimex-lpc1766stk/nettest/setenv.sh
+> nuttx/configs/olimex-lpc1766stk/nsh/setenv.sh
+> nuttx/configs/olimex-lpc1766stk/nx/setenv.sh
+> nuttx/configs/olimex-lpc1766stk/ostest/setenv.sh
+> nuttx/configs/olimex-lpc1766stk/slip-httpd/setenv.sh
+> nuttx/configs/olimex-lpc1766stk/thttpd/setenv.sh
+> nuttx/configs/olimex-lpc1766stk/usbserial/setenv.sh
+> nuttx/configs/olimex-lpc1766stk/usbstorage/setenv.sh
+> nuttx/configs/olimex-lpc1766stk/wlan/setenv.sh 
+
 
 ## Commit #52
 ### Hash
@@ -1259,7 +1272,7 @@ X
 ### Keyword
 runtime
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #53
 ### Hash
@@ -1283,7 +1296,7 @@ X
 ### Keyword
 memory
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #55
 ### Hash
@@ -1307,7 +1320,7 @@ X
 ### Keyword
 memory
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #57
 ### Hash
@@ -1319,7 +1332,7 @@ X
 ### Keyword
 performance
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #58
 ### Hash
@@ -1372,7 +1385,6 @@ Make mixer ioctls load from a memory buffer rather than a file. This is prep for
 General:Performance:Unbuffered_Streams
 ### Keyword
 memory
-
 ### Note
 This commit change the file reading to using buffered stream to save IO resources.
 
@@ -1416,7 +1428,7 @@ X
 ### Keyword
 performance
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #64
 ### Hash
@@ -1450,7 +1462,8 @@ X
 ### Keyword
 memory
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
+
 ## Commit #66
 ### Hash
 [e0f83af96fdab2cd5b239dec3a842c4a2a92ad85](https://github.com/PX4/PX4-Autopilot/commit/e0f83af96fdab2cd5b239dec3a842c4a2a92ad85?w=1)
@@ -1485,7 +1498,7 @@ X
 ### Keyword
 slow
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #69
 ### Hash
@@ -1497,7 +1510,7 @@ X
 ### Keyword
 performance
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #70
 ### Hash
@@ -1544,7 +1557,14 @@ X
 ### Keyword
 performance
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
+Though the change:
+```C
+- while (true)
++ for (;;) {
+```
+was found here as well.
+Probably related to compiler causing issues for an infite while(true) loop, but not with for(;;). While doing the same thing.
 
 ## Commit #72
 ### Hash
@@ -1556,7 +1576,7 @@ X
 ### Keyword
 memory
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #73
 ### Hash
@@ -1569,7 +1589,7 @@ X
 ### Keyword
 faster
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #74
 ### Hash
@@ -1582,7 +1602,7 @@ X
 ### Keyword
 memory
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #75
 ### Hash
@@ -1598,6 +1618,11 @@ New:Hard-coded-timing
 ### Keyword
 performance
 ### Note
+Decreased timeout, not explained in a lot of details how the performance degredation was detected and why this will (still) work.
+```C
+- if (hrt_elapsed_time(&now) > 1000) {
++ if (hrt_elapsed_time(&now) > 100) {
+```
 
 ## Commit #76
 ### Hash
@@ -1624,7 +1649,7 @@ X
 ### Keyword
 memory
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #78
 ### Hash
@@ -1636,7 +1661,7 @@ CI/CD:Large_change
 ### Keyword
 performance
 ### Note
--
+4 Files changed with 351 additions and 176 deletions -> large change for one commit.
 
 ## Commit #79
 ### Hash
@@ -1660,7 +1685,7 @@ General:Hard-coding
 ### Keyword
 performance
 ### Note
--
+Copy paste bug probably due to reusing of code, where some minor changes were needed.
 
 ## Commit #81
 ### Hash
@@ -1672,7 +1697,15 @@ New:Rounded_numbers
 ### Keyword
 performance
 ### Note
--
+Increase accuracy:
+```C
+- pid->count = 0;
+- pid->saturated = 0;
+- pid->last_output = 0;
++ pid->dt_min = dt_min;
++ pid->count = 0.0f;
++ pid->saturated = 0.0f;
+```
 
 ## Commit #82
 ### Hash
@@ -1684,7 +1717,7 @@ X
 ### Keyword
 performance
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #83
 ### Hash
@@ -1711,7 +1744,7 @@ X
 ### Keyword
 faster
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #85
 ### Hash
@@ -1723,7 +1756,7 @@ X
 ### Keyword
 memory
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #86
 ### Hash
@@ -1735,7 +1768,7 @@ X
 ### Keyword
 fast
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #87
 ### Hash
@@ -1814,7 +1847,18 @@ New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
--
+Timing flow is hardcoded:
+```C
+  static const hrt_abstime gps_topic_timeout = 1000000;		// GPS topic timeout = 1s
+  static const hrt_abstime flow_topic_timeout = 1000000;	// optical flow topic timeout = 1s
+  static const hrt_abstime sonar_timeout = 150000;		// sonar timeout = 150ms
+- static const hrt_abstime sonar_valid_timeout = 1000000;	// assume that altitude == distance to surface during this time
+- static const hrt_abstime flow_valid_timeout = 1000000;	// assume that altitude == distance to surface during this time
++ static const hrt_abstime sonar_valid_timeout = 1000000;	// estimate sonar distance during this time after sonar loss
++ static const hrt_abstime xy_src_timeout = 2000000;		// estimate position during this time after position sources loss
+  static const uint32_t updates_counter_len = 1000000;
+  static const uint32_t pub_interval = 10000;			// limit publish rate to 100 Hz
+```
 
 ## Commit #93
 ### Hash
@@ -1826,7 +1870,7 @@ New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
--
+ToDo: reread
 
 ## Commit #94
 ### Hash
@@ -1850,7 +1894,7 @@ X
 ### Keyword
 performance
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #96
 ### Hash
@@ -1859,10 +1903,16 @@ performance
 HOTFIX: Increased attitude control updates to 50 Hz - was less than 10 Hz and unintended slow
 ### Antipattern Category
 New:Hard-coded-timing
+New:Fixed_Communication_Rate
 ### Keyword
 slow
 ### Note
--
+Manually adjusted fequency, initeresting for Antipattern: Fixed Communication Rate.
+```C++
+- orb_set_interval(_att_sub, 100);
++ /* rate limit attitude control to 50 Hz (with some margin, so 17 ms) */
++ orb_set_interval(_att_sub, 17);
+```
 
 ## Commit #97
 ### Hash
@@ -1874,7 +1924,7 @@ X
 ### Keyword
 memory
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #98
 ### Hash
@@ -1891,7 +1941,7 @@ X
 ### Keyword
 faster
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #99
 ### Hash
@@ -1903,7 +1953,7 @@ X
 ### Keyword
 faster
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #100
 ### Hash
@@ -1916,7 +1966,7 @@ General:Hard-coding
 ### Keyword
 increase
 ### Note
--
+Manually adjusted threshold from 0.1 to 0.5.
 
 ## Commit #101
 ### Hash
@@ -1928,7 +1978,7 @@ X
 ### Keyword
 memory
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #102
 ### Hash
@@ -1956,7 +2006,7 @@ X
 ### Keyword
 memory
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #104
 ### Hash
@@ -2000,7 +2050,7 @@ X
 ### Keyword
 increase
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #106
 ### Hash
@@ -2012,7 +2062,7 @@ X
 ### Keyword
 infinite
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #107
 ### Hash
@@ -2024,7 +2074,7 @@ X
 ### Keyword
 infinite
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #108
 ### Hash
@@ -2036,7 +2086,7 @@ X
 ### Keyword
 increase
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #109
 ### Hash
@@ -2048,7 +2098,7 @@ X
 ### Keyword
 decrease
 ### Note
-Manual tweaking?
+Manual tweaking? ToDo: reread.
 
 ## Commit #110
 ### Hash
@@ -2060,7 +2110,7 @@ General:Lack_of_documentation
 ### Keyword
 increase
 ### Note
--
+No explanation why the NFILE_DESCRIPTORS were changed from 32 to 36.
 
 ## Commit #111
 ### Hash
@@ -2136,7 +2186,7 @@ X
 ### Keyword
 increase
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #116
 ### Hash
@@ -2148,7 +2198,7 @@ X
 ### Keyword
 increase
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #117
 ### Hash
@@ -2160,7 +2210,7 @@ X
 ### Keyword
 faster
 ### Note
--
+No (CPS performance) antipattern was found reviewing this commit.
 
 ## Commit #118
 ### Hash
@@ -2172,7 +2222,11 @@ General:Lack_of_documentation
 ### Keyword
 increase
 ### Note
--
+No explanation why the pwm was changed:
+```
+- set PWM_MAX 1900
++ set PWM_MAX 2100
+```
 
 ## Commit #119
 ### Hash
@@ -2206,7 +2260,7 @@ General:Lack_of_documentation
 ### Keyword
 increase
 ### Note
--
+No explanation why the servo out rate was increased.
 
 ## Commit #121
 ### Hash
