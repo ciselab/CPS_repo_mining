@@ -4096,11 +4096,11 @@ Same as Commit 248
 ### Message
 added takeoff logic for position controller to get the uav off the ground fast and transition smoothly to poctl after takeoff, added landing logic to reduce thrust to zero once on the ground
 ### Antipattern Category
-
+X
 ### Keyword
 fast
 ### Note
-
+This commit adds functionality for fast takeoff.
 
 ## Commit #257
 ### Hash
@@ -4109,11 +4109,11 @@ fast
 ### Message
 Simulator: Add performance counter for incoming packet interval
 ### Antipattern Category
-
+X
 ### Keyword
 performance
 ### Note
-
+-
 
 ## Commit #258
 ### Hash
@@ -4131,11 +4131,11 @@ std::to_string is not supported by the hexagon compiler
 
 Signed-off-by: Mark Charlebois <charlebm@gmail.com>
 ### Antipattern Category
-
+X
 ### Keyword
 performance
 ### Note
-
+Implements a custom `sem_timedwait` function for the qurt target. The implementation makes use of a work queue to to unlock the current thread after the timeout.
 
 ## Commit #259
 ### Hash
@@ -4144,11 +4144,11 @@ performance
 ### Message
 Yaw fix: increase threshold
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+A threshold was changed to stop yaw from moving, but there is no justification of the value.
 
 ## Commit #260
 ### Hash
@@ -4159,11 +4159,11 @@ quick fix:
 Remove throttle non-increase condition for landing since this has lead to
 quads falling out of the sky.
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+Not a performance anti-pattern.
 
 ## Commit #261
 ### Hash
@@ -4172,11 +4172,12 @@ increase
 ### Message
 Change arming transfer to only set the register if the local configuration changed. Move its write operation to the fast rate so that arming / disarming is instantaneous
 ### Antipattern Category
-
+Known:Is-everything-ok
+New:Fixed-communication-rate
 ### Keyword
 fast
 ### Note
-
+This increases the frequency at which the arming state is checked and published. But it makes sure to never write the same state twice.
 
 ## Commit #262
 ### Hash
@@ -4185,11 +4186,13 @@ fast
 ### Message
 Param command: Increase stack as needed
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
+The affected code makes use of the `px4_add_module` cmake function to declare a module with a certain stack size. In this commit the stack size is increased.
 
+On the current master branch this hard-coded value is gone.
 
 ## Commit #263
 ### Hash
@@ -4198,11 +4201,11 @@ increase
 ### Message
 Param: Increase robustness of default save command
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+This commit changes a save function to retry 5 times before giving up.
 
 ## Commit #264
 ### Hash
@@ -4211,11 +4214,16 @@ increase
 ### Message
 FMUv4: Run FRAM bus faster
 ### Antipattern Category
-
+X
 ### Keyword
 faster
 ### Note
+The frequency of something was increased. It seems that the value might be taken from the hardware specification.
 
+From the source:
+> Default SPI2 to 12MHz and de-assert the known chip selects.
+>
+>	MS5611 has max SPI clock speed of 20MHz
 
 ## Commit #265
 ### Hash
@@ -4224,11 +4232,11 @@ faster
 ### Message
 MS5611: Run SPI bus faster
 ### Antipattern Category
-
+X
 ### Keyword
 faster
 ### Note
-
+Same as #264.
 
 ## Commit #266
 ### Hash
