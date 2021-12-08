@@ -4113,7 +4113,7 @@ X
 ### Keyword
 performance
 ### Note
--
+Adds profiling of the interval at which packets are received.
 
 ## Commit #258
 ### Hash
@@ -4201,7 +4201,7 @@ On the current master branch this hard-coded value is gone.
 ### Message
 Param: Increase robustness of default save command
 ### Antipattern Category
-New:Hard-coded-fine-tuning
+General:Hard-coding
 ### Keyword
 increase
 ### Note
@@ -4214,7 +4214,7 @@ This commit changes a save function to retry 5 times before giving up.
 ### Message
 FMUv4: Run FRAM bus faster
 ### Antipattern Category
-X
+New:Fixed-communication-rate
 ### Keyword
 faster
 ### Note
@@ -4232,7 +4232,7 @@ From the source:
 ### Message
 MS5611: Run SPI bus faster
 ### Antipattern Category
-X
+New:Fixed-communication-rate
 ### Keyword
 faster
 ### Note
