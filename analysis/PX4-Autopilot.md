@@ -4237,11 +4237,11 @@ faster
 ### Message
 increase priority of sPort_telemetry to 200
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+increase priority of sPort_telemetry to 200 from 2000
 
 ## Commit #267
 ### Hash
@@ -4250,11 +4250,14 @@ increase
 ### Message
 MC att control: Slightly increase max yaw rate
 ### Antipattern Category
+New:Hard-coded-fine-tuning
 
 ### Keyword
 increase
 ### Note
-
+  commit: min-max : 0.0-360.0
+  main: min:max changed to 0.0-1800.0
+In commit value is changed from 30 to 45, doc not changed (old value of 30 remained), in master the value is 200 . Not a performance issue.
 
 ## Commit #268
 ### Hash
@@ -4263,11 +4266,12 @@ increase
 ### Message
 Libuavcan update: Reduces STM32 CAN IRQ overhead with new error handling logic
 ### Antipattern Category
+Unnecessary processing
 
 ### Keyword
 overhead
 ### Note
-
+new module, assertions and simpler returns for errors.
 
 ## Commit #269
 ### Hash
@@ -4276,11 +4280,15 @@ overhead
 ### Message
 Pre-empt HRT execution in SITL if simulator is slow
 ### Antipattern Category
+Falling Dominoes
 
 ### Keyword
 slow
 ### Note
+Issue: Simulation lockstep #3675
+PR message: This PR implements the Simulator -> SITL direction and blocks the execution of SITL if the simulator is lagging. It also does time bookkeeping and ensures the blocked execution does not lead to jumping timestamps. "Flight tested" in Sim, leads to a lot more stability.
 
+The new function uses the old one if there is not a delay time.
 
 ## Commit #270
 ### Hash
@@ -4289,11 +4297,11 @@ slow
 ### Message
 FMUv2: Increase USB buffer to speed up log transfers
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+USB buffer is increased from 4000 to 8000
 
 ## Commit #271
 ### Hash
@@ -4302,11 +4310,12 @@ increase
 ### Message
 FMUv4: Increase USB and UART buffers to speed up log transfers
 ### Antipattern Category
+New:Hard-coded-fine-tuning
 
 ### Keyword
 increase
 ### Note
-
+USB buffer is increased from 4000 to 8000, UART from 2000 to 4000.
 
 ## Commit #272
 ### Hash
@@ -4315,11 +4324,12 @@ increase
 ### Message
 Add memory debugging switch support
 ### Antipattern Category
+X
 
 ### Keyword
 memory
 ### Note
-
+optimization flags for debug
 
 ## Commit #273
 ### Hash
@@ -4328,11 +4338,12 @@ memory
 ### Message
 Pixracer: Increase streams and data rate via Wifi
 ### Antipattern Category
+New:Fixed-communication-rate
 
 ### Keyword
 increase
 ### Note
-
+Start mavlink maximum sending rate decreased from 800000 to 20000.
 
 ## Commit #274
 ### Hash
@@ -4341,11 +4352,13 @@ increase
 ### Message
 increase stack size for frsky telemetry daemon
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Issue: increase stack size for frsky telemetry daemon #3780
+Seems the product was failing after a feature was added, where the stack size
+wasn't checked. Value changed from 2000 to 2200.
 
 ## Commit #275
 ### Hash
@@ -4359,11 +4372,12 @@ efficient check was implemented.
 
 Signed-off-by: Mark Charlebois <charlebm@gmail.com>
 ### Antipattern Category
+General:performance:using_massive_arrays_likes
 
 ### Keyword
 performance
 ### Note
-
+Better management of the queue elements.
 
 ## Commit #276
 ### Hash
