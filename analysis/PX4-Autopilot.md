@@ -972,7 +972,7 @@ Moved calculation to at coompiler time, no (CPS performance) antipattern was fou
 ### Message
 Fix a deadlock when using the NSH ifconfig command over Telnet
 ### Antipattern Category
-General: Deadlock
+General:Deadlock
 ### Keyword
 deadlock
 ### Note
@@ -1003,7 +1003,7 @@ infinite
 NxWidgets: Fix a potential deadlock that can occur waiting for toolbard geometry data
 ...
 ### Antipattern Category
-General: Deadlock
+General:Deadlock
 ### Keyword
 deadlock
 ### Note
@@ -4593,7 +4593,7 @@ Increases the stack size from 1200 to 1300.
 ### Message
 fix sdlog2 self deadlock bug
 ### Antipattern Category
-General: Deadlock
+General:Deadlock
 ### Keyword
 deadlock
 ### Note
