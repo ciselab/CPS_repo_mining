@@ -4735,11 +4735,11 @@ topics which updated below
 - this change makes sure that the two topics are copied into the union
 buffer at the correct location in the code
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This does not fix a performance antipattern.
 
 ## Commit #301
 ### Hash
@@ -4864,7 +4864,7 @@ Adds more logging features for platforms with high performance.
 ### Message
 fix infinite loop when not logging
 ### Antipattern Category
-?
+X
 ### Keyword
 infinite
 ### Note
@@ -5065,7 +5065,7 @@ A missing check caused a new session folder to be created for each log file inst
 ### Message
 MavlinkReceiver::handle_message_request_data_stream walks into deleted memory when you send the "stop" bit on a stream.  It also fails to restart the stream because it deletes the stream when you send the stop command, so restart needs to use stream_list to find the stream again.
 ### Antipattern Category
-?
+X
 ### Keyword
 memory
 ### Note
@@ -5107,11 +5107,11 @@ Memory savings:
 
 - pixhawk: 5.3kB
 ### Antipattern Category
-?
+X
 ### Keyword
 memory
 ### Note
-
+This is an optimization, but does not fix a performance antipattern.
 
 ## Commit #323
 ### Hash
@@ -5457,7 +5457,7 @@ ostream operator<<'s of course (type safe by design and faster
 
 (compile time type matching, no need for format decoding)).
 ### Antipattern Category
-?
+X
 ### Keyword
 faster
 ### Note
@@ -5522,7 +5522,7 @@ Parameters are tuned for better performance.
 filtering files for code check seperately to enable fast use of git pre-commit hook to check code style
 ask user to install pre-commit hook when code style is checked
 ### Antipattern Category
-?
+X
 ### Keyword
 fast
 ### Note
@@ -5566,7 +5566,7 @@ is called from the work queue thread. Sending the signal creates measurable
 overhead (~5% of the px4 CPU runtime) and is unnecessary, since the thread
 is not sleeping anyway.
 ### Antipattern Category
-?
+X
 ### Keyword
 runtime
 ### Note
