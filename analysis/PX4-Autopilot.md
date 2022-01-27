@@ -5613,11 +5613,11 @@ Sensor reset time increased.
 ### Message
 Increase RC buffer size
 ### Antipattern Category
-X
+New:Fixed-communication-rate
 ### Keyword
 increase
 ### Note
-Not an anti-pattern.
+Buffer size for RC doubled in the Flight Management Unit.
 
 ## Commit #355
 ### Hash
@@ -5650,6 +5650,7 @@ New:Hard-coded-fine-tuning
 increase
 ### Note
 Flow agl changed from 5 to 30.
+minumum above ground level (AGL) has been changed in PX4FLOW sensor.
 
 ## Commit #357
 ### Hash
@@ -5658,11 +5659,11 @@ Flow agl changed from 5 to 30.
 ### Message
 Add suport for Memory Constrained systems
 ### Antipattern Category
-X
+New:Hard-coded-fine-tuning
 ### Keyword
 memory
 ### Note
-Not an anti-pattern.
+Constraints applied for systems with limited memory.
 
 ## Commit #358
 ### Hash
@@ -5675,7 +5676,7 @@ X
 ### Keyword
 memory
 ### Note
-Not an anti-pattern.
+Commit sets a new variable within cmake file.
 
 ## Commit #359
 ### Hash
@@ -5748,7 +5749,7 @@ X
 ### Keyword
 fast
 ### Note
-Not an anti-pattern.
+Null check for baro_topic at init.
 
 ## Commit #363
 ### Hash
@@ -5761,7 +5762,7 @@ X
 ### Keyword
 memory
 ### Note
-Not an anti-pattern.
+The original code does not show any performance antipattern. 
 
 ## Commit #364
 ### Hash
@@ -5774,6 +5775,7 @@ X
 ### Keyword
 memory
 ### Note
+The original code does not show any performance antipattern. 
 
 
 ## Commit #365
@@ -5789,7 +5791,7 @@ X
 ### Keyword
 memory
 ### Note
-Not an anti-pattern.
+The original code does not show any performance antipattern. 
 
 ## Commit #366
 ### Hash
@@ -5827,7 +5829,7 @@ X
 ### Keyword
 fast
 ### Note
-Not an anti-pattern.
+The original code does not show any performance antipattern. 
 
 ## Commit #368
 ### Hash
@@ -5851,7 +5853,7 @@ X
 ### Keyword
 fast
 ### Note
-Not an anti-pattern.
+The original code does not show any performance antipattern. 
 
 ## Commit #369
 ### Hash
@@ -5886,6 +5888,8 @@ New:Fixed-communication-rate, New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
+ACK_TIMEOUT is the waiting time for an ack until we retry to send the message [ms]
+ACK_MAX_TRIES maximum amount of tries to (re-)send a message, each time waiting ACK_TIMEOUT ms
 ACK_TIMEOUT lowered and ACK_MAX_TRIES increased. Still on main version.
 
 ## Commit #371
@@ -5946,7 +5950,7 @@ px4fmu rcS: increase mavlink rate to 100000 for SYS_COMPANION 1500000
 
 Needed for log streaming
 ### Antipattern Category
-New:Hard-coded-fine-tuning
+New:Hard-coded-fine-tuning, New:Fixed-communication-rate
 ### Keyword
 increase
 ### Note
@@ -5967,7 +5971,7 @@ X
 ### Keyword
 memory
 ### Note
-Not an anti-pattern.
+The original code does not show any performance antipattern. 
 
 ## Commit #376
 ### Hash
@@ -5976,11 +5980,12 @@ Not an anti-pattern.
 ### Message
 Load monitor: optimize performance of stack checking
 ### Antipattern Category
-Unnecessary_processing
+Smith:General:Unnecessary_Processing
 ### Keyword
 performance
 ### Note
 Issue: Log tasks low on stack #5891.
+
 
 ## Commit #377
 ### Hash
@@ -5990,7 +5995,6 @@ Issue: Log tasks low on stack #5891.
 Load monitor: lock scheduler for stack check and added performance counter for stack checking
 ### Antipattern Category
 Unnecessary_processing
-
 ### Keyword
 performance
 ### Note
