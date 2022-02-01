@@ -7591,7 +7591,7 @@ X
 ### Keyword
 memory
 ### Note
-This commit does not change any performance-related features.
+This commit does not change any performance-related features. Log writer buffer is allocated when needed instead of init.
 
 ## Commit #458
 ### Hash
@@ -7654,7 +7654,7 @@ X
 ### Keyword
 memory
 ### Note
-This commit does not change any performance-related features.
+This commit does not change any performance-related features. Code adjustments.
 
 ## Commit #462
 ### Hash
@@ -7700,7 +7700,7 @@ X
 ### Keyword
 slow
 ### Note
-This commit does not change any performance-related features. Function call added to get offsets nd scaling loaded.
+This commit does not change any performance-related features. Function call added to get offsets and scaling loaded.
 
 ## Commit #465
 ### Hash
@@ -7741,6 +7741,7 @@ New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
+Number of config files increased to 5.
 Issue: Append hardfaults to ULog & ULog spec update (#7520)
 
 ## Commit #468
