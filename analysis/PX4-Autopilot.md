@@ -4806,11 +4806,12 @@ Reverts the change of some timeout constants.
 ### Message
 Navigator: Run faster
 ### Antipattern Category
-X
+Smith:General:Unnecessary_Processing
 ### Keyword
 faster
 ### Note
-No antipatterns were found.
+This marks a mission item as done after processing the altitude. 
+Likely to prevent unnecessary further processing.
 
 ## Commit #306
 ### Hash
@@ -4898,7 +4899,7 @@ clang failed with:
 size of 7400 bytes in function 'test_mathlib' [-Wframe-larger-than=]
 int test_mathlib(int argc, char *argv[])
 ### Antipattern Category
-New:Hard-coded-fine-tuning
+CI/CD:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
@@ -5252,7 +5253,7 @@ We should not spam the console just because the input data is
 degenerate, it would only make things worse because everything would
 slow down due to the printfs.
 ### Antipattern Category
-General:Unnecessary-processing
+Smith:General:Unnecessary_Processing
 ### Keyword
 slow
 ### Note
@@ -5350,7 +5351,9 @@ X
 ### Keyword
 memory
 ### Note
-No anti-pattern was found.
+This commit reduces the amount of stack memory used by this method.
+It works by using some presumably large structs in separate scopes.
+This means that they do not need to be on the stack at the same time.
 
 ## Commit #339
 ### Hash
@@ -5566,7 +5569,7 @@ is called from the work queue thread. Sending the signal creates measurable
 overhead (~5% of the px4 CPU runtime) and is unnecessary, since the thread
 is not sleeping anyway.
 ### Antipattern Category
-X
+Smith:General:Unnecessary_Processing
 ### Keyword
 runtime
 ### Note
