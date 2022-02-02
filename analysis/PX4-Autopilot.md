@@ -5984,6 +5984,7 @@ Smith:General:Unnecessary_Processing
 ### Keyword
 performance
 ### Note
+Load monitor, change in check for stack usage: a maximum of 3 tasks per cycle in order to reduce the load.
 Issue: Log tasks low on stack #5891.
 
 
@@ -5994,10 +5995,11 @@ Issue: Log tasks low on stack #5891.
 ### Message
 Load monitor: lock scheduler for stack check and added performance counter for stack checking
 ### Antipattern Category
-Unnecessary_processing
+Smith:General:Unnecessary_processing
 ### Keyword
 performance
 ### Note
+Implementation of the new functionality for checking stack usage (commit # 376) in a thread-safe manner.
 Issue: Log tasks low on stack #5891.
 
 
@@ -6019,6 +6021,7 @@ New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
+Stack size increased from 1300 to 1600.
 Commit was reverted later.
 
 ## Commit #379
@@ -6034,7 +6037,8 @@ New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-Issue: Fix matrix submodule #6063. Revert of commit #379.
+Stack size decreased from 1600 to 1300. Revert of commit #379.
+Issue: Fix matrix submodule #6063. 
 
 ## Commit #380
 ### Hash
@@ -6053,7 +6057,7 @@ New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size increased from 1300 to 1600.
 Issue: Fix matrix submodule #6063. Commit #378.
 
 ## Commit #381
