@@ -4266,7 +4266,7 @@ In commit value is changed from 30 to 45, doc not changed (old value of 30 remai
 ### Message
 Libuavcan update: Reduces STM32 CAN IRQ overhead with new error handling logic
 ### Antipattern Category
-Unnecessary processing
+Smith:General:Unnecessary_Processing
 
 ### Keyword
 overhead
@@ -4280,7 +4280,7 @@ new module, assertions and simpler returns for errors.
 ### Message
 Pre-empt HRT execution in SITL if simulator is slow
 ### Antipattern Category
-Falling Dominoes
+X
 
 ### Keyword
 slow
