@@ -5584,11 +5584,11 @@ runtime
 ### Message
 navio_sysfs_rc_in: avoid dynamic memory allocation for path
 ### Antipattern Category
-
+General:Hard-coding
 ### Keyword
 memory
 ### Note
-
+Path array size changed from dynamic allocation to the fixed value of 64.
 
 ## Commit #352
 ### Hash
@@ -5599,10 +5599,12 @@ navio_sysfs_pwm_out: avoid dynamic memory allocation & fix a memory leak
 
 memory leak was in send_outputs_pwm()
 ### Antipattern Category
-
+General:Hard-coding, General:C:not_deallocating
 ### Keyword
 memory
 ### Note
+Arrays size changed from dynamic allocation to fixed values, 1 array was never deallocated.
+Issue: Navio drivers: avoid dynamic allocations #5606
 
 
 ## Commit #353
@@ -5612,11 +5614,11 @@ memory
 ### Message
 Fix sensor rail reset on Pixracer. Increase the reset duration to 50 ms to ensure the sensor power has bled off.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Sensor reset time increased.
 
 ## Commit #354
 ### Hash
@@ -5625,11 +5627,11 @@ increase
 ### Message
 Increase RC buffer size
 ### Antipattern Category
-
+New:Fixed-communication-rate
 ### Keyword
 increase
 ### Note
-
+Buffer size for RC doubled in the Flight Management Unit.
 
 ## Commit #355
 ### Hash
@@ -5644,11 +5646,11 @@ after arming when the vehicle has not actually taken off yet.
 Therefore, the auto-disarm takes now by a factor of 5 longer if the
 vehicle has not taken off yet.
 ### Antipattern Category
-
+New:Hard-coded-timing
 ### Keyword
 fast
 ### Note
-
+Auto-disarm timeout time is increased by a factor of 5.
 
 ## Commit #356
 ### Hash
@@ -5657,11 +5659,12 @@ fast
 ### Message
 Increase min agl for flow from 5 to 30 cm to prevent drift on ground.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Flow agl changed from 5 to 30.
+minumum above ground level (AGL) has been changed in PX4FLOW sensor.
 
 ## Commit #357
 ### Hash
@@ -5670,11 +5673,11 @@ increase
 ### Message
 Add suport for Memory Constrained systems
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 memory
 ### Note
-
+Constraints applied for systems with limited memory.
 
 ## Commit #358
 ### Hash
@@ -5683,11 +5686,11 @@ memory
 ### Message
 Define tap as a Memory Constrained system
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+Commit sets a new variable within cmake file.
 
 ## Commit #359
 ### Hash
@@ -5700,11 +5703,11 @@ The firmware binary is to large to fit into the onboard memory of the Parrot
 Bebop. It could be uploaded to the emmc, but for ease of use it would be nice
 to have it in /usr/bin. To strip the binary seems to be the best option right now.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+Not an anti-pattern.
 
 ## Commit #360
 ### Hash
@@ -5719,11 +5722,11 @@ about 3.5KB of RAM.
 
 When topic sizes/logging rates change, this will have to be reevaluated.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Size of queue for mavlink polling increased.
 
 ## Commit #361
 ### Hash
@@ -5736,11 +5739,12 @@ evaluated with: logger start -e -t -m all
 and then make sure to get an error printf in the mavlink writer backend,
 eg. for an ack timeout.
 ### Antipattern Category
+New:Hard-coded-fine-tuning
 
 ### Keyword
 increase
 ### Note
-
+Stack size increased from 3200 to 3800.
 
 ## Commit #362
 ### Hash
@@ -5755,11 +5759,11 @@ _baro_topic can be null in init sequence
 I think this pattern is repeated in other drivers. I would suggest
 allowing null in orb_publish to just return.
 ### Antipattern Category
-
+X
 ### Keyword
 fast
 ### Note
-
+Null check for baro_topic at init.
 
 ## Commit #363
 ### Hash
@@ -5768,11 +5772,11 @@ fast
 ### Message
 Printing all online nodes within UAVCAN status output. This feature increased memory footprint by about 150 bytes.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+The original code does not show any performance antipattern. 
 
 ## Commit #364
 ### Hash
@@ -5781,10 +5785,11 @@ memory
 ### Message
 Navigator: Leverage overlapping fields in logic to save RAM by makeing them overlap in memory as well
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
+The original code does not show any performance antipattern. 
 
 
 ## Commit #365
@@ -5796,11 +5801,11 @@ uavcan: use math::min instead of std::min
 
 Avoid including <memory> which can cause problems on NuttX
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+The original code does not show any performance antipattern. 
 
 ## Commit #366
 ### Hash
@@ -5809,11 +5814,11 @@ memory
 ### Message
 incorporate Bill Premerlani's fast rotation handling from MatrixPilot
 ### Antipattern Category
-
+X
 ### Keyword
 fast
 ### Note
-
+Logic changed, not an anti-pattern.
 
 ## Commit #367
 ### Hash
@@ -5834,11 +5839,11 @@ Clean up Crazyflie
       script can just set the rate on the PWM to 3921 fast
       enough to not effect the motors.
 ### Antipattern Category
-
+X
 ### Keyword
 fast
 ### Note
-
+The original code does not show any performance antipattern. 
 
 ## Commit #368
 ### Hash
@@ -5858,11 +5863,11 @@ PX4 System change to Remove #ifdefs from the IO timers
    script can just set the rate on the PWM to 3921 fast enough to
    not effect the motors.
 ### Antipattern Category
-
+X
 ### Keyword
 fast
 ### Note
-
+The original code does not show any performance antipattern. 
 
 ## Commit #369
 ### Hash
@@ -5877,11 +5882,11 @@ Fixes:
 
 2) Magnetometer data was arriving at a rate faster than the data buffers could handle resulting in loss of data.
 ### Antipattern Category
-
+New:Fixed-communication-rate
 ### Keyword
 faster
 ### Note
-
+Magnetometer data is accumulated and the average is pushed if it arrives in an interval <50 ms.
 
 ## Commit #370
 ### Hash
@@ -5893,11 +5898,13 @@ ulog_stream_ack.msg: lower timeout & increase max retries
 We expect a short round-trip time, so lowering the retry timeout will
 increase throughput on links with high drop rate.
 ### Antipattern Category
-
+New:Fixed-communication-rate, New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+ACK_TIMEOUT is the waiting time for an ack until we retry to send the message [ms]
+ACK_MAX_TRIES maximum amount of tries to (re-)send a message, each time waiting ACK_TIMEOUT ms
+ACK_TIMEOUT lowered and ACK_MAX_TRIES increased. Still on main version.
 
 ## Commit #371
 ### Hash
@@ -5906,11 +5913,11 @@ increase
 ### Message
 Log download: fix memory leak in generating the list
 ### Antipattern Category
-
+General:C:not_deallocating
 ### Keyword
 memory
 ### Note
-
+File not deallocated fix.
 
 ## Commit #372
 ### Hash
@@ -5921,11 +5928,11 @@ vtol_att_control: initialise pointers and free memory
 
 Signed-off-by: Roman <bapstroman@gmail.com>
 ### Antipattern Category
-
+General:C:not_deallocating
 ### Keyword
 memory
 ### Note
-
+Variable not deallocated fix. Issue: Pr vtol params #5892, aimed to fix a memory leak and constant updates of variables that drastically increased CPU usage.
 
 ## Commit #373
 ### Hash
@@ -5942,11 +5949,11 @@ for freeing the buffer.
 This patch moves the responsibility of freeing the buffer to the calling
 side, which already explicitly allocates the buffer.
 ### Antipattern Category
-
+General:C:not_deallocating
 ### Keyword
 memory
 ### Note
-
+Issue: flashparams: fix memory leak when saving parameters #5923.
 
 ## Commit #374
 ### Hash
@@ -5957,11 +5964,12 @@ px4fmu rcS: increase mavlink rate to 100000 for SYS_COMPANION 1500000
 
 Needed for log streaming
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning, New:Fixed-communication-rate
 ### Keyword
 increase
 ### Note
-
+Issue: Intel aero: config updates #5977
+Commit reverted 2 weeks later.
 
 ## Commit #375
 ### Hash
@@ -5973,11 +5981,11 @@ Disable LPE in px4fmu-v2_default
 With GCC 4.9 the binary is to large for the flash memory.
 This is why we disabled LPE on that platform.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+The original code does not show any performance antipattern. 
 
 ## Commit #376
 ### Hash
@@ -5986,10 +5994,12 @@ memory
 ### Message
 Load monitor: optimize performance of stack checking
 ### Antipattern Category
-
+Smith:General:Unnecessary_Processing
 ### Keyword
 performance
 ### Note
+Load monitor, change in check for stack usage: a maximum of 3 tasks per cycle in order to reduce the load.
+Issue: Log tasks low on stack #5891.
 
 
 ## Commit #377
@@ -5999,10 +6009,12 @@ performance
 ### Message
 Load monitor: lock scheduler for stack check and added performance counter for stack checking
 ### Antipattern Category
-
+Smith:General:Unnecessary_processing
 ### Keyword
 performance
 ### Note
+Implementation of the new functionality for checking stack usage (commit # 376) in a thread-safe manner.
+Issue: Log tasks low on stack #5891.
 
 
 ## Commit #378
@@ -6019,11 +6031,12 @@ code in the mission feasability checker.
 Generally, we should have more margin in the navigator stack size
 because there are a bunch of different code paths that can happen.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size increased from 1300 to 1600.
+Commit was reverted later.
 
 ## Commit #379
 ### Hash
@@ -6034,11 +6047,12 @@ Revert "navigator: increase stack"
 
 This reverts commit 6a6e9d02a312bad94cd164ff7928336472576fec.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size decreased from 1600 to 1300. Revert of commit #379.
+Issue: Fix matrix submodule #6063. 
 
 ## Commit #380
 ### Hash
@@ -6053,11 +6067,12 @@ code in the mission feasability checker.
 Generally, we should have more margin in the navigator stack size
 because there are a bunch of different code paths that can happen.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size increased from 1300 to 1600.
+Issue: Fix matrix submodule #6063. Commit #378.
 
 ## Commit #381
 ### Hash
