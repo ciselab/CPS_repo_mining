@@ -10490,11 +10490,11 @@ refactor ecl ekf analysis (#11412)
 
 * ecl-ekf-tools: fix memory leak by correctly closing matplotlib figures
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #632
 ### Hash
@@ -10503,11 +10503,11 @@ memory
 ### Message
 Jenkins increase history retention
 ### Antipattern Category
-
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Variable artifactDaysToKeep increased from 14 to 30.
 
 ## Commit #633
 ### Hash
@@ -10541,11 +10541,11 @@ px4_fmuv5:Stack Check build Increase to 2624
    decrease. So 2624 becomes 2620 at runtime and will boot
    with SYS_AUTOSTART=4001.
 ### Antipattern Category
-
+New:General:Hard-coded-fine-tuning
 ### Keyword
 runtime
 ### Note
-
+Stack size increased from 2500 to 2624.
 
 ## Commit #634
 ### Hash
@@ -10554,11 +10554,11 @@ runtime
 ### Message
 FlightTaskManualAltitude: slow down when landing manually
 ### Antipattern Category
-
+X
 ### Keyword
 slow
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #635
 ### Hash
@@ -10569,11 +10569,11 @@ FlightTaskManualAltitude: add slow upwards start
 
 when still close to ground
 ### Antipattern Category
-
+X
 ### Keyword
 slow
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #636
 ### Hash
@@ -10587,11 +10587,11 @@ because the driver got duplicate samples and published only at 128 Hz.
 We have to increase the filter back to 500 Hz so that we get 1 kHz sampling
 rate, with 250 Hz publications.
 ### Antipattern Category
-
+New:Fixed_Communication_Rate, New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Sampling rate not high enough, DLPF increased frmm 62.5 to 500.
 
 ## Commit #637
 ### Hash
@@ -10600,11 +10600,11 @@ increase
 ### Message
 logger increase stack 3600 -> 3700 bytes
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size increased from 3600 to 3700
 
 ## Commit #638
 ### Hash
@@ -10625,11 +10625,11 @@ Update submodule ecl to latest Thu Apr  4 00:38:15 UTC 2019
 f0889c1 2019-03-18 Carl Olsson - EKF: fixed some comment typos
 6e77b19 2019-03-14 Todd Stellanova - Add DataValidatorGroup tests, add more DataValidator tests (#592)
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features. Submodule dependency update.
 
 ## Commit #639
 ### Hash
@@ -10638,11 +10638,11 @@ increase
 ### Message
 increase stacks in drivers identified by stackcheck builds
 ### Antipattern Category
-
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size increased from 1200 to 1400, 1024 to 1224.
 
 ## Commit #640
 ### Hash
@@ -10659,11 +10659,11 @@ the smoothed trajectory mission plans to the _mc_cruise_speed and
 if that's higher than the maximum it gets capped for safety by the
 position controller and the result is a jerky flight.
 ### Antipattern Category
-
+X
 ### Keyword
 faster
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #641
 ### Hash
@@ -10672,11 +10672,11 @@ faster
 ### Message
 Fix uninitialized memory found using Valgrind
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #642
 ### Hash
@@ -10688,11 +10688,11 @@ mavlink_system: set update_counter for safe points
 This variable was not set and lead to uninitialized memory being written
 to dataman.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #643
 ### Hash
@@ -10709,11 +10709,11 @@ normal speed which leads to timeouts getting detected in PX4.
 To work around this issue we can automatically multiply the timeout
 parameters by the speed factor.
 ### Antipattern Category
-
+X
 ### Keyword
 fast
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #644
 ### Hash
@@ -10731,11 +10731,11 @@ The ramp is applied to the upwards velocity constraint and it
 just ramps from the initial value to the velocity constraint
 which is applied during flight. Slower/going down is always possible.
 ### Antipattern Category
-
+General:Hard-coding
 ### Keyword
 slower
 ### Note
-
+Initial thrust value was 0.
 
 ## Commit #645
 ### Hash
@@ -10746,11 +10746,11 @@ log_writer_file: increase stack size by 20 bytes
 
 Seems to be due to the console buffer.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size increased from 1150 to 1170.
 
 ## Commit #646
 ### Hash
@@ -10759,11 +10759,11 @@ increase
 ### Message
 WQ increase stacks from 1200 to 1250 bytes
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Several stack sizes increased.
 
 ## Commit #647
 ### Hash
@@ -10772,11 +10772,11 @@ increase
 ### Message
 FailureDetector - Increase min value of FD_FAIL_P/R to 60 degrees
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features. Documentation changed.
 
 ## Commit #648
 ### Hash
@@ -10785,11 +10785,11 @@ increase
 ### Message
 px4_fmu-v4: increase uart buffer sizes for vision algorithms (#12199)
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+RX buffer size increased from 300 to 1200, TX buffer size increased from 600 to 900.
 
 ## Commit #649
 ### Hash
@@ -10798,11 +10798,11 @@ increase
 ### Message
 NuttX boards increase task limit 32 -> 64 (#12230)
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Maximum number of tasks increased from 32 to 64.
 
 ## Commit #650
 ### Hash
@@ -10814,11 +10814,11 @@ Jenkins HIL increase boot timeout for stackcheck build
  - px4_fmu-v5_stackcheck remove extra drivers (to try and get the system
 usuable)
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning, New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
-
+Timeout increased to 5 minutes, work queue size increased.
 
 ## Commit #651
 ### Hash
@@ -10841,11 +10841,11 @@ The better the rate tracking in general (high P gain), the less this is
 required (because of the lower tracking error). At the same time it also
 does not harm, as the i_factor will always be close to 1.
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #652
 ### Hash
@@ -10857,11 +10857,11 @@ mc airframes: increase I gains a bit
 Previous commit allows to increase them again.
 Partially reverts commit 6c3e79f3614f0060d5998c39be358512101252ff.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Pitch and roll rates increased.
 
 ## Commit #653
 ### Hash
@@ -10875,11 +10875,11 @@ the roll and pitch rate controller is much too low. Usually it needs to be
 increased to 0.3 or even 0.4 to have better "locked in" flight performance
 and 0.2 seems like a good compromise for a safe default.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 performance
 ### Note
-
+Default rate increased for roll and pitch.
 
 ## Commit #654
 ### Hash
@@ -10890,11 +10890,11 @@ systemcmds/top: increase stack 200 bytes
 
  - this is necessary after most boards increased CONFIG_MAX_TASKS 32 -> 64
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size increased from 1700 to 1900.
 
 ## Commit #655
 ### Hash
@@ -10908,11 +10908,11 @@ as well as two MPC parameters in vtol_defaults for smoother hovering with VTOLS"
 
 Signed-off-by: Silvan Fuhrer <silvan@auterion.com>
 ### Antipattern Category
-
+General:Hard-coding
 ### Keyword
 performance
 ### Note
-
+Numerous params added for vertical take-off and landing.
 
 ## Commit #656
 ### Hash
@@ -10921,11 +10921,11 @@ performance
 ### Message
 Jenkins hardware increase timeout 10 -> 20 minutes
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning, New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
-
+Jenkins Timeout increased from 10 mins to 20.
 
 ## Commit #657
 ### Hash
@@ -10940,11 +10940,11 @@ srf02 driver: Move member variable initialization to declarations, standardize a
 
 * Increase stack allocation size for the srf02 driver main.
 ### Antipattern Category
-
+General:Hard-coding
 ### Keyword
 increase
 ### Note
-
+Stack size of 1500, variable initializations migrated.
 
 ## Commit #658
 ### Hash
@@ -10953,11 +10953,11 @@ increase
 ### Message
 mc_pos_control: increase stack size by 100 bytes
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size increased from 2100 to 1300.
 
 ## Commit #659
 ### Hash
@@ -10966,11 +10966,11 @@ increase
 ### Message
 increase cutoff margin for alias matching
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Cutoff margin increased from 0.6 to 0.8
 
 ## Commit #660
 ### Hash
@@ -10984,11 +10984,11 @@ MPC_Z_VEL_I: changed default from 0.02 to 0.1
 
 Signed-off-by: RomanBapst <bapstroman@gmail.com>
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 faster
 ### Note
-
+Multicopter position control parm increased from 0.02 to 0.1
 
 ## Commit #661
 ### Hash
@@ -11012,11 +11012,11 @@ increase
 ### Message
 task_stack_info increase task_name length to match NuttX CONFIG_TASK_NAME_SIZE
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+FW altitude control increased from 0.01 to 0.1
 
 ## Commit #663
 ### Hash
@@ -11025,11 +11025,11 @@ increase
 ### Message
 increase mc_pos_control stack from 1300 to 1500
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size increased from 1300 to 1500.
 
 ## Commit #664
 ### Hash
@@ -11038,11 +11038,11 @@ increase
 ### Message
 NuttX increase HPWORK and LPWORK stack by 256 bytes
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+HPWORK and LPWORK stack increased from 1024 to 1280, respectively 1280 to 1536
 
 ## Commit #665
 ### Hash
@@ -11077,11 +11077,11 @@ GTest functional tests that include parameters and uORB messaging (#12521)
 
 * Add a more real-world test of the collision prevention
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Functional tests.
 
 ## Commit #666
 ### Hash
@@ -11108,11 +11108,11 @@ that.
 
 It does not increase resource usage.
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features. Edge case in thread scheduling
 
 ## Commit #667
 ### Hash
@@ -11121,11 +11121,11 @@ increase
 ### Message
 WQ decrease att_pos_ctrl stack
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 decrease
 ### Note
-
+Stack size decreased from 7000 to 2000.
 
 ## Commit #668
 ### Hash
@@ -11134,11 +11134,11 @@ decrease
 ### Message
 drivers/gps: increase task stack
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size increased from 1600 to 1700
 
 ## Commit #669
 ### Hash
@@ -11147,11 +11147,11 @@ increase
 ### Message
 STACK_MAIN increase default 1024 -> 2048
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size increased from 1024 to 2048
 
 ## Commit #670
 ### Hash
@@ -11166,11 +11166,11 @@ scheduled (moved out of ISRs) and represented in the load percentage
 
  * closes https://github.com/PX4/Firmware/issues/12753
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+CPU load threshold increased from 0.8 to 0.95
 
 ## Commit #671
 ### Hash
@@ -11192,11 +11192,11 @@ b0b7d72 2019-09-17 Matthias Grob - Multiplication test: fix division resulting i
 1e80807 2019-09-16 Matthias Grob - test: Add uncovered equality checks with NAN and INFINITE
 a374f37 2019-09-16 Matthias Grob - Include helper_functions like all other library components
 ### Antipattern Category
-
+X
 ### Keyword
 infinite
 ### Note
-
+This commit does not change any performance-related features. Submodule dependency update.
 
 ## Commit #672
 ### Hash
@@ -11235,11 +11235,11 @@ Guidance feature for Collision Prevention (#13017)
 
 * fix decision process for overlapping sensors
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #673
 ### Hash
@@ -11248,10 +11248,11 @@ increase
 ### Message
 frsky_telemetry: increase stack by 60 bytes
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
+Stack size increased from 1320 to 1380.
 
 
 ## Commit #674
@@ -11263,11 +11264,11 @@ dshot: move implementation to a separate directory & library
 
 So that the static memory overhead is not added to targets w/o dshot
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #675
 ### Hash
@@ -11281,11 +11282,11 @@ And handle failures of up_dshot_init().
 On Omnibus: reduces memory usage if dshot is enabled by ~1.0KB.
 The buffer is roughly 1KB in size.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #676
 ### Hash
@@ -11294,11 +11295,11 @@ memory
 ### Message
 io_timer: fix potential invalid memory access
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #677
 ### Hash
@@ -11315,11 +11316,11 @@ This could happen in the following cases:
 Both cases are not expected to happen under 'normal' circumstances (if the
 system runs as expected).
 ### Antipattern Category
-
+X
 ### Keyword
 faster
 ### Note
-
+This commit does not change any performance-related features. Thread lock added.
 
 ## Commit #678
 ### Hash
@@ -11330,11 +11331,11 @@ top: decrease priority below IMU sensor WQ threads
 
  - otherwise top can potentially disrupt with sensor sampling
 ### Antipattern Category
-
+General:Hard-coding
 ### Keyword
 decrease
 ### Note
-
+IMU sensor WQ thread priority set to 7.
 
 ## Commit #679
 ### Hash
@@ -11343,11 +11344,11 @@ decrease
 ### Message
 systemcmds/tests: IntrusiveQueue and List fix memory leaks
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #680
 ### Hash
@@ -11358,11 +11359,11 @@ px4_posix: increase posix stack overhead (mostly for ASan)
 
  - sync address sanitizer SITL tests
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size increased from 8192 to 1024 * 11.
 
 ## Commit #681
 ### Hash
@@ -11373,11 +11374,11 @@ boards: increase CONFIG_MAX_TASKS 32->64 on all F7s (#13285)
 
 On more complicated setups it's still possible to exceed 32 tasks. For example fmu-v5 with mavlink on every telem (+ USB), external spi usage (pmw3901), gimbal (vmount), multiple i2c sensors, and camera feedback is 35 tasks (with top running). This is a fairly extreme case, so I'm only going to increase CONFIG_MAX_TASKS on newer F7 boards.
 ### Antipattern Category
-
+General:Hard-coding
 ### Keyword
 increase
 ### Note
-
+Max tasks increased to 64 from default value.
 
 ## Commit #682
 ### Hash
