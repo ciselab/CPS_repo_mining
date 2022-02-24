@@ -11975,7 +11975,7 @@ destabilize the filter
 - Update filter time constants. Increasing the speed of the residual lpf
 improves the quality of the learned accel noise
 ### Antipattern Category
-New:Bad-Noide-Handling, New:General:Hard-coded-fine-tuning
+New:unstable_and_slow_noise_handling, New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
