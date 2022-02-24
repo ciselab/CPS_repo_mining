@@ -7288,11 +7288,10 @@ Issue: Reduce USART1 tx buffer by 8 bytes to fix aligment issue #6993
 ### Message
 Land detector: Since multicopters take off and land slower than 0.7 m/s, setting the default detection threshold to 0.5 m/s is a much safer default
 ### Antipattern Category
-New:Hard-coded-fine-tuning
+X
 ### Keyword
 slower
 ### Note
-Value decreased from 0.7 to 0.5.
 
 ## Commit #442
 ### Hash
@@ -7636,7 +7635,7 @@ X
 ### Keyword
 increase
 ### Note
-This commit does not change any performance-related features. Asjusts settings for FMUv5 in a configure file.
+This commit does not change any performance-related features. Adjusts settings for FMUv5 in a configure file.
 
 ## Commit #461
 ### Hash
@@ -7682,11 +7681,11 @@ MavlinkLogHandler: increase MAX_BYTES_SEND to 256kb
 It increases the throughput on UDP (from around 2Mb to 2.5Mb), while the
 rate via USB & telemetry stay the same.
 ### Antipattern Category
-New:Hard-coded-fine-tuning
+New:Hard-coded-fine-tuning, New:Fixed_Communication_Rate
 ### Keyword
 increase
 ### Note
-Max bytes sent increased from 64 * 1024 to 256 * 1024.
+Max bytes sent increased from 64 * 1024 to 256 * 1024, increasing UDP throughput.
 Issue: Mavlink threadding fixes (#7226)
 
 ## Commit #464
@@ -7737,12 +7736,10 @@ Issue: EKF: pull in miscellaneous bug fixes (#7521)
 ### Message
 F7 nuttx configs: increase CONFIG_STM32F7_BBSRAM_FILES to 5
 ### Antipattern Category
-New:Hard-coded-fine-tuning
+X
 ### Keyword
 increase
 ### Note
-Number of config files increased to 5.
-Issue: Append hardfaults to ULog & ULog spec update (#7520)
 
 ## Commit #468
 ### Hash
@@ -7761,7 +7758,7 @@ The results from testing, indicated that the if the PWM pins were clamped low fo
 
 This change delays the reset and therefore the pulse by at least 400 Ms.
 ### Antipattern Category
-New:Hard-coded-fine-tuning
+New:Hard-coded-fine-tuning, New:Hard-coded-timing
 ### Keyword
 slow
 ### Note
@@ -7911,7 +7908,7 @@ shutdown: increase the max timeout to 5s
 To make sure slow param writes will finish before we hit the timeout. I've
 seen param write durations of around 2s.
 ### Antipattern Category
-New:Hard-coded-fine-tuning
+New:Hard-coded-fine-tuning, New:Hard-coded-timing
 ### Keyword
 slow
 ### Note
@@ -7974,7 +7971,7 @@ We can afford a slower performance in this parsers with python2 to
 keep compability with python3.
 http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html#xrange
 ### Antipattern Category
-
+X
 ### Keyword
 performance
 ### Note
