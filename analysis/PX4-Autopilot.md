@@ -7741,6 +7741,7 @@ X
 ### Keyword
 increase
 ### Note
+This commit does not change any performance-related features.
 
 ## Commit #468
 ### Hash
