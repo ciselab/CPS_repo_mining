@@ -7292,6 +7292,7 @@ X
 ### Keyword
 slower
 ### Note
+This commit does not change any performance-related features.
 
 ## Commit #442
 ### Hash
@@ -7322,7 +7323,7 @@ X
 ### Keyword
 increase
 ### Note
-This commit does not change any performance-related features.
+This commit does not change any performance-related features. This performance issue is applicable only in C++.
 Issue: Logger: add logrotate & reduce CPU load #6997
 
 ## Commit #444
@@ -7870,7 +7871,7 @@ Buffers used instead of changing root_dir or other local variables.
 ### Message
 UAVCAN: Reduce memory footprint
 ### Antipattern Category
-New:Hard-coded-fine-tuning
+General:performance:Hard-coding
 ### Keyword
 memory
 ### Note
