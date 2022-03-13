@@ -4749,11 +4749,11 @@ topics which updated below
 - this change makes sure that the two topics are copied into the union
 buffer at the correct location in the code
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This does not fix a performance antipattern.
 
 ## Commit #301
 ### Hash
@@ -4763,11 +4763,11 @@ memory
 implement ekf instance and block parameter instance as class members
 in order to avoid memory management
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+Block parameters and ekf instance are now class parameters, which means that they don't require a separate allocation and memory management.
 
 ## Commit #302
 ### Hash
@@ -4776,11 +4776,11 @@ memory
 ### Message
 fix px4_task_spawn_cmd: memory leak, if one of the pthread_* calls fails
 ### Antipattern Category
-
+General:C:not_deallocating
 ### Keyword
 memory
 ### Note
-
+Adds some missing deallocations, the memory leak was found with static analysis.
 
 ## Commit #303
 ### Hash
@@ -4791,11 +4791,11 @@ fix position_estimator_inav_main: put terrain_estimator on the stack
 
 This fixes a memory leak
 ### Antipattern Category
-
+General:C:not_deallocating
 ### Keyword
 memory
 ### Note
-
+This memory leak was fixed by not allocating at all, the data is put on the stack which means it is freed "automatically".
 
 ## Commit #304
 ### Hash
@@ -4806,11 +4806,12 @@ Revert "ESC cal: Increase timeouts"
 
 This reverts commit d2575c25563d5731f6db0a1607d096198d32cabe.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
-
+Reverts the change of some timeout constants.
 
 ## Commit #305
 ### Hash
@@ -4819,11 +4820,12 @@ increase
 ### Message
 Navigator: Run faster
 ### Antipattern Category
-
+Smith:General:Unnecessary_Processing
 ### Keyword
 faster
 ### Note
-
+This marks a mission item as done after processing the altitude. 
+Likely to prevent unnecessary further processing.
 
 ## Commit #306
 ### Hash
@@ -4832,11 +4834,12 @@ faster
 ### Message
 Commander: Fix reposition handling,  run faster to allow catching of consecutive commands
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 faster
 ### Note
-
+Adds a feature, makes some struct local and changes an interval.
 
 ## Commit #307
 ### Hash
@@ -4845,11 +4848,11 @@ faster
 ### Message
 px4_task_spawn_cmd: fix memory leak on posix
 ### Antipattern Category
-
+General:C:not_deallocating
 ### Keyword
 memory
 ### Note
-
+`pthread_attr_destroy` was not called in the right places.
 
 ## Commit #308
 ### Hash
@@ -4863,11 +4866,11 @@ can log both: the usual topics, as well as the ekf2 replay fields.
 
 Note that the ekf2 replay still needs to be enabled via param.
 ### Antipattern Category
-
+X
 ### Keyword
 performance
 ### Note
-
+Adds more logging features for platforms with high performance.
 
 ## Commit #309
 ### Hash
@@ -4876,11 +4879,11 @@ performance
 ### Message
 fix infinite loop when not logging
 ### Antipattern Category
-
+X
 ### Keyword
 infinite
 ### Note
-
+This moves a loop, it is unclear why this changes the behaviour.
 
 ## Commit #310
 ### Hash
@@ -4892,11 +4895,11 @@ logger: move _writer.lock() call after write_changed_parameters()
 write_changed_parameters() also takes the lock and thus would deadlock
 otherwise.
 ### Antipattern Category
-
+General:Deadlock
 ### Keyword
 deadlock
 ### Note
-
+Lock was acquired too early, causing a call to another procedure that acquires the same lock to deadlock.
 
 ## Commit #311
 ### Hash
@@ -4910,11 +4913,11 @@ clang failed with:
 size of 7400 bytes in function 'test_mathlib' [-Wframe-larger-than=]
 int test_mathlib(int argc, char *argv[])
 ### Antipattern Category
-
+CI/CD:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Changes the stack size of some tests.
 
 ## Commit #312
 ### Hash
@@ -4932,11 +4935,11 @@ and need to be linked with the libmainapp shared library.
 
 Signed-off-by: Mark Charlebois <charlebm@gmail.com>
 ### Antipattern Category
-
+X
 ### Keyword
 runtime
 ### Note
-
+No antipattern was found.
 
 ## Commit #313
 ### Hash
@@ -4959,11 +4962,11 @@ queue.
 Queue size can be set via ioctl during advertisement phase. After that it
 cannot be changed anymore.
 ### Antipattern Category
-
+X
 ### Keyword
 fast
 ### Note
-
+It is now possible to use a queue and the queue size is not hardcoded.
 
 ## Commit #314
 ### Hash
@@ -4975,11 +4978,11 @@ nuttx px4fmu-v4 config: increase CONFIG_NFILE_DESCRIPTORS to 52
 necessary for mavlink receiver. It had the following output:
  mavlink_rcv_if0: node_open as advertiser failed.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Parameter is changed, explanation is that it fixes an error message.
 
 ## Commit #315
 ### Hash
@@ -4996,11 +4999,11 @@ a user specifies a large topic to log, it could have crashed.
 Now the allocation is on the heap and the user can specify any size of
 topic to log (as long as there is enough memory).
 ### Antipattern Category
-
+General:Hard-coding
 ### Keyword
 memory
 ### Note
-
+Fixes possible problem because of hard coding the maximum topic size. Was fixed by allocating topics on the heap.
 
 ## Commit #316
 ### Hash
@@ -5009,11 +5012,11 @@ memory
 ### Message
 logger: reduce memory usage, by limiting the nr of added topics to 64 (was 128)
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 memory
 ### Note
-
+Maximum number of logged topics is reduced to limit memory usage.
 
 ## Commit #317
 ### Hash
@@ -5022,11 +5025,11 @@ memory
 ### Message
 logger: reduce maximum logged string length to 128 (use less memory)
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 memory
 ### Note
-
+Maximum string length is reduced to limit memory usage.
 
 ## Commit #318
 ### Hash
@@ -5041,11 +5044,11 @@ switches everything to px4_log.h and PX4_INFO/WARN/ERR/DEBUG.
 Also, the call mostly used is now a static inline function instead of a
 macro which lead to a big increase in flash size for STM32.
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+No anitpattern was found.
 
 ## Commit #319
 ### Hash
@@ -5064,11 +5067,11 @@ log001.px4log and their numbering would not actually increase.
 
 This is now fixed and a new folder is only created per boot.
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+A missing check caused a new session folder to be created for each log file instead of for each session.
 
 ## Commit #320
 ### Hash
@@ -5077,11 +5080,11 @@ increase
 ### Message
 MavlinkReceiver::handle_message_request_data_stream walks into deleted memory when you send the "stop" bit on a stream.  It also fails to restart the stream because it deletes the stream when you send the stop command, so restart needs to use stream_list to find the stream again.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+Use of deleted memory. Fixed by aborting and recreating the deleted stream.
 
 ## Commit #321
 ### Hash
@@ -5090,11 +5093,11 @@ memory
 ### Message
 Fixes shared memory locking bug and eliminates the need for an AppsProm driver to reserve a shared memory region.
 ### Antipattern Category
-
+CI/CD:Large_change
 ### Keyword
 memory
 ### Note
-
+There could be a performance antipattern in here, but the commit is too large to analyse.
 
 ## Commit #322
 ### Hash
@@ -5119,11 +5122,11 @@ Memory savings:
 
 - pixhawk: 5.3kB
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This is an optimization, but does not fix a performance antipattern.
 
 ## Commit #323
 ### Hash
@@ -5132,11 +5135,11 @@ memory
 ### Message
 EKF2 HIL gps decrease s_variance_m_s 5.0 -> 1.0 (#4973)
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 decrease
 ### Note
-
+A parameter is changed.
 
 ## Commit #324
 ### Hash
@@ -5152,11 +5155,11 @@ a 512 bytes write shortly followed by a e.g. 30 bytes write.
 Also, performance (measured in missed poll updates) seems slightly
 better on Snapdragon with bigger chunks.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 performance
 ### Note
-
+Tweaks the number of bytes written, based on empirical performance.
 
 ## Commit #325
 ### Hash
@@ -5168,11 +5171,11 @@ sdlog2: poll for sensor and replay on Snappy
 This brings better performance, so less missed updates on Snappy, as
 well as a bit of a cleanup of the poll and orb_copy logic.
 ### Antipattern Category
-
+X
 ### Keyword
 performance
 ### Note
-
+It used to poll either for sensor data or for replay data, now it can poll for both at the same time.
 
 ## Commit #326
 ### Hash
@@ -5185,11 +5188,12 @@ Sdlog2 misses least updates when the CPU scaling governor is set at
 maximum performance. This is not optimal to save power but the best
 effort until there is a RT patched kernel on Snapdragon.
 ### Antipattern Category
-
+X
 ### Keyword
 performance
 ### Note
-
+In this commit the CPU is set to run at maximum speed on snapdragon.
+This is to minimize the number of lost updates.
 
 ## Commit #327
 ### Hash
@@ -5202,11 +5206,11 @@ The reason for this change is that RPi2 and RPi3 are compatible, and
 hopefully all differences coming up can be resolved without ifdefs but
 at runtime.
 ### Antipattern Category
-
+X
 ### Keyword
 runtime
 ### Note
-
+This unifies the RPI and RPI2 targets.
 
 ## Commit #328
 ### Hash
@@ -5215,11 +5219,11 @@ runtime
 ### Message
 nuttx defconfig: increase nr of file descriptors, due to mavlink shell
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+The number of file descriptors is changed without explanation.
 
 ## Commit #329
 ### Hash
@@ -5228,11 +5232,12 @@ increase
 ### Message
 NuttX: Add file change which allows really fast log download
 ### Antipattern Category
-
+X
 ### Keyword
 fast
 ### Note
-
+Adds a special case to return early when some conditions are met.
+It looks like explicitly marking one branch as hot.
 
 ## Commit #330
 ### Hash
@@ -5244,11 +5249,12 @@ attitude_estimator_q: filter accel and gyro data
 Since accel and gyro are not filtered in the drivers anymore, we need to
 filter them in this estimator in order to achieve a similar performance.
 ### Antipattern Category
-
+New:Bad-noise-handling
 ### Keyword
 performance
 ### Note
-
+The acceleration and gyroscopic data was not filtered.
+To reduce the noise a low pass filter is applied.
 
 ## Commit #331
 ### Hash
@@ -5261,11 +5267,11 @@ We should not spam the console just because the input data is
 degenerate, it would only make things worse because everything would
 slow down due to the printfs.
 ### Antipattern Category
-
+Smith:General:Unnecessary_Processing
 ### Keyword
 slow
 ### Note
-
+The warning print statements would slow down the whole system unnecessarily.
 
 ## Commit #332
 ### Hash
@@ -5274,11 +5280,11 @@ slow
 ### Message
 Disable EKF2 3D fusion temporarily in SITL, fix missing fast-init params for some configs
 ### Antipattern Category
-
+General:Hard-coding
 ### Keyword
 fast
 ### Note
-
+Add some missing parameters, all of which are unexplained and hard-coded.
 
 ## Commit #333
 ### Hash
@@ -5287,11 +5293,12 @@ fast
 ### Message
 TAP power: Shut down faster
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 faster
 ### Note
-
+The delay at shutdown is tweaked.
 
 ## Commit #334
 ### Hash
@@ -5300,11 +5307,11 @@ faster
 ### Message
 Include memory in CPU load message
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+No anti-pattern was found.
 
 ## Commit #335
 ### Hash
@@ -5313,11 +5320,11 @@ memory
 ### Message
 Load mon: populate memory usage i field for NuttX
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+No anti-pattern was found.
 
 ## Commit #336
 ### Hash
@@ -5326,11 +5333,11 @@ memory
 ### Message
 Commander: signal high memory usage
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+No anti-pattern was found.
 
 ## Commit #337
 ### Hash
@@ -5339,11 +5346,13 @@ memory
 ### Message
 Tweak startup order for memory
 ### Antipattern Category
-
+New:Hard-coded-timing
+General:Hard-coding
 ### Keyword
 memory
 ### Note
-
+There is a hard-coded delay in the new startup script.
+And there are a bunch of hard-coded parameters.
 
 ## Commit #338
 ### Hash
@@ -5352,11 +5361,13 @@ memory
 ### Message
 Make altitude more efficient and estimator status safe in terms of memory overflow
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit reduces the amount of stack memory used by this method.
+It works by using some presumably large structs in separate scopes.
+This means that they do not need to be on the stack at the same time.
 
 ## Commit #339
 ### Hash
@@ -5365,11 +5376,11 @@ memory
 ### Message
 Use less memory for ESC driver
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 memory
 ### Note
-
+Stack size of a task is changed.
 
 ## Commit #340
 ### Hash
@@ -5378,11 +5389,11 @@ memory
 ### Message
 EKF2: Only use the memory it needs
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 memory
 ### Note
-
+Stack size is changed.
 
 ## Commit #341
 ### Hash
@@ -5391,11 +5402,11 @@ memory
 ### Message
 MAVLink: use only the memory it needs
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 memory
 ### Note
-
+Stack size of a task is changed.
 
 ## Commit #342
 ### Hash
@@ -5407,11 +5418,11 @@ px4_log: remove __px4_log_level_current
 - there is no way to change it at runtime
 - it was implemented wrong (<= comparison disabled the PANIC log level)
 ### Antipattern Category
-
+X
 ### Keyword
 runtime
 ### Note
-
+No anti-pattern was found.
 
 ## Commit #343
 ### Hash
@@ -5420,11 +5431,11 @@ runtime
 ### Message
 Commander: Increase stack space
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size of a task is changed.
 
 ## Commit #344
 ### Hash
@@ -5463,11 +5474,11 @@ ostream operator<<'s of course (type safe by design and faster
 
 (compile time type matching, no need for format decoding)).
 ### Antipattern Category
-
+X
 ### Keyword
 faster
 ### Note
-
+Use of printf where ostream could be used.
 
 ## Commit #345
 ### Hash
@@ -5500,11 +5511,12 @@ This is the solution that I came up with (it makes
 
 my core dumps disappear).
 ### Antipattern Category
-
+General:Hard-coding
 ### Keyword
 increase
 ### Note
-
+Because stack sizes are hard-coded, they are not correct when the size of pointers changes.
+This commit doubles the stack size of a task when on 64bit architecture.
 
 ## Commit #346
 ### Hash
@@ -5513,11 +5525,11 @@ increase
 ### Message
 SITL: Tune standard VTOL to have better position control performance & update gazebo
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 performance
 ### Note
-
+Parameters are tuned for better performance.
 
 ## Commit #347
 ### Hash
@@ -5527,11 +5539,11 @@ performance
 filtering files for code check seperately to enable fast use of git pre-commit hook to check code style
 ask user to install pre-commit hook when code style is checked
 ### Antipattern Category
-
+X
 ### Keyword
 fast
 ### Note
-
+This commit adds a filter for files before applying code style check.
 
 ## Commit #348
 ### Hash
@@ -5540,11 +5552,11 @@ fast
 ### Message
 Syslink memory/deck interface
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+No anti-pattern was found.
 
 ## Commit #349
 ### Hash
@@ -5553,11 +5565,11 @@ memory
 ### Message
 Increase sensors stack
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size of task is changed.
 
 ## Commit #350
 ### Hash
@@ -5571,11 +5583,12 @@ is called from the work queue thread. Sending the signal creates measurable
 overhead (~5% of the px4 CPU runtime) and is unnecessary, since the thread
 is not sleeping anyway.
 ### Antipattern Category
-
+Smith:General:Unnecessary_Processing
 ### Keyword
 runtime
 ### Note
-
+There is no need to wake up the worker thread if that thread is the current thread.
+This is because the current thread is already awake.
 
 ## Commit #351
 ### Hash
@@ -5584,11 +5597,11 @@ runtime
 ### Message
 navio_sysfs_rc_in: avoid dynamic memory allocation for path
 ### Antipattern Category
-
+General:Hard-coding
 ### Keyword
 memory
 ### Note
-
+Path array size changed from dynamic allocation to the fixed value of 64.
 
 ## Commit #352
 ### Hash
@@ -5599,10 +5612,12 @@ navio_sysfs_pwm_out: avoid dynamic memory allocation & fix a memory leak
 
 memory leak was in send_outputs_pwm()
 ### Antipattern Category
-
+General:Hard-coding, General:C:not_deallocating
 ### Keyword
 memory
 ### Note
+Arrays size changed from dynamic allocation to fixed values, 1 array was never deallocated.
+Issue: Navio drivers: avoid dynamic allocations #5606
 
 
 ## Commit #353
@@ -5612,11 +5627,11 @@ memory
 ### Message
 Fix sensor rail reset on Pixracer. Increase the reset duration to 50 ms to ensure the sensor power has bled off.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Sensor reset time increased.
 
 ## Commit #354
 ### Hash
@@ -5625,11 +5640,11 @@ increase
 ### Message
 Increase RC buffer size
 ### Antipattern Category
-
+New:Fixed-communication-rate
 ### Keyword
 increase
 ### Note
-
+Buffer size for RC doubled in the Flight Management Unit.
 
 ## Commit #355
 ### Hash
@@ -5644,11 +5659,11 @@ after arming when the vehicle has not actually taken off yet.
 Therefore, the auto-disarm takes now by a factor of 5 longer if the
 vehicle has not taken off yet.
 ### Antipattern Category
-
+New:Hard-coded-timing
 ### Keyword
 fast
 ### Note
-
+Auto-disarm timeout time is increased by a factor of 5.
 
 ## Commit #356
 ### Hash
@@ -5657,11 +5672,12 @@ fast
 ### Message
 Increase min agl for flow from 5 to 30 cm to prevent drift on ground.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Flow agl changed from 5 to 30.
+minumum above ground level (AGL) has been changed in PX4FLOW sensor.
 
 ## Commit #357
 ### Hash
@@ -5670,10 +5686,11 @@ increase
 ### Message
 Add suport for Memory Constrained systems
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 memory
 ### Note
+Constraints applied for systems with limited memory.
 
 ## Commit #358
 ### Hash
@@ -5682,10 +5699,11 @@ memory
 ### Message
 Define tap as a Memory Constrained system
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
+Commit sets a new variable within cmake file.
 
 ## Commit #359
 ### Hash
@@ -5698,11 +5716,11 @@ The firmware binary is to large to fit into the onboard memory of the Parrot
 Bebop. It could be uploaded to the emmc, but for ease of use it would be nice
 to have it in /usr/bin. To strip the binary seems to be the best option right now.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+Not an anti-pattern.
 
 ## Commit #360
 ### Hash
@@ -5717,11 +5735,11 @@ about 3.5KB of RAM.
 
 When topic sizes/logging rates change, this will have to be reevaluated.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Size of queue for mavlink polling increased.
 
 ## Commit #361
 ### Hash
@@ -5734,11 +5752,12 @@ evaluated with: logger start -e -t -m all
 and then make sure to get an error printf in the mavlink writer backend,
 eg. for an ack timeout.
 ### Antipattern Category
+New:Hard-coded-fine-tuning
 
 ### Keyword
 increase
 ### Note
-
+Stack size increased from 3200 to 3800.
 
 ## Commit #362
 ### Hash
@@ -5753,11 +5772,11 @@ _baro_topic can be null in init sequence
 I think this pattern is repeated in other drivers. I would suggest
 allowing null in orb_publish to just return.
 ### Antipattern Category
-
+X
 ### Keyword
 fast
 ### Note
-
+Null check for baro_topic at init.
 
 ## Commit #363
 ### Hash
@@ -5766,11 +5785,11 @@ fast
 ### Message
 Printing all online nodes within UAVCAN status output. This feature increased memory footprint by about 150 bytes.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+The original code does not show any performance antipattern. 
 
 ## Commit #364
 ### Hash
@@ -5779,10 +5798,11 @@ memory
 ### Message
 Navigator: Leverage overlapping fields in logic to save RAM by makeing them overlap in memory as well
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
+The original code does not show any performance antipattern. 
 
 
 ## Commit #365
@@ -5794,11 +5814,11 @@ uavcan: use math::min instead of std::min
 
 Avoid including <memory> which can cause problems on NuttX
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+The original code does not show any performance antipattern. 
 
 ## Commit #366
 ### Hash
@@ -5807,11 +5827,11 @@ memory
 ### Message
 incorporate Bill Premerlani's fast rotation handling from MatrixPilot
 ### Antipattern Category
-
+X
 ### Keyword
 fast
 ### Note
-
+Logic changed, not an anti-pattern.
 
 ## Commit #367
 ### Hash
@@ -5832,11 +5852,11 @@ Clean up Crazyflie
       script can just set the rate on the PWM to 3921 fast
       enough to not effect the motors.
 ### Antipattern Category
-
+X
 ### Keyword
 fast
 ### Note
-
+The original code does not show any performance antipattern. 
 
 ## Commit #368
 ### Hash
@@ -5856,11 +5876,11 @@ PX4 System change to Remove #ifdefs from the IO timers
    script can just set the rate on the PWM to 3921 fast enough to
    not effect the motors.
 ### Antipattern Category
-
+X
 ### Keyword
 fast
 ### Note
-
+The original code does not show any performance antipattern. 
 
 ## Commit #369
 ### Hash
@@ -5875,11 +5895,11 @@ Fixes:
 
 2) Magnetometer data was arriving at a rate faster than the data buffers could handle resulting in loss of data.
 ### Antipattern Category
-
+New:Fixed-communication-rate
 ### Keyword
 faster
 ### Note
-
+Magnetometer data is accumulated and the average is pushed if it arrives in an interval <50 ms.
 
 ## Commit #370
 ### Hash
@@ -5891,11 +5911,13 @@ ulog_stream_ack.msg: lower timeout & increase max retries
 We expect a short round-trip time, so lowering the retry timeout will
 increase throughput on links with high drop rate.
 ### Antipattern Category
-
+New:Fixed-communication-rate, New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+ACK_TIMEOUT is the waiting time for an ack until we retry to send the message [ms]
+ACK_MAX_TRIES maximum amount of tries to (re-)send a message, each time waiting ACK_TIMEOUT ms
+ACK_TIMEOUT lowered and ACK_MAX_TRIES increased. Still on main version.
 
 ## Commit #371
 ### Hash
@@ -5904,11 +5926,11 @@ increase
 ### Message
 Log download: fix memory leak in generating the list
 ### Antipattern Category
-
+General:C:not_deallocating
 ### Keyword
 memory
 ### Note
-
+File not deallocated fix.
 
 ## Commit #372
 ### Hash
@@ -5919,11 +5941,11 @@ vtol_att_control: initialise pointers and free memory
 
 Signed-off-by: Roman <bapstroman@gmail.com>
 ### Antipattern Category
-
+General:C:not_deallocating
 ### Keyword
 memory
 ### Note
-
+Variable not deallocated fix. Issue: Pr vtol params #5892, aimed to fix a memory leak and constant updates of variables that drastically increased CPU usage.
 
 ## Commit #373
 ### Hash
@@ -5940,11 +5962,11 @@ for freeing the buffer.
 This patch moves the responsibility of freeing the buffer to the calling
 side, which already explicitly allocates the buffer.
 ### Antipattern Category
-
+General:C:not_deallocating
 ### Keyword
 memory
 ### Note
-
+Issue: flashparams: fix memory leak when saving parameters #5923.
 
 ## Commit #374
 ### Hash
@@ -5955,11 +5977,12 @@ px4fmu rcS: increase mavlink rate to 100000 for SYS_COMPANION 1500000
 
 Needed for log streaming
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning, New:Fixed-communication-rate
 ### Keyword
 increase
 ### Note
-
+Issue: Intel aero: config updates #5977
+Commit reverted 2 weeks later.
 
 ## Commit #375
 ### Hash
@@ -5971,11 +5994,11 @@ Disable LPE in px4fmu-v2_default
 With GCC 4.9 the binary is to large for the flash memory.
 This is why we disabled LPE on that platform.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+The original code does not show any performance antipattern. 
 
 ## Commit #376
 ### Hash
@@ -5984,10 +6007,12 @@ memory
 ### Message
 Load monitor: optimize performance of stack checking
 ### Antipattern Category
-
+Smith:General:Unnecessary_Processing
 ### Keyword
 performance
 ### Note
+Load monitor, change in check for stack usage: a maximum of 3 tasks per cycle in order to reduce the load.
+Issue: Log tasks low on stack #5891.
 
 
 ## Commit #377
@@ -5997,10 +6022,12 @@ performance
 ### Message
 Load monitor: lock scheduler for stack check and added performance counter for stack checking
 ### Antipattern Category
-
+Smith:General:Unnecessary_processing
 ### Keyword
 performance
 ### Note
+Implementation of the new functionality for checking stack usage (commit # 376) in a thread-safe manner.
+Issue: Log tasks low on stack #5891.
 
 
 ## Commit #378
@@ -6017,11 +6044,12 @@ code in the mission feasability checker.
 Generally, we should have more margin in the navigator stack size
 because there are a bunch of different code paths that can happen.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size increased from 1300 to 1600.
+Commit was reverted later.
 
 ## Commit #379
 ### Hash
@@ -6032,11 +6060,12 @@ Revert "navigator: increase stack"
 
 This reverts commit 6a6e9d02a312bad94cd164ff7928336472576fec.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size decreased from 1600 to 1300. Revert of commit #379.
+Issue: Fix matrix submodule #6063. 
 
 ## Commit #380
 ### Hash
@@ -6051,11 +6080,12 @@ code in the mission feasability checker.
 Generally, we should have more margin in the navigator stack size
 because there are a bunch of different code paths that can happen.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size increased from 1300 to 1600.
+Issue: Fix matrix submodule #6063. Commit #378.
 
 ## Commit #381
 ### Hash
