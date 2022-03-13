@@ -13982,11 +13982,11 @@ uavcan_servers:Reworked file naming and use ROM fs as fall back
    an updated uavcan firware on the SD card, and there is no overhead
    of coping files from the ROM FS to the SD card.
 ### Antipattern Category
-
+X
 ### Keyword
 overhead
 ### Note
-
+This commit does not change any performance-related features. User now has the possiblity to provide an update for the uavcan firmware.
 
 ## Commit #832
 ### Hash
@@ -13999,11 +13999,11 @@ Fixes a warning printed at runtime
 
 Signed-off-by: Alex Mikhalev <alex@corvus-robotics.com>
 ### Antipattern Category
-
+X
 ### Keyword
 runtime
 ### Note
-
+This commit does not change any performance-related features. Fix for runtime warning.
 
 ## Commit #833
 ### Hash
@@ -14018,11 +14018,11 @@ So increase the buffer size
 
 Signed-off-by: Alex Mikhalev <alex@corvus-robotics.com>
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features. This commit addresses an error in publishing the battery status. The package sent by the device was 32 bytes + 2 bytes for the address block and the buffer had an insufficient size of 32 bytes.
 
 ## Commit #834
 ### Hash
@@ -14031,11 +14031,11 @@ increase
 ### Message
 px4_work_queue: increase wq:nav_and_controllers stack 1760->1824
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Work queue size increased from 1760 to 1824.
 
 ## Commit #835
 ### Hash
@@ -14046,11 +14046,11 @@ github actions decrease max ccache size
 
  - lower compression level to 5 as recommended by ccache manual
 ### Antipattern Category
-
+X
 ### Keyword
 decrease
 ### Note
-
+This commit does not change any performance-related features. Github config change.
 
 ## Commit #836
 ### Hash
@@ -14061,11 +14061,11 @@ sensor_calibration: increase threshold for updating calibration offsets or scale
 
  - this is to minimize needlessly writing negligible parameter changes and triggering unnecessary estimator bias resets
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning, New:unstable_and_slow_noise_handling
 ### Keyword
 increase
 ### Note
-
+The offset for which parameters are updated with the new gyro data from sensors is increased from 0.001 to 0.01.
 
 ## Commit #837
 ### Hash
@@ -14076,11 +14076,11 @@ mc_pos_control_params: increase velocity limits a bit
 
 I hit those on my vehicle
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features. Velocity limits increased.
 
 ## Commit #838
 ### Hash
@@ -14096,11 +14096,11 @@ Especially a combination of small max_acc (slow responsiveness) with high
 max_vel led to an exceedingly high braking distance.
 This improves that while still being smooth.
 ### Antipattern Category
-
+X
 ### Keyword
 slow
 ### Note
-
+This commit does not change any performance-related features. Brake a bit faster, as the velocity limits were increased.
 
 ## Commit #839
 ### Hash
@@ -14131,7 +14131,7 @@ px4 mtd:Support onchip emulated eeprom
 ### Keyword
 increase
 ### Note
-
+Not sure under which category this commit falls under.
 
 ## Commit #840
 ### Hash
@@ -14144,11 +14144,11 @@ Now running into issues with running out of stack frame memory
 For now I'm going to leave the relevant code in so it's at least
 readable, but in its current state it will not compile
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. More functionality for MAVLink subscribe system, it doesn't compile in the state of this commit.
 
 ## Commit #841
 ### Hash
@@ -14160,11 +14160,11 @@ uavcan_v1: Increase stack size
 Also increases stack frame size limit, which was what the compiler was
 throwing an error on.
 ### Antipattern Category
-
+General:Hard-coding
 ### Keyword
 increase
 ### Note
-
+Stack size set to 4096.
 
 ## Commit #842
 ### Hash
@@ -14173,11 +14173,11 @@ increase
 ### Message
 px4_work_queue: increase wq:nav_and_controllers stack
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Work queue size increased from 1824 to 2164.
 
 ## Commit #843
 ### Hash
@@ -14193,11 +14193,11 @@ Update submodule sitl_gazebo to latest Sat Mar  6 00:39:04 UTC 2021
     c7524aa 2021-02-28 Jaeyoung-Lim - Fix MAVSDK SITL tests
 f4d5594 2021-02-28 JaeyoungLim - Increase rover model realtime factor (#715)
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features. Firmware update for test builds.
 
 ## Commit #844
 ### Hash
@@ -14206,11 +14206,11 @@ increase
 ### Message
 parameters: fix runtime default edge case
 ### Antipattern Category
-
+X
 ### Keyword
 runtime
 ### Note
-
+This commit does not change any performance-related features. Bug fixed regarding a parameter being set with a custom runtime.
 
 ## Commit #845
 ### Hash
@@ -14219,11 +14219,11 @@ runtime
 ### Message
 px4_work_queue: increase wq:rate_ctrl stack
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Work queue increased from 1888 to 1920.
 
 ## Commit #846
 ### Hash
@@ -14232,11 +14232,11 @@ increase
 ### Message
 gyro_fft: increase default range and length to improve test data
 ### Antipattern Category
-
+New:Fixed_Communication_Rate, New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Gyro min frequency decreased from 50 to 32 Hz, while maximum is increased from 200 to 256.
 
 ## Commit #847
 ### Hash
@@ -14249,7 +14249,7 @@ boards: holybro/kakutef7 disable CONSTRAINED_FLASH to increase optimization
 ### Keyword
 increase
 ### Note
-
+CONSTRAINED_FLASH removed for certain board in ordertoincrease optimization, not sure it falls under a certain category.
 
 ## Commit #848
 ### Hash
@@ -14262,11 +14262,11 @@ This is to avoid race condition with the yaw emergency estimator having
 the same trigger delay of 1 second. Commander will now give more time to
 EKF2 to reset itself before switching to altitude mode.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning, New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
-
+Delay time for nav_test increased from 1 second to 2 so that the commander will have more time to reset itself.
 
 ## Commit #849
 ### Hash
@@ -14277,11 +14277,11 @@ boards: NuttX disable all NSH memory debug commands (mb, mh, mw) by default
 
  - closes https://github.com/PX4/PX4-Autopilot/issues/17062
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Memory debug commands disabled.
 
 ## Commit #850
 ### Hash
@@ -14290,11 +14290,11 @@ memory
 ### Message
 IMU_DGYRO_CUTOFF increase default 10 -> 20 Hz
 ### Antipattern Category
-
+New:Fixed_Communication_Rate, New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Gyro frequency increased from 10 Hz to 20.
 
 ## Commit #851
 ### Hash
@@ -14303,11 +14303,11 @@ increase
 ### Message
 Commander: Increase auto-disarm timeout to 25 seconds after arming
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features. Disarm delay increased for taking off in case pilot is not taking off immediately.
 
 ## Commit #852
 ### Hash
@@ -14318,11 +14318,11 @@ mavsdk_tests: report speed factor every second
 
 This helps in debugging slow CI.
 ### Antipattern Category
-
+X
 ### Keyword
 slow
 ### Note
-
+This commit does not change any performance-related features. Test changes.
 
 ## Commit #853
 ### Hash
@@ -14331,11 +14331,11 @@ slow
 ### Message
 sensors/vehicle_imu: increase threshold for clipping warning
 ### Antipattern Category
-
+New:Fixed_Communication_Rate, New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Threshold for publishing warnings increased from 10 to 100.
 
 ## Commit #854
 ### Hash
@@ -14344,11 +14344,11 @@ increase
 ### Message
 px4_work_queue: increase nav_and_controllers stack
 ### Antipattern Category
-
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Work queue size increased from 2164 to 2240.
 
 ## Commit #855
 ### Hash
@@ -14357,11 +14357,11 @@ increase
 ### Message
 commander: temporarily increase worker thread stack substantially
 ### Antipattern Category
-
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Work queue size increased from 3804 to 4804.
 
 ## Commit #856
 ### Hash
@@ -14377,11 +14377,11 @@ Update submodule ecl to latest Sun May  2 12:39:08 UTC 2021
     a7b8afe 2021-04-30 Eike - Allow rangefinder fusion in vision height mode (Fix for #994) (#999)
 4ac57d3 2021-04-25 Daniel Agar - EKF: increase fault flags value size to fit current flag bits (> 16)
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #857
 ### Hash
@@ -14410,11 +14410,11 @@ case like offboard where this is done.
 We could add an additional case for the specific case to land with a
 position setpoint only.
 ### Antipattern Category
-
+X
 ### Keyword
 fast
 ### Note
-
+This commit does not change any performance-related features. Changes in landing logic.
 
 ## Commit #858
 ### Hash
@@ -14423,11 +14423,11 @@ fast
 ### Message
 px4_work_queue: increase wq:rate_ctrl stack slightly
 ### Antipattern Category
-
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Work queue size increased from 1920 to 1952.
 
 ## Commit #859
 ### Hash
@@ -14443,11 +14443,11 @@ Update submodule ecl to latest Thu May  6 12:39:12 UTC 2021
     29243ac 2021-05-05 bresch - yaw_reset: reduce minimum vector length to compute yaw error
 aad4840 2021-05-02 Kabir Mohammed - EKF: increase allowed difference between flow and gyro ODRs
 ### Antipattern Category
-
+New:unstable_and_slow_noise_handling, New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+ Maximum threshold between flow and gyro data is increased.
 
 ## Commit #860
 ### Hash
@@ -14456,11 +14456,11 @@ increase
 ### Message
 ekf2: selector increase status rate before potential instance change
 ### Antipattern Category
-
+New:Fixed_Communication_Rate
 ### Keyword
 increase
 ### Note
-
+Status publish rate is increased if there is the possiblity of an instance change.
 
 ## Commit #861
 ### Hash
@@ -14469,11 +14469,11 @@ increase
 ### Message
 Jenkins: increase timeout and build history
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features.Jenkins CI build timeout and build history increased.s
 
 ## Commit #862
 ### Hash
@@ -14482,11 +14482,11 @@ increase
 ### Message
 IMU_GYRO_CUTOFF and IMU_DGYRO_CUTOFF increase default slightly
 ### Antipattern Category
-
+New:Fixed_Communication_Rate, New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Gyro frequency increased from 30 Hz to 40.
 
 ## Commit #863
 ### Hash
@@ -14505,11 +14505,11 @@ drivers/imu/analog_devices/adis16448: minor fixes and compatibility with older m
 
  - only allocate CRC perf counter if using CRC
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features. Changes regarding system self check.
 
 ## Commit #864
 ### Hash
@@ -14526,11 +14526,12 @@ sensors/vehicle_angular_velocity: accumualted notch filtering and reset improvem
     - constrain notch filter frequency and bandwidth to safe range (minimum bandwidth for flaot precision, Nyquist, etc)
  - add safe constraint on dt
 ### Antipattern Category
-
+New:unstable_and_slow_noise_handling
 ### Keyword
 performance
 ### Note
-
+Some inline functions added, but this is perfomance issue only for the C language, filtering forgyro greatly improved, difference can be seen in 
+this Issue: Accumulated gyro filter fixes and improvements (#17647)
 
 ## Commit #865
 ### Hash
@@ -14543,7 +14544,7 @@ px4_work_queue: increase UART stack
 ### Keyword
 increase
 ### Note
-
+UARTstack size increased from 1504 to 1536.
 
 ## Commit #866
 ### Hash
@@ -14554,10 +14555,10 @@ drv_pwm_output.h: increase highest max pwm limit from 2150 to 2500
 
  - servo linkages in vtol often need further travel of the servos to cover the full tilt travel
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features. Servo power increased from 2150 to 2500.
 
 
