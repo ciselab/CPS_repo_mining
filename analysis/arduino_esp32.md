@@ -1,6 +1,6 @@
 ## Commit #1
 ### Hash
-[d1025b6b5d98686abdf9d8c450f07da27e3b6012](https://github.com/espressif/arduino-esp32commit/d1025b6b5d98686abdf9d8c450f07da27e3b6012)
+[d1025b6b5d98686abdf9d8c450f07da27e3b6012](https://github.com/espressif/arduino-esp32/commit/d1025b6b5d98686abdf9d8c450f07da27e3b6012)
 
 ### Message
 Update esp32-hal-i2c.c
@@ -17,15 +17,15 @@ https://github.com/espressif/arduino-esp32/issues/53
 
 https://github.com/espressif/arduino-esp32/issues/11
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning, New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
-
+Timeout increased from 2000 to 400000 in attempt to fix clock stretch issues.
 
 ## Commit #2
 ### Hash
-[51a4432ca8e71be202358ceb068f3047bb8ad762](https://github.com/espressif/arduino-esp32commit/51a4432ca8e71be202358ceb068f3047bb8ad762)
+[51a4432ca8e71be202358ceb068f3047bb8ad762](https://github.com/espressif/arduino-esp32/commit/51a4432ca8e71be202358ceb068f3047bb8ad762)
 
 ### Message
 HTTPClient Port (#347)
@@ -68,58 +68,58 @@ Changed log system
 
 * Remove deprecated function
 ### Antipattern Category
-
+X
 ### Keyword
 infinite
 ### Note
-
+This commit does not change any performance-related features. Possible infinite loop, but it doesn't seem that it had an actual implementation.
 
 ## Commit #3
 ### Hash
-[dcdf8132d6b8aaf146ad16f5e5c60a93c887ad6b](https://github.com/espressif/arduino-esp32commit/dcdf8132d6b8aaf146ad16f5e5c60a93c887ad6b)
+[dcdf8132d6b8aaf146ad16f5e5c60a93c887ad6b](https://github.com/espressif/arduino-esp32/commit/dcdf8132d6b8aaf146ad16f5e5c60a93c887ad6b)
 
 ### Message
 Increase partition size to 1.25MB so BT and WiFi can fit
 
 Fixes: https://github.com/espressif/arduino-esp32/issues/339
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Size increased from 1 aprox. 1MB to 1.25 MB.
 
 ## Commit #4
 ### Hash
-[4495659ac53bcdc4f8e59d6918b3e472903d63a7](https://github.com/espressif/arduino-esp32commit/4495659ac53bcdc4f8e59d6918b3e472903d63a7)
+[4495659ac53bcdc4f8e59d6918b3e472903d63a7](https://github.com/espressif/arduino-esp32/commit/4495659ac53bcdc4f8e59d6918b3e472903d63a7)
 
 ### Message
 Increase the memory for loop task
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 memory
 ### Note
-
+Task memory increased from 4096 to 8192.
 
 ## Commit #5
 ### Hash
-[e3a5ae439bb94ae13bd970d9484d4665e1df4972](https://github.com/espressif/arduino-esp32commit/e3a5ae439bb94ae13bd970d9484d4665e1df4972)
+[e3a5ae439bb94ae13bd970d9484d4665e1df4972](https://github.com/espressif/arduino-esp32/commit/e3a5ae439bb94ae13bd970d9484d4665e1df4972)
 
 ### Message
 clean up faster (fixes #828) (#1087)
 
 flush tcp buffer instead of reading it byte by byte.
 ### Antipattern Category
-
+X
 ### Keyword
 faster
 ### Note
-
+Tcp buffer is flushed instead of being reading byte by byte, not sure whether it falls under a certain category.
 
 ## Commit #6
 ### Hash
-[a59eafbc9dfa3ce818c110f996eebf68d755be24](https://github.com/espressif/arduino-esp32commit/a59eafbc9dfa3ce818c110f996eebf68d755be24)
+[a59eafbc9dfa3ce818c110f996eebf68d755be24](https://github.com/espressif/arduino-esp32/commit/a59eafbc9dfa3ce818c110f996eebf68d755be24)
 
 ### Message
 Update IDF to aaf1239 (#1539)
@@ -322,15 +322,15 @@ incorrect optimization for debugging tick markers.
 
 * Add missing space in WiFiClient::write(Stream &stream)
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+From the linked issues, this commit refers to bugs and errors, not any performace-related features.
 
 ## Commit #7
 ### Hash
-[28a410dd503c2ae0f5bb82d471097b9abafe2e90](https://github.com/espressif/arduino-esp32commit/28a410dd503c2ae0f5bb82d471097b9abafe2e90)
+[28a410dd503c2ae0f5bb82d471097b9abafe2e90](https://github.com/espressif/arduino-esp32/commit/28a410dd503c2ae0f5bb82d471097b9abafe2e90)
 
 ### Message
 Spurious Interrupts Temporary fix 20180711 (#1625)
@@ -341,58 +341,58 @@ the 'eject' ERROR is and indication of an interrupt triggering without an source
 
 Chuck.
 ### Antipattern Category
-
+General:Hard-coding
 ### Keyword
 increase
 ### Note
-
+FiFo thresholds are now dynimacally allocated based on bus clockrate, initially it was hardcoded to 30.
 
 ## Commit #8
 ### Hash
-[8d7fb58672c3e506660268de4a69759a36d1cceb](https://github.com/espressif/arduino-esp32commit/8d7fb58672c3e506660268de4a69759a36d1cceb)
+[8d7fb58672c3e506660268de4a69759a36d1cceb](https://github.com/espressif/arduino-esp32/commit/8d7fb58672c3e506660268de4a69759a36d1cceb)
 
 ### Message
 Fix for spurious interrupts during I2C communications (#1665)
 
 This version no longer needs an interrupt for each byte transferred. It only needs interrupts for START, STOP, FIFO empty/Full or error conditions.  This dramatically reduces the interrupt overhead.  I think the prior version was causing an interrupt overload condition where the ISR was not able to process every interrupt as they happened.
 ### Antipattern Category
-
+Smith:General:Unnecessary_Processing
 ### Keyword
 overhead
 ### Note
-
+Interrupts no longer happen for each byte transferred, only for START,STOP,FIFO or error conditions.This change reduces the interrupt overhead. Not sure if Unnecesary Processing is the best category to reflect this.
 
 ## Commit #9
 ### Hash
-[328523f5e3289de193e04aaf4bf13f9672078fd6](https://github.com/espressif/arduino-esp32commit/328523f5e3289de193e04aaf4bf13f9672078fd6)
+[328523f5e3289de193e04aaf4bf13f9672078fd6](https://github.com/espressif/arduino-esp32/commit/328523f5e3289de193e04aaf4bf13f9672078fd6)
 
 ### Message
 Memory leak (#1672)
 
 When a package of size 0 arrives, "buf" is created, but never released. (Sorry, that was my mistake in the last patch)
 ### Antipattern Category
-
+General:C:not_deallocating
 ### Keyword
 memory
 ### Note
-
+Buffer for empty packages are not deallocated.
 
 ## Commit #10
 ### Hash
-[80c110ece70b179ddfe686e8ee45b6c808779454](https://github.com/espressif/arduino-esp32commit/80c110ece70b179ddfe686e8ee45b6c808779454)
+[80c110ece70b179ddfe686e8ee45b6c808779454](https://github.com/espressif/arduino-esp32/commit/80c110ece70b179ddfe686e8ee45b6c808779454)
 
 ### Message
 Add more methods to access memory properties
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #11
 ### Hash
-[a0f0bd930cfd2d607bf3d3288f46e2d265dd2e11](https://github.com/espressif/arduino-esp32commit/a0f0bd930cfd2d607bf3d3288f46e2d265dd2e11)
+[a0f0bd930cfd2d607bf3d3288f46e2d265dd2e11](https://github.com/espressif/arduino-esp32/commit/a0f0bd930cfd2d607bf3d3288f46e2d265dd2e11)
 
 ### Message
 Fix BTserial memory leaks (#1801)
@@ -403,30 +403,30 @@ Fix BTserial memory leaks (#1801)
 
 - DeInit SPP
 ### Antipattern Category
-
+General:C:not_deallocating
 ### Keyword
 memory
 ### Note
-
+Queues were not deleted, same for BT connection.
 
 ## Commit #12
 ### Hash
-[b37f4069e481b9c8ce0d18a107eb9a99374f82a5](https://github.com/espressif/arduino-esp32commit/b37f4069e481b9c8ce0d18a107eb9a99374f82a5)
+[b37f4069e481b9c8ce0d18a107eb9a99374f82a5](https://github.com/espressif/arduino-esp32/commit/b37f4069e481b9c8ce0d18a107eb9a99374f82a5)
 
 ### Message
 Increase _network_event_task priority (#2184)
 
 Fixes https://github.com/espressif/arduino-esp32/issues/1595
 ### Antipattern Category
-
+General:Hard-coding, New:Fixed_Communication_Rate
 ### Keyword
 increase
 ### Note
-
+Network Event Task priority increased, initially the priority was hardcoded to 2.
 
 ## Commit #13
 ### Hash
-[c827bb4177702ce202ca3c966f3ce7564444df5b](https://github.com/espressif/arduino-esp32commit/c827bb4177702ce202ca3c966f3ce7564444df5b)
+[c827bb4177702ce202ca3c966f3ce7564444df5b](https://github.com/espressif/arduino-esp32/commit/c827bb4177702ce202ca3c966f3ce7564444df5b)
 
 ### Message
 CPU and APB Frequency support (#2220)
@@ -449,15 +449,15 @@ CPU and APB Frequency support (#2220)
 
 * Return real APB frequency
 ### Antipattern Category
-
+X
 ### Keyword
 fast
 ### Note
-
+This commit does not change any performance-related features. Frequency support for more hardware added.
 
 ## Commit #14
 ### Hash
-[229d9b7366deee0d8a90fb69c19119f7287c9d1d](https://github.com/espressif/arduino-esp32commit/229d9b7366deee0d8a90fb69c19119f7287c9d1d)
+[229d9b7366deee0d8a90fb69c19119f7287c9d1d](https://github.com/espressif/arduino-esp32/commit/229d9b7366deee0d8a90fb69c19119f7287c9d1d)
 
 ### Message
 [WiFiClientSecure] Shows only free internal heap on logs (#2252)
@@ -472,15 +472,15 @@ Since Mbedtls is running only on internal heap, show internal + PSRAM available 
 
 * Clarify logs
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Simpler memory logs for users.
 
 ## Commit #15
 ### Hash
-[9a7946e6859130146e56231c27a4aa177d9175a1](https://github.com/espressif/arduino-esp32commit/9a7946e6859130146e56231c27a4aa177d9175a1)
+[9a7946e6859130146e56231c27a4aa177d9175a1](https://github.com/espressif/arduino-esp32/commit/9a7946e6859130146e56231c27a4aa177d9175a1)
 
 ### Message
 I2C fix READ of zero bytes hardware hang (#2301)
@@ -505,30 +505,30 @@ The ESP32 drops into a perminent WAIT state waiting for SDA to go HIGH (the STOP
 
 * add databuff length checks to `i2cRead()` and `i2cWrite()`
 ### Antipattern Category
-
+X
 ### Keyword
 hang
 ### Note
-
+This commit does not change any performance-related features. return IC2_ERROR_DEV for 2 edge cases.
 
 ## Commit #16
 ### Hash
-[a87b2ec69054ce43a48bd042599b4185267ebc1d](https://github.com/espressif/arduino-esp32commit/a87b2ec69054ce43a48bd042599b4185267ebc1d)
+[a87b2ec69054ce43a48bd042599b4185267ebc1d](https://github.com/espressif/arduino-esp32/commit/a87b2ec69054ce43a48bd042599b4185267ebc1d)
 
 ### Message
 Fix AsyncUDP receive memory leak (#2607)
 
 If _handler is set, pbuf_free is not called. ~AsyncUDPPacket() calls pbuf_free once but only after calling pbuf_ref in it's constructor. The refcount never reaches zero and the memory allocated for pbuf is never released.
 ### Antipattern Category
-
+General:C:not_deallocating
 ### Keyword
 memory
 ### Note
-
+Buffer not deallocated.
 
 ## Commit #17
 ### Hash
-[619568db5bcc219091c653a5ced5e378b3a5643b](https://github.com/espressif/arduino-esp32commit/619568db5bcc219091c653a5ced5e378b3a5643b)
+[619568db5bcc219091c653a5ced5e378b3a5643b](https://github.com/espressif/arduino-esp32/commit/619568db5bcc219091c653a5ced5e378b3a5643b)
 
 ### Message
 Converted EEPROM library to use nvs instead of partition.   (#2678)
@@ -543,15 +543,15 @@ Converted EEPROM library to use nvs instead of partition.   (#2678)
 
 * Reworked the extra example to make it more clear how to actually use the library and persist data
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Mostly code formatting.
 
 ## Commit #18
 ### Hash
-[ab309e40d5f7a593f36f456976973ed7589a1f04](https://github.com/espressif/arduino-esp32commit/ab309e40d5f7a593f36f456976973ed7589a1f04)
+[ab309e40d5f7a593f36f456976973ed7589a1f04](https://github.com/espressif/arduino-esp32/commit/ab309e40d5f7a593f36f456976973ed7589a1f04)
 
 ### Message
 Copy ESP8266 String w/SSO to ESP32 repo (#2715)
@@ -576,67 +576,67 @@ this optimization as well, but since we're using Arduino strings we had
 
 to roll our own.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Memory in class objects used instead of several mallocs of reduced size which cause fragmentation.
 
 ## Commit #19
 ### Hash
-[e1548e9b7e0b6e519a7f59052817152bfb16ab59](https://github.com/espressif/arduino-esp32commit/e1548e9b7e0b6e519a7f59052817152bfb16ab59)
+[e1548e9b7e0b6e519a7f59052817152bfb16ab59](https://github.com/espressif/arduino-esp32/commit/e1548e9b7e0b6e519a7f59052817152bfb16ab59)
 
 ### Message
 Fix hang on client disconnect during upload (#2914)
 ### Antipattern Category
-
+X
 ### Keyword
 hang
 ### Note
-
+This commit does not change any performance-related features. Edge case missed initially.
 
 ## Commit #20
 ### Hash
-[390da0d09080ac6689a6337f0085f4cd2dc3ffb9](https://github.com/espressif/arduino-esp32commit/390da0d09080ac6689a6337f0085f4cd2dc3ffb9)
+[390da0d09080ac6689a6337f0085f4cd2dc3ffb9](https://github.com/espressif/arduino-esp32/commit/390da0d09080ac6689a6337f0085f4cd2dc3ffb9)
 
 ### Message
 bump CONFIG_ESP32_WIFI_STATIC_RX_BUFFER_NUM to improve RX performance (#3119)
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 performance
 ### Note
-
+Buffer size increased from 10 to 16.
 
 ## Commit #21
 ### Hash
-[b3ba80d57036aa57469653d23cab7cc9029d2ff2](https://github.com/espressif/arduino-esp32commit/b3ba80d57036aa57469653d23cab7cc9029d2ff2)
+[b3ba80d57036aa57469653d23cab7cc9029d2ff2](https://github.com/espressif/arduino-esp32/commit/b3ba80d57036aa57469653d23cab7cc9029d2ff2)
 
 ### Message
 nvs_handle is an int, was assigning NULL.  Also cleaned up end to ensure no memory leak. (#3246)
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #22
 ### Hash
-[5bff89f0be51da3a6306a342e75517f861ba61c9](https://github.com/espressif/arduino-esp32commit/5bff89f0be51da3a6306a342e75517f861ba61c9)
+[5bff89f0be51da3a6306a342e75517f861ba61c9](https://github.com/espressif/arduino-esp32/commit/5bff89f0be51da3a6306a342e75517f861ba61c9)
 
 ### Message
 Fixed issue-3153 - Allocating enough memory to construct the entire UUID as a String. (#3297)
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 memory
 ### Note
-
+Memory size allocated changed from 35 to 37.
 
 ## Commit #23
 ### Hash
-[38c4c0610846b7193e908b474e2c8db06ae981ba](https://github.com/espressif/arduino-esp32commit/38c4c0610846b7193e908b474e2c8db06ae981ba)
+[38c4c0610846b7193e908b474e2c8db06ae981ba](https://github.com/espressif/arduino-esp32/commit/38c4c0610846b7193e908b474e2c8db06ae981ba)
 
 ### Message
 Support for Master mode, Pin and SSP (#3219)
@@ -795,15 +795,15 @@ Support for Master mode, Pin and SSP (#3219)
 
 * 20190916 - fix return value in setup() od example
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #24
 ### Hash
-[cec3fca4ad4a39feb463f9298ab3238819732d50](https://github.com/espressif/arduino-esp32commit/cec3fca4ad4a39feb463f9298ab3238819732d50)
+[cec3fca4ad4a39feb463f9298ab3238819732d50](https://github.com/espressif/arduino-esp32/commit/cec3fca4ad4a39feb463f9298ab3238819732d50)
 
 ### Message
 Fix BluetoothSerial crash when restart (#3471)
@@ -900,15 +900,15 @@ bool btStop(){
 
 remove while to avoid infinite loop
 ### Antipattern Category
-
+Smith:Where_Was_I
 ### Keyword
 infinite
 ### Note
-
+BluetoothSerial crashes after a restart because is in the wrong state.
 
 ## Commit #25
 ### Hash
-[9ad860758cedfa5d2fa7d7c7ba0870e91f7d5fec](https://github.com/espressif/arduino-esp32commit/9ad860758cedfa5d2fa7d7c7ba0870e91f7d5fec)
+[9ad860758cedfa5d2fa7d7c7ba0870e91f7d5fec](https://github.com/espressif/arduino-esp32/commit/9ad860758cedfa5d2fa7d7c7ba0870e91f7d5fec)
 
 ### Message
 Fix Memory leak in addApbChangeCallback()  (#3560)
@@ -925,15 +925,15 @@ Fix Memory leak in addApbChangeCallback()  (#3560)
 
 This fixes #3555
 ### Antipattern Category
-
+General:C:not_deallocating
 ### Keyword
 memory
 ### Note
-
+Variables not deallocated due to duplicate callbacks.
 
 ## Commit #26
 ### Hash
-[89351e3ade9a62edd891e363de08c124395dc0ad](https://github.com/espressif/arduino-esp32commit/89351e3ade9a62edd891e363de08c124395dc0ad)
+[89351e3ade9a62edd891e363de08c124395dc0ad](https://github.com/espressif/arduino-esp32/commit/89351e3ade9a62edd891e363de08c124395dc0ad)
 
 ### Message
 Update WiFiClient.cpp (#3608)
@@ -948,30 +948,30 @@ fixed the connected() function so that it only checks errno if recv returns a va
 
 This fixes the ESP32 Webserver when dealing with a modern webserver with a slow SD card.
 ### Antipattern Category
-
+X
 ### Keyword
 slow
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #27
 ### Hash
-[32d5654aa66f52054d500501decf3f0d281021f6](https://github.com/espressif/arduino-esp32commit/32d5654aa66f52054d500501decf3f0d281021f6)
+[32d5654aa66f52054d500501decf3f0d281021f6](https://github.com/espressif/arduino-esp32/commit/32d5654aa66f52054d500501decf3f0d281021f6)
 
 ### Message
 Implement rmtLoop to be able to continuously send pulses (#3650)
 
 Number of pulses is limited to the reserved RMT memory for the channel. Very useful for PWM, Servo and other repeatable signals.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Additional implementation for sending continouos pulses.
 
 ## Commit #28
 ### Hash
-[80f9f9aeec393ec29b343cee111528f2c026f8c4](https://github.com/espressif/arduino-esp32commit/80f9f9aeec393ec29b343cee111528f2c026f8c4)
+[80f9f9aeec393ec29b343cee111528f2c026f8c4](https://github.com/espressif/arduino-esp32/commit/80f9f9aeec393ec29b343cee111528f2c026f8c4)
 
 ### Message
 fix removeApbChangeCallback() error in spiStopBus() (#3675)
@@ -990,15 +990,15 @@ spiStartBus() was using spiStopBus() to init the hardware, one of spiStopBus() f
 
 capitalization problem
 ### Antipattern Category
-
+X
 ### Keyword
 runtime
 ### Note
-
+This commit does not change any performance-related features. Separates parts of the implementation.
 
 ## Commit #29
 ### Hash
-[b2c678877c04428f06ec5f1f59cc4d204bcd05ec](https://github.com/espressif/arduino-esp32commit/b2c678877c04428f06ec5f1f59cc4d204bcd05ec)
+[b2c678877c04428f06ec5f1f59cc4d204bcd05ec](https://github.com/espressif/arduino-esp32/commit/b2c678877c04428f06ec5f1f59cc4d204bcd05ec)
 
 ### Message
 std::shared_ptr Memory Leak (#3680)
@@ -1017,45 +1017,45 @@ clientSocketHande and _rxBuffer are std::shared_ptr, the stop() call was not cor
 
 * operator= third time
 ### Antipattern Category
-
+General:C:not_deallocating
 ### Keyword
 memory
 ### Note
-
+Shared pointers not deallocated.
 
 ## Commit #30
 ### Hash
-[109ba7a3b44cf0d89068aa0ec812271d3bc4acbc](https://github.com/espressif/arduino-esp32commit/109ba7a3b44cf0d89068aa0ec812271d3bc4acbc)
+[109ba7a3b44cf0d89068aa0ec812271d3bc4acbc](https://github.com/espressif/arduino-esp32/commit/109ba7a3b44cf0d89068aa0ec812271d3bc4acbc)
 
 ### Message
 Revert "std::shared_ptr Memory Leak (#3680)" (#3682)
 
 This reverts commit b2c678877c04428f06ec5f1f59cc4d204bcd05ec.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Commit reverted.
 
 ## Commit #31
 ### Hash
-[ab23e8a65678d62323e023f4b9069378a3053bd2](https://github.com/espressif/arduino-esp32commit/ab23e8a65678d62323e023f4b9069378a3053bd2)
+[ab23e8a65678d62323e023f4b9069378a3053bd2](https://github.com/espressif/arduino-esp32/commit/ab23e8a65678d62323e023f4b9069378a3053bd2)
 
 ### Message
 Greatly reduces error rate (half, or 0 zero errors, depends on in/out ranges) for round-trip mapping at the same performance. (#3655)
 
 (Based on "improved_map" from ESP8266's Servo.cpp)
 ### Antipattern Category
-
+New:rounded_numbers
 ### Keyword
 performance
 ### Note
-
+Error rate of calculations was too large.
 
 ## Commit #32
 ### Hash
-[e4b2ce4e8149f4afe823e870378b25ca2049a54b](https://github.com/espressif/arduino-esp32commit/e4b2ce4e8149f4afe823e870378b25ca2049a54b)
+[e4b2ce4e8149f4afe823e870378b25ca2049a54b](https://github.com/espressif/arduino-esp32/commit/e4b2ce4e8149f4afe823e870378b25ca2049a54b)
 
 ### Message
 DNS resolving timeout change to prevent stack overlapping (#3731)
@@ -1064,30 +1064,30 @@ Real DNS resolving timeout used by lwip library is 14[s] (7[s] for DNS1 + 7[s] f
 
 Fixes #3722
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning, New:Hard-coded-timing
 ### Keyword
 memory
 ### Note
-
+Stack overlapping due to WiFiGenericClass::hostByName() having a timeout of only 4s when at least 15 are needed.
 
 ## Commit #33
 ### Hash
-[c917ed25049714a6761a8cb5e16a1fb869e88507](https://github.com/espressif/arduino-esp32commit/c917ed25049714a6761a8cb5e16a1fb869e88507)
+[c917ed25049714a6761a8cb5e16a1fb869e88507](https://github.com/espressif/arduino-esp32/commit/c917ed25049714a6761a8cb5e16a1fb869e88507)
 
 ### Message
 shallow clone to make installation faster (#4246)
 
 shallow clone (board and submodules) to make installation faster
 ### Antipattern Category
-
+X
 ### Keyword
 faster
 ### Note
-
+This commit does not change any performance-related features. Git clone options modified.
 
 ## Commit #34
 ### Hash
-[dccb4e8608a580cd9d27a29da85fa36c316482e2](https://github.com/espressif/arduino-esp32commit/dccb4e8608a580cd9d27a29da85fa36c316482e2)
+[dccb4e8608a580cd9d27a29da85fa36c316482e2](https://github.com/espressif/arduino-esp32/commit/dccb4e8608a580cd9d27a29da85fa36c316482e2)
 
 ### Message
 improve & fix BLEScan when wantDuplicates (#3995)
@@ -1100,30 +1100,30 @@ improve & fix BLEScan when wantDuplicates (#3995)
 
 - add showParse when you just want raw advertised data
 ### Antipattern Category
-
+General:C:not_deallocating
 ### Keyword
 memory
 ### Note
-
+Condition for deallocating a variable wasn'tcorrect.
 
 ## Commit #35
 ### Hash
-[e4b008e712101f0e0cb3301b4bc80e23fa31dae2](https://github.com/espressif/arduino-esp32commit/e4b008e712101f0e0cb3301b4bc80e23fa31dae2)
+[e4b008e712101f0e0cb3301b4bc80e23fa31dae2](https://github.com/espressif/arduino-esp32/commit/e4b008e712101f0e0cb3301b4bc80e23fa31dae2)
 
 ### Message
 Handle stream timeouts properly, for slow HTTP/HTTPS links (#3752)
 
 This patch fixes update timeouts (error #6) on slow HTTP/HTTPS links.
 ### Antipattern Category
-
+X
 ### Keyword
 slow
 ### Note
-
+This commit does not change any performance-related features. Number of timouts until abort added.
 
 ## Commit #36
 ### Hash
-[c6a8da61f78452573df857cb95edb3a5ecd0365f](https://github.com/espressif/arduino-esp32commit/c6a8da61f78452573df857cb95edb3a5ecd0365f)
+[c6a8da61f78452573df857cb95edb3a5ecd0365f](https://github.com/espressif/arduino-esp32/commit/c6a8da61f78452573df857cb95edb3a5ecd0365f)
 
 ### Message
 Allow faster reuse of socket, to be able to restart WifiServer. (#4306)
@@ -1134,15 +1134,15 @@ See #3960 for more details of the problem and the solution. I only implemented w
 
 This also is a more consistence behaviour compared to esp8266, where it also is possible to restart the wifiserver immediately on the same port.
 ### Antipattern Category
-
+X
 ### Keyword
 faster
 ### Note
-
+This commit does not change any performance-related features. Changes made for allowing a socket to be reused faster.
 
 ## Commit #37
 ### Hash
-[7e8993fc838db37f4d47c7836c002f60ff73d39a](https://github.com/espressif/arduino-esp32commit/7e8993fc838db37f4d47c7836c002f60ff73d39a)
+[7e8993fc838db37f4d47c7836c002f60ff73d39a](https://github.com/espressif/arduino-esp32/commit/7e8993fc838db37f4d47c7836c002f60ff73d39a)
 
 ### Message
 Speed up upload by a factor of 17 (#4787)
@@ -1171,15 +1171,15 @@ The change is safe in the face of disconnects because client.read(), when it no 
 
 * Move disconnect check into the timeout loop
 ### Antipattern Category
-
+Smith:General:Unnecessary_Processing
 ### Keyword
 slow
 ### Note
-
+Whilst not necessary, client.connected() was called for each byte read slowing the upload speed.
 
 ## Commit #38
 ### Hash
-[e831680a41d4c96769cae7277501ce41abe69eee](https://github.com/espressif/arduino-esp32commit/e831680a41d4c96769cae7277501ce41abe69eee)
+[e831680a41d4c96769cae7277501ce41abe69eee](https://github.com/espressif/arduino-esp32/commit/e831680a41d4c96769cae7277501ce41abe69eee)
 
 ### Message
 Fixed a memory leak in BLE (issue #4753) (#4761)
@@ -1198,15 +1198,15 @@ Fixed a memory leak in BLE (issue #4753) (#4761)
 
 Co-authored-by: ushiboy <ushiboy.dev@gmail.com>
 ### Antipattern Category
-
+General:C:not_deallocating
 ### Keyword
 memory
 ### Note
-
+Variable not deallocated.
 
 ## Commit #39
 ### Hash
-[8134a42162f11cb01155038a2465848d6b2b84bc](https://github.com/espressif/arduino-esp32commit/8134a42162f11cb01155038a2465848d6b2b84bc)
+[8134a42162f11cb01155038a2465848d6b2b84bc](https://github.com/espressif/arduino-esp32/commit/8134a42162f11cb01155038a2465848d6b2b84bc)
 
 ### Message
 Fix leak of memory and possible crashes in AsyncUDP
@@ -1219,61 +1219,61 @@ memory
 
 ## Commit #40
 ### Hash
-[560c0f45f58b907f0d699f65408b87fe54650854](https://github.com/espressif/arduino-esp32commit/560c0f45f58b907f0d699f65408b87fe54650854)
+[560c0f45f58b907f0d699f65408b87fe54650854](https://github.com/espressif/arduino-esp32/commit/560c0f45f58b907f0d699f65408b87fe54650854)
 
 ### Message
 Fix dropped SSL connection when buffer gets full. (#4820)
 
 mbedTLS requires repeated calls to mbedtls_ssl_write() whenever it returns MBEDTLS_ERR_SSL_WANT_READ or MBEDTLS_ERR_SSL_WANT_WRITE. this happens when the client sends data faster then the server or the connection can handle.
 ### Antipattern Category
-
+General:C:not_deallocating
 ### Keyword
 faster
 ### Note
-
+Buffer not deallocated properly.
 
 ## Commit #41
 ### Hash
-[dd834b3372d97193f3e82e923eb2f59d9c6da12d](https://github.com/espressif/arduino-esp32commit/dd834b3372d97193f3e82e923eb2f59d9c6da12d)
+[dd834b3372d97193f3e82e923eb2f59d9c6da12d](https://github.com/espressif/arduino-esp32/commit/dd834b3372d97193f3e82e923eb2f59d9c6da12d)
 
 ### Message
 Ensure that String::setLen() is always after any memory operation
 
 Since `String::setLen()` is now modifying the buffer, this change is required to ensure that the proper buffer is changed.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #42
 ### Hash
-[9a0762ad2a3773ccf919631203aa24cd311109a0](https://github.com/espressif/arduino-esp32commit/9a0762ad2a3773ccf919631203aa24cd311109a0)
+[9a0762ad2a3773ccf919631203aa24cd311109a0](https://github.com/espressif/arduino-esp32/commit/9a0762ad2a3773ccf919631203aa24cd311109a0)
 
 ### Message
 [BLE Client] Fix Deadlock when calling writeValue after registerForNotify
 
 Fixes: https://github.com/espressif/arduino-esp32/issues/4952
 ### Antipattern Category
-
+General:Deadlock
 ### Keyword
 deadlock
 ### Note
-
+Deadlock error.
 
 ## Commit #43
 ### Hash
-[81b7c47203b7558cc634ab2b22f966aa4bbc9ce1](https://github.com/espressif/arduino-esp32commit/81b7c47203b7558cc634ab2b22f966aa4bbc9ce1)
+[81b7c47203b7558cc634ab2b22f966aa4bbc9ce1](https://github.com/espressif/arduino-esp32/commit/81b7c47203b7558cc634ab2b22f966aa4bbc9ce1)
 
 ### Message
 Serial::end hang (#5047)
 
 workaround for #5043. There is a timing issue with HardwareSerial::end. I'm not sure what is hung, but it should be possible to see this in jtag, as it does cause a reboot if you let it. The delay needs to be before you detach the device!?
 ### Antipattern Category
-
+X
 ### Keyword
 hang
 ### Note
-
+This commit does not change any performance-related features. Delay added before detaching the device.
 
