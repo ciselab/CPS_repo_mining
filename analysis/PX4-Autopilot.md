@@ -972,7 +972,7 @@ Moved calculation to at coompiler time, no (CPS performance) antipattern was fou
 ### Message
 Fix a deadlock when using the NSH ifconfig command over Telnet
 ### Antipattern Category
-General: Deadlock
+General:Deadlock
 ### Keyword
 deadlock
 ### Note
@@ -1003,7 +1003,7 @@ infinite
 NxWidgets: Fix a potential deadlock that can occur waiting for toolbard geometry data
 ...
 ### Antipattern Category
-General: Deadlock
+General:Deadlock
 ### Keyword
 deadlock
 ### Note
@@ -4399,11 +4399,11 @@ efficient check was implemented.
 
 Signed-off-by: Mark Charlebois <charlebm@gmail.com>
 ### Antipattern Category
-
+Smith:Are_We_There_Yet
 ### Keyword
 performance
 ### Note
-
+Instead of queuing a callback of which the execution is checked on the next call, it now stores the time and just checks that the required time has passed on the next call.
 
 ## Commit #277
 ### Hash
@@ -4414,11 +4414,12 @@ Added param shared memory support
 
 Signed-off-by: Mark Charlebois <charlebm@gmail.com>
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This changes a flag to enable shared memory support.
+No performance anti-pattern could be identified.
 
 ## Commit #278
 ### Hash
@@ -4431,11 +4432,11 @@ The timeout was triggered using absolute time instead of a delay in
 usec. This lead to the system hanging. With the fix it continues after
 the timeout, however, the rates still don't seem right.
 ### Antipattern Category
-
+X
 ### Keyword
 hang
 ### Note
-
+The implementation of `px4_sem_timedwait` was wrong, it took an absolute time as input and used that as the timeout. Now the absolute time is converted to relative first.
 
 ## Commit #279
 ### Hash
@@ -4447,11 +4448,11 @@ param: workaround for QURT
 There is no such thing as set_param_no_autosave on QURT, therefore just
 save it anyway. On the Snapdragon the overhead should not be a problem.
 ### Antipattern Category
-
+Known:Is-everything-ok
 ### Keyword
 overhead
 ### Note
-
+Target does not have a way to dissable autosave. The workaround here is to leave autosave enabled. The result is that the system might save too often.
 
 ## Commit #280
 ### Hash
@@ -4460,11 +4461,11 @@ overhead
 ### Message
 Resolved shared memory parameter problems and removed additional debug code.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+Seems to implement the missing feature from commit #279. Also removes a bunch of debug print statements.
 
 ## Commit #281
 ### Hash
@@ -4473,11 +4474,11 @@ memory
 ### Message
 Fixed problem causing a failure to obtain the shared memory lock on the AppsProc.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+Seems to be a continuation of commit #280. Removes a bunch of debug print statements and adds a system call to unlock shared memory.
 
 ## Commit #282
 ### Hash
@@ -4486,11 +4487,12 @@ memory
 ### Message
 ESC cal: Increase timeouts
 ### Antipattern Category
-
+New:Hard-coded-timing
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Increases some timeouts for battery and pwm.
 
 ## Commit #283
 ### Hash
@@ -4500,11 +4502,11 @@ increase
 sdlog2:
 increase stack size and fix indentation
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Increases the stack size of sdlog2 deamon from 3300 to 4200.
 
 ## Commit #284
 ### Hash
@@ -4513,11 +4515,12 @@ increase
 ### Message
 do not allocate unnecessary memory in logging app
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 memory
 ### Note
-
+Decreases the stack size of sdlog2 deamon from 4200 to 3400.
+Also removes some unnecessary stack variables and changes a compile flag from `-Wframe-larger-than=2500` to `-Wframe-larger-than=1600`.
 
 ## Commit #285
 ### Hash
@@ -4526,11 +4529,11 @@ memory
 ### Message
 make structs static and decrease stack size, run astyle
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 decrease
 ### Note
-
+Decreases the stack size of frsky_telemetry from 2200 to 1800.
 
 ## Commit #286
 ### Hash
@@ -4539,11 +4542,11 @@ decrease
 ### Message
 decrease stack allocation to 1100
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 decrease
 ### Note
-
+Decreases the stack size of frsky_telemetry further from 1800 to 1100.
 
 ## Commit #287
 ### Hash
@@ -4552,11 +4555,11 @@ decrease
 ### Message
 LPE: comment out gps delay handling, too much memory required.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+The gps delay handling was using too much memory, so it was dissabled. No anti-pattern was found in the gps delay handling.
 
 ## Commit #288
 ### Hash
@@ -4565,11 +4568,12 @@ memory
 ### Message
 mavlink: send out parameters faster over UDP
 ### Antipattern Category
-
+New:Fixed-communication-rate
+New:Hard-coded-fine-tuning
 ### Keyword
 faster
 ### Note
-
+Increases the communication rate for mavlink.
 
 ## Commit #289
 ### Hash
@@ -4584,11 +4588,12 @@ Raising the stream rate of param values had the nice effect that
 receiving the params became really quick. However, on the downside it
 set all other streams pretty slow. This needs to be fixed differently.
 ### Antipattern Category
-
+New:Fixed-communication-rate
+New:Hard-coded-fine-tuning
 ### Keyword
 slow
 ### Note
-
+Reverts commit #288.
 
 ## Commit #290
 ### Hash
@@ -4597,11 +4602,11 @@ slow
 ### Message
 Increase stack size by 100 bytes. From @tridge
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Increases the stack size from 1200 to 1300.
 
 ## Commit #291
 ### Hash
@@ -4610,11 +4615,12 @@ increase
 ### Message
 fix sdlog2 self deadlock bug
 ### Antipattern Category
-
+General:Deadlock
 ### Keyword
 deadlock
 ### Note
-
+sdlog2 tried to lock the same mutex twice, deadlocking itself.
+https://github.com/PX4/PX4-Autopilot/pull/4087
 
 ## Commit #292
 ### Hash
@@ -4623,11 +4629,12 @@ deadlock
 ### Message
 make replay faster
 ### Antipattern Category
-
+New:Hard-coded-timing
+New:Hard-coded-fine-tuning
 ### Keyword
 faster
 ### Note
-
+Reduces the replay delay.
 
 ## Commit #293
 ### Hash
@@ -4636,11 +4643,12 @@ faster
 ### Message
 Increase Wifi data rate
 ### Antipattern Category
-
+New:Fixed-communication-rate
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+increases the communication rate over wifi from 20000 to 50000.
 
 ## Commit #294
 ### Hash
@@ -4649,11 +4657,12 @@ increase
 ### Message
 Update rcS to run Wifi faster
 ### Antipattern Category
-
+New:Fixed-communication-rate
+New:Hard-coded-fine-tuning
 ### Keyword
 faster
 ### Note
-
+increases the communication rate over wifi further from 50000 to 80000.
 
 ## Commit #295
 ### Hash
@@ -4672,11 +4681,11 @@ gps: make sure the gps module compiles for POSIX & add it to the posix_sitl_defa
     openUart(PIXHAWK_DEVICE, 115200);
 - this also fixes a memory leak in the gps module
 ### Antipattern Category
-
+General:C:not_deallocating
 ### Keyword
 memory
 ### Note
-
+Fixes a memory leak.
 
 ## Commit #296
 ### Hash
@@ -4687,11 +4696,11 @@ orb: fix memory leaks, forgotten unlock & wrong exit condition in advertisement
 
 How can someone just add a FIXME for such a simple case?!
 ### Antipattern Category
-
+General:C:not_deallocating
 ### Keyword
 memory
 ### Note
-
+Adds a bunch of missing deallocations for different exit conditions. Also adds calls to `unlock`, but it is not clear if this could previously cause a deadlock.
 
 ## Commit #297
 ### Hash
@@ -4700,11 +4709,11 @@ memory
 ### Message
 make iris move a bit faster in gazebo and removed broken assertion from posctl test
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 faster
 ### Note
-
+Changes a bunch of constants to make iris move faster.
 
 ## Commit #298
 ### Hash
@@ -4718,11 +4727,12 @@ due to illegal access to unallocated memory
 
 Signed-off-by: Nicolae Rosia <nicolae.rosia@gmail.com>
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+Fixed a bug where the gps command would access unallocated memory if not enough arguments were provided.
+This is not related to performance.
 
 ## Commit #299
 ### Hash
@@ -4731,11 +4741,12 @@ memory
 ### Message
 Increase sending of navstate and gpsfix to 2 Hz
 ### Antipattern Category
-
+New:Fixed-communication-rate
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Increased the frequency at which some messages are send.
 
 ## Commit #300
 ### Hash
@@ -4753,7 +4764,7 @@ X
 ### Keyword
 memory
 ### Note
-This does not fix a performance antipattern.
+This commit changes when `orb_copy` is called. From the commit message this does not seem to be related to performance.
 
 ## Commit #301
 ### Hash
