@@ -18,7 +18,7 @@ def get_csv_file():
     if not os.path.exists(os.path.abspath(dir_location_report)):
         os.makedirs(dir_location_report)
     full_path_results_file = os.path.join(dir_location_report, results_file_name)
-    return open(full_path_results_file, "w")
+    return open(full_path_results_file, "w", encoding='utf-8')
 
 
 def write_row(csv_writer, project: str, commit: str, dict_commit_info: dict):
@@ -32,7 +32,7 @@ def write_row(csv_writer, project: str, commit: str, dict_commit_info: dict):
 
 
 def read_file(file_name: str, csv_writer):
-    with open(file_name) as f:
+    with open(file_name, encoding='utf-8') as f:
         project = None
         commit = None
         title_topic = None
