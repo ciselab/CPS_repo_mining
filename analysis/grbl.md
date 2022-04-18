@@ -5,11 +5,11 @@
 ### Message
 Added runtime configurable global settings with eeprom persitence
 ### Antipattern Category
-
+X
 ### Keyword
 runtime
 ### Note
-
+This commit does not change any performance-related features. More configurations for terminal.
 
 ## Commit #2
 ### Hash
@@ -18,11 +18,11 @@ runtime
 ### Message
 moved all strings to pgm-memory
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Strings moved to pgm-memory, reason not specified.
 
 ## Commit #3
 ### Hash
@@ -31,11 +31,11 @@ memory
 ### Message
 Grbl can now take advantage of the extra memory in the 328
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning, New:Hard-coded-timing
 ### Keyword
 memory
 ### Note
-
+Bunch of variables regarding memory buffer changed, also sleep 1 sec instead of 5.
 
 ## Commit #4
 ### Hash
@@ -44,11 +44,11 @@ memory
 ### Message
 makes sure steppers cruise at exactly nominal rate to eliminate rounding errors. Possibly fixes the problem where some moves have a long tail of slow steps. (Untested)
 ### Antipattern Category
-
+New:rounded_numbers
 ### Keyword
 slow
 ### Note
-
+Rounding errors possible cause for the problem where some moves have a long tail of slow steps.
 
 ## Commit #5
 ### Hash
@@ -57,11 +57,11 @@ slow
 ### Message
 possible improvement on the long, slow tail problem
 ### Antipattern Category
-
+X
 ### Keyword
 slow
 ### Note
-
+This commit does not change any performance-related features, ceil() function replaced with floor().
 
 ## Commit #6
 ### Hash
@@ -70,11 +70,11 @@ slow
 ### Message
 a new (slightly inelegant) stab at eliminating the slow tail problem
 ### Antipattern Category
-
+X
 ### Keyword
 slow
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #7
 ### Hash
@@ -83,10 +83,11 @@ slow
 ### Message
 Moved comment and block delete handling to be done in protocol.c rather than gcode.c. Prevents these from being held in memory. Also, fixes bug when comments and block delete character are mixed with g-code.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
+This commit does not change any performance-related features. New commit throws away characters that are after the last position in buffer.
 
 
 ## Commit #8
@@ -98,11 +99,11 @@ Revert "Moved comment and block delete handling to be done in protocol.c rather 
 
 This reverts commit ea5b8942db2616e93fc0478922010c3bab7c0481.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Revert of previous commit.
 
 ## Commit #9
 ### Hash
@@ -120,11 +121,11 @@ followed by a comment). This should fix it by bypassing the problem.
 Left a commented line for easily turning on and off block deletes for a
 later feature, if desired.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. New commit throws away characters that are after the last position in buffer.
 
 ## Commit #10
 ### Hash
@@ -142,11 +143,11 @@ followed by a comment). This should fix it by bypassing the problem.
 Left a commented line for easily turning on and off block deletes for a
 later feature, if desired.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. New commit throws away characters that are after the last position in buffer.
 
 ## Commit #11
 ### Hash
@@ -161,11 +162,11 @@ memory. Detailed comments. Really need to stop micro-updating. Should be
 the last until a planner optimization (ala Jens Geisler) has been
 completed.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Updates mostly in comments.
 
 ## Commit #12
 ### Hash
@@ -188,11 +189,11 @@ transformation and small angle approximation. Arc path correction
 implemented for accumulated error of approximation and single precision
 calculation of Arduino. Bug fix in message passing.
 ### Antipattern Category
-
+X
 ### Keyword
 faster
 ### Note
-
+Computational overhead reduced by simplifying expensive mathematical operations, not sure whether this classifies as Smith:General:Unnecessary_Processing.
 
 ## Commit #13
 ### Hash
@@ -213,11 +214,11 @@ critical. - Minor bug fix in planner max junction velocity logic. -
 Simplified arc logic and removed need to multiply for CW or CCW
 direction.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Some calculations simplified and sqrt() calls cut out, fewer variables used.
 
 ## Commit #14
 ### Hash
@@ -232,11 +233,11 @@ slow when operating these. In one test on the Arduino forums, it showed
 about a 15x slow down compared to a simple if-then statement. -
 Clarified some variable names and types and comments.
 ### Antipattern Category
-
+X
 ### Keyword
 slow
 ### Note
-
+This commit does not change any performance-related features. Variables renamed and a % operation removed.
 
 ## Commit #15
 ### Hash
@@ -264,11 +265,11 @@ buffer to 64 bytes. Need the memory space for future developments.
 reporting modes, jog modes, etc can be set during runtime. Will be
 fleshed out and placed into EEPROM when everything is added.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Mostly code formatting.
 
 ## Commit #16
 ### Hash
@@ -286,11 +287,11 @@ direction changes. We suggest to try the hack/fix posted in the Wiki
 before using this, as this experimental feature may cause Grbl to take
 a performance hit at high step rates and about complex curves.
 ### Antipattern Category
-
+X
 ### Keyword
 performance
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #17
 ### Hash
@@ -318,11 +319,11 @@ the last commit.
 
 - Other minor fixes.
 ### Antipattern Category
-
+X
 ### Keyword
 faster
 ### Note
-
+This commit does not change any performance-related features. Not sure whether the changes in void delay_us(uint16_t us) improve the performance and not only the accuracy.
 
 ## Commit #18
 ### Hash
@@ -337,11 +338,11 @@ to status reporting, since GUIs may query real-time position rapidly.
 - Decimal places added to settings (for now). This may disappear in
 future pushes, but here for testing purposes.
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+Not sure whether it falls under any category of performance anti-patterns. The improvement comes from parsing the number of decimals with a factor of 2 instead of 1 and printing a char[] instead of each decimal.
 
 ## Commit #19
 ### Hash
@@ -367,11 +368,11 @@ axes enabled at all times.
 
 - Moved some defines around to where they need to be.
 ### Antipattern Category
-
+X
 ### Keyword
 slower
 ### Note
-
+This commit does not change any performance-related features. Some limits added and a bug fix.
 
 ## Commit #20
 ### Hash
@@ -405,11 +406,11 @@ accidental limit trip).
 
 - Minor memory liberation and calculation speed ups.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Some configurable options added, log printing changed and force kill for all processes added.
 
 ## Commit #21
 ### Hash
@@ -448,11 +449,11 @@ paramters, etc. Much more to do here.
 
 - Updated README to reflect all of the new features.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+Not sure if there any antipatterns.
 
 ## Commit #22
 ### Hash
@@ -480,11 +481,11 @@ the states. Also moved coordinate system tracking from sys to gc struct.
 
 - Removed spindle speed from gcode parser. Not used.
 ### Antipattern Category
-
+X
 ### Keyword
 runtime
 ### Note
-
+This commit does not change any performance-related features. Change in '$' and '$' functionality. Somecode moved around.
 
 ## Commit #23
 ### Hash
@@ -531,11 +532,11 @@ to help users from doing it themselves.
 - Moved around misc defines into .h files. And lots of other little
 things.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Prints changed, some if and switch cases added.
 
 ## Commit #24
 ### Hash
@@ -555,11 +556,11 @@ to A4).
 - Moved all of the MASK defines into the config.h file to centralize
 them.
 ### Antipattern Category
-
+X
 ### Keyword
 runtime
 ### Note
-
+This commit does not change any performance-related features. Some changes in PINs configuration.
 
 ## Commit #25
 ### Hash
@@ -591,11 +592,11 @@ disabled.
 
 - Some bug fixes and other minor tweaks.
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #26
 ### Hash
@@ -617,11 +618,11 @@ maximum step frequency is now back at 30kHz.
 
 - Added Zen Toolworks 7x7 defaults.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning, New:Hard-coded-timing
 ### Keyword
 fast
 ### Note
-
+Frequency increased from 20Hz to 30Hz.
 
 ## Commit #27
 ### Hash
@@ -636,11 +637,11 @@ reduction, rather than half. The increase to 30kHz Ranade timer
 frequency also increased the overall overhead, so the total planner
 change? Zero. But, it's still better.
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #28
 ### Hash
@@ -670,11 +671,11 @@ trapezoidal profiles.
 - Fixed the Timer0 disable after a step pulse falling edge. Thanks
 @blinkenlight!
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning, New:Hard-coded-timing
 ### Keyword
 slow
 ### Note
-
+Frequency decreased from 30Hz to 20Hz.
 
 ## Commit #29
 ### Hash
@@ -693,11 +694,11 @@ causes the slow trailing steps.
 
 - Updated readme with new edge build.
 ### Antipattern Category
-
+X
 ### Keyword
 slow
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #30
 ### Hash
@@ -725,11 +726,11 @@ config.h for extraneous circumstances.
 8-bit vs. 32-bit variable. Should make the stepper algorithm just a
 touch faster overall.
 ### Antipattern Category
-
+X
 ### Keyword
 performance
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #31
 ### Hash
@@ -747,11 +748,11 @@ work with accelerations above 400mm/sec^2 or so.
 
 - Updated README
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning, New:Hard-coded-timing
 ### Keyword
 overhead
 ### Note
-
+Frequency increased from 20Hz to 30Hz.
 
 ## Commit #32
 ### Hash
@@ -781,11 +782,11 @@ Organization only.
 
 -
 ### Antipattern Category
-
+X
 ### Keyword
 overhead
 ### Note
-
+This commit does not change any performance-related features. Some limits added, switch cases and prints changed.
 
 ## Commit #33
 ### Hash
@@ -802,11 +803,11 @@ line buffer.
 
 - Added a line buffer overflow feedback error (Thanks @BHSPitMonkey!)
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 memory
 ### Note
-
+G-code parser buffer increased to 70 from 50 to prevent recent added arc commands from getting truncated, planner buffer decreased from 18 blocks to 17.
 
 ## Commit #34
 ### Hash
@@ -831,11 +832,11 @@ audibly sound weird when this happens.)
 - It now seems that the bottleneck is the serial baudrate (which is
 good!)
 ### Antipattern Category
-
+X
 ### Keyword
 fast
 ### Note
-
+This commit does not change any performance-related features. A bug fix and edit on comments.
 
 ## Commit #35
 ### Hash
@@ -862,11 +863,11 @@ planner.
 that the bottleneck is the serial interface. Will now support this, as
 well as the old 9600 baud, in new firmware builds.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning, New:Hard-coded-timing
 ### Keyword
 fast
 ### Note
-
+Frequency increased from 20Hz to 30Hz.
 
 ## Commit #36
 ### Hash
@@ -898,11 +899,11 @@ decreased it slightly as well.
 - Still much to do, but this push works and still is missing feedholds
 (coming next.)
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+Couldn't find any performace-related antipatterns. This commit focuses on decoupling the stepper ISR from the rest of the classes that in turn reduces the number of tracked variables.
 
 ## Commit #37
 ### Hash
@@ -929,11 +930,11 @@ segment buffer generates a new segment with a typical 0.2 ms, and the
 worse case is 1ms upon a new block or replanning the active block.
 Added altogether, it’s argubly still twice as efficient as the old one.
 ### Antipattern Category
-
+X
 ### Keyword
 performance
 ### Note
-
+This commit does not change any performance-related features. New algorithm that increased the performance.
 
 ## Commit #38
 ### Hash
@@ -953,11 +954,11 @@ junctions has to be a little more constrained. Meaning that, we have to
 slow a little bit down more so that we don’t exceed the acceleration
 limits of the stepper motors.
 ### Antipattern Category
-
+X
 ### Keyword
 slow
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #39
 ### Hash
@@ -994,11 +995,11 @@ algorithm now has a simple axis lock mask which inhibits the desired
 axes from moving. Meaning, if one of the limit switches engages before
 the other, we stop that one axes and keep moving the other.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning, New:Hard-coded-timing
 ### Keyword
 faster
 ### Note
-
+Homing debounce delay increased from 100 to 250.
 
 ## Commit #40
 ### Hash
@@ -1046,11 +1047,11 @@ via one if statement.
 
 - Reorganized the power-up routine to work with the new system states.
 ### Antipattern Category
-
+X
 ### Keyword
 slow
 ### Note
-
+This commit does not change any performance-related features. Only a variable deleted.
 
 ## Commit #41
 ### Hash
@@ -1092,11 +1093,11 @@ the file is.
 
 - Much more polishing to do!
 ### Antipattern Category
-
+X
 ### Keyword
 overhead
 ### Note
-
+This commit does not change any performance-related features. A bug fix, code cleanup and some pins modified.
 
 ## Commit #42
 ### Hash
@@ -1151,11 +1152,11 @@ with other parts of Grbl.
 - Tweaked the stepper disable bit code in stepper.c. Requires less
 flash memory.
 ### Antipattern Category
-
+X
 ### Keyword
 performance
 ### Note
-
+This commit does not change any performance-related features. Code re-organizations, code cleanup, some pin operations changed.
 
 ## Commit #43
 ### Hash
@@ -1198,11 +1199,11 @@ modules.
 
 - Fixed the reporting of spindle state.
 ### Antipattern Category
-
+X
 ### Keyword
 runtime
 ### Note
-
+This commit does not change any performance-related features. Mostly code formatting, more comemnts added and some pin operations changed.
 
 ## Commit #44
 ### Hash
@@ -1237,11 +1238,11 @@ velocities based on the step fractions not executed from the previous
 segment. This ensures that Grbl generates the velocity profiles EXACTLY
 and noticeably improves overall acceleration performance.
 ### Antipattern Category
-
+X
 ### Keyword
 performance
 ### Note
-
+This commit does not change any performance-related features. Bug fix and some code formatting.
 
 ## Commit #45
 ### Hash
@@ -1260,11 +1261,11 @@ to see how the planner works.
 The leaving the un-used line numbers in the function calls eats a
 non-neglible amount of flash memory. So the new if-defs remove them.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Configuration editted and some tests added.
 
 ## Commit #46
 ### Hash
@@ -1306,11 +1307,11 @@ EEPROM to fetch the coordinate system offsets.
 
 - The probe cycle is subject to change upon testing or user-feedback.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #47
 ### Hash
@@ -1361,11 +1362,11 @@ integer routine.
 
 - Some arc computation flash and memory optimizations.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Multiple switch and if conditions modified and debug output.
 
 ## Commit #48
 ### Hash
@@ -1377,11 +1378,11 @@ Fixed atomic access to flags in sys.execute.
 This seems to fix the bug that caused Grbl to hang during some operations,
 especially jogging.
 ### Antipattern Category
-
+X
 ### Keyword
 hang
 ### Note
-
+This commit does not change any performance-related features. Bit operations modified.
 
 ## Commit #49
 ### Hash
@@ -1401,11 +1402,11 @@ to store a tool table.
 in memory. Rather, when commanded, these are applied to the work
 coordinates until a reset or disabled by G49. This works much like G92.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. A switch case added and some variables defined.
 
 ## Commit #50
 ### Hash
@@ -1475,11 +1476,11 @@ streaming to the main stream.py script to allow for settings to be sent.
 flash by several hundred KB, which was re-invested in some of these new
 features.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Code cleanup, switch cases and pin variables modified.
 
 ## Commit #51
 ### Hash
@@ -1497,11 +1498,11 @@ to ensure motions always complete.
 that no rates are below this value, but 0.1mm/min may be ok in some
 situations.
 ### Antipattern Category
-
+New:rounded_numbers
 ### Keyword
 infinite
 ### Note
-
+A small rounding error in feed rate would freeze Grbl so a minimum value was added to fix this.
 
 ## Commit #52
 ### Hash
@@ -1522,11 +1523,11 @@ but this seems like a safe speed for everyone.
 versions. Needs some more work, but it should ok for master release.
 Should work on it more for the next version.
 ### Antipattern Category
-
+X
 ### Keyword
 faster
 ### Note
-
+This commit does not change any performance-related features. Some methods for settings added, readme update.
 
 ## Commit #53
 ### Hash
@@ -1567,11 +1568,11 @@ for non-traditional cartesian machines. Should make it easier later.
 - Removed the new CPU map for the Uno. No longer going to used. There
 will be only one configuration to keep things uniform.
 ### Antipattern Category
-
+X
 ### Keyword
 runtime
 ### Note
-
+This commit does not change any performance-related features. Lot of code deleted, somebit operations changed, code refactored and a config option added.
 
 ## Commit #54
 ### Hash
@@ -1586,11 +1587,11 @@ upload Grbl through the Arduino IDE with the old way.
 - Fixed a minor bug with homing max travel calculations. It was causing
 simultaneous axes homing to move slow than it did before.
 ### Antipattern Category
-
+X
 ### Keyword
 slow
 ### Note
-
+This commit does not change any performance-related features. Support for Arduino added.
 
 ## Commit #55
 ### Hash
@@ -1786,11 +1787,11 @@ that can continually change spindle state per planner block.
 system_t struct. Ran into some compiling errors that were hard to track
 down as to why. Moving them out fixed it.
 ### Antipattern Category
-
+X
 ### Keyword
 performance
 ### Note
-
+From the notes this commit it doesn't seem to tackle any performance-related antipattern.
 
 ## Commit #56
 ### Hash
@@ -1863,11 +1864,11 @@ tracked.
 
 - Updated README
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Interface tweakes, comments added, printFloat refactor , if conditions added.
 
 ## Commit #57
 ### Hash
@@ -1899,11 +1900,11 @@ real-time and during the job.
 - Re-factored planner block rapid rate handling for the dynamic laser
 power feature. Should have had no effect on how Grbl operates.
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #58
 ### Hash
@@ -1953,11 +1954,11 @@ oddities from doing this.
 $G and why a `1.` floating point values are shown with no decimals,
 like so `1`.
 ### Antipattern Category
-
+X
 ### Keyword
 fast
 ### Note
-
+This commit does not change any performance-related features. Mostly comments and error checking for commands.
 
 ## Commit #59
 ### Hash
@@ -1974,11 +1975,11 @@ while back. Now updated and fixed to show the right codes.
 - [feature] Re-installed optional software debouncing for hard limit
 switches. By request.
 ### Antipattern Category
-
+X
 ### Keyword
 infinite
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #60
 ### Hash
@@ -1993,11 +1994,11 @@ Clean up and new streaming script check-mode feature.
 
 [fix] Updated error_codes CSV file to the same format as the others.
 ### Antipattern Category
-
+X
 ### Keyword
 fast
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #61
 ### Hash
@@ -2020,9 +2021,9 @@ Dual motor support for self-squaring gantry homing.
 
 - Added Bob's CNC E3 and E4 CNC machine defaults.
 ### Antipattern Category
-
+X
 ### Keyword
 performance
 ### Note
-
+This commit does not change any performance-related features. Dual motor support implemented.
 
