@@ -7914,7 +7914,7 @@ X
 ### Keyword
 performance
 ### Note
-This commit does not change any performance-related features.
+Some performance-related features modified, but not of interest for this study.
 
 ## Commit #482
 ### Hash
@@ -8401,7 +8401,7 @@ New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-Value changed from 51 to 54.
+Value changed from 47 to 54. Commit message states incorrect values.
 
 ## Commit #508
 ### Hash
@@ -8452,7 +8452,7 @@ New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-Value changed from 51 to 54.
+Value changed from 53 to 54.
 
 ## Commit #511
 ### Hash
