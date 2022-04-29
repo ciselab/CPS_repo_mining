@@ -12317,11 +12317,12 @@ Update submodule nuttx to latest Sat Apr 25 12:38:14 UTC 2020
     66b4f2c4f2 2020-04-21 Peter van der Perk - [Backport] Added S32K1XX progmem driver to use the FlexNVM memory
 1b3fc1c668 2020-04-10 Peter van der Perk - Added net_trylock so we can call can_input while being in a interrupt handler
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+1st commit: nonvalatile FlexNVM memory can be used directly via progmem interface, not sure whether this classifies as an antipattern.
+2nd commit: small update to to allow calling can_input while being in an interrupt handler, no deadlock present.
 
 ## Commit #733
 ### Hash
@@ -12341,11 +12342,11 @@ c19f40e 2020-04-15 Kamil Ritz - Add reset position test for GPS and VISION
 050298f 2020-04-08 Kamil Ritz - Improve matrix library usage
 5749273 2020-04-08 Kamil Ritz - refactor resetPosition
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+An inline function added (not an antipattern as this is restricted to the C++ language), some computations modified, test cases modified/added especially regarding GPS and VISION. There was bug corrected, where 2 uints were substracted, not sure whether this falls under New:rounded_numbers or another antipattern.
 
 ## Commit #734
 ### Hash
@@ -12492,11 +12493,11 @@ This commit does not change any performance-related features.
 ### Message
 ROMFS: holybro s500 decrease filter defaults
 ### Antipattern Category
-X
+New:Hard-coded-fine-tuning
 ### Keyword
 decrease
 ### Note
-This commit does not change any performance-related features.
+IMU_GYRO_CUTOFF decreased from 80 to 60, IMU_DGYRO_CUTOFF decreased from 40 to 30.
 
 ## Commit #743
 ### Hash
@@ -12505,7 +12506,7 @@ This commit does not change any performance-related features.
 ### Message
 ekf2: increase default baro noise 2 -> 3.5 m
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning, New:unstable_and_slow_noise_handling
+New:Hard-coded-fine-tuning, New:unstable_and_slow_noise_handling
 ### Keyword
 increase
 ### Note
@@ -12518,7 +12519,7 @@ Fine tuning of noise filtering.
 ### Message
 ekf2: decrease default GPS horizontal velocity noise
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning, New:unstable_and_slow_noise_handling
+New:Hard-coded-fine-tuning, New:unstable_and_slow_noise_handling
 ### Keyword
 decrease
 ### Note
@@ -12535,11 +12536,11 @@ selectively increase optimization -Os -> -O2
 increasing flash usage
  - ignored on boards with CONSTRAINED_FLASH set
 ### Antipattern Category
-X
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-CMake selective optimizations.
+CMake selective optimizations. Priority of work queue responsible for attitude control increased from 1536 to 1600.
 
 ## Commit #746
 ### Hash
@@ -12770,11 +12771,11 @@ logger: add full commander and safety logging by default
 
  - increase battery_status rate to be useful
 ### Antipattern Category
-X
+New:Hard-coded-fine-tuning, New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
-This commit does not change any performance-related features. New topics added.
+Battery status log rate decreased from 10 Hz to 3 Hz.
 
 ## Commit #760
 ### Hash
@@ -13134,7 +13135,7 @@ logger: increase logging rate of airspeed_validated from 1Hz to 5Hz
 
 Signed-off-by: Silvan Fuhrer <silvan@auterion.com>
 ### Antipattern Category
-New:Fixed_Communication_Rate
+New:Fixed_Communication_Rate, New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
@@ -13153,7 +13154,7 @@ New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-Stack size increased from 1170 to 1472.
+Stack size decreased from 1472 to 1170.
 
 ## Commit #786
 ### Hash
@@ -13168,7 +13169,7 @@ New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-Stack size increased from 2650 to 2848.
+Stack size decreased from 2848 to 2650.
 
 ## Commit #787
 ### Hash
@@ -13191,7 +13192,7 @@ New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-Stack main size decreased from 8192 to 4096.
+Stack main size decreased from 8192 to 4096, IMU_GYRO_FFT_MIN increased from 30 to 50.
 
 ## Commit #788
 ### Hash
@@ -13344,7 +13345,7 @@ X
 ### Keyword
 memory
 ### Note
-This commit does not change any performance-related features. Test setup change.
+This commit doesn't address any antipattern. Parameters that are set to default are not saved.
 
 ## Commit #798
 ### Hash
@@ -13392,11 +13393,11 @@ This commit does not change any performance-related features.
 ### Message
 land_detector: decrease default LNDFW_AIRSPD_MAX 8 -> 6 m/s
 ### Antipattern Category
-X
+New:Hard-coded-fine-tuning
 ### Keyword
 decrease
 ### Note
-This commit does not change any performance-related features.
+LNDFW_AIRSPD_MAX (maximum airspeed allowed in landed state) decreased from 8 to 6 m/s.
 
 ## Commit #802
 ### Hash
@@ -13615,11 +13616,11 @@ vehicle_command: increase queue depth 4 -> 8
 
  - prevent slower modules from missing commands
 ### Antipattern Category
-New:Fixed_Communication_Rate
+New:Fixed_Communication_Rate, New:Hard-coded-fine-tuning
 ### Keyword
 slower
 ### Note
-Log message subscription changed so in order to prevent slower modules from missiog commands.
+Log message subscription changed in order to prevent slower modules from missiog commands.
 
 ## Commit #816
 ### Hash
