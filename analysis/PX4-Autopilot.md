@@ -8822,11 +8822,11 @@ MC_ROLL_P, MC_PITCH_P: increase maximum value to 12
 - use the same value for both
 - lower control latency allows increasing these gains
 ### Antipattern Category
-X
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-This commit does not change any performance-related features.
+Pitch rate maximum value increased from 10 to 12. Also, maximum value for altitude control increased from 8 to 12.
 
 ## Commit #537
 ### Hash
@@ -8899,10 +8899,11 @@ This commit does not change any performance-related features. timestam_last_sign
 ### Message
 Fix: Increase pwmsim module stack by 100 bytes again because load_mon was giving warning about low stack
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
+Stack size increased from 1000 to 1100.
 
 
 ## Commit #541
@@ -8922,7 +8923,7 @@ New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-Stack size increased from 1000 to 1100.
+MC_DTERM_CUTOFF increased from 0 to 30, IMU_GYRO_CUTOFF increased from 30 to 80. Increasing these values allows for better turning gains.
 
 ## Commit #542
 ### Hash
@@ -9010,7 +9011,7 @@ X
 ### Keyword
 fast
 ### Note
-This commit does not change any performance-related features.
+This commit does not change any performance-related features. New method added for retrieving input fram yaw. _hold_yaw is being used if finite, otherwise constant _yaw.
 
 ## Commit #548
 ### Hash
@@ -9019,11 +9020,11 @@ This commit does not change any performance-related features.
 ### Message
 ManualSmoothingXY: velocity as criteria for direction change to prenvent fast acceleration at low spped
 ### Antipattern Category
-General:Hard-coding
+X
 ### Keyword
 fast
 ### Note
-_hold_yaw is being used if finite, otherwise constant _yaw.
+Extra criteria added for avoiding direction change when velocity is grater than 2 m/s. I wouldn't consider it hard-coding as it's most likely a safety measure.
 
 ## Commit #549
 ### Hash
@@ -9034,11 +9035,12 @@ Improve the Crazyflie MAVLink tunnel to increase efficiency
 
 This change fragments MAVLink packets more efficiently and therefore increases the net throughput. This in turn makes the connection significantly more stable and the Crazyflie experience overall more usable.
 ### Antipattern Category
-New:Hard-coded-fine-tuning
+New:Hard-coded-fine-tuning, New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
 PWB Default Min increased from 0 to 20.
+px4_poll timeout time increased from 500 to 1000.
 
 ## Commit #550
 ### Hash
@@ -9347,11 +9349,11 @@ Default flare altitude decreased from 8 to 3.
 ### Message
 ADIS16477 reset on init and increase delay
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning, New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
-
+T_STALL increased from 16 to 200.
 
 ## Commit #569
 ### Hash
