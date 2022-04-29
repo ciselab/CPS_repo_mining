@@ -11815,7 +11815,7 @@ New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-Stack size increased from 2000 to 3000.
+Stack size increased from 2000 to 3000. Also, from 1500 to 3000.
 
 ## Commit #707
 ### Hash
@@ -11922,11 +11922,11 @@ This commit does not change any performance-related features.
 ### Message
 boards: increase STDIO buffer size where we can afford it
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+STDIO buffer size increased in several places from 32 to 256.
 
 ## Commit #713
 ### Hash
@@ -11935,11 +11935,11 @@ increase
 ### Message
 uavcan:Support runtime setting of CAN interfaces
 ### Antipattern Category
-New:Hard-coded-fine-tuning
+X
 ### Keyword
 runtime
 ### Note
-Buffer size increased from 32 to 256.
+Support for runtime added. This commit does not change any performance-related features.
 
 ## Commit #714
 ### Hash
@@ -12266,11 +12266,13 @@ Usermain stack size increased from 2688 to 2944, work queue size increased from 
 ### Message
 Jenkins: increase history for remaining builds
 ### Antipattern Category
-X
+New:Hard-coded-fine-tuning, New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
-This commit does not change any performance-related features. CI/CD settings.
+Variable numToKeepStr changed from 2 to 5 for Jenkinsfile-compile.
+Variable numToKeepStr changed from 10 to 20 and variable artifactDaysToKeepSt changed from 20 to 40 for Jenkinsfile-hardware, Jenkinsfile-hardware_linux, Jenkinsfile-hardware_snapdragon.
+
 
 ## Commit #731
 ### Hash
