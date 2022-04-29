@@ -6149,7 +6149,7 @@ General:Hard-coding, New:Bad_Noise_Handling
 ### Keyword
 increase
 ### Note
-Hard coded value for the maximum threshold value. ?
+Hard coded value for the maximum threshold value.
 
 ## Commit #385
 ### Hash
@@ -6311,11 +6311,11 @@ init shmem early to avoid random crash in fastrpc (#6407)
 
 * Keep the initialziation to NULL, remove the duplicate memory allocation
 ### Antipattern Category
-X
+New:Hard-coded-timing
 ### Keyword
 memory
 ### Note
-This commit does not change any performance-related features.
+"Sleep 2" command added before mavlink initialization.
 
 ## Commit #395
 ### Hash
@@ -6499,11 +6499,11 @@ to allocate causing dataman start to fail, so mark it as a memory
 constrained system and reduce the number of maximum missions
 supported.
 ### Antipattern Category
-New:Hard-coded-fine-tuning
+X
 ### Keyword
 memory
 ### Note
-Memory reduced for emmory constriint system.
+This commit does not change any performance-related features. Defines aerofc board as memory constrained system.
 
 ## Commit #407
 ### Hash
