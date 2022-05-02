@@ -7957,11 +7957,11 @@ We can afford a slower performance in this parsers with python2 to
 keep compability with python3.
 http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html#xrange
 ### Antipattern Category
-
+X
 ### Keyword
 performance
 ### Note
-
+Some performance-related features modified, but not of interest for this study.
 
 ## Commit #482
 ### Hash
@@ -8004,11 +8004,11 @@ px4fmu-v2:Use simple HW versioning API to differentiate V2 variant at runtime.
 
    On FmuV5 this same API will be used.
 ### Antipattern Category
-
+X
 ### Keyword
 runtime
 ### Note
-
+This commit does not change any performance-related features, it addresses a mis-detection of the HW error that happens when there is a failed sensor.
 
 ## Commit #483
 ### Hash
@@ -8019,11 +8019,11 @@ Sensors: Use temperature for airspeed validation to avoid false positives for hi
 
 This is required to enable new high-performance sensors which otherwise would provide incorrect readings.
 ### Antipattern Category
-
+X
 ### Keyword
 performance
 ### Note
-
+This commit does not change any performance-related features. Extra variable added.
 
 ## Commit #484
 ### Hash
@@ -8036,11 +8036,11 @@ Fix memory leaks identified by cppcheck
 * Add comment explaining the (presumed) motivation for the use of new instead of
   allocating on the stack
 ### Antipattern Category
-
+General:C:not_deallocating
 ### Keyword
 memory
 ### Note
-
+Variables not deallocated.
 
 ## Commit #485
 ### Hash
@@ -8049,11 +8049,11 @@ memory
 ### Message
 frsky_telemetry S.Port: refactor to use less memory & allocations
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Variables grouped in structs and others converted to pointers.
 
 ## Commit #486
 ### Hash
@@ -8064,11 +8064,11 @@ frsky_telemetry D protocol: refactor to use less memory & allocations
 
 Also add the vehicle_gps_position & flight mode information
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Variables grouped in structs and others converted to pointers.
 
 ## Commit #487
 ### Hash
@@ -8077,11 +8077,11 @@ memory
 ### Message
 frsky_telemetry: cleanup static vars, use less memory & fix process priority
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 memory
 ### Note
-
+Task priority changedfrom 200 to DEFAULT + 4.
 
 ## Commit #488
 ### Hash
@@ -8115,11 +8115,11 @@ common:Define default BOARD_NUMBER_I2C_BUSES and BOARD_I2C_BUS_CLOCK_INIT
                               not starting becuase the buss runs too
                               fast for it.
 ### Antipattern Category
-
+X
 ### Keyword
 fast
 ### Note
-
+This commit does not change any performance-related features. Default set up for buss frequencies that can be overridden by the board.
 
 ## Commit #489
 ### Hash
@@ -8128,11 +8128,11 @@ fast
 ### Message
 vmount: increase stack size
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size increased from 1500 to 2000.
 
 ## Commit #490
 ### Hash
@@ -8141,11 +8141,11 @@ increase
 ### Message
 vmount: reduce stack size to 1900 as recommended by @bkueng (maximum used memory observed: 1552)
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 memory
 ### Note
-
+Stack size decereased from 2000 to 1900.
 
 ## Commit #491
 ### Hash
@@ -8157,11 +8157,11 @@ nuttx config: increase CONFIG_NFILE_DESCRIPTORS from 53 to 54
 This is needed when logger is logging to file and ulog streaming gets
 activated.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+NFILE_DESCRIPTORS increased from 53 to 54.
 
 ## Commit #492
 ### Hash
@@ -8196,11 +8196,11 @@ bugfix:px4fmu-v5 (STM32F7) random sd write failures
             Updated comment to proper refernce manual for STM32F7 not STM32F4.
             Added stm32_dmacapable input paramaters documentation.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Config for buffer allignment.
 
 ## Commit #493
 ### Hash
@@ -8209,11 +8209,11 @@ memory
 ### Message
 Changed the default behavior for the client launching as a infinite loop
 ### Antipattern Category
-
+X
 ### Keyword
 infinite
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #494
 ### Hash
@@ -8224,11 +8224,11 @@ Use updated micro-CDR with memory leak fix (#7838)
 
 * Fixed memory leak (indicated by cppcheck) upstream
 ### Antipattern Category
-
+General:C:not_deallocating
 ### Keyword
 memory
 ### Note
-
+Variables not deallocated.
 
 ## Commit #495
 ### Hash
@@ -8243,11 +8243,11 @@ It was slow even if the topic existed, the map reduces runtime from linear
 to logarithmic (there are around 80 items in the container).
 This is only used on posix.
 ### Antipattern Category
-
+X
 ### Keyword
 runtime
 ### Note
-
+This commit does not change any performance-related features. List replaced with map for reducing complexity of iterations.
 
 ## Commit #496
 ### Hash
@@ -8260,11 +8260,11 @@ driver: vdev_posix, increase PX4_MAX_FD (#7905)
 
  - closes #7892
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+PX4_MAX_FD variable increased from 300 to 350.
 
 ## Commit #497
 ### Hash
@@ -8273,11 +8273,11 @@ increase
 ### Message
 mc_pos_control auto: use current velocity if smaller than velocity setpoint when slowing down
 ### Antipattern Category
-
+X
 ### Keyword
 slowing
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #498
 ### Hash
@@ -8286,11 +8286,11 @@ slowing
 ### Message
 mc_pos_control: accelerate faster
 ### Antipattern Category
-
+X
 ### Keyword
 faster
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #499
 ### Hash
@@ -8299,11 +8299,11 @@ faster
 ### Message
 mc_pos_control: accelerate faster in auto and increase speed at 90degrees angle
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 faster
 ### Note
-
+Middle cruise speed increased by a factor of 3.f instead of 2.f
 
 ## Commit #500
 ### Hash
@@ -8312,11 +8312,11 @@ faster
 ### Message
 mc_pos_control slowing down close to target take over previous setpoint if low
 ### Antipattern Category
-
+X
 ### Keyword
 slowing
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #501
 ### Hash
@@ -8340,11 +8340,11 @@ In the case of mavlink it works, since it does not affect the flight if
 the mavlink receiver is blocked over a longer time. It is only problematic
 if a joystick is used as input or in offboard control.
 ### Antipattern Category
-
+X
 ### Keyword
 performance
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #502
 ### Hash
@@ -8359,11 +8359,11 @@ This behavior is also noticable with lower angles, but not so extreme.
 It definitely needs to be looked into further, but for now this makes it
 safer.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 decrease
 ### Note
-
+Param descreased from 90 to 85.
 
 ## Commit #503
 ### Hash
@@ -8376,11 +8376,11 @@ esc35-v1 nsh: increase CONFIG_NFILE_DESCRIPTORS from 53 to 54
    This is needed when logger is logging to file and ulog streaming gets
    activated
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Value changed from 51 to 54.
 
 ## Commit #504
 ### Hash
@@ -8393,11 +8393,11 @@ nxphlite-v3 nsh: increase CONFIG_NFILE_DESCRIPTORS from 53 to 54
    This is needed when logger is logging to file and ulog streaming gets
    activated
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Value changed from 51 to 54.
 
 ## Commit #505
 ### Hash
@@ -8410,11 +8410,11 @@ px4-stm32f4discovery nsh: increase CONFIG_NFILE_DESCRIPTORS from 53 to 54
    This is needed when logger is logging to file and ulog streaming gets
    activated
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Value changed from 51 to 54.
 
 ## Commit #506
 ### Hash
@@ -8427,11 +8427,11 @@ px4esc-v1 nsh: increase CONFIG_NFILE_DESCRIPTORS from 53 to 54
    This is needed when logger is logging to file and ulog streaming gets
    activated
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Value changed from 51 to 54.
 
 ## Commit #507
 ### Hash
@@ -8444,11 +8444,11 @@ px4nucleoF767ZI-v1 nsh: increase CONFIG_NFILE_DESCRIPTORS from 53 to 54
    This is needed when logger is logging to file and ulog streaming gets
    activated
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Value changed from 47 to 54. Commit message states incorrect values.
 
 ## Commit #508
 ### Hash
@@ -8461,11 +8461,11 @@ sim nsh: increase CONFIG_NFILE_DESCRIPTORS from 53 to 54
    This is needed when logger is logging to file and ulog streaming gets
    activated
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Value changed from 51 to 54.
 
 ## Commit #509
 ### Hash
@@ -8478,11 +8478,11 @@ tap-v1 nsh: increase CONFIG_NFILE_DESCRIPTORS from 53 to 54
    This is needed when logger is logging to file and ulog streaming gets
    activated
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Value changed from 51 to 54.
 
 ## Commit #510
 ### Hash
@@ -8495,11 +8495,11 @@ px4-same70xplained-v1 nsh: increase CONFIG_NFILE_DESCRIPTORS from 53 to 54
    This is needed when logger is logging to file and ulog streaming gets
    activated
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Value changed from 53 to 54.
 
 ## Commit #511
 ### Hash
@@ -8511,11 +8511,11 @@ Updated nuttx submodule 7.22+
   Updated to latest upstream with PX4 contrib for STM32 I2C that
   fixes an hang in driver.
 ### Antipattern Category
-
+X
 ### Keyword
 hang
 ### Note
-
+This commit does not change any performance-related features. Interrupts defined and math.h file and some asserts added.
 
 ## Commit #512
 ### Hash
@@ -8526,10 +8526,11 @@ Updated nuttx submoulde 7.22+ w/i2c fix ==px4_firmware_nuttx-master
 
    Latest nuttx 7.22+ with PX4 contrib for stm32 f4 I2C hang.
 ### Antipattern Category
-
+X
 ### Keyword
 hang
 ### Note
+This commit does not change any performance-related features. Interrupts defined and math.h file and some asserts added.
 
 
 ## Commit #513
@@ -8555,11 +8556,11 @@ However this patch works much better in practice. The yaw control is
 improved, though it can be a bit slow to converge if you do continuous &
 fast roll-pitch motions (which is expected).
 ### Antipattern Category
-
+X
 ### Keyword
 slow
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #514
 ### Hash
@@ -8572,11 +8573,11 @@ mc_att_control params: reduce default max acro rates from 360 to 120 deg/s
 so that we still have fine-grained control at the center and high rates
 at the edges.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 fast
 ### Note
-
+Parameters changed from 360 to 120.
 
 ## Commit #515
 ### Hash
@@ -8591,11 +8592,11 @@ software.
 
 Tests showed that it's not a problem to increase it to very high numbers.
 ### Antipattern Category
-
+General:Lack_of_documentation
 ### Keyword
 increase
 ### Note
-
+More documentation added, wrong values in existing documentation.
 
 ## Commit #516
 ### Hash
@@ -8608,11 +8609,11 @@ This reverts commit d6df692b7a69460642f1efaad967538f8b6ef1c2.
 
 The changes to attitude controller improve this a lot.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 decrease
 ### Note
-
+Value changed from 85 to 90.
 
 ## Commit #517
 ### Hash
@@ -8621,11 +8622,11 @@ decrease
 ### Message
 FMUv5: Increase USB buffer to increase transfer rates
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning, New:Fixed_Communication_Rate
 ### Keyword
 increase
 ### Note
-
+USB buffer increased from 8000 to 12000 to speed up transfer rate.
 
 ## Commit #518
 ### Hash
@@ -8634,11 +8635,11 @@ increase
 ### Message
 increase max num params per block because of ekf2
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Max num of paramerters increased from 100 to 110.
 
 ## Commit #519
 ### Hash
@@ -8649,11 +8650,11 @@ vdev_posix: change filemap into a static list of objects instead of pointers
 
 to avoid dynamic memory allocations & frees (specifically in orb_exists)
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+Pointer to variable change.
 
 ## Commit #520
 ### Hash
@@ -8664,11 +8665,11 @@ mavlink_orb_subscription: reduce orb_exists() check from 10Hz to 3Hz
 
 Checking with 3Hz for new topics should be fast enough.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning, New:Fixed_Communication_Rate, Smith:Is_Everything_OK
 ### Keyword
 fast
 ### Note
-
+Subscription: reduce orb_exists() check from 10Hz to 3Hz.
 
 ## Commit #521
 ### Hash
@@ -8679,11 +8680,11 @@ jmavsim_run.sh: add more aggressive GC option
 
 This reduces memory usage by roughly 100MB on my laptop
 ### Antipattern Category
-
+New:Hard-coded-timing
 ### Keyword
 memory
 ### Note
-
+Garbage collector set to a timeratio of 20.
 
 ## Commit #522
 ### Hash
@@ -8692,11 +8693,11 @@ memory
 ### Message
 fw_pos_control_l1 increase stack by 110 Bytes (#8348)
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size increased from 1700 to 1810.
 
 ## Commit #523
 ### Hash
@@ -8705,11 +8706,11 @@ increase
 ### Message
 Increase fixed-wing l1 navigation radius limit
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Variable chagned from 100 to 500.
 
 ## Commit #524
 ### Hash
@@ -8718,11 +8719,11 @@ increase
 ### Message
 Jenkins increase timeout to 30 minutes for now
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning, New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
-
+Timeout increased from 20 mis to 30.
 
 ## Commit #525
 ### Hash
@@ -8731,11 +8732,11 @@ increase
 ### Message
 Jenkins increase test timeout
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning, New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
-
+Timeout increased from 30 mis to 60.
 
 ## Commit #526
 ### Hash
@@ -8744,11 +8745,11 @@ increase
 ### Message
 vtol_att_control increase stack by 30 Bytes (1200 -> 1230)
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack increased from 1200 to 1230.
 
 ## Commit #527
 ### Hash
@@ -8757,11 +8758,11 @@ increase
 ### Message
 Jenkinsfile parallel builds fail fast
 ### Antipattern Category
-
+X
 ### Keyword
 fast
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #528
 ### Hash
@@ -8772,11 +8773,11 @@ Jenkins remove fast fail
 
  - this saves build resources, but makes finding the actual failure rather hard (with the current blue ocean gui).
 ### Antipattern Category
-
+X
 ### Keyword
 fast
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #529
 ### Hash
@@ -8785,11 +8786,11 @@ fast
 ### Message
 uorb_graph: add .gitignore, change graph file for sitl runtime config
 ### Antipattern Category
-
+X
 ### Keyword
 runtime
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #530
 ### Hash
@@ -8798,11 +8799,11 @@ runtime
 ### Message
 FW land detector increase trigger time and cleanup (#8486)
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning, New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
-
+Time in which conditions have to hold oncreased.
 
 ## Commit #531
 ### Hash
@@ -8811,11 +8812,11 @@ increase
 ### Message
 Commander: increase stack to ensure enough margin remains
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size increased from 3000 to 3160.
 
 ## Commit #532
 ### Hash
