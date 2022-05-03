@@ -6109,11 +6109,16 @@ bebop2 config: updated some positon control params for decent performance
 
 Signed-off-by: Roman <bapstroman@gmail.com>
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 performance
 ### Note
-
+Hard coded variables that change several times.
+  param set MPC_XY_VEL_P 0.12
+  param set MPC_XY_P 1.3
+  param set MPC_XY_VEL_D 0.002
+  param set MPC_XY_VEL_I 0.05
+Issue: Pr bebop progress (#6068)
 
 ## Commit #382
 ### Hash
@@ -6124,11 +6129,11 @@ bebop config: increase logger buffer from 20kB to 200kB
 
 Signed-off-by: Roman <bapstroman@gmail.com>
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Logger buffer of Bebop drone increased to 200kB.
 
 ## Commit #383
 ### Hash
@@ -6137,11 +6142,12 @@ increase
 ### Message
 LPE: Increase stack to allow enough safe margin
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size of lp estimator increased from 1300 to 1500.
+Issue: Memory access fixes (#6081).
 
 ## Commit #384
 ### Hash
@@ -6150,11 +6156,11 @@ increase
 ### Message
 Sensors app mag voter: Increase stale value detection threshold to accomodate low-noise mag setups
 ### Antipattern Category
-
+General:Hard-coding, New:Bad_Noise_Handling
 ### Keyword
 increase
 ### Note
-
+Hard coded value for the maximum threshold value.
 
 ## Commit #385
 ### Hash
@@ -6163,11 +6169,12 @@ increase
 ### Message
 GPS app: Increase stack to ensure 300 bytes headroom
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size of lp estimator increased from 1200 to 1400.
+Issue: Memory access fixes (#6081).
 
 ## Commit #386
 ### Hash
@@ -6180,11 +6187,11 @@ This reverts commit e3537ca6c25ba50b8c0665138a1d833861b1b5f7.
 
 It needs changes on the Linux side, so reverting for now.
 ### Antipattern Category
-
+New:Fixed-communication-rate, New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+MavLink communication rate changed from 100000 to 10000.
 
 ## Commit #387
 ### Hash
@@ -6195,11 +6202,11 @@ bebop config: updated some gains for decent performance
 
 Signed-off-by: Roman <bapstroman@gmail.com>
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 performance
 ### Note
-
+Multiple hard coded variables changed.
 
 ## Commit #388
 ### Hash
@@ -6215,11 +6222,11 @@ HOTFIX:For Data loss on Nuttx serial w/ DMA &  GPIO Flow Control
    the data ia not written to memory. This looks to be introduced but the
    non circular DMA settings.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #389
 ### Hash
@@ -6230,11 +6237,12 @@ MAVLink app: Fix VTOL reporting and prevent mission reached spam
 
 The VTOL status reporting and the mission status reporting were both suboptimal. VTOL was too slow, mission reporting too fast
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning, New:Fixed-communication-rate
 ### Keyword
 slow
 ### Note
-
+System status reports at higher interval, from 1 to 5 seconds. 
+Extended system reports from 2 to 5 seconds.
 
 ## Commit #390
 ### Hash
@@ -6245,11 +6253,11 @@ Fix Simulator: Set correct rotor count for standard VTOL
 
 The rotor count was incorrect which meant that control surfaces like elevons were scaled incorrectly. This was the main reason for really bad SITL performance
 ### Antipattern Category
-
+New:Hard-coded-timing
 ### Keyword
 performance
 ### Note
-
+Rotor count was set incorrectly to 8 instead of 5.
 
 ## Commit #391
 ### Hash
@@ -6258,11 +6266,11 @@ performance
 ### Message
 controllib decrease blockNameLengthMax to 40
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 decrease
 ### Note
-
+Block name length max decreased from 80 to 40.
 
 ## Commit #392
 ### Hash
@@ -6275,11 +6283,13 @@ Sync the attitude controller to the raw gyro data to remove the latency in the r
 Attitude data latency will increase as it will be from the previous EKF update, however attitude loops are less latency sensitive.
 Thermal compensation and bias data will be from the previous frame.
 ### Antipattern Category
-
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
-
+Altitude controller synched to gyro data subscription.
+Issue: Master (#6582)
+       MC rate ctrl sync (#6363)
 
 ## Commit #393
 ### Hash
@@ -6288,11 +6298,12 @@ increase
 ### Message
 sensors & mc_att_control: increase stack sizes due to recent changes
 ### Antipattern Category
+New:Hard-coded-fine-tuning
 
 ### Keyword
 increase
 ### Note
-
+Stack size increased from 1500 to  1700.
 
 ## Commit #394
 ### Hash
@@ -6311,11 +6322,11 @@ init shmem early to avoid random crash in fastrpc (#6407)
 
 * Keep the initialziation to NULL, remove the duplicate memory allocation
 ### Antipattern Category
-
+New:Hard-coded-timing
 ### Keyword
 memory
 ### Note
-
+"Sleep 2" command added before mavlink initialization.
 
 ## Commit #395
 ### Hash
@@ -6324,11 +6335,11 @@ memory
 ### Message
 qurt px4_layer initialize shared memory (#6453)
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #396
 ### Hash
@@ -6337,11 +6348,11 @@ memory
 ### Message
 clang-tidy performance-unnecessary-value-param
 ### Antipattern Category
-
+X
 ### Keyword
 performance
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #397
 ### Hash
@@ -6350,11 +6361,11 @@ performance
 ### Message
 clang-tidy performance-unnecessary-copy-initialization
 ### Antipattern Category
-
+X
 ### Keyword
 performance
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #398
 ### Hash
@@ -6364,11 +6375,11 @@ performance
 land_detector: Hotfix to prevent ground contact detection when descending velocity is very slow with manual stick all the way down
 Now the stick down check is only done in manual control and the thrust low is again mandatory to detect ground in any case.
 ### Antipattern Category
-
+X
 ### Keyword
 slow
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #399
 ### Hash
@@ -6377,11 +6388,11 @@ slow
 ### Message
 mavlink : track time offset faster
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 faster
 ### Note
-
+Time offset increased from 0.6 to 0.8.
 
 ## Commit #400
 ### Hash
@@ -6401,11 +6412,11 @@ Unfortunately we need to initialize the semaphore on startup, by calling
 sem_init(). This adds a param_init() method called by every board/config
 that uses the params (at least I think I've found all of them)
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Array operations made thread safe.
 
 ## Commit #401
 ### Hash
@@ -6424,11 +6435,11 @@ WIP: valgrind runtime analysis and fixes (#6521)
 
 * px4_posix_tasks use nullptr
 ### Antipattern Category
-
+General:C:not_deallocating
 ### Keyword
 runtime
 ### Note
-
+Memory leaks, 2 variables not deallocated.
 
 ## Commit #402
 ### Hash
@@ -6437,11 +6448,11 @@ runtime
 ### Message
 FW att control: Increase stack size to ensure limits
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size increased from 1400 to 1500.
 
 ## Commit #403
 ### Hash
@@ -6450,11 +6461,11 @@ increase
 ### Message
 Convergence: increase yaw output in mixer
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Yaw ooutput increased from 4000 to 8000.
 
 ## Commit #404
 ### Hash
@@ -6463,11 +6474,11 @@ increase
 ### Message
 MC pos ctrl: Force slow landing speed below min loiter altitude
 ### Antipattern Category
-
+X
 ### Keyword
 slow
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #405
 ### Hash
@@ -6478,11 +6489,11 @@ ROMFS: common: AeroFC: Do not start MAVLink over USB
 
 STM32 pins are not exposed in AeroFC, so lets save some memory here.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #406
 ### Hash
@@ -6499,11 +6510,11 @@ to allocate causing dataman start to fail, so mark it as a memory
 constrained system and reduce the number of maximum missions
 supported.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Defines aerofc board as memory constrained system.
 
 ## Commit #407
 ### Hash
@@ -6521,11 +6532,11 @@ it's defined in attitude_estimator_q.
 
 credits for finding this go to Jeyong Shin (jeyong).
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Adds null-pointer check.
 
 ## Commit #408
 ### Hash
@@ -6539,11 +6550,11 @@ thus orb_advertise() was called each time.
 
 Note that it did not produce a memory leak.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. 2 functions made static.
 
 ## Commit #409
 ### Hash
@@ -6555,11 +6566,11 @@ ekf2: use sensors timestamp for published topics when in replay mode
 when doing fast replay, hrt_absolute_time() will not match the replayed time
 thus we just use the same timestamp as the input sensors.
 ### Antipattern Category
-
+X
 ### Keyword
 fast
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #410
 ### Hash
@@ -6570,11 +6581,11 @@ nuttx configs: increase CONFIG_NFILE_DESCRIPTORS from 51 to 53
 
 this is needed due to the additional topics logged with the logger
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Variable increased from 51 to 53.
 
 ## Commit #411
 ### Hash
@@ -6583,11 +6594,11 @@ increase
 ### Message
 voted_sensors_update: increase accel & gyro timeout in HIL mode
 ### Antipattern Category
-
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
-
+Timeout of 0.2 ms added.
 
 ## Commit #412
 ### Hash
@@ -6599,11 +6610,11 @@ simulator: handle ctrl-c during startup correctly
 This makes sure the px4 process does not hang when Ctrl-C is pressed
 during startup.
 ### Antipattern Category
-
+General:Hard-coding
 ### Keyword
 hang
 ### Note
-
+Variable set to true changed to a dynamic one.
 
 ## Commit #413
 ### Hash
@@ -6615,11 +6626,11 @@ mavlink shell: check if there's enough free buffer to send the mavlink message
 if there is not, the process on the other end of the pipe will just block.
 This improves reliability over slow links.
 ### Antipattern Category
-
+New:Fixed-communication-rate
 ### Keyword
 slow
 ### Note
-
+Sometimes there is not enough free buffer to send a message.
 
 ## Commit #414
 ### Hash
@@ -6630,11 +6641,11 @@ modules: dataman: Share memory between backends
 
 Also having just a boolean to track if backend is running.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Couple of varaibles grouped into struct.
 
 ## Commit #415
 ### Hash
@@ -6657,11 +6668,11 @@ bank as the memory bank that STM32 read instructions or it can block
 the CPU from fetching instructions from flash during the erase and
 write operations and cause your drone crash.
 ### Antipattern Category
-
+Known:Where_was_I
 ### Keyword
 performance
 ### Note
-
+Information on RAM is now being saved before reboot. 
 
 ## Commit #416
 ### Hash
@@ -6673,11 +6684,11 @@ nuttx-configs: aerofc: Enable CONFIG_STM32_FLASH_WORKAROUND_DATA_CACHE_CORRUPTIO
 Now AeroFC is making use of both flash memory banks so it need this
 workaround.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #417
 ### Hash
@@ -6693,11 +6704,11 @@ HOTFIX:Backport Memory corruption due to stack coloring overreach
    the first word after TOS
    See https://github.com/PX4/Firmware/issues/6613#issuecomment-285869778
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Error in stack allignment.
 
 ## Commit #418
 ### Hash
@@ -6715,11 +6726,11 @@ the side. Also, the sensitivity depends on the rate of the commander
 loop and/or the RC update loop. The correct solution would be a proper
 filtering and trigger for movement.
 ### Antipattern Category
-
+X
 ### Keyword
 fast
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #419
 ### Hash
@@ -6737,11 +6748,11 @@ Tested on various links, like:
 - pixracer USB
 - SITL
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning, New:Hard-coded-timing
 ### Keyword
 slow
 ### Note
-
+Parameter rate increased from 120 to 300.
 
 ## Commit #420
 ### Hash
@@ -6756,11 +6767,11 @@ This saves roughly 1KB of RAM. We only do that on NuttX because normal
 integers have better performance in general.
 Previously on amd64, this was even 64bits because it was an uintptr_t.
 ### Antipattern Category
-
+X
 ### Keyword
 performance
 ### Note
-
+This commit does not change any performance-related features. Variable type changed.
 
 ## Commit #421
 ### Hash
@@ -6779,11 +6790,11 @@ Thus this should only be an intermediate step until we move towards RCU.
 
 Tested on SITL & Pixracer.
 ### Antipattern Category
-
+X
 ### Keyword
 overhead
 ### Note
-
+This commit does not change any performance-related features. Thread lock/unlock functions splitted for reader and writer.
 
 ## Commit #422
 ### Hash
@@ -6818,11 +6829,11 @@ UAVCAN performance audit (#6829)
 
 * Removed UAVCAN perfcounters
 ### Antipattern Category
-
+General:Hard-coding, Smith:General:Unnecessary_Processing
 ### Keyword
 performance
 ### Note
-
+Elf file location is now specified by the user instead of being hard coded. Redundant publish channels are removed to free up memory and cpu load.
 
 ## Commit #423
 ### Hash
@@ -6833,11 +6844,11 @@ Revert "UAVCAN performance audit (#6829)" (#6846)
 
 This reverts commit 21e04c9f7afd56adf21d02b76c89ae06fe1fc5a7.
 ### Antipattern Category
-
+X
 ### Keyword
 performance
 ### Note
-
+This commit does not change any performance-related features. Revert of commit #422.
 
 ## Commit #424
 ### Hash
@@ -6876,10 +6887,12 @@ Performance audit (intentionally duplicates #6829) (#6847)
 
 * Matrix submodule update
 ### Antipattern Category
-
+General:Hard-coding, Smith:General:Unnecessary_Processing
 ### Keyword
 performance
 ### Note
+Elf file location is now specified by the user instead of being hard coded. Redundant publish channels are removed to free up memory and cpu load.
+Duplicate of commit #422.
 
 
 ## Commit #425
@@ -6941,11 +6954,11 @@ Backport of upstream NuttX
 
        by 4 bytes when allocated and alining on a 8 byte boundry
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Stack allignment error.
 
 ## Commit #426
 ### Hash
@@ -6992,11 +7005,11 @@ HOTFIX:Fixes improper restoration of base_priority
    There is also the additional thunking on the foreach to
    get from holer to holder->tcb.
 ### Antipattern Category
-
+X
 ### Keyword
 overhead
 ### Note
-
+This commit does not change any performance-related features. Semaphore not implemented correctly in the first place.
 
 ## Commit #427
 ### Hash
@@ -7007,11 +7020,11 @@ mc_pos_control: slow down in auto when close to target
 
 mc_pos_control: move limit vel xy after velocity controller
 ### Antipattern Category
-
+General:Hard-coding
 ### Keyword
 slow
 ### Note
-
+Hard coded variable indicating minimum threshold for landing.
 
 ## Commit #428
 ### Hash
@@ -7022,11 +7035,11 @@ mc_pos_control: added gradual landing speed logic
 depending on two altitudes that can get set as parameter
 the logic linearly slows down from higher land altitude 1 to slower land altitude 2
 ### Antipattern Category
-
+General:Hard-coding
 ### Keyword
 slower
 ### Note
-
+Hard coded variables indicating minimum threshold for landing.
 
 ## Commit #429
 ### Hash
@@ -7061,11 +7074,11 @@ Backport of stm32f7 add DTCM to heap and use it on F7 (#6865)
 
   CONFIG_MM_REGIONS=3 adds the DTCM region to the heap.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Heap configurations added.
 
 ## Commit #430
 ### Hash
@@ -7101,11 +7114,11 @@ Backport:stm32_flash changes from upsteam
 
     stm32_flash:Need conditional on non F4 targets
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #431
 ### Hash
@@ -7757,7 +7770,6 @@ This change delays the reset and therefore the pulse by at least 400 Ms.
 slow
 ### Note
 
-
 ## Commit #469
 ### Hash
 [f45b9048aa8662865ef95703e51fcdc70544254b](https://github.com/PX4/PX4-Autopilot/commit/f45b9048aa8662865ef95703e51fcdc70544254b)
@@ -7769,7 +7781,6 @@ GPS driver increase stack (244 bytes left)
 ### Keyword
 increase
 ### Note
-
 
 ## Commit #470
 ### Hash
@@ -7783,7 +7794,6 @@ Preflight checks: Increase accel warn limit range
 increase
 ### Note
 
-
 ## Commit #471
 ### Hash
 [585984fa0c846d1a1c4e63e9e9501cfff9d87cda](https://github.com/PX4/PX4-Autopilot/commit/585984fa0c846d1a1c4e63e9e9501cfff9d87cda)
@@ -7795,7 +7805,6 @@ fmuservo increase stack
 ### Keyword
 increase
 ### Note
-
 
 ## Commit #472
 ### Hash
