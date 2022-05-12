@@ -189,11 +189,11 @@ transformation and small angle approximation. Arc path correction
 implemented for accumulated error of approximation and single precision
 calculation of Arduino. Bug fix in message passing.
 ### Antipattern Category
-X
+Smith:General:Unnecessary_Processing
 ### Keyword
 faster
 ### Note
-Computational overhead reduced by simplifying expensive mathematical operations, not sure whether this classifies as Smith:General:Unnecessary_Processing.
+Computational overhead reduced by simplifying expensive mathematical operations and not recalculating unchanged blocks.
 
 ## Commit #13
 ### Hash
@@ -265,11 +265,12 @@ buffer to 64 bytes. Need the memory space for future developments.
 reporting modes, jog modes, etc can be set during runtime. Will be
 fleshed out and placed into EEPROM when everything is added.
 ### Antipattern Category
-X
+New:Hard-coded-fine-tuning, New:Hard-coded-timing
 ### Keyword
 memory
 ### Note
-This commit does not change any performance-related features. Mostly code formatting.
+BLOCK_BUFFER_SIZE param decreased from 20 to 18.
+STEPPER_IDLE_LOCK_TIME defined to 25 ms.
 
 ## Commit #16
 ### Hash
@@ -287,11 +288,11 @@ direction changes. We suggest to try the hack/fix posted in the Wiki
 before using this, as this experimental feature may cause Grbl to take
 a performance hit at high step rates and about complex curves.
 ### Antipattern Category
-X
+New:Hard-coded-timing
 ### Keyword
 performance
 ### Note
-This commit does not change any performance-related features.
+STEPPER_IDLE_LOCK_TIME defined to 25 ms.
 
 ## Commit #17
 ### Hash
@@ -319,11 +320,11 @@ the last commit.
 
 - Other minor fixes.
 ### Antipattern Category
-X
+New:Hard-coded-timing
 ### Keyword
 faster
 ### Note
-This commit does not change any performance-related features. Not sure whether the changes in void delay_us(uint16_t us) improve the performance and not only the accuracy.
+Homing cycle delay was changed from the hard coded value of 500000 to settings.default_feed_rate.
 
 ## Commit #18
 ### Hash
@@ -342,7 +343,7 @@ X
 ### Keyword
 increase
 ### Note
-Not sure whether it falls under any category of performance anti-patterns. The improvement comes from parsing the number of decimals with a factor of 2 instead of 1 and printing a char[] instead of each decimal.
+The improvement comes from parsing the number of decimals with a factor of 2 instead of 1 and printing a char[] instead of each decimal. Doesn't fall under any performance related anti-pattern.
 
 ## Commit #19
 ### Hash
@@ -453,7 +454,7 @@ X
 ### Keyword
 memory
 ### Note
-Not sure if there any antipatterns.
+Bug fixes, this commit does not change any performance-related features.
 
 ## Commit #22
 ### Hash
@@ -868,6 +869,8 @@ New:Hard-coded-fine-tuning, New:Hard-coded-timing
 fast
 ### Note
 Frequency increased from 20Hz to 30Hz.
+DEFAULT_RAPID_FEEDRATE increased from 2500 to 4000.
+DEFAULT_ACCELERATION increased from 150*60*60 to 400*60*60.
 
 ## Commit #36
 ### Hash
@@ -1152,11 +1155,11 @@ with other parts of Grbl.
 - Tweaked the stepper disable bit code in stepper.c. Requires less
 flash memory.
 ### Antipattern Category
-X
+New:Fixed_Communication_Rate, New:Hard-coded-fine-tuning
 ### Keyword
 performance
 ### Note
-This commit does not change any performance-related features. Code re-organizations, code cleanup, some pin operations changed.
+DEFAULT_HOMING_SEEK_RATE increased from 500 to 635 mm/min.
 
 ## Commit #43
 ### Hash
@@ -1523,11 +1526,12 @@ but this seems like a safe speed for everyone.
 versions. Needs some more work, but it should ok for master release.
 Should work on it more for the next version.
 ### Antipattern Category
-X
+New:Hard-coded-fine-tuning
 ### Keyword
 faster
 ### Note
-This commit does not change any performance-related features. Some methods for settings added, readme update.
+DEFAULT_X_MAX_TRAVEL, DEFAULT_Y_MAX_TRAVEL, DEFAULT_Z_MAX_TRAVEL increased from 200.0 to 290 // mm
+DEFAULT_Z_MAX_RATE increased from 500 to 750 mm/min.
 
 ## Commit #53
 ### Hash
