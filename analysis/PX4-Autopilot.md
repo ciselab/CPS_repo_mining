@@ -7118,7 +7118,9 @@ X
 ### Keyword
 memory
 ### Note
-This commit does not change any performance-related features.
+Not an anti-pattern, workaround for a known issue of the STM32 hardware and a section of the code was made thread safe.
+Issues: stm32 flash fixes #6885
+        Critical: Fixes Snapdragon Flight problem caused when the generated parameters.xml differs for the ARM and DSP builds #6883
 
 ## Commit #431
 ### Hash
@@ -7129,11 +7131,12 @@ rcS: increase log buffer by 4kB
 
 To reduce dropouts, and because we have enough RAM :)
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Value changed from 12 to 16, current value is 8.
+Issue: Call clearenv() on NuttX #6925
 
 ## Commit #432
 ### Hash
@@ -7146,11 +7149,12 @@ Just to make sure that it will never be used on NuttX. This is not an
 architectural limitation, just a memory optimization, since we call
 clearenv() on NuttX.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features, small memory optimization, env variables are not desired on NuttX as they use aprox. 6kB of RAM.
+Issue: Call clearenv() on NuttX #6925
 
 ## Commit #433
 ### Hash
@@ -7159,11 +7163,12 @@ memory
 ### Message
 clang-tidy enable performance-type-promotion-in-math-fn
 ### Antipattern Category
-
+X
 ### Keyword
 performance
 ### Note
-
+This commit does not change any performance-related features, this commit forces the build to fail if there are float to double coversions.
+Issue: WIP: clang-tidy enable performance-type-promotion-in-math-fn #6841
 
 ## Commit #434
 ### Hash
@@ -7179,11 +7184,12 @@ back, printload would access invalid memory.
 This keeps the sched_lock() section as small as possible, just grabbing the
 tcb variables we need.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features, error in scheduling switch during printload.
+Issue: Add preflight & postflight perf counters & process usage to ULog #6832
 
 ## Commit #435
 ### Hash
@@ -7194,11 +7200,12 @@ printload: reduce memory usage of print_load_s
 
 assuming CONFIG_MAX_TASKS = 32, this saves 256B of RAM
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features, local variable used instead of pointer in a struct.
+Issue: Add preflight & postflight perf counters & process usage to ULog #6832
 
 ## Commit #436
 ### Hash
@@ -7212,11 +7219,12 @@ for each line. To avoid code duplication, the print_load has been refactored
 to print to a buffer first, then print to an fd. The overhead is not
 noticable, and the behavior of print_load is unchanged.
 ### Antipattern Category
-
+X
 ### Keyword
 overhead
 ### Note
-
+This commit does not change any performance-related features.
+Issue: Add preflight & postflight perf counters & process usage to ULog #6832
 
 ## Commit #437
 ### Hash
@@ -7231,11 +7239,12 @@ requires synchronization. Without it we risk accessing invalid memory.
 There are still remaining issues (see comment in code), they will not lead
 to a crash however.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features
+Issue: Add preflight & postflight perf counters & process usage to ULog #6832
 
 ## Commit #438
 ### Hash
@@ -7254,10 +7263,12 @@ VTOL Standard transition improvements (#6904)
 
  *  navigator don't reset transition altitude
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
+Front and Back transition times increased.
+Issue: Vtol transition improvements #6904
 
 
 ## Commit #439
@@ -7271,10 +7282,12 @@ MC_YAWRATE_MAX 20  => 50
 
 Signed-off-by: bresch <brescianimathieu@gmail.com>
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
+Yawn rate value increased from 20 to 50.
+Issue: Increase max yawrate default parameters for standard delta VTOL #6981
 
 
 ## Commit #440
@@ -7301,10 +7314,12 @@ Reduce USART1 tx buffer by 8 bytes to fix aligment issue
 
    So this is a hack to shift things back 8 bytes.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 memory
 ### Note
+Value reduced from 64 to 56.
+Issue: Reduce USART1 tx buffer by 8 bytes to fix aligment issue #6993
 
 
 ## Commit #441
@@ -7314,11 +7329,11 @@ memory
 ### Message
 Land detector: Since multicopters take off and land slower than 0.7 m/s, setting the default detection threshold to 0.5 m/s is a much safer default
 ### Antipattern Category
-
+X
 ### Keyword
 slower
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #442
 ### Hash
@@ -7329,11 +7344,11 @@ MC position control: Smoother takeoff
 
 This patch ramps up the throttle to hover throttle instead of a fixed value and limits the vertical takeoff speed to the value set in the parameter. This should ensure smoother, slower takeoffs, in particular in autonomous flight modes.
 ### Antipattern Category
-
+General:Hard-coding
 ### Keyword
 slower
 ### Note
-
+Hard-coded values changed to dynamic ones.
 
 ## Commit #443
 ### Hash
@@ -7345,11 +7360,12 @@ logger: reduce CPU load by ~1.5%
 Reduces CPU load from ~6.9% to 5.3% (tested on Pixracer & Pixhawk). The
 method is only used once, so it does not increase flash usage.
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features. This performance issue is applicable only in C++.
+Issue: Logger: add logrotate & reduce CPU load #6997
 
 ## Commit #444
 ### Hash
@@ -7358,11 +7374,12 @@ increase
 ### Message
 Support calibration of fast+slow gyros #6998
 ### Antipattern Category
-
+X
 ### Keyword
 slow
 ### Note
-
+This commit does not change any performance-related features.
+Issue: Support calibration of fast+slow gyros #7043
 
 ## Commit #445
 ### Hash
@@ -7379,10 +7396,12 @@ Fixed by moving the summary info to the bottom of the top printout
 after everything is computed. Also restructured the callback to
 not depend on a line counter and fixed astyle glitches.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
+This commit does not change any performance-related features.
+Issue: Fix top output, indentation for #7020 #7074
 
 
 ## Commit #446
@@ -7392,11 +7411,11 @@ memory
 ### Message
 Fixes problem preventing params on snapdragon platforms from being saved to flash memory.
 ### Antipattern Category
-
+General:Hard-coding
 ### Keyword
 memory
 ### Note
-
+Hard-coded variables deleted.
 
 ## Commit #447
 ### Hash
@@ -7409,11 +7428,12 @@ Add assessment of IMU bias and mag field estimation
 Reduce warning false positives by adjusting thresholds and eliminating use of peak value plots for output observer monitoring
 Clear each figure after saving to reduce memory usage
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Change in log messages.
+Issue: EKF2 Updates (#7087)
 
 ## Commit #448
 ### Hash
@@ -7428,11 +7448,11 @@ Potentially infinite and deleted loops found by PVS-Studio (#7100)
 
  - There is need to add a volatile qualifier to the '_ExitFlag' and 'sim_delay' variables.
 ### Antipattern Category
-
+X
 ### Keyword
 infinite
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #449
 ### Hash
@@ -7441,11 +7461,12 @@ infinite
 ### Message
 commander : preflight checks increase max_mags to 4
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Value changed from 3 to 4.
+Issue: Pixhawk 2 mag fix (#7080)
 
 ## Commit #450
 ### Hash
@@ -7456,11 +7477,12 @@ sensors HIL increase gyro and accel timeout
 
  - fixes #7050
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Same values present in the current version.
+Issue: sensors HIL increase gyro and accel timeout (#7129)
 
 ## Commit #451
 ### Hash
@@ -7473,11 +7495,12 @@ there were setpoint twitches at the beginning and end of my smooth takeoff routi
 it was to slow and not configurable
 it was only available for automatic takeoff
 ### Antipattern Category
-
+General:Hard-coding
 ### Keyword
 slow
 ### Note
-
+Hard coded values.
+Issue: Smooth takeoff for altitude controlled flights (including auto takeoff) (#7138)
 
 ## Commit #452
 ### Hash
@@ -7488,10 +7511,12 @@ IO v2: disable interrupt stack
 
 This avoids burning significant memory in a configuration that is not actually using parallel tasks
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 memory
 ### Note
+Value changed from 500 to 0.
+Issue: Free RAM on IO - Take 2 #7167
 
 
 ## Commit #453
@@ -7503,10 +7528,13 @@ ROMFS: If UAVCAN is enabled, reduce log buffer size
 
 This is necessary to make the space for UAVCAN in memory and doing it this way avoids negatively impacting users who do not use UAVCAN.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 memory
 ### Note
+Log buffer values reduced if UAVCAN activated.
+Issue: UAVCAN Memory optimizations #7166
+
 
 
 ## Commit #454
@@ -7522,11 +7550,12 @@ px4fmu-v4:Configure timer IO pins with pull downs
   By adding the pull down the pins will seek the low state faster.
   13.8 us from off to decabe below threshold.
 ### Antipattern Category
-
+X
 ### Keyword
 faster
 ### Note
-
+This commit does not change any performance-related features. Pin setup for timer IO.
+Issue: Force PWM off on reboot on fmuv4 (#7151)
 
 ## Commit #455
 ### Hash
@@ -7565,11 +7594,12 @@ Add velocity checks.
 Consolidate existing checks for global and local position validity and add checking of velocity accuracy.
 Enable checks to be bypassed using the CBRK_VELPOSERR parameter.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 performance
 ### Note
-
+Stack size of a task slightly increased, some function signatures changed.
+Issue: EKF2: Enable in-flight learned mag bias to be saved to non-volatile memory (#7095)
 
 ## Commit #456
 ### Hash
@@ -7582,11 +7612,11 @@ Initialisation changes to address valgrind errors
 Change to default GPS and Airspeed time delay (these are overwritten by ekf2_main parameter settings)
 Increase sensitivity of bad accelerometer checks
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #457
 ### Hash
@@ -7598,11 +7628,11 @@ Logger hotfix: Allocate buffer on logging
 This enables to use the RAM normally consumed by the log buffer to be used for calibration and other memory-intense tasks.
 These run typically only disarmed when logging is not enabled.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Log writer buffer is allocated when needed instead of init.
 
 ## Commit #458
 ### Hash
@@ -7613,11 +7643,11 @@ IO: Fix access to free memory
 
 The free memory was accessed from interrupt context where it should not be accessed from. We build the statistic now at a fixed rate while not armed.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Memory access from restricted context.
 
 ## Commit #459
 ### Hash
@@ -7626,10 +7656,12 @@ memory
 ### Message
 Navigator: Increase RAM size
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
+RAM size incresed.
+Issue: fix qgc flow takeoff -> use min takeoff alt if no home position (#7209)
 
 
 ## Commit #460
@@ -7641,11 +7673,11 @@ FMUv5: Increase logging throughput considerably.
 
 This will help to understand the sensor selection on FMUv5 in different airframes. We do have the RAM and CPU to do this on this platform.
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features. Adjusts settings for FMUv5 in a configure file.
 
 ## Commit #461
 ### Hash
@@ -7659,11 +7691,11 @@ stm32:drv_input_capture bug fixes.
    in macros and addressing junk in memory.
    up_input_capture_get_filter was shifing results the wrong way.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Code adjustments.
 
 ## Commit #462
 ### Hash
@@ -7674,11 +7706,12 @@ MavlinkReceiver: add mission manager, param manager, ftp and log handler
 
 This makes also a slight stack size increase necessary (was 284 bytes left)
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size slighty increased from 2100 to 2140 due to the addition of MAVLink mission manager.
+Issue: Mavlink threadding fixes (#7226)
 
 ## Commit #463
 ### Hash
@@ -7690,11 +7723,12 @@ MavlinkLogHandler: increase MAX_BYTES_SEND to 256kb
 It increases the throughput on UDP (from around 2Mb to 2.5Mb), while the
 rate via USB & telemetry stay the same.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning, New:Fixed_Communication_Rate
 ### Keyword
 increase
 ### Note
-
+Max bytes sent increased from 64 * 1024 to 256 * 1024, increasing UDP throughput.
+Issue: Mavlink threadding fixes (#7226)
 
 ## Commit #464
 ### Hash
@@ -7703,11 +7737,11 @@ increase
 ### Message
 sensors : fix race condition triggered by slow-to-boot external sensors
 ### Antipattern Category
-
+X
 ### Keyword
 slow
 ### Note
-
+This commit does not change any performance-related features. Function call added to get offsets and scaling loaded.
 
 ## Commit #465
 ### Hash
@@ -7716,11 +7750,12 @@ slow
 ### Message
 px4io increase stack
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size increase from 1400 to 1500.
+Issue: MS5525 differential pressure driver (#7283)
 
 ## Commit #466
 ### Hash
@@ -7729,11 +7764,12 @@ increase
 ### Message
 ekf2: Increase RAM to remove stack space warnings
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+RAM size increased from 5800 to 5900.
+Issue: EKF: pull in miscellaneous bug fixes (#7521)
 
 ## Commit #467
 ### Hash
@@ -7742,16 +7778,16 @@ increase
 ### Message
 F7 nuttx configs: increase CONFIG_STM32F7_BBSRAM_FILES to 5
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
+This commit does not change any performance-related features.
 
 
 ## Commit #468
 ### Hash
 [6eff7deb7edc5419bdeef3ddf2ce26fdc02a6960](https://github.com/PX4/PX4-Autopilot/commit/6eff7deb7edc5419bdeef3ddf2ce26fdc02a6960)
-
 ### Message
 Extend the delay ensure post reset pulse delayed.
 
@@ -7765,10 +7801,12 @@ The results from testing, indicated that the if the PWM pins were clamped low fo
 
 This change delays the reset and therefore the pulse by at least 400 Ms.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning, New:Hard-coded-timing
 ### Keyword
 slow
 ### Note
+Delay increased from 6 to 400.
+Issue: px4fmu-v4:Insure the discharge of the pins PWM pins on rest. (#7459)
 
 ## Commit #469
 ### Hash
@@ -7777,10 +7815,12 @@ slow
 ### Message
 GPS driver increase stack (244 bytes left)
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
+Stack increased from 1550 to 1610.
+Issue: GPS driver increase stack (244 bytes left) (#7562).
 
 ## Commit #470
 ### Hash
@@ -7789,10 +7829,11 @@ increase
 ### Message
 Preflight checks: Increase accel warn limit range
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
+Test limit adjusted by a factor of 0.8 instead of 0.5.
 
 ## Commit #471
 ### Hash
@@ -7801,10 +7842,12 @@ increase
 ### Message
 fmuservo increase stack
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
+Task stack size slightly increased.
+Issue: fmuservo increase stack (#7568)
 
 ## Commit #472
 ### Hash
@@ -7818,11 +7861,11 @@ Use the size of each item type instead of the biggest one.
 In AeroFC that runs is constrained mode it was using 7860 bytes
 and now it uses 6930 bytes almost 1KB less.
 ### Antipattern Category
-
+General:Hard-coding
 ### Keyword
 memory
 ### Note
-
+Size of each item used instead of the size of the biggest one.
 
 ## Commit #473
 ### Hash
@@ -7835,11 +7878,12 @@ Test flights reported the warning `[load_mon] log_writer_file low on stack! (292
 
 Increase stack size from 1060  to 1072 (=8 + 1060 rounded to next multiple of 8).
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Thread stack size increased from 1060 to 1072.
+Issue: Fix compilation errors with arm-none-eabi-gcc 7 (#7502)
 
 ## Commit #474
 ### Hash
@@ -7855,11 +7899,11 @@ mavlink_ftp: fix stack overflow & add root dir prefix
   anything on NuttX, but in SITL it will avoid enumerating the whole
   disk tree when using QGC (which enumerates all files recursively).
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+Buffers used instead of changing root_dir or other local variables.
 
 ## Commit #475
 ### Hash
@@ -7868,11 +7912,11 @@ memory
 ### Message
 UAVCAN: Reduce memory footprint
 ### Antipattern Category
-
+General:performance:Hard-coding
 ### Keyword
 memory
 ### Note
-
+Value reduced from 7 to 6.
 
 ## Commit #476
 ### Hash
@@ -7890,11 +7934,11 @@ the commander main thread.
 To increase failure resistance, we could subscribe to the same topic in
 another module for redundancy, in case commander runs wild.
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #477
 ### Hash
@@ -7906,10 +7950,11 @@ shutdown: increase the max timeout to 5s
 To make sure slow param writes will finish before we hit the timeout. I've
 seen param write durations of around 2s.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning, New:Hard-coded-timing
 ### Keyword
 slow
 ### Note
+Timeout increased from 300 ms to 5 s.
 
 
 ## Commit #478
@@ -7919,11 +7964,11 @@ slow
 ### Message
 CMake / Clang: Increase warning level
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #479
 ### Hash
@@ -7932,11 +7977,13 @@ increase
 ### Message
 landdetector: decrease land detection to 0.3
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 decrease
 ### Note
-
+Time land detection trigger variable decreased from 0.5 to 0.3.
+Issue: Landdetector additional state (#7314)
+       land detector revert FW hysteresis constants and cleanup initialization (#7796)
 
 ## Commit #480
 ### Hash
@@ -7949,11 +7996,11 @@ geofence: remove fence & fence_vertex messages
 - it was implemented wrong, leading to memory access violations in
   publishFence (an integer was passed instead of the fence_s struct)
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #481
 ### Hash
