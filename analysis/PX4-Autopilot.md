@@ -9364,11 +9364,11 @@ frsky_telemetry: increase stack size by 52 bytes
 
 As indicated in previous logs (268 bytes left).
 ### Antipattern Category
-New:Hard-coded-timing, New:Hard-coded-fine-tuning
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-Stall time increased from 16 to 200.
+Stack size increased from 1268 to 1320.
 
 ## Commit #570
 ### Hash
