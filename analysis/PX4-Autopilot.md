@@ -10803,6 +10803,7 @@ New:Hard-coded-fine-tuning
 increase
 ### Note
 Maximum number of tasks increased from 32 to 64.
+Buffer size (CONFIG_USART3_TXBUFSIZE param) increased from 600 to 900.
 
 ## Commit #650
 ### Hash
@@ -10957,7 +10958,7 @@ New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-Stack size increased from 2100 to 1300.
+Stack size increased from 1200 to 1300.
 
 ## Commit #659
 ### Hash
@@ -11016,7 +11017,7 @@ New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-FW altitude control increased from 0.01 to 0.1
+FW altitude control increased from 0.01 to 0.1 and also in 2 cases from 0.02 to 0.1.
 
 ## Commit #663
 ### Hash
@@ -11151,7 +11152,7 @@ New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-Stack size increased from 1024 to 2048
+Stack size increased from 1024 to 2048. Also, this is the default value (removed from several files to one location).
 
 ## Commit #670
 ### Hash
@@ -11235,11 +11236,12 @@ Guidance feature for Collision Prevention (#13017)
 
 * fix decision process for overlapping sensors
 ### Antipattern Category
-X
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-This commit does not change any performance-related features.
+MPC_COL_PREV_DLY param increased from 0 to 0.4
+MPC_COL_PREV_ANG param decreased from 45 to 30 degrees.
 
 ## Commit #673
 ### Hash
