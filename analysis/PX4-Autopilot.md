@@ -10803,7 +10803,8 @@ New:Hard-coded-fine-tuning
 increase
 ### Note
 Maximum number of tasks increased from 32 to 64.
-Buffer size (CONFIG_USART3_TXBUFSIZE param) increased from 600 to 900.
+Buffer size (CONFIG_USART3_RXBUFSIZE param) increased from 300 to 1200.
+            (CONFIG_USART3_TXBUFSIZE param) increased from 600 to 900.
 
 ## Commit #650
 ### Hash
@@ -11000,10 +11001,11 @@ increase default fixed wing rate controller I term
 
 Signed-off-by: RomanBapst <bapstroman@gmail.com>
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
+FW altitude control increased from 0.01 to 0.1 in 2 cases and also in 1 case from 0.02 to 0.1.
 
 
 ## Commit #662
@@ -11017,7 +11019,7 @@ New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-FW altitude control increased from 0.01 to 0.1 and also in 2 cases from 0.02 to 0.1.
+Task_name char size increased from 16 to 24 to match NuttX CONFIG_TASK_NAME_SIZE.
 
 ## Commit #663
 ### Hash
