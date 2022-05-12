@@ -1260,7 +1260,7 @@ General:Deadlock
 ### Keyword
 deadlock
 ### Note
-Deadlock error.
+Fix for deadlock error.
 
 ## Commit #43
 ### Hash
@@ -1271,9 +1271,9 @@ Serial::end hang (#5047)
 
 workaround for #5043. There is a timing issue with HardwareSerial::end. I'm not sure what is hung, but it should be possible to see this in jtag, as it does cause a reboot if you let it. The delay needs to be before you detach the device!?
 ### Antipattern Category
-X
+New:Hard-coded-timing
 ### Keyword
 hang
 ### Note
-This commit does not change any performance-related features. Delay added before detaching the device.
+delay(10) added before detaching the device.
 
