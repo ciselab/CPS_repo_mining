@@ -14127,11 +14127,11 @@ nxp_ucans32k146:Use bootloader AppDescriptor
 
 px4 mtd:Support onchip emulated eeprom
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-Not sure under which category this commit falls under.
+This commit does not change any performance-related features.
 
 ## Commit #840
 ### Hash
@@ -14237,6 +14237,7 @@ New:Fixed_Communication_Rate, New:General:Hard-coded-fine-tuning
 increase
 ### Note
 Gyro min frequency decreased from 50 to 32 Hz, while maximum is increased from 200 to 256.
+IMU_GYRO_FFT_LEN param increased from 256 to 1024.
 
 ## Commit #847
 ### Hash
@@ -14245,11 +14246,11 @@ Gyro min frequency decreased from 50 to 32 Hz, while maximum is increased from 2
 ### Message
 boards: holybro/kakutef7 disable CONSTRAINED_FLASH to increase optimization
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-CONSTRAINED_FLASH removed for certain board in ordertoincrease optimization, not sure it falls under a certain category.
+CONSTRAINED_FLASH removed for certain board in order to increase optimization, doesn't fall under any performance anti-pattern.
 
 ## Commit #848
 ### Hash
@@ -14487,6 +14488,7 @@ New:Fixed_Communication_Rate, New:General:Hard-coded-fine-tuning
 increase
 ### Note
 Gyro frequency increased from 30 Hz to 40.
+IMU_DGYRO_CUTOFF param incresead from 20 to 30.
 
 ## Commit #863
 ### Hash
@@ -14540,7 +14542,7 @@ this Issue: Accumulated gyro filter fixes and improvements (#17647)
 ### Message
 px4_work_queue: increase UART stack
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
