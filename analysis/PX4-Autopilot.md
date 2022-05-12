@@ -12908,7 +12908,7 @@ New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-Override threshold for the RC stick increased from 12 to 15.
+Override threshold for the RC stick increased from 12 to 50.
 
 ## Commit #769
 ### Hash
