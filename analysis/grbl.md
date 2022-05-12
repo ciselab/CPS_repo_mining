@@ -454,7 +454,7 @@ X
 ### Keyword
 memory
 ### Note
-Bug fixes, this commit does not change any performance-related features.
+Mostly newly added features and some minor bug fixes, this commit does not change any performance-related features. Also, the commit mentions that the code might be buggy, altough there are no anti-patterns of interest.
 
 ## Commit #22
 ### Hash
@@ -1531,7 +1531,7 @@ New:Hard-coded-fine-tuning
 faster
 ### Note
 DEFAULT_X_MAX_TRAVEL, DEFAULT_Y_MAX_TRAVEL, DEFAULT_Z_MAX_TRAVEL increased from 200.0 to 290 // mm
-DEFAULT_Z_MAX_RATE increased from 500 to 750 mm/min.
+DEFAULT_Z_MAX_RATE decreased from 750 to 500 mm/min.
 
 ## Commit #53
 ### Hash
