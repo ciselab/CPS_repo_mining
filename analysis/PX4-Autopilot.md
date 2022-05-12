@@ -12373,11 +12373,11 @@ boards: px4_io-v2 defconfig optimizations to save memory
 
 Co-Authored-By: David Sidrane <David.Sidrane@Nscdg.com>
 ### Antipattern Category
-
+New:General:Hard-coded-fine-tuning, Smith:General:Unnecessary_Processing
 ### Keyword
 memory
 ### Note
-
+Stack size of usermain reduced from 1132 to 1100, unnecessary processes disabled to save memory.
 
 ## Commit #732
 ### Hash
@@ -12393,11 +12393,12 @@ Update submodule nuttx to latest Sat Apr 25 12:38:14 UTC 2020
     66b4f2c4f2 2020-04-21 Peter van der Perk - [Backport] Added S32K1XX progmem driver to use the FlexNVM memory
 1b3fc1c668 2020-04-10 Peter van der Perk - Added net_trylock so we can call can_input while being in a interrupt handler
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+1st commit: nonvalatile FlexNVM memory can be used directly via progmem interface, not sure whether this classifies as an antipattern.
+2nd commit: small update to to allow calling can_input while being in an interrupt handler, no deadlock present.
 
 ## Commit #733
 ### Hash
@@ -12417,11 +12418,11 @@ c19f40e 2020-04-15 Kamil Ritz - Add reset position test for GPS and VISION
 050298f 2020-04-08 Kamil Ritz - Improve matrix library usage
 5749273 2020-04-08 Kamil Ritz - refactor resetPosition
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+An inline function added (not an antipattern as this is restricted to the C++ language), some computations modified, test cases modified/added especially regarding GPS and VISION. There was bug corrected, where 2 uints were substracted.
 
 ## Commit #734
 ### Hash
@@ -12430,11 +12431,11 @@ increase
 ### Message
 px4_work_queue: increase wq:attitude_ctrl stack
 ### Antipattern Category
-
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Size of work queue increased from 1500 to 1536.
 
 ## Commit #735
 ### Hash
@@ -12447,11 +12448,11 @@ bmm150: more explicit data conversion & reduce to 30Hz
   (though not in forced mode as we are using it)
 - 30Hz allows to increase the quality of the measurements
 ### Antipattern Category
-
+New:Fixed_Communication_Rate, New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Sensor max update rate reduced to 30 Hz.
 
 ## Commit #736
 ### Hash
@@ -12466,11 +12467,11 @@ bmm150: cleanup, slightly increase data accuracy
 - extend regdump output
 - general code style cleanup
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+Code cleanup and some type conversions for variables.
 
 ## Commit #737
 ### Hash
@@ -12483,11 +12484,11 @@ pwm_out: update pwm outputs up to twice as fast as actual pwm frequency
  - actual pulse width only updated for next period regardless of output module
  - add cycle interval perf counter
 ### Antipattern Category
-
+New:Fixed_Communication_Rate
 ### Keyword
 fast
 ### Note
-
+Pwm output rate doubled to minimize latency.
 
 ## Commit #738
 ### Hash
@@ -12503,11 +12504,11 @@ Update submodule ecl to latest Tue May 12 00:39:54 UTC 2020
     0319184 2020-05-11 kritz - Fix ev_pos_obs_var(1) entry (#809)
 440383f 2020-05-09 Kamil Ritz - Increase matrix library usage and remove white line
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #739
 ### Hash
@@ -12522,11 +12523,11 @@ Support odometry velocity in body and local frame (#14703)
 
 * increase lower bound on EVV param
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #740
 ### Hash
@@ -12537,11 +12538,11 @@ v5x defconfig: increase TELEM2 UART TX buffer size to 3000
 
 Required for very high-rate log streaming @3MBit baudrate.
 ### Antipattern Category
-
+New:Fixed_Communication_Rate, New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Buffer size increased from 1500 to 3000 to support log streaming with 3MBit bandrate.
 
 ## Commit #741
 ### Hash
@@ -12555,11 +12556,11 @@ px4_work_queue: minor status changes
  - round average interval to nearest microsecond
  - basic formatting consistency (google style guide)
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #742
 ### Hash
@@ -12568,11 +12569,11 @@ increase
 ### Message
 ROMFS: holybro s500 decrease filter defaults
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 decrease
 ### Note
-
+IMU_GYRO_CUTOFF decreased from 80 to 60, IMU_DGYRO_CUTOFF decreased from 40 to 30.
 
 ## Commit #743
 ### Hash
@@ -12581,11 +12582,11 @@ decrease
 ### Message
 ekf2: increase default baro noise 2 -> 3.5 m
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning, New:unstable_and_slow_noise_handling
 ### Keyword
 increase
 ### Note
-
+Fine tuning of noise filtering.
 
 ## Commit #744
 ### Hash
@@ -12594,11 +12595,11 @@ increase
 ### Message
 ekf2: decrease default GPS horizontal velocity noise
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning, New:unstable_and_slow_noise_handling
 ### Keyword
 decrease
 ### Note
-
+Fine tuning of noise filtering.
 
 ## Commit #745
 ### Hash
@@ -12611,11 +12612,11 @@ selectively increase optimization -Os -> -O2
 increasing flash usage
  - ignored on boards with CONSTRAINED_FLASH set
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+CMake selective optimizations. Priority of work queue responsible for attitude control increased from 1536 to 1600.
 
 ## Commit #746
 ### Hash
@@ -12628,11 +12629,11 @@ Jenkins HIL test fix sensor timeouts
  - decrease test priorities
  - hrt test don't flush output
 ### Antipattern Category
-
+X
 ### Keyword
 decrease
 ### Note
-
+This commit does not change any performance-related features. Test setup changes.
 
 ## Commit #747
 ### Hash
@@ -12646,11 +12647,11 @@ imu/invensense/mpu6000: minor improvements
  - only allocate DRDY perf counter if GPIO is available
  - allow running faster than accel ODR (safe limit of 2 kHz in place)
 ### Antipattern Category
-
+New:Fixed_Communication_Rate, New:General:Hard-coded-fine-tuning, New:Hard-coded-timing
 ### Keyword
 faster
 ### Note
-
+Watchdog timout increased from 10 ms to 100 ms, not sure about the relation between Output data rate and mpu6000, I believe it to be an New:Fixed_Communication_Rate anti-pattern.
 
 ## Commit #748
 ### Hash
@@ -12659,11 +12660,11 @@ faster
 ### Message
 Hex/Proficnc Cube Yellow: align firmware location in flash memory to be able to use the default bootloader
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #749
 ### Hash
@@ -12674,11 +12675,11 @@ mc_pos_control_params: set the ground slow down speed to the default maximum spe
 
 This results in no change with defaults but a slow down to 10m/s if the maxiumum speed is set higher than that.
 ### Antipattern Category
-
+X
 ### Keyword
 slow
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #750
 ### Hash
@@ -12687,11 +12688,11 @@ slow
 ### Message
 wq:attitude_ctrl small stack increase
 ### Antipattern Category
-
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size increased from 1600 to 1632.
 
 ## Commit #751
 ### Hash
@@ -12700,11 +12701,11 @@ increase
 ### Message
 decrease all wq:SPIx stack
 ### Antipattern Category
-
+New:General:Hard-coded-fine-tuning
 ### Keyword
 decrease
 ### Note
-
+Size of working queue decreased from 2496 to 2336.
 
 ## Commit #752
 ### Hash
@@ -12713,11 +12714,11 @@ decrease
 ### Message
 add support to FastRTPS 2.0.0 (Fast-DDS)
 ### Antipattern Category
-
+X
 ### Keyword
 fast
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #753
 ### Hash
@@ -12748,11 +12749,11 @@ b8f9376 2020-06-21 kamilritz - Make mag_innov/-var a Matrix::Vector3f
 b96c62e 2020-06-25 sevenbill - Optionalized build dependency on git
 794e6ec 2020-06-25 Bill Morris - Enforce tabs via editorcofig
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #754
 ### Hash
@@ -12764,11 +12765,11 @@ load_mon: decrease warning threshold for stack check builds
  - enabling stack check increases stack usage and will assert if there's
 any overflow
 ### Antipattern Category
-
+X
 ### Keyword
 decrease
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #755
 ### Hash
@@ -12779,11 +12780,11 @@ mavsdk_tests: increase the poll time resolution
 
 With only 10 steps for e.g. 60 seconds we are likely to miss updates.
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features. Test setup change.
 
 ## Commit #756
 ### Hash
@@ -12795,11 +12796,11 @@ FlightTaskAuto: allow rc assist to stop descend
 Before the autohority was only enough to slow down the descend but not
 stop to zero vertical velocity.
 ### Antipattern Category
-
+X
 ### Keyword
 slow
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #757
 ### Hash
@@ -12814,11 +12815,11 @@ load_mon updates
  - decrease available FD threshold
  - minor cleanup
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+Commit doesn't seem to correct any potential anti-patterns, not sure how these changes increased the rate.
 
 ## Commit #758
 ### Hash
@@ -12831,11 +12832,11 @@ fw_pos_control_l1: if using air data (baro) copy every cycle
 
  - this only would have worked in the past because the vast majority of systems were using the ms5611 barometer with a publication rate that's faster than the controller
 ### Antipattern Category
-
+X
 ### Keyword
 faster
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #759
 ### Hash
@@ -12846,11 +12847,11 @@ logger: add full commander and safety logging by default
 
  - increase battery_status rate to be useful
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning, New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
-
+Battery status log rate decreased from 10 Hz to 3 Hz.
 
 ## Commit #760
 ### Hash
@@ -12859,11 +12860,11 @@ increase
 ### Message
 wq:attitude_ctrl: small stack increase to silence warning
 ### Antipattern Category
-
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Size of work queue increased from 1632 to 1640.
 
 ## Commit #761
 ### Hash
@@ -12875,11 +12876,11 @@ Tools: abort SITL start if gzserver fails
 Sometimes gzserver seems to not start or not start fast enough. In this
 case, instead of stalling forever, it would be nice to abort.
 ### Antipattern Category
-
+X
 ### Keyword
 fast
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #762
 ### Hash
@@ -12892,11 +12893,11 @@ cmake: only allow gold linker for posix builds
  - NuttX skip --print-memory-usage if using the GOLD linker
  - fixes #15400
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. CMake compatibility problems.
 
 ## Commit #763
 ### Hash
@@ -12905,11 +12906,11 @@ memory
 ### Message
 logger: decrease try subsribe interval 1000 ms -> 20 ms
 ### Antipattern Category
-
+New:Fixed_Communication_Rate, New:General:Hard-coded-fine-tuning
 ### Keyword
 decrease
 ### Note
-
+Subscribe interval changed to 20 ms.
 
 ## Commit #764
 ### Hash
@@ -12924,11 +12925,11 @@ logger: SDLOG_PROFILE remove estimator replay from default to minimize log rate
 
  - sensor_correction can be logged at full rate (low publication rate)
 ### Antipattern Category
-
+X
 ### Keyword
 decrease
 ### Note
-
+This commit does not change any performance-related features. Topic edit for logging.
 
 ## Commit #765
 ### Hash
@@ -12940,11 +12941,11 @@ cdev: remove unnecessary virtuals and increase opt level
  - poll, poll_notify, register_class_devname, unregister_class_devname aren't virtual
  - increase max optimization level on platforms that aren't flash constrained (MAX_CUSTOM_OPT_LEVEL)
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features. virtual functions converted back to normal ones.
 
 ## Commit #766
 ### Hash
@@ -12953,11 +12954,11 @@ increase
 ### Message
 wq:attitude_ctrl increase stack
 ### Antipattern Category
-
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Size of work queue increased from 1640 to 1656.
 
 ## Commit #767
 ### Hash
@@ -12966,11 +12967,11 @@ increase
 ### Message
 wq:attitude_ctrl increase stack by 16 bytes (again)
 ### Antipattern Category
-
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Size of work queue increased from 1656 to 1672.
 
 ## Commit #768
 ### Hash
@@ -12979,11 +12980,11 @@ increase
 ### Message
 Only use roll/pitch not centered for RC override, and increase override threshold
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Override threshold for the RC stick increased from 12 to 50.
 
 ## Commit #769
 ### Hash
@@ -12996,11 +12997,11 @@ commander: increase COM_ARM_MAG_ANG 35 -> 45 degrees
 which we mostly have in 45 degree increments
  - handling a vehicle on the ground can easily disturb one mag by more than 30 degrees, so this is often distracting noise
 ### Antipattern Category
-
+New:unstable_and_slow_noise_handling, New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+COM_ARM_MAG_ANG increased from 30 to 45 for a better detection incorrect rotations.
 
 ## Commit #770
 ### Hash
@@ -13009,11 +13010,11 @@ increase
 ### Message
 boards: px4/fmu-v5_debug increase interrupt stack 512 -> 768 bytes
 ### Antipattern Category
-
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Interrupt stack size increased from 512 to 768.
 
 ## Commit #771
 ### Hash
@@ -13022,11 +13023,11 @@ increase
 ### Message
 Jenkins: hardware increase timeout
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+Ci/CD change.
 
 ## Commit #772
 ### Hash
@@ -13035,11 +13036,11 @@ increase
 ### Message
 boards: px4_fmu-v5_debug increase LPWORK stack 1632 -> 1728 bytes
 ### Antipattern Category
-
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size increased from 1632 to 1728
 
 ## Commit #773
 ### Hash
@@ -13048,11 +13049,11 @@ increase
 ### Message
 gps: fix memory leak on module exit (delete _helper)
 ### Antipattern Category
-
+General:C:not_deallocating
 ### Keyword
 memory
 ### Note
-
+Memory leak due to not deallocating a variable.
 
 ## Commit #774
 ### Hash
@@ -13065,11 +13066,11 @@ We had not actually properly adjusted the timeout to the lockstep speed
 factor. Once we did that, we had to increase the timeouts quite a bit to
 have the tests pass.
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features. Test setup change.
 
 ## Commit #775
 ### Hash
@@ -13080,11 +13081,11 @@ mavsdk_tests: increase timeouts yet again
 
 This is after using PX4 time to check for timeouts.
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features. Test setup change.
 
 ## Commit #776
 ### Hash
@@ -13093,11 +13094,11 @@ increase
 ### Message
 mavsdk_tests: try with faster RC rate
 ### Antipattern Category
-
+X
 ### Keyword
 faster
 ### Note
-
+This commit does not change any performance-related features. Test setup change.
 
 ## Commit #777
 ### Hash
@@ -13108,11 +13109,11 @@ mavsdk_tests: fly forward a bit longer
 
 Hopefully, that's long enough for slow VTOLs.
 ### Antipattern Category
-
+X
 ### Keyword
 slow
 ### Note
-
+This commit does not change any performance-related features. Test setup change.
 
 ## Commit #778
 ### Hash
@@ -13121,11 +13122,11 @@ slow
 ### Message
 mavsdk_tests: increase time for manual tests
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features. Test setup change.
 
 ## Commit #779
 ### Hash
@@ -13134,11 +13135,11 @@ increase
 ### Message
 logger: log_writer_file increase stack 1170 -> 1472 bytes (#15765)
 ### Antipattern Category
-
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size increased from 1170 to 1472.
 
 ## Commit #780
 ### Hash
@@ -13149,11 +13150,11 @@ uORB: increase ORB_MULTI_MAX_INSTANCES 4 -> 10
 
  - put more realistic bounds on maximum number of battery instances, gps, etc
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+Number of maximum instances increased, This commit does not change any performance-related features.
 
 ## Commit #781
 ### Hash
@@ -13164,11 +13165,11 @@ Jenkins: SITL tests disable ninja build to reduce build parallelism
 
  - test slaves have limited memory
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+CI/CD change.
 
 ## Commit #782
 ### Hash
@@ -13177,11 +13178,11 @@ memory
 ### Message
 mavlink: increase stack 2650 -> 2848 bytes (#15821)
 ### Antipattern Category
-
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size increased from 2650 to 2848.
 
 ## Commit #783
 ### Hash
@@ -13195,11 +13196,11 @@ stack size probably needs to be increased.
 
 Signed-off-by: Alex Mikhalev <alexmikhalevalex@gmail.com>
 ### Antipattern Category
-
+General:Hard-coding
 ### Keyword
 increase
 ### Note
-
+Stack size increased to 4096.
 
 ## Commit #784
 ### Hash
@@ -13210,11 +13211,11 @@ logger: increase logging rate of airspeed_validated from 1Hz to 5Hz
 
 Signed-off-by: Silvan Fuhrer <silvan@auterion.com>
 ### Antipattern Category
-
+New:Fixed_Communication_Rate, New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Logging rate for airspeed sensor increased from 1Hz to 5Hz.
 
 ## Commit #785
 ### Hash
@@ -13225,11 +13226,11 @@ Revert "logger: log_writer_file increase stack 1170 -> 1472 bytes (#15765)"
 
 This reverts commit d676e65294b27b592e06381a12b0f3b40b6139f0.
 ### Antipattern Category
-
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size decreased from 1472 to 1170.
 
 ## Commit #786
 ### Hash
@@ -13240,11 +13241,11 @@ Revert "mavlink: increase stack 2650 -> 2848 bytes (#15821)"
 
 This reverts commit e792c46f20bb6709afc4a1151df29546b165d1d1.
 ### Antipattern Category
-
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size decreased from 2848 to 2650.
 
 ## Commit #787
 ### Hash
@@ -13263,11 +13264,11 @@ experimental/gyro_fft: improve peak detection, add start parameter
 
  - decrease main stack usage
 ### Antipattern Category
-
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack main size decreased from 8192 to 4096, IMU_GYRO_FFT_MIN increased from 30 to 50.
 
 ## Commit #788
 ### Hash
@@ -13278,11 +13279,11 @@ Tools/check_submodules.sh: always update if within vscode cmake configure
 
  - the interactive portion of check_git_submodule with hang waiting for user input
 ### Antipattern Category
-
+X
 ### Keyword
 hang
 ### Note
-
+CI/CD change
 
 ## Commit #789
 ### Hash
@@ -13294,11 +13295,11 @@ gps: add GPS_{1,2}_PROTOCOL param to select protocol, default to u-blox
 u-blox is the most widely used GPS, so module detection should be a bit
 faster in general.
 ### Antipattern Category
-
+X
 ### Keyword
 faster
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #790
 ### Hash
@@ -13316,11 +13317,11 @@ boot process with no outside feedback if that value is not zero.
 
 Signed-off-by: Alex Mikhalev <alexmikhalevalex@gmail.com>
 ### Antipattern Category
-
+X
 ### Keyword
 hang
 ### Note
-
+This commit does not change any performance-related features. 
 
 ## Commit #791
 ### Hash
@@ -13329,11 +13330,11 @@ hang
 ### Message
 boards: NuttX increase file name max 32 -> 40
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #792
 ### Hash
@@ -13344,11 +13345,11 @@ uORB: tests decrease stack
 
  - save a bit of memory for running on older boards
 ### Antipattern Category
-
+New:General:Hard-coded-fine-tuning
 ### Keyword
 memory
 ### Note
-
+Stack size decreased from 3000 to 2000.
 
 ## Commit #793
 ### Hash
@@ -13357,11 +13358,11 @@ memory
 ### Message
 boards: fmu-v5 debug and stackcheck increase interrupt stack
 ### Antipattern Category
-
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Debug and interrupt stack size icnreased to 1024.
 
 ## Commit #794
 ### Hash
@@ -13374,11 +13375,11 @@ platforms/posix: mlockall() support
 
  * mainly about minimizing or completely eliminating RAM page swap time
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #795
 ### Hash
@@ -13389,11 +13390,12 @@ mavlink: STATUSTEXT directly use mavlink_log subscription
 
  - ORB_ID(mavlink_log) increase queue depth now that mavlink ringbuffer is gone
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features. Queue size is increased due to the removal of mavlink ringbuffer. A single buffer is used instead of a ringbuffer for each mavlink instance. Could be General:recreate_objects.
+Issue: mavlink: STATUSTEXT directly use mavlink_log subscription #16193
 
 ## Commit #796
 ### Hash
@@ -13402,11 +13404,11 @@ increase
 ### Message
 mavlink: decrease task stack
 ### Antipattern Category
-
+New:General:Hard-coded-fine-tuning
 ### Keyword
 decrease
 ### Note
-
+Stack size decreasedfrom 2560 to 2496.
 
 ## Commit #797
 ### Hash
@@ -13415,11 +13417,11 @@ decrease
 ### Message
 parameters: don't keep in memory if set to default
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit doesn't address any antipattern. Parameters that are set to default are not saved.
 
 ## Commit #798
 ### Hash
@@ -13428,11 +13430,11 @@ memory
 ### Message
 mtd:Reduce functionality on memory constrained systems
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Some mtd functionality regarding erasing partitions, readtest and status information removed for constrained systems.
 
 ## Commit #799
 ### Hash
@@ -13441,11 +13443,11 @@ memory
 ### Message
 WorkQueueManager:Increase stack size
 ### Antipattern Category
-
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size increased from 1728 to 1730.
 
 ## Commit #800
 ### Hash
@@ -13454,11 +13456,11 @@ increase
 ### Message
 nxp_fmurt1062-v1:Fix memory overflow
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #801
 ### Hash
@@ -13467,11 +13469,11 @@ memory
 ### Message
 land_detector: decrease default LNDFW_AIRSPD_MAX 8 -> 6 m/s
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 decrease
 ### Note
-
+LNDFW_AIRSPD_MAX (maximum airspeed allowed in landed state) decreased from 8 to 6 m/s.
 
 ## Commit #802
 ### Hash
@@ -13483,11 +13485,11 @@ HTE: do not update the estimator during fast up/down motions
 Drag and prop wash effects produce significant forces at high speed
 that can bias the estimator when applied for an extended period of time
 ### Antipattern Category
-
+X
 ### Keyword
 fast
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #803
 ### Hash
@@ -13501,11 +13503,11 @@ if can be that a vehicle never starts HTE is the takeoff is too slow.
 In this specific context of takeoff detection, since
 the exact value is not important, we can safely ignore the validity flag.
 ### Antipattern Category
-
+X
 ### Keyword
 slow
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #804
 ### Hash
@@ -13521,11 +13523,11 @@ Update submodule sitl_gazebo to latest Mon Dec 21 00:39:43 UTC 2020
     4043287 2020-12-20 Silvan Fuhrer - tiltrotor: increase wing area to 0.5 per side (#678)
 f004811 2020-12-20 JaeyoungLim - Update mavsdk version for SITL tests (#673)
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features. Wing area increased, mavsdk version update.
 
 ## Commit #805
 ### Hash
@@ -13534,11 +13536,11 @@ increase
 ### Message
 MAVSDK test: Increase timeout
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features. Test setup change.
 
 ## Commit #806
 ### Hash
@@ -13547,11 +13549,11 @@ increase
 ### Message
 invensense/icm42688p: use full 20 bit data, increase ODR, disable all filters
 ### Antipattern Category
-
+New:Fixed_Communication_Rate, New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Sample rate for gyro and accelincreased from 8000 Hz to 16000 Hz.
 
 ## Commit #807
 ### Hash
@@ -13560,11 +13562,11 @@ increase
 ### Message
 log_message increase queue depth 2->4
 ### Antipattern Category
-
+New:Fixed_Communication_Rate
 ### Keyword
 increase
 ### Note
-
+Number of log messages published increased from 2 to 4.
 
 ## Commit #808
 ### Hash
@@ -13575,11 +13577,11 @@ rotation: use Dcmf for all rotations that aren't direct swaps
 
  - increase optimization to ${MAX_CUSTOM_OPT_LEVEL} (max per board)
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #809
 ### Hash
@@ -13592,11 +13594,11 @@ rate limit most parameter_update subscriptions
 
  - limit modules from updating faster than once per second
 ### Antipattern Category
-
+New:Fixed_Communication_Rate
 ### Keyword
 faster
 ### Note
-
+The rate of param update subscriptions is too high and leads to expensive operations, modules limited from updating faster than once per second.
 
 ## Commit #810
 ### Hash
@@ -13605,11 +13607,11 @@ faster
 ### Message
 can-gps-v1:Correct Memory size used by app and bootloader size
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #811
 ### Hash
@@ -13620,11 +13622,11 @@ ROMFS: increase max distance between waypoints for VTOL and FW to 5km
 
 Signed-off-by: Silvan Fuhrer <silvan@auterion.com>
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #812
 ### Hash
@@ -13633,11 +13635,11 @@ increase
 ### Message
 rtps: increase non-alias ID range by reducing the alias space ID
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #813
 ### Hash
@@ -13646,11 +13648,11 @@ increase
 ### Message
 fix control_allocator: use 'delete' instead of 'free', guard against out-of-memory
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #814
 ### Hash
@@ -13675,11 +13677,11 @@ The main issue with this is that PPM receivers don't go into RC Failsafe but I d
 
 Tested with an X8R (SBUS) and a Dragonlink (PPM) as well as a Dragonlink set to SBUS as the output. SBUS worked as intended. See screenshots below.
 ### Antipattern Category
-
+X
 ### Keyword
 decrease
 ### Note
-
+This commit does not change any performance-related features. 
 
 ## Commit #815
 ### Hash
@@ -13690,11 +13692,11 @@ vehicle_command: increase queue depth 4 -> 8
 
  - prevent slower modules from missing commands
 ### Antipattern Category
-
+New:Fixed_Communication_Rate, New:Hard-coded-fine-tuning
 ### Keyword
 slower
 ### Note
-
+Log message subscription changed in order to prevent slower modules from missiog commands.
 
 ## Commit #816
 ### Hash
@@ -13703,11 +13705,11 @@ slower
 ### Message
 px4_work_queue: wq:nav_and_controllers increase stack 1730 -> 1760 bytes
 ### Antipattern Category
-
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Work queue size increased from 1730 to 1760.
 
 ## Commit #817
 ### Hash
@@ -13724,11 +13726,11 @@ This has been fixed in this commit by increasing all argv's by one.
 
 Signed-off-by: Peter Blom <peterblom.mail@gmail.com>
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #818
 ### Hash
@@ -13737,11 +13739,11 @@ increase
 ### Message
 Increase corridor check thresholds for mission tests
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features. Test setup change.
 
 ## Commit #819
 ### Hash
@@ -13751,11 +13753,11 @@ increase
 Disable unmaintained MAVROS tests
 The overhead of the MAVROS setup means that most developers are not using it, leading to tests that are not suitable for day-to-day workflows. We are replacing these with MAVSDK tests that can be run locally pre-commit.
 ### Antipattern Category
-
+X
 ### Keyword
 overhead
 ### Note
-
+This commit does not change any performance-related features. Test setup change.
 
 ## Commit #820
 ### Hash
@@ -13764,11 +13766,11 @@ overhead
 ### Message
 FMUK66 Decrease telnetd ram usage
 ### Antipattern Category
-
+X
 ### Keyword
 decrease
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #821
 ### Hash
@@ -13777,11 +13779,11 @@ decrease
 ### Message
 state_machine_helper: fix infinite delay with intermittent failsafes
 ### Antipattern Category
-
+X
 ### Keyword
 infinite
 ### Note
-
+This commit does not change any performance-related features. Implementation error.
 
 ## Commit #822
 ### Hash
@@ -13794,11 +13796,11 @@ In some cases e.g.: (VTOL in wind) a good tracking cannot be
 achieved. This condition then needs to be relaxed, otherwise the
 drone cannot land properly.
 ### Antipattern Category
-
+X
 ### Keyword
 slow
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #823
 ### Hash
@@ -13807,11 +13809,11 @@ slow
 ### Message
 VTOL defaults: increase tracking tolerance for VTOL planes
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #824
 ### Hash
@@ -13822,11 +13824,11 @@ mavlink: speed up ftp transfers on POSIX
 
 Around 900 KB/s - not fast, but should be fast enough for the use-cases.
 ### Antipattern Category
-
+New:Fixed_Communication_Rate
 ### Keyword
 fast
 ### Note
-
+On POSIX FTP transfers are increased.
 
 ## Commit #825
 ### Hash
@@ -13837,11 +13839,11 @@ uORB: tests increase priorities to minimize failures with stackcheck/debug enabl
 
  - also relax the maximum mean by 50%
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features. Test setup change.
 
 ## Commit #826
 ### Hash
@@ -13850,11 +13852,11 @@ increase
 ### Message
 parameters runtime defaults
 ### Antipattern Category
-
+X
 ### Keyword
 runtime
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #827
 ### Hash
@@ -13997,11 +13999,11 @@ typhoon_h480: use gimbal v2 protocol, use yaw stab
 Let's by default use the v2 protocol with typhoon_h480 and enable yaw
 lock mode by stabilizing yaw.
 ### Antipattern Category
-
+X
 ### Keyword
 fast
 ### Note
-
+This commit does not change any performance-related features. Support for new protocol added.
 
 ## Commit #828
 ### Hash
@@ -14012,11 +14014,11 @@ mavlink: reduce GIMBAL_MANAGER_STATUS message rate
 
 This was way too fast.
 ### Antipattern Category
-
+New:Fixed_Communication_Rate, New:General:Hard-coded-fine-tuning
 ### Keyword
 fast
 ### Note
-
+Communication rate decreased from 5.of to 0.5f.
 
 ## Commit #829
 ### Hash
@@ -14025,11 +14027,11 @@ fast
 ### Message
 mavlink: limit mavlink channels based on memory
 ### Antipattern Category
-
+General:Hard-coding
 ### Keyword
 memory
 ### Note
-
+Maximum number fo mavlink channels was hard-coded without taking into consideration if the system was memory constrained.
 
 ## Commit #830
 ### Hash
@@ -14040,11 +14042,11 @@ Non-compliant nodes support
 
 WorkQueueManager:Increase UAVCAN stack size
 ### Antipattern Category
-
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size increased from 2176 to 2576.
 
 ## Commit #831
 ### Hash
