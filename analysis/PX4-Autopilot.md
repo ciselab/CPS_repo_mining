@@ -12346,7 +12346,7 @@ X
 ### Keyword
 increase
 ### Note
-An inline function added (not an antipattern as this is restricted to the C++ language), some computations modified, test cases modified/added especially regarding GPS and VISION. There was bug corrected, where 2 uints were substracted, not sure whether this falls under New:rounded_numbers or another antipattern.
+An inline function added (not an antipattern as this is restricted to the C++ language), some computations modified, test cases modified/added especially regarding GPS and VISION. There was bug corrected, where 2 uints were substracted.
 
 ## Commit #734
 ### Hash
@@ -12904,11 +12904,11 @@ Size of work queue increased from 1656 to 1672.
 ### Message
 Only use roll/pitch not centered for RC override, and increase override threshold
 ### Antipattern Category
-X
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-This commit does not change any performance-related features.
+Override threshold for the RC stick increased from 12 to 15.
 
 ## Commit #769
 ### Hash
