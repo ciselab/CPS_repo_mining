@@ -7731,7 +7731,7 @@ MavlinkLogHandler: increase MAX_BYTES_SEND to 256kb
 It increases the throughput on UDP (from around 2Mb to 2.5Mb), while the
 rate via USB & telemetry stay the same.
 ### Antipattern Category
-New:Hard-coded-fine-tunin
+New:Hard-coded-fine-tuning
 Fixed_Communication_Rate
 ### Keyword
 increase
