@@ -1,3 +1,8 @@
+# grbl
+
+### remote
+https://github.com/gnea/grbl
+
 ## Commit #1
 ### Hash
 [b8ba8a4231676eb1bec9b73dd5862f18188c2977](https://github.com/gnea/grbl/commit/b8ba8a4231676eb1bec9b73dd5862f18188c2977)
@@ -31,7 +36,8 @@ This commit does not change any performance-related features. Strings moved to p
 ### Message
 Grbl can now take advantage of the extra memory in the 328
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:Hard-coded-timing
+New:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 memory
 ### Note
@@ -265,7 +271,8 @@ buffer to 64 bytes. Need the memory space for future developments.
 reporting modes, jog modes, etc can be set during runtime. Will be
 fleshed out and placed into EEPROM when everything is added.
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:Hard-coded-timing
+New:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 memory
 ### Note
@@ -619,7 +626,8 @@ maximum step frequency is now back at 30kHz.
 
 - Added Zen Toolworks 7x7 defaults.
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:Hard-coded-timing
+New:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 fast
 ### Note
@@ -672,7 +680,8 @@ trapezoidal profiles.
 - Fixed the Timer0 disable after a step pulse falling edge. Thanks
 @blinkenlight!
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:Hard-coded-timing
+New:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 slow
 ### Note
@@ -749,7 +758,8 @@ work with accelerations above 400mm/sec^2 or so.
 
 - Updated README
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:Hard-coded-timing
+New:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 overhead
 ### Note
@@ -864,7 +874,8 @@ planner.
 that the bottleneck is the serial interface. Will now support this, as
 well as the old 9600 baud, in new firmware builds.
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:Hard-coded-timing
+New:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 fast
 ### Note
@@ -998,7 +1009,8 @@ algorithm now has a simple axis lock mask which inhibits the desired
 axes from moving. Meaning, if one of the limit switches engages before
 the other, we stop that one axes and keep moving the other.
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:Hard-coded-timing
+New:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 faster
 ### Note
@@ -1155,7 +1167,8 @@ with other parts of Grbl.
 - Tweaked the stepper disable bit code in stepper.c. Requires less
 flash memory.
 ### Antipattern Category
-New:Fixed_Communication_Rate, New:Hard-coded-fine-tuning
+New:Fixed_Communication_Rate
+New:Hard-coded-fine-tuning
 ### Keyword
 performance
 ### Note

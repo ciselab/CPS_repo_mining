@@ -1,3 +1,8 @@
+# arduino-esp32
+
+### remote
+https://github.com/espressif/arduino-esp32
+
 ## Commit #1
 ### Hash
 [d1025b6b5d98686abdf9d8c450f07da27e3b6012](https://github.com/espressif/arduino-esp32/commit/d1025b6b5d98686abdf9d8c450f07da27e3b6012)
@@ -17,7 +22,8 @@ https://github.com/espressif/arduino-esp32/issues/53
 
 https://github.com/espressif/arduino-esp32/issues/11
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:Hard-coded-timing
+New:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
@@ -418,7 +424,8 @@ Increase _network_event_task priority (#2184)
 
 Fixes https://github.com/espressif/arduino-esp32/issues/1595
 ### Antipattern Category
-General:Hard-coding, New:Fixed_Communication_Rate
+General:Hard-coding
+New:Fixed_Communication_Rate
 ### Keyword
 increase
 ### Note
@@ -1064,7 +1071,8 @@ Real DNS resolving timeout used by lwip library is 14[s] (7[s] for DNS1 + 7[s] f
 
 Fixes #3722
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:Hard-coded-timing
+New:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 memory
 ### Note

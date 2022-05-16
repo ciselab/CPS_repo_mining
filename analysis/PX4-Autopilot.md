@@ -5922,7 +5922,8 @@ ulog_stream_ack.msg: lower timeout & increase max retries
 We expect a short round-trip time, so lowering the retry timeout will
 increase throughput on links with high drop rate.
 ### Antipattern Category
-New:Fixed-communication-rate, New:Hard-coded-fine-tuning
+New:Fixed-communication-rate
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
@@ -5988,7 +5989,8 @@ px4fmu rcS: increase mavlink rate to 100000 for SYS_COMPANION 1500000
 
 Needed for log streaming
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:Fixed-communication-rate
+New:Hard-coded-fine-tuning
+New:Fixed-communication-rate
 ### Keyword
 increase
 ### Note
@@ -6156,7 +6158,8 @@ Issue: Memory access fixes (#6081).
 ### Message
 Sensors app mag voter: Increase stale value detection threshold to accomodate low-noise mag setups
 ### Antipattern Category
-General:Hard-coding, New:Bad_Noise_Handling
+General:Hard-coding
+New:Bad_Noise_Handling
 ### Keyword
 increase
 ### Note
@@ -6187,7 +6190,8 @@ This reverts commit e3537ca6c25ba50b8c0665138a1d833861b1b5f7.
 
 It needs changes on the Linux side, so reverting for now.
 ### Antipattern Category
-New:Fixed-communication-rate, New:Hard-coded-fine-tuning
+New:Fixed-communication-rate
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
@@ -6237,7 +6241,8 @@ MAVLink app: Fix VTOL reporting and prevent mission reached spam
 
 The VTOL status reporting and the mission status reporting were both suboptimal. VTOL was too slow, mission reporting too fast
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:Fixed-communication-rate
+New:Hard-coded-fine-tuning
+New:Fixed-communication-rate
 ### Keyword
 slow
 ### Note
@@ -6748,7 +6753,8 @@ Tested on various links, like:
 - pixracer USB
 - SITL
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:Hard-coded-timing
+New:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 slow
 ### Note
@@ -6829,7 +6835,8 @@ UAVCAN performance audit (#6829)
 
 * Removed UAVCAN perfcounters
 ### Antipattern Category
-General:Hard-coding, Smith:General:Unnecessary_Processing
+General:Hard-coding
+Smith:General:Unnecessary_Processing
 ### Keyword
 performance
 ### Note
@@ -6887,7 +6894,8 @@ Performance audit (intentionally duplicates #6829) (#6847)
 
 * Matrix submodule update
 ### Antipattern Category
-General:Hard-coding, Smith:General:Unnecessary_Processing
+General:Hard-coding
+Smith:General:Unnecessary_Processing
 ### Keyword
 performance
 ### Note
@@ -7723,7 +7731,8 @@ MavlinkLogHandler: increase MAX_BYTES_SEND to 256kb
 It increases the throughput on UDP (from around 2Mb to 2.5Mb), while the
 rate via USB & telemetry stay the same.
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:Fixed_Communication_Rate
+New:Hard-coded-fine-tunin
+Fixed_Communication_Rate
 ### Keyword
 increase
 ### Note
@@ -7801,7 +7810,8 @@ The results from testing, indicated that the if the PWM pins were clamped low fo
 
 This change delays the reset and therefore the pulse by at least 400 Ms.
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:Hard-coded-timing
+New:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 slow
 ### Note
@@ -7950,7 +7960,8 @@ shutdown: increase the max timeout to 5s
 To make sure slow param writes will finish before we hit the timeout. I've
 seen param write durations of around 2s.
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:Hard-coded-timing
+New:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 slow
 ### Note
@@ -8678,7 +8689,8 @@ Value changed from 85 to 90.
 ### Message
 FMUv5: Increase USB buffer to increase transfer rates
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:Fixed_Communication_Rate
+New:Hard-coded-fine-tuning
+New:Fixed_Communication_Rate
 ### Keyword
 increase
 ### Note
@@ -8721,7 +8733,9 @@ mavlink_orb_subscription: reduce orb_exists() check from 10Hz to 3Hz
 
 Checking with 3Hz for new topics should be fast enough.
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:Fixed_Communication_Rate, Smith:Is_Everything_OK
+New:Hard-coded-fine-tuning
+New:Fixed_Communication_Rate
+Smith:Is_Everything_OK
 ### Keyword
 fast
 ### Note
@@ -8775,7 +8789,8 @@ Variable chagned from 100 to 500.
 ### Message
 Jenkins increase timeout to 30 minutes for now
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:Hard-coded-timing
+New:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
@@ -8788,7 +8803,8 @@ Timeout increased from 20 mis to 30.
 ### Message
 Jenkins increase test timeout
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:Hard-coded-timing
+New:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
@@ -8855,7 +8871,8 @@ This commit does not change any performance-related features.
 ### Message
 FW land detector increase trigger time and cleanup (#8486)
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:Hard-coded-timing
+New:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
@@ -9153,7 +9170,8 @@ Improve the Crazyflie MAVLink tunnel to increase efficiency
 
 This change fragments MAVLink packets more efficiently and therefore increases the net throughput. This in turn makes the connection significantly more stable and the Crazyflie experience overall more usable.
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:Hard-coded-timing
+New:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
@@ -9274,7 +9292,8 @@ Fixed priority.
 ### Message
 crazyflie: increase imu reading rate
 ### Antipattern Category
-New:Fixed_Communication_Rate, New:Hard-coded-fine-tuning
+New:Fixed_Communication_Rate
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
@@ -9287,7 +9306,8 @@ Reading and sample rates increased, also accel, gyro init values cut in half.
 ### Message
 mpu9250: decrease sampling rate when using i2c
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:Fixed_Communication_Rate
+New:Hard-coded-fine-tuning
+New:Fixed_Communication_Rate
 ### Keyword
 decrease
 ### Note
@@ -9467,7 +9487,8 @@ Default flare altitude decreased from 8 to 3.
 ### Message
 ADIS16477 reset on init and increase delay
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:Hard-coded-timing
+New:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
@@ -9648,7 +9669,8 @@ Stack size increased from 1100 to 1180.
 ### Message
 px4fmu increase actuator controls poll timeout
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:Hard-coded-timing
+New:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
@@ -10708,7 +10730,8 @@ because the driver got duplicate samples and published only at 128 Hz.
 We have to increase the filter back to 500 Hz so that we get 1 kHz sampling
 rate, with 250 Hz publications.
 ### Antipattern Category
-New:Fixed_Communication_Rate, New:Hard-coded-fine-tuning
+New:Fixed_Communication_Rate
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
@@ -10937,7 +10960,8 @@ Jenkins HIL increase boot timeout for stackcheck build
  - px4_fmu-v5_stackcheck remove extra drivers (to try and get the system
 usuable)
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:Hard-coded-timing
+New:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
@@ -11044,7 +11068,8 @@ Numerous params added for vertical take-off and landing.
 ### Message
 Jenkins hardware increase timeout 10 -> 20 minutes
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:Hard-coded-timing
+New:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
@@ -11530,7 +11555,8 @@ Pixhawks with only 1 MB flash. By now, many targets have 2 MB flash and
 take a bit longer to erase. Therefore, we can increase the estimated
 time a bit and don't need to resort to the timeout notice.
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:Hard-coded-timing
+New:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
@@ -12101,7 +12127,8 @@ destabilize the filter
 - Update filter time constants. Increasing the speed of the residual lpf
 improves the quality of the learned accel noise
 ### Antipattern Category
-New:unstable_and_slow_noise_handling, New:General:Hard-coded-fine-tuning
+New:unstable_and_slow_noise_handling
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
@@ -12175,7 +12202,8 @@ refactor atxxxx: use driver base class
 
 and increase update rate to 20Hz
 ### Antipattern Category
-New:Fixed_Communication_Rate, New:General:Hard-coded-fine-tuning
+New:Fixed_Communication_Rate
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
@@ -12392,7 +12420,8 @@ Usermain stack size increased from 2688 to 2944, work queue size increased from 
 ### Message
 Jenkins: increase history for remaining builds
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:Hard-coded-timing
+New:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
@@ -12425,7 +12454,8 @@ boards: px4_io-v2 defconfig optimizations to save memory
 
 Co-Authored-By: David Sidrane <David.Sidrane@Nscdg.com>
 ### Antipattern Category
-New:General:Hard-coded-fine-tuning, Smith:General:Unnecessary_Processing
+New:General:Hard-coded-fine-tuning
+Smith:General:Unnecessary_Processing
 ### Keyword
 memory
 ### Note
@@ -12500,7 +12530,8 @@ bmm150: more explicit data conversion & reduce to 30Hz
   (though not in forced mode as we are using it)
 - 30Hz allows to increase the quality of the measurements
 ### Antipattern Category
-New:Fixed_Communication_Rate, New:General:Hard-coded-fine-tuning
+New:Fixed_Communication_Rate
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
@@ -12590,7 +12621,8 @@ v5x defconfig: increase TELEM2 UART TX buffer size to 3000
 
 Required for very high-rate log streaming @3MBit baudrate.
 ### Antipattern Category
-New:Fixed_Communication_Rate, New:General:Hard-coded-fine-tuning
+New:Fixed_Communication_Rate
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
@@ -12634,7 +12666,8 @@ IMU_GYRO_CUTOFF decreased from 80 to 60, IMU_DGYRO_CUTOFF decreased from 40 to 3
 ### Message
 ekf2: increase default baro noise 2 -> 3.5 m
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:unstable_and_slow_noise_handling
+New:Hard-coded-fine-tuning
+New:unstable_and_slow_noise_handling
 ### Keyword
 increase
 ### Note
@@ -12647,7 +12680,8 @@ Fine tuning of noise filtering.
 ### Message
 ekf2: decrease default GPS horizontal velocity noise
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:unstable_and_slow_noise_handling
+New:Hard-coded-fine-tuning
+New:unstable_and_slow_noise_handling
 ### Keyword
 decrease
 ### Note
@@ -12699,7 +12733,9 @@ imu/invensense/mpu6000: minor improvements
  - only allocate DRDY perf counter if GPIO is available
  - allow running faster than accel ODR (safe limit of 2 kHz in place)
 ### Antipattern Category
-New:Fixed_Communication_Rate, New:General:Hard-coded-fine-tuning, New:Hard-coded-timing
+New:Fixed_Communication_Rate
+New:General:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 faster
 ### Note
@@ -12899,7 +12935,8 @@ logger: add full commander and safety logging by default
 
  - increase battery_status rate to be useful
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:Hard-coded-timing
+New:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
@@ -12958,7 +12995,8 @@ This commit does not change any performance-related features. CMake compatibilit
 ### Message
 logger: decrease try subsribe interval 1000 ms -> 20 ms
 ### Antipattern Category
-New:Fixed_Communication_Rate, New:General:Hard-coded-fine-tuning
+New:Fixed_Communication_Rate
+New:General:Hard-coded-fine-tuning
 ### Keyword
 decrease
 ### Note
@@ -13049,7 +13087,8 @@ commander: increase COM_ARM_MAG_ANG 35 -> 45 degrees
 which we mostly have in 45 degree increments
  - handling a vehicle on the ground can easily disturb one mag by more than 30 degrees, so this is often distracting noise
 ### Antipattern Category
-New:unstable_and_slow_noise_handling, New:General:Hard-coded-fine-tuning
+New:unstable_and_slow_noise_handling
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
@@ -13263,7 +13302,8 @@ logger: increase logging rate of airspeed_validated from 1Hz to 5Hz
 
 Signed-off-by: Silvan Fuhrer <silvan@auterion.com>
 ### Antipattern Category
-New:Fixed_Communication_Rate, New:Hard-coded-fine-tuning
+New:Fixed_Communication_Rate
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
@@ -13601,7 +13641,8 @@ This commit does not change any performance-related features. Test setup change.
 ### Message
 invensense/icm42688p: use full 20 bit data, increase ODR, disable all filters
 ### Antipattern Category
-New:Fixed_Communication_Rate, New:General:Hard-coded-fine-tuning
+New:Fixed_Communication_Rate
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
@@ -13744,7 +13785,8 @@ vehicle_command: increase queue depth 4 -> 8
 
  - prevent slower modules from missing commands
 ### Antipattern Category
-New:Fixed_Communication_Rate, New:Hard-coded-fine-tuning
+New:Fixed_Communication_Rate
+New:Hard-coded-fine-tuning
 ### Keyword
 slower
 ### Note
@@ -14066,7 +14108,8 @@ mavlink: reduce GIMBAL_MANAGER_STATUS message rate
 
 This was way too fast.
 ### Antipattern Category
-New:Fixed_Communication_Rate, New:General:Hard-coded-fine-tuning
+New:Fixed_Communication_Rate
+New:General:Hard-coded-fine-tuning
 ### Keyword
 fast
 ### Note
@@ -14191,7 +14234,8 @@ sensor_calibration: increase threshold for updating calibration offsets or scale
 
  - this is to minimize needlessly writing negligible parameter changes and triggering unnecessary estimator bias resets
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:unstable_and_slow_noise_handling
+New:Hard-coded-fine-tuning
+New:unstable_and_slow_noise_handling
 ### Keyword
 increase
 ### Note
@@ -14362,7 +14406,8 @@ Work queue increased from 1888 to 1920.
 ### Message
 gyro_fft: increase default range and length to improve test data
 ### Antipattern Category
-New:Fixed_Communication_Rate, New:General:Hard-coded-fine-tuning
+New:Fixed_Communication_Rate
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
@@ -14393,7 +14438,8 @@ This is to avoid race condition with the yaw emergency estimator having
 the same trigger delay of 1 second. Commander will now give more time to
 EKF2 to reset itself before switching to altitude mode.
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:Hard-coded-timing
+New:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
@@ -14421,7 +14467,8 @@ This commit does not change any performance-related features. Memory debug comma
 ### Message
 IMU_DGYRO_CUTOFF increase default 10 -> 20 Hz
 ### Antipattern Category
-New:Fixed_Communication_Rate, New:General:Hard-coded-fine-tuning
+New:Fixed_Communication_Rate
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
@@ -14462,7 +14509,8 @@ This commit does not change any performance-related features. Test changes.
 ### Message
 sensors/vehicle_imu: increase threshold for clipping warning
 ### Antipattern Category
-New:Fixed_Communication_Rate, New:General:Hard-coded-fine-tuning
+New:Fixed_Communication_Rate
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
@@ -14574,7 +14622,8 @@ Update submodule ecl to latest Thu May  6 12:39:12 UTC 2021
     29243ac 2021-05-05 bresch - yaw_reset: reduce minimum vector length to compute yaw error
 aad4840 2021-05-02 Kabir Mohammed - EKF: increase allowed difference between flow and gyro ODRs
 ### Antipattern Category
-New:unstable_and_slow_noise_handling, New:General:Hard-coded-fine-tuning
+New:unstable_and_slow_noise_handling
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
@@ -14613,7 +14662,8 @@ This commit does not change any performance-related features.Jenkins CI build ti
 ### Message
 IMU_GYRO_CUTOFF and IMU_DGYRO_CUTOFF increase default slightly
 ### Antipattern Category
-New:Fixed_Communication_Rate, New:General:Hard-coded-fine-tuning
+New:Fixed_Communication_Rate
+New:General:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
