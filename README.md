@@ -34,26 +34,27 @@ rx = remote\
 la = all local\
 ra = all remote\
 Where x stands for the number in the repository list.
+
 #### Clone repositories
-
-
 To run the `repository_commits_mining` script in the local mode, we need to clone the projects into a directory. this directory will later be passded as an argument to the further scripts. To prepare such a directory, run the following script
 
 `python3 pd/clone_repos.py [a_pre_existing_directory_for_saving_the_local_repositories]`
+
 #### Setup
 Change in the `dict_repo_list.py` file the variable `location_github` to match where on your system the repositories are located. This will be the general path used to find all the repositories described in the 'project' dictionary, located in the same file.
 It is possible to manually overwrite the location for a specific repository by changing it in the `projects` dictionary. Replace `None` by the system path to the repository for the selected repository.
-
 
 ### Commit diffs
 Searching through the commit diffs, from the above script result, for specific code snippet.\
 `docker exec -it cps-repo-mining-container bash -c "python3 pd/search_selection.py"`
 
-
 ### Current code state
 Searching through the current state of the full repositories, for code snippets.\
 `docker exec -it cps-repo-mining-container bash -c "python3 pd/search_current.py"`
 
+## Manual analysis reports
+Run `report_template_maker.py` to generate the template for the manual analysis.\
+When finished manually analysis (the selected repository), generate the graphs containing the results; run `manual_analysis_report_parser.py`, followed by running `initial-analysis.R` (in RStudio).
 
 ## Generate reports
 To generate coverage, mutation and docstring reports, run:\
