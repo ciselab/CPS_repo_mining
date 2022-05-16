@@ -1,10 +1,12 @@
+# Install dataclean, functions needed to capture the raw data frames.
 source('dataclean.r')
-
+# Using these libraries.
 library(ggplot2)
 library(ggVennDiagram)
+# Get the raw data frame.
 raw_df <-getRawData()
 
-
+# Fix inconsistency with the names.
 # hard coded timing
 raw_df$antipattern <- ifelse(raw_df$antipattern == "New:Impatient_requester","New:Magical-Waiting-Number",as.character(raw_df$antipattern))
 raw_df$antipattern <- ifelse(raw_df$antipattern == "New:Hard-coded-timing","New:Magical-Waiting-Number",as.character(raw_df$antipattern))
@@ -12,6 +14,8 @@ raw_df$antipattern <- ifelse(raw_df$antipattern == "New:Hard-coded-timing","New:
 # hard coded tuning
 raw_df$antipattern <- ifelse(raw_df$antipattern == "New:General:Hard-coded-fine-tuning","New:Hard-coded-fine-tuning",as.character(raw_df$antipattern))
 
+# Bad Noise Handling
+raw_df$antipattern <- ifelse(raw_df$antipattern == "New:unstable_and_slow_noise_handling","New:Bad-noise-handling",as.character(raw_df$antipattern))
 
 # general
 raw_df$antipattern <- ifelse(raw_df$antipattern == "General:Hard-coding","Non-performance Antipatterns",as.character(raw_df$antipattern))
@@ -20,10 +24,9 @@ raw_df$antipattern <- ifelse(raw_df$antipattern == "General: Deadlock","Non-perf
 raw_df$antipattern <- ifelse(raw_df$antipattern == "General:Code_Duplication","Non-performance Antipatterns",as.character(raw_df$antipattern))
 raw_df$antipattern <- ifelse(raw_df$antipattern == "General:bottleneck","Non-performance Antipatterns",as.character(raw_df$antipattern))
 
-
 # Fix caps lock issue
 raw_df$antipattern <- ifelse(raw_df$antipattern == "New:Rounded_numbers","New:rounded_numbers",as.character(raw_df$antipattern))
-
+raw_df$antipattern <- ifelse(raw_df$antipattern == "New:Fixed-communication-rate","New:Fixed_Communication_Rate",as.character(raw_df$antipattern))
 
 # replace - with X
 raw_df$antipattern <- ifelse(raw_df$antipattern == "-","X",as.character(raw_df$antipattern))
@@ -156,8 +159,11 @@ ggplot(cps_antipatterns_df, aes(x=reorder(antipattern, -count), y=as.numeric(cou
         legend.text = element_text( size = 17, face = "bold"),
         legend.position = "top")+
   xlab("Identified Performance issues and antipatterns") +
-  ylab("Number of occurance") +
+  ylab("Frequency") +
   theme(axis.title=element_text(size=25,face="bold"))
+  #xlab("Identified Performance issues and antipatterns") +
+  #ylab("Number of occurance") +
+  #theme(axis.title=element_text(size=25,face="bold"))
 
 
 venn_df <- raw_df %>%
@@ -223,10 +229,12 @@ for (kw in kws){
 ggplot(data = keywords_df, mapping = aes(x = keyword, y = as.numeric(count), fill = is_ap)) +
   geom_bar(stat = "identity",  position = "dodge") +
   scale_fill_manual(values=c("#fc8d59","#d7301f")) +
-  ylab("Number of occurance") +
+  #ylab("Number of occurance") +
+  ylab("Frequency") +
   theme(legend.title = element_text( size=17, face="bold"),
         legend.text = element_text( size = 17, face = "bold"),
-        legend.position = "top") +
+        #legend.position = "top") +
+        legend.position = c(0.9, 0.9)) +
   guides(fill=guide_legend(title="Is it an antipattern?")) +
   theme(axis.text.x = element_text(angle=50, vjust=1, hjust=1,face = "bold", size=16),
         axis.text.y = element_text(face= "bold", size = 16),
@@ -234,9 +242,7 @@ ggplot(data = keywords_df, mapping = aes(x = keyword, y = as.numeric(count), fil
   geom_text(aes( label=count), position = position_dodge(0.9),
             vjust = -0.5,
             color="black", size=7)
-  
   geom_label(aes(label = count),
-
              fill ="white",
              size = 9,
              show.legend = FALSE)
