@@ -8,12 +8,13 @@ import csv
 import re
 import glob
 import os
-import pathlib
+from typing import TextIO
 
-dir_location_report = os.path.join(pathlib.Path.home(), "CPS_repo_mining", "results", "parser")
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+dir_location_report = os.path.join(ROOT_DIR, "..", "data-analysis")
 
 
-def get_csv_file():
+def get_csv_file() -> TextIO:
     results_file_name = "results.csv"
     if not os.path.exists(os.path.abspath(dir_location_report)):
         os.makedirs(dir_location_report)
@@ -21,7 +22,13 @@ def get_csv_file():
     return open(full_path_results_file, "w", encoding='utf-8')
 
 
-def write_row(csv_writer, project: str, commit: str, dict_commit_info: dict):
+def write_first_row(csv_writer) -> None:
+    csv_line = "project,commit,hash,message,antipattern,keyword"
+    print(f"{csv_line=}")
+    csv_writer.writerow([csv_line])
+
+
+def write_row(csv_writer, project: str, commit: str, dict_commit_info: dict) -> None:
     csv_line = [project, commit]
     for key in dict_commit_info.keys():
         if dict_commit_info[key] is not None:
@@ -31,7 +38,7 @@ def write_row(csv_writer, project: str, commit: str, dict_commit_info: dict):
     csv_writer.writerow(csv_line)
 
 
-def read_file(file_name: str, csv_writer):
+def read_file(file_name: str, csv_writer) -> None:
     with open(file_name, encoding='utf-8') as f:
         project = None
         commit = None
@@ -68,10 +75,17 @@ def read_file(file_name: str, csv_writer):
         write_row(csv_writer, project, commit, dict_commit_info)
 
 
-def main():
+def main() -> None:
     report_path = "../analysis"
     if os.path.exists(os.path.abspath(report_path)):
+
+        # The first line in the results.csv, needed for the R script.
         csv_file = get_csv_file()
+        csv_writer_first_line = csv.writer(csv_file, delimiter=';', quotechar='"',
+                                           quoting=csv.QUOTE_NONE, escapechar="\\")
+        write_first_row(csv_writer_first_line)
+
+        # Continue for the manual analysis files.
         csv_writer = csv.writer(csv_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
         for f in glob.glob(report_path + "/*.md"):
             read_file(f, csv_writer)

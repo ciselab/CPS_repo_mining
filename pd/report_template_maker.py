@@ -1,10 +1,13 @@
 import sys
 import os
 from urllib.parse import urlparse
+"""
+Current usage, run the file in the terminal as follows:
+python pd/report_template_maker.py '/Users/name_user/Desktop/resultsOutput_Valetudo.txt' https://github.com/Hypfer/Valetudo 
+"""
 
 
-
-def main(user_input: list = None):
+def main():
     user_inputs = sys.argv[1:]
     print(f"Input: {user_inputs}")
 
@@ -15,9 +18,9 @@ def main(user_input: list = None):
         commit_number = 1
         if len(user_inputs) == 3:
             commit_number = int(user_inputs[2])
+        print(f"{user_inputs[2]=}")
 
         out_file = open("result.md", "w")
-
 
         report_file = open(report_file_directory, 'r')
 
@@ -27,13 +30,13 @@ def main(user_input: list = None):
 
             if line.startswith("hash: "):
                 out_file.write("## Commit #"+str(commit_number)+"\n")
-                commit_number+=1
+                commit_number += 1
                 out_file.write("### Hash"+"\n")
 
-                hash = line.split("hash: ")[1].strip()
-                commit_url = remote_repo_url+"commit/"+hash
+                hash_commit = line.split("hash: ")[1].strip()
+                commit_url = remote_repo_url+"commit/"+hash_commit
 
-                out_file.write("[" + hash +"]" + "(" + commit_url + ")"+"\n")
+                out_file.write("[" + hash_commit + "]" + "(" + commit_url + ")"+"\n")
                 out_file.write("\n")
 
             if line.startswith("message: "):
@@ -61,18 +64,10 @@ def main(user_input: list = None):
                 out_file.write("\n")
                 out_file.write("\n")
 
-            
-
-
-
-
-
         out_file.close()
-            
-
-
     else:
         print_help()
+
 
 def user_inputs_are_valid(user_inputs):
     if len(user_inputs) < 2:
@@ -102,18 +97,12 @@ def user_inputs_are_valid(user_inputs):
     return True
 
 
-
-
 def is_url(url):
-  try:
-    result = urlparse(url)
-    return all([result.scheme, result.netloc])
-  except ValueError:
-    return False
-
-
-    
-
+    try:
+        result = urlparse(url)
+        return all([result.scheme, result.netloc])
+    except ValueError:
+        return False
 
 
 def print_help():
