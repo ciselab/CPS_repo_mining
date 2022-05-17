@@ -19,6 +19,7 @@ raw_df$antipattern <- ifelse(raw_df$antipattern == "New:General:hard_coded_fine_
 # Bad Noise Handling
 raw_df$antipattern <- ifelse(raw_df$antipattern == "New:unstable_and_slow_noise_handling","New:Bad-Noise-Handling",as.character(raw_df$antipattern))
 raw_df$antipattern <- ifelse(raw_df$antipattern == "New:Bad-noise-handling","New:Bad-Noise-Handling",as.character(raw_df$antipattern))
+raw_df$antipattern <- ifelse(raw_df$antipattern == "New:Bad_Noise_Handling","New:Bad-Noise-Handling",as.character(raw_df$antipattern))
 
 # general
 raw_df$antipattern <- ifelse(raw_df$antipattern == "General:Hard-coding","Non-performance-Antipatterns",as.character(raw_df$antipattern))
