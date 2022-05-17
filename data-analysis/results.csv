@@ -5229,7 +5229,7 @@ This makes also a slight stack size increase necessary (was 284 bytes left)",New
 ",[2a79ddd621355690e174f134e3421e7bf67bddb1](https://github.com/PX4/PX4-Autopilot/commit/2a79ddd621355690e174f134e3421e7bf67bddb1),"MavlinkLogHandler: increase MAX_BYTES_SEND to 256kb
 
 It increases the throughput on UDP (from around 2Mb to 2.5Mb), while the
-rate via USB & telemetry stay the same.","New:Hard-coded-fine-tunin
+rate via USB & telemetry stay the same.","New:Hard-coded-fine-tuning
 Fixed_Communication_Rate",increase
 "PX4-Autopilot
 "," #464
