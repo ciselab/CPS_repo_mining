@@ -837,7 +837,7 @@ The change is safe in the face of disconnects because client.read(), when it no 
 Co-authored-by: ushiboy <ushiboy.dev@gmail.com>",General:C:not_deallocating,memory
 "arduino-esp32
 "," #39
-",[8134a42162f11cb01155038a2465848d6b2b84bc](https://github.com/espressif/arduino-esp32/commit/8134a42162f11cb01155038a2465848d6b2b84bc),Fix leak of memory and possible crashes in AsyncUDP,,memory
+",[8134a42162f11cb01155038a2465848d6b2b84bc](https://github.com/espressif/arduino-esp32/commit/8134a42162f11cb01155038a2465848d6b2b84bc),Fix leak of memory and possible crashes in AsyncUDP,X,memory
 "arduino-esp32
 "," #40
 ",[560c0f45f58b907f0d699f65408b87fe54650854](https://github.com/espressif/arduino-esp32/commit/560c0f45f58b907f0d699f65408b87fe54650854),"Fix dropped SSL connection when buffer gets full. (#4820)
