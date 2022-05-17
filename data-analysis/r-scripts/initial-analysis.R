@@ -12,20 +12,24 @@ raw_df$antipattern <- ifelse(raw_df$antipattern == "New:Impatient_requester","Ne
 raw_df$antipattern <- ifelse(raw_df$antipattern == "New:Hard-coded-timing","New:Magical-Waiting-Number",as.character(raw_df$antipattern))
 
 # hard coded tuning
-raw_df$antipattern <- ifelse(raw_df$antipattern == "New:General:Hard-coded-fine-tuning","New:Hard-coded-fine-tuning",as.character(raw_df$antipattern))
+raw_df$antipattern <- ifelse(raw_df$antipattern == "New:Hard-coded-fine-tuning","New:Hard-Coded-Fine-Tuning",as.character(raw_df$antipattern))
+raw_df$antipattern <- ifelse(raw_df$antipattern == "New:General:Hard-coded-fine-tuning","New:Hard-Coded-Fine-Tuning",as.character(raw_df$antipattern))
+raw_df$antipattern <- ifelse(raw_df$antipattern == "New:General:hard_coded_fine_tuning","New:Hard-Coded-Fine-Tuning",as.character(raw_df$antipattern))
 
 # Bad Noise Handling
-raw_df$antipattern <- ifelse(raw_df$antipattern == "New:unstable_and_slow_noise_handling","New:Bad-noise-handling",as.character(raw_df$antipattern))
+raw_df$antipattern <- ifelse(raw_df$antipattern == "New:unstable_and_slow_noise_handling","New:Bad-Noise-Handling",as.character(raw_df$antipattern))
+raw_df$antipattern <- ifelse(raw_df$antipattern == "New:Bad-noise-handling","New:Bad-Noise-Handling",as.character(raw_df$antipattern))
 
 # general
-raw_df$antipattern <- ifelse(raw_df$antipattern == "General:Hard-coding","Non-performance Antipatterns",as.character(raw_df$antipattern))
-raw_df$antipattern <- ifelse(raw_df$antipattern == "General:Lack_of_documentation","Non-performance Antipatterns",as.character(raw_df$antipattern))
-raw_df$antipattern <- ifelse(raw_df$antipattern == "General: Deadlock","Non-performance Antipatterns",as.character(raw_df$antipattern))
-raw_df$antipattern <- ifelse(raw_df$antipattern == "General:Code_Duplication","Non-performance Antipatterns",as.character(raw_df$antipattern))
-raw_df$antipattern <- ifelse(raw_df$antipattern == "General:bottleneck","Non-performance Antipatterns",as.character(raw_df$antipattern))
+raw_df$antipattern <- ifelse(raw_df$antipattern == "General:Hard-coding","Non-performance-Antipatterns",as.character(raw_df$antipattern))
+raw_df$antipattern <- ifelse(raw_df$antipattern == "General:Lack_of_documentation","Non-performance-Antipatterns",as.character(raw_df$antipattern))
+raw_df$antipattern <- ifelse(raw_df$antipattern == "General: Deadlock","Non-performance-Antipatterns",as.character(raw_df$antipattern))
+raw_df$antipattern <- ifelse(raw_df$antipattern == "General:Code_Duplication","Non-performance-Antipatterns",as.character(raw_df$antipattern))
+raw_df$antipattern <- ifelse(raw_df$antipattern == "General:bottleneck","Non-performance-Antipatterns",as.character(raw_df$antipattern))
 
 # Fix caps lock issue
-raw_df$antipattern <- ifelse(raw_df$antipattern == "New:Rounded_numbers","New:rounded_numbers",as.character(raw_df$antipattern))
+raw_df$antipattern <- ifelse(raw_df$antipattern == "New:rounded_numbers","New:Rounded_Numbers",as.character(raw_df$antipattern))
+raw_df$antipattern <- ifelse(raw_df$antipattern == "New:Rounded_numbers","New:Rounded_Numbers",as.character(raw_df$antipattern))
 raw_df$antipattern <- ifelse(raw_df$antipattern == "New:Fixed-communication-rate","New:Fixed_Communication_Rate",as.character(raw_df$antipattern))
 
 # replace - with X
