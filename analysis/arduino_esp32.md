@@ -1219,11 +1219,11 @@ Variable not deallocated.
 ### Message
 Fix leak of memory and possible crashes in AsyncUDP
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+Fix for memory leak and crash, no performance related antipattern found.
 
 ## Commit #40
 ### Hash
