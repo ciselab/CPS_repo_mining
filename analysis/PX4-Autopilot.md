@@ -10515,11 +10515,11 @@ This commit does not change any performance-related features related. Stack chec
 ### Message
 Jenkins SITL tests increase test history from 2 -> 5
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+CI/CD history increased from 2 to 5.
 
 ## Commit #631
 ### Hash
