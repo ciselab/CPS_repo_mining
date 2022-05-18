@@ -9705,10 +9705,11 @@ still be references to elements in the vector when the resize happens.
 These references then become invalid.
 Using a vector of pointers fixes that.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
+This commit does not change any performance-related features. Invalid memory access due to vector resizing.
 
 
 ## Commit #582
@@ -9718,11 +9719,11 @@ memory
 ### Message
 logger increase log_writer_file stack 1072 -> 1150
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size increased from 1072 to 1150.
 
 ## Commit #583
 ### Hash
@@ -9731,11 +9732,11 @@ increase
 ### Message
 SYS_COMPANION: add 1500000 baud to metadata & increase the data rate
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning, New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
-
+Mavlink bandwidth increased from 10000 to 140000.
 
 ## Commit #584
 ### Hash
@@ -9750,11 +9751,11 @@ Tested with 1500000 Baudrate and mavlink TX rate of ~120KB/s: no drops.
 I did not test the exact limit, something like 2500 might be enough. But
 we (still) have enough free RAM on FMU-v5.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Buffer size (CONFIG_USART3_TXBUFSIZE param) increased from 1500 to 3000 in order to deal with the increased band rate of Mavlink.
 
 ## Commit #585
 ### Hash
@@ -9769,11 +9770,11 @@ CI mission tests add FW and cleanup (#10250)
 
 * jenkins: FW mission include loiter_to_alt cmd
 ### Antipattern Category
-
+X
 ### Keyword
 decrease
 ### Note
-
+This commit does not change any performance-related features. Test cases changed and CI/CD modified.
 
 ## Commit #586
 ### Hash
@@ -9782,11 +9783,11 @@ decrease
 ### Message
 FlightTaskManual: increase rc timeout to 1.5 x COM_RC_LOSS_T
 ### Antipattern Category
-
+New:Hard-coded-timing, General:Hard-coding
 ### Keyword
 increase
 ### Note
-
+Rc timeout changed from _timeout to 1.5 x COM_RC_LOSS_T.
 
 ## Commit #587
 ### Hash
@@ -9798,11 +9799,11 @@ px4_impl_os:Use the defconfig CONFIG_ARMV7M_STACKCHECK
   To enable coherent runtime stack checking use the boards
   CONFIG_ARMV7M_STACKCHECK setting
 ### Antipattern Category
-
+X
 ### Keyword
 runtime
 ### Note
-
+This commit does not change any performance-related features. Change in runtime stack checking.
 
 ## Commit #588
 ### Hash
@@ -9814,11 +9815,11 @@ Make.defs.in:Runtime Stack Checking in Nuttx Build
   Use CONFIG_ARMV7M_STACKCHECK to add the instrumentation
   for runtime stack checking
 ### Antipattern Category
-
+X
 ### Keyword
 runtime
 ### Note
-
+This commit does not change any performance-related features. Instrumentation for runtime stack checking added.
 
 ## Commit #589
 ### Hash
@@ -9827,11 +9828,11 @@ runtime
 ### Message
 nuttx-configs increase idle thread stack size to 750 bytes
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size (CONFIG_IDLETHREAD_STACKSIZE param) increased from 500 to 750.
 
 ## Commit #590
 ### Hash
@@ -9840,11 +9841,11 @@ increase
 ### Message
 bmp280 increase MAIN stack
 ### Antipattern Category
-
+General:Hard-coding
 ### Keyword
 increase
 ### Note
-
+Main stack size hard coded to 1200 (initially it was the default value).
 
 ## Commit #591
 ### Hash
@@ -9853,11 +9854,11 @@ increase
 ### Message
 mpu6000 increase MAIN stack
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Main stack (mpu6000 package) size increased from 1400 to 1500.
 
 ## Commit #592
 ### Hash
@@ -9866,11 +9867,11 @@ increase
 ### Message
 sensors increase MAIN stack
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Main stack (sensors package) size increased from 1400 to 1500.
 
 ## Commit #593
 ### Hash
@@ -9879,11 +9880,11 @@ increase
 ### Message
 uORB tests increase stack sizes
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features. Stack sizes increased on 2 occasions (1500 -> 2000, 1700 -> 2000), but the changes are for test cases.
 
 ## Commit #594
 ### Hash
@@ -9892,11 +9893,11 @@ increase
 ### Message
 BMI055 increase MAIN stack
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Main stack (BMI055 package) size increased from 1200 to 1500.
 
 ## Commit #595
 ### Hash
@@ -9905,11 +9906,11 @@ increase
 ### Message
 IST8310 increase MAIN stack
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Main stack (IST8310 package) size increased from 1200 to 1500.
 
 ## Commit #596
 ### Hash
@@ -9918,11 +9919,11 @@ increase
 ### Message
 rgbled increase MAIN stack
 ### Antipattern Category
-
+General:Hard-coding
 ### Keyword
 increase
 ### Note
-
+Main stack (rgbled package) size increased from default value to 1500.
 
 ## Commit #597
 ### Hash
@@ -9931,11 +9932,11 @@ increase
 ### Message
 rgbled_pwm increase MAIN stack
 ### Antipattern Category
-
+General:Hard-coding
 ### Keyword
 increase
 ### Note
-
+Main stack (rgbled_pwm package) size increased from default value to 1500.
 
 ## Commit #598
 ### Hash
@@ -9944,11 +9945,11 @@ increase
 ### Message
 px4fmu-v5 increase CONFIG_USERMAIN_STACKSIZE slightly
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Stack size for px4fmu-v5 (CONFIG_USERMAIN_STACKSIZE param) increased from 2564 to 2700.
 
 ## Commit #599
 ### Hash
@@ -9957,11 +9958,11 @@ increase
 ### Message
 frsky_telemetry increase MAIN stack
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Main stack (frsky_telemetry package) size increased from 1200 to 1500.
 
 ## Commit #600
 ### Hash
@@ -9972,11 +9973,11 @@ mission test temporarily increase landed timeout 60s -> 120s (#10596)
 
  - revert once #10590 is resolved properly
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features. Timeout for test setup increased from 60s to 120s.
 
 ## Commit #601
 ### Hash
@@ -9993,11 +9994,11 @@ If similar interval data is detected, blending occurs when receiver data with si
 
 If no data is received from either receiver for longer than 300msec, then no blending will be performed and the most recent data will be used instead.
 ### Antipattern Category
-
+New:unstable_and_slow_noise_handling
 ### Keyword
 slower
 ### Note
-
+Data blending for the case when 2 receivers have different update rate.
 
 ## Commit #602
 ### Hash
@@ -10016,11 +10017,11 @@ Update submodule DriverFramework to latest Sun Sep 30 08:37:23 EDT 2018 (#10604)
 
     9f456ac 2018-09-30 Bart Slinger - Increase DriverFramework priority to SCHED_PRIORITY_MAX
 ### Antipattern Category
-
+General:Hard-coding
 ### Keyword
 increase
 ### Note
-
+DriverFramework priority changed to sched_get_priority_max(SCHED_FIFO) from 10.
 
 ## Commit #603
 ### Hash
@@ -10030,11 +10031,11 @@ increase
 ekf2: increase maximum of EKF2_MAG_YAWLIM. This is needed on some fw platforms
 in order to not constantly switch mag fusion mode in gusty winds.
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features. EKF2_MAG_YAWLIM increase from 0.5 to 1 in order to deal with gusty winds.
 
 ## Commit #604
 ### Hash
@@ -10046,11 +10047,11 @@ logger: add mission file to LogWriterFile backend
 Not used yet, it should not affect anything, except for slight RAM
 increase.
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features. Log type set to FULL.
 
 ## Commit #605
 ### Hash
@@ -10064,11 +10065,11 @@ logger: add mission log to frontend, configurable via SDLOG_MISSION
 - Does not increase RAM usage if disabled (if enabled, only 300 bytes)
 - Log rotate does not apply to the mission logs
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features. Mission log added to frontend.
 
 ## Commit #606
 ### Hash
@@ -10080,11 +10081,11 @@ mc_att_control: separate attitude controller from rate controller update
 This will allow to run the rate controller faster than the attitude
 controller.
 ### Antipattern Category
-
+X
 ### Keyword
 faster
 ### Note
-
+This commit does not change any performance-related features related to this study.
 
 ## Commit #607
 ### Hash
@@ -10108,11 +10109,11 @@ The drawback is that the attitude to rate setpoint generation is delayed
 by one cycle (4ms), but it will be reduced to 1ms as soon as we run at
 1kHz.
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Priority (SCHED_PRIORITY_ACTUATOR_OUTPUTS param) changed from (SCHED_PRIORITY_MAX - 4) to (SCHED_PRIORITY_MAX - 3).
 
 ## Commit #608
 ### Hash
@@ -10132,11 +10133,11 @@ This change has two effects:
    was still 0 and therefore it was assumed to be "no change" and the
    ack was omitted.
 ### Antipattern Category
-
+New:rounded_numbers
 ### Keyword
 memory
 ### Note
-
+int32 params were not acknowledged as they were casted to float and then compared.
 
 ## Commit #609
 ### Hash
@@ -10152,11 +10153,11 @@ The size of UpdateIntervalData does not increase (on 32 bit).
 
 Reduces RAM usage by 3.6KB (tested on a Pixracer).
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features related to this study. A variable was removed in order to save some memory.
 
 ## Commit #610
 ### Hash
@@ -10168,11 +10169,11 @@ MPC_MAN_TILT_MAX: increase max limit from 90 to 180 degrees
 This is especially useful for testing (the vehicle must behave correctly
 even at high tilt angles).
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Tilt angle (MPC_MAN_TILT_MAX param) increased from 90 to 180 degrees.
 
 ## Commit #611
 ### Hash
@@ -10181,11 +10182,11 @@ increase
 ### Message
 MPC - Increase max velocity integral gain to 3.0
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Max velocity integral (MPC_XY_VEL_I param) increased from 0.1 to 3.
 
 ## Commit #612
 ### Hash
@@ -10207,11 +10208,11 @@ increase
 ### Message
 hysteresis test increase time on cygwin (#10958)
 ### Antipattern Category
-
+General:Hard-coding
 ### Keyword
 increase
 ### Note
-
+AV_X_V1 added to the list of hardware components which have an increased logger buffer of 64.
 
 ## Commit #614
 ### Hash
@@ -10236,11 +10237,11 @@ It could however be a bit more integrated.
 
 Reference: https://github.com/Auterion/Flight_Control_Prototyping_Scripts/tree/master/control_allocation
 ### Antipattern Category
-
+X
 ### Keyword
 faster
 ### Note
-
+This commit does not change any performance-related features related. Unit tests added.
 
 ## Commit #615
 ### Hash
@@ -10249,11 +10250,11 @@ faster
 ### Message
 Update Nuttx with env out of memory fix
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features related. Extra if condition added.
 
 ## Commit #616
 ### Hash
@@ -10266,11 +10267,11 @@ pmw3901 increase publish rate and max_ground_distance (#11066)
 
 * set work queue to high priority
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Data publish rate changed from 45000 to 15000, max_ground_distance increased from 5 to 30..
 
 ## Commit #617
 ### Hash
@@ -10282,11 +10283,11 @@ lockstep_scheduler: simplify LockstepScheduler::cond_timedwait & reduce locking
 - the loop is not needed
 - we optimize for the fast case and lock only if really needed
 ### Antipattern Category
-
+X
 ### Keyword
 fast
 ### Note
-
+This commit does not change any performance-related features. Code simplified.
 
 ## Commit #618
 ### Hash
@@ -10298,11 +10299,11 @@ drv_hrt posix: improve performance for hrt_absolute_time()
 Previously hrt_absolute_time() was at around 5% of the total CPU usage, now
 it's around 0.35%.
 ### Antipattern Category
-
+X
 ### Keyword
 performance
 ### Note
-
+Not sure if the change can be classified as any anti-pattern of interest.
 
 ## Commit #619
 ### Hash
@@ -10311,11 +10312,11 @@ performance
 ### Message
 GPS increase task stack 1530 -> 1600 bytes
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+GPS task stack size increased from 1530 to 1600.
 
 ## Commit #620
 ### Hash
@@ -10325,11 +10326,11 @@ increase
 HRT: Create new separate call for atomic HRT elapsed time calculation
 This call rarely needs to be truly atomic and the involved CPU overhead in making it atomic was unnecessary and introduces a lot of IRQ jitter with no value-add. The call has been moved to be non-atomic and the codebase will be inspected and changed in follow-up commits for the few instances where it is truly needed.
 ### Antipattern Category
-
+Smith:General:Unnecessary_Processing
 ### Keyword
 overhead
 ### Note
-
+New function added, elpased time atomic. Call for hrt elapsed time rarely needs to be atomic and it introduces IRQ jitter.
 
 ## Commit #621
 ### Hash
@@ -10340,11 +10341,11 @@ HRT: Drop volatile specifier from function call for non-atomic mode
 
 This allows the compiler to optimize better without loosing any performance / accuracy.
 ### Antipattern Category
-
+X
 ### Keyword
 performance
 ### Note
-
+This commit does not change any performance-related features of interest. Variable is no longer volatile, this problem is restricted to C++ language only.
 
 ## Commit #622
 ### Hash
@@ -10371,11 +10372,11 @@ common:board_crashdump must end in reset!
 
   So all boards need to do a reset at the end of board_crashdump
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features related to this study. Boards weren't resetted after crashdump.
 
 ## Commit #623
 ### Hash
@@ -10387,11 +10388,11 @@ px4_nuttx_tasks:Support future removal of env.
    CONFIG_DISABLE_ENVIRON can prevent task having to allocate
    memory for the env.
 ### Antipattern Category
-
+X
 ### Keyword
 memory
 ### Note
-
+This commit does not change any performance-related features. Don't call clearenv() if ENV variables are enabled.
 
 ## Commit #624
 ### Hash
@@ -10402,11 +10403,11 @@ mavlink increase STACK_MAIN and STACK_MAX
 
  - needed if NuttX networking enabled
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+STACK_MAIN increased from 1200 to 1600 and STACK_MAX increased from 1500 to 1600.
 
 ## Commit #625
 ### Hash
@@ -10419,11 +10420,11 @@ px4_fmu-v4: add runtime external SPI4 detection to support pmw3901 (#11301)
 
  * board_common: Add Notion of Board has bus manifest
 ### Antipattern Category
-
+X
 ### Keyword
 runtime
 ### Note
-
+This commit does not change any performance-related features. Runtime external SPI4 detection to support pmw3901 added.
 
 ## Commit #626
 ### Hash
@@ -10432,11 +10433,11 @@ runtime
 ### Message
 px4_fmu-v4_stackcheck sync with default and increase pmw3901 main stack
 ### Antipattern Category
-
+New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-
+Pmw3901 main stack increased from General:Hard-coding to 1200. New drivers added.
 
 ## Commit #627
 ### Hash
@@ -10471,11 +10472,11 @@ bf1f3a2 2018-12-21 Paul Riseborough - EKF: Derive equations enabling yaw varianc
 81eabc1 2019-01-29 Daniel Agar - Jenkins update all containers to latest tag 2019-01-28
 a5e6191 2019-01-29 Daniel Agar - EKF add clarity brackets to avoid potential confusion
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features.
 
 ## Commit #628
 ### Hash
@@ -10484,11 +10485,11 @@ increase
 ### Message
 Jenkins hardware increase test timeout and update container version
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
-
+This commit does not change any performance-related features related. Timeout for tests increased from 300 t0 600.
 
 ## Commit #629
 ### Hash
@@ -10501,11 +10502,11 @@ Jenkins hardware test remove px4_fmu-v4 stackcheck
 
 - will be recreated with fmu-v5
 ### Antipattern Category
-
+X
 ### Keyword
 slow
 ### Note
-
+This commit does not change any performance-related features related. Stack check removed.
 
 ## Commit #630
 ### Hash
