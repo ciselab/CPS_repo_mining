@@ -9832,7 +9832,7 @@ New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-Stack size (CONFIG_IDLETHREAD_STACKSIZE param) increased from 500 to 750.
+Stack size (CONFIG_IDLETHREAD_STACKSIZE param) increased from: 500 to 750, 1000 to 750 and 600 to 750.
 
 ## Commit #590
 ### Hash
@@ -9871,7 +9871,7 @@ New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-Main stack (sensors package) size increased from 1400 to 1500.
+Main stack (sensors package) size increased from 1300 to 1500.
 
 ## Commit #593
 ### Hash
@@ -9949,7 +9949,7 @@ New:Hard-coded-fine-tuning
 ### Keyword
 increase
 ### Note
-Stack size for px4fmu-v5 (CONFIG_USERMAIN_STACKSIZE param) increased from 2564 to 2700.
+Stack size for px4fmu-v5 (CONFIG_USERMAIN_STACKSIZE param) increased from 2564 to 2700 and one instance from 2500 to 2700.
 
 ## Commit #599
 ### Hash
