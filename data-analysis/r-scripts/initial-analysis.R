@@ -1,3 +1,5 @@
+setwd("C:/Users/Imara/PycharmProjects/CPS_repo_mining/data-analysis/r-scripts")
+
 # Install dataclean, functions needed to capture the raw data frames.
 source('dataclean.r')
 # Using these libraries.
@@ -38,6 +40,10 @@ raw_df$antipattern <- ifelse(raw_df$antipattern == "-","X",as.character(raw_df$a
 
 # FI where was I antipattern
 raw_df$antipattern <- ifelse(raw_df$antipattern == "Smith:Where_am_I_?","Smith:Where_Was_I",as.character(raw_df$antipattern))
+raw_df$antipattern <- ifelse(raw_df$antipattern == "Known:Where_was_I","Smith:Where_Was_I",as.character(raw_df$antipattern))
+
+# Fix Fixed Communication Rate
+raw_df$antipattern <- ifelse(raw_df$antipattern == "Fixed_Communication_Rate","New:Fixed_Communication_Rate",as.character(raw_df$antipattern))
 
 # general performance antipatterns
 # categorizing  antipatterns starting with General:performance in this category
@@ -253,4 +259,87 @@ ggplot(data = keywords_df, mapping = aes(x = keyword, y = as.numeric(count), fil
              show.legend = FALSE)
   
 
+#####
+
+# ggplot(cps_antipatterns_df, aes(x=reorder(antipattern, -count), y=as.numeric(count), fill = performance_cat)) + 
+#   geom_bar(stat = "identity") + 
+#   theme(axis.text.x = element_text(angle=50, vjust=1, hjust=1,face = "bold", size=16)) +
+#   geom_label(aes(label = count),
+#              position = position_stack(vjust = 0.5),
+#              fill ="white",
+#              size = 9,
+#              show.legend = FALSE)+
+#   scale_fill_manual(values=c("#ffeda0","#fc8d59","#d7301f")) +
+#   guides(fill=guide_legend(title="Performance Issues Categories")) +
+#   theme(legend.title = element_text( size=17, face="bold"),
+#         legend.text = element_text( size = 17, face = "bold"),
+#         legend.position = "top")+
+#   xlab("Identified Performance issues and antipatterns") +
+#   ylab("Frequency") +
+#   theme(axis.title=element_text(size=25,face="bold"))
   
+
+  
+keyword_list <- c('performance','memory','runtime','slow','slower','slowing','fast','faster','increase','decrease','memory-heap','memory-leak','bottleneck','overhead','deadlock','livelock','infinite','impasse','hang')
+message_content <- raw_df$message
+#keywords_df <- data.frame(message_content, keyword_list, stringsAsFactors=FALSE)
+#raw_df$exists_in_message <- mapply(grepl, pattern=keywords_df$keyword_list, x=keywords_df$message_content)
+#grep("performance", message_content, value = TRUE)
+
+print('performance')
+deadlock_results <- str_detect(message_content, 'performance')
+length(deadlock_results[deadlock_results==TRUE])
+print('memory')
+deadlock_results <- str_detect(message_content, 'memory')
+length(deadlock_results[deadlock_results==TRUE])
+print('runtime')
+deadlock_results <- str_detect(message_content, 'runtime')
+length(deadlock_results[deadlock_results==TRUE])
+print('slow')
+deadlock_results <- str_detect(message_content, 'slow')
+length(deadlock_results[deadlock_results==TRUE])  
+print('slower')
+deadlock_results <- str_detect(message_content, 'slower')
+length(deadlock_results[deadlock_results==TRUE])
+print('slowing')
+deadlock_results <- str_detect(message_content, 'slowing')
+length(deadlock_results[deadlock_results==TRUE])
+print('fast')
+deadlock_results <- str_detect(message_content, 'fast')
+length(deadlock_results[deadlock_results==TRUE])
+print('faster')
+deadlock_results <- str_detect(message_content, 'faster')
+length(deadlock_results[deadlock_results==TRUE])
+print('increase')
+deadlock_results <- str_detect(message_content, 'increase')
+length(deadlock_results[deadlock_results==TRUE])
+print('decrease')
+deadlock_results <- str_detect(message_content, 'decrease')
+length(deadlock_results[deadlock_results==TRUE])
+print('memory-heap')
+deadlock_results <- str_detect(message_content, 'memory-heap')
+length(deadlock_results[deadlock_results==TRUE])
+print('memory-leak')
+deadlock_results <- str_detect(message_content, 'memory-leak')
+length(deadlock_results[deadlock_results==TRUE])
+print('bottleneck')
+deadlock_results <- str_detect(message_content, 'bottleneck')
+length(deadlock_results[deadlock_results==TRUE])
+print('overhead')
+deadlock_results <- str_detect(message_content, 'overhead')
+length(deadlock_results[deadlock_results==TRUE])
+print('deadlock')
+deadlock_results <- str_detect(message_content, 'deadlock')
+length(deadlock_results[deadlock_results==TRUE])
+print('livelock')
+deadlock_results <- str_detect(message_content, 'livelock')
+length(deadlock_results[deadlock_results==TRUE])
+print('infinite')
+deadlock_results <- str_detect(message_content, 'infinite')
+length(deadlock_results[deadlock_results==TRUE])
+print('impasse')
+deadlock_results <- str_detect(message_content, 'impasse')
+length(deadlock_results[deadlock_results==TRUE])
+print('hang')
+deadlock_results <- str_detect(message_content, 'hang')
+length(deadlock_results[deadlock_results==TRUE])

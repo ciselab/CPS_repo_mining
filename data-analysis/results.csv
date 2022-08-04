@@ -4292,7 +4292,8 @@ is not sleeping anyway.",Smith:General:Unnecessary_Processing,runtime
 "," #352
 ",[bad107a374d297b1c76f23cd6b99c4a8ac2fcb19](https://github.com/PX4/PX4-Autopilot/commit/bad107a374d297b1c76f23cd6b99c4a8ac2fcb19),"navio_sysfs_pwm_out: avoid dynamic memory allocation & fix a memory leak
 
-memory leak was in send_outputs_pwm()","General:Hard-coding, General:C:not_deallocating",memory
+memory leak was in send_outputs_pwm()","General:Hard-coding
+General:C:not_deallocating",memory
 "PX4-Autopilot
 "," #353
 ",[605cffc230c944a215ba70fc0252cff44135ab29](https://github.com/PX4/PX4-Autopilot/commit/605cffc230c944a215ba70fc0252cff44135ab29),Fix sensor rail reset on Pixracer. Increase the reset duration to 50 ms to ensure the sensor power has bled off.,New:Hard-coded-fine-tuning,increase
@@ -6010,13 +6011,13 @@ New:Hard-coded-timing",increase
 _subscriptions is a vector that is resized when needed. However there could
 still be references to elements in the vector when the resize happens.
 These references then become invalid.
-Using a vector of pointers fixes that.",,memory
+Using a vector of pointers fixes that.",X,memory
 "PX4-Autopilot
 "," #582
-",[9551dcb49714c6783b449774f81af4287ade05d5](https://github.com/PX4/PX4-Autopilot/commit/9551dcb49714c6783b449774f81af4287ade05d5),logger increase log_writer_file stack 1072 -> 1150,,increase
+",[9551dcb49714c6783b449774f81af4287ade05d5](https://github.com/PX4/PX4-Autopilot/commit/9551dcb49714c6783b449774f81af4287ade05d5),logger increase log_writer_file stack 1072 -> 1150,New:Hard-coded-fine-tuning,increase
 "PX4-Autopilot
 "," #583
-",[f414d0c41377e7846a7e5b7d23e9266f3f27e08d](https://github.com/PX4/PX4-Autopilot/commit/f414d0c41377e7846a7e5b7d23e9266f3f27e08d),SYS_COMPANION: add 1500000 baud to metadata & increase the data rate,,increase
+",[f414d0c41377e7846a7e5b7d23e9266f3f27e08d](https://github.com/PX4/PX4-Autopilot/commit/f414d0c41377e7846a7e5b7d23e9266f3f27e08d),SYS_COMPANION: add 1500000 baud to metadata & increase the data rate,"New:Hard-coded-fine-tuning, New:Hard-coded-timing",increase
 "PX4-Autopilot
 "," #584
 ",[30fb82d9b4157b74c741ec7e1e16d7408e5dfa3f](https://github.com/PX4/PX4-Autopilot/commit/30fb82d9b4157b74c741ec7e1e16d7408e5dfa3f),"fmu-v5 defconfig: increase USART3 from 1500 to 3000
@@ -6025,7 +6026,7 @@ This is needed for companions with high baudrate and high data rate.
 Tested with 1500000 Baudrate and mavlink TX rate of ~120KB/s: no drops.
 
 I did not test the exact limit, something like 2500 might be enough. But
-we (still) have enough free RAM on FMU-v5.",,increase
+we (still) have enough free RAM on FMU-v5.",New:Hard-coded-fine-tuning,increase
 "PX4-Autopilot
 "," #585
 ",[e356fd89b01d5c120f090e114c0048c620daa491](https://github.com/PX4/PX4-Autopilot/commit/e356fd89b01d5c120f090e114c0048c620daa491),"CI mission tests add FW and cleanup (#10250)
@@ -6034,60 +6035,60 @@ we (still) have enough free RAM on FMU-v5.",,increase
 
 * startup: decrease min airspeed scaling factor for landing
 
-* jenkins: FW mission include loiter_to_alt cmd",,decrease
+* jenkins: FW mission include loiter_to_alt cmd",X,decrease
 "PX4-Autopilot
 "," #586
-",[a24fdb93c38cdedc91041bdc81238815b9d4b023](https://github.com/PX4/PX4-Autopilot/commit/a24fdb93c38cdedc91041bdc81238815b9d4b023),FlightTaskManual: increase rc timeout to 1.5 x COM_RC_LOSS_T,,increase
+",[a24fdb93c38cdedc91041bdc81238815b9d4b023](https://github.com/PX4/PX4-Autopilot/commit/a24fdb93c38cdedc91041bdc81238815b9d4b023),FlightTaskManual: increase rc timeout to 1.5 x COM_RC_LOSS_T,"New:Hard-coded-timing, General:Hard-coding",increase
 "PX4-Autopilot
 "," #587
 ",[4f2aa517679bf442adf2b506b2ae7784cabf0a6e](https://github.com/PX4/PX4-Autopilot/commit/4f2aa517679bf442adf2b506b2ae7784cabf0a6e),"px4_impl_os:Use the defconfig CONFIG_ARMV7M_STACKCHECK
 
   To enable coherent runtime stack checking use the boards
-  CONFIG_ARMV7M_STACKCHECK setting",,runtime
+  CONFIG_ARMV7M_STACKCHECK setting",X,runtime
 "PX4-Autopilot
 "," #588
 ",[1b6e933176cf0e011f9f8a720b9007654997e082](https://github.com/PX4/PX4-Autopilot/commit/1b6e933176cf0e011f9f8a720b9007654997e082),"Make.defs.in:Runtime Stack Checking in Nuttx Build
 
   Use CONFIG_ARMV7M_STACKCHECK to add the instrumentation
-  for runtime stack checking",,runtime
+  for runtime stack checking",X,runtime
 "PX4-Autopilot
 "," #589
-",[ac298664c7f451f13f938b900e6a463fd39b58ef](https://github.com/PX4/PX4-Autopilot/commit/ac298664c7f451f13f938b900e6a463fd39b58ef),nuttx-configs increase idle thread stack size to 750 bytes,,increase
+",[ac298664c7f451f13f938b900e6a463fd39b58ef](https://github.com/PX4/PX4-Autopilot/commit/ac298664c7f451f13f938b900e6a463fd39b58ef),nuttx-configs increase idle thread stack size to 750 bytes,New:Hard-coded-fine-tuning,increase
 "PX4-Autopilot
 "," #590
-",[b75fa645cef4c3cafb0a44a0c253423cad5c8231](https://github.com/PX4/PX4-Autopilot/commit/b75fa645cef4c3cafb0a44a0c253423cad5c8231),bmp280 increase MAIN stack,,increase
+",[b75fa645cef4c3cafb0a44a0c253423cad5c8231](https://github.com/PX4/PX4-Autopilot/commit/b75fa645cef4c3cafb0a44a0c253423cad5c8231),bmp280 increase MAIN stack,General:Hard-coding,increase
 "PX4-Autopilot
 "," #591
-",[2dd71fa73c76977f3a68ebd98cd82000f9d32d4c](https://github.com/PX4/PX4-Autopilot/commit/2dd71fa73c76977f3a68ebd98cd82000f9d32d4c),mpu6000 increase MAIN stack,,increase
+",[2dd71fa73c76977f3a68ebd98cd82000f9d32d4c](https://github.com/PX4/PX4-Autopilot/commit/2dd71fa73c76977f3a68ebd98cd82000f9d32d4c),mpu6000 increase MAIN stack,New:Hard-coded-fine-tuning,increase
 "PX4-Autopilot
 "," #592
-",[1a0472dfab6d3d62e38f3aeeca6962084e8e1d8a](https://github.com/PX4/PX4-Autopilot/commit/1a0472dfab6d3d62e38f3aeeca6962084e8e1d8a),sensors increase MAIN stack,,increase
+",[1a0472dfab6d3d62e38f3aeeca6962084e8e1d8a](https://github.com/PX4/PX4-Autopilot/commit/1a0472dfab6d3d62e38f3aeeca6962084e8e1d8a),sensors increase MAIN stack,New:Hard-coded-fine-tuning,increase
 "PX4-Autopilot
 "," #593
-",[ea73284a1fce0a43ac757200da2530743f6f2a95](https://github.com/PX4/PX4-Autopilot/commit/ea73284a1fce0a43ac757200da2530743f6f2a95),uORB tests increase stack sizes,,increase
+",[ea73284a1fce0a43ac757200da2530743f6f2a95](https://github.com/PX4/PX4-Autopilot/commit/ea73284a1fce0a43ac757200da2530743f6f2a95),uORB tests increase stack sizes,X,increase
 "PX4-Autopilot
 "," #594
-",[6abd0c2672db415b5f62dc36942e58f84a08ae7e](https://github.com/PX4/PX4-Autopilot/commit/6abd0c2672db415b5f62dc36942e58f84a08ae7e),BMI055 increase MAIN stack,,increase
+",[6abd0c2672db415b5f62dc36942e58f84a08ae7e](https://github.com/PX4/PX4-Autopilot/commit/6abd0c2672db415b5f62dc36942e58f84a08ae7e),BMI055 increase MAIN stack,New:Hard-coded-fine-tuning,increase
 "PX4-Autopilot
 "," #595
-",[ee90eb6c92b03c27f6a123f5c36d2df9b9bedc7e](https://github.com/PX4/PX4-Autopilot/commit/ee90eb6c92b03c27f6a123f5c36d2df9b9bedc7e),IST8310 increase MAIN stack,,increase
+",[ee90eb6c92b03c27f6a123f5c36d2df9b9bedc7e](https://github.com/PX4/PX4-Autopilot/commit/ee90eb6c92b03c27f6a123f5c36d2df9b9bedc7e),IST8310 increase MAIN stack,New:Hard-coded-fine-tuning,increase
 "PX4-Autopilot
 "," #596
-",[2dbc95382edf08eb125e775b6fc69dc545e019c0](https://github.com/PX4/PX4-Autopilot/commit/2dbc95382edf08eb125e775b6fc69dc545e019c0),rgbled increase MAIN stack,,increase
+",[2dbc95382edf08eb125e775b6fc69dc545e019c0](https://github.com/PX4/PX4-Autopilot/commit/2dbc95382edf08eb125e775b6fc69dc545e019c0),rgbled increase MAIN stack,General:Hard-coding,increase
 "PX4-Autopilot
 "," #597
-",[d6fd1c48115c8849d593216e65de4983a40ebda3](https://github.com/PX4/PX4-Autopilot/commit/d6fd1c48115c8849d593216e65de4983a40ebda3),rgbled_pwm increase MAIN stack,,increase
+",[d6fd1c48115c8849d593216e65de4983a40ebda3](https://github.com/PX4/PX4-Autopilot/commit/d6fd1c48115c8849d593216e65de4983a40ebda3),rgbled_pwm increase MAIN stack,General:Hard-coding,increase
 "PX4-Autopilot
 "," #598
-",[d7580aa676b502b755281a0c7a7e5780b1df9066](https://github.com/PX4/PX4-Autopilot/commit/d7580aa676b502b755281a0c7a7e5780b1df9066),px4fmu-v5 increase CONFIG_USERMAIN_STACKSIZE slightly,,increase
+",[d7580aa676b502b755281a0c7a7e5780b1df9066](https://github.com/PX4/PX4-Autopilot/commit/d7580aa676b502b755281a0c7a7e5780b1df9066),px4fmu-v5 increase CONFIG_USERMAIN_STACKSIZE slightly,New:Hard-coded-fine-tuning,increase
 "PX4-Autopilot
 "," #599
-",[3996ab1fc551140dc91b7d92500662ca98d00e0b](https://github.com/PX4/PX4-Autopilot/commit/3996ab1fc551140dc91b7d92500662ca98d00e0b),frsky_telemetry increase MAIN stack,,increase
+",[3996ab1fc551140dc91b7d92500662ca98d00e0b](https://github.com/PX4/PX4-Autopilot/commit/3996ab1fc551140dc91b7d92500662ca98d00e0b),frsky_telemetry increase MAIN stack,New:Hard-coded-fine-tuning,increase
 "PX4-Autopilot
 "," #600
 ",[066ca50ddff7d0552437ad9909b4ae04e5b0a5d9](https://github.com/PX4/PX4-Autopilot/commit/066ca50ddff7d0552437ad9909b4ae04e5b0a5d9),"mission test temporarily increase landed timeout 60s -> 120s (#10596)
 
- - revert once #10590 is resolved properly",,increase
+ - revert once #10590 is resolved properly",X,increase
 "PX4-Autopilot
 "," #601
 ",[72f85e4b2d9addf893aeee24e778855ed7054d65](https://github.com/PX4/PX4-Autopilot/commit/72f85e4b2d9addf893aeee24e778855ed7054d65),"ekf2: Handle blending of dissimilar rate GPS data (#10570)
@@ -6098,7 +6099,7 @@ If dissimilar interval data is detected, blending occurs when data is received f
 
 If similar interval data is detected, blending occurs when receiver data with similar time stamps is available.
 
-If no data is received from either receiver for longer than 300msec, then no blending will be performed and the most recent data will be used instead.",,slower
+If no data is received from either receiver for longer than 300msec, then no blending will be performed and the most recent data will be used instead.",New:unstable_and_slow_noise_handling,slower
 "PX4-Autopilot
 "," #602
 ",[b83cb795960c7ad752586f74b60cac7231bb7d39](https://github.com/PX4/PX4-Autopilot/commit/b83cb795960c7ad752586f74b60cac7231bb7d39),"Update submodule DriverFramework to latest Sun Sep 30 08:37:23 EDT 2018 (#10604)
@@ -6111,17 +6112,17 @@ If no data is received from either receiver for longer than 300msec, then no ble
 
 
 
-    9f456ac 2018-09-30 Bart Slinger - Increase DriverFramework priority to SCHED_PRIORITY_MAX",,increase
+    9f456ac 2018-09-30 Bart Slinger - Increase DriverFramework priority to SCHED_PRIORITY_MAX",General:Hard-coding,increase
 "PX4-Autopilot
 "," #603
 ",[6647471238280fae789927f451e15258a286159a](https://github.com/PX4/PX4-Autopilot/commit/6647471238280fae789927f451e15258a286159a),"ekf2: increase maximum of EKF2_MAG_YAWLIM. This is needed on some fw platforms
-in order to not constantly switch mag fusion mode in gusty winds.",,increase
+in order to not constantly switch mag fusion mode in gusty winds.",X,increase
 "PX4-Autopilot
 "," #604
 ",[d6e820fe671922813d17ac190a6bd2232ea61c6f](https://github.com/PX4/PX4-Autopilot/commit/d6e820fe671922813d17ac190a6bd2232ea61c6f),"logger: add mission file to LogWriterFile backend
 
 Not used yet, it should not affect anything, except for slight RAM
-increase.",,increase
+increase.",X,increase
 "PX4-Autopilot
 "," #605
 ",[234ec7f2a21d408251784b8653bd42f2803db530](https://github.com/PX4/PX4-Autopilot/commit/234ec7f2a21d408251784b8653bd42f2803db530),"logger: add mission log to frontend, configurable via SDLOG_MISSION
@@ -6129,13 +6130,13 @@ increase.",,increase
 - mission logs are stored in a separate directory mission_log
 - It's disabled by default
 - Does not increase RAM usage if disabled (if enabled, only 300 bytes)
-- Log rotate does not apply to the mission logs",,increase
+- Log rotate does not apply to the mission logs",X,increase
 "PX4-Autopilot
 "," #606
 ",[95cc6a06f310061c3261bfb422f97a14187166ad](https://github.com/PX4/PX4-Autopilot/commit/95cc6a06f310061c3261bfb422f97a14187166ad),"mc_att_control: separate attitude controller from rate controller update
 
 This will allow to run the rate controller faster than the attitude
-controller.",,faster
+controller.",X,faster
 "PX4-Autopilot
 "," #607
 ",[bec43b0b28e6817fb23e0ef323ed929ce65360ed](https://github.com/PX4/PX4-Autopilot/commit/bec43b0b28e6817fb23e0ef323ed929ce65360ed),"mc_att_control: run rate controller first and increase fmu prio by one
@@ -6153,7 +6154,7 @@ CPU load is unchanged.
 
 The drawback is that the attitude to rate setpoint generation is delayed
 by one cycle (4ms), but it will be reduced to 1ms as soon as we run at
-1kHz.",,increase
+1kHz.",New:Hard-coded-fine-tuning,increase
 "PX4-Autopilot
 "," #608
 ",[428c2f72bded828499e4113d4392be258d114e2f](https://github.com/PX4/PX4-Autopilot/commit/428c2f72bded828499e4113d4392be258d114e2f),"mavlink: always acknowledge a param write
@@ -6167,7 +6168,7 @@ This change has two effects:
    and then compared. In the case of a int32 parameter set from 0 to 1
    it would mean that the cast to float of the memory representation
    was still 0 and therefore it was assumed to be ""no change"" and the
-   ack was omitted.",,memory
+   ack was omitted.",New:rounded_numbers,memory
 "PX4-Autopilot
 "," #609
 ",[e91db7b4d2694cd7a1c11b07e979fbbbb5561e99](https://github.com/PX4/PX4-Autopilot/commit/e91db7b4d2694cd7a1c11b07e979fbbbb5561e99),"uORBDeviceNode: move flags from SubscriberData to UpdateIntervalData
@@ -6177,22 +6178,22 @@ update_interval is not null, we can move the bit to UpdateIntervalData.
 
 The size of UpdateIntervalData does not increase (on 32 bit).
 
-Reduces RAM usage by 3.6KB (tested on a Pixracer).",,increase
+Reduces RAM usage by 3.6KB (tested on a Pixracer).",X,increase
 "PX4-Autopilot
 "," #610
 ",[c9e52d43862b6854d4396b2190cb4b9f1b957c0b](https://github.com/PX4/PX4-Autopilot/commit/c9e52d43862b6854d4396b2190cb4b9f1b957c0b),"MPC_MAN_TILT_MAX: increase max limit from 90 to 180 degrees
 
 This is especially useful for testing (the vehicle must behave correctly
-even at high tilt angles).",,increase
+even at high tilt angles).",New:Hard-coded-fine-tuning,increase
 "PX4-Autopilot
 "," #611
-",[d852ce20e6504abc02e6aba38b9755540f5de101](https://github.com/PX4/PX4-Autopilot/commit/d852ce20e6504abc02e6aba38b9755540f5de101),MPC - Increase max velocity integral gain to 3.0,,increase
+",[d852ce20e6504abc02e6aba38b9755540f5de101](https://github.com/PX4/PX4-Autopilot/commit/d852ce20e6504abc02e6aba38b9755540f5de101),MPC - Increase max velocity integral gain to 3.0,New:Hard-coded-fine-tuning,increase
 "PX4-Autopilot
 "," #612
 ",[8566b6b53e95ad8f4b16acb9e48308ecf7ef5040](https://github.com/PX4/PX4-Autopilot/commit/8566b6b53e95ad8f4b16acb9e48308ecf7ef5040),AV-X increase logger buffer,,increase
 "PX4-Autopilot
 "," #613
-",[93802c27102dc4c06c2128c5939605676ad09750](https://github.com/PX4/PX4-Autopilot/commit/93802c27102dc4c06c2128c5939605676ad09750),hysteresis test increase time on cygwin (#10958),,increase
+",[93802c27102dc4c06c2128c5939605676ad09750](https://github.com/PX4/PX4-Autopilot/commit/93802c27102dc4c06c2128c5939605676ad09750),hysteresis test increase time on cygwin (#10958),General:Hard-coding,increase
 "PX4-Autopilot
 "," #614
 ",[cf6665625847e2ec237e78ce971b4ddd8098fa03](https://github.com/PX4/PX4-Autopilot/commit/cf6665625847e2ec237e78ce971b4ddd8098fa03),"mixer multirotor: add unit-tests
@@ -6211,41 +6212,41 @@ It is not integrated into the existing build system, because it's easier
 to use that way, with less dependencies, and faster testing workflow.
 It could however be a bit more integrated.
 
-Reference: https://github.com/Auterion/Flight_Control_Prototyping_Scripts/tree/master/control_allocation",,faster
+Reference: https://github.com/Auterion/Flight_Control_Prototyping_Scripts/tree/master/control_allocation",X,faster
 "PX4-Autopilot
 "," #615
-",[d676325ea50288b8d106a2ccc83f5783d9dfb445](https://github.com/PX4/PX4-Autopilot/commit/d676325ea50288b8d106a2ccc83f5783d9dfb445),Update Nuttx with env out of memory fix,,memory
+",[d676325ea50288b8d106a2ccc83f5783d9dfb445](https://github.com/PX4/PX4-Autopilot/commit/d676325ea50288b8d106a2ccc83f5783d9dfb445),Update Nuttx with env out of memory fix,X,memory
 "PX4-Autopilot
 "," #616
 ",[3b3752b753c09a587646505dd89f1d6b2de888f6](https://github.com/PX4/PX4-Autopilot/commit/3b3752b753c09a587646505dd89f1d6b2de888f6),"pmw3901 increase publish rate and max_ground_distance (#11066)
 
 * increase pmw3901 publish rate and max_ground_distance
 
-* set work queue to high priority",,increase
+* set work queue to high priority",New:Hard-coded-fine-tuning,increase
 "PX4-Autopilot
 "," #617
 ",[8cdb65eed90371029bad943a6d1dd912eb5d46ec](https://github.com/PX4/PX4-Autopilot/commit/8cdb65eed90371029bad943a6d1dd912eb5d46ec),"lockstep_scheduler: simplify LockstepScheduler::cond_timedwait & reduce locking
 
 - the loop is not needed
-- we optimize for the fast case and lock only if really needed",,fast
+- we optimize for the fast case and lock only if really needed",X,fast
 "PX4-Autopilot
 "," #618
 ",[ecbe2a3e0bf422dc6a4504762bc57757cd602869](https://github.com/PX4/PX4-Autopilot/commit/ecbe2a3e0bf422dc6a4504762bc57757cd602869),"drv_hrt posix: improve performance for hrt_absolute_time()
 
 Previously hrt_absolute_time() was at around 5% of the total CPU usage, now
-it's around 0.35%.",,performance
+it's around 0.35%.",X,performance
 "PX4-Autopilot
 "," #619
-",[95eff332632f59ad3584a25169ce92691f7b0222](https://github.com/PX4/PX4-Autopilot/commit/95eff332632f59ad3584a25169ce92691f7b0222),GPS increase task stack 1530 -> 1600 bytes,,increase
+",[95eff332632f59ad3584a25169ce92691f7b0222](https://github.com/PX4/PX4-Autopilot/commit/95eff332632f59ad3584a25169ce92691f7b0222),GPS increase task stack 1530 -> 1600 bytes,New:Hard-coded-fine-tuning,increase
 "PX4-Autopilot
 "," #620
 ",[b7bcec2d8c06ce8f1797a24d21229bc4b0dc1d28](https://github.com/PX4/PX4-Autopilot/commit/b7bcec2d8c06ce8f1797a24d21229bc4b0dc1d28),"HRT: Create new separate call for atomic HRT elapsed time calculation
-This call rarely needs to be truly atomic and the involved CPU overhead in making it atomic was unnecessary and introduces a lot of IRQ jitter with no value-add. The call has been moved to be non-atomic and the codebase will be inspected and changed in follow-up commits for the few instances where it is truly needed.",,overhead
+This call rarely needs to be truly atomic and the involved CPU overhead in making it atomic was unnecessary and introduces a lot of IRQ jitter with no value-add. The call has been moved to be non-atomic and the codebase will be inspected and changed in follow-up commits for the few instances where it is truly needed.",Smith:General:Unnecessary_Processing,overhead
 "PX4-Autopilot
 "," #621
 ",[46390a150833be226a7ab298aa414b748580cea9](https://github.com/PX4/PX4-Autopilot/commit/46390a150833be226a7ab298aa414b748580cea9),"HRT: Drop volatile specifier from function call for non-atomic mode
 
-This allows the compiler to optimize better without loosing any performance / accuracy.",,performance
+This allows the compiler to optimize better without loosing any performance / accuracy.",X,performance
 "PX4-Autopilot
 "," #622
 ",[88d0b163b52803a38e9c316f1ccaf43b4ffd3818](https://github.com/PX4/PX4-Autopilot/commit/88d0b163b52803a38e9c316f1ccaf43b4ffd3818),"common:board_crashdump must end in reset!
@@ -6266,28 +6267,28 @@ This allows the compiler to optimize better without loosing any performance / ac
   it will corrupt that memeory.  We can therfore can not allow
   return to the OS, as it could depend on that area of RAM.
 
-  So all boards need to do a reset at the end of board_crashdump",,memory
+  So all boards need to do a reset at the end of board_crashdump",X,memory
 "PX4-Autopilot
 "," #623
 ",[e7bf0e03d29edbe962e0d432e71884d291a3d93b](https://github.com/PX4/PX4-Autopilot/commit/e7bf0e03d29edbe962e0d432e71884d291a3d93b),"px4_nuttx_tasks:Support future removal of env.
 
    CONFIG_DISABLE_ENVIRON can prevent task having to allocate
-   memory for the env.",,memory
+   memory for the env.",X,memory
 "PX4-Autopilot
 "," #624
 ",[d49f6a3acadcc96f0173eb2b4915bf977bdd3dd9](https://github.com/PX4/PX4-Autopilot/commit/d49f6a3acadcc96f0173eb2b4915bf977bdd3dd9),"mavlink increase STACK_MAIN and STACK_MAX
 
- - needed if NuttX networking enabled",,increase
+ - needed if NuttX networking enabled",New:Hard-coded-fine-tuning,increase
 "PX4-Autopilot
 "," #625
 ",[6f9a9b3d2c90faca79ff42b7dd08df6e97051c00](https://github.com/PX4/PX4-Autopilot/commit/6f9a9b3d2c90faca79ff42b7dd08df6e97051c00),"px4_fmu-v4: add runtime external SPI4 detection to support pmw3901 (#11301)
 
  * The build is built with SPI4. At run time the signal GPIO_8266_GPIO2 it tested. If it is low the SPI4 is configured. If it is high SPI4 is not configured.
 
- * board_common: Add Notion of Board has bus manifest",,runtime
+ * board_common: Add Notion of Board has bus manifest",X,runtime
 "PX4-Autopilot
 "," #626
-",[298049b0fb8382a43baeefd9c190888f95b01c01](https://github.com/PX4/PX4-Autopilot/commit/298049b0fb8382a43baeefd9c190888f95b01c01),px4_fmu-v4_stackcheck sync with default and increase pmw3901 main stack,,increase
+",[298049b0fb8382a43baeefd9c190888f95b01c01](https://github.com/PX4/PX4-Autopilot/commit/298049b0fb8382a43baeefd9c190888f95b01c01),px4_fmu-v4_stackcheck sync with default and increase pmw3901 main stack,New:Hard-coded-fine-tuning,increase
 "PX4-Autopilot
 "," #627
 ",[c6e60c21893e026ec5a7d005681526a266f92487](https://github.com/PX4/PX4-Autopilot/commit/c6e60c21893e026ec5a7d005681526a266f92487),"Update submodule ecl to latest Sun Feb  3 07:37:55 EST 2019
@@ -6316,20 +6317,20 @@ fc2a089 2018-12-21 Paul Riseborough - EKF: Add function to un-correlate quaterni
 bce1b96 2018-12-21 Paul Riseborough - EKF: Add function enabling yaw variance to be increased
 bf1f3a2 2018-12-21 Paul Riseborough - EKF: Derive equations enabling yaw variance to be increased
 81eabc1 2019-01-29 Daniel Agar - Jenkins update all containers to latest tag 2019-01-28
-a5e6191 2019-01-29 Daniel Agar - EKF add clarity brackets to avoid potential confusion",,increase
+a5e6191 2019-01-29 Daniel Agar - EKF add clarity brackets to avoid potential confusion",X,increase
 "PX4-Autopilot
 "," #628
-",[daae9e85b89a035faad32f6e2458c5bdbb54887b](https://github.com/PX4/PX4-Autopilot/commit/daae9e85b89a035faad32f6e2458c5bdbb54887b),Jenkins hardware increase test timeout and update container version,,increase
+",[daae9e85b89a035faad32f6e2458c5bdbb54887b](https://github.com/PX4/PX4-Autopilot/commit/daae9e85b89a035faad32f6e2458c5bdbb54887b),Jenkins hardware increase test timeout and update container version,X,increase
 "PX4-Autopilot
 "," #629
 ",[2b16be92813ba5a136b07d5a0b48ca30c085ea94](https://github.com/PX4/PX4-Autopilot/commit/2b16be92813ba5a136b07d5a0b48ca30c085ea94),"Jenkins hardware test remove px4_fmu-v4 stackcheck
 
 - the stackcheck build is too slow to be useful
 
-- will be recreated with fmu-v5",,slow
+- will be recreated with fmu-v5",X,slow
 "PX4-Autopilot
 "," #630
-",[6a08c1b6f16365fd2d3d59da64eb0b10aabe266b](https://github.com/PX4/PX4-Autopilot/commit/6a08c1b6f16365fd2d3d59da64eb0b10aabe266b),Jenkins SITL tests increase test history from 2 -> 5,,increase
+",[6a08c1b6f16365fd2d3d59da64eb0b10aabe266b](https://github.com/PX4/PX4-Autopilot/commit/6a08c1b6f16365fd2d3d59da64eb0b10aabe266b),Jenkins SITL tests increase test history from 2 -> 5,New:Hard-coded-fine-tuning,increase
 "PX4-Autopilot
 "," #631
 ",[b01e470ff9b72665d157881f8d49141d19eaa4db](https://github.com/PX4/PX4-Autopilot/commit/b01e470ff9b72665d157881f8d49141d19eaa4db),"refactor ecl ekf analysis (#11412)

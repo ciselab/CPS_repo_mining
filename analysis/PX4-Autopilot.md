@@ -5623,7 +5623,8 @@ navio_sysfs_pwm_out: avoid dynamic memory allocation & fix a memory leak
 
 memory leak was in send_outputs_pwm()
 ### Antipattern Category
-General:Hard-coding, General:C:not_deallocating
+General:Hard-coding
+General:C:not_deallocating
 ### Keyword
 memory
 ### Note
