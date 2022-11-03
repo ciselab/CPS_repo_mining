@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Steps taken:
+# - find all files
+# - remove directory name & _commits.txt end of the name
 PROJECTS=$(find dir_commits -type f | awk '{ print substr( $0, 13, length($0)-24)}')
 DIR_SPLIT="dir_split_files"
 
@@ -18,9 +21,11 @@ for project_name in $PROJECTS; do
 
     cp "dir_commits"/$FILE_NAME $DIR_LOC_COMMITS/.
     pushd $DIR_LOC_COMMITS
-#    sed 's/[^ ]* //' $FILE_NAME
-    cut -f 2- -d ' ' $FILE_NAME > $FILE_NAME"_new"
-    mv $FILE_NAME"_new" $FILE_NAME
+    NEW_TMP=$FILE_NAME"_new"
+    cut -f 2- -d ' ' $FILE_NAME > $NEW_TMP
+    grep "\S" $NEW_TMP > $FILE_NAME
+
+    rm $NEW_TMP
     split -l 1 $FILE_NAME
     rm $FILE_NAME
     popd
