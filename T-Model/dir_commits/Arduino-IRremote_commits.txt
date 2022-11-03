@@ -1,0 +1,672 @@
+bd992818f7f750fc60ac5b3d864849c7934786c2 Documentation
+3d1de339f3b771897a6ff3f7d158dbefbdf53ef7 Switched Bose internal protocol timing for 0 and 1 -> old 1 timing is now 0 and vice versa.
+0ef17d23aef19165d2bad5ac5c4ad9e03fe7ef96 Fixes #973 ESP8266 problem with Feedback LED. Thanks to hneel!
+648fa78cf66e01bce4b8a9d6f02a338c72021cb6 Separated enable flag of send and receive feedback LED. Inspired by PR#970 from luvaihassanali.
+9da5df029263d01ef69631cf9b6204b44d9157a1 Create LICENSE
+1f04488319d3f18fa299d1b516dd9672f6ad3578 Documentation
+b512cdd77ff733c3a1eab20619fe2037cd60f47f ATtiny3217 support
+47bdba116c689038472f8f95450919de5dc3f0e7 Checks DECODE_DISTANCE before including protocols (#963)
+4397e1b36f620c6db1f37e2e32ed2576a54570cc Closes #962
+8622513f2349604acdf7c772304245d609e7982a Closes #961
+d2d9523dcef539e11687fcbbb76175d4155a5e27 RP2040 support
+93ccc675550335663c1c73178d508a4f374d3c13 Closes #959
+fb798a5505f0a887f5b89321d21a0eae767a1f17 RP2040 support
+3abaa7a7c69dbdd8f4ea8f2f04c5b5a54f7aa857 Bumped version to 3.6.0
+1ce638b7f64cbb7abdf48fd41c87819ee252e0a8 RP2040 support added. - Refactored IRTimer.hpp. - Refactored IR_SEND_PIN and IrSender.sendPin handling. - Renamed IR_SEND_DUTY_CYCLE to IR_SEND_DUTY_CYCLE_PERCENT. - Fixed bugs for SEND_PWM_BY_TIMER active.
+2077fd1f508aa44da4fa1cc612347efa8aa35b85 Add pi pico support (#955)
+37a05fa0876aa20db7798c092ef34e0dc9c81626 Documentation
+e4111a7449ab53be70e3539a8d29383e9882db67 Changed number of default repeats from 0 to 3.
+62513814d586b3974421cc7b84d1483f0cbdfe08 Documentation
+3cf70c9ee54ff8c11c2f356453fef9ad5d63e759 Version 3.5.2
+22a0085cc10db47b101fa92e8ed4acaa7af17a46 Documentation
+eb7a6e251d885f681aa5ead5c7655500bb94a3e1 Update IRTimer.hpp for Teensy boards (#928)
+8cd76d13b9c3e11652385d0f44f7c711672dd212 Fix ESP32 send bug. closes #927 Version 3.5.1.
+ea9b467ee06cda3af5f61ddd9ba23ce3fd6f29bf Removed NO_LEGACY_COMPATIBILITY macro. Added table of contents.
+62ab0e265fa78a6ba37b008c1c15a71b04dd6d98 NO_LED_FEEDBACK_CODE replaces and extends DISABLE_LED_FEEDBACK_FOR_RECEIVE
+e06b594fbefac384d7e1c12aa3e014fca9ee0e6b New example ReceiveOneAndSendMultiple.
+821bb65a45fe5336cfd50172170d2ad5c1458c10 Support for ATmega88 see #923. Thanks to Dolmant.
+823c53f3b4cc5009a8134f495fa048d3cb3081e7 Documentation and fix of ATmega4209 send pin bug. Closes #921
+64880c214172c1073dac1f1ace8bc63481b44dd0 Renamed INFO_PRINT to IR_INFO_PRINT as well as for DEBUG and TRACE. Fixed error with DEBUG in TinyIRReceiver.hpp.
+85acd4707e9f70be6ee825327a92e964418b4d17 Release v3.5.0
+f5d69aabaa7332f662a7e4f677bc22bd95b00011 Documentation
+21978f454a5cad11eb71d3d65638ad12296fd9a8 Declare header files for PlatformIO (#914)
+0316d12b4b784110845da2378b1510daba4ec7ff Issue template
+82a3b7ddab2fcf3d2fd59dfcbec03b283cdd32f2 Documentation
+a44f93e82eef83be0ce5b7ed072c589e8b1506cd Feature/update around printing pronto (#908)
+1619728a7ace5ceb35ed7f4bcfe5139ad5d765e3 3. and last phase renamed .cpp to .hpp. Bumped version to 3.5.0
+15a1fbc8d02fc610808f62494589d1cd2c4e2d93 Used IR_SEND_PIN to reduce code size and improved send timing for AVR.
+dc67b3b4c8d4f0c4df040fa7364ff4d2f7275f99 Removed bug inserted with #905
+711179d611a56c4e030931f727cb3eae23e46cd5 Added printActiveIRProtocols() function.
+0789facbab09106c18c2d6b13c0fab1ac380ee4f Documentation
+32f9c51a99455c1a227186fc466229f5ae01f00c Update around printing pronto (#907)
+9acbb72760b6c8628305a30d7bdd178e3162a4df Maintained MagiQuest by E. Stuart Hicks. Closes #905
+720f77dd9c037a2c7ea7671ea75ed42124d2ea60 Improved IRCommandDispatcher
+dd3b0cd1f9be7567a1cc0edb883c8f4f8c7f2ac8 Renamed ac_LG.cpp to ac_LG.hpp.
+2b61384ec73a451e2953152c6ae7a26e82306fb3 No deprecation print for ATtinies.
+c131dcc8778d7eca995b5614f85fcbf69dbbeba5 2. phase renamed *.cpp.h to .hpp
+597d7b51a6c596d3c55e3e81f2f161f173b0022b Tone for ESP32
+46f319002cdb1127e1f5de667a4a7505255c745c Improved ir_DistanceProtocol
+f58d23d264a00d668f8b920451eaf33965a793aa Documentation by gaoyaoxin.
+1724d40fff1ac2f82a4ef4cc0c13c480067cb097 Release 3.4.0
+d3b069e7623ba5aa0b59cd65391c39367e21feae Housekeeping
+3a471eedfb38ffdf073b818d190f733f2f9648d9 Added mbed support
+3549fb5ca27dd9ecd6e44aced327c7269e53e281 SendLGAirConditionerDemo
+b33d8aa05d1491240ad8f7c2b1d25ec33d27b93c Thanks to roger-tannous. Closes #899
+94fa49a0f858c60b593d1437da59c873c6c3d547 Improved LG protocol and added class Aircondition_LG. Improved ir_DistanceProtocol.cpp to support more than 32 bits.
+ed948955e84a4ed99d10883bf4141e2d34f48985 Added Kaseikyo convenience functions like sendKaseikyo_Denon()
+e238368164813fcbf6fd67e86deaf28769bc144f ICACHE_RAM_ATTR problem + Documentation
+ef868f64747b0e2cf3c7bb2e8ea873403682e2a2 Closes #890
+0dc6103435e7c92a0534abc12cd3d09b1c939a81 Renamed *.cpp.h to .hpp. Bumped version to 3.4.0.
+bcbe5e16bd67a84bfc86ea5ea73845dcb1ebe045 New bug report form
+cae4f4e16d47691d44021c76e35d03ca90a797f6 organized carrier frequencies
+e6b39b72df25a77c28cef62a073fd6c8475e4d28 added sendRaw to UnitTest etc.
+82fff9c34c9ce980dbab303f68d6da1c732df3c0 Compiler switch USE_OPEN_DRAIN_OUTPUT_FOR_SEND_PIN added
+6c0722d1ceb434376709db8ef70c93cbef93e899 Moved blink13() back to IRrecv class. closes #889
+61f09c074c9832e269144ccdbb0bd9d91a224c10 Documentation, closes #878
+58a2725663ecc0c62ac312460fc9d1adcc1f479d Documentation
+fdca1539003bb9c9d9f2db9ac9c8f17b3cbc9ea5 IR_SEND_PIN for ATtiny88
+b46136309ff8f86d87118a0154733a7df81a9cae Documentation
+cda97b5a6f327c90070256511cf6f143b328cbcd fix typo in ENABLE_LED_FEEDBACK (#869)
+27fa380bdabcffc1a24b532d8da7eb338ad8d184 Repeat detection gap time adjusted
+949595110bf3d37a904f7d2ef385829829061bc2 Documentation
+708d38c880dde5facaf66a6b181de1f99bcb0889 Modifying digitalWriteFast.h to be compatible with ATTinyCore Digispark Pro default pin mapping.
+39eec4c5caa4e7f2ba94003d2fe0e83d9c2b29a5 LG2 protocol
+0b16ba4fdbaea6644c500461b4f00e991afd6843 Documentation
+5e1aac8c7e2ee12aedde436c6497840c19b2421e Use ATTinyCore for MH-ET ATtiny88 board
+58bb87bab121bda057f56b93f3d74cf4c4885ec8 Documentation
+22451e789a7ba113d384720cde92e80c66bf5c2c Bumped version to 3.3.0. Added lastDecodedProtocol and CheckForRecordGapsMicros().
+fff3d94c7baf630e54ea69b4b75b0a9b742cf2c0 Added universal decoder for pulse width or pulse distance protocols
+1c7fc018208df2c212faf8fa70b2873ff81cc8c0 Documentation
+39da1b609ce40b9137c1ad058b03a20fe3f8b003 enabled megaAVR 0-series devices, added getPulseCorrectionNanos()
+5dd88831f263b106acddc4df73409a9946096300 added check for MINICORE, moved macros for better readability of code
+6f7b58ba01c380072f9e5e145c43023c1209d94e New example IRremoteExtensionTest.
+e48209b759278ff85bd55e942a347b5b637399d1 Fixed error for AVR timer1. Thanks to alexbarcelo.
+4d44d054c2ff0c9663165c993686a6f1a2a0adea Fix errors if LED_BUILTIN is not defined
+b494e0a03e243e0b8aed763f2a4bf1d837855147 Release 3.2.0
+ddef02edac8061232795fde52a7d22bac929ac1f Added platform specifier for PlatformIO. Closes #847. Thanks to programminghoch10!
+65ab27e332dea8a5f72f11d76a7c3954cc9ed973 Extended DEBUG output
+d06e806a9f24f2cd6f68306a117cdecee4b658cc Rename ledOff to IRLedOff. Support / Messages for F_CPU > 16 MHz.
+248012ea1d966fa0630627f0ca2b72ec69f21864 ESP8266 support
+cf374e64f3680ef65589f3d3fbe68ed759208dcc Support for old 2.x code
+48137fa15833df4edabab745c900550f7a210746 Added ATtiny1604 support.
+ec94757d47170d197e912268ce649528cc7b20dc UnitTest tested for Digispark and ATTiny core
+38f4eb65ee9e7b6c1df26cd54722438e0fbd794a Support for old 2.x code by backwards compatible `decode(decode_results *aResults)` function. Removed USE_OLD_DECODE macro and added NO_LEGACY_COMPATIBILITY macro
+269479301d86af1ef232677497fc97867132b18f Added Onkyo protocol
+35b8c1192213499fd8e7f69b2969a47da87da98a Fix for ESP32 send Error, removed `USE_SOFT_SEND_PWM` macro
+2f71012a2802cc34f9234bc8a22e00490847c6cb Documentation
+6e5be97c51f1a8727df91c16dd10edb2c582e707 Release 3.1.0
+adfbfc9c42aaf4e303dbe3fef313852e2b9609e5 Documentation by Ken Shirriff
+dfe66adfcc3e9be8bc3aa815fc95beba5202d683 Fix problems with broken receives #828
+65dee31fc635ad8c03089280374bdacbca783266 Fix TinyIRReceiver fixes #825
+3dfb2f1fccd8cc7b969ffe3a71044bb6177abd79 Documentation
+0cfbbcf4c408d7a107b9f91944456b49101891ad Improving mark function
+02ee78376feb1ccde1bcfe6b824d7f951499748e Documentation
+8007e6539fffac67b609c05b1ec82d59cffe075c Reverted RC5 and RC6 to old decode method.
+3283ef70875d2cafa69be93564045fba76128450 Doxygen version. Use LED_BUILTIN instead of FEEDBACK_LED FeedbackLEDPin is 0. Use F_CPU instead of SYSCLOCK. Remove IRBoardDefs.h and outdated readmdFrench.md.
+e8e8e10698b71dd72b23c6fe1b9eb7f49b36a8f1 Documentation
+0b75958182be4aed4434d064b197282333628e8a Added ATtiny88 support
+1acdcce7b2d015a20a4ce0e4162a3458da669351 cleaned up IRremote(Int).h
+090358a47dd6e0654e60a8f1feb3e4815ca88d45 Tested for ATtiny85
+2ccae65ef6e866947714028da9100a77bf12e219 Implemented feedback for send. Removed decode_results results. Added unit test and fixed LG send bug. MATCH_MARK() etc. now available as matchMark(). Added PinDefinitionsAndMore.h.
+0bd9f4698fd79c28456ff2647d440914b3ed61ad Removed IRremote.cpp.h, renamed MATCH functions
+98772fbe923fa99ec3e464c56dac4e7c7686b758 Separated timer and LED code
+8deb5ea4e1f7eb253f47774f35229d29ca04db35 refactored board specific code
+56bd4f587651a4797c58c49d28964a9483148781 refactored board specific code
+20bd179bb57a9eceaa220a0568bcdd6082035875 Including assertions
+b7d0e3a94a28b5019855f5e3971769f6e621c9f2 Documentation NEC encoding
+babf91409fe0d212b3d10fa9669bebeda89284f5 refactored board specific code
+36c0226490f16dd313533e9eb2411f985f0ba358 Replaced #define DECODE_NEC 1/0 by defining/not defining, USE_SOFT_SEND_PWM is active by default
+6c7cfb2842266c6ccfc98be69b02c1021ede2857 Added SIRCS_15_PROTOCOL
+7e6f5490a847acf962a604512816fd22b79a2fd9 Replaced delayMicroseconds with customDelayMicroseconds and removed NoInterrupt() for send functions, removed SPIN_WAIT macro, sleepMicros() and sleepUntilMicros().
+31c4ba868c396d7ed19ac44d67ff0f85d957d566 Fixed LG checksum error
+93ade53d6574b7836ff5a069a0544f13ec3bf88e Fixed decodeSony 20 bit bug. closes #811
+61f2c2cdb0e89bf4f76714f892999aa212f9945a adapted to TinyCore 0.0.7
+64828bda70cbaacd96b0ed53b82495ff4c9ed6ea Bumped version to 3.0.2
+a7c1c786e92b548cfda9d232a0f8846c7d7ecf80 Refactored receive state machine, RAW_BUFFER_LENGTH is now forced to be even; New function start(uint16_t aMillisToAddToGapCounter)
+8555f3506c359272e108bf745ebbd5f39c5cbcb2 Added missing IRAM_ATTR for ESP32.
+926283f57ec78e4b74edd4afa821e8648db2cad1 Improved handling for HASH decoder, Tested for ATtiny85, Added function printIRResultMinimal()
+a75a5a6cbf1275469359089f34183d9190f711b9 Documentation
+993f60f4a469ea2874f5ae297c3c8a4805077223 Fix overflow message. (#793)
+d27b1e4e7280f7bb335dc57567e95e3881977b62 Increase RECORD_GAP_MICROS to 11000
+2baa90add3070eef6b1cda9b75fb5638c317dbb3 Bug fix for USE_OLD_DECODE
+9a43cf7b29a177bca6726f6e9da1f2fe57fe1617 Bumped version to 3.0.1 since we have a unauthorized 3.0.0 version in the Arduino Library Manager.
+eb6f09459b223d9bc83728a2a17e261cda64b360 Version 3.0.0
+75ccc482353863e373429f7297341a6ce5e1bb5f Documentation
+aac8748a3d07e2c6605f65880f63ea2435a4aede uint_fast8_t + kHz + ledOff()
+37f218585a413a972750572015c169a6f037a864 Added Apple protocol
+902277bbe0213d7a347eb78375356b3b1ccb1f67 Update README.md (#785)
+05a953e464d37d85a5f4bd73a9cf4e2353324006 Update readmdFrench.md (#784)
+b2102862970481a0f323cc513759129cb77a84ef Tidy up
+31dd36a813d9b7c559935e741e9c4d8c829d5788 Documentation
+105e6fb695c8be3f2b67334baeaa7981e719e5c2 Fix send NEC 16 bit address bug. Improved SendDemo example for #760
+fac01904df52e3ec45c49359f3aa37bedf375b65 fixed USE_NO_SEND_PWM bug. Closes #777
+8b6abced104def1fa955eb1952c5af73585dead3 Documentation
+3ca432fc670c97550ebb066e61de00e67f3afe44 Changed to *.cpp.h to enable configuration in user program
+ed4ee8ee6aab66e51e21305ad6f5b346d52be76d renamed IRrecord example to ReceiveAndSend added SimpleReceiver example and changed two functions to static
+1ea58baec77b830bb691d840c5276c549358b071 Added documentation and print statements for converting to 3.0.0
+fbf245d340367a46050742c55dc41295b9803772 Added USE_CUSTOM_DELAY compile switch
+d89ec1b59687aadc1f1e3dd8c0ab8375b5086eb3 Removed Sanyo, modified resume for multiple calls
+0ac0a153bf369207868a624d971a1cc90dfd3572 Added SimpleSender and rewrite LGAirConditionerSendDemo
+0d4aceb316f6f62f8ddb5d11e30c13f0d970ced9 Guards around TinyReceiver. Fixed wrong spelling -> closes #761
+7d30f4426c26983e6296573711e6907087460daa Printout of LSB or MSB first
+d002441f9131bae2b1b65c7148fda0ccdc44164a Changed <Register>=pwmval to <Register>=pwmval-1. Added TinyCore 32 / ATtiny3217 support
+4b42ea4e3c5d9e9c1404a76b535756a129868bc3 Closes #759
+af17724d3edd6f65acf3d8e3f2c18dbff9416a39 Workaround for LG parity problem #755.
+23ed2f8335c2dbdfd974aba32471eebe229af4ca Fixes #757
+4fb32a608c42727cc2d6d3529eafb229e70c437f disabled old results structure, added default receiver and sender objects, removed deprecated decoders with parameter,  added Stram like API with begin() -like Arduino Serial-, LED feedback now also for send
+b64165b7e085f7c4af54cf82a80459dcfd096225 Bumped version to 3.0.0
+fdea40ebb74f5c98f2fa97fb2ecd65eca14dbf6a Revert to 2.9
+02737624cd22f22826f8f7c1abd7a52fd0049e3c Version 3.0.0
+7ecfa03d06fe67fb60573321cd031f35d1a01897 Unified function names
+e85ae16e6780f9d3a0e83487f0bac30e635a7b25 renamed send*Standard to send* and unified function signatures, updated IRrecord example
+5ab1047f2208cb37a909197b434c98d873fd4d9f Updated IRrecord example
+51087db8b7a7d3eb1dab79f6a02c70ef0aefed75 Compensate Pronto and prints for MARK_EXCESS_MICROS
+61433bb73f422e609247c19559a4a30b2a2253c5 Moved MARK_EXCESS_MICROS definition
+44d6a7da150637ab72846743f00501990cab4dc5 Fixed SendPronto bug by reverting sendRaw to original (without leading space)
+a876cb1679a01e6db31a4e856630ee89adeb7348 Added new standard RC5, RC5X, RC6 encoder and decoder.
+1e8026609cb741023ff1053e8ae317b0bca377c8 Added stop bit parameter to sendPulseDistanceWidthData()
+977debf4e6c7331a96d9798b82dc5ce682da4950 Added vendor parity
+3d27531c8380a5a8c73eac53ad6bb6ac224d6c77 Overflow handling
+a79b87110c7e3fdd43cf13e09ce183cc10b1a84d Send now with noInterrupt()
+62687d49c584c6d46b1ca6522406bb536485d0b8 Improved decoders
+968b2eccbc4a81bd3a35b1617f7d21134a909aa3 Documentation + License + Template
+14e4349c05b79d81859e0fb5f236683d6c52f257 reactivated support for mark + space > 0x4000
+4c9e0e5b5e591b6582786df50f494281bfffece4 Fixed 4 MHz bug
+7f40acf2d3f9b378147b05dc72464d2040633ac0 Improved and tested LG and JVC, updated template
+29b6cb2133aa8b09bbf3106d7a09842d48226279 Documentation
+450d5fbfd49de51ad7d186070ce827a968e3d5bb use TIMER2_COMPB_vect to be compatible with tone() library
+8e2c4e328795f7265f331e8b5971767a86fc6cf2 Improved Samsung, added DispatcherDemo and MinimalReceiver, removed Test2, renamed Test
+1e6af0535fd0aa6b097a698d212932171984c5f0 Improved MagiQuest and LG
+75f4f7ef0a9871d1d9096b31baa95741b4c869ac Included library version number
+8b1d47cebb92aa6a3c4d1967ea2ba4084b657722 Improved MagiQuest and LG
+3e808fec61bcc3285ec11a39611e5ccc50b9799d Replaced Lego and Bosewave, improved and tested others
+84cd2069c4b4209c2754ca8858b02e5715bd4a87 Added setting 16 bit counter to zero. closes #744
+1148186fcba933d97242932e2f3675dd3cf576cd Fixed SendRaw interpretation problem - Preparing for version 3
+f9d32954c624e0e7c0fc06d553d418a0980f72b6 More cleanup
+c893ca44321b742232426d1f59b3a535109bd8e7 Fix Sony 20 bit decoding (return the number of bits decoded) (#742)
+563ec5bccee8b1330370015685fe4bcdddf32ad4 Fixed Link
+cb04000551d216fa6c32d86f7f289e8fe1352b5b MegaCore test
+0175bff7e77205120b36ba3f299b537498993376 Corrected template - thanks to Jim-2249 closes 733
+e4517d69e8328976985f49090ccd86f2bfadb108 Documented - Adding new protocols closes #501
+5d2c671389b407b7eac0eb4f057ed35fc644641a Bump version to 2.8.2
+0e9af1e877ce0879e963c252dfe827c18cbda9aa Added `dumpPronto(String *aString, unsigned int frequency)` with String object as argument. Thanks to iosifpeterfi closes #727
+ebb3f0fa2120665da391fa55fc79195d2bd2847f Added compile option `IR_INPUT_IS_ACTIVE_HIGH` closes #732
+302f09a5ee4b86b0243e0563db1a88c0b95fd6d3 fixed swapped cases in getProtocolString() closes#731
+c55628ab24d2a0e735f910d199915d0ca3b4a15f Handling trailing gap/space inconsistency for raw data. Closes #729
+476d224d39c4db6cf3f499c569a2825a3eb0d590 Closes #728
+78b4f8c40c2aba3ce4541296d6be82a168a4fb51 * Added support for Particle boards (#726)
+e2768ecd14e44f5574f1e18d5a9cfab55c59d547 Theory of PWM and IR Power see #724
+0764f74d475a86b3bc1f8a6a723e04ab24d2915e Mark and space are not called with zero value. Closes #725
+0dd763c886ccb1c47a665d681a6f22b7c79992fc Added SendRaw with byte data. Closes #288
+b49d2339d72232c96df5f71c5308182a0cdd5aac Closes #722
+b6b979e72c850685c39f28248c8039d085d68838 Documentation
+85bf1c76a9d726ecf5d6fce4d454b70763767b6e Moved dump/print functions from example to irReceiver
+e6c8b1cfbf337cc5e3b7b260f375b9c6f1b9ea14 IR_USE_TIMER_TINY1
+314479e19a970dd321c20a4d35a1fbd912002a79 IR_USE_TIMER_TINY1
+efbdb1d440e4d1246479fc726fe004d79c686fe5 New example IR2Keyboard
+f9674f7ca70157bf541f21bf498ca38f5773356a Removed AIWA implementation, added Lego_PF decode.
+688607fda16e4e135e8312213d01749858275008 New example IR2Keyboard
+d9165753634c6f0cd8b257cc6d29454e04e71ab3 Create IR2Keyboard.ino (#292)
+ba3a7b9d1c230261ff4f881e5fb55f3cc379c50f - Removed Mitsubishi protocol, since the implementation is in contradiction with all documentation I could found and therefore supposed to be wrong.
+d45198d7ff0389184bd4a5d620a900dd3b2234c8 Changed wrong return code signature of decodePulseDistanceData() and its handling.
+27bb3c11652dd3c88f09dfbbcf6832c604068342 Changed license to MIT Closes #397
+555acf34e57b6bf26bb984b89a61cef52ac9a63a Closes #266
+4968b07a80d54fd2a840db38ba42312c14b57f26 Closes #428
+5947c0c0595f7e5d7e5b11db5c3dd7e1529f1e8c Change architectures from * to avr,megaavr,samd,esp32,mbed
+11b88324f48602fbf1e5c7a754adf6beb9bde47b Documentation
+052e160a3752b4b2d71c8d606333f75c5371f7f6 Added support for sendRC6() with 64 bit data
+3c70d87042e1d5aaea7b84b162b99fd6920a453a Support For the ATmega(32/16/8)u2 - closes #291
+78d06a72bc202894884a341a66a7a1996aec6b4a Stop bit handling. closes #717
+ac60e4578c811265dd5fb540c3b31fca56792c45 Documentation
+f7e949f83ba3480f990cde70e4bd668e184f8830 Fix multiplication overflows (#716)
+0b6612520564ed60feb7a12f22b162a2a48bd3b8 Documentation
+e8f8f2dd63ecb0d50c8a3f209d1e7389f4d4ee53 - Optimized types in sendRC5ext and sendSharpAlt. - Added `DECODE_NEC_STANDARD` and `SEND_NEC_STANDARD`. - Renamed all IRrecv* examples to IRreceive*. - Added functions `printResultShort(&Serial)` and `getProtocolString(decode_type_t aDecodeType)`. - Added flag `results.isRepeat`. - Updated examples.
+8b0a876a465657aea97f0d9e86da09fa3e1a73b4 Deactivated default debug output. Closes #713
+4cadabb872767f096731cf1a8f90071c193f3340 Removed blocking wait for ATmega32U4 Serial
+3516e6703857b5d5877b74c6a4bf0391024fe56e Documentation
+1fa587db3731b01ca83e29716104c6fc803889f8 NRF5 support
+2992d5e87a9c84b1960e2cd8a5dff722c39bbffb Refactoring and NEC Standard implementation
+8d8fc9bb51b6acdd94481eff225de45e0316c88e Closes #332
+aac2a966377c9ec99007131614d3826e990a1881 Closes #21
+2d664bc29595ca0214f1c41ff1474d79038c79be Closes #36
+95b1efeb5bae8105040b98e2a6940b650b9afb15 Documentation
+668752283b5cbe1bc7281b31d588d0acce9e0f68 introduced decodePulseDistanceData() function
+b651caaf682ad4eb26bbae7e6d20f3f3b7c396b3 Renamed timing macros and introduced sendPulseDistanceData() function
+a8a075c887a2e1f9c87f6e891bb4ee0e7f23b3be Documentation
+1d8112efd15b0b32d6fa43f65ff955f5744e0fd6 Renamed USE_SOFT_CARRIER and USE_NO_CARRIER macros to USE_SOFT_SEND_PWM and USE_NO_SEND_PWM.
+e535db86eea0e664028ff90cc81a24e3c50ad2ea Renamed hardware specific macro and function names.
+ea450fcf88511c0a28b0cb670a9264d921fde0d7 ATmega328PB support, closes #707
+9a3d2d9657ccd29bf7c613a6e9c9cdd6dad9b616 Version 2.6.1 4809 bug fixed
+0f80556e2e952c31da55adc0bf794d96410b5727 ATmega4809 typo correction
+85cd7fdd65d52601020dd0cb69d927e1530e7fd5 Adjusted JVC and LG timing, closes #347
+b1d1ae550d846264523b4e3c7a44cb146898ae5b Version 2.6.0
+ce1e3b16cb00989296181f2517c3c47c52781764 Changed DEBUG handling in IRRemote.cpp
+2e79ccfe94ca60e421dec9f56c41ecf5b71306b4 Changed switch to if / else if in IRRemote.cpp because of ESP32 compiler bug. Closes #599, #689
+6faf6946dd560d2c7f00ee5c40be534a59a7b847 Formatting and changing TIMER_CONFIG_KHZ and TIMER_CONFIG_NORMAL macros to static functions to be better readable.
+d5d608c082280cae581ed15cbdddcdc9c07d3735 Samsung timing solved #705
+6d3b21a8080c9d05b230942c5c13b016eb788b53 Changed tabs to spaces
+fa2ebe4c3c49c112ea290ce0f44ec71abbc1c93d Some minor cleanup on the new MagiQuest module (#706)
+fb7aa222c226d1cd9521a17e96cd00f5eacce044 NEC Repeat Implementation #704
+6864939ce2c6b2372cd2ee60b0bc1832b0e1f32b Release 2.5.0
+fc05a22aeeec04cb3fda514253110e40cef15d02 Add support for MagiQuest IR wands (#703)
+2fdb8bf36c99db652792153c5fb77d187a05c935 Add support for ATmega8U2, ATmega16U2, ATmega32U2, closes #672
+f76339cc97bc81d95cd9834f79a4549681d4e8cf Add support for ATmega8515, ATmega162, ATmega1281 and ATmega2561, closes #440
+206ad7ea4f544f99d8f0d2f88d3ffef0fad0eb5a Fixed USE_NO_CARRIER bug, closes #315
+f94b85756260a3cdb5191b6141dfb875606f31ff Pronto implementation (#702)
+a8a403cf985a81d7c1b9995a01054414cc0261d8 Renamed MARK_EXCESS and USECPERTICK, fixes #700
+07e9bbade23f50bdb6900cccd9ad878cf6d6567f Renamed MARK_EXCESS and USECPERTICK, fixes #700
+0268a0e72ea2580d2131b0e6ca4c0dc74518bfae Renamed MARK_EXCESS and USECPERTICK, fixes #700
+2bce3d6936f685374163687c3ca3f57c2437ae01 Renamed MARK_EXCESS and USECPERTICK, fixes #700
+1c08a3745c8cd1e6a90ec8f85dc20deaefe4c82a Doxygen fix (#699)
+7eb07624fd22fa426fa1dd63f5c6c062579d16b7 Fixes #598 for SAMD platforms
+95c8330d81eb1b11543702ab2e84f20d70fcb019 Merge pull request #460 from bengtmartensson/microgirs
+90a86e7ac42ff966ad0800391219368c4e886d20 Updated, tuned, and documented MicroGirs.ino.
+94760666b0f8dc6a8749375bebcb0ad59b0c5bed Add Check before defining used Timer, closes #649
+5f2b86ee8638ee241b179870b6debcbaac207aa2 Fix incorrect frequency used for Panasonic, closes #442
+5504687ed8802829db2b80fd412c9986bc499744 Pronto housekeeping, closes #253
+7f7f68cedddd0304ad0a8c3a45479cbea3d5b203 Avoid Leonardo warning
+e8161d10c0d3871aa1c54254a34bfd76b07d9584 added the IRAM_ATTR and disableIRIn() for ESP32, closes #590
+3a6ff8b0a1d9645f08431e872ed7a5411f850fd2 IR receiver emulation, closes #561
+125b5b532bc2416d7300df8892457759685af5d4 Atmega4809 board definitions, closes #657
+ffd08fbb6408ad90e0923608acac5e2231cc8213 Atmega4809 board definitions, closes #657
+8abc69daace27e53effc50da67f306fbc8a8c1e6 Added function sendRaw_P() for sending data from flash, closes #238
+b6a9ddad406fe83bd8d2cd9eb7f33b994b4bb744 Added function sendRaw_P() for sending data from flash, closes #238
+766cb169f642d2f12c7840cba71a87bc35f2bf65 Does not compile on SAM architecture
+0d4805a1299ea5ba944000dac4f41b2f2f128458 Manually included changes, closes #268
+dad10ba8e90f815f8aba5a3d18bd04332e15f86c Documentation
+7625bd12a2b2740c8e985feffbfcae249a7bd6de Documentation
+33974730031257be2a6c90f213a042b37efb45f4 Documentation
+f30d69cb6a55ed84d79fb745894ec9ac56eb9a71 Documentation
+3271e1c2049564bee910a05fc7ba4b00f62c6cbb Changed rawlen from uint8_t to unsigned int
+eadbffa0ee87ea233464c73a16e31b053b3e8d42 Enabled DUTY_CYCLE for send signal.
+1433dacd518872a3f7f8b6018b9b7416b8dd972e Changed rawlen from uint8_t to unsigned int
+a50d91861c082ab8a00fecc343cb3bef29eee809 ESP32 sending
+8f9452ba17fc6f174761318233dd7b67d173c08c ESP32 sending
+0e15013dc8080b7a1219512e2cfbdfaa2320b2a9 add disableIRIn() function, closes #321
+16388863147f29c81b37fb5a8746032c254af5c5 Added missing Sharp decode function, closes #381
+3eea1d7e96222a9c4c016fc7f3c6668d5929805a Add alternative Sharp decode and send functions. closes #383
+8f665d60f065c139bf641a152518b078bec84437 Leonardo Support and Pinout/Timer cleanup, closes #694
+6a1811e7e8559770d5eb9f5db0f6ff8168f57ce3 Leonardo Support and Pinout/Timer cleanup, closes #694
+41fca00b617d55bce7f53c71bd756d7d30bd1a78 renamed STATE's Closes #676
+1cbcbbc40a07641459edb61a3432a8d5adcea4b3 renamed STATE's Closes #676
+365806a14906a9b0d8b6b4c21031b004a6610dd5 Housekeeping
+f47f611ccb12202ef7706d1ed006824d11d7080e baud rate to 115200, closes 457
+431b33ea529d2147ec8c1e73190e81b0f61246e6 baud rate to 115200, closes 457
+60248a560466d301b98b2862504ddf92d2685887 baud rate to 115200, closes 457
+df1a126897f283119b0e187fd30dfa6d79509584 Formatting and tabs -> spaces
+e82abc942b37d6af8e6448c29e134a7a5121d92d Boarddefs clean and rename. closes #405 and closes #516
+00b024cb96784f22f68288cc5e4675074c5485d9 Formatting
+e8d461604bfec93b7314532cf8766d81d549bc4d Formatting
+b65fc8406dda23d230119ab6a1b19e4be7b42e8d closes #594
+76f233faddfbaba9bf27d318bc22a0d7fb71e772 Formatting and closes #557
+0c58f0be5f8ace586992722f3770875c5f68e557 Formatting and closes #646 and closes #642
+9759d011d5aa6aa3b0f324aba853c548491d0170 closes #662
+8834de0bf0fcbf68efc343447bbbb91ac0f4770b Fixed BOSE PR
+ba69ba05c09ba959ab1bed11981b07b05eb05886 adjusted include
+9fda0e6ee4eb55642e2f33b8318216df1288af7f adjusted include
+5ac8f18a72152081a4b0cca4e4a719a7bf65c6ef remove .gitignore
+f8439f0b6a8de8119528934bfda39bb66d92c603 Merge remote-tracking branch 'bose/add-bosewaveradio-support'
+6e6619586805f812ebf02d890bd8c8b07558f5b5 Changes from dev branch
+016947b13d190d3ed6f7ed96414b3d19a3cb6f75 Merge pull request #695 from deisterhold/readme
+bf06ac0e8fd129bd014c8fc24a048f63c8588eb0 Fix links in README.
+bc578112d25731545dd160706094b30824cb71b3 Spaces to tabs. solves #583
+1811b69dbc47f4a4c8340f611d9fba65a00a7542 Merge remote-tracking branch 'origin/beta'
+9f402a44f05b8b9329d3f3a97c3b8892e7f9b5c8 Contributing explained
+5086695ece106eca1dee748116de3915576a2f7a Installation and code style documentation
+c7982b6da102ef230a1d085e273e4ee7af07cb5d 1. Review results
+ffe19fa719b0a3924d28d50905656043829183fa Documentation
+c6e90135285601c1a54de1e8caffdd2f38c47c8d ProMicro and Leonardo compile tests
+3182cd14d698a5b3fc4dfd95e7cf49dc15121569 ESP32 and SAMD tests + ProMicro changes from master for easy merging
+52b231251f02f582394f3027807580184baea320 Tested 5 examples for AVR
+7513102baab7a1938b2e21ca2bbb3821a2d8317c Bump version to 2.5.0
+f737aabfdd92d26960f58bc9d5bf6f301fd87615 Revert possible error in if condition not existent in master and introduced in beta
+c188aac43cb4b3704eb5a52a9fb4b1d8313ef566 Added GitHub workflow
+e7a208fd334b1fc34e6d703317c1381197ce2cfd Function declarations for non Arduino IDE's
+5deea03eefd43be9ed60d9fcf855431c5f09efeb Add Bose Wave Radio Example Sketches
+242a490fcdb7678b9bcabd4a094e872fac514a6c Debug decodeBoseWave
+e45bc6147264d66fff61fbebe22d700ce6a6156e Removed compiler warnings
+6c0a603e6c3564e59d3f70e42af7322900d47c2c Merge pull request #688 from Kruemmelspalter/patch-1
+93079eb31060809622989cbf4f119a9d9efd619f Add SAMSUNG to IRRecord.ino
+2dc97b29f2da74e342a308f6e99f153e132ce06a Merge pull request #555 from LSUPERMAN735/patch-1
+a6b9cc277be35960e8c45f1252a10c6e822fd1d8 Create readmdFrench.md
+96186317b251c04da595159402f80538c0be5eed Merge pull request #542 from use-sparingly/master
+5a2ded839c4bac700bed9caa47257ca29a820797 Typo
+46b7a72da0d8814fb5c6b604f8322f95176f33c6 Sparkfun Pro Micro credit
+06d06019a6e0488b605ba299b1efd54d3bd70767 Removed whitespace
+57ee7a670e581a3daa91cce315a8435da492eac8 Supported board order
+20bc39a68f0b161179604d80ac03e06bcaabf4f2 Corrected TIMER4_HS output on Sparkfun Pro Micro
+c2d25b4dd96563c3f38e5ca4f43ffc4715e38705 Added Sparkfun timer and pins information
+7734a90db3a65541563801691288f491624a185f Added Sparkfun Pro Micro pinouts
+742f72fd0a2606ae7326d34135d88517ef6b33a1 Merge branch 'beta' of https://github.com/z3t0/Arduino-IRremote into beta
+3ab30887f4cd13925e8830b3b9e5e8e4b779d975 Merge branch 'LarsWH-master' into beta
+bdb9f1c1f58436b241d05f4f13ecb1dcc491373e Added support for RC5 extended
+71f6daca4f756983422b17bf227aa5e952552990 Revert "Merge pull request #519 from PaulStoffregen/master"
+2b3188e40adae4c86e7e389d9c389d2bcb769881 Merge branch 'master' of https://github.com/z3t0/Arduino-IRremote
+d719c27f95fa374a44a8c022ab4afe7b3ce1fbe3 Changed default send pin on ATmega32u4 from 13 to 9
+20a4d97f6178efdfcf421e92b3a4ca668d741d9e Merge pull request #519 from PaulStoffregen/master
+d2939e23666f4773260b42ac31a595e15d04a0d3 Updated README.md for API doc. (#515)
+1154607b690aca0ec2d6822e10ce53be3f1c5f1b Fix minor compiler warnings in examples
+c6a2fcd8c9728595b2d1a0ba700860df42dd83a9 Updated README.md for API doc.
+e206e122e5afbf2a495671dbb8fba5cf67ef849a Doxygen API documentation in the sense of #461 (#512)
+5bbd55c65015a387063fd3877c58ee4affedd20e Fix #510
+24dd940107c978102fe2a04a7baf49949bde1e73 Moving private includes to sub-directory,  #464 (#507)
+7245efd2f5eeeb12986236ec806f03912a002fe3 Fix some minor problems in boarddefs.h and IRremote.cpp (#505)
+4eb95a32721e340a96c1abc0262fc17ea2ebca0b Revert "Removed blinking led"
+542516f116d5ce61c9153e44553b77bf7599eec1 Revert "Removed pronto "protocol""
+563c82c6c4fbce090590fd0c30f7c8301a4b2652 Removed pronto "protocol"
+a406f3b9f97864c23cc7fb76f5deb04f5e09c9f8 Removed blinking led
+31968a4875af21736dda61b4c3c734ebfa6c13f4 Removed redundant preprocessor directives
+635e8a923d6367d55cce000cb38f3d6934dc417c Restructuring directory as per #464
+b0d15b6020c5321a1fcb534789b998e6974b7643 Modified library.json
+622e28bf692a7a49d68f5f63d2185c2bcd20c918 Update library.properties
+e1768b4debb03441e93a1f2d5f135111e98fdd97 Added changelog info
+679348568da2b886e7ae50e8bfeed4a2b9c93056 merge #437
+47aadf559d359d7e270eb4b5451ee68cd6d1d464 Update Contributors.md (#488)
+eb7a0bee7d3e3b5d8927dfc47138bb85bf486eb1 #481 note (#484)
+4e4ce2a2ee7abbed8d2d9cbd8ef2d537be9004a4 Merge branch 'master' into microgirs
+0913c94bdf75983b2a2e0ef1a711e1d56f5a41ae New file MicroGirs.ino.
+18f12d3affb3491abbfe708d4859df12a6f84d5f Add FAQ on mixing IR and neopixels (#451)
+f0aa48a4d134999f94b636dc0fa9be45cc093fbe Merge pull request #436 from marcmerlin/patch-1
+691ea5bc536e91bbb9926234bc907ca4c38b3250 Added pointer for ESP8266 fork
+e0c2649b9f6681cd6ffb89514e94955af5634225 Merge pull request #425 from marcmerlin/master
+419c948c29ae8f6813071459b4940a20b747e8a0 Fixed rev to 2.3.3 and added info on timer used.
+9133814e60e905f2495e850a96c3fe768238d5aa Rev'ed to 2.2.4.
+3875097df994660f3c7f70bb46f78c70f6113c49 Merge branch 'master' of github.com:marcmerlin/Arduino-IRremote
+88b294a0cd898c20ab7026f55f612eab718370c1 change no-op defines from '1' to ''.
+ffdb6081ae3e91d9afb413e8412633f552a0df6a Merge branch 'master' into master
+6b8f2bdbfcca1c8b9db38418312d7a621e6f606b move comment about 'or else' chips that use TIMER2.
+eae9de43076fb839cad9c1371ceac7c0579f7b46 Cleaned up ESP32 integration, reverted ESP32 ifdefs on irreceive examples.
+513e1045157357adb5eb0e7bcc65795365b72898 Merge pull request #427 from philipphenkel/lego_pf_integer_overflow_2
+ccc9d0135cd5d4786b5b1ccc8b2a5056a9900e4c Add Lego fix to change and bump version up to 2.2.3
+257a15130ff2a3386984ea96405ca50707c23237 Fix calculation of pause length in LEGO PF protocol
+1b56da6cc73ec787e3d570e9906d80fad01933df Rename ESP32 timer name so that it doesn't conflict with other timers.
+aa8f7b31fe16ccb8e26baa5e887126bfca4e24ed Added ESP32 IR receive support (IRsend not implemented yet).
+048efb23a22d3670d32af3c4a0226d4aefe2f1ac Merge pull request #414 from z3t0/z3t0-patch-1
+4f24b696cf8ea2a7ec28c95c7216803fa3621ecd Update ISSUE_TEMPLATE.md
+a4cf8bc43e8dab853e52ca7c376de8c9a80cd073 Merge pull request #406 from z3t0/panasonic-jvc
+3b41130ff916f03e46e8e45d5c54a0f02124ae0f Manual merge of #398
+96efb5930aa27f2c6dd16c4bc3e7ac6a68f99dd9 Merge pull request #402 from felipenoris/fn/fix-msg
+9a74475c8d88ff2d55742f7609ce3394fda3b653 fix example error message
+7c14514beb586e2d55942838bae087d1d930308b Merge pull request #377 from z3t0/z3t0-patch-3
+20b6e3b8a26f4898cb5f2f1f57a482f96044f260 Just gonna put this in here....
+fe27a84d2671dba438644945eed20b0e0dacc19e Merge pull request #352 from bengtmartensson/boarddefs
+ccbaca5acca65f6d93b4f1a908aa9df73d94b518 Merge branch 'boarddefs' of github.com:bengtmartensson/Arduino-IRremote into boarddefs
+74594847b7707f8d0d0654119fcc895230d5c41c Move board specific configuration info to new file boarddefs.h.
+85f8aa1e25ce304f65d78f52470da7366a5a4326 Merge pull request #367 from z3t0/z3t0-patch-2
+9ae0239fb71a52a633c378c1d8a63aaf43904623 updated readme email notice
+0d69a1a9ed19a8c887110094173574f8f192cd01 Move board specific configuration info to new file boarddefs.h.
+05cc3e683c87569eef19c4c7ac6bd2c752c686ac Merge pull request #350 from safaorhan/master
+c0dda82685524e1e7365889b1bf1e1db8f15daee Update keywords.txt
+0d398731b20630d8a5f6a5a09afc0c7dc91c5b07 Merge pull request #343 from PaulStoffregen/master
+e72008adf67a0f09f6dede132c1f54c8fc9c2598 Allow any clock >= 8 MHz on Teensy 3.x
+2d1b0f47371b2e449b8ef7740e6defc0335dba32 Fix errors on Teensy 3.x
+bb0323bd7cfddae35f03f323d25d6f1e319227d2 Merge pull request #336 from henkel/lego_pf_tests
+b26b64f87126afd573b12d7bd5a2ec3008182659 Update changelog and version info
+13df9e56320f090c0915b4f6a1587250c711b734 Merge remote-tracking branch 'origin/lego_pf_tests' into lego_pf_tests
+a9385b92d8a566780eed8e4c93c89130edb4ed3f Add Lego Power Functions tests
+5bd251fa22c5e35376fe6ad26ef1a03f1b67a185 Merge pull request #340 from hmeine/master
+8a767328dfdbab035e76c3001d93f36913b0a1fc rephrase sentence linking to (to-do) tutorials
+1a05ac08a5ed9224c76dfa2d62972b2f1dbf523d Merge pull request #337 from MCUdude/master
+b27398de74f798a7f1d200f31ddbadcdb3acd329 Update README.md
+76e23159f2edb74580a67aaf66e983f8d3f63422 Added myself!
+75960b95f6bb6de243a89d4b57efb1b2d459f812 Added ATmega48 and ATmega88
+9bf00849b3ea99ad7ec8987e60e24bf316cef282 Added ATmega48 and ATmega88
+ec5a82bd934079f6186e687a5b4bff17ef955125 Added ATmega48 and ATmega88
+d28b6f985c45d3958441034d4f5f89fe8b3395ec Add Lego Power Functions tests
+2343bee2fa228720766abd9a408160b6d323051f Merge pull request #334 from z3t0/z3t0-patch-2
+e5dc3e108ed3181ae93f181c5f253e80ded0dcf0 Added Leonardo to hardware table #224 #281
+de3d723574bf0f0f2377fb8fba2c85eb483c3745 Merge pull request #325 from z3t0/dev
+978284d55fda59220e8add85eecafe520625f1f6 slightly modified travis - TODO support more boards
+e6b839c34fca4c945ec4053885938f22d0074735 2.2.0
+bb1470a029e6dd891d71375f3a50de9f0cb14d2c added changelog
+f9a41c99c801a6a1d2ce6d8252dbcf6b0375c3a5 There's no such thing as an ATmega8P
+bc15ded405dad94ccb4be6e09fd5c7ff75c5a646 Added more microcontrollers to the list
+38c1e017a291e91721aa04871df486c10ca79cf6 Added more microcontrollers
+d5658f4488e70eb52e81649cd8f8fe6958347f04 Update IRremoteInt.h
+e7e5465b74abb1170f53799be472beae342db723 Added support for more ATmegas!
+44f801d55cf488217d03745e44f233f214af928c Merge pull request #309 from henkel/lego_power_functions
+92c7f0013869fd1289eebb1391861557783e8e68 Update changelog and contributors
+d0f1d0d33d18b9aa8dd2eddb3ed096a730f660de Add supported device LEGO® Power Functions IR Receiver 8884
+34e5cd87ca553bcdfbfcb62a69bbe3f2bafa2bc5 Add Lego Power Functions send protocol
+d064c7dd5b418e40a6e75cc1495cd00f2f320f27 Merge pull request #306 from ivankravets/patch-4
+33c2e3603393d05a803978a131425652a15ed390 Merge branch 'master' into patch-4
+b8ef1c3e92fc44cc3a940b93a88a9f8d8a51a275 Merge pull request #305 from ivankravets/patch-3
+f04b014da5f2e6c2bb36582edda1cd50cdd6fee2 Cache PlatformIO packages using Travis CI container-based infrastructure
+fa2f5f93523bd7f9c196717c07b626230646b81b Use tagged/versioned source code from repo
+864ed3ad4d6f9587547dbc8a7a81d9593b6df460 Merge pull request #303 from AnalysIR/master
+fc96667673f2ae3d0bd6f1bf380b0a26b03e4c4e Fixed bug in ir_Dish.cpp for sending
+7d30c2ff787a1f5a9e98188993dca645b3ff8132 Merge pull request #3 from z3t0/master
+ebbefa835f28959e6b403054bb3ca8a86c0e53c1 Merge pull request #301 from z3t0/z3t0-patch-1
+fba0ee0ae5fe0d77034d0b4bde5c2021ace1620e fix syntax
+0221081f256e69750911a7cb37987efbf8d4d7f6 Merge pull request #300 from z3t0/z3t0-patch-1
+cf7b49389c599d3d654e6f0105efe8c3f575d4ae added authors
+3aebf42ca8daa865ce8ae572245328e7443e438e typo
+0486c4f25a5ddaae30cabc7c8b5f1f1ad839ec7f change travis link
+25de5b79d6e3e513ab79f44f2ac9b2411dea2e68 Merge pull request #278 from z3t0/dev
+17628525af20119c66fb963fe61b9c2697b7069d added ISSUE_TEMPLATE
+cb01593db0d0591218e0b77c3fba8658a3ae0b93 Contributing.md
+9e2c41230c3b962fc324d294de944e3f0ede81b9 added contribution guidelines
+3bdc6a65a65bdcc02f1b8b5a4a132d9ca8eaa5a5 added support boards section in the readme
+841e77a642120f47e0b71e8c6e39a9054aa6fd3c changed travis link for dev branch
+bd1a2e05a03ab3a29b8c6533bfe19166ce43be18 @2.1.0 #258 (updated changelog)
+3a906217d25df89ca9eed854882f9c11a9b5e312 Merge branch 'ElectricRCAircraftGuy-patch-1' into dev merging #258
+9697752f4e7b93016b9cb0bae1827eed780462da Merge branch 'patch-1' of git://github.com/ElectricRCAircraftGuy/Arduino-IRremote into ElectricRCAircraftGuy-patch-1 merging #258
+c471e2816de59558a489a145b3c52d7a0e673b17 @2.0.4 #54 (added changelog info)
+ec356c951b0dc0be3b74ba8910ed02cfc4064c3a Merge branch 'lumbric-master' into dev merging #54
+1c3275f228a5b6603ca5ac2aaccc63c64a382921 Merge branch 'master' of git://github.com/lumbric/Arduino-IRremote into lumbric-master
+376301228aeabf18442edbe6392cec6977b1893d changed irsendraw parameter to const, #227
+96c40f63f0ff0a24b618aa8c996d1d96b1e8ac83 added sublime workspace to gitignore
+86e20db36cf651445ddba7c0f6e8cc912b6948be added sublime project file to gitignore
+e4933e809e38b939363ade03d4f7d61a42fb61bd Update IRremote.cpp
+92092df7a0f48152032e539949a867577de7c896 Update IRremote.cpp
+ed1a2a21539b6f38e8141a1eec8c4f866f5b4ca1 Update IRremote.cpp to improve debugging
+e3ec11d696f4996a7329d7f0eca0921c53c0294e Merge PR #241 Merge branch 'AnalysIR-master'
+8bde9ee628fef443cbd26628ad65386332f69b78 merging #241
+711ebd7d92a3e8b20bd53099add45b9d69cfc3b3 Create IRremoteInfo.ino
+a9706375c0ccb96f05f5747f0b92cda41cd548c0 Merge pull request #2 from z3t0/master
+e1957629d37aae720b3de64687a2b11663ffb4f9 Update ir_Aiwa.cpp
+9293d2fcbaf625e048f3f730f853b573999b3341 Merge pull request #233 from ram-0000/patch-1
+c41f506cc12daf265c182324e4f95bcf988553a9 Update ir_Aiwa.cpp
+3c4fc7bf37c3f0bfce6038a1999b34a17a986011 Merge pull request #223 from PaoloP74/master
+26560e5755c68e0607b848102564ef5e3a59a311 Contact info @readme.md
+d7a4c4e0c8bbb57cc5e514a6765e4557b7ddb4d4 Update version to 2.0.1
+9a57b2aead79cd5bbb32776b19d96141d5348534 Errata corrige keyword file
+c90d6788a13f59effcc2f29d952d7000fe558f7b Update version to 2.0.1
+2da6aeaf2773048bf95a9aac20ac4dfbb782baf0 Merge pull request #215 from audetto/master
+2fd83bbb0017c1ba709cc63cf567a49cb7f2a344 Merge pull request #219 from bessl/master
+702a0642513ac96cf276b36648878914d0e09417 Merge pull request #1 from bessl/bessl-patch-1
+f5071daac8c6886f76e40f101140843dd4d1b9aa Changed library name "RobotIRremote"
+5b82539954a6b2299130dee86e1939446fb32ea4 Merge back irISR.cpp into irRemote.cpp to avoid an issue due to the absence of exported symbols from irISR.cpp
+55f3e27866ff5bf14e41d836bfee2e34ee28ca48 Merge pull request #213 from AnalysIR/master
+f985c4b318b0742310b83ad72204896d971b03c6 Update IRrecvDumpV2.ino
+cdd783ce7e0f9587c0980076377aada68be1cffb Merge pull request #212 from chaeplin/master
+a237a0e393ef5846c47d26a6138fa0590e446ec8 typo 86 / 30
+27777e89b2d50c58a1d1aea15ae609a8d53acc6e decoding for LG A/C
+0ef30ed2275ff623c5502a3331adca9ad832976c Fahrenheit
+d87707d0ec9a4f22b1c1021880a6b853a9dfcad3 add heating
+d8bdbb1a4417aab210ac23b76f4bbcf769674f92 typo
+3fcb071d36eacb6d31d6ff6868e179a26a25adf6 heating
+b4c8e6b22c155a4e8b1bd10d36ea841f3d205161 Revert "Revert "heating""
+e6bcf89664bcb7d6eb15c01232165fa01558eacc Revert "heating"
+df3439696938ecc8b5ba69f35c15b47e205568f2 heating
+bce86bf8ed629487e44526cadde42d9cedec3542 corrected a typo
+0bf5993a5b33e2f4edae6f492d115a248fbd6bfe Update README.md
+77fd51e891599f4554f8fe0240f91a08f75e6374 Merge pull request #203 from chaeplin/LG_AC
+22e64f144c321fe52a984e68676b6b37c49e220f Merge pull request #207 from AnalysIR/master
+61f00b8dc5733698e9ebce60fc1a49a0f5a673d2 Update IRrecvDumpV2.ino
+bd72084b7f2efc893f5364425a8eb110a6dd0e4e Bug fixes as per Issue #167
+cd02daf27caf40cdf7ca6b17a8bb7f487190d895 Merge pull request #206 from AnalysIR/master
+339a7969c9a900262b40812cf8a8ebb4d131de46 Delete IRsendRawDemo.ino
+0abc9f090879595c43cba27e454b4859894d3cf1 Create IRsendRawDemo.ino
+61d0263c5b3bc176f59fbc29a9c2db437872a6f1 Rename IRsendRawDemo to IRsendRawDemo.ino
+e9d43f77514a548a969c932edfaeab6ab36674d8 Create IRsendRawDemo
+79d951896d313d76a6db2f57b558321e63100ad2 Merge pull request #205 from AnalysIR/master
+d433744ec753d526bd10df30469fdc8594594423 Update IRsendDemo.ino
+ec371483acceeadfbdb650bced7d672a4402a2d3 adding SEND_LG
+072ab7f048a4bd8862db15a94965467488d40c71 Merge pull request #202 from AnalysIR/master
+f83fe2b70faf826b354e9d35fe8937a9884d6783 Update IRrecvDumpV2.ino
+1fd88cd308f41de975af2b8d08202eb38a23e61a change int to unsigned int in IRrecvDumpV2
+028cc2e6499cb10dbb49a564f17c28290f9b316b Merge pull request #201 from AnalysIR/master
+9b21a7fdbdcafcaf0db26ef041737375122c6919 Update parameters for mark,space and sendraw
+f1dc5052498710e885cf32b15370f9de99ca14d1 Merge pull request #1 from AnalysIR/AnalysIR-IRremote-patch-1-1
+1e72064557cd7a69fce8f2ac300457f139a047b4 changes to  senRAW, mark,space,custom_delay_usec
+24d20e32310aac94d9ec1871525745fe29bdc404 Merge pull request #198 from pcoughlin/master
+7aee7fcf8976463df519f5cf76d879e1005c2bb3 update custom_delay function
+11cb3fe442b2084600ab4bf278d5c727573aced3 Fixed delay method by replacing delayMicroseconds call with a loop if it is too long.
+c058f3f336e1c1116240ff70065a38e5c7536ca1 solves #195
+879b06b1c4262bdbd8d0df4110edf4f5fa4c88d4 Removed a windows encoding line in irISR.cpp, #192
+cd9fb53520390799c294a1cd9778ae518acd3e48 Fixed README links.
+5c920bd31dead97ce9acfc6429b9c3e0162faf47 wrapped getRCLevel function with #if DECODE_RC5/6
+c9e8ab555e659f42697428d0bacf184a4238143b changed ifdef to if in IRRecv
+a1a45382006781c88bc0b5a2e3f0dc11db7db6e3 fixed previous commit
+2efeef446e732cc1f63082d24a22ec3ba4977699 Working on sendRaw Bug
+f1e1fd0a5920ba339f937591c033f3a54708c382 Merge pull request #183 from madmalkav/master
+114fe2ccd64e8c2af5fc50a24c8400602682e15e Added suport for user defined IR reception feedback LED
+295cdf2e15cf03db13a37d2aa1f2a3dacd0083c0 Merge pull request #182 from ivankravets/patch-1
+6a10861a44e82b422fdd2d3fad22c5ba4f265175 Update IRsendDemo.ino
+b6c04cde1a2f2b0092877eec44e2b388bec51efb Update Travis CI badge with @z3t0 account
+197ff26f68b746412ab979c8280de822251ff107 Update Contributors.md
+e794c747dbafd5d98019174e049f2b2a8b59cac5 Travis CI workingvim README.md ! added the badge
+86a1e93b231cf6a5738316d72f8db044ceabe128 dummy commit to test travis ci
+9fe9551705262abc93882f455e7ee89cb394b3e6 Removed Travis Badge, will add when Travis is working
+b473429939f017e77ec8c2221af6b1c9dd7a713d Merge pull request #107 from shirriff/experimental
+0c298aaf3991a5980321d75e8fc362d54bd5a1b2 Updated changelog
+29826d01f4cf9a881fe3c0b3f80c3605c5a76481 Added pin comment for ATtiny84
+e23aa5eb328e0781ce7e024591af0796841fff6c Updating Changelog - test 1
+3cc9956f97b4aff5b3e8c1da3acd3e597c43c599 #176
+107b8c249c800e122022d3c9ac17b6ef5eb434e6 1e519b1bf
+1e519b1bf31135a93044418bc12bf0f03b0542cd added isIdle Method for receiving, #48
+dcd06fa0ef17f15d09ee2837a02e0bfcdbea3e5e Add support for ATtiny85
+ee1b44de3f8d022ff1e333b5c87312d8094fd5ef Add support for ATtiny84
+2280c963a7a296e1ddd5880fb78b7cedaa00f48b testing travis
+b79c04f11c675a58829e2f2e8cd1a71bdd816e06 Merge branch 'ivankravets-master' into experimental
+df6f2003eff2153d21cb550369e54cb3aeda05f4 Merge branch 'master' of git://github.com/ivankravets/Arduino-IRremote into ivankravets-master
+1e85b4a0584c98b030fa41c3ff837d376338841f Experimental Release
+555a600acc3d7278ec9c1592ff70d22de06d3937 Added pin variable in IRrecvDumpV2
+2e4538bac8d48eb395be7f6c055c3d089c25aaee Added option for Teensy 3.1's processor. This is NOT a fix to #171
+360ca6ffb936f5df972a57be94818eda3c0e9b73 Add Teensy LC Support, confirmed working @48Mhz with RecvDemo
+503225635e5b9f649c6683e733d87fef4584941a Merge pull request #169 from csBlueChip/master
+ec5e1bd5f97bbf691c3dd7de33a73da4ea03e7f5 Fix coding error in send loops (specify bit size of literal)
+0cacdf1ccb065348a977c356b77aae8ea90409a6 added changelog
+23fa23ada23c2b61cae06765a68e60329f799f4e Merge branch 'master' of https://github.com/csBlueChip/Arduino-IRremote into experimental
+4429c773ce251719ecfc3db9e0ab3a03b95608de Merge pull request #160 from gitter-badger/gitter-badge
+5d5479adbdfb05fa7106df4b3aecd8f5088ba136 Added Gitter badge
+4e5608f25f03f069847281feb1b3cf25e4ddb87b https://github.com/shirriff/Arduino-IRremote/issues/156 Improve output for recvDumpV2 Added my name to the contributors list (not 'cos I really care for the credit <whatever> but so people know who to "blame" [non-pejorative]) Moved the decode() function to the top of the source as it is likely to be edited the most
+845e912e9f291dbbdfbafe0dba63154bdae931df Fixup test harness & frequency calculator in Pronto code
+2e163ae3f453aadd1c5e12b960b0e4478e5209c0 Additional comments in Denon code
+3dec9973919d5a55bb15c20763d80ac7db9d129a Added sendPronto()
+6a1222d180afb9386b917c111f3a816388ddfb43 Started work on supporting Pronto Codes
+78e9b87a3425815552e73c29133ce5296196d1cd Add Denon support Improve comments Fixup DECODE_AIWA_RC_T50 Simplify template
+593e0a3ee3c5c2e2b7c17be590b794f4002f8dd2 Improve documentation and fixup IRrecvDumpV2.ino
+ae477413dea8e99325bdea616a9227a388a9d30c Fixup old examples Add new example
+07df68af9d7964748b6627c62d59b7529e0aa884 correct typo
+05e688a9617239a9cbbf840ab34a0145fb345c69 Added a template for new protocols with full instructions in a big comment at the top
+aa32e8f048459620484c1fdd68a945bfe9df6815 Removed explicit values in enumeration
+eb0360e75888b8491bb2e0a6883fca8ea360135a More cleanup and a few minor optimisations
+66dee2fa169968e1a7be0ea1b7300d17177140e8 ISR Commenting
+5e7a1c1f12560f8dc745ce717ea955b154f3475a Abbreviated (Panasonic) address handling
+8afb3e73a6196b4a7b1f4d9631e83500b58aeedb Introduced overflow detection code to the ISR State Machine
+dfd14d437cf23d65b6d97fb0611f879cee9a63b5 Increased RAWLEN to 101 to stop Panasonic codes overflowing
+5d994880b90c2b1f3ecab79f317512fe895226e4 Commenting formatting move ISR macros to ISR header
+7b8444a30579790c94816868bcb3d0f4d33a5d5f Remove use of macro TOPBIT
+813a3038ab2e56bf72bfd797ccde0219509684fc Commenting
+a1cf782c44f62e4774bfc7852111bed2a1687e44 Bit more code cleanup
+88e243fe068e06d2ed602fefe6bd5effd07006e1 Broken the source in to manageable chunks - 2KLOC files are not fun to debug! Utterly failed to reduce the MARK_?? functions back down to MACROs - every time I try, the decoders start failing ...However, I have found a considerable number of bugs in the toolchain, so I'm starting to wonder if the fault is not mine.
+04e2cfbdadc2c0177a89abaa9f034127675c289e Compiling, all functionality enabled, tested with Panasonic
+5f92834a12488bd92c2189da212e531556883a59 Finish sendXXX() cleanup Move NEC decode to be with NEC send
+a338d5525a1e44e33fa552dfd2705e9f635a4e24 Bit more cleanup Guests have arrived - sanity checkin
+001ccf94257c9e3d15d981c561d8b99ac492f79b Optimise send() loops Query accuracy of sendAiwaRCT501() [see inline comment]
+6af9a1b4853b994e9012ef13bcd6b70052319202 Whitespace cleanup on for() loops
+7d926499b433422e59ed6a9246de60df03d103e7 Cleaned up the DEBUG output
+7f1387278fdb50a3fd22b9a5f90b4eeb2a07d4ed Reduce one-line-if's down to one line
+c45b84f65cb1fa61b1a23bd9a550e4cfabdca1cd Standardise function headers for consistent coding style
+64698fd24b6e4ea891547ed588d2ba89d23d603e Standardise commenting as C++ style throughout
+942dcf40511c9ec642d3d932a6d1d2046f3fd255 Clearly mark the start of every function to aid is source navigation & code maintainability
+66395a5daa712c52bcf3319db849fb8e99e0ff6c Switch to stable release of @PlatformIO
+8e043b5bb45425fc8f9bf5f31130e4c612f80a0c Continuous Integration with @travis-ci + @PlatformIO
+9170c0b4a12219b5e83b56d638a7c82c0309b211 Update README.md
+f9faf9804863b38452196dbe8d43ae62b9e858a3 #133
+5cf1e4500260191f91acf5891e05a7df3423d3a7 Merge pull request #119 from jan-r/ATmega8-IRQ-fix
+0cb77d3c5b28378a2fde7216e0c1a1e3d47229d2 Merge pull request #124 from levsa/master
+d336bc541a239fdd43a4451fede9ad1b80f324e4 Changed ifdefs for SEND and DECODE, created enum for decode_type_t. Corrected ifdef errors, issues #121, #122, #123).
+675f9fe04225e63c9394a5752f6630764572c81c Library properties for arduino 1.0.5 to recognize as library.
+4caca675ff2d3763273c238a11d16496155d415e Fixed problem with interrupt enable/disable on ATmega8
+96fa0f557acb1f54416f56778f092634c11c0931 Quick fix for previous commit
+04420c9f5c69a2d84b13ef3ded64af17ca98fd84 Add Aiwa protocol to keywords
+66d82da532041c5f4a3d06bfd43e6cbb50ddad72 Updating for device usage
+117059a17f3769adf535469f0ae41ada53dcee8c merging 110
+ce1c79baa5be03387e136d64795c05dc2f0b2bb1 Merge pull request #61 from crash7/master
+549d92d2f5dbecff9d78b1dac1cc30f1a1df06d1 Added possibility to exclude non-necessary libraries by comment lines in IRremote.h
+c2bf981fe7a309b39e2fc30ce0d4edfed1dbdccb Update Contributors.md
+2ad1487c8d01033b59df2a48dcc06b6d9b018305 Added Lauszus to contrib.
+c1c6bd4199ec33ccf29d00d7d192b85700bb8d0f Added reference to GitHub page
+2768ddc676eecb52b24e5d4c8b79ed79e3de732d Releases can be found on the releases page.
+7b08532e47cbd117aea110eabb99e411d85f1a3f Moved contributors to a different file
+3b16c12b59cdfa7ef8687f0f43bf7ba761b34787 Added Neco777 to contributors
+9c2064c5b4027f6d5c406e0fb90f52a731c88ae2 add crash7 to contributors list
+3256c847b23d5237bfb631966c533ad3182e3c7e remove index (for real)
+2c6067eb30d28113cc68af354956339bea49ece7 Merge branch 'master' of https://github.com/shirriff/Arduino-IRremote
+c35f7219dd10665b483ecd799eddbefd5fb27d2a removed index
+18f5aa639b7c2048e03cfde9b7935e0c12094591 Added GitHub Page
+a87d558b73629ef06df98540cb9a837571245384 Merge pull request #90 from ivankravets/patch-1
+bed4cc5c97b2d5ad440b5523bc9c28ca99354b54 Added Aiwa protocol (remote control RC-T501).
+c0446fd6593fa612fdab0837edf4148f09430667 Fixed broken links
+12f7ef1d28507fd9c71575981420b312f4df4359 Add contributors to readme
+9235051c6a3e98f26857053cde860c59f38866da Readme is branch independent
+4610e7eb0e9371fcd6756c93489370a110cd06cb NEC_ONE_SPACE should actually be 1690
+13f207d863bae7059e5ed68c60e24e6a6e06de6e Merge pull request #102 from cltnschlosser/patch-1
+7c67cc5c5975d08452fecbc209c7d2f9efe4bd79 Merge pull request #105 from fmeschia/master
+4fed49fca61bc7adf2cec630ae671ccb00bef307 Fixed typo
+9d94115974291314fc211b9ea613a42540eddff4 Revamped README
+b3e3ced302e6c3c108675a735960c0f919e6c3e5 Fix #41
+0fce321c9487d4a55ca8f93a89a4beeeb6890765 Added Whynter A/C remote protocol
+02f206e19c9152c7efb68e0f8d67a3807dd99318 Add LG keyword
+a881523044645734f5b54b549b444d60d7a5a539 Merge pull request #22 from PaulStoffregen/master
+a3cdf402d7acea346f9010ce431d7ff301d2b469 Avoid trademark issues with library name
+e947f0924e28e75fced86949db6d1babb2fcb198 PlatformIO-based manifest file
+f2dafe503069570467470bee8079412ca54b9574 Merge pull request #84 from Informatic/sendsharp
+b04b31232feb10ddbb466e224dc471ff49bc0a9f Update keywords.txt
+5719e7c00fc71997f5ca4b366280ff9b26770904 sendSharp API change to make it compatible with decodeSharp
+95f93e639eba2fa111a4d45b2c277003d2730790 Cleanup sendSharp and fix reliability
+24ba950f5c35fd85a112c38b004699fa665fd35d Merge pull request #73 from DaAwesomeP/master
+18591b037c638c1c611c8ae4b8c2a0caefe9c977 Add delay to IRrecvDemo Loop preventing duplicates
+6c7e2e0f72c3a2e70f8fe7a3e30b4b6db3aa8fc2 Merge pull request #69 from vk2tds/master
+66c3b1f47cda899f44f1c1cb4879adb47725d6f5 Updates for LG Air Conditioner Remote
+0af9c5a9e901faeac8c54377464bc35c0dad8deb Update IRremoteInt.h
+3c89676baba75ddc6ff36b594e6b7f528ccaa6b5 Merge pull request #62 from sstefanov/master
+fba55fb8436c504246e4420f57b3dd2d2dd455e3 Merge pull request #31 from X-Y/master
+0de2d18bdbb18cf6068584f33d1c76fea3dac4df Added Samsung protocol
+1c57c6a9b00033b9b0a72ef32b3b322c9e10a436 adding Panasonic and JVC types for IRrecord
+46b4e1084e63d898570f96a28a30bb9ddf61ffa7 Merge pull request #34 from joshuajnoble/master
+e22a69116415232a03c18d7cd517b6da0e2bd6ac updating timer interrupt name for Attiny84
+a6bf23d71d0bcacfad667c71a2f012472496f928 adding Attiny84
+acc1b6b86e9e7d69cd1b2a535b6a9f2f317fbaa7 Fixed MATCH, MATCH_MARK, MATCH_SPACE when both IRremoteInt.h and IRremoteInt.h are included in sketch
+9ba6628f04c21d26181d4211d752482220294782 Add support for Teensy 3.0
+3f70ad2e4c95d88dde93ce2ffa63d316f07390d5 Merge pull request #13 from TKJElectronics/master
+107fa6cf4dd53f0eb83508865f19662d9794591b Added support for Leonardo
+9dae9393f3050ce33220be8e749c93eae67931e8 Update readme for 1.x
+e03a593847a6c114d6905d038f76a1bae808672a mitra changes
+072b2c3db6b282246a629373e51152b9d6170853 Merge branch 'master' of https://github.com/sEpt0r/Arduino-IRremote
+b25accfdd1e46454bb30ae1af5b05b4bc35e2f12 Merge pull request #11 from fpo/patch-1
+ade7cb6c29f826c8094496f1531c0939af3afab0 Merge pull request #7 from TKJElectronics/master
+11a43ec5b64c273e7b122f3b02e1aa1e6c0ef392 i think that's the correct way.
+937ce488329c236bf7a72153eb296d137d896d93 Added support for ATmega2560
+c48f8175933a9e32edf980bd2fd11c87eadd0f96 Set panasonic carrier frequency to 35 kHz
+a2af9e32a6e65450a5d1312fe36b0e4a98f0c6f7 Support board with Atmega8
+96eedde481d030cb7a98c584b7b1bd64385d1a39 Added keywords
+753e52efe735cd650877113938fa0c5d8c83be35 Added panasonic and JVC protocol
+fb741e989373ade7a93b0a87d5a49fb2707ff8c6 Add wiki link
+4131d5bbb610d76e2a466d829ad473ffa9bdd829 Merge branch 'master' of https://github.com/toddtreece/Arduino-IRremote into toddtreece-master
+ccb4ac32c2e99e097347128801b16b154a0ed5d6 updated website info in documentation for sharp and dish support
+2eb19be290735d11b30f85f23c7308be964ccada Support multiple devices and platforms.
+0fc224a81ef91a71eee6e18fe9821fbf88023a0d Update readme.
+114d8afe676a2d6771fa60a98ef527b0630f0d47 Add Test2.
+9bc832ec556ff8fb10617f8dfa86d884e6f6d4b6 Updated Sharp protocol documentation
+31d80abc3ff5de2750758f1ae3f482d40bd74005 Fix CRLF issues.
+da2a0d8f9df26136eed20354e5162d24edba97f3 Add information on downloading from github.
+6510b2c05c504d60cd49d1a914725d5a368f23ae Add Sharp and DISH transmission support.
+e12e9eaac8c3851770b09de7d2f398565f180940 Add "hash encoding" to generate a value for unknown encodings. For an unknown encoding, an arbitrary 32-bit value will be generated.
+c6ec2fd0038cf267a5649b1281f0e3e9eb3f1e98 Reduce gap between Sony messages.  This should work more reliably.
+fd99f892a38606f2127160095bbbf13f1ed0a051 Add README file.
+70b5705fda4495b67766e9d82d965ffeaa475faa Remove zip file
+6ee0dffb4c9fc40fc14cd2a3e6dadbc1226caccd Initial commit from Irremote.zip

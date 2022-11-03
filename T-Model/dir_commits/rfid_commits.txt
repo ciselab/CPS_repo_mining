@@ -1,0 +1,508 @@
+eda2e385668163062250526c0e19033247d196a8 Merge pull request #573 from zivoy/master
+987d4265cea57751e733d223b66b3ff8e8708fe3 making wires not overlap
+1f84b2ecf15961cd9532ae82858d8c16423255bf bump version to 1.4.10
+c55995bb712ecaebb0c65954d607f8e23555d529 fix PCD problem after selftest #402
+ba72b92f070e93abe910a28a17c3730f7468d886 fix typo
+1ff0b14d2e323bb909d62c0744bd9f88115f5613 `deadline` is ultimately a const value
+3b760c359a876c396a4a918cac804f5346c0c872 Update documentation about timing in the wait loops
+c553f4df61f497dcd83194aa13035e3062719975 Use yield() in busy wait loops
+8f9c07f84f1395182a688dd4261dc3ef866793f3 add link to more pin layouts
+f28da27aa64309b7fd41320c1d048e37c5302a35 bump version to 1.4.9
+a93e0fab2f53eddb9832929ce0ba4b312a5d54c9 Remove example AccessControl.ino
+906e57d5e410b7fc2e3756f0712a4c62cbc918a6 Add notice about power supply #560
+a6bf4dcf0f8db72800f5d9b38b20e2bbd33be784 documenting working with Arduino Due (#558)
+d3bab30ad4d6029dbad28350678137a07881a25d Merge pull request #551 from hktaskin/patch-1
+0a568b45baf1852883630e90ea125786e88f5322 Fix OpenUidBackdoor received data size.
+ce05181537e2b2b223ab776be2b745816ea74e8d bump version to 1.4.8
+34086ad99a86ff381dc3c4fd2454a6b7b8c3b78d fix wrong SPI clock speed #545
+ea10e8a21963cb603167892cce37eab40f7a1bc6 [CI] add github action with misspellcheck
+bcdeb645a2c935d607fa4dd5b1ce4594eb787805 [CI] remove travis #539
+15aae4b2525a8286d4adda8c9654d6f7d80bf064 [doc] update badge #539
+bd19abc065d6cd4501522ba68657e3b847929f8a add github actions #539
+c82f3a51f6e503e9081e4bd1618ec54e80dde83b [CI] remove outdated setting
+16c419b6579d0a8ff25ee4ef5ec9690dd3738326 bump to 1.4.7
+5da38ea78c9a463399ac72175aee139af8d78961 [CI] fix travis not failing
+045733958d7c14ca5ebb0859ea117faf3b540e37 remove doublicate information
+7b83d3d82dd0e987bfce013aff0cb109c0e44913 fix typo
+a244bba1837153f81b4358ef0409864d1b7e8368 fix typos
+c3f02184ad94e5456c1eb3a27c886bb2f4a821c1 add development hint
+a45cbe0e6b28e332a58d2ed58c2165cb22dbb42d fix typo
+630e8aed8f204630e07affed52566f0513f3bc57 fix typo
+7400c561e21135d1890bba119597200dfef8c182 fix typos
+39c90621b020b7f5ebcc2670b58c7a3a0dbe9863 fix typos
+72e1bef06c45f4376c84a038ff29a1aa0a7628b8 remove duplicate comment
+d997a2d438398f9beb7b05de752da585834780e1 remove duplicate comment
+c2d44717931bd5285fc2e0d506eaed07a7a533b6 Create .gitattributes
+c31b727996123732afc55916c3d5643d05a8473e update wiring information
+1eaedd579264e0e59d3036fd193fd509f70f3e5c Merge pull request #500 from ricardojlrufino/master
+ed5c081a54635d41147a47505638a44a663dcfbf reorder properties
+10fd4099929aaca9e03935b45e2c2bc6417f7ab9 [CI] fix grep and bump python
+f57538333f07ae3ec855b271ca3ab5faa972de7c Merge pull request #516 from ReubenBTalbott/patch-1
+49dfd460399562b90b83384867b6dafe3a24e3b2 Fixed some grammer errors.
+98834423c6186326a33cad6665098b824846d62c add license
+1f2148d88f0fd02ec02c9ace384aec1ad162e521 bump version to 1.4.6
+e587f3c2e3dc96100d3f2985721decbf6725ee3d Merge pull request #504 from jacoblukewood/master
+d822320718076ab35ef3874b03444d024f75a183 Removed deprecated warnings as project is no longer maintained
+2e5f692ece3d6b44c466352aca384ed815e7de2d Merge pull request #494 from grapheo12/citations
+de0db3d16dea6a366873dc8bc16523dc6d5180d2 update README, now works with arduno YUN #111
+8f5dd01ff785eb9617c592990f6ca74262287449 [ci] fix rename of setting at patch level. platformio 4.0.0 -> 4.0.1
+d2fa33e6d3e56ad1c4df6351298cad0afbaae279 Added Citation links 21 and 23
+b7d7f3e572af6cfd78722f2bd693097019ec55ff bump version to 1.4.5
+142dd049773605aae6466afff027bbc529f9e2b0 Merge pull request #485 from seisfeld/megaavr-fix
+8ff85d6781948c468ab767e8e95fad9dd6c7bdc4 adds megaavr architecture to library.properties
+72312cfe32718bcf7e4cd78210fac57afd50ebdc [ci] disable telemetry
+684ad7324209ca187e881778d4fa458737b80727 Merge pull request #480 from andig/esp32
+f2127b921d6d6aedc1d6f41023c09872d318296d [doc] inactive maintenance
+ce60fe4fef6180d373a1741d8e511831083617eb Support esp32
+d36f9370ea3b075c4b9730388ce620bc7f28f929 add optional delay after PCD_Init as workaround
+557b71efa7fc3a7ce99e8f35b8ea0edcb837eef1 Merge pull request #472 from randptr/master
+2b7bf97048c1a723ff1dfad29dcf72af8c0b6601 Fixing typo in the comment
+c271b658aef83e9098877ef305c469a08de73c8b Merge pull request #471 from randptr/master
+6dd5ed86ff38a47584964b062938828b76eb5073 Fixing micro grammar typo
+a395a6c7b7ddfa729fe9bb998f5bb16f41438844 bump to 1.4.4
+268682dc0b1aabc2d285c31f296659981540967f Update comments in examples (#457)
+d6979db651bb9816cff4287867c422e8a4fa070a fix ci; remove teensy from platformio
+0e25b590a430e7404e76ca08c185e333157d908f Merge pull request #445 from porohkun/master
+fa8df2cc64ddb198f1380a96ad73d70074bdefbf fix default_keys example for avoid skipping first key
+703a5f362e533a6cfda62dfa84538e9a6992370c Merge pull request #440 from aosodoev/patch-1
+ada464c1ccd5c8f56bbbcf53304520c01fe57f7c Make it possible to set SPI clock
+c5269d6343be0053e92dba43a3b5f7618d008852 Merge pull request #439 from kirkins/patch-1
+fc3df49108a0fc75f2a5d5c234a6e959dd2360c8 Fix typo date to data
+0c906aa1a012beccfde4ecc7105c7cf8e88e8d26 Merge pull request #433 from EndangeredF1sh/master
+b78508256c815a0b18db05ed7495e289957eaa80 Update MFRC522.cpp
+098a5d9e3dcb1b45f81fa5054005d04ffba3690c Update MFRC522.cpp
+c32cde4deb8843f6f212a24db58022ff42248f14 bump version to 1.4.3
+91eca6efbe38597d26c35411f7bf0f5137e87800 fix typos
+b4fd278f0c6183c75119eb883c207bffafb8d7a1 Merge pull request #429 from CornyjK/patch-1
+9e70707acf30c923b44789ac10012a27e8ef45f2 Some typo fixes
+c8e5bf00fcb5e40c0efe71089548be6847a5bba2 add counterfeit chip detection to print version
+3acbbc6ead2e5571ebd6b54869e1e54994eae72e add notice about bad boards
+3592862bcbf849a18beab46da2e902973bbfe9fb Improve hardware based reset
+1cf133cb67b1566b31c13e10b0e99b8e3eb084ec rm dead link (fix #425)
+39a2764c3f264c52d0bf9a578ade62760670d22b bump version to 1.4.2
+087d6160f1205129ee4f75c4722fadd2fbf2746f change development state
+c4c58f4830cde4b8d609f12a061224a863212d96 Use a single tab field separator in keywords.txt
+ea7ee3f3daafd46d0c5b8438ba41147c384a1f0d bump version to 1.4.1
+dadcad0fc5dc1af785a64f30cad62c8f054abfd1 Merge remote-tracking branch 'miguelbalboa/release_1_4_X' into revertsplit
+4c193e338fbf91fd766b48f88245c91b4ab03440 Revert "remove some constructors"
+4623434beae9e682886de243cdcfdc7207d642c3 Revert "replace #define by constexpr"
+e1b5c1dafabb5132cb907587331d3422d22b1f97 Revert "changeable spi class and settings"
+414824980762170045ebb5729d1c9ee744d0f8dc Revert "refactor and split class"
+eb1fa49d47506fead033ade9dcdd7c7d54feb3f6 Revert "optimise functions"
+5172bc4cbe11406b4875f5692a521b72a52faccf Revert "fix wrong init order"
+b5de4067c16953e1c578ed5f8ddff4fecc4e47fc http -> https
+03c36812801b77e3f04f5ba951349dad3c5b59a0 Merge pull request #417 from Rotzbua/fix_platformio
+4e64049676ad0063d06014d6514abf5ca9f70275 fix platformio output throw grep error
+9cee699b2e84156840ef0d3c70ff4a40ef713568 Merge pull request #396 from dboyz/master
+c62230813e63d4f1c37b1c3ba8ce36d35ffe2612 fix syntax highlightning
+2fdb1543460438ecf3709dce6257ff60c1a1c6aa Revert https://github.com/miguelbalboa/rfid/commit/764cb6c25101947ad02ece3b1200d4f7a52dfe98 and https://github.com/miguelbalboa/rfid/commit/767408134cd35aca89e4b926b213bac664fa2b88. Fix https://github.com/miguelbalboa/rfid/issues/394
+c8b922c8a4c26baf1b66924e925401f6c265dfd4 add notice according to #299
+fb4b91ea30a5848465afd373ba47a10693fac4d1  Add samd architecture  (#379)
+d88dd248c4eca13d7a4b981505eb3cb28ffdb6fe add doc about dependencies
+b7bdc7f253e7e721f903bc18c201108237977a20 add doc about dependencies
+cf5e0429eb92f1a69af3423f78a951596a00948f bump version to 1.4.0
+4b27d4fb5f0c0cab7b4f28196587e4f57326fe12 deprecate MIFARE_SetAccessBits
+296772ea5ffe94aa899bf0554179e0b6ededb09a replace UINT8_MAX by UNUSED_PIN
+ff4f51f38bbbb92f61364a779ac01ee49de21d58 fix #293 #324 #347, hang of PCD_Init() on ESP8266 boards (#354)
+08a55da3aded71723b0d318d593bc85662080ad4 Add notice #370
+43aac2761ba6a448593a9eb7a97342c455830058 Update changes.txt
+5879252f823191d8ab87804f6dc819f7e1cf968f fix #355 possible infinite loop PCD_Reset()
+b239257694dc965d1bfe17bfe19449c8a971a5c5 add notice about working SPI chip select pin
+f02e3c091741f87a3cd25a7574c9cda73504b784 Add security notice about UID
+7a986cc5bae3d5e3c5a7913e2654800783439d35 add troubleshooting encrypted cards
+a23f5511bcb25d6fb24831de1fde5ccd80891948 Update changes.txt
+feda7b55f984c0030ab0eac2d573161815ce3ceb fix #293 #324 #347, hang of PCD_Init() on ESP8266 boards (#354)
+9ce56d53c92a64be5915a8700a8fad40758206c9 Cleanup AccessControl.ino
+767408134cd35aca89e4b926b213bac664fa2b88 add fixme for unused var, see #301
+04dc9e97c914824d09dd75bf7d6b21e0ce29a3ac Update changes.txt
+764cb6c25101947ad02ece3b1200d4f7a52dfe98 Fix wrong var names in PICC_Select, MFRC522.cpp (#301)
+98c43cde8fc30a7e08ee34d9dc0e58d4964f16b3 change boolean to bool
+3ef2f1a2f8d053055aca96d1eb3c65e69cb5cabe Update changes.txt
+f11d979809955154d226e3873bb9f8f62180bac5 Fix AccessControl.ino - rm unused var
+1e9ca2389042c8e160ba2904cc0d5b8cd48b0ab3 Fix AccessControl.ino (#353)
+fdb109051664dfad6d473442c1ed74f502286c65 update link to esp port @mmmmar
+19461b34d38871ba2722dab7a3a76028eddebaa1 Update README.rst
+269625fe58e5f7b23c9127480a7708ba4768c0e4 Update changes.txt
+ae13b02342ef56af0490f05e892b200f6080643a Fix infinite loop (#346)
+97ac8d389d137d423433305f1e8c293cfca8110d Grammar (#345)
+99747195f9f5a5ddb344415485f4fe2432ab0d4b Revert "workaround build script"
+5167d634d0f010011fcd838cf31d1723b56e7974 Update changes.txt
+313db9dd4133cc8cb13fb63bbd4169815ee17b2f corrected translation of hex numbers to decimal numbers (#342)
+2c4dd4306a80cda64a3fd691ac2e7486b74d3379 Create PULL_REQUEST_TEMPLATE.md
+3def3ab00095467a05f5f0b05841d528a058327c Add power control functions  (#334)
+616a9b1a69617046c0110908106913d34110fa46 Update ISSUE_TEMPLATE.md
+60e054d8140a433bdc971088773e9a2b104b7440 Update changes.txt
+e08a2dd53c2b3e6b50ebaef8b038955bd9d94e7a Add Fritzing file for another version of the RC522 reader (#332)
+d4aa80d88e31ee21e76f9a53622438fa18daa328 Added Wemos D1 mini pinout (#333)
+e71a86b7e09daaa759c181a35f74146869376235 fix wrong init order
+22dacb86fae1b81bb92af104e0de7dc1f4177112 Delete Makefile
+57eb6b9a3bce55547208f6d53df2efd2b1df9655 optimise functions
+0b258bfe0fdde6aa6ff1ecd5e7c1065d245541ee refactor and split class
+9c221e59ee962b1df65b439e0c5604e86766bbd6 changeable spi class and settings
+f82bcc40468a544ffda84074cdd01503ee1dab72 Replace NULL by nullptr
+a1d0a1313d7ae0c17d7890d7da336b071726c884 replace #define by constexpr
+f07049c24e80f69fa4c1a2a0516c1fcff92df69b remove some constructors
+5b77ff7c6ad51347c2ef812e3486b79810f432c7 Bump Version to 1.3.6
+8db7e2ba4f1c6a791f0fcfcef470a3aa76adf3af add deprecate and compiler warnings
+7f0f9e73175ec5d5d415cd870d129c7aaf8af97b Update README.rst
+c5781e75598e76167d9079051bb77d02bfc595a4 Bump Version to 1.3.5
+507c84f4e539cb8184f5122286774da2bd3ea3bc update AccessControl.ino (#303)
+9e48c308da4660c29ec84eacfad5e4146c8b3a02 Update README.rst
+e691dd1d26ecd7dd4f98e1cde883edd0caf87925 Bump Version to 1.3.4
+f526a42efc861a3e85262c862e83126c261457b4 upd code style of examples
+01f3c6143ae7764818b92093e3c7b9350ca2e0cb workaround build script
+530f8373d25fd4c2ab0fdab61fd607baa3ecd6de Created rfid_read_personal_data.ino (#304)
+6fb3869bd618901c411e38a738b564bc4cdd8355 Bump Version to 1.3.3
+69f348261843a575465e92e74bef13e46ec05bea fix several bugs after splitting class
+e394dc17d9b89f24cdb841433302a528c7ddfa91 fix #298
+dc25caf7839f7939e258ff44322162da254a0f0c fix #292
+5b6231d2774a7dc21d2f012bd75fe727d2848530 Bump Version to 1.3.2
+288ec59b7fedc7ca9d06e40298b14a3389340c46 Bump Version to 1.3.1
+9afdf70f81579ea3a8305751e18e703ece64282f remove unused function
+00fed4cca33bbb1188c9458567181270647d5779 improve MFRC522Extended
+54c137e0e8f4b6cb1670af5c69c24e193c35abc3 Bump Version to 1.3.0
+ede44cc620c9788f15e636a34a4997e9f3594c02 move source files
+4edd4acca694d6f4931b9f62c8b5cbeaf356d9be refactor class
+45b7e60584cc592480e94ea2cfc14868f3359331 Added RATS (Request for Answer To Select) #271
+c4e10ed549f9d5adbd6cf8f61f2c8f3f3ee0f733 Bump Version to 1.2.1
+637e81cabae273425f1329ea515cd201265a3946 removed need for reset pin (#275)
+12a00174b5bdea07c94626b82043cfa3c5e0c195 Add SPI speed option + Various minor changes (#276)
+5f6c8f9a0110ee31862df30e52e9a630dbe74180 extend travis build script
+93c16d16c7421140f890090039eecf4ad84e769b add type hints to enums
+4b6fe81b5fd594209a43ae0b86a6e1e3e950f070 Update README.rst
+aa9ac9edf066c623350a054461046e0e860b04c7 Create ISSUE_TEMPLATE.md (#282)
+3f9d6705a4999b0484cc95fd4f28464811f8942d Create CONTRIBUTING.md (#283)
+f5f5788afe1c856107629cdb3ab58b34a8f3e6a1 Update ReadUidMultiReader.ino
+dd9e941d73f352e3b325d4c32c7bab978a8e48e2 Update README.rst
+fe0e15ec293c49494e32760a901f03a93db7fff2 Update README.rst
+8d014ca908a50ecfd2d40802b5bd3749d963d9d5 Update README.rst
+0b91afb45b22f8e769493a60f35296539e9478a9 Update README.rst
+7bd21495a341fc07d385d44eb13afad0ac359f6a Bump Version to 1.2.0
+d4b358a8a2ae6a5ec35651d3fa1f697f2683d4dc update changes.txt
+1ea6406f35ecce2e4da23f38f659a8221b07f377 Update rfid_default_keys.ino (#268)
+d482061e96effbd7d0aa3f24e51bd75849a1e5cd Update README.rst
+5ae3e625132cd05a226b0bb560363a29e24b6f36 Merge pull request #259 from omersiar/master
+fde0d89ec15997dc9f8a22e480dcef6bc4da99f2 Merge branch 'master' of https://github.com/omersiar/rfid
+1a3ac748d069a49f4293ebe5db14ff2e4874b061 Modify int data types for cross platforms
+c1c8d28a0bcca1832c340f2595af54da5a493393 Update .travis.yml
+a88d7e1ce6fcfe940f818f99ef5310bb34850645 Fix #211
+cb0383e0cb82571512559f71ea2ac8638df8b0d9 Remove Servo example
+413f483ee81b0d355483e1b384612f2b9fa04262 Problematic Example Updated
+3f144d1d802a2381cf5240fcf86b734de837784f Update README.rst with info about bad components (#256)
+9dcaa7edbce2add32e673ea13b558fe817c0aa33 Merge pull request #254 from Rotzbua/use-fixed-integers
+0ba37f39e95309c0fcd846d838b9239e20e1aed1 Introduce stdint.h
+452728d2c15f3c340c4720449db2d170fc57b5c4 Merge pull request #245 from surr/test
+82f12a607ac6326c28d26212bc0d712b04c65782 Merge pull request #244 from surr/auth
+ee94e03906b5f496c13c2eef88d9b966c7c58e95 Bump Version to 1.1.9
+bdccc59ad6d6b4e0c4038546d8726bd9a6d35ce0 Merge pull request #255 from ricardojlrufino/patch-1
+bb9cc50e73fdb2730e8db11cfffb561309003730 Update library.json
+82f2074e402e955ddaa3a421a704924405577927 Autoformat example MinimalInterrupt.ino
+c6a341f7a378f4760658a5063db51b34c9b4a761 Merge pull request #253 from Rotzbua/patch-1
+19063a3698a12d976c6124ee8de53aa76f42fba8 upd readme
+8ef6b9084763fea50c76a79a6e79b91c809d4c0e Merge pull request #246 from prazek/patch
+09c5b6aa66b10b13de63c9d1f6a3f5aeb997d229 Add support for arduino 101
+03abe01b879e3217a210b2d0c729a211046a8331 Selftest completion
+76adf6e3831b19292e68ad30dd7363a4e063e38c Authenticate devices with long uids
+bec50c194e7fc1ce168d10feb1387fc204e7d93d Merge pull request #237 from danielcbit/patch-1
+fb500e9f1248fd53f3e1339bfc21bf647879b22a Update README.rst
+d30edf393b73759e0a597c486f67c352ba65e9fc Add Espressif ESP8266 support in library manifest
+310adc8ab20cc4074edaa2e1808139aea95e91fd Update README.rst
+2b8a32d6c6638961f5d7e88c83a5fc6dfff2e988 Merge pull request #215 from Rotzbua/master
+8ec23ca580ea4e8facee9b796b0a77c7144ea9ba Merge pull request #219 from asomov/fix-typos
+da439a20def27b6a22a30dca5af38f2d57d5c108 Merge pull request #232 from denisvm/spi-auto-ss
+4ee20074b23a9f8f5b428b737a6cd0da91c167c7 added SS define comment
+b86a09792d25455a620c4cdcedf1086aac35ffdb Get SPI SS/CS pin automatically
+76fec6f3811b80b834c0db5decfc056f8606583f add teensy2 to travis
+e90031305f02d457ff94bda519349ebcc519e855 upd readme
+cd5bca80ad181be9051b6b29b862023cc8ec9442 upd example multireader
+f023568955a01fcb56e2251c5a9c9a42e0ce8c21 Use the same term for self-test
+21d541635e3fde5d69c0070dc9573b7983368892 Fix a typo (cars)
+4dd8522a4046b36e225064b945ec96b5c17fa985 Merge pull request #203 from gpancot/master
+3503a149e24671c6b63a07ea3104229439d2b5e5 Update MinimalInterrupt.ino
+2f57235c875570bb173f62ce8badb93c90ff2d7a Added files via upload
+55feec4399021dd7826db2e693d081973eca1414 Merge pull request #190 from Rotzbua/patch-collision
+7f78c5cffef573c764482cd7bdffe32d91a96627 Merge branch 'new-travis' into patch-collision
+4bf0cb872fe1527205980c45e87f47bcb5721a76 Merge branch 'master' into new-travis
+e0900990814695455f667cb4fa1f6e528b6ef5f4 Merge branch 'upstream/master'
+7d4cf94e3837008ad8f34d625c5f9c1e57cdabb4 extend travis test for different boards
+fda5380a7a3fb8f23b908e6ea13b46adda8edc68 add output SAK to dump functions
+24ca93a642c7ffd0ad4de06412ef82759f9a1419 Bump Version to 1.1.8
+074d42a34a52f45753b8505550a852822ab669b4 Merge pull request #187 from lmmeng/master
+543d08f5d8995bc90b5b3db1349b406908e59188 make some fct static
+4f311b60f483ee7000bccbc77595e96d1e611fdf upd README
+2bfb6481c0a315d3d8382ab7e3abe0a99f4c1563 Interrupt example.
+7f6c9ebad24882177b1534bca38d1def3c103c45 Merge pull request #185 from BenWiederhake/master
+86fc3e5c61e3e709e502a17548840661460154d7 Merge pull request #183 from jkutianski/patch-1
+7fcc353411c7b83376fef04b4b71d964d8c6b1f0 Add gitignore
+8ecb98cfd5d69d62fd5c6b2e662408488801cd65 tweak enum
+8bcfef72ab73cbfb7b61ba24adc2ed8e7bdb9555 fix #182 PICC_Select - collision
+4af4db6b4a470bfcdfa4a646d72f0cca5cbe550e Update README.rst
+fc40e78a79cd1fe89804c30fbcd95f072393129f Bump Version to 1.1.7
+e9ea8b93357d3c3c25e57a22debe13a5677d8114 Merge pull request #176 from Rotzbua/master
+7014f3dc71fa38965a0ea795e2547e59116e9373 fix old return type
+9f6a078290e493f7671ea92593f658f881fec76c Merge branch 'stefanblommaert-master'
+7c9f07cd7475c3c21763ca67444fd296d3860488 Merged github.com/stefanblommaert/rfid.git
+b6c7a8b153657009f8fb3cc239ab1182aded5fef Merge pull request #174 from techied/master
+032d806a8c537aef5a567e526810b7cb80e36f0e Renamed files
+f799de3354edd385ab847bc9c1c41d1b52fc0a18 Merge remote-tracking branch 'refs/remotes/miguelbalboa/master'
+42a6f1b06c88f4b89e21632f9231bdc4781ea5f4 Update .travis.yml
+f5535c2d1a77815a892cfbf59c17dd3d99457a3d Merge pull request #171 from cuthbertnibbles/master
+5aacf801eec4e8d83db8649f25e986467ac6d7f2 Merge branch 'refs/heads/master-README-tweak'
+3e80ecea0a5792825bee989ab10382e7c6f823f6 Various Spelling and Punctuation Tweaks to README.rst
+2d67517399928b6a93f34fcd82e68abfc0117cdb Merge pull request #167 from techied/master
+4b7c52f9d68a4b0b0309b6577fe2cafd0451830c Copy from rfid cards with standard authentication
+356130f58df6d1d2a257c998d87a6e430bcf1e2c Update .travis.yml
+5710e45251a82b1df5833b5600000ebc30391620 servo folder
+dc17429af07f252a43a3d9b7f6f3f4cf1813db1c Update .travis.yml
+73d86f030426e2846cfd23d9276c9836a2e81f2e Bump Version to 1.1.6
+4c3efeb1cd90d84fd9ed35c23a19f5ad9ff754b4 Bump Version to 1.1.6
+77b6581bfe635e186fefe66f5b3bb3897b3b2245 Add servo.ino file
+c9becf47cbcef4fa6239ae45660082b586bd4ce2 Merge pull request #164 from Rotzbua/master
+29cc669a68ec78579329293d4715ebee203776cc code format
+f9da64e844e0250865a9d107a58e13a77afee403 fix compile error #163
+04d8300727456a0ee0e9af3f7ae9edf94035e60b Added examples/ReadNUID/ReadNUID.ino to .travis.yml
+4bdeebf4f930bd8115499a41865d1da96531bf1e Bump Version to 1.1.5
+fa913d07fc03dbd0cbbba80a624ef2e6d7796b5f Merge pull request #163 from sophiekovalevsky/kn-features
+efc81dfb43dcfd826f6036e7e909929074a151e8 Merge pull request #152 from sophiekovalevsky/spi
+e1a794856027f123d79427c113fa6e3ff2f77b1b Change comments to english.
+14f00d518a9cba7de04b50e049a24efe3af6d4cb Add comment to the NUIDRead.
+35ab8d04203937df0eae7ed2f59a8b0f86dce084 Bump Version to 1.1.4
+373041478b758e5b1bb03887795324c1316596ec Merge pull request #162 from Rotzbua/example-codestyle
+82a53bf041f4682dd7519ab28f8383dfc8490fee Merge pull request #161 from Rotzbua/master
+b73457cad10be1ca9b1be3984ef7b7f4008fe6b4 upd codestyle example
+40ae3959b24c4cdcfe4f752536832284592165c1 Merge branch 'miguelbalboa/master'
+f7f2d5d02dd545c4b27c855219437d2712d61434 add dump firmware version to serial
+51a38a04de5872ed8089263659bb8ba0c7e2d4df Merge branch 'master' into upd-readme
+ec31dfa010db49c224767985e8452695fa689502 Bump Version to 1.1.3
+9bfe7d8ecd1554a317dd3ef8381bd67381542a7f Merge pull request #160 from Rotzbua/upd-readme
+16255a1596c62dc921bb1ceb5162730d3a545772 Create example to store NUID of a different PICC.
+620453b6ca0459106bef49ca5560b8faf36cf5eb upd arduino ide library properties
+4d83339d96b6e4dc618cead9d397da76c4ca1a68 codestyle
+345f66ae0fbd954e585da768215a0d95c259ab09 codestyle and move new code to right pos
+8188a1041f250e1042d161e577436aa9e738d7e4 fix broken compiling
+8bb5ab0970bc257c9d7af07fcab752fbb8bb9367 add section for security in readme
+bee6096733f204425491f7a02b1dfc916371445b Bump Version to 1.1.2
+aa3c0b7e20a591124cdd21b4f4961f41c5f2afbc Merge pull request #159 from ivankravets/patch-6
+b443b11f915d58579447fa4e83557391e45aa2f0 Merge pull request #158 from ivankravets/patch-5
+543bb8a8b37b804ab834e33e6a69472d57907d80 Test examples for Teensy 3.1
+cbd64c281ffd89eec3e3398e5a25175376cbab0f Add Teensy platform
+fd70a83418b689707cce21bb1ac526757cb2c9fa Merge pull request #157 from ivankravets/patch-4
+e19b9a97d41c318662e1cc36fdd13abfeb2a1aa1 Ntag216_AUTH.ino own directory
+a9d8172a921d77c0e84294d9c5724b74d1aae956 Added Ntag216_AUTH.ino to .travis.yml
+85d24ae0dedbdd2ea9a592d99f9e9e4517da8135 Add CI build status badge
+c84eee116440cda8cd61f52898697c2e8d47f99a Merge branch 'master' of https://github.com/miguelbalboa/rfid
+6b4f445671d412cf95377f43a2ceac7aa9c6a4f4 Continuous Integration notice in changes.txt
+835177931e698cc3e2c0b0ef300ca49a458b8f13 Merge pull request #147 from ivankravets/patch-3
+d035c1fb9e70b85bfd9d9e8e9280a56f001ba901 Fix typos in comments as #100
+6cae7890ce58a32c65aee9d40b1def7a933fa695 Starting to use versions
+23fc3fd132f57c2326f4b005e45ff0b985d499b3 Merge pull request #156 from Gargantuanman/patch-4
+367f84b3841a85596460317d1c1b19a9a767e28c Merge pull request #155 from Gargantuanman/patch-3
+0bdca95c5310a942f39b497581eafe74e182c7c9 Merge pull request #154 from Gargantuanman/patch-2
+33b20a8c3386d484aeb61c8c552bfb96f4f04f51 Example for Ntag216 authentication
+72b1162780bacc4455af901acb78f88bda1cecf4 Update MFRC522.cpp
+143f46f729d6b5c39ca0d75b2e23dcce9cf7666e Update MFRC522.h
+d8072ede61453c6a22ab5b8a86ce85802357e408 Update MFRC522.h
+3c3ffa07e73b7d9da8794ab3713ae40f560b0b9c Use settings functions on SPI libraries.
+31f7607c60ffb39ed353b0b2e76af4ca8e194d7a Merge pull request #151 from sophiekovalevsky/kn-features
+e13cfd59a745d438c9adb00b504ca297d72ced88 Fix datasheet urls in 1k and 4k cards.
+3b515c7eb0639c466969aaded362a7c339d299c1 Bump to upstream version.
+bafa2faeadf890e6a5278986ae828811ad9dc1f9 renew example firmware_check.ino
+3d9ff8251221a8efe22420d91cd16340cb8483ab Continuous Integration using @PlatformIO and @travis-ci
+933080c87ca53a08e403b5efc280142dfc2469af upd changes.txt
+2284940b5815f5fde51cb28e7cce9ee80fcf9363 Merge branch 'miguelbalboa/master'
+dbdf4171a1a42c057c16da54feaa7dbce29c50ce code style
+44aecd0649a01e34a497cf915b805d62fc900a0f Merge pull request #146 from EddieNejadi/master
+60833a7f6a93d15a14ef320946d86439baab02c9 Added (MFRC522::StatusCode)  type cast to avoid compilation error
+8016aa7c98327ce6fa0ed69e1a3d2850313888f4 typechange: byte -> PICC_Type
+09d1362a128db81233129e10d71534fe1b9bf5dd Merge pull request #144 from Rotzbua/use_type_not_byte_2
+36a43dbb7063eae85857d57128f7f0634d29eb64 fix missed type update
+45bf05684ab2b35d7c53fe8dba238d4ce9030174 upd changes.txt
+00394472fe8755d61f4ab9b2f000d49fc6429151 improve code style
+36128c273b97d8d0c013fd5eb22cd065bb90f004 improve code style - realign arguments of functions
+e1b9d443f7116daa9e8e72e2b7a3746da808b7d4 improve code style
+5c502136b31d753ca745b0a64bb69754f8626c84 upd examples
+2a1794a0a5f11bda5e0a18f2ae14ce2fbd151a54 use type instead of byte
+4317d86e1bf536559df9b35eeb2c02f2b1aaaa28 Merge branch 'miguelbalboa/master' into use_type_not_byte_2
+8b94df1d7b6202d7266114b70778aba15787a4bc Merge pull request #143 from lmmeng/master
+118a03cde0fdce02611981518f7db76507a07e29 Better implementation of the PCD_Init() method. Thanks to  Rotzbua to point this out.
+0f5c7739af9a12c610a33bf287af2bee74510e28 Merge pull request #142 from mayatforest/fix_better_sak_handle
+88d5f9977c7a7e23d97d127757209328bec28175 Merge remote-tracking branch 'mayaforest/fix_better_sak_handle'
+ca56f732ae649b77fb3712a24fba23b727bc1fca Merge remote-tracking branch 'refs/remotes/miguelbalboa/master'
+dd3bd76f5d3bbe6c19fa5ef0166cf0886bca8079 New constructor and PCD_Init() method to allow defining arrays of readers.
+ca66cbefd82c8dfecb4dacf2ec68a7edc9ea8f83 Use 1-8 bit number notation
+f21ecec30d1541c9827299488e275bdbed58f20e Added clearing 7 bit in sak PICC_GetType
+272c59b56aeaf00aee20ca1fcbcf6388da8cfd4c Merge pull request #134 from alistairuk/master
+65aff9c1a653cb3125475fca635bfc471c2a7064 Corrected labeling and swapped GND and RST pins in Fritzing schematic.
+61fd8e5021054b76480a9abdcc29dbaf807a6352 Merge pull request #129 from Rotzbua/master
+4d5ebedc9e19038ae3b5f6859df5df32df791f0b fix tiny typo in readme
+7638634dbea804efed1e09de8fd8f9726f7fd469 Merge pull request #125 from Rotzbua/master
+da578441885b37cfa4361f4079857dc0383663d9 upd firmware_check example
+f54971647ed9c7c258cb7f75627f82dfc658287a Merge branch 'master' into example_firmware_check
+9ef7aff2e95ce33ead0933399322fc16d324ef3f Merge branch 'add_firmeware_0x90_check'
+7e9a17db4969e87e898d309143893cedc4b5268b upd library version
+a5efda7ab31fe9db3b84e5ee27c370cefd8b4bfd readme wrong pin at mega; fix #114
+247f8e1e846d3da8ff39bb25999ba2adc81d088a Merge pull request #120 from AllToTheX/patch-1
+e071335e4b4c2c2a1a7686590f58bd4c3cf25f32 Add return to MIFARE_UnbrickUidSector()
+36c56bb55ca7cc1a70cb70049f09e3089cc7fc78 Merge pull request #108 from anistor/t_fixes_for_STM32F103
+e5de879252edbe7a9bcf86c6da16a3e0842231be Merge pull request #106 from socram8888/master
+68f0b68a5aae725e3ab5a00678b719ae3a9515ff Some fixes for STM32F1 platform
+9a27fd7571a06add470e21644578c94611b6c8d1 Allow the library to be used on STM32F1 platform
+56da797e704a50fe3302843faf1b70c8247c6063 Fix typos
+ecb509a0d6a0a6baa73dab03f7b32dc36d336515 Fix invalid escape sequence
+ced2555bc47cfcda366370143850f177e83e6312 Added selftest support for FM17522
+2c12f1a9efa51150e03fdc5a226e061209cbf469 Merge pull request #105 from Rotzbua/master
+27211e0f23069359a1e1eb15a4d8900399d1d8f5 correct mistake at README
+c460250b74e55493a79f617dc8632d52f99c207f add Troubleshooting to README
+c6845acea52872e4115090ee7ce372b3f595fbdc Merge branch 'miguelbalboa/master'
+3eb9be087c8034f349693e06606cc6b1b04f208d Merge pull request #102 from Rotzbua/add_ide_library_properties
+4eb40e1b8db9d00938d5fd550a34e87b59130573 Merge pull request #95 from Rotzbua/master
+5bbe648b480ac0075592850f663f46dc5048fa40 add library specification for arduino ide
+7da08d8fd8b6b0c40dc9b10cf6288ad8d77bf3fe add firmware version to ShowReaderDetails
+33fc41a302c7f3069f902b3429fa721dd2bc04f3 add self-test reference for 0x90
+6e8f4e0f29c018cac127c3da2bd5295f8134918b upd doc
+b8136f2449b2d8a853bc271b56aeaa75f571ad3e upd README
+956df8e4344f395a671578e1e860e1250ed8e2ad add comment
+4cbca4bada4d1bb19a269337e5faf317733799bb move last remaining strings to flash
+33ef3be01304a3d8367e9b791a19c08677f9e0df tiny wrong comment
+b49790d40c1176cc800dbbc1e7415e8083ac7afc example for firmware check
+a7f6f7526d3c516a6d8f5f865a89a6887b085d58 tiny typo
+12a42c81431611204c813362810d2c7f8cec3a48 style improved
+ac12772d07672c3aa912251f73b332b6118ca264 add .pdf of .doc in documentation
+e891ec00330ff21b3d094616a1fe33787f3aee2e style add missing tabs
+2dc9124ffcac018244f11ba784cc7083278b9ae0 style space to tab
+56d2777eb3da4d201baebf37498b4fe576260e15 upd keywords.txt
+cf7d98e2ab2dd7d27270fb81f244db542fb4f54a Merge pull request #90 from Rotzbua/master
+038badba6c4b2f2ac5a422313bddaba6bc5c809f move self-test reference from ram to flash
+d0558e6079fe744eae6431a86d484a598b72e484 Merge https://github.com/Eckankar/rfid
+26f95497ae96d1c8207f2b54b3adf6e9336bb174 Implement method for performing self-test of firmware
+ffe097628257932504ce3ac4cbf4bb489b06e317 use F() macro for return strings by functions
+38d72643538b898975e3c223d2e8f15c37b10256 Merge pull request #86 from Rotzbua/master
+d4092ba6dcc0661fad03022e7f38d22f06b42040 Update example rfid_write_personal_data.ino
+0ccfb06aa58d75263e852185d45c937285a29465 Update examples, use F() macro
+6f4b6c4007e54b4aa420260e1ce6fd27b44ea83e Merge pull request #83 from WGH-/fix-antenna-off
+bbe86fcb7b5f53fccd61d2f1ed4eec495a746d4d fixed PCD_AntennaOff (wrong register was assigned)
+5a6345244aeb8dc78bc6e1bc6cd62708dec98cdf Merge pull request #81 from steelgr/master
+d914032c7cb9e1ccda19e5e83f7a09aa070925cf Fixed some typos
+68ceae37f4c72f8505c7aa16d39dd7065094a438 Merge pull request #80 from lorneb/master
+5b148a2e7245acb2b1f0454026992e3b9dd9b0d7 use F() Macro to move strings to ProgMem
+4bbc8eb46af934797b7969c98d11dc9749e91b40 Merge pull request #79 from miguelbalboa/revert-76-master
+099050f755bc05d5b0893d295336b5d600e6f53a Revert "Move strings to PROGMEM string tables"
+857d4c2bf34f6ec685d8e2f43d7a382353678c9a Merge pull request #77 from lorneb/revert-76-master
+8f4d3cd54257d6fb5c8da5fef6464b5eaad41bcb Revert "Move strings to PROGMEM string tables"
+e04a58478281d42856bbbd074ef0e69767f3fc11 Merge pull request #76 from skurella/master
+605a1d755f3762e037cb7545c5cd868794d66ce7 Move strings to PROGMEM string tables
+cd1bc210e237612ec614391623b3eb14353dcaca Merge pull request #74 from UnKnoWn-Consortium/patch-7
+32058130f2308f7f8ee649967873509c0bc18531 Merge pull request #73 from UnKnoWn-Consortium/patch-6
+c435d3de0520efea19333d549009062379003368 Merge pull request #72 from UnKnoWn-Consortium/patch-5
+95e9eccfd367f8b784233158dc8d8f61c55e5e15 Merge pull request #71 from UnKnoWn-Consortium/patch-4
+47d5c96b04b6a007057c27bbd243f8b9a5d7baf3 Merge pull request #70 from UnKnoWn-Consortium/patch-3
+d5c61a2184bd9400f2c45ebdee0104fcb70c22d7 Merge pull request #69 from UnKnoWn-Consortium/patch-2
+4d6227edd26fcce4ad9e484b1a6cc00816eb7e5b Merge pull request #68 from UnKnoWn-Consortium/patch-1
+5657a16e1542a39973e8c2947d15645f91db0e00 Update MifareClassicValueBlock.ino
+af323a12abe02f6ad7095cca18536fc6d1791219 Update ReadAndWrite.ino
+0627e6e9df5fc1648ba98a123b568ae6e9d94112 Update rfid_default_keys.ino
+4a58153fd5b5cef8688482c6d3d5607296d4dcfc Update FixBrickedUID.ino
+70bff5c1285df6da24b8fc15dd8ef52c2775ee54 Update ChangeUID.ino
+499e13d33cff512fafc975f6a40735ee5e45fa21 Update ReadAndWrite.ino
+993076a0c819da21d5dcacfca871908df9c4c63f Update MifareClassicValueBlock.ino
+dde29687c2fa5e1727d89bd580719f6bb8df25ec Update rfid_default_keys.ino
+e4a25489b2d47c0f9d6b55b67d10d0697c399323 Update FixBrickedUID.ino
+43209541ee13409c53303eab5dba484f3e00c3d7 Update ChangeUID.ino
+90729874011efa50d547c184d805bde9e7f5d246 Update DumpInfo.ino
+19ada3f64a65a7e246ae30323385dc9b67d110bc Update DumpInfo.ino
+2f97c865fbfe13b5c14fff4986db65c1b1793bdd Update README.rst
+39d820b509cfe517385989e029fd95efa3f7e218 Merge pull request #65 from Powder/master
+27b505b89bb92b75c451e9e51fe427b06f433671 Update README.rst
+cba5551e5381481b48ec38a657584f43333a400a Merge pull request #64 from tjclement/master
+df1e6fa6df480082bf10c70d0e8fb4e8261c1bb9 Implemented functionality to write to sector 0 on UID changeable MIFARE cards, using Chinese 'magic sequence' commands.
+b1240e9024ece9ad9aae0dbb3fe4741a8dcadde8 Implemented functionality to write to sector 0 on UID changeable MIFARE cards, using Chinese 'magic sequence' commands.
+16922548573495f387daa9794d00c7b92a7ca818 Merge pull request #61 from mdxs/patch-1
+3ca768d44a1b018493ce2782322d7f9d0056195f Merge pull request #60 from mdxs/upd_read_and_write
+3d6d81defcadeebdcdc3460ad6099c64bce9bc11 Fixed typos in example
+b4fd5f74f75db61c9660a43c4aa7dd3c1988d542 Updated the ReadAndWrite example
+3b96164ed6cad43155ab561be20afdd2ac51e2a8 Merge pull request #59 from mdxs/add_value_block_methods
+a5545ca0cecd7b1ed957fdf4e74f0933db1418fc Merge pull request #58 from mdxs/add_license_file
+16a035c89cc15676988e4ce1da60ab031e8a7a8c Add get/set methods for MIFARE Classic value blocks
+87fe23281781178680b23f2e43f5904c8928e957 Adding (un)license section in README
+26190078a8f5e081e30072714cdd5489a6af8b62 Adding explicit UNLICENSE file
+18af1479596bb6fba8eb81acbcbac921f74944b7 Merge pull request #56 from mdxs/del_rfid_dump_block0
+62d8a806e414bfa89117c467e7ef53a8e892e297 Merge pull request #55 from mdxs/add_pinlayout_image
+20455d9df8934c72b42ef8a194555656b1d110bf Merge pull request #54 from mdxs/add_fritzing_images
+88cb66433b0b71896328c1a3c1e7353d8ad0b24f Merge pull request #53 from mdxs/upd_mifare_classic_value_block
+80d4eb7392402c8c02c16a7acc0c51ed29bca722 Removing duplicate example
+7701a19da786a0e0811aab590b869f195c75b629 Adding RFID-RC522 Pin Layout image
+be0e1e9212d3a1a823712e4628744da3a328f584 Adding image for Uno with RFID-RC522
+667a20fd22e35e441782d484fa7afdd913b2702c Adding image for RFID-RC522 module
+0d8d9a4f860a196f6760c8363d6023bdad79bb9c Updated the Mifare Classic Value Block example
+966e4d19081d0fc169d034db002f6f6df89ed13d Merge pull request #52 from mdxs/upd_default_keys
+8bbc999612eb4ec9471cf53e7e0bde2eabcce4a9 Refactored and commented Default Keys example
+f624f46b645f0f5d8e23b5190d482a2212fa74d0 Merge pull request #46 from mdxs/del_todo
+6f1c5703fab442238b9ce75f59bdede36b2e4d83 Merge pull request #49 from mdxs/upd_DumpInfo
+f855b8eff324c6901e3d5c29a7093ba7a9c7c8bc Merge pull request #48 from mdxs/upd_readme
+638773d7e168ec14ece07857b94e5112b5d96f83 Merge pull request #50 from mdxs/add_fritzing
+81d3b24224ce72cd18c59dfef830878b3d6d891d Merge pull request #51 from mdxs/fix_typo
+ec25a81cf1f0525129a054985b254a138af16a12 Updated pin layout: incl ICSP pins for Uno and note on SDA/SS for PCD
+623d04744aa74d2a81292e81ce81b4803e45ecf3 Updated comments and pin layout
+9badf084d7b81f93afa176468c564dbb1f4b8978 Fixed typo in comment
+0a042dc879e53e11db99e58d40350713779745b7 Adding basic Fritzing for Uno with RC522
+38355d58023f08c1222413e0f7a4936eb09eeb79 Adding a RFID-RC522 part for Fritzing
+8bf02300b3fdc0cf0e6f2b77e8b58ad8ae963056 Updated the DumpInfo example
+879a6d8c9322e0901a15c62c5ae27ae8a040e603 Updated README file
+92544cab8445264a6ac54390ae6da68caeeb86a5 Merge pull request #47 from mdxs/exp_range
+6db00b8fa5fa4f6d9ed60e597cc6ff38ceecb9e2 Merge pull request #45 from mdxs/upd_changes
+b2eb96013489b711ad2d4f259ef511a67e9caa17 Merge pull request #44 from mdxs/fix_typos
+1ee8cbd7fdc556ec832eeec8e4329c2cfd0d89bf Adding AntennaOff and get/set of AntennaGain
+df023ed5086077a42fc243eea3d44262b692d512 Removed TODO.md file
+c7662631850e32cbfb9e34c10ee970eed122df11 Updated the changelog
+a9360d602210838461eee1c54d4f427c3adc0a65 Fixed various typos and whitespace layout issues (no code should have changed by this commit)
+0ee8e53b4a5d37935a7d4e223b7a9e09085dfdd0 Merge pull request #42 from mdxs/add_make
+300e7b185d1107144a7d10ebdb7bfc03e718cb68 Added makefile to help package
+09efec05f24563f5cd5d8003218e9eaf6b5858d8 Merge pull request #41 from ivankravets/patch-2
+d0ddd3df0231c064bd89dd2df711759337d5a5c7 Exclude "doc" dir
+18117d000103dc154a6e6874850b2ea5ad8e2f9d Avoid trademark issues with library name
+9eb131961c6b4f907afd1c0d2e2dde7ff604096b Merge pull request #39 from ivankravets/patch-1
+9db48240e98e11a45907be0fdb7a4125bee9b348 PlatformIO-based manifest file
+b5322316aa4e9a604b1d969cc6013fee65070dec Generate the new README.md
+02c50be328b2e3af2643aee9507df975b17380cd Merge pull request #33 from membug/master
+314ef64af6c8c91227539d01f30b4b19deab9c5c Merge pull request #34 from mcapurso/master
+589583fcfda08dd0d6cc68f64d3922ef241b0e15 Added title to manual
+da11b84da69867134180c3068ef006bd80c642eb Tested documentation with Microsoft word and LibreOffice
+b7d964acc61138d78f0675825789d5902ee0af79 Written documentation for the library Three new examples written
+a8dc44e13a348cb33dae3028dcd5c23f84a37445 Update ReadAndWrite.ino
+07300f447725349770cf66efb1d75f2db03ef406 Merge pull request #26 from WA4OSH/patch-2
+7e2b6b7529b1a923d6dd49b496a5dfba6ccf255e Update DumpInfo.ino
+2366fb1abd17fa2ff6d9d5ca3a30e5379e5b6539 Merge pull request #24 from WA4OSH/patch-3
+791df522a1934dc3fad0ef269e08553c1440a0bf Merge pull request #23 from WA4OSH/patch-2
+f0e564f714a65b14927dd8a4267ef34f9a631514 Update MifareClassicValueBlock.ino
+08ea6aee0a3656dc613f0ff3b10ca35198059e20 Update ReadAndWrite.ino
+9b84a7d381cc62dfd698f1f9116764a593c9cee1 Merge pull request #20 from HectorBravo/master
+8bb06db299560138eded3852c1a87900334244bc Fix resetPowerDownPin initial state.
+3dbfb42d6efefd611046eeced89267adfeec6818 Merge pull request #19 from jstck/patch-1
+6887ab23c63c6daded2e8b48439a0feb5a979131 Fix chipSelectPin initial state.
+88f9358fa36af50367ae005123ad156b2ae12fdd Merge pull request #15 from TonyCallear/master
+525659f90c625b0656787598f4d9750ad7dbb27f Put examples in their own folders.
+578c0bfe35ea2cecfab2fc048c4e93f7d36eb6e5 Merge pull request #14 from TonyCallear/master
+81ff84506b7563344fa3682da534f3574c6b014c Keywords.txt update
+44a56c0f24f8d950c091d9a5b7af3e269e9cb407 Merge pull request #12 from NicolaCoppola/patch-3
+93c9ac1c3dcdf7b9b5d4d3af9d9191fbde02a648 Merge pull request #11 from NicolaCoppola/patch-2
+4b581d509ae1cc06816280c82a6bb6df2569df8c Merge pull request #10 from NicolaCoppola/patch-1
+c0ae947084ffb1a5505c01e33d40ff237d3632f1 Merge pull request #13 from NicolaCoppola/patch-4
+1345a3e7a0f9588072de31caed5e09e32ce1a77a Update README.md
+467fb246f49f69d94d6cf1fb1397148fc64c7d9f Update DumpInfo.ino
+2a3a22d706d26339fd7997c2cb9dca9669b5eda9 Update MifareClassicValueBlock.ino
+280f3c6fdd3479aa4c2c4f02bd40ba99c46185f0 Create ReadAndWrite.ino
+41fedb9c1a0fd2e8ce097376aae68c353e5240d5 Merge from Sthing
+b6892aa01ec73482fe922dc36e5ff220b1b284d3 keywords file updated
+bf2dd9d034207747057d873e4d35342b866a3974 Examples replaced.
+fcc325e09fbef7a6c35a711ed8b3e0a5154f6603 Filename in comment corrected.
+a3bd6ff2e5d406b2d6a67794538ba1e555e1d599 MIFARE specific functions renamed. Write for MIFARE Ultralight implemented. Cleanup.
+cc1294aa79fca4d07ef2bf1859c05e964fda846c Major refactoring performed. Committed now to have an offsite backup ;-)
+a159de6c556d94122a88f0b57fad20cfdb8416b2 Merge pull request #7 from ljos/patch-1
+9151cbf25c1a9f7fe68656525039234e6816d2d0 Turn of encryption when tag is halted
+9fce44f5842b32064620f949c889e030620865ed Merge pull request #1 from aiolos/master
+4fb35513573d7871656f4fb993140d470b91649b Update README.md
+f5a654eb4a6b557ce4562e8d98b9aa05f4dddb02 Added a small todo list
+8bfb620e421b4a74a7144a81d2878d502856dc4b Added extra example to show serial on lcd display
+d02a05cd22c754c2bd8cefc29339014ce628170d Create README.md
+5ada448fc988c3d1e92e7f87c208caa38b7549ba A few changes in the examplescript, and renamed it.
+54e32172614cbc77db0c3d74dade5b16f0d512f5 First Commit

@@ -1,0 +1,57 @@
+3bfb1ecd2d4563a5b48a02b97fec97a9dcca7417 Updating to be CMake project, and updating the InstalPrereq
+ce37be539d6d522d7491062d42b5494a72dd1d2a Update of packages to include Arduino stuff properly
+ddf39736376610305956ae4251a51e17b844a146 Lots of FT8XX fixes
+4980200e1fc430f2357d6e455da00feb3a452fef Fixed bug with driver getting lost out of scope.
+1d4e939a014453342bfeb25de70824e0c86500cc Added tColor define to deal with 16 bit vs 32 bit color variances across hardware.  Removes a lot of ifdef confusion
+fb84b08c103c80a58b415d63dcf1544aec632a9c Fixed some nasty bugs in WindowManager and components
+27e9254bdcd73857bfa576256d0631e33cead66c Working on window manager
+396530d2efdaaa19b01d3445fd5cbb25eec5b0e8 Added some more controls and bugfixes
+147c677b4ec50c17f3ef68fa07aee6becadcfbcb Added ring guage
+0b7ccd37acb56d779a82a434d5305d17efa9e276 Added Alpha Numeric Input Method
+1ee883da8ff1b01535904f8202a6ca0975070770 Completed Numeric Entry for RA8875 and some fixes to Sunken Panel
+64272e751cd2e78b7aae068c09fcd24d9c3cef9c Debugged for RA8875, control display works
+61564e5d022db886072ace4d53977e5f700f91d6 Adding more primitives and what not
+2ed780cf12036211139648f058e0c9598068a743 Added some more primitives
+4b14673ef6c41843b723ce45d266b6945b9b94ac Yanked out Theme, it needs to be rethunk and moved a bunch of code to something more generic and driver based
+fa37e5853bf461a9e87111045202aa03eef6e6aa Updates complete to IFDEFs for Driver Model
+64d90a3c7faf57cb8446876305b556fce86cdb7b Long Overdue update
+4ec3d096e189375680b9986ec2ef2139fae8778a Huge amount of refactoring work, and inital checkin of Arduino Code
+28d592812f78d232c88821bf4b82924509742ea3 Syncing
+d847fe4817ce3d1811b6d9bc60923cd73377f14f Minor update
+228a853aee5b4262169f6e6530a521d256c59431 Moving a bunch of stuff around
+9a04c1d10c7a258c857d530047423f04abb84e4f Updated to use MySQL for speed and remote access
+8e8790db306961288552eabaec0bd187eeff97f8 Fixed RobotDaemon build and started skeleton
+cda00f86b7e266aca93e404e5e1907bcff5bb4c0 Adding simulation and events for replayability
+5fb03942ec927c5452df235f511c406a4eba3e1b Merge branch 'master' of https://github.com/rohmer/PiMower
+26e2955c2faa336c2efc7b97b376a38ed2c0c159 Update .gitignore
+d99dc386e4bd45c2fff0af59955ce9c41d9417e4 Moving a bunch of stuff around, getting test libs to work correctly and build to work completely out of depot using makefiles
+a5d3e59b8a06cdc72d0d141eb708757a6dae2d02 Temp Commit
+1672ec1c2808882373cc548ed1c5e520bafa68a5 Updaing to install from make files, added installPrereq.sh script
+9e13ff3a80fcb77d2825be8f214e03cd4ff409ec Getting up to date on Unit Tests
+abdb473517b22570f0609a68887a34d9b1ffb5d7 Modified Database to be multi-thread happy
+ed5e8e6ddcf65f2216cc75c62f799fe7b0992cc6 Tons of changes, including moving the Database to a singleton amongst other things
+383eaf754d20285d46ba56829ca24503061f382a Updated LawnMap to properly store and load from DB
+ee2442ac4b2b636e8833a869ff171d3c8d766204 Added pushing map to database
+abd140a95b538d23a5e0517a5c7ebe6b5b126d41 Merge branch 'master' of http://github.com/rohmer/PiMower
+9813b6c55d25f9085b9878b74dd957c5903f59ba Weekly checkpoint
+39b52c92b8002855b1994a1157e3a1bb05779657 Arbitrary checkpoint
+b31119386496265bcb5a1776ac6f0c09277405eb Delete _config.yml
+32d6546d6093a2a4d7620f21482c91adde7fddfa Lots of changes including arduino/pi connection
+4fbd4010eaf4f47e23d988804b4e0a9b74921227 Lots of changes, including the Arduino/PI connection
+618cee836860611282049a2402420d8cd5ab081b UI working up til now
+7725d1857c5159bc1b8e3b2ed7e71bbbac914349 Added a bunch of code and debugging UI functions
+21a477ee5d0563df4f77b9d4ada2133f2940a5f9 Adding a lot of UI and LCD work
+11d1543de1c781ab7075267e7c5abb03cfe0a831 Adding a ton of stuff.
+5ff71379ade299374f22f7e8481e2fe9ac18275c Added a ton of stuff (Drivers for St7565 and DigoleLED, as well as beginnings of UI framework).
+05db39bbf7df70dc6386ba878a317bc6c397c2c0 Update README.md
+5938096462af0ab1eb2692d0ca7c198021dd0afe Update
+c6aceaa24b097a0cef3db74b90087d6ad5703a91 Set theme jekyll-theme-cayman
+3eabd165b57c4b57279f8e7948ac781654860659 Refactored Device/SensorBase to make it more friendly.  Also got DeviceManager Enumeration tests working
+24450859fe402e78c9b67ddd1c343100359cc78b Fixing some issues with github repo
+c883bb2aa45be884feb324be9de60e97860b45ef Fixing so it will run outta github
+7fe12fb959a903faf556643291a4881dbe8281b1 Removing CodeDB
+614f5be5810a6d3cd48994970ace558fbc90d014 Removing unused 3rd party
+efb07aee617d211d640b06b5b2d69ce72359bebd Updating
+1cda39a16af07ca653ccd87cf77f50b4fba844e7 Continuing Initial commit
+2c8cab64420a564f426d0234c83b739dcb1db8a5 Initial Commit
+311d5fb4b3c6b479f001e2d4c2de57ee8fe7dd91 Initial commit

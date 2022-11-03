@@ -1,0 +1,345 @@
+04cbc606a849897aa3296e9c4e2ec019447250a7 deprecated func.
+2c07e82a9d4bc8d2a99f0a9180002e36dce2399a removed unused code
+e274fb5bcd04bcc0e878eb5fc64cea40c8fe7b1c fix for backward script compatibility
+7c6a3aa2a2f87c2beb1528f81fe4dd7e6c1317c9 some simplification
+ea9316d5dadae5487b251bf505aafe353c65eee0 correctly reset scene object's pose after simulation
+058ba3b7a23062435a3aa2c8d3eeb7c20beca57e refactoring + sim.get/setJointTargetforce
+d6b34853dba2dbc72517de3845b4bd9db577eaec sim.handle_world
+2759e3887031bf061797b9b47aed98f7ceda4d6f bug with vision sensors
+c46c006702cbb61fe2729b6dfb017b1c4a1eaf52 sim.shapeintparam_sleepmodestart
+08a7998f3c3f16f3fb0b9552ee6a11f3a835b309 fixed bug with drawing objects and multiple front-ends
+e428fb2a432d67d47faa2c2932acda664059217a drawing object bug
+615e8b84ed874cdfad86350a0f9f2e472493c419 drawing object events & colors
+c32d69f00658184ccccfbe5829a9f0bfac332ae8 cleaner calltips
+83123baf6ba6dc6588b3649c7c6412eb6e7f3a52 deprecated a few funcs
+b4dd47c88e52b54f081905cd943ee326b49ae131 sim.scriptstringparam_text
+4e52f36b890d76a80157f6be4f284ab94006aad3 better statusbar text formatting
+bbf0a1fd5e7e00c713b6d4b12632dd5f8d8d52d7 better calltips
+f25cb5136451fa4bd907fbe692abd691dd95f2df removed mouse manip. option rel. to parent frame
+f63e28793ab7f53ff3dc33dfbeda59b4bb418de0 removal of unnecessary API func
+9c5c97adef5ffebb18f9791fdc85b2602e85ff2d removed unused function
+7fde18d8ef6183e895fda0f13fd2eb0537ddf85b improve memorize unsafe action, and also for sim.launchExecutable
+50d628b2b00c0a7453fdf7288ffab32bf3920681 memorize execute unsafe
+fbe3496718d609c823f2fdf3c24e5af4726ecf8e normals --> quaternions
+7cdfa1b53fc6b8baa9b3040e07e81cecdce8785e various refact.
+ffb640d46642747146e9530082a4cfc337979469 pass luaExec as multiline Python comment too
+1802252a3e14f3b90e0700c8c0f8377f2a18fefa luaExec and include directives
+07ed0f4843294317074ce883973524e208046295 correct language setting for code editor
+2ced74205f7733ad6e093db93d3c3f039934a332 added sysCall_ext
+87946ad32c71b9861db6ba55634411daac424acb old type Lua script are not detected if no system callback func is found (not just init)
+3d658ddad75b4bcce5fc7182a057c6731a13a360 allow adding python default scripts
+b201f299dda339065903b98f1e4d9d84e8430b99 cleaned Python part
+6e04b449a337a28bc9c680cd23a9b1a66f1a86c3 improved how Python scripts are launched
+819c5c268b68ed180476c11b3608959101b48b4c optional code for Lua instead of Python
+f50608cfe523c029a26c53caf8b26db0df12f7ea optional instruction for Python scripts
+ce78a6f224a49b0b6eae5cfee09de83e75818174 bug where a few plugins would not be detected anymore
+d7019c36a15228df38e9ffeb3249c265c2a6285b ruckig functions, handle errors correctly
+434cc2089bd9c761fddc64f7a2d96b86ebe47c69 typos
+68cc1a65fd336b9b50de4732763a7c6a37b3778c sim.get/setScriptInt32/stringParam
+19ce3e531b18d1f44428f1d4ef8a34c911c12431 func renaming + dispatch pending events within sim.getGenesisEvents
+4872f1f5052f4c4532bc5d25e27790fbce02222d sessionId event, bis
+9d80a2958da37c4b9a183af69fe5ebbdb2e0f243 sessionId event
+bbcfe07f94eb6624a10cea39d0825d8cef7370c0 updated copyright
+19ae0427b71849db10abcd8748c5823599c53eb5 simCheckExecAuthorization + pythonWrapper(externalPythonScript)
+30b8ecbebb864c02a9822d057d668cb488e8f335 another parentUid
+666cb324c09c049aae84009bb80f713d0af00ff2 explicit uid in fieldname for events
+ae76bf4f480b01237df9dbb81e790eea0d338258 var name clash
+372dc3992d1226d2b402711259d372aa095e27b9 remoteCameraMode event, sim.pushUserEvent and sim.getGenesisEvents
+f5b128456d52902e006736e677ac76482133397d default python loc, shape divide bug fix, etc.
+e966de0611b58aad0f75295ea3b9100f4e32542a function hooks fix and object color event fix
+06c8cfdedb1bc7481984efb85c253aba205c8d1c new API for physics engines
+96c9688dbaf42abe843e18681d82197e0250a5f4 do not ignore system callbacks that have hooks already
+092a3dcd34cdb6e238c36f8db3f47648513d59bc bug in setObjectParent (with non-zero joint as child) + when func. hook registered, use new calling method always
+c1100e51f0995243dfd79406fa2139e528fc0f3f code editor now also supports Python
+9029b382242ed36803c72311ce05333909abf50a Python support via wrapper
+e52a3023e23905f48d215a844df0cf5abfa2cdde sim.getObject, sim.getObjectUid, and sim.getObjectFromUid
+d425540d3376499e9a17ec0203adfc6857f14118 sim.buildPose
+22e57a98fc775091c0599e38bde6d6545350915d bad bounding box after scaling
+d1d08558124bf499241121d2c0f67f78903cca9a crash fix with layer dlg
+ad2f17dbeff2d3ddbae9b140b31e979db9c5cc8a sim_syscb_beforemainscript now also called for child scripts
+eb23ae7b96a171014a6dca1ab3a15a9bf6b06037 camera tracking via API
+245528d6fa9009c92b74e8ca28e2f2b1a8462198 preferred axes event
+0fcf5f0da6e750c2c5a30832597cb14ac24849e2 push ordered rebuild scene object events
+1c1a111bdd6c659892eac5135e0cb9adf8691bb7 refactoring + sim.saveScene/sim.loadScene to/from buffer
+f21c2400dda6d715bd0a6d964fb08ae8965bd760 sim_stringparam_modeldefaultdir
+33747702b65dbba5a733b57b444b1cb9aefa73e4 scaling event for shapes
+cc104ca5bd0a887afea993f39e965f533bc88786 rewrote custom data, kept old for backcompat., added object custom data events
+2e84b7c6212a3a1cc9f217fc8734d8f36b33d222 further refactoring. Added 'modelProperty' event
+996316875afe5776f0b024fbc518da211629af5d additional simplifications
+16f00b09b2f81b3d808a33f608a95c158a526262 refactoring + camera+visionSensor frustum volume and show frustum event
+7d81b3c2f7d3efe0fd49580f1c5358d1eaccf1b4 size/resize events for all objects, octree events, etc.
+f85cd76b19270e676c06966ffe9ea9179cdaaf7a refactoring + boundingBox event
+bb0d7f0d3a8d468f01c63269ef8301911c7192e7 bug fix for static, respondable shapes
+366bc74b61dc0f68faf247bc056ed45e885c40ea renamed API function + refactor
+3b7194227953cb96f79dc932731a99772184807e some refactoring. Will not work correctly with physics engines plugins compiled for V4.2.0 and prior
+d146bd71fa51c5971250bb09df167100703726a5 refactoring + object movement events
+63332f2bcd87b779edea6284577ee41b7012c084 refactoring + renamed event 'sceneChanged' to 'environmentChanged'
+3b5e86b725b1b55aea28cee8348ae49b17df6972 refactoring
+47d5dc23300b0709246b66bf3d42c7ecdeb6ea1a texture event fix, empty events fix
+b90c7cac5b7d338e88105ef5c8629d77c9eb5c74 refactoring
+f110a8d853718eb718cc14702135f7b95fbe4258 more refactoring
+9a7cac839182b4698b251e517bab51c2169b6084 refactoring + sceneChanged event renaming
+0c2bc04e9a1ae2e4ff8299f826f42b48758ee06c refactoring + ptCloud alpha to 1 + removal of edge angle
+d76ee8231b0d3d304c9eb8feaccdd9a018fa793c added culling event
+c6691c7874585e38e5828877d7cc8e75664e19ca showEdges event
+2c3a524dd6b0968673939fa9ac90280324f746aa transparency event + fix for drawing object events
+f0403a4dae7299687b5423129e9927181cddf07e <= instead of <
+89229a7e1f707a54220b5e9a5803bd7e35aecc5c fixed drawing object individual colors
+241245e1cf9ba6fa37938e3a7d8c8362ae5c8b6f improved on drawing object events + old pt cloud events
+ac100f2ba4ca1f6802f7cfa4f25f401ce9f19d4a drawing object item events are now in rel. coord., grouping/ungrouping/merging/dividing shapes will trigger refresh events
+f5d9fa079220fbbb4857e03ea43daf10f37884b4 events using almost exclusively uids
+59c0a540e8f25c9e4f3dcbca7c71cde7c358e66c include
+4dac47131d2e72ef073d8e101a6ba5b90eb6b50c duplicate points handled on CoppeliaSim side for events
+880957ed155610d55ee3cc0913c893ebfaaca60a drawing object events
+ee4299559b5feef6efbde5f4938c424aa0d3f3be bad cbor encoding flag
+33e4d67210df11e2c2f064275d02b6442dd8796c sending raw texture instead of png+base64 texture
+8a1a57f167be310e969ab7df4629d70388aa5839 sceneUid event before scene rebuild event
+bd18ad88b6e588d669665e9f321f8f85fd136572 instanceSwitch + sceneChange/visibilityLayers events
+b33eb4c4b2ffe3a4772ac786497a051cba7c893d fix for events with objects not yet in scene
+c5da2a1d313324b630776e43ced81f2747405fe9 simSet/GetObjectColor and color-related events
+4e9a30e6fb091651f1d7828038adfad23f124f61 reworked events
+9b6e06682ac20d24a7b5a16b24b1800f2d530ccc dummy + ptcloud events
+4215ca06261704808e1c8e07b3634ea88710cc6b event merging bug
+7184af3b34c6c0ddf5d0a4a2fac9e874dff743df forgotten parent during obj event creation
+4d02f0e7308edb39931a1a63df01df54276e85fb again, joint pose event during creation
+fd1821c46fcc8c6b7503f7cf50732a03e04696e9 joint position and quaternion events
+11ae07dd8d1ac962124035530b3c512ca7f8f706 more work on events
+9b6a328c12f2467e7291865a7f9ee2d197bb956a a few additional sync. messages + refactoring
+7e0b44ff2feeacd080b64b4a850a3a437053660f forgot copying stack item property
+c476fa12c99c95af59689a2e24db9d96afe0061b mergeable events
+db53b5d57fb06049087170e0668b0c8674b1cdec forgotten
+9a5a02fbcef3991166a4e21f7dc501e08592a50c modified messages, cbor coding for testing via sim.test('sim.cborEvents')
+18b692ccc86251970cb92237030c10a4ce6f753c crash
+deeca31e6f02acd99bfd94ab063eaa5500d02179 sync. messages
+8dbab51e5d6b9b773074d699351cd193f9111f7f event callback. Still in testing phase
+7a4ce9567980256a7a3c69af5ab2613b2ed20a2f simSet/GetJointPose
+209e72fa987687aba4b7c09d65722177ca438e45 fast sim.test('sim.getShapeViz',...)
+04113734a4654dbcecb8fe20e450c859bea0e3fa sim.test('sim.getShapeViz',handle,table)
+82dfa391e880dee6a792653d98847c38aa988642 sim.test('sim.getShapeViz',handle)
+ed00af7f2c92150eb850f0f10c57d7862ad6add1 sim.stringparam_addonpath
+92c950ec29a3d1f5d7e630d589dd38209132ce6d sim.objintparam_unique_id. Also, sim.getShapeViz returns in options, bit 1 (i.e. 2) whether the item is wireframe
+c23f1b48cd99e48980e3da5f2ad68a386097d588 transparency and options with sim.getShapeViz
+3ef2bb2fa3b6cc402727b785046d243ee817566c simple cbor encoder, via sim.packTable(table,1)
+8aaf0cff9d0f2e7764baf74047ef6b86d48a2c83 named parameters
+c226b9cb0a9afccef584626c06e7009cfba00fd8 more headless mode forgotten details
+fb22e542e433f0d6a2515bbe6eb2cf6a644e81d0 forgotten includes
+b92193426be9a242c92daab9766553e1bd2b1cf2 headless mode fix
+5ec6e02db233a94da9c07e0c49b379f1e550c73e fix for bug caused by replace function
+3ce301a9d1f8ad9d135f97f2c682d30cd4789295 \n for add-on submenus now
+6049cf34abb5495cafbacf103d52f230249e22d6 CoppeliaSim will call the Python ZMQ server
+ae895fe4da0138becbd206af9e035c4723180f5c flexible module menu entries
+b8e29034afea4dd8ec6b99a821d413b1296dcce6 import/export dir
+983b289d0eff44493c404f56f66aa7550d31cded sim.setObjectSelection, deprecate a few others
+42a0dda045f9ff72dab771b84ef8e5a20e9c541f details about undo/redo, fixed sim.copyPasteObjects
+d7e24b0183d7ee8a44960d07bb3fd3fc5035b78a few deprecated funcs
+1a04760c3bbc15376686225eb64734cde0cdc233 errors or warnings with Lua files included by default, e.g. sim.lua and plugin required lua files
+a602ab8d1f10cb05632d61e448d192dad5b328a1 esthetic details mainly
+520607d529264afcda071953927e47e6233bcaff explicit cast to int
+769f477274bc4d9ba8ef5ed39b4a268b8dd4e8a6 getError for python plugin
+e888332ed76bf884621d499de5bc06194d4713bd Added 4 new functions for the Python plugin
+4a46dd49633b56228233a9dee7b2ce62bc0a17a5 new plugin msgs: init, actuation, sensing, cleanup
+e03e6af58cb4787ef7977698cc3aa6a45e37edc1 Python plugin, func. args. changed
+d55c9e3f59a34c306babf2f42f4ebfaa8bdca24f added ext. args for Ruckig funcs
+73a53836fa8063e6ff6f471e5738f5b2ce22ba29 integration of the Ruckig library, bis
+d4486bcc89ba0d40a4fefbda5c82546efcc4b33f integration of the Ruckig library
+186fecb452280e098ff1915ac889d0ed8b5ea3da sim.registerScriptFuncHook
+a7e12df33da41d3dd60e6268dabd9e58613dccf8 first, primitive interface for python plugin
+94357322abb30362a001dc55af247279860c8f54 further reorganization with Lua part, bis
+eeaf5d13137c2548da01af5160fc303c9a5619e7 further reorganization with Lua part
+c044606007a3dc0244c835fed0851d02ae9710fb add missing #include <float.h>
+20ddff73c5f6588b8145b5ee2a0a77495c865218 heavy refactoring, mainly around Lua
+2c95a1dd54361a03c571d0515ad5cabde089ddab renderable tag is ignored now (visibility is used). + etc.
+96519ec864730a76d7e0a852482d6ef4ad83c626 small additional details related to name --> alias switch
+88e3026896d0e089182189ea53d445a732e75df2 additional modifications for aliases, and deprecated some functions
+20cab240c6b1bdf187deeeaab711136f7d1db479 fixed error suppress bug with simGetObjectHandle
+996fa4a6881fa67ef0995a219c824b98f027d0e1 continued transistion towards aliases
+24ad1bcf3c5bafc9b42b892dbe8f7135924cbde4 improvements on object handle retrieval based on aliases
+489953f718497cfe41c2d016abeed8c63f12ad2f Merge branch 'master' of https://github.com/coppeliaRobotics/coppeliaSimLib
+a40b668f7ad1b93ee1dc5f5c8c94467d3e0e1061 improvements on object handle retrieval based on aliases
+28a7b5274f1fa870e5e232222eb15d898af06ba8 include <sstream>
+e509a4ee1db99245d55f7550910041df26c0c6ed Implementation of aliases
+3f96c0b1277a011c12dc491153d4a826e2d6949d reworked several things. Object are stored ordered now
+f41213665011d2696fd66791a425b3afc9e4812c simGetObjectHandle via pathname
+d86a15e4697793caf205d25e0a536d8b9b03e471 more options to sim.copyPasteObjects
+2366f44c207da65287ff44db83a554a6e331aa86 sim.copypastObjects can now drop scripts, textures, custom data, etc.
+020c470cd708d5e6a57614dbb33585dc9b390529 improved the transfer DNA function
+b4c81ad15766179cb7948be9c1bbc3d26b87ff68 signal deprecated sim.addPointCloud
+0b53b9ed7cf0d1ee8075c6345ca3d03bb13721fd liblua only external or via find_package()
+2817f6dbac370f0ea43bc0b4dfc62243c57872ae fix build error
+6bd596dd2f0b3c8f84680baf806358625c9e59c9 forgot 2 includes
+1fd789a0e683791e7e22a9a0ea40e5f5522981f8 check for __cpp_lib_filesystem
+9e532266ed5995a67f43ca399598937e7e3551c5 rendering problem (for some graphic cards) workaround
+01a4fd833b5bba47e5414cb2805e8038e3941ee1 quick fix for rare QHull bug
+788ca710ca1ef7c8e79f164924fc8227f7672120 don't destroy script if still inside!!
+8ee9b8343901ee51343c1748411354849ffc6f0f fixed c++17 requirement for non-windows
+1dd74a073cb680d95b03b20c327a823c10345658 update
+d0e461f904e3d7f777702077a5b41328b87fde33 sim.clear/get/setIntegerSignal --> sim.clear/get/setInt32Signal
+fb5800f3a3f6165204bd64b41e9171968214b808 deprecated 2 funcs, added temp folders
+bae517b8584351f37d6304834174a0c0d5481e51 correctly export graphs, with same time values aligned
+53e2bf36553ae4995bd8b88c9636da9649407481 bug fix in simGenerateShapeFromPath
+3a04b312816793b9966de01550b476c9a8f5785b fix for final save option
+eeab1663c82a35afc2448acfb70f9760e04cfe8c fix graph and shape export
+252990a02316552e7b69e8c1bfa534750de5fc16 added new API functions ...parameter --> ...param, fixed a bug where script destroyed message would be sent falsly
+765cafd5c3ca272184f7e211c26ff79db2ecf7a6 better arg check with sim.createMeshShape
+dc3d955d8d23982412bba56c2825103e86029d5a fixed bug with deprecated callback method
+35be52aed2db071a04fb5d486ef997c23b8b151f fixed problem with simultaneous IK func. access because of old GUI-based IK functionality
+9d48d6ab28442e65b47fe4bfbe36c94502cc295b hid a few rarely used items, fixed simGenerateShapeFromPath
+9bcb9c4125c9943ccd66dac37c84373be0598492 option to add threaded customization script, cleaned-up a few related things
+2d4a4481dd99ecfe63c377012c5779fbefa3f6af removed a few deprecated values from syntax highlighting
+a8d9db9d85d106c31c474f23b51d1eacb5ed9589 sim.groupShapes(handle,true) would return wrong handle
+69358ef7f0f4415b7148527e4b953e9f05dcb9b2 customizable font and bold setting for code editor
+72c76a7a2f992644ea767b0749003b02e78cc7bf fixed online/offline url open
+ea393d3964340a56f56e3c82dc162c2af39711b5 fix for headless mode
+61384af501f11415a1ab0b7f1112d95fc8d50296 removed old code, internet connectivity Federico's way
+40476391159fd9d01a0fdb9ea57f9d99a5c80e2e msg when opening the user manual
+816841acc9a93f867bc4f598addf8fffb2b600ee notice changes in script when closing the scene
+8b6dfe04b4b3573332eb0684189f667c26df42df naming only
+9111c39a4d43864d0c7cf909257349687f196c76 added a very precise mode to overall dyn. settings. default is now 'balanced', which used to be named 'precise'
+a5f32e509492c3219306c113a63d5213ab07c7ae online and offline user manual
+6fe4e5096fb3e84d290e7f3909234b5f89984357 Merge branch 'master' of https://github.com/coppeliaRobotics/coppeliaSimLib
+6178da27a75a22526ae4738613d1e8135c015b12 lua path and cpath, etc.
+984c33b125e1ee1bb3ba3265746b5fb226a1692e don't install static lib
+4251903b245a1d85d467d85772cff0d13ebbd9c3 fix build of lua
+e13ddefa094ebd5f8f08dd80282df0565dfdbccf lua paths for LuaRocks on MacOS
+d45cba27b67cfa130e3a9203b4242d04b2fc46d3 script destroyed msg, default pause at error
+e1b311f639daafe187f74803265fd39c82fbb3b2 Vortex plugin
+04217ecdbc82870afeeff8fdcb6038febe0878f6 "plus" subdir
+96f810c17e9e880e0a6c13984371415f58b46371 link network component
+046ecbc171a3205bde0854aac1f179db997ed19a fix location of include and simMath
+d4ce9fb955af6e6aa73154255a98bb4781b99855 fix cmake err
+50ac72342b9f37563cbd9194f0ed7e897951a9dd add_definitions -> target_compile_definitions
+e62591ab63ab1c5225b5fe178bb93379ec43c4e5 COPPELIASIM_PROGRAMMING_DIR
+ed9f539cb7c7f19d0399e3b67fccdddaacf13c1e CONFIG += plugin
+4aa8d8d34d8ef5da4f9a372eb9ac0c388c9b539e modernize cmake
+76cec4c209c13166036828c8006aad55afb22208 simplified
+dc06fc10c741555e5b12ce5693fb336daa3d0235 simplification for SIM_PLUS
+3f30decdc94eb44e47047d627771c3add70e4244 conflict on Ubuntu
+c431c30f0c584b57ad517fb697b05e82a9569387 fix find_package(Qt5)...
+6afe88fb17a51a53d8b5651dbc4b289ae581e53b missed parts for headless
+5a67ea6738c686d9ef8bb07dad6dac92d807b345 details
+7902ceea4b820710d0cc7d54c59fbc2179a606a1 macOS fixes
+07b3a59d9f26a31fe0e6f0dc61118fac9e382e1c QScintilla dependency to avoid crash on exit (Windows), after a copy operation in code editor (strange bug)
+fce96ffcccdc8d2eac4524cd7cf053699eacf549 QScintilla required to avoid a crash on exit (Windows), when copy was used in the code editor
+f321e19e4b45b19422f57c7b8db2ec598c36f0dd no visible edges by default, bug fix in shape merge
+ca4344b376f15b577286ad5f587c90e7bf9569e8 additional infos for plugins (source+line number)
+0390e795a7fdd717e65e0625682ab21f270951c3 mem. leak fix, + simMultiplyVector also accepts poses
+fc678f25d14713994c02c4e08e8737857fec40dc several bug fixes, plugin msg when a script state gets destroyed
+7b47bd054745d75ec0a143f9f752417b1e049c9c fixed 2 bugs + refactoring, related to scripts
+8920d4b4d4b7fc809c64712d2e71d125ce8408f6 additional cut out of BR
+ee3c16ce500c61a8909782d09a645f6e921d6535 removed XR/BR, forgotten part
+2cec0211135c4c8c2e9c37568e3b66d8775613d8 Externalized XReality. Fixed bug when erasing several objects at once
+693b4c8bd047ba3d03141092a4bc182ea77cccce various small details
+54b1ee2b7aae7ae29e28eca1e582998c22657e68 additional aux. system callback: info
+91eb41ab38866eaa744c8e16efceab054e4d3557 reworked add-ons
+0b46d548e89c62d5aa069e81e8cb6bbbb8b1468a updated copyright date
+f316dd9d2ca642d0b14d5013b6841cb6325b0e48 simGetObjectPose and simSetObjectPose
+caa4d6d5579e472ac743126ea2230028969b5d1b marked files that are deprecated with _old. Partially removed or hid the old path functionality
+97a81fad403f88ae5e362a77c1efdab1d2cc51f9 change for new RML plugin name
+101e78689336dc3be31fc427749a661dd571fbb3 improved further on Paths
+838634ef55ad56621d14be39770680947a23b57e fix undecorated statusbar logging color
+9c6799587bbf28f521cd1bbd0b4a8e799d4c402c new paths. Also new table[] notation
+cfa015802404548dea3ba32c9b0710f7ffe894cd variable init forgotten, 'isDefaultMainScript' not used anymore in new fileformats
+627796176dc95d8cd0366af4e51971cf69759a2e various rewrites, simGenerateShapeFromPath
+a3079539ebca22a4a486438bf021518448dc0bd7 continued rework of graphs + other refactoring
+76b54c81ede1db844c51378c3197fbad50a929b7 better graph functionality
+3d454038d6f242a7be12b00815082d0a3b0ed8a2 reworked graphs. Now curves should be programmatically created and handled
+4ee7142807c613188449220860f8f6b2db128288 new collections + func. deprecation
+eb68b4ab7e19b1c10360340492d99a6281a1b343 move to non-static (i.e. dynamically allocated) collections
+67a48739e2de19e1405379ae4f8f964a762ecb24 INSTALL_DIR is optional
+9cc1c0f2f6ce1bae276f14772f2fd0a75d2c1442 move INSTALL_DIR checks up
+550b6ac9dc8b52e6e7d07ecc1045546b9c2f80a2 install lua
+2c4dd6d021aaee939e2b50f60fbba23ac1d39db0 print INSTALL_DIR
+74440965a578537fec0d1ade812bb6d06561728a add INSTALL_DIR option
+af9e604ca340a51cb6089758b7151a4ea429f59d fix lua 5.3 lib src files list
+f0874ffc2c10ee336139886e5fea89e7b3e66a92 interface stack string size from int to size_t
+b17c64b4ff12fa4e846ceaa4afa00f8b8679eacb main script has no 'customized'/'not customized' flag anymore.
+d73c0a9bf859f8569d1196be5d035eb2c51fdbc6 xml bug
+e09f83fffb8ffdbf077deff439a40dc460338a5d Lua5.3 integer implicit convert
+4a3119e87bfca5a2aaa6df626ef7914576f09cd0 lua_wrapper, and 2-3 small details
+37a2485f1cdfa9cda7d1194a4b0d56b9b30e6f85 simple arrangement
+b7f37260fa123432fb9cbd41c0fd63d151e32ec7 Merge branch 'master' of https://github.com/coppeliaRobotics/coppeliaSimLib
+4969b8cca28862db291348e7e5e59c82584ef2cf check from C is coroutine
+103e53111b126869142275498d2d3f21e01987cd link interfaceStackInteger.cpp
+20524c98e2964e38b50777cabf547ff086ad5251 Lua stack interface, integer type. Done
+e1927fdce6d930cad28d5bb5baf7255000af1182 Merge branch 'master' of https://github.com/coppeliaRobotics/coppeliaSimLib
+e78a3424be6604f35ac007d1172512270f6eecb7 lua 5.3
+5ee50ec63eff494df8561f8b1ba4c80f198f9e4d add -DGL_SILENCE_DEPRECATION on macOS
+6d409fad4a7045935ca3f9a08eaa358189fa272d lua 5.3
+99d60713d307e1654129221fa896041fb5e41925 added stack interface integer type. Intermediate step
+b053cf463090463f1fe6f819821b11c4f020d1bf name index bug fix, MacOS highDpi bug fix, start porting to Lua 5.3
+5ddb763686fcf28032d273f6ce89f8a7d00a4b32 exit code
+ce3150918f6b7667b7804bae3d197146bb123cf9 Merge pull request #10 from CoppeliaRobotics/feature-log-format
+ed543f6d958f819acd591c3338f2f58216e94fb6 Merge branch 'master' of https://github.com/coppeliaRobotics/coppeliaSimLib
+2ac10521d8a16bcb27f6cb6db9c77a54212a8330 simplified simulation reset
+b0332b07d6afc0c83d55dfe7b85c0de2ebb97b0c code editor was twice the regular size with highResDisplay=2
+0c5a59b61a88e15330a111aa3c761bf2d1173daa highResDisplay can now also be 2
+60b50bded69dc19052baaa4ce8660038beb2fdf4 no -l prefix for libs on windows
+3870d47c3c225bdc5e936ebc8c8180f0280b0f87 fetch+build deps (lua, eigen) as fallback
+caec611bb46e65a4a46fce4045dd8aa713409197 confusion about joint dependency, master or slave
+34e21b231a22f03e5a29a64bb4444612e32fba92 detail
+43ed0410c965099bd93350b3df11d892723200ae log messages with custom log format
+9af99b6dc782bfe71d7228be9554ee3890da4b0b signal()->sigaction(), set handler only if not set
+f3e1f05715329a5c427e7c56d4e009e251d41a75 Merge branch 'master' of https://github.com/coppeliaRobotics/coppeliaSimLib
+4dfdde23b0fcd2963b6ac69171baa144506abc24 check returned pointer
+3af8e30b85f082845636b6d409c4f19076205079 various fixes and improvements
+ac60343d5414f763a34ca3724cc90da7b2352119 removed selection dlg, fixed speed throttle, added invisible scene hierarchy model children, etc.
+0fa22ab3d095e6220c23386e9f79c16714e084b3 deprecated a few items
+9afedabf9fbafad44ed4cd7a924cd40a626c4a22 deprecated a few functions, hid IK, collision, distance and path dialogs, made scripts able to run coroutines, etc.
+7208909d585ccc343504a236692cbfc39edb4c09 forgot to return error in one case in executeScriptString
+573e7c321e0ab41949a01980723115979e1df7f2 hidden collision, distance and IK dialogs, fix simExecuteScriptString, etc.
+3e7cd45f9af982148cfc9b3e3df4d858e598c539 sim.checkCollision and sim.checkDistance also return object pair
+51bc06dd574378627e14e204b7e37ea9400b2f07 non-explicitely handled graphs sholuld be resettable
+cbdd7e1f41135af1813c58285901308c7f0353d3 deprecated several functions, etc.
+8df551e63afc62075beef771fccfdf967750bfd0 bug fix in syntax highlighting for functions without callback
+3d58f997fbaed32e17d2722d0356e49f97b5cabc make sure quaternions are normalized when reading from XML
+68e2e333bc44ddfae0227f993d6bbc03392cd106 unload plugins in reverse order of course
+fd93ea1a5b122f67103bb1e9a33ea8c5e5344340 simGetShapeMass, simSetShapeMass, simGetShapeInertia, simSetShapeInertia
+e9e51bdef4ef005759955a19a6dd8bb742328651 sim.getApiFunc and sim.getApiInfo
+189984cb89e4a4e688bddfb903627e2728ca0088 CDATA section for scripts in XML files, GmbH --> AG
+5e95bdfdb76f6597add29d23c9f74bfc00a12764 GmbH --> AG
+9072ec7de2784381141d694999db70ae0efc5002 nanosec and microsec confusion. Thanks to Adrian Schoisengeier
+12e4411ea9b9067d012da43b464e69a7456c2fd8 yield or raise error
+de81dd5775d2dc49a9453d907c3e4d0f3243c6fc adapted a few API functions
+533393aa0edcffeb6c7e1fb649247006d99513d1 Vortex studio 2020a
+b45237b4af27adb947cbe7ab0b4789d75214d22b sim.setThreadAutomaticSwitch can be called in a cumulated manner
+3db132ee530017d6e10075f1f1a0c1e546821af4 headless case inverted
+a81455db5843b8f9e72858c5a77a29d6c5bce664 several adjustments for headless mode
+04a8ed2e406f8048846e21292ac14b9fddca00c5 IK plugin would unload when another plugin fails loading
+6712a7a051e30f8670988c94cf670bf7c2e2dae6 raise error with sim.addLog sometimes, IK func crash
+e0ec7a25657960da7f3de472eb62efe4dc3ee257 startup script string
+702c69a98299d756f3b610ce001b1cac896071a4 updated .gitignore
+587ff4ac84878356804c5571298f03ab9741af04 updated and fixed CMakeLists.txt and makefile_noGui_noGl
+b445309fd0504453b54f3cd4d9d40f4e729adca3 various details, tentatively updated CMakeLists.txt and makefile_noGui-noGl (not yet tested)
+318c29fda4880c8541fd480f6c47bfa8f036983b dialog verbosity
+01a041eb7d62176e2e8a7d42957a963642949a52 msvc 2019, etc.
+2a122dbd0b351f9ab25b050d17420143c23539ce massive rewrites, continued
+15a339d7b02fa83643e9510bf72f7e61cfc5157a various small details. Minor refactoring
+7aeb1d524ec0a70f491cfc43feca1213757ba855 massive rewrite (continued)
+65c8310428b07db8255969a6084c094d40ea4251 backw. compatibility
+048b24d3be1f733c124850a16039fb1ce743098d corrupt orphan list
+66430633de637ee09db4b9b9096ca1f1145e09ca mainly new IK func.
+4c5b0b7f79f49b1038a8affcb0969df15f93a1b2 typo
+e658631b3ffd84ab6709cf89fadced7d6ac405e6 missing include on Ubuntu
+4a5264daf010e27d0d94746d4811188b9cfaec44 missing include on Ubuntu
+32eccc9bc9e788f813c014bdade0fbd72985be87 extra qualification on member func
+2302ba41570f2f3335f2eb447dda767ff55174b8 mistype in .gitignore, ignoring all headers
+001176a4181c9e50176714840ec30366ef423bfe start of massive rewrite
+ebc174f31d95d04324acf33a4e2248ea7b341b2e Additional add-on script load bug fixed
+64440efc365051b322435bf9a3e29a880583a820 rev4, Convex decomposition API bug fix
+dc6f55b32d6a7772775c0b199d0aad65d911d4de Fixed missing syntax highlighting in code editor, in some situations
+4f99e6623a057b204caf9cc374a5f3e5b4415f4c Fixed bug happening with Boost::format on non-windows platforms
+14b25e23fa70659876b13625c20e43eea5144f01 previously forgot the Lua pendant of sim.setVisionSensorImage's new functionality
+2c06fccec471342eb6301bfb63d91d670aaef111 simSetJointMaxForce, simGetJointMaxForce, simVision.workImgToSensorDepthMap, etc.
+c950812a6ebc7104e4eee36ea9ede6d0918c062c sim.setJointMaxForce and sim.getJointMaxForce
+232c6cb89933551df8bf01e087cba5e15a81e471 fix a few things for headless compilation
+d4a2587b17f35b6b59d44822a43f19f2ee21facc Larger default font on Windows
+f6f0a68daadb17ab4fffc350657db3c42ed1f0ad optional removeImg arg when applying image
+5373f359d0650c39bea917dd8d53475cb211fcea default font size
+95950c015760082955a400b8e8590d13709840fd XR details
+4dfceedf76a04be54f312f0d99e79045be1af443 better icons
+a0d62efa083749ccc3a9c7270bff341ccb491b5c slighly reworked the UI for larger fonts
+e4cf5c5d9c2c8311cbbd135dfe053c9af487ac79 version check
+cf0e70e885600cf6e67c35706b7fbeb8fa60174d CoppeliaSim initial commit
+3c149d9dd6f4aaf71c83bc730f89628be78ca301 details
+8d08d1d2a03ff7b5482f593ffe82ad1d2db5ab9d various esthetic changes + removed vision filters (now using callback mechanism)
+852b3f383c263a086d6052e5fa06e11062a22cdc V-REP fork, initial commit

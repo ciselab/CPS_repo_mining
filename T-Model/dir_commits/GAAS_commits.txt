@@ -1,0 +1,765 @@
+29ab17d3e8a4ba18edef3a57c36d8db6329fac73 Update README.md
+42ce63524fce36f475d7eb68a83c637f70c26bb6 Merge pull request #140 from generalized-intelligence/localization_refactoring
+ce4117de66e84be4d1223f5c654ab83ba66520f0 [fix] added map_config yaml file.
+9db1bbd3cd7146d4106ec609fca10f167667bb5c [fix] fixed wrong input cloud bug.
+e795e40176afd1b25b372a98c6f39719e291a5ba [feature] added imu_preint registration pose initial guess.
+5675e6d2e6710b91fe6653cc1360f2e7dc0d4548 [fix] fixed getEuclideanDist2d() logic and adjusted icp params.
+4413903daad26173f9c6cd4df5c35fff8d39254b [feature] added ICP localization framework.
+2c24181b6ea56cae851778b008853283fcf7ede4 [feature] added map publisher node and fixed some bugs in ndt pipeline.
+f9fdeee401e47531ef3d8a67498056423315e0fa [feature] finished ndt pipeline.
+0f1c5700befad761b860a9f343728ea234526dd5 [feature] added NDT localization framework.
+9dc5064b4b8c49b185e5531b48374d5beadbaa34 [feature] added registration_localization_node framework.
+8bc4f6a8c1eaf273dbcaee317555dbe5dca1c428 [fix] added commonlib/gaas_types.
+db1a1e33f194c6fd8783ea6d7f3e1abbec6cfd48 [feature] added dynamic cropbox map manager module.
+12e7b4b6f10b2175d3362a50ecb8f7a4f1371e6c Update README.md
+7b66f8b6d8b73b16a134b31b5979467864a083bf [doc] update readme.
+60e800ebaf799dce0a64568905a689311a00cf6b [fix] set z_max must be larger than 120m.
+e0ac1fd047393747ae5584bb9cf095ad1f84157e [doc] update airsim doc.
+b9188df5520c22b3f591b5260031202525e8ebaf Merge pull request #139 from generalized-intelligence/simulation_new_lidar_position_dev
+e4646bb80c5f6f146c7b83ee3212d8f19f13d575 [fix] changed lidar localization params and set use_sim_time to false for airsim simulation.
+58ab5b9f1dc60a4c940b2024551d61b53e7e83a1 [fix] update airsim simulation configuration. [doc] added airsim usage doc.
+a24370575f66bb4133f202a1492ad6a8f58c0245 [feature] added mapping downsampling; added 2lidar airsim config; changed airsim scripts.
+62e82082207245ce1303cee78ae9f804ed50e705 [feature] added airsim simulator support.
+d64531522ff433386c6806c86b4b8adcb7f73941 [fix] fixed timestamp of simulation livox cloud msg.
+3608006786e68f482a11b4e1085a22b15e4e75dd [feature] added velodyne_x2 iris model.
+9c9bd814f908fa470dea17e3c500b51de47cbe22 [feature] added new lidar points integration module with transformation defined by config file.
+e655e089a00c7bafa4377029ef631d2b172abf97 [fix] fixed fov range of livox simulator depth cam; added lidar config file demo; reindented vehicle sdf file for simulation.
+bb715b16930ef48ac386b3e05d9bf616652419c7 Update README.md
+cf4783778aaeb43ad9322a585afb8c7ff0fa6234 Merge pull request #136 from generalized-intelligence/state_surveillance_dev
+c9e95675d26fefeb979925fdd92e3efe0dfdf183 [fix] fixed surveillance threshold and added into launch script; fixed perception segfault.
+755cf1adc57d9f96f7146cab483b259689fcbf10 [fix] fixed perception cmake file and state surveillance module.
+e3956ec40efb1549cfe4b26bdf6cd2c5e29da358 [feature] added localization surveillance logic.
+b56e7c74fe96d078ae8d3f1f6e06623a38b2bc37 [feature] added JSONSerializable abstract class; added url for json request lib; added FCSurveillance framework.
+bd6782973d9bb1c35de3d03e35a930acff9846a7 [feature] added json_http_request_module.
+94d0b10964a7c2f07896c86ba4a1b46b256fafd8 [feature] added a simple http server and client for state report.
+d6507fdb6c1f2b43f391757ff0e7d5356f0b17f6 Merge branch 'state_surveillance_dev' of https://github.com/generalized-intelligence/GAAS into state_surveillance_dev
+d61b0e38882c8b048847b504d796f6ba3c1eae04 [feature] init state surveillance module.
+62685dfe146964a771ec29df1c57095467807222 Merge branch 'master' of https://github.com/generalized-intelligence/GAAS
+0c2539e347c2180f7c827fa008dbcaa8f80cfa35 [fix] fixed simulation config.
+6afea7ee182d422ca1e35beaa7d8d94ac1f94fa2 Merge branch 'master' of https://github.com/generalized-intelligence/GAAS
+0ad1f298d71fef780d1e068414c289422d5edd37 [fix] fixed logic to restrict imu preint module from too long dead reckoning time.
+974f3f5f79e0c1dc3caa580d57ed6ce124bb2991 [fix] added ground points removal source code.
+0de3d8bc81c1d456a46bf3d852e4f6cfcc64a81f [feature] added ground points removal module.
+2827ad03f1d6208f2efb4495df3b4183fa1391b5 [doc] updated checklist.
+069f0da6d16aa39785a346507fbc4ce6e9085d68 [fix] added boost dependencies.
+1ae71d5aab97a31134e9bdd522761911004a5595 [doc] fix readme dependencies.
+53e74640876aee5de5b05d77b01ecd07bd4479ec Merge branch 'master' of https://github.com/generalized-intelligence/GAAS
+7dd41807037256b53f63465ca4d46d3cfa30533c [doc]added readme for multiple packages
+b12810ee2718388d8e61af1b5a4a4e4f703899e5 [doc] added dependencies installation steps.
+88c070d99b42a600cef6ccae9a84530a1cbd3353 Merge pull request #135 from generalized-intelligence/new_readme
+a59d7989c15fe5a2a64f6ebed0e6fad57678c2ed Update README.md
+0a755a5719be5ab3ca98e8225aed66aa3f94fb1f Update README.md
+16399944e0ff15732a2c21b4351242c8de54117b Update README.md
+628ecce981ec53da3f04d28ab552f5903e735997 updated reamde
+f7c4f0d1817f7d82dd230bb2b1a5d329cc9dee0a [doc] edited readme.md for the whole project.
+aa96e65d2f2df13488cf07ba821598de1cbd156b [feature] added imu_preint based icp initial guess; added lidar mapping options for lio-sam generated map coordinates.
+5f670fd4f30e773eb357dc3993209202d78f1237 [fix] fixed euclidean cluster node segfault by changing sse and march configuration in CMAKE_CXX_FLAGS.
+c5a4ae451a19b3bc093222d2fbb3b64dda37d913 [fix] renamed ndt_pose/icp_pose to registration_pose.
+ce723a9e798ccc4e9fad6af9dfcce4e5308fc342 [fix] removed fast_gicp apps.
+bad7c0e10259a1fc9760f41c52972503461f3954 [feature] added fast_gicp based cuda gicp localization; added livox points & velodyne points integration node.
+710654d2aeca3252881aa2f82918bec6bd6b1be0 [feature] [fix] fixed ndt_params and flight controller topics by using ouster lidar bags; added rviz visualization for original gps-ahrs pose; extracted map_path into the launch file of algorithms directory.
+a10d60f97cedd00984b9c2aa299d3dc9e47842b1 [update] merged GAAS_contrib
+8ac81ef2d20a551408a45bf2961f4595306dff2f Prepare for update; move old packages to dir deprecated
+ab28a60ccd1e24a50f6fb87c8d167ebef5882d54 Update README.md
+277fd91d568c38767b373815bd35edcf75a9ba31 Update README.md
+3552f5d25cd6a6d8314e1bbc15bb2136d4761e7a Merge pull request #2 from cyanine-gi/system_management_dev
+7d9ba39196af809b56fb3e05010ba6538b0ba323 [fix] fixed VehicleStaticInfo.h dependency error.
+958e188cf876a3ea57d7b941daac20610d9d1a4e [feature] added hud module; fixed gps topic in px4_state_reporter.
+ac15f5333210e3c7ef2f7cc36ea4e16b6140e6ff [feature] added px4_flight_controller_reporter; added nlohmann_json lib for JSON I/O.
+7e70fadfc84f0bdb86d1a62930bdfbb34a367a6a Merge branch 'system_management_dev' of https://github.com/cyanine-gi/GAAS_contrib into system_management_dev
+5bc46d4f21c4333cafe0b9cfa5bec5f1637a8d83 [feature] added other modules' state, still constructing framework
+231026f30bc618bc013640150604258c036e695d Merge branch 'system_management_dev' of https://github.com/cyanine-gi/GAAS_contrib into system_management_dev
+5a8e3fe14f96a59bdd1bc16ba6f7483403b42192 Merge branch 'main' of https://github.com/cyanine-gi/GAAS_contrib into main
+c1f2f85e45350624ae6b61fbfb7fd58b23334d80 [fix] added imu_preint T_imu_lidar tranformation; fixed logic of path-generation request.
+e465d12ca021362d76e52890d088255dae2d2159 Update README.md
+d3742caf78c56cc8d130412f4c9068d4c74a1189 Update README.md
+6e566a62b2aa5e82a67bd634d8e171008715e719 [feature] init system_management framework.
+d1e55642fd8e90503891c89d50705946115072ed Update README.md
+9caf708ca05c0bc6a635ece6c217fa69a4f40175 [feature] added imu_preint module.
+8845f32f9446152a0634382de48899df298bf160 [feature] added target_position_visual_marker code; fixed vision-lidar fusion memory error.
+c4c72f5c4c2b41230833b074d5a35572c4adcc5f Update README.md
+ba633227ee410355c45b0e65fa5ecd68a738a29b [feature] added target point visual marker and modified target point navigator to load targets selected in GUI. added sleep 5s before target navigator start.
+5a78c768d32e70baf43441dec07090727ab1622e [fix] fixed build_all.sh so you can build algorithms without running catkin_make previously.
+912630c74497ae8ed1c9bc794259f57af36ece80 Merge branch 'main' of https://github.com/cyanine-gi/GAAS_contrib into main
+aadd0954073c6685be669b3fe615795e9ebf09ff [doc] [fix] added readme for algorithms; fixed cmake arch detection.
+241284e556cce033173f4de831e506e3a9c01539 Update README.md
+454b337b728cc9dc191585ebfb05b1c7d50ffa85 Update README.md
+4d15c033a0151bd8c71828eafa818bf0adf6f2d5 [fix] fixed lidar height compensation for mapping, vision-lidar fusion extrinsic, ndt gps-lidar compensation and target position. Now the map has zero height by default.
+88d269a9598dce5f87afa0a07400e62b8ea4e175 [fix] added initial height check; WARNING: px4_mavros_controller will takeoff to 2m automatically in order to avoid astar no path error.
+dd06f7bbf1b74346b619b44dbcdcdb25b9f6eef1 [fix] fixed vision lidar fusion preview opencv link error on AGX Xavier.
+e145498718743b02861307a25ba3d8ec8da558dd [fix] fixed CMakeLists.txt error in lidar_ndt.
+f974a909f205c796a5fcfeb59bfc9813586032f5 [feature] added ndt_gpu support; added downsample_size param for ndt; added log for astarlib no neighbor condition.
+c2387c8e2a5a1063c15643fb3c87b21fa55e40c1 Merge branch 'main' of https://github.com/cyanine-gi/GAAS_contrib into main
+a67f6ff2715bbc25be1dcba1b87806adfc2db5a0 [feature] added logs and fixed parameters to make the framework more robust; added slow motion detection.
+da6a88c5c0df323cedf81af758b8b9056fbc9697 [fix] fix cmake error
+51d9608cc387d5f8635dcef87ab17b9c2a0bc8e3 [feature] [doc] added OpenCV path in cmake file for porting to Jetson AGX Xavier. added author email.
+56fddf472699e668e6fb83fdf1224a5d451cb564 [fix] fixed bug: in mavros controller init() without checking set_mode status.
+5b154079d5da12dc49c123084d45eb590bdc824d Update README.md
+d5fe91bc473df601412b3a0d0ab0685dbb4e8f2a Update README.md
+d4b734da346d78c08d7ee38320905a5b1b616490 Merge branch 'main' of https://github.com/cyanine-gi/GAAS_contrib into main
+29bc74c6421c138b86babbe1dfba329b19753569 changed image
+bb6cd6163f226de9774b468dbaa6473d59bdcd16 Update README.md
+d586a957df5a40314765fe3ab8aea455e9e268ff modified image
+6fa2311898c1ecb348a743ad9069721a59e1ff53 [doc] added dynamic_obstacles and planning screenshot.
+c457b1cfb0c4fd6ec020dc892addb7af756d1ea9 [config] added simulation worlds and fixed algorithms building scripts to generate gaas_msgs. changed default map of prepare_simulation.sh.
+998b10786155a01ef3e48928da588eb430b9c025 [performance] finetuned params of perception; fixed a few comments.
+77520b4d7617bfe14c7176c3a1eed834155feab7 [feature] added dynamic obstacle avoidance in astar planner and modified dynamic block module.
+f02944acc1c5ef3c6a5a952e3dd202256620104e [feature] added tsdf calc in dynamic block, modified relative msgs.
+6d9e024361be510c6dd6b84dd37c88b0be29f60c [fix]fixed threshold bug in target_point_navigator_node
+4772d56f6bc5855c030557202674575cf64b63c6 [feature] [performance] added std::map based dynamic obstacle map; added visualization.
+6723a0bdaa60afb00dd427691e7292524e2e3d05 [performance] added a trick to speed up vehicle; removed useless log in perception euclidean clusters.
+90c34b22151d1f0892883b6a773549e99aef7dac [feature] added navigation/dynamic_block_generator to project perception blocks to map coordinate.
+1578b2d16703d3defdcd5a4cf90ae803bd38805f [fix] added log for astar planner and removed sleep in visulization, which is a bug.
+05cbf140c491f40d796ffce093d41ab8c9419c96 [feature] added perception msgs and published clusters list as result of perception node.
+8b029d69e094df1d250be54395b859eae64c86a8 [feature] added target point navigator and integrated controller pipeline.
+bacc21047e200de20d454137b398d9e455f208ab [feature] added target_point_navigator and astar_planner_node.
+2dabe4ba55e2b2f4333eb299bdaf2ca6c87803f0 [fix] remove swap file
+922e1bad47bbd3b2d747e26ffea0a099877abc49 [doc] Update README.md
+af7a753e89f6a004412d39ecad5420f72c20e38e [doc] update doc_cn/readme.md
+37daa810e0bca6543b6261c35d036ef95359035e [doc] added doc_cn/README.md
+83364093125f0dc8cfd665378cbf4767e8e4dda6 Update README.md
+eecd730817a6d56d84ce6dbbb48c52d9ea73e0e8 [doc] added astar offline preview.
+9867e1f7d1f16c96a3fd40a63974b111ea08bf59 [feature] [performance] speed up tsdf convolution; added rviz visualization in test_astar.launch.
+6edc609e29cd3bfb405b9190015434022ea80c10 [feature] [fix] added gaas_msgs; fixed heuristic cost bug.
+01555284acbfe5fa1de281d77ca09b44b3d357f2 [fix] initialization of astar node cost.
+81e566f1380fe666b7241860ce41c84f8485b830 [feature] added map_obstacle visualization and A* path planner.
+985f0aec581face6be3d6a20f472defeb2f0ac21 [doc] Added preview imgs of algorithms in readme.
+853e5640301ebb5252ad51708d32b37751fb5f3b added preview imgs
+fd9391c0493c5ec10a83a0f0185e0399632705bb [feature] added tf2_ros transformation publisher in ndt_lidar_matching, added visualization of perception module.
+178fb6ff902abaa627f4fe8fc336a9166e9b638c Merge branch 'main' of https://github.com/cyanine-gi/GAAS_contrib into main
+c428cb4e344f7c2e1f4844152b58d02a92d841e0 added px4_mavros_controller_node in cpp and tested. This node supports body_flu offset and gaas_map absolute coordinate commands.
+13efd0185c339f3fac38301f269909bd6464edf8 [doc] Update README.md added translation.
+a01416b309ba6627e4c9c594e092b7d92ed93298 [doc] Update README.md
+1e1cba2631c52d931500b647f92fff4c34753084 added lidar downsampling node; added run.sh for algorithms; tested the whole loop over 1Gbps network.
+b8bbfd1730653f0c3749d59c7ca2bb26dbb1d8da [feature] changed perception_visualizer topic name; added perception_visualizer pointcloud downsampling; fixed typo in README; added framework of visual target marker.
+5abb0794742b5aac73802bc8122496bb1edf826b Merge branch 'main' of https://github.com/cyanine-gi/GAAS_contrib into main
+0d893616139a6fd69f0efda894d2e7d3e2c21885 [feature] added perception/vision_lidar_fusion.launch; fixed perception visualization; changed build_all.sh.
+131403296700d59ac04170c40db7f9888afd1172 Update README.md
+77e896299bdc105c87b25f1f5fd171ee9c5bbce3 Update README.md
+1ab4c49e353e67d01c6362ed4da7b7c1675b3e7a Update README.md
+5da9f6eaca7f5afb999b32711cdf70e744e8ec16 Merge branch 'main' of https://github.com/cyanine-gi/GAAS_contrib into main
+0102a9766db1181c4fb687345b16b6ab142695ef added GPU lidar simulation support and set it as default.
+cb5f51fba5b40240a423e89a7130a528d25d380b Merge pull request #1 from cyanine-gi/ndt_gps_ahrs_initialize_dev
+89af200796928a7591f9e35b39dbc3dda0610b4e [fix] fixed coordinate problem--NWU is the global standard in GAAS_contrib; optimized performance of ndt and added a simple gps-ahrs based initial guess; tested on drone bags.
+ca82385de62eb5cc016d29875f190b1005357808 [feature]added GPS-AHRS ndt pose initial guess.
+9947c22d806ac5e4cd399674f5af96fa9b5a517a Merge branch 'main' of https://github.com/cyanine-gi/GAAS_contrib into main
+cdad32c0028783b87ab00f26378c7ab7bc84a99d [feature] added map NWU coordinate transformation in lidar_mapping; added visualization of map coordinate.
+22b3a2ebbc38646755b5c8e390e445e144df70e1 Update README.md
+9b879e52bd9ec1cc804a3b0f9391d482b59fbac2 Update README.md
+4ee0a4b34b09777e42b811d62403709fcebd00f0 Update README.md
+b3577383951e055106537781f803096b8268a425 Merge branch 'main' of https://github.com/cyanine-gi/GAAS_contrib into main
+9b12d646609a993bfa7e700dcdd693a57e3f5d04 changed simuation scripts
+b4c3f193cb685e15fc0c0d2d759067b647d18c8b [feature] added lidar ndt_localization framework.
+7d01514151e7db28f39fb196d1267f77d4cb1d69 [feature] added pointcloud downsampling and finetuned euclidean cluster params.
+2d30bbec51d51a5a583ff09478dfb451f5e8d719 Update README.md
+52fe502943c2bd470a0fbb7807739503b48359ad Update README.md
+f9001ed3e1fdec6a98def459caa0c24b431eccad Update README.md
+a117599c0a37ad65fb0a221723c772a115aaae41 added some readme for the whole arch.
+2aab7cd9e88e3e2ca402b0472367095d75a89a62 Update README.md
+ebf75aaa38f75f724426b52b2181393b49c6b9c5 added euclidean cluster visualization.
+2764605710096c82ebb68d5482c127b9ccf6b9b1 Merge branch 'main' of https://github.com/cyanine-gi/GAAS_contrib into main
+e6aeaa997f3d29b6e991bf430edc3cb051b82929 fixed CMakeLists bug in livox simulation; added a simple euclidean cluster algorithm. added a simple BVT script.
+dc3470eda9e24716059791f2709db83ee7e79b47 Update README.md
+f2b699a590c6eaaa52a4a83c83024d6dbad596e4 Update README.md
+c3bd8c1226cffe6f7f03cfe160f25c503a605571 added preview imgs
+8b27c57e863d6cd373e43acb4d0ed9c2a4246265 Merge branch 'main' of https://github.com/cyanine-gi/GAAS_contrib into main
+5b57bee0e8e385074710e8fc9dc2404af6adedc5 added livox horizon simulator node by using gazebo kinect plugin.
+b442f4756deaf57e0ad2f666aa11bc5450bee50a Update README.md
+f0aea22f1377fe6a6eb15dc44a34e72aa07739d2 changed structure;added lidar cam projection node.
+813ebadc39b8c5f3473690123b1c059364c69199 added lidar_cam sync;changed default world. Will add gazebo sim of livox lidars.
+014fa766cc98a64f15382e2b242b4da4bc80e6cb Update README.md
+63dbcfccaf8222830f7cff38849e15476ca74bbd Update README.md
+f6e7de0a4173260cef9093d709398988c3a66f04 Update README.md
+719ae3d6a2ada8c5be62426994658d8bc4e4a568 Update README.md
+f695d7389a12455d9223c9ca25c7a3bdf3d958da Update README.md
+0101d552df37164ee8ffc84586fc87e024e3f2df added preview image and rviz file.
+5c99dace6786e689d7482533c0ebf3698bcffba7 added lidar HDL32 model for iris and added tutorial for this.
+485feca616e275f01266de523e003e8ca99087ca added script to start simulation and changed README.
+0d168d77b1589fd10bf97838e4dead94d03bf72d add thone.io
+308ff4267ccc6fcad77eef07e21fa006cc2cdd5f about mirror
+9a7d063610dece562d8417d3aeba6e0da9e9ef0c Update README.md
+de9d606501935707fe6788b983a81fecfd65200f forum
+34c27bde324129dd0c53e080d863e5c98e91592c update patreon
+56de0be145c84a30c314ddf5f871b829383fed73 Update README.md
+8d3dd436c18fc3da5e89fb673d5ed6393c0b241f added multi_cam_utils for config of MultiCamSLAM
+681b35a49485569e9b98649ad11a9eb7ae0de5c2 Merge MultiCamSLAM into master branch.
+3c2199107a7b2e69196628235cebdbc034ee4579 Update README.md
+a05db1c5f38dacf6d5252b0d149585e68fb4edd2 Update README.md
+fc6288a76f79ba4baf83778c53b150d4d92bceba Merge branch 'master' of https://github.com/generalized-intelligence/GAAS
+f4e50c18b4f7a071dafd0bbc1ab3a0655db121af Update gitignore, add more ignore file.
+97b6e3d1bd86ebb2ff07ef3a01d20706301ba334 Update README.md
+59e10dedc04ef1a6e53d5093d84c4851ce12a064 Update README.md
+12e71077260cadd24a9d24b6559eadc4203a2dfa Update gitignore, ignore '.vscode' file.
+acc38a754c640558239cc71070a4444f421e7996 Add '.vscode' to gitignore file.
+60942aa27b7ef53ca7d45ab980980bc168ac7a41 fix opencv flag to 3.x.x
+2dc55d2c2ef0778ebf5605b43910d0c4a8ae519c Update ORBMatcher.cpp
+71197a2f7309ec03c93b103b7e8a9bad195cb2a2 Add files via upload
+b9b6150b0f368a72c5f6eaf91a29b1288bfbdd85 Merge pull request #78 from robin-shaun/master
+4e1e0e18e78c5f08fb48a65ebef00d20ab3bbf9b Update Tracker.cpp
+75a89f3346e3dee07aae7cece7c15a16c2be74f7 Update CMakeLists.txt
+93eb355a411ce66522694fbfc33943d9b3f384d6 mulit_uavs
+622b1616cdb589a7754fd3f847d17fcc8d329f45 Fix px4 run init bug.
+60e59f84cc8c16147ce0fcd2d6aee8869876dd24 Fix #77
+97bbe0dcd72f4017f939bb38e36c0a7e27cae1f1 fix tutorial2 coords bug.
+d1db059142394362a1c986c8590fca6883fa1fc3 Update README.md
+ab167a09bd1421a944dbc3c7bc73f5511f671e62 Update readme_zh.md
+fde953860a4776a26ea38a3afc4b218fbb54aba3 Update readme_zh.md
+2eb577e5061bda85005e31e4271e0df6288c73be Update README.md
+036880c6eadd1b126d7427295530fcbf9b26c591 Update README.md
+8ddf8ce3f67706b24a40c6c6112f438ce2311d7e Update README.md
+a4cb2bb644194062ffc99f5014b402758422c32d Update README.md
+4af4180eccef0c7b551f60457b2158621d512b01 Update README.md
+1da1a617b8d3ccf156ceff55f2b5a646040e942f Update README.md
+3eb99295d177e24415f4bd4fd47befeabdf3db36 Update README.md
+c3d6eecd1b24fede3159be9c57abddb7642505c7 add scene_retrieve
+8cf07a7aab70284933ae1a248b658dd39ddbc37d Update readme_zh.md
+4f319a6a2d8a59be50f182257a4f77e2cbdf3806 Update README.md
+739e9937dd4477c35f9c8f72cc016940a36d8fd7 Update README.md
+f3b62b2776af34453478ee41ba0a47972bf86a4c Fix tutorial 5 Navigator crash wall bug and coords bug, fixes #66.
+0d897f0ba7c3375f1c5b0f3180ee132f2a9e376f Fix tutorial 5 coords bug.
+bf34a2d1bb808c38d1d3d6af02e794b29d3c0f76 fix Navigator crash wall bug.
+abb5c16cc85d934f1ca385b1194b2c4abd6ec5d7 Add *.cfgc to gitignore file, delete useless .cfgc file.
+6d566cbaa6dfa7c4db0c0d4f29c2f3f87ed4aa72 Fix tutorial 6 coords bug.
+ea60a7da9b9b8001c4366edb46ca946d294a1ed8 Update readme_zh.md
+bbe1b17d69324f16e93e63cce25e2bbbb32c4356 Update README.md
+b38b597924a7dbd22c4e8542471719bb9e2374d4 Update README.md
+2cd7e97ec48ca6e53cccb29649fe22b2878d10ff Update README.md
+376209117905790c4753b6c19b133237ecdc9e21 Update README.md
+440f14214eeb3b0bef377a7ed82562c71506d978 Update CHANGELOG.md
+afe629c7e6193ad6ee7b0c267ee3c2a755b7b3d5 Update README.md
+1fa1deffdb023e5a8d8fd4d52321869ab821e506 Update README.md
+c622324d6ad1553708567011ca415b39ec18049a add GOG
+029b07830b10479a562a6c043a75b550a554bc39 Update README.md
+5ccae7569843cabf60fbc061e1a5f5c9f82cccfe Update README.md
+4f61d308c154751f9e38c1eb9b7b7cdd8553fa23 Update README.md
+6216f9d0ac82a5d4f3b64e9a7ee3dfd535b287cf Update readme_zh.md
+af87972037491b84a09e614fa3759d30cfd152f8 Update readme_zh.md
+03beaae05f900faf4f32b997303545b7a52a8174 fix comment
+f3f1202322776ee337c9dff3f7d4a965e6bd14de fix comment, fix frame
+fd4f8cb051bb0082fa50114ba3109acec943a7c6 Update README.md
+f0c8132cfc6f639b2e21393b88562dee2afb6634 Update README.md
+db209a0c97187aa57b791270312aea5b5c5d06cf Update README.md
+55265573239ef2cf78d1c04d3ca280ef3d32c909 manually fixed new feature and bug fix in scene retriever.
+6593e2aa656346102d284379d9d79b6b609135d2 fix bug while serializing camera points in slam
+74f59acc62a78252a2bfc25dd9e325a161363d1c fix bug during deserialization points from scene
+636ca62856a75bd1c95f1d6c44c0f37fe3f8e2b9 Add Chinese readme
+f0fbab1c94ee5629ec731da30e756ecbf55d5b5e Update README.md
+4a31dccb5b75c40f93edf755705b24041103aec0 Fix tutorial_6 track and move error, fixes #57
+2376e8f366550b072c083888b81eec93f4b8366e Fix tutorial_6 can't init ros node bug.
+da95ce652c112f45e2ca66afae35047a8d978c98 Update README.md
+2503293c2e3f8e07ecdc329e20fb81c47fe4e489 Update readme.md
+21b01e0e2e0d2818f88f1088b81d6f8269d9d228 Update readme.md
+0f260d82296076cf8f8d045734aae75d5d62cd30 Update readme.md
+9cf80af27b45d7c75406eb5eedfe1c3c9e9319a6 Update readme.md
+b524bde9f097df0fada0cfdaa5fd4f214f6410e2 Update readme.md
+7ccada54ad5c63133bb9a36841238e9736736052 Update readme.md
+a588763f8b3310ef3b44662351decbd1c8ab6432 Create readme.md
+69684356b1e97b13c23be6df81ec8efc7d812ce1 Update README.MD
+840c166e70df66f3449e7c39da4508e4514cc233 Update README.md
+8014be87276adf1ede3a478a00aab7c1475a29e8 Update README.md
+f321ab6a368f9ae94032addc7c91168148fbc822 Merge branch 'master' into master
+2d0aa83607ebb4cf51552e775835712bf8f85b08 Merge pull request #51 from kenwalger/patch-1
+a410670d5ba6dbe087116bb6bd2aed910435af31 Update readme.md
+0f8874f230981f4c754d9636658d60d8b701683d Update readme.md
+c854772e2d8deaeefc156d1e82d36e249970adc4 Update readme.md
+2d2cd5db993808f9b87b33df099b88af0da55bed Update readme.md
+636adc8cb72011606218f1236f65899811d8bfb4 qMerge branch 'master' of https://github.com/generalized-intelligence/GAAS
+a34ffe1ecaa961c278d984ee037672947f9a4a02 added GlobalOptimizationGraph_GTSAM for gps-slam united optimization in 2d mode currently.Will add 3d optimization and loop closing management in optimization graph.
+91f99512d51be273313a04629575f6a69110b6a3 Merge branch 'master' of https://github.com/generalized-intelligence/GAAS
+78d61c9948f2ba399f32320daef96c77556b7324 Add UseWLSfilter setting to config file.
+2b55b6852c3d9287aebbad47e8cd0917d53f8899 Update readme.md
+62dc9c9b5f5038576f4c781870e04620116f577c Update readme.md
+a23645422b10674c079b831c485ae4871acdd5e8 Add files via upload
+e0ba00fe96daa214a669e4182183bc263910864c Update readme.md
+b01cd1f427f7027aa97cd4e316bb444b1d11d6f4 Add AirSim setting file and AirSim image ros publisher script.
+391d6e686b3e371fd597206f9cce59c1363c0f46 Update readme.md
+739fd33e3dbd36f4bc2c85e9b5c9a1806ab058cf Update readme.md
+198a12a3af8cdbfa7dc212d7e48b184b2284b61d Update readme.md
+a7c5018337387f3bf8a519dedec0523d4863690a Create readme.md
+6ee5793d36811366c13ce0f43a86d397939d12f2 Update README.md
+b129fbba25ba18562f28e5c3702d5708b9d36dd1 Update README.md
+397c8e960544074f5654af414fc56d7ada60f598 Update README.md
+54e8a45050a24b784fecffc8a0e10cca16f5288a Update EurocStereoVIO_ros.cpp
+b593be30015f9400c05e16711c2d4c706962ae10 Update readme.md
+d29667ea693e04c799ae38ee8fc89ce78b277a47 Update README.md
+630e20d39bc4725973ee7ff0a9716377371dccb4 Update README.MD
+1607b921d9b4ec108dd24ea7f6172d1b30be5288 Update README.MD
+c646159744651fe6f380efbd894da0ae3767c3c5 Update README.MD
+b53fbcc572efc9c1d1fa325e3e5f16a0dda3e4ee Update README.md
+47b492286ce6c22b30be38775d4faa3b2edb3b37 Update hardware_tut2.md
+e033e60b01de51c573f95e4b4ceecfc53dd20364 Update hardware_tut2.md
+2049e19eb59ccbddb21b3c08c60ed330f898e6eb Update hardware_tut2.md
+2a1d99975802eec07e7634abc2677386f93a2c6e Update hardware_tut2.md
+8c1c380a60b3e59951c34c8b4ac7a5a01d21c23e Update hardware_tut2.md
+ec3811c90c2747619561a6f2c28b1bff25b4701d Update hardware_tut2.md
+dc85e54662294eaa191940d25bdb9323f75f330f Create hardware_tut2.md
+6c72e1cf2e85d26b4a0158944731ecfd77180faf Update hardware_tut1.md
+d3ef886eea6335c2566f1c814b07710571eb27c7 Update hardware_tut1.md
+dacac8bc654376993572bb0ce0d24ec13de8e4c0 Rename hardware_tut_1.md to hardware_tut1.md
+37f60ff739c365d66e072eed2973a248085a3cb5 Rename demo/hardware_tut_1.md to demo/hardware_tut1/hardware_tut_1.md
+47ffb90a509402c74a7507e77159d2f9c74b8fd8 Delete hardware_tut1
+e7a0e60fe0edd294f73b7c13e73776935ea79df6 Create hardware_tut1
+d3a8c0dae1d48d36100ecd160872e065f770a2c9 Update CMakeLists.txt
+0e1bd2b863b73a0f03b7eee4f45437173fc57aff Update CMakeLists.txt
+f6686314034b8343a6fb2dc83c4bf2b0b4300ece Update CMakeLists.txt
+3ee64f3315cd75d85f6f41de4e6ec52b302ba025 Fix accidental deletion errors.
+39b3d115e8193c24dd3879d38404986defbbc4e8 Update README.md
+3abe62dcdfe079884b3f90ccb347253acd18fef5 Fix wrong model name
+735497874998fed40c78642f676e5f41b2637efd Update readme.md
+d079b99743fd5c13dd691c3ec9941fa0cc21ce16 Update readme.md
+2077a5679805df45cb633a3b7c5c602d75acc8ae Update readme.md
+374a6dcfb0d2fae9ce103731bfab1684d017038c Create readme.md
+f7b725ea6bd0d3a13ec339bf9766b5aed59980d1 Update tutorial 6
+2a91cc78179c4f51c59ad1f750d2510cdf3e3ba2 Update tutorial 6
+a9d54fb8c0f08e70ab0775c3741c8a2fe11835b8 Fix tutorial 1 conflict.
+63bf937a8b661fcd392533618fb0de46d2dd57c4 Update tutorial 6
+b13e318da94269a329947e7cf81e0e18d67c6154 Update README.md
+c8c1a05b27a9708cebeb366b90e3a5d6dae070e6 Update README.md
+19988c424a6da28107574c91512b56d382b8a3e8 Update README.md
+c57bd1b03c9db393759bd5acab0b0761f7cb61af Merge branch 'master' of https://github.com/generalized-intelligence/GAAS
+c630c9d40cb7db5e2fee64f4d4a8333f053c3f01 added topic config and framework of coordinates_manager;tested okvis and vins seperately;still doing more test for robustness
+2ff0b0e1fedb26740e8c40baa3754fb113567f5f Update README.md
+d71b660951664b5f6a5a49f7ff6defd0a0cf2670 Update README.md
+7fe88b51070adf2e71813d4671c8f580a48c2ca8 Update README.md
+f04ba912089f4d19d85009a326c992e3b5531d83 Update hardware_tut_1.md
+d1214746a8ca64242a0d22f8410c27fd83c41f06 Update hardware_tut_1.md
+fbcaed3c513cef8ecf095e1ef808c3bddfaa366e Create hardware_tut_1.md
+101864b46f67d7e9b1e3449be093159dd67b40c3 Update readme.md
+ecd9fbb97aa69b8077663046ae334caa38b21cb1 Update README.MD
+aba737c67f85fe8df662f90c193af823a2bb8453 Update README.md
+16193e95cdd18d1e3bfd3c40249b4357cc4164de Update README.MD
+73b5cb82dcb38db0f938860be6931d21fec970f6 Update README.MD
+b39983c056030d3becccbfec77fdf3e47e3bd656 fix a bug, wait 2 sec before node initialized
+1dc821d7942714222b37ca2693377f64014bcc76 Update README.md
+e934009065cf129b9339c4b62ae5a2b4d7545cbe Update README.md
+b78e6d2093822a8393d6ccc9f1f7053fbe1a57ed Merge branch 'master' of https://github.com/generalized-intelligence/GAAS
+71a9e31c9b2a39d31434953286d5dab4222329a9 fix simulation world
+8296226548f82b1b9a1863af482ab2b536a3382a Delete obstacle_avoidance.world
+181aaf28f3d290cf627bddfbc12e763965072902 Update config.yaml
+dec47e28504c155b9524527fb07e35bba9aacccb Update README.md
+b93dd34077582b65c84435c913d1702ad7ff2b70 Update README.md
+669176bfa83cf36136c414490f25e36197d33bde Update README.md
+8af7a7d6b05bbc7fddf75d5bc5119426fed624aa Update README.md
+131a8c74549687900fd913d4d7781ecee84f45c3 Update README.md
+ea34d450a356ccf1a961a9452ab66fb497aaa58b Update README.md
+3bb13569d7874a7993b8d5380c9805af63048c26 Update README.md
+23eca69aab5a1b8293e18ef9aaaef7be5c42c6b1 Create readme.md
+964a8c963a09f407db97922348da183512463429 Add tracking demo gif
+b5f6c030e60c4af22ab5904ff8492ee7c92e8698 Update Object-Tracking link
+a859fa6a61aa6a0824f8d8fb767b6ed9398a5cb7 added robust kernel.
+100f384357bb5805347528a4b4f887ee4952c4f4 fixed memory error(in edgeprv's vertice size);TODO:fix Jacobians in edge prv and remove dependency of GPS msg.
+5921414091232017eeccbc6025913fa180b7c728 Merge branch 'master' of https://github.com/generalized-intelligence/GAAS
+19ff32ec1314e777a8432a7bafdee95d08bbde94 added edgeprv;still fixing memory error in g2o.
+27dfa5030291d3fe20dd1efff133d8fb6c8de6de add PCL filters to generated filter for better result
+b441abdd3fea5dc5dc48cdde80196b783848f6b4 fix scale error
+8c6b890ac060287fe61b735583adb49679302c9c add image for qrcode model
+8bf1eb7a5f9b4883b0546527322515fbd45391f3 fix solution selection
+ae8f4a8ab83ff08535236e3832ece939ac9e30ac Update README.md
+6093ff49f6a72cacba1d28cb296d95d9035abb32 Update README.md
+8e4260f4408e954c7f482b1bcc5c04487dcc1749 Update README.MD
+85514f8c64d1518f6f374f5674479b6e3764f065 add resources for tute 5
+0855c855dca81786a9836e0f3c2bad480f5204bb add gif
+2425c73a1f8c97d303cd2e3f090f16ba917640e4 add gif
+105d8aefbd91178c40f359322b8337eb8b67f5a4 Update README.md
+d2244300efed276af3c81cd66a5f31a26d1821a1 Update README.md
+9e74f58310822f819a9de085a82d4d10bd654ec2 fixed sliding window;todo:add edge prv,judge if gps msg exist,dynamically change graph shape.
+476724c5c2092b4928f3dd7f4bf3601967134626 Update README.md
+245a02c1fc93da05209e245ff552f0ae2eb54946 fix moving logic
+244b7d2b7f94a1bc08f4f54faa098fc5d855a646 fixed frame error in tutorial 5
+2ff9edf9ea5d4d52b8253aa8f4f64d707ba6d3e0 added vertex speed,sliding window;build passed.Will add edge slam prv.
+a0666f78fe1a149af9b27bd73d94fb6c31347c79 fix a stupid visualization bug;merged gps and slam position node,seems smooth.TODO:add speed vertex.
+a04d2dbd2e5b1c613f1251f951e216d8187f050d Merge branch 'master' of https://github.com/generalized-intelligence/GAAS
+0f62546fdadcd69167c55e066b31d77361a3beeb changed visualizer;added slam position,trying to merge gps and slam.
+33df5f495763ef243391b4883246263eeebdb45f minor typo fixes
+62680e590f12e27e2999d50844252d7d512cde80 add draft for tutorial 5
+12e3a7731477b7477f9559ef0d2cfe3479b63813 add draft for tutorial 5
+96602d2a914112eb68904ecf1278f5d22274c842 Merge pull request #32 from ninawrong/master
+d682b27738e4079eaebb136ab61d7111fcc4b28c Update README.md
+04552098f0bbfe3a4db34c01014341ebfc445b24 Update README.md
+5f3429c3c0ed31fb0c69cf8ef2e99688b46ce63d Update README.md
+6959b8d607a880b3690457449e352da38e2dc7de Update CONTRIBUTING.md
+1155ff585cfe0d3b894a82f86196bf2ff6091ec5 Update CONTRIBUTING.md
+2782053671c0ea5e75a634be5c31d4dfccd1a42c Update CONTRIBUTING.md
+18b12dff026c5c0b70cd21f5eeda9c2b35763d05 Update CONTRIBUTING.md
+5afb801241bb61eb88f72a59f31be40582f8234c Update CONTRIBUTING.md
+d0a3f0b4e87f8aaabf0236bf95bb7c38c3ec300c Update CONTRIBUTING.md
+dbb568ae542f8e527ab2df3ca37516892fbb00d7 Update README.md
+2f11628b1460ea401784be5ea7593cd19441f864 Update README.md
+4088f98d6d32da5947449554615879b187112181 Update README.md
+d9ae6882f45070af8e14e8bf8b33b98a88eafb8f Update README.md
+3ca16adb109f1b12f0ab4ac00f68e4a3a574d18a Update CONTRIBUTING.md
+fcebe5e01d36658a91e5cddfd3923432e7ebc81b Merge pull request #1 from generalized-intelligence/master
+228667b3426a33afb1b2fbf7b83a72aa059d7c26 Update README.md
+53b9cfd8c480eaa5088ef7221cc8625dae2834f6 Update README.md
+2d3c1a284034c85c234330bbb459a2e70da12eed Update README.md
+1250b48617d50001151644675511c5ab01007e5f Update README.md
+fe40751c7edc1789eed0e722a1947c0db55d3f08 Update README.md
+4dc11d3482c0b263d993524bc9e3abf5569f3a43 Update README.md
+03834686f25fb37bddab6c23e8fddb92481eebbd Update README.md
+593e6f0f962889da3e58ce41fecf6d2b97b41030 Update README.md
+22e5bdd826c715f8b3325a33b5166f9706525c9c Update README.md
+f6d03878a131eb6d218303d585d069f7346e2caa Update README.md
+4cca17555de38d80b4e71cc1bc1e4368ec4f3681 Update Setup.md
+759570ffff6bfa1e78c36195b7afa9f17cb157ab Create Setup.md
+81aed0510a0d9f6a4c3222d2e62632ac0eef9571 Update README.md
+57e49d0ae7ea639f2cdd88bcf18344585b5b146e Update README.md
+b6b2ff137e31b1802957123e4bba54db3e4f50b2 Merge branch 'dev_gog'
+29a894c8729eb121f14c9bf614f304c58466e2ee Merge branch 'master' of https://github.com/generalized-intelligence/GAAS
+6574bf280611e61096e4a796bc3fc36c3d073303 fixed rotation axis error.
+f63d746292f9f395506b4a1171c1c09a2deebfe0 trying to match coordinate.
+b118d3931f0833b5bad309fee03e0c0d7590719e Update README.MD
+1d4ca0a939eacf8b8cc607cd908502ccbd2a2b87 Update README.MD
+06d01227132a6aaea0ae064ebebb3542fb5de7a2 Update README.MD
+40d3614ff9cbb16bfb46fcc7f41c4e188abeff12 Update README.MD
+98cd746bee8c11627010a227de621a8d69553c81 Update README.md
+7d6814154eddfb34d8a02c1359a816a45357b023 Update README.md
+f0319ab7ef3e80cec9a189a4587d046f14a1c09f Update README.md
+e7c630fc4e50c6a517986feb5c3d34672ef05768 Merge branch 'master' of https://github.com/generalized-intelligence/GAAS
+6bc03d99b05f99570097685dea02f688dcd7c3b6 gps info added to optimization graph and visualization scripts added.
+05482be85f74e9ade9e66abeffee1bff96614e41 Update issue templates
+c7757a84ab77b6317d741c313f9a95353c9181b1 Update CONTRIBUTING.md
+3bdb70a0c396f75fed2bd431b0f78b1ecfb4661f Update README.md
+35087bd639f9b10e6ed550d728b34129a0a27ae3 Update README.md
+710db611ab966a3c5ef2b70351b992a589da3a1c Update README.md
+8ccf822c66df026d43c44a1261270e10e06b53e5 Update stuck-on-tutorials.md
+c42d20535a4b0a1ce5cc9544886f9891af144202 fix takeoff_detection
+69e329a913a01a324f06b0beb219f41c1c021750 added gps;will change slam info into 2 mode:as VertexPR and EdgePR or as VertexSpeed and EdgePRV due to GPS status.
+624b9c3249e87db3d47d47b1149c86ebc6912631 fixed vertex id error and memory error.
+55f1d7ce70ef8b0cf417bf645282a568f891af1d Update config.yaml
+85e218efd8e280c4846b593361da99577410c5ee Update issue templates
+a3d63300a29a33c1c7f01134e64ff9f5559df5d2 Update README.md
+63b8a867e0586ac3831817e020ecff1781f12eb3 Merge branch 'master' of https://github.com/generalized-intelligence/GAAS
+c99c4449a53469871f506fa6ac6d319e11dd3f8d get ready for slam edgeprv insert.
+cd43d20d20b9f7ce03d75add669e6e26bf6179b1 Update README.md
+37d693fe70ad7d5eab38cc76aa62b5340ed25d01 Update README.md
+9b6bddf0ce8b787ef0ca7ea94f7bce023aa60fbe Update README.md
+bb9da3b1fd751ff2090e8f75cb4bc5e24f1c479f Update README.md
+73d05c2b5bb42504b4f78a9affe30ebf903ee065 Update README.md
+991845e6e56fb75eb7ecd4728442f6f2691caaa0 Update README.md
+449a1292f273146b0c4f44cdbdc57ddf1dcf733d Create README.md
+a9b4ff718a78d4671154f4c45ec21b1b84aa22d4 Update simulationCamera.yaml
+ae0c03654a347b897c990cf590004e8ed7b628d2 modify Obstacle avoidance config
+8813deae4c4a2e297b853d1c21451016f911b3fa removed binary file and config file
+98d8af80176ca65db5086b297b8c47bd332a5de4 add WLS filter and PCL filter for disparity map
+af02fc8cdb372d6aaa7c199760ed32220cfaba3d add path pruning for Navigator, add world for path planning
+727962cca4f210ee59fc550c9a527115bfad3499 Update README.md
+0e36ca7cc2d6649ec4557c87468ee92f031ff025 Update README.md
+450ee5e2320c7cc46cc1b2f4fdd4c3a5efe14d01 Update README.md
+afcf087b63a979927070f235224dc10003f1058a GOG rosmsg callback passed,TODO:fix timestamp,estimate basic attitude and position.
+ae8e347c59349402da5961c3663503f05786f544 fixed gog compile error;fixed scene retriever mono demo input params.
+e4a215ae228ce4b2481c97fe009bbf9beb30fa8d Merge branch 'master' of https://github.com/generalized-intelligence/GAAS
+16a767340487a39a1122b67c953a23c1d971d0e2 fixed boost bind callbacks of RIM.still working on GlobalOptimizationGraph.
+31b8b3da4fde1de76c2af0d57b62ded98a528e5f added CHANGELOG.md to track changes
+1112beb6cfc35f8a750f5aa8522227464295119e fixed spelling error
+f2ad4e57e24bfc6ded1bd7f47ba6148248511df0 modified frame according to rep 105 and rep 103
+43a4430e669ceca080f800234a556cf17f4bd98c Update AUTHORS.md
+46e868a6f65bd6bb21cda9a9c1888f7c45affa11 Update CMakeLists.txt
+6a216f5adc9fe9ca608a700f20a2492554eb11a0 minor bug fixes
+a48529d9208d910945364d213426e33927bd0038 Merge pull request #25 from AlexisTM/fix_pyc
+5eddb2b260a707518a0c65cc229f40f9ad39f5ad Update AUTHORS.md
+73ac1a655459ac504ef013ed16532d841ee8c78c Remove pyc and adding *.pyc to the gitignore
+6619cb926d66a912f3b9c36a04d5b2fe9d2b9d58 changed opencv version requiremet
+3bba0017330c3f2c9d87a214c8a4a0b3293e7a45 added ros wrapper
+cb12ce8294c72f6d48204b9cd050bdb53d0bfcdc Merge branch 'master' of github.com:generalized-intelligence/GAAS
+c2b8ab4a2f21669c2de2485e36f853cfacab906c improved on pnp and icp for mono and stereo camera
+b3ae59ce8430018783c5a40aded93152eb0e9635 Update AUTHORS.md
+fdf5f90668a6656330c272afded4b41b13bd4ceb Update AUTHORS.md
+b94d1079c02438ed40a4afe6e84ef2ff87008b73 Update README.md
+485076d3b6673ff4fa245939e0273042c88a0b59 minor bug fixes
+01dee3377ac1728421661f92f9d180e28fd98d6c removed ceres dependency for now
+1c99a7a413cf16392a251bff4c45d347d770d56d Merge branch 'master' of github.com:generalized-intelligence/GAAS
+8a95e3fa5f13ea9b2535ad94515bb6ee862e9109 added ICP and modified PnP for stereo and mono case
+0309f1e851036da45ebc4e1d5c5fb0ea03d0654c Merge branch 'master' of github.com:generalized-intelligence/GAAS
+29a6655ed7841aaf3db1686c81cade98f5a8085c changed simulation config yaml file.
+376fdb8c0043a80678c56f73116039e6765f6d56 added stereo multi scene retrieve
+1386c5ffc1ea518c8fa61c7ca1f6809dde2cf3b7 Update README.MD
+ad80559cf841c48e71e7d9007d0eb22473e5cc8d Update README.MD
+853302d99f56cf02c189c6d8da3ee90a35f2a87d Update and rename README.md to README.MD
+855a9528cd32979fc217fb589abd849901e2998e Create README.md
+fa332d953a5158a7b708dbd047a5f4923596c1f4 fixed camera instrinstic
+8e03e4608eebfd032a9b9e52938e281898fb0622 removed extra dependency
+b7ce98443ec0c6f95cdee70cfe633850f8be09a3 for tutorial 3
+f4cf87dac20b73fc830fa96bdfe651a72479bc93 Merge branch 'master' of github.com:generalized-intelligence/GAAS
+e561e6c8b418fb9828b78d5f8710015d5f716cfe multi_scene_retriever partially implemented(mono part);build success.
+34e0dd6a3a434d2ed4e07fcfcd0c81f817e0a903 added SLAM PRV,will do multiscene retriever first,then global graph.
+4c33cb724a4d258484e84b6b9e76cd3cfcc2d7dc Update README.md
+32674dca7a10566dcb0ba27607b1443ab482a91c Update README.md
+b3333bc14803b221bf4bc4c82e2e8bb59f587c3c added launch file for tutorial 3
+868880618dcdde17a2cd62ee77622918df5f1d60 Update README.md
+1b211d7592fdf1df69bdaabb017a1c9cce91d584 Update README.md
+26a4e902d9ab6429ebd777f3667413fffc97b401 Update README.md
+0c0e3f0abf81cb03c18035a41bc9de945a9a90ff removed extra files
+133195a0f98a83a8890d208f9007895814578c48 Merge branch 'master' of github.com:generalized-intelligence/GAAS
+ec74b5e013cc21e00a2ecfc0f9d5cc39da5704cd Fixed vision position estimate bug
+f3e2514dcb0b967ab2b2adccb2cd22d74fc5a51a Update README.md
+f1c84c19b191f30e8310d3a326a428dfe0c9bdcb Update README.md
+1be2a0bd81a2fddb8600c52ad9219bbae0222a91 Update README.md
+392f6eccbe60e3ba7f43a6caa68b95abe948cb41 Update README.md
+a79c85197052b3cf59a450aaefc11f7b64531dcc Update README.md
+286d623da2c04e4850769cafac18bd2f56435c52 added image ROI mask and demo results
+301b7ca4e3808561e9072a5ad2d6d63a8339c375 uploaded ROI mask and demo result
+cd91534b3b2a328a748c88f62eb72cba638b07ce Merge branch 'master' of github.com:generalized-intelligence/GAAS
+bc0ede55532332dd3ca837243291a82f986e159e performance improvements
+7d3c4749898a941facd7d7ca90de5826f81d1711 Update README.md
+5c3b8c684e72fdf7f62c5731a260021e741069e7 Merge branch 'master' of https://github.com/generalized-intelligence/GAAS
+6658c7ad925ca15c1ca5209ed26464585e53433b added SLAM_PRV edge and multi scene retrieve api.
+4ac5cc2f3fb63204452c2b54f1303fd7fb825a32 modified thirdparty dependency; bug fixes
+4523c117efcf44b64250d9154665c6b18d285288 Gazebo model bug fixes
+a47d88d2a8edc8200aeebebebf325111bdba19ce modified outlier removal method
+6e6c9d3e761ed551fc9320a7b7096a269f874090 Merge branch 'master' of github.com:generalized-intelligence/GAAS
+65968432ae31a49db8297fc313bf378c4fedc7c8 modified DBOW query
+82c5a7f897470d0456d71e35b2e501199ee43f98 Update README.md
+dc3b55df397e652adc6d5164ea84b232d50c5fae add cmake modules,fix type info,add some implementation,still working on optimization graph
+65629b67d8386ba329f0e26aa1decbdba9517d3a minor bug fixes
+c5a47f0f50b5fda6fb51dd48529a3aee605ee543 added function to visualize pose history
+363b0be7bf457e2ebf049397c0d030b54b2b6998 f
+6e29c118efb35e3daa28f6e4b19caa95340ffa39 Merge branch 'master' of github.com:generalized-intelligence/GAAS
+758c10ad4ff39a961462160e75b2434e2eb44805 fixed a bug
+ac4e008e662167ec0e24cd7fdba4f8fe0910b120 Update README.md
+dfc471684969e9d103141d436c50cd0436611bdc Update README.md
+638a6d28e6da7536030cc294a5dcec64aa502a1c removed dependencies
+1f41968361fd79b9bc3e94efcf785a64bdf77d19 added mask during matching and modified pnp, removed ICP method
+69c9741aa0d01ae573ba8f9115b570e3127d624b add implementation of graph init and addblocks.still working on this.
+11a3eff9f35c86d0d4c4a0c83c16e33c48440471 Merge branch 'master' of https://github.com/generalized-intelligence/GAAS
+55529023c5d795a2783689a68fc8056c6473e64c finished ROSIOManager init.added sophus and ygz headers.
+89f1522648390373699432d7e8b9683f43245755 Update README.md
+95ece5837a99b847b2cb17819f1eeb8027176845 Update README.md
+411bf6d85b5e82ea0b4a2e9db1a7e695da9cdb23 Update README.md
+278de005b9f997d5cf325b2ee9b7901b8f7bdfff Merge branch 'master' of https://github.com/generalized-intelligence/GAAS
+dc0c363be08ad9debcd07aa3ccafe3f8b288731a fix structure of GlobalOptimizationGraph,added class ROSIOManager.will fill in implementations,a GPS-AHRS state estimator will be implemented firstly.
+8bcf81206966234ea203f50c398881799ba35db5 Update README.MD
+c30c6eca2b0b9c04e5d0c6f7878e92334931d421 Update README.MD
+fd7b9fbfed89659bebee4516379d6140abd8a6f8 Update README.md
+49efee8d4d2eab570ce3fa11d46a74201da30a90 Update README.md
+29f3b587c4540dff7f28fd247c80c7f9268bbdbe Update README.md
+45e0c9fe132d700edddf04695936940f03db5026 Add files via upload
+bfcf2cf9866b01804056cf4582b4581b00760ca0 Update README.md
+da17b0aa819727eb559711f3073e1667f1cdc281 Update README.md
+9446427915aede2a23e9b0a2e24d51e1d8ea59f3 Update README.md
+d930cd784dea5293749b5864e93bfb610b0313b0 Update README.md
+705caa13686f6ef0b399b9cbddb446d9c6d4caac Update README.md
+ee53a7516890e9ff4038e78e125a3a5ee9a23849 Modified Signal Handler
+aeb91baf176ded43b7a54aae41357bf9c358f232 Update README.md
+9c0af2275f0b95ad310bf9e8afe2d3987a4eea3c Update README.md
+8cf8e93eff4cb40cc097fbfed982fc98a1e37e98 Merge branch 'master' of https://github.com/generalized-intelligence/GAAS
+2df81a5dd32a118cfe7105f5280f39a3dce3d150 fix ahrs imu error.comparing ahrs attitude and fc attitude
+37872fdc7125567704d5ee0f0fbdb93fdc36167b Update README.md
+45f4e43482f5d903cfdcf3a0d767b113811f70b4 Update README.md
+888f2553d32f9d1dd7530a30d77a80a87f6ad30b fixed compiling error
+4fd672fddc4f3cae2559340bbc9594fba1c26303 fixed compiling error
+aa598e67e5da023b900a5f187049b961a29a764c fixed compiling error
+46c800d53c633465e8031a05c395898995f73408 fixed PCL general ICP
+f7a1c7cf0818d92d73f29f9ceca87f9f8c3a3eb7 Update README.md
+ed8c7669ac14d3d501acb615db7833683fde05cc Create README.MD
+ca23f037ae0fe04e1d651ac0fc0fafeb12d94223 Update README.md
+a672d890ea8f581b7c2d0470d2d1bd49dff43c3f Merge branch 'master' of https://github.com/generalized-intelligence/GAAS
+13b08eb2c474dbca4dbe27df06e5ae77b50276ad fixed state transfer logic,seperate header/cpp ,still working on whole optimization graph implementation.
+85cdb0724ecb19979b2200a31935456d20c92b58 fixed naming error
+5291cf3c82d84f795836a17d9934ffd3a8d2d186 fixed naming error
+2a30e6e39188b01bd678cb77ee12c4494a2b792f fixe scene retreving
+efb2c8492bdbcc63f6304ecf186576731eb8405a Merge branch 'master' of github.com:generalized-intelligence/GAAS
+de68e768d0b5fc9bbee82ae049c37f07a9892cc5 added signal catcher while generating scene
+3c6982d2afbed7e2eb35401995cb83ec434078b5 Update AUTHORS.md
+fdf706f83012c168b0250c4d3b478517d734a37a Update AUTHORS.md
+b5bc5f59dbf0b55fad052a2515451065804fbd73 Update AUTHORS.md
+e2dfcdb07624cf97f79c52d3752f1c65244e807a Update AUTHORS.md
+8c481698994d08adff17338459af0be8350cb7da Update and rename AUTHORS to AUTHORS.md
+a273d13447656dc55de0c743ace7b1f938f3a3da Update AUTHORS
+f8463fb78676cb05c0681dbb13d214307b6cb2f2 Create AUTHORS
+4985211ac6f22a0267b6fb5ef6e13e345ecc7a7d Merge branch 'master' of https://github.com/generalized-intelligence/GAAS
+ace386b960e0c5afb95a19b330c31b1133212061 GlobalOptiGraph added gps module;still working on implementation.
+b782c8b1be097a60d9ee392c11f4d524fe305f30 added Database save function
+6746cac09b029128cfdefb30da6009692e7f70d7 added function to create scene from SLAM
+142bf34426c027c68b78308199a1396c04bd6f0e fixed a bug
+2634fe89363fe2dd61baa21d569d86f6580b6ec6 Merge branch 'master' of github.com:generalized-intelligence/GAAS
+01b4cb7faf2cf8c7bc09f7de848062ee087d6b8b set flying one circle as default
+87df2102e969bc01a751959ed44844707ca7220b fix timestamp usage in AHRS;TODO:implement GlobalOptimizationGraph.
+4df82f0949d0e1c5a7507a14e095d3a94bb4f9ff Update README.MD
+98c7eb690deda8525a94e4cb9a3c6dcfa835e687 Merge branch 'master' of https://github.com/generalized-intelligence/GAAS
+76677792b9eaef2e66e5e6569d3cf929a3423ecb added ros AHRS app.
+a457acc0487264a47585a8e6485b88c0659308d3 fixed scene retriever class initializer
+34e96a69d2f3a57ec0164e2a8041cd6e69cc7ff5 update more drone models
+58ecb15634369480c98144ee43e88e021c137c54 Merge branch 'master' of github.com:generalized-intelligence/GAAS
+cffe71e5c2d88725463bd598fe664631614b228d added tutorial_2: sfm
+8db365239b2a1d85ff2ad0ab2c6afe574b09b5b0 fix AHRS lib,fit for unix and arduino
+022f9f6c8f6154771c244338a66008e0ee36405a fix AHRS lib,fit for unix and arduino
+d7b2699c615c2bea180113e23339aa8fe9f9a24b added sfm model plane detection
+527fd53d6e716262e90e5cd0cd303cc92ea94b06 Update README.md
+a13db32cd982127339ef6e4487a5795a0e84dd36 Update README.md
+2e5545ab98e5f99df0bb9fe11265fedf4c2c53f4 Update README.md
+7910ad3825db199a3a5764c8ded9c15443758e19 fixed a typo
+e5934598b878c6a23ad607f509805e0d5368cc87 fixed a typo
+534dd3670af057c037ca5df69c306b9216720380 fixed type
+47342ba0552e5732d01e8dcca51d330c5947714b tested R and T serialization, added simple test in each demo
+f8537630ffbada04e04338974308ca0387004c00 added cv mat R and T serialization method
+f8c88a53ecbc5299f05211c5a4cb92c70446d6cd added AHRS implementation,global optimization graph framework,gps utils,temporal manager for session concept.Just frameworks.
+ee14cc8d09b6efdb7df72b11fdb760957d9c513d Update README.md
+1204269fd410f0855c79f10a7d783ae4ccb09eb7 added multi scene retrever.h to search multiple scene at once.
+b335e84920c1777bfd24204967dcee26444ebebe Merge branch 'master' of https://github.com/generalized-intelligence/GAAS
+02716ac22aee91cbeaec3ddaba7b7b3cfd42a60c added scene_frame_properties.h,will be useful when check gps nearby frames and magnet heading info.
+4d6f36577dbac83f919aa30764c4af8b45f9b3ac added a test scene
+c954ea0557b1733f0951d4313373ae8ce207bdb1 aded a test scene
+e864000397bf0e9da1081742b7c4ce70c6d41fef added deserialization from scene for both mono and stereo case
+066096ea48c5630ac00b37bcaa057f4783161216 fixed a bug
+9c153067e858b6ee689b6c2828b4445f5dc609c1 added map serialization method
+a95c29032331aabe01c95a05dcb9d45ccb9617c8 Update README.md
+e91489e1ed063ca8de54fc70d4ebb33d2ca11e5a Update README.md
+754778a2342c91427db14dc00682731e3ac5d132 Update README.md
+c06102e6172cc4ea5e20f9c02a277f4f8bf2fcce Update README.md
+8a888fbe4a030ace21d5ae657c799061957b8027 fix problem cause by multi models generated in opensfm;currently we just reserve the first model.
+3fbb50809267f2c05cb3f40b5814474b7babd90d fix index add line num.
+1119519b48eb117112ea7d5ed9103724e5df2d86 fixed several bug
+3295b6f19264d1e6fd0b3b9a82fe67c61ac1bc9a added framework(undone) of image detection/segmentation and accurate navigation demo.write readme for these modules.
+371f33d39239b607a45a8c6448b0ee2ec7df55ca added demo nomo for scene retrieving.
+8c5a01749c8ae7e3b1136a38a5579fa874688a7a added demo_stereo_main
+495ff8d1f0588c736201e056b97e277bc2cf92aa Merge branch 'master' of https://github.com/generalized-intelligence/GAAS
+3bc41b736ffeef9dfc8f8ade87fa1f94e534c192 Make scene from opensfm model test success.TODO:try scene matching in this scene.
+0488ae179ade6eb2f5ed200015721c3005939546 modified README
+0209b7c79ce84e0a2dc0a0b88cfec40c66650a12 modified README
+97ecf099962ce6ece4dc08bae3ae89ff5b7e941f modified README
+714835127ee1b3929370bb7c6ef38bbaf8864a1f added collinearity check
+51eac35851b3fce17fc810e9ee971f599b372203 added waypoint collinearity check for Navigator
+e5ff6010819dd543eb6096c6a19a328aa9d989e8 added waypoint collinearity check for Navigator
+81446515c4dce756e38086488c95d745a4958954 Update README.md
+b80353dcb30c410151a1e1408580831ceb79078a added retrieve demo
+0a34033dfde02f4a72e86b2bc6a3695721780d83 Update README.md
+422370af63cc1e5bff7f9db89c3da2630001cabb Update README.md
+e32291053f92576e03333fb54af1ea428c7c7e6a Update README.md
+58456b26d919424f9855847dba26eb09037d8bd3 Update README.md
+f116f455b9f424e0380ff58f0e6734cc2dd6192b Update README.md
+6f5ed01ab3b36956a4164046b87239c34acb689e Update README.md
+add2b0e6d21635c587218153b255fd5ae2063585 fixed compile error of scene_retrieve;fix opencv to v3.3.1 for both ygz slam and scene_retrieveing&loop_closing.TODO:test scene_retrieve module.
+efe15e90defc4573aa9d6307d0c8889703f909fb modified SLAM cmake and added scene class serialization
+c2b1bdc3baf9de2cf782fe714f57a85582f1f34e change loop closing algorithm framework to dbow3
+77abe2fa69daba1c15f47995e663c8f5abce90cd matched opensfm model with scene.TODO:test this module.
+4d64337c092f76cb1e971e0267434367eebbbb69 added opensfm as default sfm tool.
+b3963eeabfb10a5829c053d3fff2f2cb0fc03f99 add 2 method to create scene in scene retrieving;add json lib for cpp;TODO:implement loading opensfm model
+a39fc92bd3ddc51b2552dadcbfd2706ba4cf1ebc added obstacle map estimation and Navigator
+963e83cf8991a25c98cfd400188725850df16912 fixed a bug
+6e6592a95502fac4b3f63aab1b4f5c5e06f97b21 removed extra comment
+82e791fab0b77551642924498401a37e31ee5bac removed extra comment
+23a9de561e6ed10f98ddd42c0b89fecf4021b78c added stereo-scene matching;TODO:add demo&test
+f6d1bfa78e5e7315112d87f0df5db778e854b3ac Merge branch 'master' of https://github.com/generalized-intelligence/GAAS
+6c0e82bc4960757d7ebaf96de7bcfe2d1143efbb a little change of loop closing module;still working on implementation of scene retreving.
+4c6db0c35939ed6429188b288e821c449be68aa2 Update README.MD
+579d5428865099cb62b15bc8c8cf8cdc82a470ba Update README.md
+de86dcaabe934c40f33d14925664e1a30144560d Merge branch 'master' of https://github.com/generalized-intelligence/GAAS
+236360ce7a3820b7d06f400d5625e642a1d14363 still working in scene retrieving algorithm details.added 3d-3d and 2d-3d mode.
+deff9104bd2e4860fd301898d5515b7543c96107 Update README.md
+5f8123d6e3ff46fb63d0a5a531ac35dcec3f668a Update README.md
+8ff20febec9de0b3064b8d8c4a15d465861e1385 Update README.md
+3f775a3e609a9c90205330856084ec86e33b1513 Update README.MD
+ba459a84fb594d51a2e16b868e2974b120223534 Update README.MD
+2f512ab88c1be153d1e338280ff1329c804013ca Update README.MD
+af1ec019d8ea982b71a321c557bba9725c288811 added scene retrieving framework;delete build files from repo
+09470e756f96626a79cfc97b5e514c37cd75d6a7 added scene retrieving framework;delete build files from repo
+643fc1102d3f7f18488cdcd993611dc9cd4e9db8 removed extra file
+956dcdec6ec2b7cf9bf74b58e93f90f14d363a08 fixed several DBOW conflicts
+b5bad6b4ab81b60baea5ea0e66a531c9b156f10f fixed conflict
+fbb16120df543ecd03fbacaeedfd6c95c8ff9bfc removed MapPoints display for SLAM
+f8f8c540930082966d16c8f53e8672487c5ad3c4 Update README.md
+31599dc66ad0c0d78217c269a64fba8a70f66dc1 Update README.MD
+65a48202ac6f5de625e3e42b0f7200b41ee09246 Update README.MD
+dc3b5853ad2b9768c3ca0f1142071dd278f7b0e2 update ygz dbow to dbow3;added LoopClosingManager Class
+c7fb872d248b9d17909e8277f1c7b7487c01f229 Update README.md
+f6d51fbef89959330edafacb425777abade7bab8 Update README.md
+ed8d661f43d374bcfc29be9f100fb958500c9fdb Update README.md
+6cf15200c38c1a232f50d6b0555de6bb62d12ea7 Update README.md
+5a54a47fd8e5a47eb6337f5adf15bcfc1253d924 Update README.md
+3b5d511bb82fe57943d0cdaf9c2db0704cc90b6d Update README.md
+b455ebc21c65dd5cb164ab36968ed3edfb728933 Merge branch 'master' of https://github.com/generalized-intelligence/GAAS
+768de9c0ce962c49f2e58c112c5bd73941b7f40c change to dbow3;great improvement of loop detection
+a3641eefb771c96d663926ee96bc022845b527e9 Update README.md
+55db79dc56ffa9c41af518fa69abed676d0a129b Merge branch 'master' of https://github.com/generalized-intelligence/GAAS
+fb465ed4b46de1fd20e44004f42522abcc9fb303 add some params
+a6ed27993c196f9b17febf548c74ff4d9fa47d9c Update Testing.md
+a84e4d7012b50838bf8b87783222b8bf4b964470 Rename Testing to Testing.md
+65be0c6df1df2b7dc1e591a641c6a921ca7431fa Create Testing
+285d5a16e36810a447d0e142c82d9cefa5e05715 Add files via upload
+6c3b252cd8c13d043df8e6312aa8bd562623831c Update README.md
+496ac8e6da7c456a9b520e787e63d0560b178414 Update README.md
+3a51444aff964c38b1176c207b0090d876c6af5d Update README.md
+0eb153d050dd73cd27a18d604001b2ce8419cf2a loopclosure modified
+39dcf14368f1f2dee38a8a6ddf139ba5932dc779 fixed ref frame
+22c7886edec9f977e042b4d5947ef694ac2af6d5 Merge branch 'master' of https://github.com/generalized-intelligence/GAAS
+39046e8937a61a28757dad6d76450f8b97276bd8 implement of brief;changed params;TODO:add matches double-check
+f10a1346e6841986a2226aad77db60fc53fdacc3 Update README.md
+0c7d1c1f16100ae8f66b6d3a049d334e068a5084 Update README.md
+050e6a1aed86a600fcdd7326727ef3a3395d5a18 Update README.md
+c2df35f24374b93695990c79ecd4871a263b37cd added visualization tools;fixed memory error
+39dc1002aa35080f4b26a11335e985e2a22fef14 "modified README and structure"
+352e103d713f6aa5be2fa1ffed1277bad76e63dd remvoed obstacle map
+bcadc843005ab2aa17d418782758aa9db1b02794 Update README.md
+9a388c97d5c98913fd0140c44378d5545aa71392 added loop closing algorithm
+30055c90c78e6295c0809336ef6e3b0ee1de7533 Update README.md
+971d02b9bc5ae71ba5e1a70a763dd35a8e2f34d8 Update README.md
+fd855eae41b57e3aa5eb1f9ac3f3d52cfb8923f3 Update README.md
+8ff85395b632f429b87717d836e7390dc376b05f Update README.md
+08e3b6a0c4634d214dee24dc2ab947179004d558 Update README.md
+b7f57353a44217b826bf0d10545ff2eb40aa9c47 added hardware and algorithms dir.
+4959a302a72df78fd27fa7cb8958d4ac0b11528a Update README.md
+8c53922095a13cf24782da4fb3d01af285403e49 Update README.md
+cd09c8e60a657679865abcb3eb5fd6218be31d4b Merge pull request #1 from gitter-badger/gitter-badge
+6e670583afc86557c22c11b3309626e34c6adc1f Add Gitter badge
+174d5d2c692e975debb94a1f405dc2d34629e820 added HOVER and LAND mode
+4cb30fd0788227e1068f7c7414f5cb3d0e7d320e Merged README
+6864b3b4c889d5041e1657d1a490b85b5e0c6eb6 removed extra config
+3cac588fe40da61f01db6315fcc6cb74cfda9a49 Update README.md
+db8085f4ec460fa9184c80c4d167339d0b2b4c0b Update README.md
+ec6ec086b20f4b5beb2468fae44087a14bce022a Update README.md
+ef663485e0b1f7f95262139257c9014e93947775 Update README.md
+6eed0d74b12be9e954aa1d2a26f27a4eb53e8196 Update CONTRIBUTING.md
+75a8c471eee8f5aff600a32fd8d5bf2560915d71 Update README.MD
+76d6b32f82f1c149fe708a2fda88d61796f2d1ad Update README.md
+fa0a07bc0bb59e5fd68c082d232c5fcc4d9b61fa Update README.md
+505bc9f0861e95b2bd94971c3ed232dc2e435915 Update README.md
+6c506048ae73187339d93ead75f754c316d8a118 Update README.md
+ac110779ab66e91e3c5b969026f4221e436f57e5 Update README.md
+1e9c068f01827ed0acebf2cafa4527d3183e29db Update README.md
+b5d2bf1fe0b0e7831862d219bf4613a4f220a65d Update README.md
+177217d22826b7a17d7bcc598a21f310bd7e8a93 Update README.MD
+d2df055dec9bdd0ea458e55648a5a1a51b0ce99d Update README.MD
+bafc1cd9dafaf5dfc2e6269c583a7fa645e00f9f Update README.MD
+13bd9cbcc78dc70f89669b503f36aef3e0284dd2 Update README.MD
+7de681f8e6177c6e62229b91fd988014b4a8a421 Update README.md
+475db54c56ddbaa0d01b371ecff023593a21d24b Update README.md
+b3fbbc6bb6765726830db4f131f74e5e6b127ec5 Update README.md
+13a645b6852e14d60922adaea80fea5f14ae6ea5 Update README.md
+4372b9bc625cd0ffe08e1492b63a77b65d582f38 add simulator and software dir
+64018dd205b97dacb9eed44b24d1705e4d3fe4bd Merge branch 'master' of github.com:generalized-intelligence/GAAS
+219c99e13c2aefa22de04feb4a732cb501119bb3 reform project structure
+30d132897eb84b0d342fec9d45f88e365326ba48 Update README.md
+8a438946f4ef1caef9e95d4eaf8baafa45c3a573 Rename CONTRIBUTE.md to CONTRIBUTING.md
+25b26356d34fcc8f063c3732959ebf5541dfac94 added a set of points to showcase the usage
+e1a2bddfcb21b1cbc2f0ce692f2a959053dd94d4 merget README
+4fded33c6614a141891e599cc3fd0bc3378a2ae9 fixed a bug
+b222be5507fa3e554d11a7571724f680c954bd06 Update README.MD
+e55e8d548bc81cb567bb4adc867ab4b325348869 Update README.MD
+147b39f1160949d4a0b85ed11da925020477e462 Update README.MD
+f9f1cbd1274a08b31b966a32701a7d2ee823c0c2 Update README.md
+ae40a01005709e52a8c4f3ab8c044b506d117ca1 Update README.MD
+4cec2bfd7dcaf43cf0cae80e77d8029ad3ab91ef Update README.MD
+01b963ff32a31bb8ea584437d355ef54d35f1f7c merged modified README.MD
+ff987e77336d03af79fa87009bf56e77e6a4ccf3 Update README.MD
+b386655d181d7d8e124bb907836ff0480eafd9f9 modified SLAM config file
+b9449abac6c16ce1ac13a9374125858442e3eea2 Update README.MD
+31b8e4b030c225c668a13126e60b2f38c37099c5 Update README.MD
+31f7b9f4110d113b548604a52b93ba13ad276ee6 Update README.MD
+ef8360fe005c24b663b2bfc8a198a934187b2c50 Update README.MD
+d014c07c8a96fdd93127bd2763043d3731e51f73 Update CONTRIBUTE.md
+3a7966fce3e21d73b463ddd0927e1ff32309a9dc Update README.MD
+92dba65e2dfddcbfd0afab9717da5c6243d3c72d Update README.md
+81a328caf600dde9ff87fd67eeb96a6d066a60ca Update README.MD
+8114aa7a245716fde94ddcc1498d3b24bdcf6769 added ygz slam with ros support and obstacle map
+14d7b00ae43b26e51e48ac73368f71f6fdf96c79 Merge branch 'master' of github.com:generalized-intelligence/GAAS
+f4556d5b4e3f58d1fc3e0b53fe3ba7ac1c41d02f first commit, added obstacle map, px4 mavros scripts and ygz slam with ros
+8a411d3fe3155ce228f51512ad1a985c4c068cd1 Update README.md
+dace349c0773a4db13dc35d2f73710326dcbda3f Update README.md
+019c3144d222f329a43a0686637ae70b2fddc8e3 Rename CONTRIBUTING for GAAS.md to CONTRIBUTE.md
+183f34e368de310525a51e147e216040e043bdd7 Update README.md
+e45790ad2847b2ca5d770805249d79c690989486 Update README.md
+8921508c29d296637928da6fcd614a67a5fd3d87 Update CONTRIBUTING for GAAS.md
+7ba3506b90724017b26be4b7c5b7b5b2afcd06b8 Update CONTRIBUTING for GAAS.md
+88efebed962c9d5798f755b3c320f61b5533e404 upload CONTRIBUTING for GAAS
+a3fcd2f9535c3897aa812f18611b0b399fcaa1d6 Create README.md
+92fd15556d40079b6cad213ebfc430a2503c9ca6 Initial commit

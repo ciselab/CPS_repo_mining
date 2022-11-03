@@ -1,0 +1,1533 @@
+47f90b02c38af71897c599bbf93348d3e3fdf8c9 CI: run `apt-get update` before installing `g++-multilib`
+27c924746b18de7f753faae273265919f43549c1 CI: run `apt-get update` before installing valgrind
+7abf875071a79e3e506cf8334773d647a5caad98 Set version to 6.19.3
+e3e375f5cdd9e99411bc1bc4bae087a920e909b1 MessagePack: serialize round floats as integers (fixes #1718)
+ff06292d745c9c5928e55a8a435c8a43ab901ce0 Fix `-Wsign-conversion -funsigned-char` (fixes #1715)
+c1278797f28d2cda6eb264ee8edd1995c37753fd CI: use `-funsigned-char` in one GCC build (issue #1715)
+421ecec0ddae1a7195b3be17367fdbeb2de31bd4 Tests: trim trailing white spaces
+89ed54362bd0be9f9343e25d4ae947584f0b648a Fix `-Wsign-conversion` on GCC 8 (fixes #1715)
+986f77fa159c960c83addd5e656a98fd046f20e7 Tests: link with `-static` on MinGW
+f831ed395d275dc56418df9f2c9403c4f56e16d1 Fix `JsonString` operator `==` and `!=` for non-zero-terminated string
+a880614a7501cd00871b71750a65b1c3da165047 Fix `call of overloaded 'String(const char*, int)' is ambiguous`
+ef8379df1ba717e437a35a512d2e0eb1595910b7 Set version to 6.19.2
+702f8c2e2f6b317dbc4894e2b480ddf44c5cf207 Fix `cannot convert 'pgm_p' to 'const void*'` (fixes #1707)
+6806393285b07fad24a86fb00ffffff9d60b29e4 Wandbox: update compiler version
+dea83875866f7c12b0bd9072fd2ed31b1ea86da6 Publish script: don't stop if wandbox fails
+6ea2815341582759ac566fc836ab575f6414563d Set version to 6.19.1
+3c145f17822c5158371536ed04ae238ef76542f9 Add assertions to comfort Clang-Tidy
+21b2c76524f65d8cd0823223d3ce0a5bbcba3821 Fix filter not working in zero-copy mode (fixes #1697)
+4f6244eef415f2f3eb853243522434fb4a847df0 Replace `CopiedString` and `LinkedString` with `JsonString`
+973858b83510b7f11755fb1a785cac0815fdb5a3 Remove unused `CopiedString` in `MemoryPool`
+ee121556178603d4335bfc304bb2ca44a9425ae4 Fix crash when adding an object member in a too small `JsonDocument`
+4b4c68df5fdf79a648d53c91add0c25a7ce8891b Changelog: remove empty line
+fcae33d57422fb206f3602e05415bdb7e2844454 Publish script: fix change log extraction code
+896f50eeb9a9ced8f3a38793571c5d4e12b3de35 Publish script: check that all required commands are available
+9693fd2d7437bab8b9740c927394f1c1d8cf65d3 Set version to 6.19.0
+37f1c87338692c924e6b41d8894cc6044ed8c493 Publish script: check that all changes are committed
+4977de38fc5588320dbe9e000f4259832bf452de Remove .devcontainer/
+9f4750637b0b053cd38d25322bbb30d226f9c5d8 Add PlatformIO badge to README
+0c65e13aa369d7c68f7c3d1fd167682ab808455e Add LGTM grade badge to README
+af18994deb8b4c2a83d97ecf877a6d486b123b8f Update copyright notice
+8f9599cd1917dc42b092bb87951c3b111c925332 Format appveyor.yml
+78660c6e0739124b061bf1447dcbbcf4b5d90d7b Fix support of long long in catch
+4f786db82da6a65590644beb219fb6f983daf916 CI: build on multiple versions of MinGW
+ad7b749dec88f391a9724d91692126d06ff1b60f CI: build with arduino-cli
+29ba744d644482888aa2f90effef0fb8f04cb9fb Add a polyfill for `pgm_read_ptr()` (issue #1433)
+a2e1021d7dc8040b6e0737397fe9153dcb12191d Use `pgm_read_dword()` instead of `pgm_read_float()` (issue #1433)
+d20c3c65c89949e149e76151d7dc3150a191cfd0 Add a polyfill for `pgm_read_dword()` (issue #1433)
+8f029e609699fee5d97ee208a3a06d47e06b3b4d Fix Visual Studio command line error D9025 https://stackoverflow.com/a/58711983/1164966
+91ed68b4a63759c1fe8e93313cb9e4a9f9bc1fb5 Fix conflicting definition of `ARDUINOJSON_DEFINE_STATIC_ARRAY()`
+67fc2d989727c6bf69c24d2c00fd8474e30dd991 Assume `PROGMEM` is available as soon as `ARDUINO` is defined (#1693)
+055304bf01d807e0904821b814a0fc4727932878 Ignore Visual Studio's `/out/` folder
+c2800ace32fd34dcc391eda45b2927f332ce1a25 Include `Arduino.h` before `stdlib.h` to avoid conflict (closes #1693)
+ec7ffa20f2cc2beb94d7f086155f80df4b09bbdf Avoid `Arduino.h` when all its features are disabled (fixes #1692)
+ada1f2a894221914795ff21905d04deb7add38a6 Add support for `char[][]` in `copyArray()`
+184a7c4fbdddc58bb95f93505d61710ff409117a Add support for arbitrary array rank in `copyArray()`
+84e9447f12da078afe8350c6ed3b3e2f16c5a06f Remove redundant copy constructor of `AllocatorOwner`
+ca073fda46fcbe396905b7176370346cb89e5ae7 Remove version 5 from change log
+0f529a3587cc70353f514b311131b1a5ea9cffe3 Renamed undocumented function `isUndefined()` to `isUnbound()`
+e16767af927befad12e57eb4d3fe5c13256e2211 Avoid pool reallocation in `BasicJsonDocument`'s copy assignment
+3166356484b535463f3fa5f2311ede8755427516 Test capacity after calling `BasicJsonDocument`'s copy assignment
+abdd9d81dbf17ce5f9af880858ffc4c836af9968 Reorder lines in changelog
+3bf47761c8d06d7a117f49028ced381b8b286f8f Fix return type of `StaticJsonDocument::operator=`
+f39d8f548fe2d0208009dcf613aa43efc75ed7e5 CI: Add Visual Studio 2022
+90d750e4d962f0dc4180dd1e2c007cd754a6b8bf Increase coverage
+ca24ed48f533b1131ecd0379ff5b90bf7f740b30 Separate string adapter from storage policy
+51937778dd225f67809dbb1494dc6a3dbedd626b Add `operator<<(std::ostream&, const JsonString&)`
+be70f6ddd7ad24cf7db4ae309b0b75b2ec654ce1 Support NUL inside string values (issue #1646)
+a27398e44582b8207f3ee5280db8c95a6e853817 Check for NUL terminator in `MemoryPool::findString()`
+43b2e2e774f49d9b12ad3bc4711d16af97638933 Append terminator in `saveStringFromFreeZone()`
+62f9b94ab16d837296d7ca6c7ea016ff59805c22 Add `CopiedString` and `LinkedString`
+b06bbd9d2a9b8e6eb0d48602e107c53e1aa9689b Fix inconsistent pool size in `BasicJsonDocument`'s copy constructor
+2df1bc7d4f871d0bb7cc9ca3eccda40247499941 Fix `call of overloaded 'swap(...)' is ambiguous` (fixes #1678)
+599e927590662c3e59cbc9c2e22f808a1bf92e90 Fix `JsonVariant::memoryUsage()` for raw strings
+0429016ff11053dcf866ddb81c362fa0ba808fdd Remove `IsWriteableString`
+bd42b9638a4aa2365515843083d7f37eb15e4330 README: add sponsors section
+b1a826b03aff37e21cea3513759d97a1818fe06c README: remove empty lines between the badges
+5ed5f3687ba5d77c18c3247c348c2dbfff5ecda9 Improve test coverage
+943a902a0bbb4c73111e0c2d8d97afd4960ff2b5 Remove `DeserializationError == bool` and `DeserializationError != bool`
+a7873389c63774cc46d4b6f5585ca7513027a779 Change `VariantData::asString()` return type to `JsonString`
+acfa174333471ea25fa1ef74e2d9c2542dff942a Add safe bool idiom in `JsonString`
+8418845c8d8bf73ed98ef07d4f3bc9bcb3c1c813 Add `is<JsonString>()`
+df4a4b9e1de0405f8a21be4f395c86e52730aaf5 Add `as<JsonString>()`
+7f5497db55f59cd492215210a1c3413b6a14d0fd VSCode: exclude catch/ from search
+e4658e963f4d2b6570400bfd2c164efefc291ef5 Change the default of `ARDUINOJSON_USE_LONG_LONG` to `1` on 32-bit platforms
+7764515f561e73d371790b69e0e4e5cc69dbb57b Change the default of `ARDUINOJSON_USE_DOUBLE` to `1`
+7046c38c843a2aa2fd23ca681cefc5597d7b1e78 Remove `ARDUINOJSON_EMBEDDED_MODE`
+9e9bb30a57378b0edafdc9b45ac6391b8b2b0984 CI: Test ArduinoJson's configuration
+41d1be24cc3c3280fe8bc08cc5c6b1047f7ce9cd Update GitHub issue templates
+7d3b475e2470d2a618f63b21d344db6c3687c9fa Update the README
+f82a227da65cd7ec2a09a985e01c05c8717e7315 Set version to 6.18.5
+fcd8159617e3830543be69b5e06831ba62743056 Set `ARDUINOJSON_EMBEDDED_MODE` to `1` on Nios II (closes #1657)
+f51ccb5c3fc77bb786cc14dc3140b86b8f94b7a6 README: added link to Discord server
+e0cd5b6405222b2008fb831d5261f863fc800440 Increased test coverage
+6a71f3182068fa7f7c264dbe4d38ccff5bc035e5 Set version to 6.18.4
+3428ab1e8952efa9a5f3811c4f96b420bb9d1971 Added a comment to easily diagnose issue #1648
+956e4a7cbb579a3eaa115f3588a96ff009d1fbbb Fixed deserialization of `\u0000` (issue #1646)
+669bad27d45bbd6636551a08dd1b53aa7b26fbc9 CI: added a workaround for adafruit/Adafruit_nRF52_Arduino#653
+2c3ae1c18127f1d725b39a65a6d8eb1f17dd7e60 Filter: exact match takes precedence over wildcard (fixes #1628)
+f570fe8c37b8ca4ddfcd2742b3c1b13db88fd9c9 Fixed error `expected unqualified-id` on GCC 11 (fixes #1622)
+1b74ad0731f7c7b74dc21ac69ce251bbfbf24038 Fixed error `'dummy' may be used uninitialized` on GCC 11
+6717700d3bcc1a325097487b99690e58f910873c CI: added GCC 11
+b810833145e3cdab738fb4a45d7d4010a0e13f6d Set version to 6.18.3
+9d58e566fdb32f0b47d56700245126f0b2da8de4 Added `as<std::string_view>()` and `is<std::string_view>()`
+6632fa8da1316c002cf8bcc3fde804ebd0be5bd4 Removed `StringAdapter::equals()`
+5790f3c8f728036c24999cd3c3639ddb1fed41b7 Refactored string adapters: only one `IsString<T>` and `adaptString()`
+4073b52c00eca4a0ae9a0fed6e29b371fee6df7f Changed return type of convertToJson() and Converter::toJson() to void
+f5c7a6478e5c05c39a28109ca017a52496e7e488 Publish script: fixed frontmatter for arduinojson.org
+ebf58320ca5bd5698a4a3b10f37a0865a11d53a3 Set version to 6.18.2
+09ddb0f8245eeb1e9bcd1aceceb176d23466e01e Publish script: generate the file for arduinojson.org
+f02a699c2617f51d6e208f1bd53571e2b5aeec9c CI: added a workflow to create a release when matching tag is pushed
+67d0931c190410392ff79c3cb620e42cd6e8a0bc Added parameters to script build-arduino-package.sh
+19d079c33c3d706d4ad7809f5f9560caeb47702f Removed a symlink because the Arduino Library Specification forbids it
+40723a4cc75a2dded67c2ca80ee8f56898ef5f49 CI: check that the repository doesn't contain any symlink
+8a9a26588cf4e490247b1fe00e5d8108b4d91b91 Fixed publish script
+219475630a95b0b21c7a56b0a0137a787655953a Set version to 6.18.1
+52e856fa6f6dd23704e12ba7b60e82268c1c22c2 CI: added ESP-IDF component build (closes #1599)
+cb2c029e57f1b8caf35666af2fc2bfb6b5ee1124 Added support for ESP-IDF component build (closes #1562)
+ef7579394b3113d221edcbdedb38e827dd381168 Fixed `JsonVariant::as<unsigned>()` (fixes #1601)
+fc4f17530004907061a790f0c245e4d6471821b7 CI: fixed ARM compiler installation
+a6fc9311b4bc1e60a9edc1e77bc8c237cc7d78d9 Added JsonArray::clear() (fixes #1597)
+14639f129e515aa08389cb6c5cc4f93c92aa4373 CMake: added empty line at end of each file
+9182c2068da1222aaf5cd8e8f81e9d7521704192 Fixed build-single-header.sh (fixes #1592)
+cb1b3be723d810d4da4df1b5e89ce12ecb12ac07 CI: build single headers
+5ccd62a789688fb060bf8668da0f2eb4559babe4 Updated the readme
+145d45c7468283286f6470e5500f90aece25888a Fixed warning on Clang 10
+f2351574662ebc474219503caed85fd449b464d7 Added support for std::string_view (closes #1578, closes #1554)
+ba5cdab6197bced6120e0e2a8d711cabf7b36e9b Test: extracted executable Cpp11Tests
+eab5ae2f070ff01bb8a4df3bf496e8086df2cb61 Simplified string adapters
+2f0b3c0e6356f173a77e6f7a283430bd5c517f65 VSCode: added devcontainer configuration
+4e261068a1ab916c58f2a4c31805451a276799f1 clang-format: set IndentPPDirectives to AfterHash
+1d24caf066035d52eb67dfc6be4440db31213251 Added InvalidConversion to identify invalid conversions (closes #1585)
+dc76c5165fc986d3c161dec1a9679f6bd5527ae9 Fixed clang-tidy warnings (fixes #1574)
+de11b36a98f9056af60d22f45c4bef984a99ea15 clang-tidy: muted "uninitialized pointer/field" in StringCopier
+c4a4ed52729b732b40526a14bc4e2fcfbf674fb3 clang-tidy: muted "uninitialized field" in Latch
+a24edac5a952333aa34d7e057325798ea1571ca3 clang-tidy: muted "use of memory after it is freed" in MemoryPool
+9dbf44388d01a4df3152cb692273de90dd694ea5 clang-tidy: muted "call to function is insecure" in tests
+6b8e93e05e44875348a44c7ff2f8c9e73bf13a81 clang-tidy: fixed "uninitialized field" in VariantData
+6b5239b9d51c0c45c727c1d4fa03cdf636606480 clang-tidy: removed unused field
+214c06b771551d16a3e3bfa0336e646aa9e0be15 clang-tidy: fixed clang-analyzer-optin.cplusplus.UninitializedObject
+e32a8552bea7f77db2453fdc591dde4f5c6a5caf CI: added clang-tidy (closes #1577)
+9bcb40964837eb28b5ec062dd9f4b9f6517bd6cc Fixed serializeJson(doc, String) when allocation fails (fixes #1572)
+3b10afd2ab604f73abbb3154590f77e63035a4b4 CI: test more platforms on PlatformIO
+af3bb131c8d1d8691b5024a88d456aa47e903352 Fixed error Pe070 "incomplete type is not allowed" on IAR (fixes #1560)
+622e7dd287d772daf406d8f2001fdf742b1c7a4d Fixed support for volatile float and double (fixes #1557)
+68082e6fc1a45ec758cd64572f02553c3054e919 CI: use libc++ for Clang 3.5 to 4.0 The fixes the error: "__STRICT_ANSI__ seems to have been undefined; this is not supported" with Clang 3.9
+36bcc7b355b5acb5b7b85fd952fe29c6ec377522 Set version to 6.18.0
+c7c0b729c176eebcead3a024212635ac4c201899 Added a deprecation warning for is<char>() and is<char*>()
+6aeefda3b6c38bf72f8b7a9507bac4a20fdb3327 CI: Skip WillFail and Fuzzing test labels when measuring coverage
+4780174ee1963f7ef313d87bc7bbaa3058c6f5e1 Added a deprecation warning for as<char>() and set(char)
+ab23625091a56d7635a4e06562cce4def2bb2464 Renamed DEPRECATED to ARDUINOJSON_DEPRECATED
+a88cf8fab7f63a7616db49dbedbe126b5cbda0ee PlatformIO: set build.libArchive to false (closes #1550)
+2be528a3fa3780f8e118b676dfea00009c07ee15 serializeMsgPack(doc, p, n) doesn't add terminator anymore (fixes #1545)
+337864618c0198b2bfe935e54be9dd42d82ec588 Reversed parameters of convertToJson() and convertFromJson() Now the order matches copyArray(): source first, destination second.
+526cad54d76b9dc8f5452be277978af5c0759bcd VSCode: insert final new line
+506cf7f438f86163da856a3de3d5c79f6aaa7149 Added .prettierignore
+4b89878c10ad2f279903588f3a904001396b64a4 Added a deprecation warning for as<char*>()
+06fad301cb65fd22e98f197856ad0c52ab6e0cb0 CI: added Valgrind job (closes #1542)
+7be0c2c6503168a3494bef6bc41a1b023811e11a CMake: added labels to tests
+43f0db45ad198694a9481db0840309ef542e2cd6 Updated Catch library to 1.12.2
+892c37db0896d3fc28bb680559eaf06f0be5c8fa Optimized JsonVariant::is<float>()
+d8a1d1a120204403bc62e1b06d5d6b59974bf13b Increased coverage of ConverterImpl.hpp
+64e52e97eec951184f50c3077c3021d48e6ad8a1 Removed redundant range check in MemoryPoolPrint
+2a777a659a4ac0f24233003c3243084af32f2fb9 Fixed reference-binding-to-null-pointer in MsgPack deserializer
+898f42982675fd0987415eb7be8549e0a10d3c34 Fixed member-call-on-null-pointer in getMember() when array is empty
+88fbe3ac3436961ffe26842080024cbf8ce64dc4 Fixed undefined behavior in JSON serializer
+4ddc674846a4d383322030ef69725f8510efc1c6 CI: fixed sanitizers errors not been reported
+fc4f5fd05f8eb0458b9ab9e1c727000d0e57b5b7 Changed integer storage from positive/negative to signed/unsigned
+a00239371612d268d3365a1da0d84977d92c0f3d Replaced donation link
+a889f6560cade4c30ea96b18421a937f35e6c345 Added VSCode settings
+4db17ecd93d523f4709f34e10d79631180d95979 CI: format YAML file with Prettier
+2a57f2b365c683e1e939f4db81cd805ddad4d849 CI: fix installation of GCC and Clang
+803e07c188d609a3a2f405648f815a68ea31f4e5 Updated folders list in `.mbedignore` (closes #1515)
+ff44d93e68be7b8edbfdaa9e2e4d9ec4c55bb65f Removed buggy blank line in CHANGELOG
+d5d2209d09a3aa42b78463bc5258404a938dabf1 Added "https://" prefix to all URLs so they are clickable in VS Code
+c81e8fc93aac2cb7381cc3010c1453c25317752e README: added a link to ARDUINOJSON_ENABLE_ARDUINO_STREAM
+347ac422f46b2662d089e2329e0335c69be6a883 Added support for `Printable` (closes #1444)
+d7f5b56ca4e8ecd05d0341611d66525cc6f140a9 Added support for custom converters (closes #687)
+53d6f0d4923d8bd1f01cc72009513f14244f5eb1 CI: Fixed build on Arduino 1.6.7
+e4ce75e20cf06a468fae11e053d6ac7fdec91aa6 Simplified `JsonVariant::as<T>()` to always return `T`
+9094179856dd3a5938b4d760e2fcc18189811fc3 CI: added a clang-format job
+3aab36fec29983ffbd06c6e60f540bd3510b2567 Changed JsonVariantConst::is<JsonArray/JsonObject>() to return false (closes #1412)
+744d61f6fdc1b52b42614000c365f2af3086c012 Added JsonVariant::is<JsonVariant/JsonVariantConst>() (issue #1412)
+05498aa17874eff21ac5508272f25939438d17f7 Added `JsonVariant::is<JsonVariant>()` (issue #1412)
+b1eb273d5b4f9392f9124723c087b9d35611ce23 Added JsonVariant::is<JsonArrayConst/JsonObjectConst>() (issue #1412)
+8a3f8510d6d6f4fa44b55052efb92307fa9373a6 Simplified tests of JsonVariant::is<T>()
+22904a48a68280c1bfa7994fbe394cdbf385f189 Added a default implementation in the Visitor class
+1730304f46201cce5dde0737c4662798733ea969 Funding: added paypal.me
+1038fc35df6e8bdfe6d435f71e2cda79ef49795c Removed DeserializationError::NotSupported
+71f44aaee1b6259393cf0accef2cab7c325afb59 deserializeMsgPack() inserts null instead of returning NotSupported
+cc7ebfd11ef1870fff05c663c4a7f2e2f357a565 deserializeJson() leaves \uXXXX instead of returning NotSupported
+54d4b308f4e839c7986c913f77b77be96d9b03fb Remove `JsonVariant::set(char)`
+5234c8124b955373d81d4bdc9e45b0a3f6625a2e Removed `JsonVariant::as<char>()` (fixes #1498)
+e22d4bf31f1ad0a310250325364bea9386dfb699 Set version to 6.17.3
+21f7b90f033c119897bcb77646ebb5c8d22df876 PlatformIO: set framework compatibility to `*` (closes #1490)
+769e8440f5d74c6e21895c5c968e743f6788ff0d CI: skip Particle job for Pull Requests
+33de2b6cf3baf1de79e40f5633b6ed00621a8dc8 Added GitHub sponsors
+3975b073716f629d010c24d89b1d742e2f9bc6f9 Moved CI from Travis to GitHub Actions (fixes #1493)
+abd64102aa0cb6863b6803b73df3da95305ab042 Fixed compilation error on Clang 10
+d2174d158051f35b9887247692e7e8f628c72f5d Fixed compilation error when isdigit() is a macro (fixes #1487)
+c72eccdd35c0f8451988d59be390e1068e2e9798 Added missing calls to client.stop() in JsonHttpClient.ino (fixes #1485)
+ab902128dcf9dfe2c1faac101aad43effde2447a Upgrade to Lock Threads 2
+c70a491f59ba602625f699cf8e2f89ad85d5f23b Made JsonDocument's destructor protected (fixes #1480)
+322d13de0d9e42862321af458a7438c0e7aa15a2 Examples: add a note about performance issues with streams (#1476)
+97b7161d782dc2e6a118577224d647ac08b4826a Update copyright notice for 2021
+1360b6a396e096365c917a5518cf29aeac6c9444 Set version to 6.17.2
+16e51b83abfcd9c89968641e97660121f7b2936d Changed the default value of ARDUINOJSON_ENABLE_PROGMEM (fixes #1433)
+aa7cc5351cd9ea04a1b5dfedf3fc19c5c9a920ed Travis: added smoke test for Particle Argon
+30da920135aef7838944e2d3ec6e817e1f52d078 Fixed invalid conversion in `operator|(Variant, char*)` (fixes #1432)
+bcdf5b7e52812f43b63ea0cc4eab992dac023a21 Set version to 6.17.1
+c711fe592db35e57c9273bdd2f1bdc60f609edf6 Allowed more than 32767 values in non-embedded mode (fixes #1414)
+9d5c1b3742770be0ffc15bc96c21db67c0ddead8 Added an assert to detect too large variants (issue #1414)
+6b26cd097779c06d360b7f704cc5181f26da7bf6 Add JsonDocument to keywords.txt
+10ec0f21b0418dbffccd09504238c6816b16fa4d Fixed `operator|(MemberProxy, JsonObject)` (fixes #1415)
+ff66182dc648dedd4959239232ebd2f90039066b Gathered the tests of MemberProxy in one file
+d02ce2f1bbeeec4ae7acb54fd930cee949aa1dbe Gathered the tests of ElementProxy in one file
+2664a2d0da16f26d6e1264380cf16a7ebb193fcd Fixed error "ambiguous overload for operator|" (fixes #1411)
+1f7350658e3b67952828a3a6997e8a8234a929e4 Set version to 6.17.0
+41132b701b8c410cae04fde1cf4b457d55387c6e Fixed error "no matching function for pgm_read<double>()" on AVR
+712005219c6064071535aa7c410a23ee30bfcd6e Added filtering for MessagePack (closes #1298, closes #1394)
+0bd17aff8ae9789c52eda7bfd7c495638bfcfce7 Coverage: use -O0 instead of -Og
+f3f44d78126c42378eab4430c3aa8840bf1dd3d3 Renamed StdStringAdapter to StlStringAdapter (internal use only)
+8385d5fa3a91ca4ad2ef6cb10e8490d054a5657b Added wildcard key (`*`) for filters (closes #1309)
+726f8be34165018648a7f4647748ebde403dbbce Added `operator|(JsonVariantConst, JsonVariantConst)`
+fee029b86e56c881dc15fc4d7d905555872e44c7 Moved float tables to PROGMEM
+c3504ddf0aa3f5df1a4f871e4fcb32d8054ec17c Added tests for `DeserializationError::f_str()`
+6a878ee444c06bba1d355bac931ffe7f0b240cee Fixed error "No such file or directory WString.h" (fixes #1381)
+c4ec2ba88f3bb22dec6f684d451a05760e78e354 Added `DeserializationError::f_str()` (issue #846)
+c907ca6e5dce6478bf05e9d27da6a75014bb2846 Added DeserializationError::EmptyInput
+8993a093e929f4f511c4c3ba083074947fbb3ca6 Travis: run sanitizer on recent GCC version to avoid false positives
+d04669d0cc2569d9fc2f38f93c0912fd0a42538c Fixed result of `JsonVariant::set((char*)0)` (fixes #1368)
+05fc136915828f4aac1d74a9043c54285a753b1a Disabled memory sanitizer with clang 6
+8d37939086969c4cc97be56ec105ee4850e3cd9f Added `JsonDocument::overflowed()` (closes #1358)
+6d2ad4539fc62ef769848f20daf3b8e98d5a94ee Simplified the implementation of parseNumber()
+5ab53f42b2c03e0aa024155275238860144dea22 Added a return value to visitors
+f448e805e93b3daf8f1207be01ebed940930be26 Removed dead code
+67aa8efd5a55d512a8fdf2ab43069cfdabecc26e Added a build failure when nullptr is defined as a macro (closes #1355)
+61a5273aeaf61508a52e0b299503fa3a36de72b9 Set version to 6.16.1
+35a39b8d8fd0856564d8b0f28962c6c752cac7ca Fixed `deserializeJson()` that stopped reading after `{}` (fixes #1335)
+96b65713528476eed35dbab690be837967cedb93 Fixed use-of-uninitialized-value in encodeCodepoint()
+74e7dd053f5c494fe7d975dd39468087402b02b8 Added memory sanitizer to fuzzers
+1f8636d762d15f887e3d9a7a1308c524d4ad4368 Fixed build-arduino-package.sh to ignore .vs/
+e4cfa701d8ec288e7a93b81490b374863438f23f Fixed publish.sh to commit CMakeLists.txt
+b85181a6db418cf14a6c122c881bc787fe84e843 Set version to 6.16.0
+6841b804662a4f727de65bfce95373ab405d86a9 Added JsonString::operator!=
+298864bafe080e6a0a42185445b278be92820110 Set `ARDUINOJSON_DECODE_UNICODE` to `1` by default
+4d7f03836c9331e82e314bc2c8f2a9aff86dcfe8 Added a test that removes an element during iteration (#1332)
+c63eb80b95a09765d85784340c113f6bb74bab3c Shortened the name of the private namespace using hexadecimal digits
+0c0bf80074243a18a883985a67817f4a1d868c01 Suppress IAR compiler warning.
+144ff3b06edec074e85cf0e0ea9e6057468df6c1 Updated the change log. Closes #1210 and closes #1314.
+d6c50c3596d15e31e964c463facea469edb677cb Reduced stack usage when compiled with -Og (issue #1210) This saves 128 bytes on ESP8266
+51b177ce47d52d7ab542f2dc3b802c0a73d784b9 Reduced stack usage when compiled with -Og (issue #1210) This saves 112 bytes on ESP8266
+824b7a25ca5b6db939b29cd2fcf99296f46d708e Reduced stack usage when compiled with -Og (issue #1210) This saves 96 bytes on ESP8266
+2223d40640321d306c6d6a02713ba862f5ad43ba Reduced stack usage when compiler aggressively inlines deserializeJson() This saves 64 bytes on the recursive part.
+4df29fbac1ac01ba24ce3ad2b730c94a0bbb7645 Fixed "linked" strings incorrectly marked as "owned" (fixes #1318)
+6dc36125c2d5671b904d7f60d61873b1556e1d63 Added ElementProxy::getOrAddElement() (fixes #1311)
+40085609e2ee801dd498e386cfbb4356e159d99f Fixed `copyArray()` not working with `MemberProxy` and `ElementProxy`
+ebb6d800927392a9627af96d6e827b997b7bfe7c Fixed `copyArray()` not working with `String`
+764ff2cd5306a32f3ad4d639b9d1a07166bc2a85 Added string deduplication (closes #1303)
+8ef226bcb8acb4c88d9eb494924054a326bd3520 Travis: Added Clang 9. Removed Xcode 7.3
+63606c09859e3c93736a2666a60c8680b8dc3237 Added json_fuzzer and msgpack_fuzzer in test suite
+1600d3969317d5140a4d68e8166440550ca462a6 Refactored StringBuilder into StringStorage
+04c59985a1e9d7ec3e67ba2c49c9ef0f4ffb4511 Inverted dependency between MemoryPool and string adapters. Inserted a null after each raw string in the pool.
+7e58347fbe120233901a512c17d632bde9f053d7 Added comparisons between `JsonVariant`s
+0e794a28a1c0955348fd0f1bdd527752c1a2d36f Simplified implementation of comparison operators
+6fb52c363849557c69485f97110371d0a4454432 Set version to 6.15.2
+b72ef09451958c5c0a3b1991eb703d640120af9a Fixed publish script
+f7de0276176909879edd66ceecf907bb92d688c4 Break build if using 64-bit integers with ARDUINOJSON_USE_LONG_LONG==0
+bc4c2dde33412256ec371d63d1fef80a4fa9e2a0 Moved failing builds to a dedicated folder
+95f05dad66190d7d8dcaeee4db6620679b971c4c Added `JsonVariant` as an input type for `deserializeXxx()`
+3bb0a7aa8ebeff82e11f1386860c9f6bd5756215 Added support for `enum`s in `as<T>()` and `is<T>()`  (fixes #1256)
+dcf7eeef289bc1db266c1e1d832ea403d1c08995 CMake: used link_libraries() instead of target_link_libraries()
+3b923b6e4efa043d381ae20b607c4f4b7c6871a2 Added support for `JsonDocument` to `copyArray()` (issue #1255)
+8050f7404b74b66098bba4299ba1c6cab7b46ac8 CMake: gathered all build flags in a dedicated file
+959b1d9e4cf2fcaf193f3b8151c3e23a79bd59fe Fixed error C2766 with flag `/Zc:__cplusplus` on VS2017+ (fixes #1250)
+daa279d57b20736ba3bf39de935fa919661d8ecf CMake: made project arch-independent
+ae9b7926a2a04b56b90b63a9d88b3e8d4110c257 CMake: don't build tests when imported in another project
+1f7a5e6943f1733c7c236f8678224a5381a5fe2b Fixed links in README
+9e354803de9b77fa251d7f9d024a977de608b5d6 Changed publish.sh to update the CMake project version
+3ea5eb3f3a1596c98ed3ec52eefde305ebb78139 Set version to 6.15.1
+ec43bf4fe9077df623310babab34ba1603a09e27 Simplified the implementation of implicit casts
+2097ffaabf0b3962fa0ea3c10d50d70e591ce76a Updated README
+67e78f07513db22d6b92ccacf5632d17c32ff483 Disabled alignment on AVR (fixes #1231)
+1791dccbf2050513d445bf9d1647f6eab6392756 Added CMake "install" target (closes #1209)
+40d1cfe7af137442135719b7300fa577f2c7ff4a Fixed "pointless integer comparison" warning on IAR (issue #1233)
+4627f851ca548e6fa3b44b35a5d92d68388445f8 Fixed "statement is unreachable" warning on IAR (issue #1233)
+fc9e609ab5eab5cccc9cc6e947be8cf6d057e8d4 Fixed "maybe-uninitialized" warning (fixes #1217)
+8b3d861a9d38fab0f7da47b81f2f5f423b226b36 Updated README
+9ef864b27c511aa38182401edb6423fdd9308f5f Fixed markup in changelog
+275b80a46293fc752a81a71916eb072384260963 Updated library description
+763be4f266acde9a648a69f7283c3422440aed1e Set version to 6.15.0
+5b812522faa992fff94e8bffff41fa9b03709cf7 Enabled debug mode when PlatformIO builds in debug
+9cb0ddb5e75de729a965476afbcb1d05c4ab9df8 Removed the copy-constructor of JsonDocument (issue #1189)
+735bea1f475a12371adbcf96cec0351b9e170aff Added `StaticJsonDocument::garbageCollect()`
+0853b045894b2fc87bd663f810202cb135a45313 Changed BasicJsonDocument's copy-constructor to copy the capacity
+c1b3705df15dcb4cb839ecfad0bc42faac234cb8 Added `BasicJsonDocument::garbageCollect()` (issue #1195)
+2540b4e01baa9da5de1a2d009f87dc5b0ab53934 Added move-constructor and move-assignment to `BasicJsonDocument`
+2641697e0bf3d11bab593bdbc6e235c15e8c46e7 Fixed incorrect string comparison on some platforms (fixes #1198)
+2996503b27ef16503a35c96120e1a95c358262d6 Fixed enums serialized as booleans (fixes #1197)
+0214c9bcadf9261757eca379169a8f8b83b5d4a2 Improved coverage of JsonObject
+a471aed6db5b6a4b82ca53556e511b46be80c3b9 Improved coverage of JsonObject
+af0edecddb8588190f2adbc410a1c940bd619ac4 Fixed MemberProxy::set(char[]) not duplicating the string (fixes #1191)
+300323cfd7b278dfe3e22623b70cdbfefcb6cbef Improved coverage of JsonArray
+d8724e0a0b2ded88fd59ee6e5b3c558a2c44f5df Changed the array subscript to automatically add missing elements
+0001dabfd10947318568704af468c8ee1a6e115d Improved coverage of MemoryPool
+ad78001241f4df0f37a401c9620244b3472f506b Removed useless null checks
+5a837a591e4545ca7065600eea686383fd4fdbeb Improved coverage of MsgPackDeserializer
+fd79d23910c70543cc73aad90113aac8d6173241 Updated copyright year
+1902c0ec93cf38c01303ad3855101a99549b814b Improved coverage of JsonDeserializer
+85499be85520c5de7d18cc03418f694efb3bf2ab Added tests for FlashStringAdapter
+e6ddfc7afbba83b3a01c623826f70a060bc668f9 Fixed static JsonString not being saved by reference
+58298ec5bac7d172e6c287c5b9edc2d678712cc8 Extracted storage_policy to improve coverage in string adapters
+0814fc185f44b53aa3fa61f4bc9e5994a0edcb2e Added a line-break after each "if" to get more accurate coverage report
+8f8c82d400a2e860e538eed8f92674330186f76f Reduced code size
+372b7d3d9d61946cd6c3b1b8c6bb6a827f4a7965 Exposed JsonPairConst
+fbffadb2cf787129b539f9241c40418f7693e737 Moved nesting decrement logic to class NestingLimit
+6e52f242b2dc713f94e5230ef4fe977192ce299a Extracted the class Latch
+d2a67f362ffd95bedb52aca1f7114050287e297c Fixed "deprecated-copy" warning on GCC 9 (fixes #1184)
+66b12da4e722f09771ded385af1d62929ad83213 Added `DeserializationOption::Filter` (closes #959)
+42b0d6a83d493bfa8b5a68e1a574fc60b5673036 Set version to 6.14.1
+94b1c75fd23e1e32bfb9fc4c33921eea9cf485ca Added getElement() and getMember() to JsonVariantConst
+b04b549b345de4f3dab566ac73eb905160955956 Delete .bak file produced during publish
+09d4b2cd380d4dc2483b3a6d09efb84947f32ede Fixed regression in UTF16 decoding (fixes #1173)
+ddfe7d8b91feefec7e2f72ee0e75b95c9bfe8875 Set version to 6.14.0
+4a657ca87f34bf0a9e3c1fe5ad7da097d1a77c04 Update the features section of the README page
+1e3d4789981e75b10e439b2e4a6df78d7466408f Improved speed of serializeXxx() when writing to a String
+3aebef6d0a94d0bc84829bf7aa36995fe3791263 Fixed value returned by serializeXxx() when writing to a String
+25879466da9f9717c59353d6ddeee19989ed867d Fixed variant.is<nullptr_t>()
+27ec1afb7a9946f1f9b7fd4b329a927fb4e7f684 Configure the "lock-threads" app
+06a0d1a8724b101984d9afe7a6c51c1f7c8854a1 Added measureJson, measureJsonPretty, and measureMsgPack to keywords
+04fe7e1a27645b09c7e924fb513e022d169baf97 Added ARDUINOJSON_ENABLE_COMMENTS to enable support for comments
+f9cfea244ab8bcf811bcb098e83ca14e4882ff8e Updated copyright notice
+5ec062cc71ebeb59fb8090415d8d48552e54d7a0 Reduced Unicode conversion code size (-122 bytes on AVR)
+91b808381e784daa3b55ae5ffae007c67a4e5be3 Improved decoding of UTF-16 surrogate pairs (closes #1157)
+855041887561c001d6ff4e2fc0de2b7ae4635e24 Auto enable std::string and stream on modern compilers (closes #1156)
+00c391320c8a98d8946a7af03d9eff6c55d47401 Added support for CMake's unity builds
+9723682d206cac4c1ff470f6654c31b3c71a8249 AppVeyor: added Visual Studio 2019
+8bf6f6e09f4e8e4e0d3574f188d83da199a50053 Added support `uint8_t` for `serializeMsgPack()` (closes #1142)
+062c1c13b5c3219ab5fc1364781c584a676c8def Added `BasicJsonDocument::shrinkToFit()`
+1b8107094f00d89b8ef781a4ac71c5c2528ff63e Set version to 6.13.0
+8721ac88b145cf3001eb272e469f0e9aefab32cc Reorganized writer classes
+6da6f921cd7667296f64ee4c641f61df13d24727 Fixed dangling reference in MemberProxy and ElementProxy (fixes #1120)
+ef63757b1a7526d1efcc29f3e47d679aa253bc97 Fixed deserializer that stopped reading at the first 0xFF (closes #1118)
+3a169df0a5f77fffc3d468f9161d63e76e2675b1 Added support for custom reader classes
+d4f819f1f0d7d9691670011cbf87ee514189c60c Added detection of Atmel AVR8/GNU C Compiler (fixes #1112)
+16fe3c0accd2ac33849d228a558c52d7bf732907 Improved `deserializeMsgPack()` speed by reading several bytes at once
+fd8f4eb3a6c89fd09ecf24afa283dc74aacf33f8 Moved msgpack.org.md to github.com/bblanchon/ArduinoJson-msgpack.org
+b261eca86519389b8e2f8219229dd660c725e33e esp-idf make system
+a37480eec9664989fdb62aed54a66006110ce6bd Fixed deserializeJson() when input contains duplicate keys (fixes #1095)
+713aaa3d683d6d4a7c8af339f10a75865de0bf56 Added msgpack.org.md
+7d1d0c4e67479144ff2ab6b2ca60c6195a3c76c8 Added conversion from JsonArray/JsonObject to bool
+4ad05dbaef85c4a19c7662a2c87683d36613e6a0 Replaced GitHub stars badge
+38371aae62c006fa227be4e5eae2aca671a01d12 Added OSS-Fuzz badge
+498a2e4c1e5294468071bc4814940ef939284a9e Added support for custom writer classes (closes #1088)
+2078871f3695b1b73b6eeb7db9938526fc87f3f4 Added missing #include <ArduinoJson/Namespace.hpp>
+140525b7a046e657badfaa741f30026a46591fab Fix deployment scripts
+1a81d46a97d35ff697df7700e9a9fe145c18220b Set version to 6.12.0
+4c4c4688a9a7105c6d0b9bb367755d3aa58136d2 Fix src/ path in Makefile
+b47ac27ac6f66842cafc61c94312f264b1f37be9 Moved ancillary files to `extras/` (fixes #1011)
+ed18e77655f06de3f96c89573e982debdb233eb9 Changed as<bool>() to return true for any non-null value (closes #1005)
+fcbec6eb6d6bcdc029c16e12a2d244f738145764 Use absolute instead of relative includes (fixes #1072)
+f5c25823bc34f1784ff79b2ac03ed8117beeee39 Set version to 6.11.5
+f00dfd7bfe9f5b8e223148063bba46650e09d35e Added fallbacks strlen_P, strncmp_P, strcmp_P and memcpy_P (fixes #1073)
+dcca4214f59ecb4d63a3a6badc1050d5465e445e Set version to 6.11.4
+1e9cc285bb5643190a43849f2a3e67d25bfd2a5d Added support for `basic_string<char, traits, allocator>` (closes #1045)
+b9c4a0c5f658a808187f2466f8ce3cb2430eac39 Include `Arduino.h` if `ARDUINO` is defined (closes #1071)
+0d339300f94f6c7645ca9e88d84779eaa6919846 Added tests for Flash strings (closes #1070)
+63d7d87080c2e2b3a99f5f134d01acdf8488215f Fixed example `JsonConfigFile.ino` for ESP8266
+2ee655f9ba42c47534dd07fa9bd3b9fb0679635d Fix clang installation on Travis
+61a4195ed41bdaa1c8b5dca10f09cddb07b92ca8 Added `measureJson()` to the `ArduinoJson` namespace (fixes #1069)
+a6f029ded0cb50ba1e51045a19405d9170b9d3a7 Set version to 6.11.3
+b54de58e6b7218834e72e1a94639a269e47b5458 Fixed comparison of `JsonVariant` with mixed strings (closes #1051)
+795e37278f5118b650bffaddfff25a8555ab16cc Added operators `==` and `!=` for `MemberProxy`
+7ce1039d7c107500138415d16c3bb406fd1e9add Added operators `==` and `!=` for `MemberProxy`
+aba42faf6994a72481d7e469f689f90c64852b54 Added operators `==` and `!=` for `JsonDocument`
+815326d42e20def2a8654a3631f1995c59ff7005 Set version to 6.11.2
+7d40a541c967a4cd0eb6a8ead31e8f6f4973de36 Fix invalid conversion error on Particle Argon (closes #1035)
+2507ee2e5619cf77798b8864a3dd38e2d7ce3d2d Fixed assignment of `JsonDocument` to `JsonVariant` (issue #1023)
+a0a451195bbc5eb554f96b880f74c30c87c36940 Set version to 6.11.1
+ce247a563788a2ca9b3e91d85a6c48561ae943ce Fixed `serialized()` not working with Flash strings (fixes #1030)
+59f9c9747f2d473fd26dc2f956c5a7b623eddf00 Add sponsor button on GitHub
+fec088e3ed9c87489aa068d6bac7ff85062df19e Set version to 6.11.0
+4980ee8fb99a363a5c2c41d2a9f725d554993d46 Fixed unexpected HTTP/1.0 (closes #944)
+2ed77d2cc3c7745a59f4e43afe7f1374bcba5d71 Added support for `nullptr` (closes #998)
+630107ae8af0b262597f9e5cd1364a19b4752443 Removed implicit conversion in comparison operators (issue #998)
+4eb8074358bd648ac14f4f174210d0eca43f0dde Set ARDUINOJSON_ENABLE_NAN and ARDUINOJSON_ENABLE_INFINITY to 0
+80a02cd90df3b3b1f02a69bf3586bc10b3b872e5 Added `ARDUINOJSON_ENABLE_INFINITY` to enable Infinity in JSON
+7427888e05d904593bd8fc7ea7b711d972b86e3b Added `ARDUINOJSON_ENABLE_NAN` to enable NaN in JSON (closes #973)
+90c1d549a86ddc13517ae240c434a3c5e9af5931 Made `deserializeJson()` more picky about trailing characters (closes #980)
+2af003e4e23daae15b4156ea58a2ddba905b04e0 Fixed `deserializeJson()` silently accepting a `Stream*` (issue #978)
+eaf55e174b0bef16f5dcc32264b5f7086129ef9e Fixed invalid result from operator| (closes #981)
+0588e578d5dcedae1263e66199ae8e8e711da71e Set version to 6.10.1
+12f9aac4ea472bbdaf8bfd919d3c9a2f552b5097 Fixed "no matching function for call to write(uint8_t)" (closes #972)
+81bb3fce97ab91225910c14a0b8de8a1a3947fd5 Fixed build on platformio
+6011a2f51a1c28d78a1bd5578cfff405819fd47f Fixed `deserializeJson()` not being picky enough (fixes #969)
+6071bd07ec36320e60f3ec88b6d418bf95774c24 Added a link to the FAQ
+1c814d3bb657752d29a342ef20ce8074f8cde5d7 Fixed warning on Clang 8
+9862048a58a81e45f6d4468a713ede099644c123 Fixed error "attributes are not allowed on a function-definition"
+ebc52a5a65d40bc935945f78547901c2442ee9ce Travis: Added Clang 8
+eacad922df55a458f518e1798c58e80ec930b6b1 Travis: Added Clang 7
+d9109966139d99a0eb63cfb07b7b51794c177104 Travis: Added GCC 8
+2fc220fa33ac03f069251c3d8bc822ece5940081 Fixed code samples in the README
+8cabda551d31c5dc4f8c179885146cc8d3aeb702 Fixed publish.sh not committing appveyor.yml
+afd033e9c9a1c41a7877c15c222edffcb2ee5856 Set version to 6.10.0
+6ec5ba521b09ddaca03f5887d1a15511841b0f2f Added `JsonVariant::containsKey()`
+c8e49a7e4e55e98c9cbaf43a23c5d1d58300673e Added `JsonDocument::containsKey()` (issue #938)
+dee8c8e242f609d91e42111f1dbc327fddb4ff98 Added `BasicJsonDocument` to support custom allocator (issue #876)
+576543c4b4ab6173f7e5d11be3bf901457c72b1c Added overflow handling in JsonVariant::as<T>() and JsonVariant::is<T>()
+746f2882f75e9f03bbe6ccbcb90899512768a383 Removed member call on null
+c4cbf9d0bb3f75a72880795bd342a174bd8ab279 Don't mark as a "system header" when debugging
+49bd51b5f937d31824a05a3a1bda52675ec30121 Updated version in AppVeyor
+e53ae0f9bb5e5c682efa6fc44b46794c6f57d0b1 Fixed the continuous integration
+afdd913a2f97f4933331de1dce3196332da89613 Added links to the book page in each example
+3df4efd51220d47525e1447ef317d13aa77dceb5 Set version to 6.9.1
+91dd45c387345bafcaebeef35e24f1492f2e7cbc Fixed naming conflict with "CAPACITY" (issue #839)
+136ee0d576bb8fd54f29e48b1f0246ab902f0443 Marked ArduinoJson.h  as a "system header"
+1ea8d92cc3439ae2ddcd70e84023994240d1571e Muted warning "will change in GCC 7.1" (issue #914)
+20fcb99830314b97cfbc36ca467e4f6ae4e37759 Fixed warning "conversion may alter value" (issue #914)
+f3265d2111666994a028080df4e4ef268581e808 Fixed warning "cast-align" (issue #914)
+d6e77098664b7c4965418463f10da5049c094942 Travis: Add g++-arm-linux-gnueabihf
+d11019d9e1ef047899d8f84623e4c55caa01f6aa Travis: Split build and test scripts
+cfd924622eedc5aadaadc680910fa39a08fb9d62 Travis: Define CC and CXX in yaml
+27c08b785df58932b80d1b8818205c96406c9e1c Travis: Assume CMake is installed
+77f38e4449682178c9769a1010af9a10e5cf7fc1 Travis: restore build on GCC 4.4
+16ddfbc4e04e3dc6315ac66bce0ff773623ed906 Fixed strict-aliasing warning in FloatTraits.hpp
+8dea900869227dd2595ad0ab972cd2b992866c70 Travis: build in Release mode
+f342dee2b45f7129b81f9326db307e23fd4abf2f Fixed warning "unused variable" with GCC 4.4 (issue #912)
+1d5721f3bde4a873b280bc5b945a341fc4ee03ee Add an empty cpp file to detect warnings muted by catch.hpp
+3170558d6d9c16cbbf5febdfae3d9c2e03381f50 Added a clear error message for `StaticJsonBuffer` and `DynamicJsonBuffer`
+3530aa88d625262bf0e131d272858641ae4f658a Updated the examples on wandbox.org
+21998890d42887bcdcb890d83c6570ea4944d360 Set version to 6.9.0
+c9d6bd76c91abb36591f93a60dfe785bb355a242 Added `JsonDocument::remove()` and `JsonVariant::remove()`
+bc2ce178ead7f9848ad711a35f12dd92ad7d8720 Added `JsonVariant::clear()`
+e22e62d184d809f5f5996957a80de108a878a623 Added `JsonDocument::size()`
+4181de119c9ee6ee1f1dc830a431ed24b12e4fe5 Detect `IncompleteInput` in `false`, `true`, and `null`
+56bf24e1ec76ef331eff2e4c8c57f366f24c8957 Fixed `JsonVariant::isNull()` not returning `true` after `set((char*)0)`
+e9b4c6289bd4f59d7d4c651ddf2a23d7aacd4066 Disambiguated the name `get()` with `getElement()` and `getMember()`
+7ed92bebd3366e7ca94d3fc070aaafc63e0d078f Converted `JsonArray::copyFrom()/copyTo()` to free functions `copyArray()`
+c3f71c1a9936f90f10cb051892608331c2300fb4 Updated copyright year to 2019
+7050ef675d2fd6660914f0219dc3dbae0aab798a Decode escaped Unicode characters like \u00DE (issue #304, PR #791)
+070cd5b6c0f29912deca7f462ec64905f6d062a7 Added more tests of JsonVariant::is<T>()
+2c2cc33c94b967d0ae3b738a75d8bb2c115996fb Updated version in Arduino Library badge
+169c83431cb569fb1663a596dd8fb6b53500262b Set version to 6.8.0-beta
+5f72c68d87bc543c27e92dfe7276bbd0d9a28734 Updated publish script for the "ardu-badge"
+b184af6d006e94d4a76e1943c6d3afa7e195a0f7 User can now use a JsonString as a key or a value
+6f55d1e58fdef814cef454526065fa40e9215080 JsonVariant automatically promotes to JsonObject or JsonArray on write
+5aea1363cc693e791a51859636f8c03c37b095dc Merge branch 'master' into 6.x
+0685a36f0e51ba71b96c441697e0432ed2a6b176 Added ArduBadge badge
+70739f5cfd6daa9637c4876808ad7fc46fc73124 Reduced the size of the pretty JSON serializer
+933a66a0704e39f96de555df68a4775d2d8efc8c Added JsonDocument::operator[]
+4167b114341661f21b84e8af75cd51ccf7033122 Create or assign a JsonDocument from a JsonArray/JsonObject/JsonVariant
+2a3b51ac3a3e377b19113f780420efa01893b487 Fixed uninitialized variant in JsonDocument
+e633292df18f3056e58616bdf2b7f9ddf81eb8a8 Replaced JsonDocument::nestingLimit with a param to deserializeJson()
+30b94493bbda82e50bcaeb0ec293d0e92b060ad3 Added nesting() to JsonArray, JsonDocument, JsonObject, and JsonVariant
+c51cc91f92052618f821405bbce519857f4c5ebb Added memoryUsage() to JsonArray, JsonObject, and JsonVariant
+8b04046321af4da9b9200e9c4499b10575c56681 Import JsonDocument into the ArduinoJson namespace
+11bb5e26ff0e823377d9f479f916305efca96802 Fixed copying from JsonObjectConst and JsonArrayConst
+9ac2ac303c5a6e3c3f7a8e5da2aa4fdbbd4e83c4 Removed default capacity of `DynamicJsonDocument`
+f0784d3b412f0ae1d22e11b5ae865887cb33e2b2 Simplified deserializeJson() and deserializeMsgPack()
+3d8ece8c8bfdc97087db4fd545c77c21bddf9e8d Improved syntax highlighting in Arduino IDE
+b0fb71f7d89e0b9349a565ba4d8660f4a30998e3 Import functions in the ArduinoJson namespace to get clearer errors
+a5cd1b1693e406e1e4229b4a3a3e4b3be3a27aa2 Set version to 6.7.0-beta
+d8a1eec53094500e07e5801838511fcb282b549a Renamed `JsonKey` to `JsonString`
+e20c47c57ba0222e1cb66fa0d113b185513d6bff DynamicJsonDocument reallocates memory pool is it's too small
+b77b203935ec8f76ac6556222e066b23a127d81b Extracted VariantData and CollectionData classes
+1ad97ebf85aabcbe3a7bdb9f32b587834d7331f1 Merge branch 'master' into 6.x
+ef12c74771f1f5b7d183003b24660ad75470568f Set version to 5.13.4
+0bc03e8071a74f18d5ef4c361f286b1035516b3d Removed spurious files in the Particle library
+04286f32286a6b21bd9ace554010e8a9cad62cc9 Moved size measurements to github.com/bblanchon/ArduinoJson-size
+1d942cdf41d4957546088c1e93b97cf04664bd03 Use singly-linked list to reduce memory usage
+aaf0d5c3c50f4b72e24ea8ce61a27824440eb264 Renamed and moved internal files
+04e8acd844cd8e8bd22beccf1294407357ef0181 Store offset between slots to reduce memory usage
+8ff48dde733c4fb3db368d5ab9d3da6e080d12cb Moved size measurements to github.com/bblanchon/ArduinoJson-size
+41b2e629f7a74b80723e7be3ed021e780bdb11d9 Increased test coverage
+a60162ba762d7de0a094190058806a2b4affe0e7 Removed the indirection via StringSlot
+45f4e5ac200f43a1c0b3ca1474a3af5fe07ec749 Restored the monotonic allocator
+637f7a5bfa284151faa1b9a289d24a6b4a5db21b Removed template parameter of CharPointerReader and StringMover
+399ccec64572e877d2610176bcbf8681ebe7d3da Added a CSV showing the evolution of the size of the sample programs
+2bd280df807db950b0dbc6f19645d4ecff3ca5b8 Removed the automatic expansion of `DynamicJsonDocument`
+c832edbda315b0bfdee1f97bfd555af0f76a243c Added script to compile samples on wandbox.org
+b8d0041851f8e453d0346f06e07561c0f4a093fe Set version to 6.6.0-beta
+0a97d4c825a55e95949f5762f768e2e752887da7 Added `DeserializationError::code()` to be used in switch statements (closes #846)
+5eee947ffea909c60094492a041e65d62500b4bd Increased test coverage of MessagePack serialization
+720e6548c73040b7d80bbc0c5af96d4d6d99b152 Replacing a value now releases the memory
+f375459d53888e5ae946e79d39509c02caa872a0 JsonArray::remove() and JsonObject::remove() now release the memory of strings
+e842838a2362fa3ca7b5c30c397ebfc68f1fabfc fix a spelling error of JsonParserExample.ino
+00aa03881865aaa4f05d0502da7c4eb6b0dfa3b2 Added executable msgpack_fuzzer
+eb78077a0cdb7d872a385479561e51950efae05d Travis: Added fuzzing corpus to the cache
+d8d939660b6410d6c0f5c3e08309bbd9ac67bf86 JsonArray::remove() and JsonObject::remove() now release the memory of the variant
+ae089dcff7b9d9b70dcacf72e7b6ad6dcea67f3d Merged the two StringBuilder classes into one
+1a4515c0b93d49c292bf8e6168978f2f3408a9de Removed `JsonArray::is<T>(i)` and `JsonArray::set(i,v)` Removed `JsonObject::is<T>(k)` and `JsonObject::set(k,v)` Replaced `T JsonArray::get<T>(i)` with `JsonVariant JsonArray::get(i)` Replaced `T JsonObject::get<T>(k)` with `JsonVariant JsonObject::get(k)`
+4eee8e8bdf0ad4a320bed3987eda63b5b4f73637 Reduced code size
+9f1421e0a67f0470d14de8ac8ea03d22f1499207 Set version to 6.5.0-beta
+84f199f0dda29cb6598446fac9bd53106b02095d Added copy-constructor and copy-assignment-operator for `JsonDocument` (issue #827)
+8230f8fc9bef1cfc565931257fda71605b780dd5 Restored JsonVariantLocal to fix the use-after-free
+02d809f3f4571dd246a1a191823854e0dcc435a6 Added Visitable to reduce the number of definitions of operator<<
+b0560cbd996428588825b31694ad10529e59140f Added `JsonArrayConst`, `JsonObjectConst`, and `JsonVariantConst`
+d1003ff6c9cbd52ba0f99bb6df444d570cc766aa Simplified string handling in JsonObject
+b11ad4077b9dc917aeb11b57c1760eec642aec05 Merge branch 'master' into 6.x
+5dc7dc12163aa685581c1c868d7c85e1ef1db466 Increased the default capacity of `DynamicJsonDocument`
+0d4a93018b061ce20238a9d81c17913cb0e7bfe4 Set version to 5.13.3
+3ca40db9f828576f536f8b1f74ecb38246cae8e9 Added a coupon code for the book
+ce607196d14ccf6f22c39a91d7b5a0a57eae5829 Travis: update osx images
+0b3af166ae069d8c29dd25b49bc7b738a28f02f9 Fixed `JsonVariant::is<String>()` (closes #763)
+39e5660c4a460ead2349d02a6a2bc687e3178105 Extracted a base class for JsonDocument
+6b985b2d1fa37ec5ad01139d20be387e31032d04 Fixed object keys not being duplicated
+527dc197945adbdf07f7b6de038513aa7d48de03 Allow mixed configuration in compilation units (issue #809)
+29e71cbb165196137d2e897e873a133f3cea2ac2 Added implicit conversion from `JsonArray` and `JsonObject` to `JsonVariant`
+2d54019f832cbb6527d3e8322acd082fa354e58a Set version to 6.4.0-beta
+98c8e8e35a19c7b41ca7b97008867f98415480bc Added a test for issue #808
+b106b1ed14a8f4df063eccb4d5eb4df68c228d3b Copy JsonArray and JsonObject, instead of storing pointers (fixes #780)
+2998a55f0bf52bfc43fdcaaff8921ab64cdf54ec Renamed JsonBuffer to MemoryPool
+e5c4778ff7c2ffc6d6dd6f1cf955e689a7ea5a33 Updated publish script
+2ec9569b36bf59d00f1d86a080439371f0583b0e Set version to 6.3.0-beta
+58303d083730482d9b470e5dd6bf38c46f2ada4c Added date in change log
+e3639918ebe391e3d3e615315a35699f45d1e84a Reduced executable size
+6d290bd00148f0837aab52561072205f575a841b Fixed duplication of char*
+7683667b3ca136760f5765a33d954e19d3c9d9ec Fixed `serializeJson(obj[key], dst)` (closes #794)
+9cbc89181692f93c0aa071d5dd75c4b5e10cf70d Implemented reference semantics for `JsonVariant`
+0454bd1ef60cae4a3be966a371e398b6075a6098 Set version to 6.2.3-beta
+f139100b23450c40a0312c0dff2dadb6ba1dead1 Added a script to update the version number
+3f666bd5f08f10a8007963a2e50642cadaf5e1b0 Fixed exception when using Flash strings as object keys (fixes #784)
+d53a93e0ae6e7abbcefd0c86e80d41b4958740d0 Set version to 6.2.2-beta
+2059d610a8cfb74809b0787ec8d32949a14dc7e0 Fixed invalid application of 'sizeof' to incomplete type (closes #783)
+9bbfbd0a6ad43b3cfa2aa060ca9f62d2eca29465 Set version to 6.2.1-beta
+6e4f1dc7569ad5809adb3904b0205be77e744d86 Fixed `JsonObject` not inserting keys of type `String` (fixes #782)
+dc138826240d86e5ea2b6a0c5c04439e7a47df97 Update badges to show status of branch 6.x
+6bb17d5896424809f46fe57f9dfeb5e86d041710 Checked that issue issue #628 is fixed
+1a513cbd16d0430e37c460ac5563fb0bde585371 Set version to 6.2.0-beta
+87fa87d87b0f883a0f738c7bae319afa3dd0868e Renamed function `RawJson()` to `serialized()`
+fa1a40ac6e63c18583540806d4fc63297ab5f99e Fixed `JsonVariant::is<int>()` that returned true for empty strings
+954428e34177a7500392811ec07537dc33099d93 Improved float serialization when `-fsingle-precision-constant` is used
+765752261c0fe78d4605d77736e491bd53f760bd Improved float serialization when `-fsingle-precision-constant` is used
+037f90aadaadc484db41325e07ab108080fbaea9 Disabled lazy number deserialization (fixes #772)
+1397bec0665d2a5a5f728c398c60b3340481f550 Set version to 6.1.0-beta
+b105e6f7c4afa0b08abfb9c58906310bf46406b8 Return `JsonArray` and `JsonObject` by value (closes #309)
+4fe2b1100ec5213c685c5e7c734ed6e08e24ed1d Set version to 6.0.1-beta
+c3403ed72d8dd8911ca1eca124e77c226a8baa09 Fixed conflicts with `isnan()` and `isinf()` macros (fixes #752)
+393f352b701a23746631af99c8b90d254d757336 Minor changes in the examples
+e86eb0cfdfd3fea6edbbe45d37f19d8baf51ac82 Set version to 6.0.0-beta
+a9a730fd742fb775afea2f091ad5d55a73e68edf Added MessagePack fuzzing
+4ff6809bc5e820b775fee1c5fbbe51239ee55553 Merge branch 'master' into 6.x
+7b229e4c3810c65fc3c5620a42fc3f934d7f1b59 Added fuzzing to travis
+9ac9b533b6136f1a28a9679c81626496241c23ca Added clang 3.9, 4.0, 5.0 and 6.0 to travis
+f53fc3e06f8da18f292c5c17c16fba4f1b57f607 Added MessagePack in README
+013935478022cbe3f77ead444ded7b7e3871499c Merge branch 'master' into 6.x
+011aac43d20630452f6ae619597ce18003477fa4 Set version to 5.13.2
+eb20ae6a3f39f620627725da5d4213345faef993 Added macros `ARDUINOJSON_VERSION`, `ARDUINOJSON_VERSION_MAJOR`...
+7c0af91844b0ed8c0c8a566677b832967935298a Fixed null values that could be pass to `strcmp()` (closes #745)
+fc2e3a4ab37d2c1ad833dfe77e3acc50d6c9d374 Added `serializeMsgPack()` and `measureMsgPack()` (closes #358)
+58cb793c9671919d7d7a0f984dddeb36abf1acb9 Reorganized polyfills
+4592f23260d5a4a75c6cce0065141de609bc2e46 Merged MsgPackError and JsonError into DeserializationError. Return NotSupported if the JSON input contains "\u".
+ccb54136a2d02849db25de7a2bd05402070ea1fa Added support for non zero-terminated strings (fixes #704)
+4c9c047ddf71399039342ed1ff184586252a3f49 Made nestingLimit a member of the document
+1feb92679da887955e3a6b2994c6c25cdaf6039e Added StaticJsonDocument and DynamicJsonDocument. Removed StaticJsonArray and DynamicJsonArray. Removed StaticJsonObject and DynamicJsonObject. Removed StaticJsonVariant and DynamicJsonVariant.
+a13b9e8bdc4743d171a6df54005d20f82824a6f9 Added example `MsgPackParser.ino` (issue #358)
+cb723840d9ad24bb1db6d4dc800f7e5c730aba5f Added `deserializeMsgPack()` (issue #358)
+923d3e8a8431ec1d11fc81f1944d1207dc3f6668 Removed friend relationship between JsonVariant and JsonSerializer
+0d1623edef2298ab0843cd8606ea08782bbc6d8f Clear the JsonObject or JsonArray in deserializeJson()
+cf149940ed37b7454bec0fa492d26a19e1a82d17 Moved JsonBuffer to Memory/
+ef55a6ba7cb9f433214e39f63e343a4b7e8f72f8 Removed all deprecated features
+e3e4aa89ad9d21eb53e853322a18a18c50dcbc94 Merge branch 'master' into 6.x
+3523296e3dfefa62c9c88dd37b06589e244a33f8 Fixed `JsonBuffer::parse()` nesting limit (fixes #693)
+b2a8085651ed6c774967c9426957f4132c3f25f7 Added JsonError
+83d73c93f7214a86dfd7a51cef4a6a6c1846001f Replaced `printTo()` with `serializeJson()` * Added `serializeJson()` and `serializeJsonPretty()` * Added `measureJson()` and `measureJsonPretty()` * Removed `printTo()` and `prettyPrintTo()` * Removed `measureLength()` and `measurePrettyLength()`
+7a2a64803ab507cc7397a3215aaa90a8c9e711d4 Don't use JsonBuffer to create or parse objects and arrays. * Added DynamicJsonArray and StaticJsonArray * Added DynamicJsonObject and StaticJsonObject * Added DynamicJsonVariant and StaticJsonVariant * Added deserializeJson() * Removed JsonBuffer::parseArray(), parseObject() and parse() * Removed JsonBuffer::createArray() and createObject()
+baf5adcf33cf7f49dfd78cf2c3e94e7394200535 Set version to 6.0.0
+689ae5c08de46a5ef5f1e40bd6339ca3f1449099 Set version to 5.13.1
+d9b1e7e810e678a6ca7198bf36f4ce78689c6659 Allowed non-quoted key to contain underscores (fixes #665)
+b4eece01f873a752367a37339078836d5ef05566 Fixed `JsonVariant::operator|(int)` to accept double (fixes #675)
+cf5396aaed6d16d1fb4e73b82ce6606938591043 Set version to 5.13.0
+e390587e91c67cf929b1f6f56488be9016fe6f93 Kept only two namespaces ArduinoJson and ArduinoJson::Internals
+bae179ed67cf466766c9af160102bfccdd9a003f `RawJson()` accepts any kind of string and obeys to duplication rules
+7e4fcb0868c9da02f49283ea06dadeeee498765d Add `repository` and `license` in `library.properties` (closes #662)
+fbfdca1de9ada1623d45d48609cf19da1e5cbb31 Added campaign information in links
+0612eef69b737f34c137da0628a360c7f926fea4 Marked `strdup()` as deprecated (issue #658)
+ae0b7a3ebde568c047de0a49770b5515e2ba5479 Changed the return type of `strdup()` to `const char*` (issue #658)
+e92612b51156d0429c069402b4ffba609b166632 Changed the rules of string duplication (fixes #658)
+5c33fd4b944075d243dfb62c706c07df8de043c9 Set copyright year to 2018
+c3f51e2980499a1d78ab3284fe4ab5c2b9ee14de Updated links to arduinojson.org
+de47c0af9e5d8133f6f54108dcfd6b3485b27d2c Updated links to the book
+e53e4e3dd9b5571e37a1218e84dfd6bd2dc6d960 Fixed typos
+36fe6535c4a1607872f4aba7087eb474e381aad8 Reworked the readme
+b55e57a7cf6c0910186ed09cc3717a272982a522 Set version to 5.12.0
+7626db624e3d7cd9e72924f2c727226b55a9d409 Changed all link to point to HTTPS version
+6d8329b255535283818c31489943b3591e5e1630 Added an example that shows how to save and load a configuration file
+461e30148cbddf20f54793ddaaa907dfde73ead5 Reworked all examples
+57d98e48f701d11430b40fb83bfc96409f7d9247 Added detection of Keil ARM Compiler (issue #629)
+cf2babc598baa148473618b1e1c2bedbc7cebea3 Added detection of MPLAB XC compiler (issue #629)
+d10277df31fb519486d006c94b7a76666b990324 Added a clear error message when compiled as C (issue #629)
+d3a1203782856bf8907961e6b0212db60d40364d Added JsonVariant::operator| to return a default value
+126f7ab8192af663071059cd6c5a75abf7069012 Rewrote example JsonHttpClient.ino (fixes #600)
+221c2861fc71408e82806e80b16e9f69a9b75f85 Changed all links to point to arduinojson.org
+66667382e1a17494f1a5482fe57978c8d36670e0 Added Alexander Wilms to the list of donators
+a7e928d1260372966b97cce3b52fae375f764d0b Set version to 5.11.2
+591fe7e92b61c2c76097f9bd99d29956022e7b18 Fixed incorrect rounding for float values (fixes #588)
+d6e61cbcda420d67378741b477a0fa8c693422dc Added banner with the new logo
+5825366fe4ac7fe4974dc04844060974b697255b Added Patrick Elliott to the list of donators
+6df204cf40b335dc8c333e5879c8385088300792 Split CONTRIBUTING and SUPPORT
+3f7e1db549b0692548208d4506c668967ed7fa4e Added guidelines for contributing
+a6091136b06f6dd2263d9f92ed0260165fe144cc Fix GCC 7 warning
+353bbd0e8cfdb5fc3cc5c2bd78eaf3ed810a8253 Fix GCC 4.8.5 warning
+a428e125fa943e5dec61d00c10cdf7483ef4d066 Travis: Added GCC 7
+2e262b2689c67a3f843e637789e3e65a6c7a21e7 Travis: Removed GCC 4.5
+a2d055e408a4748c13751628b4677b9fadb909ca Added Günther Jehle to the list of donators
+57defe00ee5a311637495fe23398e7d026ead64b Fixed `DynamicJsonBuffer::clear()` not resetting allocation size (fixes #561)
+ac5a2676e70243b939a05e15003252d244c50089 Upgraded to Catch 1.9.7
+ed98ea4e437ff99c785320ab164389093389bdb1 Implemented JsonVariant comparisons with template friends
+729bf0afd284b3302255c62631e9c00719987dcf Made JsonBuffer destructor protected
+2ea7ea153c67dc7ba8a29ef3929ca768a2c851ea Set version to 5.11.1
+2772e660640f1d06b30d90f5182c923d9e4b3f99 Fixed warning "this statement may fall through" (issue #539)
+d41f7a816593af4d182c05d445f1792cbf4a0421 Fixed too many decimals places in float serialization (issue #543)
+abfd3997eb17b2bc8a2a0c1f87354b9848f03777 Fixed "constant exceeds range of float [-Woverflow]" (issue #544)
+788c9be016ff2791dfeacf7d9f0a03bc9b5d5c9f Removed dependency on `PGM_P` as Particle 0.6.2 doesn't define it (issue #546)
+c3d7a79a83f365f52b98f0fc30f7a4f5dbaa0e94 Travis: Removed Arduino DUE on platformio (fatal error: Ethernet.h: No such file or directory)
+17823482751d31e50debef23c98198c959763519 Added Charles Walker to the list of donators
+edfe5c662285ba484bc712823147c62d084da798 Set version to 5.11.0
+2b9492317bc0fe549f15c3b4f03f4d3e5ffd5f76 Added Charles Haynes to the list of donators
+5da41edf6a4eb24631d9ff07c056f57364cf8034 Removed implementation of `JsonBufferAllocated::delete`.
+476e5aaa862daea011fae766a04753353088e524 Added `DynamicJsonBuffer::clear()`
+789fa507b5c4ae3c6e63d207291a6b0b81157fb8 Added `StaticJsonBuffer::clear()`
+508f93631712e670420b58eb468ffe45072513bc Made `JsonBuffer` non-copyable (PR #524 by @luisrayas3)
+e9d88dda8e3377c2478ba5590eee2dac04ef91bd Set version to 5.10.1
+ecceb71a1e458300fb01af2cdf10d3af86efeddd AppVeyor: Added Visual Studio 2017 and restored MinGW
+bff77abe6a79c50e3dde37e39e2a6f171bc6e047 Fixed reading "true" as a float (issue #516)
+98413089f6019d1797d6245c5c8a04bce1fb59df Added Google to the list of donators
+a2446f6c686d92bb597590ab25d81fa81979edf9 Fixed compilation in IAR Embedded Workbench (issue #515)
+c955049207901d53c5a19b4536bbd7249865a26a Fixed IntelliSense errors in Visual Micro (issue #483)
+574c00c096d35baf09c2478e64f836502e1b3bbd Added links to the ArduinoJson assistant (issue #513)
+7415f206ea314daf111f3e8b21b53e2531a60a59 Reduced code size
+f76017a015a23c7e16219d58405f1f89e7b732da Set version to 5.10.0
+cda05aec04fd2d2aca16b95ffcceddae14ed923d Removed configurable number of decimal places (issues #288, #427 and #506)
+639286f8b6c75d2275348af10a26e60034a3c38c Travis: Removed retired images
+cc66618e7051a9f8b9259022d6495f189098db82 Fixed error `forming reference to reference` (issue #495)
+9efc0ec40da2cc931b81b9254323fbd84f5c7621 Travis: Added GCC 6
+34674fc2820b7ce8e2b215ea0687d5bb8a2f530c Fixed error `IsBaseOf is not a member of ArduinoJson::TypeTraits` (issue #495)
+01c3166043362336e2cae08b728c3107f9f8a5ba Moved testimonials to https://bblanchon.github.io/ArduinoJson/
+bf2e3d566942cd188176b59cfbc2dba402723998 Updated the list of supported hardware (issue #491)
+4e9f0b2e2e80ef60dc674770bea013b5a542f3eb Set version to 5.9.0
+223f14710d97548989dba4d0e1206b01416026a5 Now compatible with Particle 0.6.1 (issue #294 and PR #461 by @foodbag)
+f7ae91b85df2c739150d2951ad775d4f0ba64739 Removed unused stuffs
+445dff499b6795acfc65d7e92ded2563c88d45a1 ctest --output-on-failure
+9afa05e2f4cd8f2554acf4e98dd6adceac2cbded Removed `Print` class and converted `printTo()` to a template method (issue #276)
+c3e1677b7d9da9074d06b592c034c62301c599e5 Fixed warnings `floating constant exceeds range of float`and `floating constant truncated to zero` (issue #483)
+024976cda2fa9ea82e1f55504934b79ca53180c3 Renamed folder `include/` to `src/` (issue #461)
+df541a2a22647ea0f688e21c1d64ee6fdf7bdcd5 Changed unit testing framework from Google Test to Catch
+f2ef338cb8949647cf91b177f0f81089880b0cff Renamed `JsonArray::removeAt()` into `remove()`
+8c6f64c11163af9c6847b697f83e1483721e2373 Added `JsonArray::remove(iterator)` and `JsonObject::remove(iterator)` (issue #479)
+5a16b2117b13b21a0fc4f85ec0f3a4bcfe8fa357 Travis: Disabled Teensy (PlatformioException: Could not load broken JSON)
+71edcaf20f21f3525043ea7093347d72536a2b45 Split unit test into several executables
+ac89d91db5eb0d599b411ece546eac81480f4dd5 Organized test files in subfolders
+e664c1ab0587df82db656936ed03423dd9d47cf1 Set version to 5.8.4
+adba668109350b394b8d1582b4be7b794ed23b4d Updated project URL
+ad972725dea62843b9a21142532e52b3a45b969d Added a script to build a single file distribution
+185eccf6f53ec18c83257c90eb3517ece1c82b35 Added custom implementation of `strtol()` (issue #465) `char` is now treated as an integral type (issue #337, #370)
+c4567bac1891e40669eab4b128737760da6ea823 Added custom implementation of `strtod()` (issue #453)
+13409c433abd03a16e78ce15376614755bb9ca91 Added OpenEVSE LLC to the list of donators
+20431debe019978bd06b47b60bbde47f481351c0 Fuzzing: Run serializer too
+797ea356efad0ce6c168b72cc3c9ecdc11c291a8 Fuzzing: Better seed corpus
+2321473c34f5786cb264dee6439781de9fb93d3c Added Prokhoryatov Alexey to the list of donators
+0d5f65c5f30c59fbeb68e1935134e045265c0319 Set version to 5.8.3
+c30241775a59aa16fdd15e90677cc491ec6eec8f Fixed `JsonVariant::operator[const FlashStringHelper*]` (issue #441)
+31827d03f9e6d3fee0e9d7f85a9f373d9170250b Added operators `==` and `!=` for two `JsonVariant`s (issue #436)
+7bcdf3e7221adf5e286c8af4145f35ff6a4c3071 JsonHttpClient: Close socket even when connection fails (issue #445)
+db9a76f7c60c98b1e0e18fca5673eafef56c8797 Fixed an access violation in `DynamicJsonBuffer` when memory allocation fails (issue #433)
+3fd87e8e825b6a8187dba20c5d0184889a7583e3 Added fuzzing/ to .mbedignore
+22a2786610b5a5315b838be4683ae038b230b83f Added Christoph Schmidt to the list of donators
+2b5a6df1e13aec948ead7200458a923c293aeaae Set version to 5.8.2
+5fefeae4041432650abe1fc4507e1df7e286e2c7 Added `deprecated` attribute on `asArray()`, `asObject()` and `asString()` (issue #420)
+d4f725d1faa9aeb608998f68f8ad8bc9e3b74e2a Fixed error with string of type `unsigned char*` (issue #428)
+a096098c1f07a4ef64dc2e083f9093b2c9f7bb18 Fixed error when the key of a `JsonObject` is a `char[]` and reduced code size when using const references (issue #423)
+cc8c0472cae5a0d40c78a6ca8775f71dd4c195a0 Fixed ignored `Stream` timeout and made sure we don't read more that necessary (issue #422)
+fb554071dcff57bcd494d4696d1829ed5e149ba8 Travis: Added -fsanitize to several builds
+17a17c8957cc54146226706031833cfcecebb9e5 Fixed parsing of comments (issue #421)
+2e7d498865893d541e66e6db49aeacb5e0a16427 Set version to 5.8.1
+567157b0053a4506fb0936df15d6ddbec41517bb Fixed error "Stream does not name a type" (issue #412)
+ec6cbc51355180b227f8d5ef05f4059c4c744b81 Fixed error when both `ARDUINOJSON_ENABLE_STD_STREAM` and `ARDUINOJSON_ENABLE_ARDUINO_STREAM` are set to `1`
+8499f0b960749de8a8b8ef214f36ffb28967589e Fixed errors with Variable Length Arrays (issue #416)
+11432253a10f40a8ec30328d453c85e30ecf2b54 Fixed error when assigning a `volatile int` to a `JsonVariant` (issue #415)
+f17e1c4a803ceba035279beccbea52e26346e8b7 Added "Breaking Changes" section for v5.8.0
+6b2f6a4f87e9821d491d9b5ab867a7e0152224d3 Added fuzzer
+671329a3e99b057ea034d3508a65d848865ca45d Updated copyright year from 2016 to 2017
+7e7074502f73e6949abd9bf173faf5b9cca675f6 Set version to 5.8.0
+aa306d5573c1328828a83dbe435a4f78ebc7d347 Travis: Removed XCode 6.1, 6.2 and 6.3
+55669e306e551b90fdaff8cc4c692f6f41babf77 Added support for `Stream` (issue #300)
+3f96e070ce9315ce1c75b8a65afe90f1a11471b8 Reduced memory consumption by not duplicating spaces and comments
+8032a4b5648dc7d4641c5e1c0bdeea50b167ea7e Extracted `StringReader` and `StringWriter` from `JsonParser` Split `Internals/` folder into `Data/`, `Deserialization/`, `Serialization/`
+b923e8f4df8e9c5cea6627d273ba135ab728e260 Travis: Added Clang AddressSanitizer and UndefinedBehaviorSanitizer
+c5388cf8e737857e462b274fe558ceebc5a824e4 Travis: Compile all examples with PlatformIO
+cb908a2373f44cf14fa92b0ccc35078966af7fd8 Travis: Fixed SSL error problem with coveralls
+cecbcd19290114ae77961a4e8aedbaa10b5a5d2f Added operator `==` to compare `JsonVariant` and strings (issue #402)
+90e0cc6091c75407d18cc0529c3d85ebb1522437 JsonHttpClient: use HTTP 1.0 instead of 1.1 (issue #397, PR #399 by @Chris685)
+45bbf6db86cd07e4af4a3c543c6446e18559b5cd Set version to 5.7.3
+432476c98a511135c6a90c1a6bc40428cadf0799 Added an `printTo(char[N])` and `prettyPrintTo(char[N])` (issue #292)
+1f3e227a8bb7a0887249455c72d2385654063704 Added ability to set a nested value like this: `root["A"]["B"] = "C"` (issue #352)
+66c28020c5bc0c02dbe0be72719855eb53837c08 Renamed `*.ipp` to `*Impl.hpp` because they were ignored by Arduino IDE (issue #396)
+6cfe2a58eb658cda8ef22b29b79458ecfae9f0aa Added Doanh Luong to the list of donators
+fc6ad51e68e76dcbcd1dae71709658ab1710a75f Added the workaround for issue #118 in StringExample.ino
+d3bc52951a28d5850aeb73ddd94a71dbf07fe328 Set version to 5.7.2
+2f7232859e2eaebca561b08c3ff4b2f2335493ea Fixed PROGMEM causing an exception on ESP8266 (issue #383)
+4a7232ac998de160ba8d7f927837006ee4d0a007 Added DynamicJsonBuffer to the keywords
+72d78432c906824c0716371ad2a9a7260a6d18be Made PROGMEM available on more platforms (issue #381)
+f6cd42d9163ba5bc663026c49bcd125d9711942d Travis: Added Arduino 1.6.12, removed 1.5.8
+542dff2a08e585140081967099093eda9ee9280d Added Andrew Melvin to the list of donators
+e75e843c880b22d5bd105694d60ee98ffeaf4295 Moved JsonBuffer size calculator to https://bblanchon.github.io/ArduinoJson/
+146a76247ccf9ffb9c6ebb80decfbe1a176f72cf Set version to 5.7.1
+f28157cab76a1150f62522185d7b0df49de5312f Fixed compilation error when index is not an `int` (issue #381)
+1ce16ce449e37235f6cb4c6d7d4fb7dda81ac17a Added support for PROGMEM (issue #76)
+c310e7e8b70b31a1e320acae4d36ba98c21b9aad Set version to 5.7.0
+aa2ef79e55ebd0b98684b92a24d2fc06eddbf32d Templatized all functions using `String` or `std::string` * Removed `ArduinoJson::String` * Removed `JsonVariant::defaultValue<T>()` * Removed non-template `JsonObject::get()` and `JsonArray.get()` * Fixed support for `StringSumHelper` (issue #184) * Replaced `ARDUINOJSON_USE_ARDUINO_STRING` by `ARDUINOJSON_ENABLE_STD_STRING` and `ARDUINOJSON_ENABLE_ARDUINO_STRING` (issue #378) * Added example `StringExample.ino` to show where `String` can be used
+7ad57f1c330305d92b85f782e029a3b0ebe03483 Added Yoeri Kroon to the list of donators
+cbfd331e5041953860b230bf2e03b95478589448 JsonBuffer calculator now generates more compact expression
+e6f55b1f6f4d419913d8de8b4878577b8c8696c4 Increased default nesting limit to 50 when compiled for a computer (issue #349)
+bb805e93cb8a71c1ef569f052696e4070080639a Set version to 5.6.7
+deb57b960be096100193377726f0de49917c8341 Fixed parser that incorrectly rejected floats containing a `+` (issue #349)
+8a9b918bf4e491f01a93596db388176aaeea22d5 Fixed undefined behavior in `Prettyfier` and `Print` (issue #354)
+2f6f3d0629fc8b9b370d1d9699b0f2912e30b125 Fixed return value of `JsonObject::set()` (issue #350)
+a60b35f41cb9fc4ac4b574d43c7d20e6c035bdbd Extracted class JsonSerializer
+6757f35a3a3ab350978f87c1e0aeff6921694d80 Set version to 5.6.6
+ffb9b6d1bab1fe806c57ef4908d3a13316268016 Fixed  `JsonVariant::success()` which didn't propagate `JsonArray::success()` nor `JsonObject::success()` (issue #342).
+e401498e4ac2349e18d58b15b5c51ac21d3c25a1 Fixed JsonBuffer size calculator
+d30e940b3b54672d0341575dbb0ac79ac9e4c766 Added JsonBuffer size calculator
+05ea5e04c80586e59105ccce578a2f2d5859d5eb Added Darlington Adibe to the list of donators
+a7ef99d0fe29ff090fafb586f306612309aabebf Added .mbedignore for ARM mbdeb (PR #334 by @nuket)
+f2a8b52c2cbbf46b69b0d3a864e2f9f30deab65a PlatformIO: Use the same name as for Arduino IDE (PR #339)
+409ca7ee4e3658a1c1cb60e9188d553cda74a74a Fixed `-Wparentheses` warning introduced in v5.6.5 (PR #335 by @nuket)
+387b56570527d30201e08b4d936a7978a981fbcd Set version to 5.6.5
+96f486001deee80f546143ccdf0f2d068af03693 `as<char*>()` now returns `true` when input is `null` (issue #330)
+a498abc14afb98dc1de77bf1cf8bab44afafec0c Set version to 5.6.4
+c64340a9bb7035b7651748cf1831387be4166bb4 Fixed error in float serialization (issue #324)
+79d80a5dbf0b78b423c20aa527029acc6255f86d Set version to 5.6.3
+7ebff5949fd138155a1357e4c8c6e1fb9446c6d7 Fixed `call of overloaded isinf(double&) is ambiguous` (issue #284)
+434080572cb133128ebfa1f53577dfd44acac316 AppVeyor: Disabled build on MinGW32
+c87a0e97abb01bf712f43a1231058321b3800995 Added `as<JsonArray>()` as a synonym for `as<JsonArray&>()`... (issue #291)
+2dbd94951c6c77a27a6c9c50ebb393c0ac550d32 Improved speed of float serialization (about twice faster)
+1e044f50c744fd3900dcc09ee6a0ea5b632b2a40 Set version to 5.6.2
+a7aa98510ce10fa2a887f4e70b91f6c0b7438ecc Restored Travis build on all clang version
+729ab5687897a6c60d55130e9f3c250f664cb05f Fixed build when another lib does `#undef isnan` (issue #284)
+907b627e16984e5f4c7f7be4adfc901ee043dc66 Set version to 5.6.1
+10fcca20f8c2eb5e13951fc0867f1054e35def69 Added missing `#pragma once` (issue #310)
+59cd1f14331ff50ca14bc82953ad3f054decd8dc Fix packaging script
+4a2c570270bf87848e91974158d4dd6d326a94a2 Set version to 5.6.0
+8c7edbd9c390e13fa75198f6c2b209201aa54205 ArduinoJson is now a header-only library (issue #199)
+0801e1632746c10cabef3f035c425ad8105efc7e Added GitHub issue template
+0df2a365f5800f8a19723997ab780cbd63fe7765 Set version to 5.5.1
+c7d6d33e6c91bb51ff1ba1ed74392890f8134d16 Fixed compilation error with Intel Galileo (issue #299)
+c705f3cfebd26721038ad7a0b05a3a97c3b73052 Disabled build on Clang 3.5, 3.6, 3.7 and 3.8 because llvm.org/apt is down
+7fecb36aee479b65febd58dd86922d5475aef95c Added Kestutis Liaugminas to the list of donators
+657a2ea8d9883937d91b85a2493093ed8a457059 Added Jon Williams to the list of donators
+dd064f4c968c28ccda77deddb87d3b193ff0cecb Added Arduino 1.6.9 to the continuous integration
+3bc05b97ea0e879529d266e5acff8a0590bf2cc6 Set version to 5.5.0
+bbd515f6f60227b5a47591939767ba1f7abac0f5 Added Nick Koumaris to the list of donators
+9b3e3a3d9cfb3119c57599bc88054fd17b1d09c1 Renamed `JsonVariant::invalid<T>()` to `JsonVariant::defaultValue<T>()`
+a3a2ca47967928e2f52b4e7802cad887f96eddb5 Added `JsonVariant::success()` (issue #279)
+eab13dc565dfa372eca10f0190f8407bc0989e51 Added Martijn van den Burg to the list of donators
+bebd1c400c17c1324f334d073fc6ba08f20c2d1f Added OSX build on Travis
+36d1bb2f52be71d1ff755f4a4d42d9ed838bf67a Added Charles-Henri Hallard to the list of donator
+ae32695c3e4121ac8ca6587029bb75d0b08bed18 Set version to 5.4.0
+c5d19a4dbd1487994a23fa1a76e6cf311037c542 Changed `::String` to `ArduinoJson::String` (issue #275)
+78728c6547ed0bcc060fa4ede5b9acddda98aa25 Set version to 5.3.0
+a8032f81d904ea32605d25f93d833d67d310576d Added `JsonVariant JsonBuffer::parse()` (issue #265)
+a13879196408e1ffb10149c528933b1d7c6d40d3 Added custom implementation of `ftoa` (issues #266, #267, #269 and #270)
+f9f002c8f7cd23a2bb686fcea54f4675eaa061cd Fix `unsigned long` printed as `signed long` (issue #170)
+f192d5c12e62f6e34dd2b47dcd41120ec004b3df Set version to 5.2.0
+a6724bd03f5e47cdf3a2505832ab8562011adefa Added `RawJson()` to insert pregenerated JSON portions (issue #259)
+c77c3f33ef4562cd6bc9c7820d44c11eea6afc25 Added `JsonArray::copyTo()` and `JsonArray::copyFrom()` (issue #254)
+623aeee9bfcf8d91a7699459795f00daa1583351 Added example `JsonHttpClient` (issue #256)
+a241d53d2862ae550b167897abd61b271bec7349 Added `JsonVariant::as<char*>()` as a synonym for `JsonVariant::as<const char*>()` (issue #257)
+11500d2ff563d9d558258e2833edb626f3cc78ca Fixed strange Markdown rendering in README
+85708bc94f93115f0a9c9975c14b21bc1b5dfe4a Added Arduino 1.6.8 to the continuous integration
+ba6e8856f2975a4e08c39d7c0ad552ff1b51ad9e Added Tweet from @hemalchevli
+c8448b0abf2278dc1cdd089c72f3127511348249 Added Gustavo Donizeti Gini to the list of donators
+e35248ffc44bec4b5267e279ca7ab658ec086a10 Set version to 5.1.1
+b47a3b566aaa6a1e4aa45c6b8466331498029857 Removed  duplication when one replaces a value in a  (PR #232 by @ulion)
+6ab23bd5234883bb133f01e772e238ae80e708a0 Added RedBearLab BLE Nano to the list of supported platforms
+987afff0e97a2b5311c946b9b4727b0791053f92 Travis: added GCC 4.4, 4.5, 4.7, 4.8, 4.9, 5.2 and Clang 3.5, 3.6, 3.7
+564c62f3b3136b0a026c35b86dfbf8edb2e3d99a Set version to 5.1.0
+8733f95e51a372a85fd9d5c00f79bacc46700e65 Added support of `long long` (issue #171) Moved all build settings to `ArduinoJson/Configuration.hpp` Added AppVeyor settings in source tree
+ce63e9c3c3c58d908d12c5728057a1b4c224eba8 Added comments in examples
+77b7124cf1e885225aa916db861afb6bc10faa85 Set version to 5.0.8
+6a608d4b4906b43bd57617fdf3ca5cd446de770a Fixed `JsonVariant::is<bool>()` that was incorrectly returning false (issue #214)
+01924618bd1444e75bf2839aedbf4f63d3094e1e Merge pull request #215 from ivankravets/patch-1
+666e2fd0ce0fe408b71433795bd544bbc139e69d Use tagged source code from repo
+0cfc25d7515e92bae9c62507323b7eb06a2a2403 Added Johann Stieger to the list of donators
+b6d8e6c989b7f453fdc1348d371d8444b6850b1e Updated copyright year from 2015 to 2016
+ab2502f7b87d419472e0716442f735984f9cb227 Fix misspelled PlatformIO
+c57e6f3bd800a14ff5e88df73fd6efe44a18942b Made the library compatible with platform.io (issue #181)
+b54f1ffc1d1f8d365d61ae2e0bfbfeff68754a30 Travis: build with Arduino 1.5.8 and 1.6.7
+bd0ea422778ac339c172f2bb55afb18964aac5fa Added a badge with the number of stars
+7ae43bc4f8237e83eb3cd2c67fa615d16071d695 Set version to 5.0.7
+056682327bb1b6b91773abe8a4e120ee90514908 Changed `String` to be a `typedef` of `std::string` (issues #142 and #161)
+8b66a25f6642cd9941a4853cb4a5f704e3e6652b Removed a useless line of code
+96245dd3b46f6689b4d537f29794992009646ce2 Made library easier to use from a CMake project: simply add_subdirectory(ArduinoJson/src)
+9cc49da68a8631b9657ad517080683ca9752d169 Moved to the new Travis infrastructure
+224918b463f13bfed4b9268c0568ac66ac45a0e3 Set version to 5.0.6
+cbeefa250303b2ccf3923ecd88a3155b2a253a69 Examples: Added a loop to wait for serial port to be ready (issue #156)
+6d688066338b12859d71683f7f1d123ecceb003b Added donators list
+ba3617c22f464b8059b88f203cb4607d696d1ca9 Added parameter to `DynamicJsonBuffer` constructor to set initial size (issue #152)
+b7d9bb27652f4fb2565a335e2de7808590f4c8fc Merge pull request #150 from marvinroger/patch-1
+74b42e2251c6429a62db4132a2208f9a157685bf Add library category
+c0cf9c3fcc27247e5fe9f16afd09226faef784ec Use `float` instead of `double` to reduce the size of `JsonVariant` (issue #134)
+9f3ce18f0627460925ba0807003ae5903cedf6b8 Add overload `JsonObjectSuscript::set(value, decimals)` (issue #143)
+b9e3255c9e8680403dc0f7a409ddff4895c80ffe Reached 100.00% code coverage :-)
+e657396f656adace231da5853381398d72b4b359 Added -fno-rtti
+929f608f2f3d674144b1a83f92b43b904fe6dbc4 Added list of supported platforms
+c6a4bfa88679c7edf7f72a14f4ed7577ac6e7a56 Fixed ambiguous overload with `JsonArraySubscript` and `JsonObjectSubscript` (issue #122)
+d5e25b12b88e696c22a0eb153d9c571fe7803af2 Added a comment to prevent issue #112
+7cf6fe6d62a98f2aacfc4e6590be2330a1feb656 Fixed return type of `JsonArray::is<T>()` and some others (issue #121)
+155dd653e79487155d0bd6df18cd3714e8cf3bc9 Fixed `printTo(String)` which wrote numbers instead of strings (issue #120)
+b5c8cd1766d7c48ff8175c44452af5532578b327 Set version to 5.0.3
+4967e389c532b910ffb4ff3bc9defd3ce92195b0 Added a script to create the package with the old layout (issues #97, #114, #116)
+ffbaebd198f9cc5fb11f34460e4b100b88f0c3f5 Added testimonials from Reddit users erm_what_ and makerhacks
+04b8781c8d9361c0c9ec3e14b6b411cb4c93078c Fixed GCC warning "declaration shadows a member" (issue #103)
+5a4d993f7d0429789f960988d973a3b5bc79db59 Fixed memory alignment, which made ESP8266 crash (issue #104)
+823a172681603a1e81f3ad11394bd4a3d3e9a824 Fixed segmentation fault in `StaticJsonBuffer` (issue #104)
+a1943e21ed060c9d3196fcf30bb6334e29330058 Fixed compilation on Visual Studio 2010 and 2012 (issue #107)
+01c287bc8987d670f3e2f7ee75e667254622d436 Removed -Wdeprecated-register for GCC
+0cf8249b14e74df574ac2a27f895248ab3afe9c9 Fixed Clang warning "register specifier is deprecated" (issue #102)
+a8265a799d844d802cb267befc8e0383f16e1b79 Merge pull request #100 from Eriatolc/master
+18bb653f100b0e035c87c46b2aaf18de8523b3f8 fix typo
+a003a3195276067152a6ce738f63198f958a553a Fixed compilation with Arduino 1.0.6 (issue #99)
+0a1c27f8732a0274c13281b0f08e9bc45afeda6a Updated copyright year
+75f8e25aed9ddeb589b46661b4b88fd05250e0a7 Added a script to measure the size of the sample programs
+39c506b4192a7f45bb5b9b1640ed9bcd933d12e5 Reduced generator size. Fixed Visual Studio warnings
+ef2641b49b400f6875123df565cf80302657f487 Store parsed token as string and allow conversion between various types (issues #64, #69, #90, #93)
+bce101578ddceabcebbd6bd1324378c318951ea0 Merge branch 'master' into 5.0
+10e466426a6e2e8fad6afc96c9daf7cf979f34f4 Removed the wrong #include
+9b90aeffa5580187a8ed21483f4579ac25febe6e Added call to arduino compiler in travis
+601b51890f64e021f8b4f7c5ac0027820f983fa5 Fixed segmentation fault in  when memory allocation fails (issue #92)
+2524a00a9661fcf2a1ad3affea4d1742226fa2e3 Fixed segmentation fault in `DynamicJsonBuffer` when memory allocation fails (issue #92)
+e31d667bec6ea37e8cc1cf5e40e102218e0326e3 Added support of comments in JSON input (issue #88)
+c161f698fca9808879e30ee3a543af8e8b4487ad Implicitly duplicate String in the JsonBuffer (issue #84, #87)
+92e687303d5f0fbb6973d04584f3e3911474c095 Added support of non standard JSON input (issue #44)
+f5b83f9314bc85fe6143e993f528f84d4f27f78a Added greeting to Giancarlo Canales Barreto
+5e7b9ec688d79e7b16ec7064e1d37e8481a31e72 Fix buffer overflow (pull request #81)
+78ae0b8aee48f7ded79098efb1b9519c2255c027 Updated changelog
+283dffc0359b681b89ce403bca43c05fbfecc8b3 Switched to the new library layout
+0aded2a798fc9fa9cc7e1da66271cfe517ca69c3 Reduced code size
+1b5be892b9606c9d8f5dc0821a8b2e5905c62aac Added support of String class (issue #55, #56, #70, #77)
+756c279cdc8a57283dee5a1139366528dc1570fb Redesigned JsonVariant to leverage converting constructors instead of assignment operators
+08d05df00e3773ffecba9c5ec45e5344cc5f90de Added JsonPrintable::measureLength() (issue #75)
+c385862be1749e7e2e36c09e0d7f513b35fa1732 Updated change log for v4.3
+0eff5679109b3dc38c8a63868ee355e959724d42 Added JsonArray::removeAt() (issue #58)
+94d38c068032090ffa15bfebe7316a1d4bfc7e6b Added issue #68 in changelog
+81285f49fec49f2f0ce14b7e485d8241cf9329af Fixed issue #68
+877096d49d0a6498e89142f1b515973b4af383f7 Fixed issue #67
+bfe60243a4366beef6d89dea247745aead2277e7 Fixed issue #65
+ca9d606e72fac237f204e27f5ddb4ad10f000ae4 Added example JsonUdpBeacon
+24d21467dd48ae242d1865c7b4b49f5e7e85a997 Updated change log for v4.2
+41651136bfbd21f23da2cfe6f1442550a7dbde5e Switched back to old library layout (issues #39, #43 and #45)
+5e5f060fc0a16ee3c19a64bea2b47407438801b1 Updated copyright for 2015
+29ab5fc9c2b353418af3544245ddb252bb8e87f6 Reduced code size by 12 bytes
+80913b8044d22892ab5a68e2accc635a24e8f922 Fixed Visual Studio's warnings
+02960f28e48783bc2b6a7d7b09bcdab788d9abd8 Fix coveralls command line
+8db338ba143fda5d724dc50c26309a988fca044c Removed global new operator overload (issue #40, #45 and #46)
+dadd8986dc8c15f600e6a524119e4cd2347f557c Mute compiler warning (issue #47)
+e2016cf65b62a69688d6bb976f63db37f686d501 Added an example with EthernetServer
+1b214a60fa88e2459ee7701d3b11368c3024888f Fixed a typo
+8560583ee78cef2b478b1880644dd5f63b9538d3 Fixed GCC warning
+2932c4ee43b379f6dc826cc6a2fad0187fcba427 Removed std::nothrow because it's not supported in Arduino
+e8c127a894f76f91f50465e7be103f9b9510785d Fixed memory leak in test fixture
+d7ac7ff9a38fdec1aea6208a0454bee1f227909e Added DynamicJsonBuffer
+aef7e43c48c1f1af870e3558367316ba4d56ab07 Use DynamicJsonBuffer instead of arbitrary sized StaticJsonBuffer
+d855b0f98c636bf7673ec66026edf7d0c08eccc9 Test object allocation with DynamicJsonBuffer
+c726506b4744ee3f13fc0f2a4082c18954537904 Added std::nothrow
+c32e306be9d0c4f085a3d736a9e80b69a14348e6 Test DynamicJsonBuffer behavior with arrays
+13e907c894b9511ff3d6667eb665a3cb258dd75b Test that DynamicJsonBuffer.size() is the sum of all blocks
+d19a34152f147ac0ee5d61859f530160f78d37b2 Test that DynamicJsonBuffer.blockCount() increases as expected
+19cce08b2b1e78327e4d5ebea4c4da94e57f4fa7 Test initial value of DynamicJsonBuffer.blockCount()
+3cd6f66067904e12c9f0f44336a1aa85f0920672 Test that DynamicJsonBuffer can't alloc more than BLOCK_CAPACITY
+ada588c112407a8da64c58a9a219972b22cbca20 Test that DynamicJsonBuffer returns a different pointer after each alloc()
+0d57fe5a7e6dcf9db6c75693fb88c7f2f6a0a920 Test that DynamicJsonBuffer grows after each alloc
+5a74beb7e2aa2f987c5452e728ca17b750783f6a Test initial size() of DynamicJsonBuffer
+e2d591b9ff26a146d85ec2a390b0a4a09efe075b Fixed build in travis
+8082185ac4764c2df1f8559438785c07003ee244 Fixed template instantiation warning (issue #35)
+85ebc8a1ecdc1204337d3a1801af5a88a29bec69 Fixed shadowing warning (issue #36)
+9ca32e664e6bb5d34b21cc17eb7adb095ab88dab Added unit tests for issue #34
+566b76121aa0970b970ed8b18f7f3da5dcea8343 Fix test of ListConstIterator
+562080f22d623eee0d46348c12d3dea7598a2a41 Added conversion from ListIterator to ListConstIterator
+bb8bddc7585ef6e9197e3bfa7cc15696f4cd8387 Test const itertor
+9eb8842dda981a347c418cb4caa6a18401f5601b Test operator*()
+97558abc292ec8e72f6787e74c2577e6fde6eb80 Test with a missing closing quote
+160ce092ff70cddfe5d0f3982d8748139544518a Added code coverage badge
+d6974127b4ac32a241bc523b2c25a236b099089f Moved documentation to the wiki
+092660db52b610dd5206242c2f65b0019b1f4267 Moved documentation to the wiki
+348357eb040655b00a24784f7f11c2e3469f6c98 Merge branch '4.0'
+69f6967ad4e63a084909264807931a5306a93f77 Merge branch '4.0' of github.com:bblanchon/ArduinoJson into 4.0
+4e3f554b68d3b6c8669000efce5cf051b65e36ef Made script executable on unix
+79f6f0dd86c95a083defe3bc4e477b49838b3496 Minor changes in doc
+02f6fab02561a639356b9cd1057ab6d2c49b391b Minor changes in the docs
+a61fc5b8366de1f0f3d4c6f4c6a38f13dafee564 Minor corrections to the doc
+f3a84857d938e8baea472820340cf3c33d5fa3f1 Removed unused function
+95eb16233c1a11893c8a1b35f6d047fcf1b7f6ca Added tests of JsonArray::invalid() and JsonObject::invalid()
+33654a480b23b9e58d45837dd0bcecb37c93d754 Added Build Status badge
+c296f27640824c32c4d8f2c4e83acbd3d34d639d Disabled threading in googletest
+4f55f63a77050b4e1e33f67432b8ca867d3e5a6c Improved Travis configuration
+a66299a9360d08c01afc8d5eabf956dacc8de5d2 Replaced -Wpedantic by -pedantic
+a2cbb68a401ec2743d4465cc06804c75d50a9912 Added missing argument to cmake
+4163debdd9d399fd24004d99359a3709e1339efe Added Travis configuration file
+c92ff81ddd92552cd0ced8256c05edba59fa6873 Updated for v4.0
+783add8357ae444314eef42dbfb7763d0fb62928 Added Arduino 1.0.6 requirement
+3b77dbbed7111f249a68925b0191fc34be69fc85 Fixed warnings in Visual Studio
+160ff0961e12545600632d7374251921fb1a46bb Added PlatformIO manifest file
+06909c451f63619ed84c0e95e2c3f3339c1054a0 Added donation link
+b7d8b45e5a2519c6513a3ea669305e26c701741d Synchronized with master
+88bfaac7e67e2da7616679608186f3125d527095 Changed expected output from "0.0" to "0.00"
+3c51017e4a0ae4fb49b5970fb0e22770a082a65f Added tests fo JsonVariant::printTo()
+33f6376122814f770937351c5a4ddcd1234dc65f Fixed is<T>()
+2beb87136b5defd7a88caadc3e3183616eea6cd3 Fixed writeTo() of invalid and undefined value
+f6f8a63b999f5b10346ae98b9148cbab639b3eec Added a header to simplify library usage
+e0ce711eb45ecdf3bdc8c52eb2d876ef77feba4f Fixed cpplint warnings
+0911d8d796be4b65b67f5b52f4d15943796c471c Fixed cpplint warnings
+99e5ff78f3ada1788a951c90bdada9a831000743 Removed empty document
+5236de1433f96ea1930e6fbf53008e8b9b54024c Added memory usage
+0c9451fd5f4509c72c8b45a9d49b1280c8aa2cea Updated for v4.0
+dfac1cf71a44ba11cb6cddecd2ce04bfd4edc7f3 Updated for v4.0
+1e20e6ef77aefb245a3a329f9468b1da72ac597b Renamed file
+a7b366e74f07c015f24431fbca471f1e98ae2d7d Updated for v4.0
+3cfd36a5ce48072be25eae9941453acb07af3c13 Reduced size by 16 bytes by inlining indent() and unindent()
+3919f07890ac9f6f0f3e15e51731dd7fc8bf29e5 Reduced size by 22 bytes by removing writeEmptyArray() and writeEmptyObject()
+12e374d0dac0003e64ebf9389e0176bfc12cb63f Reduced size by 2 bytes
+36ee4876c60d3647b3f560b363897aa6c79d48fa Reduced sze by 26 bytes by inlining getOrCreateNodeAt()
+05db56760ffcdbed63b2cee50d7354eb20b982b4 Reduced size by 38 bytes by inlining addNode()
+e94089ca5690b09a39b4b4d68599df2a60d04501 Reduced size by 52 bytes by inlining createNode()
+dc1d0ca6984f967cd068662098f0cb62b888ee7e Added #include <ListNode.hpp>
+627d85ce231630019826dd88e6046d290549a19f Added #pragma once
+f6133f2d36d38f14711bba2f6a0502fd39fcff21 Reduced size by 300 bytes by reusing the JsonPrettyPrint from v3
+d8dbfe6e6d71d5f2cc4c97c1e5570f3a971a108f Reduced size by 706 bytes by removing virtual destructors.
+1c450fd3aa19a1c2417b33aadd3210867b5baa4b Fixed floating point value parsing in the form "4e2" or "4E2".
+2e47d546b29fa3382f6cee0c7ac03e45fb59534d Writing documentation...
+01f13c1b11b1cb2c3e59c1360938d31a5393bb59 Writing documentation...
+9dc7c2a0315b85ef272146ba7f1cfd1759a70328 Writing documentation...
+fe779dace4b09ab9dd42b895113019ec88312022 Writing documentation...
+6eef52cc9ce8bef321637a0d1777d5d4d6bfe612 Writing documentation...
+d38131d4951a893926e527366c1ca2d7a08d056e Added JsonObject::containsKey()
+b4b475d6927ac1cea830379f848165a2d1f9d0f1 Simplified generator example
+fe17706b6ceb24b7cea3b3b3f39e31123560e447 Writing documentation...
+d7bad3d70b627995452cf8b08e3295346b4bfd55 Added flag -fno-exceptions
+5a56ec06360a22712b1de3c8332ba9e6f3577c45 Renamed writeInteger to writeLong to be more consistent
+35a95f00d9e30d9f96c5928cb10d1ba37f566f12 Inlined the content of JsonWriter.cpp
+93397880cad971afc99e55e480b571487efb5428 Fixed compilation error with old GCC version (like the one in Arduino 1.0.6)
+8c4c3d8fdaf5b93831d243faa12d91bfe25d3fd4 Fixed warning with GCC
+49025d322f82999a7b5d875c66a249cea7cf9c05 Fixed warning in GCC
+9d2ee6ce6341b38c52d1c16cac602d41772f8696 Fixed creation of JsonVariant::_invalid
+70aabca0f759d4a77338368247bd4e7e259f5818 Remove diagnostic lines
+dfd59f644bbc91b04b1ecc6558ee52d1b1db50ae Added comments
+ee520d1ff5062a544b6ecc5ef9b96b4804696a89 Cleaned parseArray()
+ee580f1968966571fa9e97fdce29688a830e9ce3 Removed comment line
+5179aa0d4f28cb467c43589e9f4761e83d96c33d Cleaned parseObject()
+a7b78fadb075831a866bf55d85a3ec0c47cb58d4 Removed StaticJsonBuffer.clear()
+d94bcbf2499f2fcb44b10de0f6fde03ba9ae2721 Added comments
+086e99efb4896108dcab6b94dd3619549dd75a4d Added comment
+7b8aba46cc8b6d97a15a403cc0461981c6fe6608 Fixed compilartion error
+579c9359df68cc85a12a54673895ed5c188b05ca Added comments
+885e35e8922f25ddeaeff5b5d5c57c3dc42ac6ae Added comments
+e7864c95666b6b8c3610e5b3d6b5e53829b9bc3c Use Print& instead of Print*
+6e67bc442fcc0c613f7508a520c82a428272789a Added comments
+ac9b776aa15a9c360398433d9139ee32aaa98ac4 Fixed remaining cpplint warnings
+d8e595907b708fe8b8bdc5e20a92b8c77d914745 Muted runtime/references
+1e02fabdeccbb4490233200b33b6665e8c7cf1b1 Simplified JsonWriter and PrettyJsonWriter
+79bfe731afab62ef4a89f568e8c361d19c826e5b Added comments
+a3425a6306218a36e4486d543d8959ec9e3926ca Added a nesting limit to the parser to prevent stack overflow that could be a security issue
+2e4dd2d5910de29b5345822b450b7a752af40d8c Updated warning flags
+f360cc664c85080912996d70a1feb75158ab2262 Added empty line at end of file
+ce6f8391533203d8e379b24800a9011760f80e23 Warnings level were not correct with Clang
+01949f7da0446d4c5d47cf298872b2e3cb41abc0 Added more tests of StaticJsonBuffer
+08de76e2ba78bd1c508e257656b9e6be8679e402 Simplified StaticJsonBuffer tests
+cb97e1fa19e46a87ef3d1a72323a0712a1b7dfdd Added tests of StaticJsonBuffer
+95e564bfb601eba182dc13240a2368558d2262f5 Added test of a failing JsonBuffer::createObject()
+342b079133e7f42d344fe026509650839e5586ec Rename Node into ListNode
+8138c6411619647768e55344b7a74354b06edc42 Renamed NodeIterator into ListIterator
+64b4e15ce6b3257b9addc01787b1e62d6f345459 Added tests of JsonObject::const_iterator
+e722fc50b1438d300bcc29a022c4628af610eb52 Delete Printable interface because it's not used anymore
+a9f4f611d44cca6faccabe61198bb868ec053b39 Extracting a common base class for JsonArray and JsonObject...
+0fb4fa8f867f55ec6fd377865e198f8e6a02ec35 Extracting a common base class for JsonArray and JsonObject...
+7d73e63c78ee9eeaff219f51c9ce54886a9e0d3c Extracting a common base class for JsonArray and JsonObject...
+ebb591ef2816032164618841540b88f8613787cb Extracting a common base class for JsonArray and JsonObject...
+31dea656d593994b16b7ca52cd6fe8607ca64db6 Splitted JsonIterator into NodeIterator and NodeConstIterator
+768312e870a63b745c9f6c1dcb4f8ee6c2034c46 Merged JsonArrayNode and JsonObjectNode into a single template
+5d0e326bfd2479af2ba0e6c2e6b38b1bfbeaab5f Removed JsonPair constructor
+8ac4346fd5893406badc0dbabf33ea24c66e5686 Replaced JsonObjectIterator and JsonObjectConstIterator by a template
+bafec6f1a350e8a8c4bb07e15792903bf7d894e7 Unified JsonArrayNode and JsonObjectNode
+c6d11294e45f19c8401d68e23ba530f1ffc8a210 Replaced JsonArrayIterator and JsonArrayConstIterator by a template
+6ce2497879c6bae73420e1842a1353788f3d3f95 Move JsonPrintable into Internals/
+782b178f4e959747f6be47b7a783a083e9930007 Fixed warnings in Visual Studio
+64529bb1a3388abe08cab94a87c51c9b197b58f4 Added test of JsonVariant::invalid()
+01dc0d626876c955a8f8f7c78bb71f738e09ccc5 Added test of undefined JsonVariant
+289b5333d6601436763263a50cdfbd1b569f4d1c Improved test printers
+4a17e8c34bfd9e2d52278db1aad7a12192f61e00 Minor changes
+c4cda780d52bb9890a7c547b6033c39fddcae126 Added more tests of subscript operator
+e5669577df74dcba79b33a16d9f60643ef13dd83 Added JsonVariant::operator[](const char*)
+97768ec176dc38ac0b35fe05e5cb793e5e10194d Added JsonVariant::operator[](int)
+e25eaed75a2a29e6b98f035d5deaaba85a205244 Cleaned #includes
+09f6d059a745a4744f0f7176c9885bf8f6dac0d4 Renamed JsonValue to JsonVariant
+699292b0580d91d9997bd3ac68c25088b87bf7bb Arduino example are now compiling
+d9cc259df3f3a9f0368e37e749ddeacdbf0f46b7 Added declaration for placement new because it was not available in Arduino
+43ad37e7ce9d6d56941b8a1c1621141be6b248ab Now use relative paths in for #include
+bb816037d6861dde9b86cedf5ff8c3fbbce30d4d Minor change
+04cde11a0487ee6a88bfad9dc57ce07f40c7f08c Now use uint8_t to store decimal count
+2f8fde6772535caf4dd9fbc4b438570c1a52125a Added ReferenceType::operator!=()
+f224408c0743f65ceb2f0c438991be110b59aa92 Added tests of comparison operators
+21e073a3b4fd433fc2c385aede5a5fdc8bfc061f Renamed JsonValueTests into JsonValue_Copy_Tests
+f9ea82a2aff268ff2b797b393988707be30013fe Added many tests storing values in JsonValue
+1ce6d663af0ddd744effa7d98b528e182cfc1e52 Replaced 0 literals by more explicit '\0' and NULL
+c1c63067d4b1effb250d2b4a370165028c97496f Removed old source files
+a8d3e9997e9aba1ae5a14cfbb856d2b80b233605 Ported test of Gbathree's bug
+7cdf7b17694a131fb38d2ffa8aaf7ef3fae48589 Added equality operator
+429d5011b478084dc2ed07a1818dbd26548f931b Made it possible to use const JsonObject&
+54f9bd95722f55aa337f4df12fd052e1145c9fc8 Simplified JsonWriter hierarchy
+2a60c96bafdffe0f8a22b2d9501a1b0d47676090 Removed virtuals from JsonWriter hierarchy
+f26f4263eafc1b1a5a6569b87dfa7657d73b7d7c Removing virtual methods...
+507f809da0bb7cd5c8cfcdf62d5f70bfc7956864 Merge branch 'merge-parser-and-generator' of github.com:bblanchon/ArduinoJson into merge-parser-and-generator
+ad83820257dc8270d2ce617a90989613ecd6e39a Added integration test with YQL data
+cd773e3f37651fa3cd598ef5458bb4824642bcf8 Added an integration test that uses prettyPrintTo()
+9da7dce3101b29e4e28c085fbc9395f8bfdc1ec8 Fixed double formatting issue
+825ab0357eb2046d99e9ab1249b72956f62f7c24 Added integration test with a JSON sample from OpenWeatherMap
+fead9b50b1f9ae3a9487cb67724f69e4dd7323a9 Fixed bug in parser when "null", "true" or "false" is mispelled
+98463ea168085863aec69745278f6a14acc6f4d3 Added a script to run tests continuously
+74b45445603151532b3fa2db524578337a736b87 Fixed parsing when opening brace/bracket is missing
+2b5b8fb4c5fdb46bf542736c316dd4e5ec06f167 Removed empty files
+d35b6804818ce1378aed7c0758b0c7ce9ad61db3 Removed ForwardDeclarations.hpp
+ca0fbf00f9cc87bb8b17699ecce2d82993d49c99 Cleaning up...
+5443e90baf2861c0855aa3b13b17b20c932a1560 Cleaning up...
+a5dbb397ca94f54e5cf3b88e5d9d0cc3bbbf5a74 Fixed failing test with clang
+889f059758a45b1a3ac6b2a11bb1cb237408df44 All tests passed!
+45a8ed6531ef84abdf25361396c51f4256590d40 Huge refactoring in progress...
+4c204840e96ed2d987ac7ae7a43167b86f029186 Huge refactoring in progress...
+c3001e9ea92acf39e53fed1f08e7341a109bbdad Huge refactoring in progress...
+5cf744dbac8700a0dc89fc682b5cdcbd4aa49146 Huge refactoring in progress...
+ba2b142c8a12d071e4b04e4670c862f6bd84391f Huge refactoring in progress...
+10ab95522d1847f5a63de9429b564e01e96f190d Epic refactoring in progress
+61218f12fdf46bd4be7fd93f4483ea2b565e50b8 Epic refactoring in progress...
+852256c1af65f725be1e0fcc7d4c0a7fb8b8c2cb Epic refactoring int progress...
+8988cb4761f582ec27e4141607146e7c6c8fd959 Epic refactoring in progress...
+e0980292ef8c8a13567e5f538cf2f5528b26becc Epic refactoring in progress
+cdf3777aa82386923274621452d82ab829bda95b Removed unused friend
+618a54579f8f08ff745181377607ef02de38b8a6 Simplified JsonArray
+9f69fabe20bce88fff7aa61cbd820d2202e9f184 Cleaned JsonNodeWrapper
+e748ce32bc8b62ca06a1d9ddbdc77519cd147639 Removed all friends of JsonValue
+fdeedabfd7a0175b2537aa1cf218615d94a22fc4 Fixed warning in Visual Studio
+582216e0049de0e02e5e42b077276f9e63b019d7 Merged JsonArrayIterator and JsonObjectIterator into a one template class
+1f6cd8e56e64dce21329a17d39eda809114ff7b8 Removed usages of JsonNodeIterator
+68fb03577c5d3ce85bfe14249091f6848c69c40b Moved forward declarations in a single .hpp file
+bbef8931a653d1c96d4dad014986a4f63b3bc384 Improved JsonArrayIterator
+8071434515c06185b32d168707c012054eb590eb Fixed many cpplint warnings
+7f22a1ab39ec781798c7dad7456b5bde27d1d893 Muted a few cpplint warnings
+55b0eab3e68543ca05b472ee006903091b25c63c Added newline at ed of file
+e85f27c0f370304a0b0990ac41cc3322b717d4fe Added file headers with copyrights
+e3b4f5038ddecba19bf60910cdfcbcc95977cbfa Fixed path of test exe
+b43da1e421fb418f388dfc0679c66e5cb137e34b Switched to Google coding style to match cpplint expectations
+5c8283b3e41abc5b6866bea4b09f011db325d76e Added cpplint
+3dc533fca0841ab06671a42cc1319f2c4cb881c4 Merge pull request #30 from ivankravets/patch-2
+d38cbd374a7cfa57206a3516a35b7794de039a53 Avoid trademark issues with library name
+9175046f35d7b62efd8c301d11f577a2cfeca91e Formated code with clang-format
+888fdc1d547367923b4e38c30a421a591a4d86ad Improved JsonObjectIterator
+d83f1a631922f983e768053a0f645f042d33649a Added .hpp files
+ff5f3f3a2c062de52b41324f060bfc2db7db7578 Merge branch 'merge-parser-and-generator' of github.com:bblanchon/ArduinoJson into merge-parser-and-generator
+e4779512e6504447f9dc52855725422dd9be53e6 Added JsonValue::as<T>()
+8947a6c9de86d747b8b90bffbe79618e57dd5a82 Added more tests
+fa805b4998f163c1740c499b5a55d2ac77560651 Test parsing of nested objects
+451c0ee70d7f16189b435bc1925fee52f4a10cb8 Added JsonObjectIterator::operator->()
+40ac60b941b9c24d67b528928ea6c96913ed0705 Added JsonObjectIterator
+7e98d136f4acb0962977eabac03a48e5c5513ed6 Added more warning flags for GCC (as suggested in issue #28)
+c800948342067bc1395e49ae61a06acfd2512b02 Fixed warning in GCC
+7fbc3cb6a674967154fc6db3cdb5d1497b60df16 Fixed warnings in Visual Studio
+d842e246c90f5549dabb1f2b497ec00feb5f4c81 Added JsonArrayIterator
+9946abf7312f45863dc5d8dfa4d35d6df0bb86f0 Added more tests
+1e0464f5b4768b7eb8e44189a860511a89987ffe Fixed negative number parsing
+5aefc7d65204f7bc3ad15eaa86c8a9481a023b19 Simplified the parser
+743381de6d1122d0b4bde3e1c4c7347630d51d33 Added 3 tests
+d70ff2616475f1c59ca34ee0f7ab1d58e9a597c5 Remove support of unquoted keys
+316d036785433a9e7bc4fab20122482a06ce8c5e More test on object parsing
+c82e6d747b2430678d429aa41dd588b3c0bb18c8 Test with spaces in objects
+04330a7a477af37fc141900df5cb2e30441b87e1 Parse key value pairs
+cfbe50057a58ce86572ab7056f0833dce6ac5ac2 Test with a missing closing brace
+9c1b6b80aa12993c4b4104e5e0da756ca4f2548f Parse empty object
+0daf82eee24e17ab93282f5948779c0a2851f72a Renamed all .h files into .hpp (so that Sublime Text selects C++ syntax)
+074c39ca5b3ad6312501c846b5a9029e8cc4b4d0 Fixed namespaces
+1abb8ac6ae2936f83ed121de335ef30eb82052ee Added tests of the trailing string
+b19a37538c4ebb28a38f74e313869ec9d2421e66 Changed JsonParser_String_Tests into QuotedString_ExtractFrom_Tests
+fc4faacfec90d1c4e72c87a5f97c757b33cebf25 Renamed EscapedString into QuotedString
+bbc2aa4f2a16929f03f4dc0c23a1efe6e6bb03f7 Allow string to be enclosed in single quotes
+1f6bd5c04d50147801af4371b8df6a516fc484ca Added more test of escaped chars
+32ffb75394c1cf0a8425afbbbe70065463eb9099 Fixed compilation warning
+7df73824aa510ed19c1129c6aea3b9f3d1091ac4 Fixed field orders
+9c32ae2300d0601f519e6f819b9fba039f1aeba2 Parser: unescape strings
+b15dac7edf225e5dc614ba1a22569371c40ae85f Renamed EscapedStringTests into EscapedString_PrintTo_Tests
+2a62132bf0ec0b39def1a334f4e361e515a75b65 Added JsonParser_String_Tests.cpp
+a0a82c0f4eec4479aed22b8f1ea63c74e4e9359d Renamed file
+24b46af48a00a21dc9506d50caa77823dd20a1fb Moved build output to bin/ and lib/
+fed79bfd81178d0084be15620b443390d953b235 Updated the script to work on Windows too
+7dbaac1070c567003a7efe053fadd9838e2f6311 Added a new script to create build environments
+58d2c4a62f5c0fb47c3dd7383bdb88bbe3221946 Renamed srcs/ into src/
+b847576bb4f847b9f29f6ee0a54fecf9d717aa89 Renamed tests/ into test/
+58f155e13566bd669517d607145152e418437e47 Moved .h files to include/
+241ca79114f56d6d78069a2555378ad9a6925f39 Parse simple strings
+3d92531ad36db9ad05a1cd84967289a49995a897 Parse 'null'
+c61ee09d26269987567389b8d1841ac16c7cbc47 Parse booleans
+c59ddd8a9da467186fa86dfed4345095a343892c Fixed number of tokens (issue #29)
+086d07151f171bd363288454b26bcb10a524ad1c Parse doubles
+a1cb9c9399938c267cb563334dc8705653910b8c Added methods to clarify the tests
+f265b6ed1104817ef45d067a27b8507221b51a32 Fixed compilation warnings
+5db34580f2318a3d12d8104faf85b19ee4129ed9 Added test for spaces in arrays
+beb49a9446cad3d459b670228e498dda77bdb47d Parse an array with two longs
+ee205971e94d34617a676efd330385d2740218b9 Test what happens with just an opening bracket
+ded6364e1d4dc6cd46a4ecd772b3be885d97b83c Moved the location of the VS files
+5b6b38564fcf0e4b9f9132c4b6c32815f08e6723 Parse long values
+31c1a3d804097103b77a9141910e6e1a2609b8a6 Added a script to create Sublime Text project
+81f3460806190a8f3e3b6de6989a0af7d8ae4a94 Parse empty array with leading spaces
+081b345e7c80f9d52c7f9275085c1636d2e4c14c Parse invalid array
+f468db67570e3a12defe5b562c89997bd92d00ad Parse empty array
+c7dcf864cc64013603d8a7c87e2c58142ff89afb Added *.h files
+6d39bfa7039975394bde0bd384736539c188b1a4 Added a script to generate VS solution
+4ee1ac015f1b743db35eafea3230512e22b873b0 Created scripts/
+b2e2556ef6ec3d7e38610ebbc9c5f0cda92c2b90 Removed Visual Studio project files
+8f74e4e44ebbff1bad2a47eb629d7c5a0e3769e8 Splitted CMakeLists.txt
+be891daa5a9ef63240c191653aba9dbbe4708fb2 Added CMakeLists.txt
+95a2d6714ed89f1e7d296f0013f6a97a594832e8 Fix minor issues for GCC
+3ce5e5332332d0ecb18362ae27e14633577cb002 Removed duplicate code of v3
+f8c3cdf2ffa59c1eb15491618510be0ab2ea3468 Fixed mistakes in the tests
+88aed984470d2f021393b9e7d05413efbad5955c Fixed JsonContainer::operator==
+3ae90b66c6bbb5902e3c488b3e03dd008d294552 Added tested for createNestedArray() and createNestedObject()
+10c0a8ba70cd9118656afa2be8495f26ffc65e10 Ported tests of issue #10
+d192a14e2e989e543774cd08a14d6f9a41a999d0 Fixed compiler warning
+b49aa22c65124c2ee164330a3031c9914260855d Replaced non-const references by pointer to follow Google style guide
+dae0dc5ebb7312593a0951c53dcd55f2614cb924 Replaced old style casts (issue #28)
+35eaa55b3ae9b53698510eb2c7e33787602b507e Added JSON_PROXY to copy arrays and objects by reference
+bf2d726746e54b13825c076c13220d09b860f1c4 Minor changes
+0dce0022d3e79c11e6aea1a1ea4451767744a675 Made JsonNodeType private
+1bff34a2046cae8d3b70cc44feedf2dca2fc1169 Made JsonNode::next private
+24c60619d51f184c3d1338dedbf50d372fe1bc5c Made JsonNode::type private
+b0e12e8852f0458f9e37d75b541f6aaf302bbea5 Refactoring JsonNode...
+f7fa9e94674a5ce555ac09b6caa514bfa972877d Added JsonArray::createNestedObject()
+09b6f718534f3b7ea84f1d9f33a15425a8d1c92a Added JsonObject::createNestedArray()
+e28119f03b127ed45c8170b15cbecc2b9fe5e102 Test JsonObject::prettyPrintTo()
+7a40711af3af4d329dc3bc04953699433bc12fc9 Added JsonContainer::prettyPrintTo()
+b6799dc231c343e86aaec1ff311b7df6b688b848 Refactored the serialization
+31c9ea9b28788f9c9092a5d7226b7a8b2f10921c Test JsonArray serialization
+6330ab1271d84e3579fb41b70cd0cd2ab7a3f534 Test that JsonObject can contain inner arrays
+c35a0fadc308083dc9bf124fa1013abf182928ea Test that JsonArray can contain inner objects
+bbe034222cbc7a9e231e41130cbd48d1f84ab0d1 Test that JsonArray can contain inner arrays
+305944e907f88952ce925e9ca56248f9fa975e65 Test that JsonArray can store strings
+f0754aed53e711a1260607104aaa9cb5b68d86a1 Test that JsonArray can store booleans
+99a785179d5d13aac2717d758737595c27edcd5a Test that JsonArray can contain doubles
+21259bc61ab214696a8dba75a153310671b6bf0c Test that JsonArray can store integers
+4c67d0579a08fdb327ef796f6f7d3911b9567148 Test that JsonArray grows after calling add()
+cb3c59ec076637d73255af7e437cacd7bcb733f9 Added JsonArray
+e725b756a661975fce7432f8958402b75171c48e Merge pull request #27 from ivankravets/patch-1
+dbe6f89ed8524fd9debcfa6ba5c7da8b66772ea4 PlatformIO-based manifest file
+84e34d2a276495e5271b66b4b920fbe21316cbda Added content of issue #26 in the testimonials
+4d2d535a0377a350833deb4802cd6ee12d36c65e Pulled up code from JsonObject to JsonContainer
+b0e43f753815f3dc0dcfa1bade2e43deaa62a2ed Extracted class JsonContainer
+d66a7adc229b83842e7be2bc306935a1edb3a963 Moved files into Internals/ and Arduino/
+1a98fd5dfcb3ab93aa2c4d5d476eefa2be92d791 Serialize inner objects
+57400cee14ee62305731cc247f31afa61d4f6846 Extracted methods serializeObject and serializeKeyValue
+c99bdbf4b96ce3184e139ab4a86e01b6ddd1a011 Extracted JsonNodeSerializer
+a665fa1decbc5a3f727d07b4386984f40c1b478f Converted StringBuilder tests to gtest
+78048d1d92b28c359e12fbd377555e691e5e3ebe Converted EscapedString tests to gtest
+065fe57a7c9fe5c35b68a7add06c4e1b5da1561e Serialize booleans in objects
+f251563af1674195e595dc9a950d30081213e347 Serialize floats in objects
+c1ab55f9d9069850ab8783c59265007fcd6bd466 Serialize integer values in object
+27a4d57f7c2be7da6bc89bac69620e1b852418a5 Test that now value can be added when all nodes are allocated
+22e36bbe9c53b03005e48eb3d4fae68be1dc61bf Restored tests from previous test suite
+d2e1b241beb4bd25e5609d232fbcf06c4b77ebf3 Test that size doesn't change when remove() is called with an invalid key
+3d9e40a3a87e02a1b521b47e9a5e0a67fbeabd29 Test that the size is decreased when object are removed
+9f85368cce2a7d80ed5ad946ab874beb419b7176 Test serialization of an object with strings
+3243f2dc589a5b2874ce6540bb12fdf8c694b83d Implement Printable
+6b2705769a49830101cc1ab8497d8dc4a19487ac Refactored to use StringBuilder
+ab2587f0894d16f29a770116a65ee4412d9c5ae0 Test empty object serialization
+d3cf568d072eeae90f4eb5d6ff8079aa94b43398 Test that char* are copied
+e417c137fca4233ecf4907938264f6b2fb6e6b61 Test that bool values are copied
+d549070fd3102c3db69ffcfc4024d2a1542f3be9 Test that doubles in JsonValue are copied
+42ce5ab31ff3cec84bfed5b7945a72fa5169ad15 Test that integers in JsonValue are copied
+e190b20ae1ab72028a9b17e70216ed3158ba2edb Fixed inner object bug
+ce788d96c444fecfb13b0128f59d1369ba865e63 Changed naming convention to avoid shadowing (issue #25)
+cc1926647016eb19c7ff76cd069b5124f61a0e63 Added missing newline at end-of-file (issue #24)
+18f93b4eb6af25eec82cdfdbe919fbdd17117258 Fixed issue #22
+e682ed5a1e65c7aece3803ca5b0500f7e8395b75 Added a test prooving issue #22
+bc44c363857a0441408c3efe04f446f17570788a Test that nested JsonObject can be stored
+bcc8cece247ada99d83399a63847a11eda08526e Moved JsonObject._buffer into the JsonNode's content
+a7ff04db0e3841f603a1047a4051d71f77d61107 Added "const" to cast operators
+a9a51ec1e2e1c9e96df757427ecb8e4d89754b7f Test that string can be stored in JsonObject
+0495297c6c5a6d0d965df3a4d91e3a2472c4b492 Group test in a test fixture
+75588946c6fae6d92099610d164e6c3aa44385ae Test that boolean values can be stored in a JsonObject
+5fa446d3f5c0648f5d41fbe709b35ffe03fa6318 Test that a double can be stored in a JsonObject
+71fd2de675cf2ed9b3329fbb554e8dab6542b474 Test that integers can be stored in a JsonObject
+a2fc188526dccecfd950d5bf060a5277b1a0ec4a Test that adding the same value twice doesn't increase the size of the object
+166bdd69190c748c961ce8500dac9d9013b8774c Test that adding values to the JsonObject increase the size of the buffer
+4d4119e589eb8c7004a22b52737a7c1ed5b1f99a Test that JsonObject.size() is increased when values are added
+91649df5937b02672b3cdd074aea2ed2565ff5b4 Test that CreateObject() returns an empty JsonObject
+890e811e8053ab6a1a46c4c282c2a4445f3947ec Test that size can't go above capacity
+bb887f94e7cca80e6b99634ae624a4a01b841215 Test size() after calling CreateObject
+6e45f7c790d0346ce8b17f370ef6dd56a2894c39 Test initial size of StaticJsonB
+5580adb4a69c8c6d6fc10a937a8d70bf42eec160 Added first test on StaticJsonBuffer
+60a5d723672b42fdceb8f5b1723a799cca9b9c7b Started a new solution from scratch. Added Google test
+4cfb0ab84de9b38bc3e04b79d8aeffda05012664 Fixed issue #21
+a1b6c2df75c268a04a9845b453b4674a2cdf71ec Merge branch 'parse-escaped-chars'
+feb6060887a36ecae8ea0358c240a123f1d5f647 Updated change-log
+49d2b4b2a2ee43d61a8991c2520d36231eaf0436 Updated code size
+286a514fbe058b18b92c43f82e93824f9702b78c Minor clean up
+9d3b522e7b97b9b9446a33fb22cac21bb680ac80 Reduced code size (-6 bytes)
+c32642e1306553f588b6fb68c41abcca5a058c32 Reduced code size (-6 bytes)
+7a3fa35bd898389b552ed14ccf46957d480940cf Added LICENSE.md
+0154fc15cbd023232e5294ba1cc12428b439c1a2 Added escaped char replacement
+24d173c3b97b61e05b825a88fd018f753a99d457 Added tests of escaped chars
+d4c1b6f2c243347c10257c216d3674bfaa760a7d Extracted a class to test strings
+58c051f564f1ab0fefde71b56c899414463a84ba Added comments
+763aa7fe37ae2aad0c6190b411d13877b06e6350 Added an overload of prettyPrintTo()
+cd88fb0882975020613d86ae57fe086f02c6b414 Added prettyPrintTo()
+ec843659d8b6f0ceded6a62b1e6d79156619087c Updated CHANGELOG.md
+2997a405a085af9a0d3d7a62d5a5e6bb355ff71c Added IndentedPrint example
+57f28c2017853635ea22f000cbf8c6eb0ca0e3a3 Reduced code size
+b3b70b78cf54ab6329c8675fd44808989f9b75bc Fixed build error in Arduino IDE
+48018bd6e63ba7282e8ba92cb3d0b8bc175dd9c2 Set default tab size to 2
+61952a9bcd9b2649d9b0213d01fbc847bc8a65fa Added setTabSize()
+602cc104f9441004c182dae254024b8bdc76f84c Set line ending to CR LF, like in Arduino source code
+d71a39211d0832b8de16737e22b5e1ad2e83d724 Fixed prettyPrintTo calling printTo
+f77a8b02e37ae43e9ee02e3005e0d2abb567143f Fixed file names
+aa2cd0db0027250ffaf28807ee32e3544569fe21 Moved IndentedPrint into the namespace ArduinoJson::Generator
+f127ef6019ddbd3e07c27e92aa6e8681e3d3774c Refactoring...
+3ae732768755664fd054e841a76e512c736afc45 Renamed PrettyPrintDecorator into JsonPrettyPrint
+23e61cc0f797e8ecda9e201423d464fd953b0fd3 Renamed IndentedPrintDecorator into IndentedPrint
+b5002265cf2783cdc391440b49e9818675e78722 Refactoring...
+e48ea94789b180f56d37d132f25b7635bab64f8a Refactoring...
+6539c6982c154a802216832da9b11b6450293c15 Extracted class IndentedPrintDecorator from PrettyPrintDecorator
+d877d77b6340d0f090d8785db680feb5356eeb96 Moved PrettyPrintDecorator into the namespace ArduinoJson::Generator
+1df6cde0267fe75a835dc12a0943ea4b1e423f26 Refactoring...
+fafae8181b351ea9cc560124cd3b556f381eefb4 Refactoring...
+151fc52c1c25100541a3244e3ccebb06c07a71c4 Refactoring...
+ea79340dc769444d1b850a7d3f9695ca04ee819e Refactoring...
+9e885147009f4a06796d719c1987d6406b3af931 Refactoring....
+752378a8cb990f1286ae960fe5e7d5933138157c Fixed bug when a string contains a brace
+8465cc0c8334d21d05a9696d63b6121677ae6173 Refactoring...
+2ddf8f16196d2fa716311a350c51be681fa514ca Renamed IndentedPrintDecorator to PrettyPrintDecorator
+f7aa0f89e3daf3b7e9c22113d0db23c7bfab26e0 Added JsonPrintable.prettyPrintTo(Print&)
+3d322fdb280580663da28bd29843981c15145c30 Test nested arrays
+981adf19897d35648378ebdbe8a7efc744aaba69 Test empty nested arrays
+dbc3bee3a045f028e7026dd590c5db809472c327 Test array with 2 elements
+3f2b7b706a1f427b74e846e927dc51aeba9a48e9 Test an array with one element
+c24341758565c75fecf3a9c8a73714a35c27436a Test nested objects
+514a6c0879fe3e3cf69176044c2c8401c64164e3 Splitted the indentation tests into 3 files
+76f9ecce758671a2191370e354614744a0e01f06 Tests empty nested objects in objects
+410ca55e88fff6a9cc2319be80ef99da862cd938 Added a space before the object's values
+66c05041e883aff8a50edc38fcfb18b7fb3941b4 Test an object with comma, quote and column in the value
+aafabd8e8d6971853603c977c392932d9555e029 Test an object with two memebrs
+eb1a7747780312f5849dc2f8545bcc0e1467089a Fixed empty object output
+75c89e7b353e68e7d61578139eac8ba2e460c10e Test an object with one member
+e31a2136fc42b24cc31ca02f1887ec66a2e122dc Test with an empty array
+380722402f9fc909b74690bf53ad78374590c997 Added a test of an empty object
+030c8542e7b3242a49e408f3f642576f06835a6f Now also test the return value
+1f25d4434e4c0f768802e7298df0b04b914c30ae Added test of an empty string
+f29904e2179a7848279ec5fc4c21a33304fddf18 Added skeleton of class IndentedPrintDecorator
+7246db769140b1b93c66bc1e71344ca795cb187f Added a note to avoid issue #10
+4bdbc6c1fcce2031a29c964945d8f9d9d992a54f Updated CHANGELOG.md
+8e6fdb20eb6dd8125b0073fb6c91a0e8c2a72b46 Added tag in filename
+016d0d699ee664c432080ce8d87210b8a4fa8871 Added a script to create Arduino package
+6771603a05c5e79f206296faafc73a29930fd59d Simplified JsonArray tests
+d067cf0e84e8ad51e7b85943f4da40707ea2cc34 Fixed tests
+13593d73a3d8d7a2a3bbfe08283a00229d07408f Fixed nested object in arrays bug
+bc86ae800ab3e461e88b6b4fc10b75735ec1ad83 Changed JsonArray tests to show the issue
+df52dceaa177f1330af18739542c9f57f0c9956a Added tests for issue #10
+d460b59b500b09051dc6ca13b9fdc9f41fa51c08 Fixed CHANGELOG.md
+8e5ea91f8d19a16857691044d14866f678ac1fc5 Updated README
+4a8b7d0cb406c5bb3848edd3f00ceadd2d0469f2 Updated code size
+96c9b5deee833ace93626f4fbfa2bc02fa7ba72a Updated changelog.
+8e81b9bb266a014420b321c0d1407778910f9b3a Added JsonObjectBase::remove()
+817cc09975e9d8a90aa7951d18909d1967e28eeb Added typedef JsonKey
+1bc45f1fd77ee1b560e8099e721ceb09084014b0 Extracted method getMatchingPair()
+d2fe9ddf49ac00d36c9d19be6d99fd2211c00f99 Added JsonObjectBase::containsKey()
+5cc06180e6f0bed2956164986825bea8216c2f88 Removed JsonValue::null(), moved the instance to JsonObjectBase
+65e8b6d405273ae7a7334f00da1116641a79a6ef Optimized size of JsonObjectBase indexer (-58 bytes)
+09294cb5e637b6d658ecd88da503cdc96bef8332 Made EscapedString pure static
+158f4600fb20f9fd6a6a6498f0c1c09fb7e15363 Added static EscapedString::printTo
+0d286125075a1dbe0edcb0cc1860cb16c2031492 Fixed casting JsonValue to string
+7c99d4d63d4641e45e17c25dd1ef3a521658fbda Reduced usages of EscapedString
+1a0180078294718cafcab5b4466d59f91a5ff43f Test casting a JsonValue to a JsonArray
+6384bc414aa72153ade1e944945adffdfd8a5733 Test casting a JsonValue to a float
+c10bcee3243c2cbf6f6b77bb3ff87c31e0606311 Test casting a JsonValue to a double
+028ff6676ebcd9e6de7e4605f6e50cae97ed3ec3 Test casting a JsonValue to a bool
+23b5237f74f8c70b940611ebcad4095c05eb9834 Test casting a JsonValue to a long
+88510705be97db6753404f849cfbd4fca291162d Test casting a JsonValue to an int
+15d3068d78d6f44b7020f7ecd6227f0e129179d0 Test casting a JsonValue to a string
+ae6beb9340498f2173a457157499478a7ff552b2 Cleaned JsonValue tests
+c1f4128ccd9fbed8d1937a99d769b2da18a45ef2 Added a failng test
+5fb6edfc912f888b7e75b583e319ed329c4cb17c Cleaned JsonObject unit tests
+2771b830b73bfe34969031b0e2d85ced7a57c8e0 Replace the examples with the new API
+84aa62703887c9cc127c97be149dcaf87c69cc07 Updated changelog
+4528b8fc955df313f8e6ace583e02b5b78f33885 Use operator[] in example (-68 bytes)
+60c6f2db472494582977e6a076a398ea9ff686eb Added operator[]
+13c386c7a37a61b0f14d5a8a85202ab318ded798 Moved JsonValue to namespace ArduinoJson::Generator
+7877ee1b4c04ce3aec35d847555d2c4f4c273c40 Replaced set() by operator=()
+2c29327ebda62ab9aa0621dd339368c82cbd3f24 Return a JsonValue& instead of a KeyValuePair* (+40 bytes)
+85ffb83aa6f8adc9b148507e4440e50251ef9b7a Fixed failing test
+1ce6661fa6e7fef5d81bfe4f21fbf2859fd4a615 Created a failing test
+68a2ca905e5db851251ee119f3835ed9abb4cb26 Updated README.md
+7e4ab9f31c8caaaa53c295b2a10051f148711889 Added code size
+44e5549456bdff631e413bd3df2b3ae6f40fa506 Added code size
+3e36831cdc0b823c84936906169357764f87041b Updated README.md
+5129f3400ca04d8f41ab47f3b50afb17de64b957 Added key() and value() shortcuts
+0449ee4fd345f6259efc6214052d688484c53ded Updated README.md
+6e4eb452101718a5d3ee51eb1923f3a5781c6c68 Renamed JsonHashTable into JsonObject
+abef85218e16ad0e3eee1367c21b80e828b32c91 Renamed ARDUINO_JSON_NO_DEPRECATED_WARNING into ARDUINO_JSON_NO_DEPRECATION_WARNING
+649f292ea72eba021d6f01b84934a0d5e5232ccd Added comments
+805c0741e6c994c904835a80fe21a7b9a3453433 Added comments
+0fc54ba54cfa32fae54c0a376bbc5cb599ac7aca Added comments
+df72419f093615d247624c9c47ce659846a5f9b6 Added comments
+d3d0da2d7f0afe62f243d782db31274c6ad97d36 Added comments
+407d536e06fab42b9a6b1a0f71c7adf51351e37e Added comments
+c22473cf37b6b49555e4bde3b4ffc848fdad8a8c Removed unused stuff
+3e8861b1a0bd5e14b9ae022944176638032a2fce Moved implemntation of operator[] into JsonObject
+f565a9b1b71b5608365b2a370ee02511caaee540 Created a Visual Studio project for JsonGenerator
+06026cc7d43a234c785a9d23a571cd779feb3317 Created a Visual Studio project for JsonParser
+04f52733c21e66940b61da2d5a986382e333b1be Added a test with 3 strings
+c06f42659a0ec70e3ffc86f93b806a7f5590242f Updated README.md
+e619b8f5bd22d8e03c7b20ab211f7e9d90698ef6 Updated README.md
+1e28217393a8011e080796058a6103fa4230de68 Merged parse() and parseToken()
+a1e8c8800a8771d7e99a138ed948b8e77a341568 Removed uneeded cast operators
+00ad540f4e2d94df9e847cd7a2843110e08e5ecf Updated CHANGELOG.md
+cd7a7b1533ab543f1081b14fe0bedda9432d9f84 Fixed bug in JsonArray::begin() and end()
+0fe77176e1895c6f35e3c82ba6cec80280e7fcd6 Fixed bug in JsonObject::begin() and end()
+e94575b4b8a224f7c2a6ee84214f4c11a12cc730 Replaced public inheritance by protected and private
+b278d7711b33d622329a54258803aea8ca6faa71 Replaced composition by inheritance
+851d21e08ca72ec34f2bbdca68c8bdf1d65290c5 Added JsonObjectIterator
+b75d32e980aa985adab2b6b15adebf5dea9cf36d Renamed JsonHashTable into JsonObject
+daa62b3737e4b05b75360c3b08d980a52f1303a0 Simplified nextSibling()
+ed497df9d67f4ce6ce68180b3b7798329ba2a66c Added JsonToken.cpp
+79953730fcd69541a8039d97cdf0e82347a9f97b Merged nestedTokenCount() and nextSibling()
+5d2ffc49fd78cd9b60ab6468283e2e68c7b8f368 Fixed JsonArrayIterator unit test
+714a37bd5915c7fae0dc23732749e22fa4e23d79 Replaced JsonToken operators by meaningful methods
+4a1d8483cc06d63758e7b0d34a6b1c4f45e0b162 Added class JsonToken
+0d4d77a7cdc0192889e793da5993e8e0bec4b05a Updated example
+c329572d244011b1e200b6157289dda442a46a2a Added JsonArrayIterator (tests are failing)
+ca01ecfb49cae5d2953677bd8aebc82b164bf425 Added a flag to ignore deprecation warnings
+78249a0adab0cfaf1ba3460801050ec4275ba4a5 Updated example
+45c9ba11916ec8449fee03e0f6a40a8d30d10629 Renamed JsonObjectBase into JsonPrintable
+5e1697f47b1a8c144b6d38482c261d5852d425d1 JsonArray is now a simple wrapper on top of JsonValue
+f2579397d640678040d4f81718cf3ccfb414fbb1 JsonHashTable is now a wrapper on to of JsonValue
+b6e3a37ad93cd4ee883f41de7387742c743fbb9c Added JsonParserBase::parse() that returns a JsonValue
+73eda08dd4b3b7cac38b1ae153543d8659c015bc Updated example
+6164328892c533eb8fa96fe32c46f577a8dea32c Renamed JsonArray::getLength() into size() to match std::vector
+7487b8cbb70119334d7753d68e4f5b89bf753b0b Defined the DEPRECATED macro
+6a868e46bd8b8fb45b8348dcc89175b419a5fc7a Made JsonValue inherit from JsonObjectBase
+d189bd7140eb47309b82b6681af725916d14bbfa Added class JsonValue. Added subscript operator on JsonArray and JsonHashTable
+9f07cdcabf57523097e94b6372c4580baa843ff3 Updated CHANGELOG.md
+41b5bba939b5f3cd9afae3c33c94f7b51946c624 Updated CHANGELOG.md
+7ac4a915916a5882da980eecca4a9b646020c404 Added include of JsonParserBase.cpp
+5534635febe13cb2d60e938b537766ac2619b7dd Fixed case of jsmn.cpp (issue #6)
+2e5b959e8b0cc45347eb66513f66f32f09c6221a Fixed GCC warnings
+9ee3dc638d3b2a1097134929f9e39342f2032a0f Update parser size
+ccb97fc6e0f988159109ad422620d13dba48983c Fixed bug JsonObjectBase::getNestedTokenCount() that reads uninitialized token
+39c185ae67071bb7b32d01ec61eeab568be7f1bc Fixed bug in JsonObjectBase::getBoolFromToken()
+cf1324c09bec4127bd18c121f103e49515dbc0c4 Added a test with too few tokens
+0b087b7bdbae2161b444be2747c0c5b9b72c3ddb Added a test when token count is too small
+dde5a2510b69954351efb548813076641eef3af2 Extracted class JsonParserBase
+a42b03ec263feb8942f8c6501346fcb4cb0e1cfd Rewrote tests on hash tables
+2f98e59fc6caadab7e2923de36c13c94471a3ed9 Cleaned the array tests
+f58a8b0ca50013aab891e87e6eacc3d5a43f27ed Renamed unit test classes
+4f56afe89e13431a71887c98aa4713fb7b2758af Updated changelog
+339de21f1cc199311f938ffb387d4bdbe89adf4c Updated code size
+25c428c1e971a4c55a6b6f88fba3a35a9126157b Removed useless cast
+0045bb3e3519a0016c195620e9520b0b77f74823 Reduced the size of JsonArrayBase::printTo() by 18 bytes
+4e61a839a5d5260ecc2ba0202bf666449ea8dffb Minor changes
+a48fbac7d758b321a8b6da87653b29d824b9b7e5 Reduced the size of EscapedString::printTo() by 4 more bytes
+af7dd55d34f577e096403596e6631dcaa9c01315 Reduced the size of EscapedString::printTo() by 4 bytes
+525649c4169d4862e88c8f30ed7925b0cd5f6474 Reduced the size of EscapedString::printTo() by 26 bytes
+1f86016320c2381ce0cc9c3c7a42f9913289e0a1 Extracted function getSpecialChar()
+c38af3e32cee884cb232e0f50fe24d7205373420 Cleaned up
+0a0757945ec3b005a4880649c0ee16556ad67d89 Reduced the size of JsonHashTableBase::printTo()  by 12 bytes
+e63cde39222979fccc2fe3e9b1231fefb53e4e8d Reducted the size of JsonHashTableBase::printTo() by 18 bytes !
+5bb6cd0fa9b3f5d6c9405a567758f98590c7e35a Extracted class JsonArrayBase to reduce code size
+bbc18b5ca433094712b1c0da001d089d858d6755 Extracted class JsonHashTableBase to reduce the size of the code.
+6d3b70f4a3d718d4f04b5e2c900d646d87b59d3a Updated encoder size
+cbedcdf93bd2e79d97ac22d29a8abce48c7ee4b9 Minor change
+6fcf9edf9a94af7504fbcea9386aedddca674fc2 Updated README.md
+bb11fcba89cc239d71a879a18e87c260d6194af6 Updated the example.
+a87b2bf5bfe20e8304abd73d21c06921c31409dd Adde EscapedString to the cpp files
+f28997e367bacfe2b2873719b5113b9d342f19d1 Added a work around for Arduino 1.0.5
+42968be5358fbd77c928e044d93beef48f2d8973 Updated type sizes
+6c1ab912ff6f2a2245728ba3d37825262f4116b0 Added namespace ArduinoJson::Internals for private types
+99521cc7180c029b139e2302d1565e6850e14407 Removed default template value for DIGITS, because Arduino 1.0.5 refused it
+b3613f71372c49fd940e1e084c14d2a0b1969ff0 Use EscapedString for keys in JsonHashTable
+1b62502b363b9f60332414262805f0362d20fa85 Extracted class EscapedString
+adb8fa4d44cdc7305c5276e9e32e3a1fa11a6b22 Set a default value for DIGITS
+3b6ce65054f69008850fa0f3f3a56e4ba918a6f8 Reduced the size of JsonValue to 6 bytes !
+be6c4bf4d1089246aff0407e7a97373cfe2eb764 Number of digits is now a template parameter
+4e6ad31d6a9c20bee5b82027a6810017526bd295 Reduced the size of JsonValue by removing the pointer to instance methods.
+1cec019457a0deb9cb6a23e6adbfaa6cc8836b01 Reduce the size of JsonValue by removing the virtual
+2e97dbdedc9ce692d1741eadd88f41751b40e31f Reduced the size of JsonValue by no implementing Printable
+8f9d3b638f22173503d7057e87450abbb3493f04 Removed content.asFloat
+8be590e591021c0400b0f00f920dc6efedd20ad3 Added README.md
+8baf21b6e81821f9bc008c2ab87ef2af35801046 Minor changes
+935cb068ab84ddc9d528ec983656b0eda6ca5410 Updated README.md
+efd8c0ff5cdba91952c6e9d30f1577f33b234f84 Improved the example
+757c86ddc5ecdc6e983aaaf6ed86e1c32f72a001 Simplified the example
+0efe8bc74a4113528cd4fd9bab7d0c9495911ec7 Added encoder sizes
+65d03c900122cf159f3e558a32d393c5c0920f07 Fixed table
+df2e640b164b9f6d04aadb9bfb1f6169fe0a0e34 Added README.md
+895482de1582fab7383735ed8dfbd04dab525133 Merged the two Visual Studio solutions into one
+477c9c2c6eb4b1e4f0744e6fa0d66c3f73fb1079 Updated changelog
+50b2a1b4a753173191683982fe24c8de1c140042 Added namespace for the parser
+78a920a5fc00f3a533d1caca61d6d461c2d53058 Now use #pragma once
+bae5c36f41c96df946e33acdb53ffcf8ecd07343 Added namespace
+538b15b40043e2f9231795615f304f2fd3501c48 Updated Arduino example
+daba65d987c0eaa538c37df026f35909a99fe28b Added overload to add() to specify the double precision
+5b1c2047a4d136451c9e5be363a8b6622abfecb8 Renamed Print::write() into print()
+81c7b9f7007ce0635d6baa1b13301586942c2674 Can now set the double value precision.
+2222714d6873efab58dab3dc1c80935c7b04bafe Moved sprintf() calls to Print.cpp
+dd5cf661e36de066c1c4bad0aeeb539b8c2b7516 Moved Print::write() implementation into Print.cpp
+b560a87e15cd8b43ebbbc044ff9b0699334351f9 Change unit tests relying on floating point precision
+4d4d775e7a5d2893c5f1f9da126ada65bc41b2ab Renamed private method
+9bcb5610e809b44f418b1ac109795a8dd6527f50 Updated the changelog
+cb0973ab380a57fe6f33635d4d87a67190e309c7 Updated Arduino example
+c7fb77203bd9113f633f7db78e1490ab7634b428 Replace C++11 syntax that what not supported by the Arduino IDE
+e87bde659451b447a7d637633a879a46a0a05908 Added a JsonValue constructor for float
+922b131f8d300c71269c3f848b632061b0621cf8 Splitted the special char tests
+ae73a06328c01dccab7774fc7461885c702e7c69 Extracted class StringBuilderTests
+61e53a505d1f6a23d5965886b93b74ead8d5a9e9 Added a test that stores an integer in a JsonValue
+937837848c29202f1256d5c86749f1520725154a Added a test that stores a long in a JsonValue
+1fba9767d3abfc284e292f75ea672e6b15181989 Renamed private methods
+621068260d22b571268439f71ede0526cf61a89d Renamed union members
+e8831c28d9904801bd2b485a4f20c6a5ba5261bb Added JsonGenerator example for Arduino
+a9b8e280fe6fd8269b3fc0fda4ce4048bbd08a8a Moved implementation is a new folder
+4d5a7114c1416bf82b3448484786c0467f1965f8 Added interface Printable.
+c3359d3eb953f2a543c7aba81c9d37e8b1a6b69d Renamed JsonSink into Print
+c84860e3f49f4dcde3024016b467036d378bc083 Renamed JsonSink::append() into write() to match Arduino's Print class
+1401665129b8ae49e7d2a9fc60222ac1ad4426b0 Added tests of writeTo() return value
+19e007c3f509d92620f67bb08ca83c84236347e6 Added tests of writeTo() return value
+88f630cee5c2df1e98f48feaf932de5ccf856960 Added tests on returned value.
+a57220debcb5ab55960a5f541960b3fd9be46db8 Changed JsonSink to match Arduino's Print class
+69d682ce81d7e6e0fec77baab9b2612603d4fad5 Extracted interface JsonSink.
+81f7849c26228dbfcb3118a23b22ff8b58537dc4 Got rid of the switch/case in JsonValue
+10068e7b228c2f9e47b39647a7e49f59aa839977 Added a test of an empty hash table in a hash table
+5b2ee9ed29d65d2728399424817fd7bf121565eb Added a test of an empty array in a hash
+93ddb9498eeba4ae1119cb2618e42b53b5cbeeca Added tests that adds a boolean to a hash table
+495efd8629d5dccfe20cd61eda6826e83b2d608c Added a test that adds a null in a hash table
+f548093d86b463b0067ad5529e64798eea8dcdca Added a test of one number in a hash table
+5f7794963648730fb84a298a582090c004ed0895 Added a test of one string over hash table's capacity
+e26cea59e54e5349ec107c422f875263fffcdd7a Added a test with two strings in a hash table
+1800a8e89edfc3874f387c332c511c6e9d04e643 Added a test of a nested hash table in an array
+1d064d709ba6169a98450623be9d92d13e156b66 Removed the overloads of add() by using a templated type
+b7933f85baebd57d371fcdf760b2400557875991 Renamed addItem() to add()
+024027049271dc3242ea71bf3e08602b39ac34d1 Extracted class JsonValue
+dd8baea3734e408c9a5d330a8915aab8521cbb92 Fixed the failing tests
+568b8988d88a3c7043fdd74b09ff09266187502a Renamed private members
+4f4b35bd417f592d8b1c9171689cbf044e177c3d Small refactoring of the tests
+ff4060f5d1b58dde39ce20e12104c4185ab7154e Added a test that adds a string value in a hash
+ebb257df6e4ab71ac6a838e5bfeae13c17525eda Added a test of an empty hashtable
+48a91a219cf681fe771ac96202f7fa4bda142fe6 Moved writeTo to JsonObjectBase
+e75e3b6527792c5156b4b8b391da5d136fe54822 Delete empty file
+63ae9ef0968c41357aecc7c6e24c0b5982076b14 Moved floating point formatting to StringBuilder
+33508e3fe046f63ac9420262087c1f5d5467b183 Minor simplifications
+1c4d4bfd2df78e120437d97c626e7e3244c696bf Added a test with a NULL string
+18587d132b4d600bff52b1428b78a0667537c9ec Added a test with a NULL string
+d12e25bd8a9750b40c7cb156404febfb2209969d Added a test with special chars
+25118ad8c0d6bd08647f3ad9953cb0e5df57ff19 Added a test class for StringBuilder.appendEscaped()
+7ab728e996cd25fe7007a144c04b9cc5c56d7522 Added a test that appends a string longer that the capacity of the builder
+ca99749f282334996d5e4f6e186d503f911e3cf2 Added a test that appends 2 string
+55487ad668de63c3dad713990a043dc5545717ab Added a test that appends special chars
+6ea957433071f9dde0c653c1c618ced8d223da21 Added a test that append a normal string
+1e44f5522e70b37b40d90411f940e1c2b40b7542 Added a test that appends an empty string
+786fe994aa4f0eb83654ae0173be068b30acced6 Added a test class for StringBuilder
+6b61617133b75d7300b20c25a98806f1ee10c0df Added a test that adds a string with a backslash in it
+45dfdbd5e438f3b5d9a87033b2ffb36bc189dfc0 Added method appendFormatted()
+dd6fd6f1988f1883289aa5517fc752f53e3d5d3e Added a tests of a string with a double quote in it
+ca53abdc41d68e1a0e6d388742dfc12b9119741a Moved implementation to the .cpp file
+5e4c4a4bdcd749be0dff7c9c492735ef3a8585aa Renamed the inner types
+aa6cf308dbf28a20ea597d9b6821828bbdeec661 Added a test that adds a nested array to an array
+b8df795cb54528469610bb5735ca08497d616fda Added a test that adds a empty nested array in an array
+4c387e906253bc4bc9a3f0091848fef5d4ed3951 Extracted base class JsonObjectBase
+d57234e92ccebbfc598689bb4d725a816b5bd86b JsonArray: extracted methods addItem
+6f247a508010efa549278009bd3519cca40511da Extracted class StringBuilder
+d306422ed9b738144910c6dc975dcd2136f60ba7 Replace single quotes by double quotes
+2a20c5a25c556b047ab2bd8a830c18987e778b11 Added a tests that adds a 'null' to an array
+1118dd7b531e65650d5275c500bf7e0e2cf85c00 Added a test that adds a boolean to a full array
+3d4f0f741d59735cba07fb8979ea9c0d640711f2 Added a test that adds two booleans to an array
+77a3e1737df31be8f726ea43e709645dab0f582f Added a test that adds a 'false' to an array
+a27bb3097af959c79ebd5f38d47ffc272a6fe7ba Generator: added a tests that adds a 'true' to an array
+5c119099f3058fe1656b876d9251f7b5482e593c Generator: added a test of an array with too many numbers
+bb705bab6383964da53489a69b193256eaf446ed Generator: added a test with two numbers in an array
+22ca52326c5db90afbcd6292a208ae5790ebabdf Generator: added a test of a float in an array
+aa8cff7101f07ad5e699277dc760a2c63ca2d1be Generator: added a test of a full array
+df25a21050fc6070ff29d14066f3b342dd26c060 Generator: added a test of an array with 2 strings
+f18f554c2f2a617181b0d392f9dc5e3f0109130c Generator: added a test of one string in an array
+c8c1add4abfb1061a0ff27eda8ed4b485d02ba7e Generator: added empty array test
+3d8b31b1ecd72255b3f370fe47fe27b626f2afa7 Moved all JsonParser code in a sub-folder.
+80e0a51c157e16c52d76d89c93f74fb9c62c4038 Updated change log
+dd416e51f3866e18cf4543e56a454ff1acc8ac04 Added links
+7059e35938560a7f50a0e0fe4a048cee5171fcfd Fixed char[] json in the example
+17d1f5cd2f9d995fb25fdecbed864d28ccb67128 Updated the change log
+8c2a1fab7255cc4a611c5766b21141e8bfded720 Remplaced char* by char[]
+c844db86596ceb14eaad39073f8b4349435f8854 Added change log
+3661f801a5ba063ceebc706ad9a923a5f112ad6f Refactored getNestedTokenCount()
+a35d503a02096071cfa16391b4ca80bb8716d2a1 Fixed the bug in getNestedTokenCount()
+2ed6317135abfda662a2e40819fdcc9f8d94444f Added more test on arrays
+a278cd825fee62712692ad51c70951d178a1fdc5 Added unit tests for invalid arrays
+0eaa5e3f1bb51756caadd35b3590330354d176f2 Fixed null pointer exception in JsonArray and JsonHashTable constructors
+b35095ded1646b8099e85ecc35ba0c15253799e2 Added unit tests on multi-dimensional arrays to isolate the bug
+597b4c7888d67057edea4e55e81fd04628e092a4 Added unit tests for all members of the gbathree JSON string
+995aa7dd40fadf6c1666add38a75b1f546e525ab Added unit tests of sample string given by gbatree
+a58fb13d37b35cdda9a96434fda1dcf3881a3d58 Added unit tests of the JsonArray example
+d994178678909ee1a4c5d0ba1299541b213e3162 Added .gitignore for the tests folder
+dc1b3f3d78ec91a22d18decd4d97c83910043f57 Added Unit Test for the HashTable example
+006fc1314153ee833696a7e7122aae9c8ae1e6bd Example: change the type of the json string from char* to char[] because it cause issue in memory protected environments.
+53466a2fb2d24dfb055d94dae7ca7f157c069527 Changed the title
+f5a1e1d5e057fd1f4758f957f6a8d9452bd6f31d Added "features" section
+1c55c19680d31fbaea3a7c1fc72317fd54dc1a23 Added "features" section
+d3cb22892251543c0a415b2d0172918f909cccdf Added "Common pitfall" section
+4e41eb515b5e01253ce05f32d732635f8c6015f3 Changed the JsonParser template parameter to be the max number of tokens instead of the number of bytes
+9fd5288c4d8171a518daffc6693cd64fdaad8da8 Added a few "const" to remove a few GCC warnings
+0e9840da3f0ccde595c6e7ca6f2c50eafd310a2c Removed multiple tabs that prevent the syntax highlighting from working
+38249f5c21ed59c9688907c6d9e4c19670823843 Fixed bugs in when token is not found
+0ae9a420bbec31e17597b9f930432a5dfd02970b Added more "Code Size" tables
+d3b5ad7dc17400b937fa33baf4dc56bce595bd2f Added "Code Size" section
+9796aa5e2fbdc159b1ea168218140d808ffd9f20 Fixed a few mistakes.
+00cf097e5ff8a9814f3755d5c9316931e8033846 Fixed a few mistakes.
+319600d51c78cb0ef80b717f369787f729ef17ee Added JsonHashTable::containsKey()
+9f4eb42cd694fe724e8202600fd54525cc0d32c6 Added "How to use" section
+dfd51b8f7634babff39cf5ee36af9979c38ca501 Added keywords.txt to allow syntax highlighting in Arduino IDE
+3b91a8a2186f31a78140713832a5b6118f4b857d Added README.md
+4377a5020a8e920c2b8de2f2f4ba978ea4b30d7b Added example sketch
+9c7ff38bbf76e02217e0ea20a8b5556d42cd103b Added JsonArray::getBool() and JsonHashTable::getBool()
+9e91fb3f46b15eec97414fae9e2da439430f1ea9 Added JsonArray::getDouble() and JsonHashTable::getDouble()
+80c2cf3567f6479de0181d11ddb4c91dcd88add7 Added JsonArray::getLong() and JsonHashTable::getLong()
+b3647a7d91af0777f2cd11a120754c36cd6c2e5b Parser size is now specified in bytes instead of number of tokens
+98e2c82ceaaeb887ba9ca0e7e8e3811a3a9d6415 Removed class JsonParserBase
+0b485e95fa7c963403485948fe519b0ab9f32e06 Don't add null terminator to each token.
+b53e0baaddcb40881006d2f797ca165e9331e1b5 Removed jsmn_parser from JsonParserBase
+1475066edd8e9c2122fdcdc7b5b15bb1b790b94f Added a verification of the token type before converting to string
+4713e90f128bd3ce9b3a28daf34c00e1446d9266 Added verification of the type of token
+da37162a9485eec0e674232460fa2b66f6b7ac1a Renamed JsonObjectBase::getNestedTokenCounts() into getNestedTokenCount()
+43717bff1e35816ca2d99a8f9673cb8180c03222 Added JsonHashTable::getHashTable()
+92e88c1a01ea7b460b495e309322e780b50eb7ed Moved JsonArray::getString() and JsonHashTable::getString() into the .cpp files
+ef8c0ceea8db40a740600e51be633353feb84e5f Added JsonArray::getHashTable()
+e924bef4095ef18a190ae6a2cf266a85a862675a Splitted in several files
+583589c05c9110bcf02321d56d50f9722ce38600 Added JsonArray.getArray()
+efe1dfba550530111e95f1cc64e6d1fc92934fc3 Added JsonHashTable.getArray()
+410b836667119c0bbc8528a0c2f4ae318d584fd3 Added JsonArray
+a143fbf298368058847d3a98566d554a93ca37ef Added class JsonHashTable
+e58f09db2aa0a2db1770c2e23e580a1934bfba04 Fixed nested elements
+9c4eb4a062c63956fa27a8c1bf410d87c45f0dd3 Added JsonArrayParser
+a80eca9e919bfa684877fd3328c039268f7c66ca Moved implementation in a .cpp file
+53d06a03ee8651d458570b4c0d65df17747fa63c Extracted base class JsonParserBase
+694840da31358966540c7a24b8a9ccae249b60bc Made keys case sensitive
+49f5843788953669d56ef8cb859dc1033c685a44 Initial commit
