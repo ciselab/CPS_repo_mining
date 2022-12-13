@@ -13,7 +13,33 @@ library(stringr)
 library(jsonlite)
 library(corpus)
 
-output_path = "dir_split_files/GAAS"
+# output_path = "dir_split_files/GAAS"
+## project_name = "GAAS"
+#project_name = "CoppeliaSimLib"
+## project_name = "CoppeliaSimLib"
+
+# project_name = "stofzuigerrobot"
+# project_name = "PiMower"
+# project_name = "CoppeliaSimLib"
+# project_name = "rfid"
+# project_name = "Arduino-IRremote"
+# project_name = "GAAS"
+# project_name = "turtlebot"
+# project_name = "ardumower"
+# project_name = "ArduinoJson"
+# project_name = "AirSim"
+# project_name = "Arduino"
+# project_name = "carla"
+# project_name = "openpilot"
+# project_name = "apollo"
+# project_name = "qgroundcontrol"
+# project_name = "PX4-Autopilot"
+project_name = "ardupilot"
+
+# output_path = "C:/Users/Imara/Documents/Server_results/Commit_history_20221101/commits_files/dir_split_files/GAAS"
+project_path = "C:/Users/Imara/Documents/Server_results/Commit_history_20221101/commits_files/dir_split_files/"
+output_path = paste(project_path,project_name,sep="")
+print(output_path)
 
 corpus <- SimpleCorpus(DirSource(output_path, encoding = "UTF-8"), control = list(language = "en"))
 corpus <- tm_map(corpus, stripWhitespace) # remove white spaces
@@ -25,7 +51,7 @@ corpus <- tm_map(corpus, removeWords, stopwords("en"))
 corpus <- tm_map(corpus, removeWords, stopwords(language = "en", source = "smart"))
 corpus <- tm_map(corpus, removeWords, stopwords(language = "en", source = "snowball"))
 corpus <- tm_map(corpus, removeWords, stopwords(language = "en", source = "stopwords-iso"))
-corpus <- tm_map(corpus, removeWords, c("build", "pull", "push", "merge", "branch", "add", "plan","file","bug","docker","fixed","docs","tools","planning","framework","data","code"))
+corpus <- tm_map(corpus, removeWords, c("build", "pull", "push", "merge", "branch", "add", "plan","file","bug","docker","fixed","docs","tools","planning","framework","data","code","init","initial","roi","doc","set"))
 # Applying stemming
 #corpus <- tm_map(corpus, stemDocument, language = "english")
 
