@@ -1,7 +1,27 @@
-Word 	 		| 	Topic
-memorize		|	9, 11
-crash			|	11, 13
-massive			|	19
+# CoppeliaSimLib
+
+## Result
+
+None
+
+## Words/Topics
+
+|Word 	 		| 	Topic	|
+|---------------|-----------|
+|memorize		|	9, 11	|
+|crash			|	11, 13	|
+|massive		|	19		|
+
+memorize	2 commits
+could be interesting -> check code
+7fde18d8ef6183e895fda0f13fd2eb0537ddf85b improve memorize unsafe action, and also for sim.launchExecutable
+50d628b2b00c0a7453fdf7288ffab32bf3920681 memorize execute unsafe
+
+crash 5 commits
+false positive
+
+massive 3 commits
+uninformative commit messages, false positive
 
       
        Topic 1                    Topic 2        Topic 3          Topic 4         Topic 5          Topic 6               Topic 7          Topic 8          Topic 9        

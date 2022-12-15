@@ -1,9 +1,39 @@
-Word 	 		| 	Topic
-speed			|	2
-memory			|	7, 20
-usage	?		|	17
-cpu				|	17
-processes		|	19
+# openpilot
+
+## Result
+
+usage (1)
+9a78378b81a66b5ea6c5f0a9c211e24210233327 add timeout on procLog socket for CPU usage test
+
+## Words/Topics
+
+|Word 	 		| 	Topic	|
+|---------------|-----------|
+|speed			|	2		|
+|memory			|	7, 20	|
+|usage	?		|	17		|
+|cpu			|	17		|
+|processes		|	19		|
+
+speed	50 commits
+Mainly UI speed options and vehicle speed.
+False positive.
+
+memory	31 commits
+7e83d9a61849950dcd7a4db3cd8ab7e9668dda2d camerad: Out of bounds memory write (#23534)
+
+usage	60 commits
+9a78378b81a66b5ea6c5f0a9c211e24210233327 add timeout on procLog socket for CPU usage test
+The word "timeout" might be more interesting.
+
+cpu	65 commits
+Lot of cpu usage tests. And CPU usage trackers.
+776516d72b85c5cdf4f0c40992dcedb03d06638c Qt/spinner: reduce cpu usage from 12% to 9% (#21552)
+b7f8c6ad03e70b9b73ef67238c7a5946b315483e qt/spinner: reduce CPU usage from 17% to 12% (#21495)
+
+processes	9 commits
+ec414e2eb1e27eac04582ffbdc88f8022bfb34cc set nice values for non RT processes (#20812)
+68531b071cde6fa5856d9b68bed63ecb50e03c2a Reduce scheduler latency for realtime processes (#1638)
 
       Topic 1        Topic 2       Topic 3      Topic 4    Topic 5    Topic 6        Topic 7        Topic 8    Topic 9      Topic 10       Topic 11      Topic 12      Topic 13    
  [1,] "release"      "alert"       "fw"         "log"      "update"   "replay"       "tests"        "revert"   "update"     "honda"        "hyundai"     "check"       "script"    

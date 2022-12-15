@@ -1,5 +1,20 @@
-Word 	 		| 	Topic
-memory			|	10, 13, 19
+|Word 	 		| 	Topic		|
+|---------------|---------------|
+|memory			|	10, 13, 19	|
+
+memory	18 commits
+e20c47c57ba0222e1cb66fa0d113b185513d6bff DynamicJsonDocument reallocates memory pool is it's too small
+1d942cdf41d4957546088c1e93b97cf04664bd03 Use singly-linked list to reduce memory usage
+04e8acd844cd8e8bd22beccf1294407357ef0181 Store offset between slots to reduce memory usage
+720e6548c73040b7d80bbc0c5af96d4d6d99b152 Replacing a value now releases the memory
+cf149940ed37b7454bec0fa492d26a19e1a82d17 Moved JsonBuffer to Memory/
+3f96e070ce9315ce1c75b8a65afe90f1a11471b8 Reduced memory consumption by not duplicating spaces and comments
+5a4d993f7d0429789f960988d973a3b5bc79db59 Fixed memory alignment, which made ESP8266 crash (issue #104)
+601b51890f64e021f8b4f7c5ac0027820f983fa5 Fixed segmentation fault in  when memory allocation fails (issue #92)
+2524a00a9661fcf2a1ad3affea4d1742226fa2e3 Fixed segmentation fault in `DynamicJsonBuffer` when memory allocation fails (issue #92)
+5236de1433f96ea1930e6fbf53008e8b9b54024c Added memory usage
+006fc1314153ee833696a7e7122aae9c8ae1e6bd Example: change the type of the json string from char* to char[] because it cause issue in memory protected environments.
+
 
       Topic 1                Topic 2         Topic 3       Topic 4       Topic 5          Topic 6                   Topic 7          Topic 8                  Topic 9              
  [1,] "issue"                "warnings"      "removed"     "fixes"       "closes"         "renamed"                 "issue"          "tests"                  "issue"              

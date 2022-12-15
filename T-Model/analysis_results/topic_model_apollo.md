@@ -1,15 +1,38 @@
-Word 	 		| 	Topic
-simplify		|	5
-speed			|	11
-timer			|	14
-memory			|	14
-thread			| 	19
-timestamp		| 	19
-tuning			| 	19
-increase		| 	19
-unnecessary		|	13
-quick			|	12
-cost			|	11
+|Word 	 		| 	Topic	|
+|---------------|-----------|
+|simplify		|	5		|
+|speed			|	11		|
+|timer			|	14		|
+|memory			|	14		|
+|thread			| 	19		|
+|timestamp		| 	19		|
+|tuning			| 	19		|
+|increase		| 	19		|
+|unnecessary	|	13		|
+|quick			|	12		|
+|cost			|	11		|
+
+simplify 75 commits
+
+speed 339 commits
+
+timer 38 commits
+
+memory 49 commits
+
+thread 76 commits
+
+timestamp 51 commits
+
+tuning 39 commits
+
+increase 43 commits
+
+unnecessary 82 commits
+
+quick 30 commits
+
+cost 84 commits
 
 
 

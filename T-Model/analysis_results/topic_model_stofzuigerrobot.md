@@ -1,4 +1,14 @@
-Word 	 		| 	Topic
+# stofzuigerrobot
+
+## Result
+
+None
+
+## Words/Topics
+
+|Word 	 		| 	Topic|
+|---------------|--------|
+| -             | -      |
 
 Note:
 fmt	is in all topics, though this is a library that is being used.

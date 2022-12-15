@@ -1,8 +1,33 @@
-Word 	 		| 	Topic
-crash ?			|	1, 5, 16
-memory			|	12
-speed			|	13
-thread			|	18
+# carla
+
+## Result
+
+### speed (1)
+|                   Hash                 |                 Message               |  Antipattern  |
+|----------------------------------------|---------------------------------------|---------------|
+|65f84442e02bb02c68c996eb6d9d049a2910beac| Fixed incorrect speed unit conversion | Rounding Error|
+
+## Words/Topics
+
+|Word 	 		| 	Topic		|
+|---------------|---------------|
+|crash ?		|	1, 5, 16	|
+|memory			|	12			|
+|speed			|	13			|
+|thread			|	18			|
+
+crash	35 commits
+false positive
+
+memory	14 commits
+3e2b29ecc38922e6a0a41653febe0d647df81d83 Adding a few seconds after loading a new map to let UE4 to free memory
+
+speed	37 commits
+65f84442e02bb02c68c996eb6d9d049a2910beac Fixed incorrect speed unit conversion
+Speed mainly related to vehicle/pedastrian speed.
+
+thread	8 commits
+false positive
 
       Topic 1        Topic 2       Topic 3         Topic 4                                  Topic 5        Topic 6         Topic 7         Topic 8         Topic 9              
  [1,] "vehicles"     "map"         "windows"       "request"                                "vehicle"      "class"         "documentation" "adding"        "removed"            

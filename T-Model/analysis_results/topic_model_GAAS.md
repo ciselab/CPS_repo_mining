@@ -1,12 +1,30 @@
-Word 	 	| Topic
-simulator	|	2, 4, 9, 13, 14, 17
-dynamic		| 	3, 5, 10, 19
-threshold	|	4, 18
-sleep		|	5
-memory		|	9, 11
-performance	|	10, 19
-speed		|	10
-robust	?	|	10
+# GAAS
+
+## Result
+
+### threshold (2)
+|                   Hash                 |                                        Message                                             |  Antipattern  |
+|----------------------------------------|--------------------------------------------------------------------------------------------|---------------|
+|c9e95675d26fefeb979925fdd92e3efe0dfdf183| [fix] fixed surveillance threshold and added into launch script; fixed perception segfault.| |
+|6d9e024361be510c6dd6b84dd37c88b0be29f60c| [fix]fixed threshold bug in target_point_navigator_node                                    | |
+
+### sleep (1)
+|                   Hash                 |                                                                  Message                                                                                     |  Antipattern  |
+|----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
+|ba633227ee410355c45b0e65fa5ecd68a738a29b| [feature] added target point visual marker and modified target point navigator to load targets selected in GUI. added sleep 5s before target navigator start.||
+
+## Words/Topics
+
+|Word 	 		|	Topic				|
+|---------------|-----------------------|
+|simulator		|	2, 4, 9, 13, 14, 17	|
+|dynamic		| 	3, 5, 10, 19		|
+|threshold		|	4, 18				|
+|sleep			|	5					|
+|memory			|	9, 11				|
+|performance	|	10, 19				|
+|speed			|	10					|
+|robust	?		|	10					|
 
 speed	5 commits
 xef		already has performance keyword
@@ -27,9 +45,13 @@ not related to performance
 
 threshold	2 commits
 xbc, xed	maybe interesting, check commits
+c9e95675d26fefeb979925fdd92e3efe0dfdf183 [fix] fixed surveillance threshold and added into launch script; fixed perception segfault.
+6d9e024361be510c6dd6b84dd37c88b0be29f60c [fix]fixed threshold bug in target_point_navigator_node
+-> interesting both
 
 sleep		2 commits
 xdc			maybe interesting
+ba633227ee410355c45b0e65fa5ecd68a738a29b [feature] added target point visual marker and modified target point navigator to load targets selected in GUI. added sleep 5s before target navigator start.
 
 robust		3 commits
 not related to performance

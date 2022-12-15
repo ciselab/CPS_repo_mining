@@ -2,6 +2,10 @@ Word 	 		| 	Topic
 tuning			|	16
 tweaks			|	7, 19
 
+tuning 47 commits
+
+tweaks 66 commits
+
       Topic 1     Topic 2     Topic 3        Topic 4       Topic 5     Topic 6     Topic 7         Topic 8                                  Topic 9      Topic 10        Topic 11   
  [1,] "debug"     "qt"        "translations" "correct"     "support"   "video"     "view"          "master"                                 "support"    "calibration"   "settings" 
  [2,] "output"    "android"   "parameter"    "check"       "mission"   "cmake"     "ui"            "httpsgithubcommavlinkqgroundcontrol"    "mode"       "vehicle"       "link"     

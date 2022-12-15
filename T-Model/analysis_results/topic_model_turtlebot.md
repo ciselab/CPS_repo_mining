@@ -1,8 +1,42 @@
-Word 	 		| 	Topic
-unstable		|	2
-avoid			|	10, 13, 20
-time			|	19
-battery			|	1, 6, 17
+# turtlebot
+
+## Result
+
+time (1)
+f04a2af6e2cd2d443435938745bb459e8304a8c3 tuning kinect time offset and disabling registration for cpu savings
+
+## Words/Topics
+
+|Word 	 		| 	Topic		|
+|---------------|---------------|
+|unstable		|	2			|
+|avoid			|	10, 13, 20	|
+|time			|	19			|
+|battery		|	1, 6, 17	|
+
+
+unstable	6 commits
+One commit could be interesting:
+d4bf791e460604c95c6e40b18b1c92cb00f95597 unstable no longer makes sense.
+Vague commit message. 
+
+avoid	7 commits
+91e6b345f1ab4df4fa593ecd95305f56e6a831f6 update publisher queue_size to avoid warning in indigo
+d62c0f544ce6b46d23b8e1c93e9b91efa722160c update publisher queue_size to avoid warning in indigo
+
+time	3 commits
+Could be interesting
+928306ba94acbfcc4e0ee61c7c8e432561b0824f Issue #102: Battery info fixed for new laptops. Also I have changed the default path where to look for the BAT0 files, as the current one was deprecated long time ago
+f04a2af6e2cd2d443435938745bb459e8304a8c3 tuning kinect time offset and disabling registration for cpu savings
+-> interesting
+f04a2af6e2cd2d443435938745bb459e8304a8c3 tuning kinect time offset and disabling registration for cpu savings
+
+battery	16 commits
+928306ba94acbfcc4e0ee61c7c8e432561b0824f Issue #102: Battery info fixed for new laptops. Also I have changed the default path where to look for the BAT0 files, as the current one was deprecated long time ago
+bdf3080e8a0c14d1be0bd82a93c049fa826f5d9e Making laptop battery script work with the new /sys filesystem organization.
+dd70a283906c3a4fdc9b10dcb669014000059878 environment variable for battery settings - move to a proper configurable solution later, #16.
+7581608ddd51a0c3d770566edd431a4255322823 bugfix the laptop battery check.
+
 
       Topic 1         Topic 2           Topic 3      Topic 4           Topic 5               Topic 6                Topic 7         Topic 8                Topic 9       Topic 10   
  [1,] "launch"        "adding"          "updates"    "create"          "dependency"          "default"              "create"        "missing"              "updating"    "app"      

@@ -14,6 +14,34 @@ increase		|	16
 stack			|	16
 timestamp	?	|	17
 
+speed 206
+
+time 356
+
+simulator 183
+
+improvements 163
+
+timer 78
+
+memory 137
+
+reduce 311
+
+flash 242
+
+buffer 159
+
+space 114
+
+timeout 176
+
+increase 380
+
+stack 439
+
+timestamp 139
+
 
       Topic 1    Topic 2     Topic 3        Topic 4      Topic 5       Topic 6     Topic 7          Topic 8    Topic 9        Topic 10     Topic 11         Topic 12      Topic 13  
  [1,] "support"  "commander" "navigator"    "default"    "tests"       "ekf"       "remove"         "mixer"    "control"      "nuttx"      "fixes"          "sensors"     "cmake"   

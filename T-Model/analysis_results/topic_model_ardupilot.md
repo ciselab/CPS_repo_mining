@@ -8,6 +8,15 @@ calibration		|	3
 timeout			|	8
 battery			|	11
 
+time 373
+flash 175
+improve 247
+buffer 142
+speed 371
+calibration 219
+timeout 192
+battery 224
+
       Topic 1       Topic 2         Topic 3            Topic 4     Topic 5                            Topic 6          Topic 7       Topic 8        Topic 9           Topic 10    
  [1,] "waf"         "dataflash"     "apinertialsensor" "apmath"    "halchibios"                       "apcompass"      "remove"      "autotest"     "support"         "plane"     
  [2,] "apscripting" "log"           "method"           "functions" "support"                          "compass"        "unused"      "sitl"         "apgps"           "landing"   

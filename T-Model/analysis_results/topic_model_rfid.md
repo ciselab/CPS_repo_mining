@@ -1,9 +1,37 @@
-Word 	 		| 	Topic
-speed			|	7
-improve			|	7, 8, 13, 15
-changeable		|	1, 7
-wait			|	1, 5, 17
-clock			|	11, 14
+| Word 	 		| 	Topic			|
+|---------------|-------------------|
+|speed			|	7				|
+|improve		|	7, 8, 13, 15	|
+|changeable		|	1, 7			|
+|wait			|	1, 5, 17		|
+|clock			|	11, 14			|
+
+speed	2 commits
+Interesting
+34086ad99a86ff381dc3c4fd2454a6b7b8c3b78d fix wrong SPI clock speed #545
+12a00174b5bdea07c94626b82043cfa3c5e0c195 Add SPI speed option + Various minor changes (#276)
+
+improve	5 commits
+Short not-saying-much commit messages.
+One commit might be interesting:
+3592862bcbf849a18beab46da2e902973bbfe9fb Improve hardware based reset
+
+changeable	4 commits
+Interesting
+e1b5c1dafabb5132cb907587331d3422d22b1f97 Revert "changeable spi class and settings"
+9c221e59ee962b1df65b439e0c5604e86766bbd6 changeable spi class and settings
+df1e6fa6df480082bf10c70d0e8fb4e8261c1bb9 Implemented functionality to write to sector 0 on UID changeable MIFARE cards, using Chinese 'magic sequence' commands.
+b1240e9024ece9ad9aae0dbb3fe4741a8dcadde8 Implemented functionality to write to sector 0 on UID changeable MIFARE cards, using Chinese 'magic sequence' commands.
+
+wait	2 commits
+Interesting
+3b760c359a876c396a4a918cac804f5346c0c872 Update documentation about timing in the wait loops
+c553f4df61f497dcd83194aa13035e3062719975 Use yield() in busy wait loops
+
+clock	2 commits
+Interesting
+34086ad99a86ff381dc3c4fd2454a6b7b8c3b78d fix wrong SPI clock speed #545
+ada464c1ccd5c8f56bbbcf53304520c01fe57f7c Make it possible to set SPI clock
       
       Topic 1          Topic 2            Topic 3              Topic 4           Topic 5      Topic 6              Topic 7                  Topic 8              Topic 9        
  [1,] "request"        "request"          "request"            "create"          "update"     "travisyml"          "adding"                 "typo"               "update"       
