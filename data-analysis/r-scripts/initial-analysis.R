@@ -5,6 +5,8 @@ source('dataclean.r')
 # Using these libraries.
 library(ggplot2)
 library(ggVennDiagram)
+# For the last figure / pivot table
+library(pivottabler)
 # Get the raw data frame.
 raw_df <-getRawData()
 
@@ -23,7 +25,7 @@ raw_df$antipattern <- ifelse(raw_df$antipattern == "New:unstable_and_slow_noise_
 raw_df$antipattern <- ifelse(raw_df$antipattern == "New:Bad-noise-handling","New:Bad-Noise-Handling",as.character(raw_df$antipattern))
 raw_df$antipattern <- ifelse(raw_df$antipattern == "New:Bad_Noise_Handling","New:Bad-Noise-Handling",as.character(raw_df$antipattern))
 
-# general
+# general (Non-performance Antipatterns)
 raw_df$antipattern <- ifelse(raw_df$antipattern == "General:Hard-coding","Non-performance-Antipatterns",as.character(raw_df$antipattern))
 raw_df$antipattern <- ifelse(raw_df$antipattern == "General:Lack_of_documentation","Non-performance-Antipatterns",as.character(raw_df$antipattern))
 raw_df$antipattern <- ifelse(raw_df$antipattern == "General: Deadlock","Non-performance-Antipatterns",as.character(raw_df$antipattern))
@@ -45,13 +47,16 @@ raw_df$antipattern <- ifelse(raw_df$antipattern == "Known:Where_was_I","Smith:Wh
 # Fix Fixed Communication Rate
 raw_df$antipattern <- ifelse(raw_df$antipattern == "Fixed_Communication_Rate","New:Fixed_Communication_Rate",as.character(raw_df$antipattern))
 
+# Fix Is everything ok
+raw_df$antipattern <- ifelse(raw_df$antipattern == "Known:Is-everything-ok","Smith:Is_Everything_OK",as.character(raw_df$antipattern))
+
 # general performance antipatterns
 # categorizing  antipatterns starting with General:performance in this category
 #General:recreate_objects is also a general performance antipattern
 #Network:performance should also be considered as general performance antipattern
 
 genera_performance_ap_df <- raw_df %>%
-  filter(str_starts(raw_df$antipattern,"General:performance") | str_starts(raw_df$antipattern,"General:Performance") | 
+  filter(str_starts(raw_df$antipattern,"General:performance") | str_starts(raw_df$antipattern,"General:Performance") |
            str_starts(raw_df$antipattern,"Network:performance") | str_starts(raw_df$antipattern,"Smith:General") |
            raw_df$antipattern == "General:recreate_objects")
 
@@ -69,6 +74,9 @@ genera_performance_ap_df <- genera_performance_ap_df %>%
   group_by(antipattern,introduced_by_Smith) %>%
   summarise(count = n())
 
+###
+# OLD GRAPH - UNUSED
+###
 
 ggplot(genera_performance_ap_df, aes(x = reorder(antipattern, -count), y = as.numeric(count), fill=introduced_by_Smith)) + geom_bar(stat = "identity") +   theme(axis.text.x = element_text(angle=65, vjust=1, hjust=1,face = "bold", size=20), axis.text.y = element_text(face = "bold", size=16)) +
   scale_fill_grey(start = 0, end = .7) +   theme(legend.title = element_text( size=17, face="bold"),
@@ -84,7 +92,6 @@ raw_df$antipattern <- ifelse(
     str_starts(raw_df$antipattern,"Network:performance") | str_starts(raw_df$antipattern,"Smith:General") |
     raw_df$antipattern == "General:recreate_objects"
   ,"General Performance Antipattern",as.character(raw_df$antipattern))
-
 
 
 # CI/CD 
@@ -123,6 +130,9 @@ bigger_picture_df <- bigger_picture_df %>%
                             )%>%
   filter(high_level_cat != "Needs Pair Analysis")
 
+###
+# Old Graph: Commits Categories, used in the report
+###
 
 ggplot(bigger_picture_df, aes(x = "", y = total_count, fill = high_level_cat)) +
   geom_col(color = "black") +
@@ -147,7 +157,8 @@ ggplot(bigger_picture_df, aes(x = "", y = total_count, fill = high_level_cat)) +
 cps_antipatterns_df <- cps_antipatterns_df %>%
   mutate(performance_cat = ifelse(str_starts(antipattern,"New:"),"New CPS-PAs",
                                   ifelse(str_starts(antipattern,"Smith:"),"Known CPS-PAs","General SPAs")
-                                  ))
+  ))
+
 
 cps_antipatterns_df$antipattern <- ifelse(str_starts(cps_antipatterns_df$antipattern,"New:"),substring(cps_antipatterns_df$antipattern,5),cps_antipatterns_df$antipattern)
 cps_antipatterns_df$antipattern <- ifelse(str_starts(cps_antipatterns_df$antipattern,"Smith:"),substring(cps_antipatterns_df$antipattern,7),cps_antipatterns_df$antipattern)
@@ -155,6 +166,12 @@ cps_antipatterns_df$antipattern <- str_replace_all(cps_antipatterns_df$antipatte
 cps_antipatterns_df$antipattern <- str_replace_all(cps_antipatterns_df$antipattern,"-"," ")
 cps_antipatterns_df$antipattern <- ifelse(cps_antipatterns_df$antipattern == "Where am I ?","Where am I?",cps_antipatterns_df$antipattern)
 
+###
+# First bar graph - USED
+###
+
+# Hardcoded removed the first row, to remove the generic category.
+cps_antipatterns_df <- cps_antipatterns_df[-1,]
 
 ggplot(cps_antipatterns_df, aes(x=reorder(antipattern, -count), y=as.numeric(count), fill = performance_cat)) + 
   geom_bar(stat = "identity") + 
@@ -164,7 +181,8 @@ ggplot(cps_antipatterns_df, aes(x=reorder(antipattern, -count), y=as.numeric(cou
              fill ="white",
              size = 9,
              show.legend = FALSE)+
-  scale_fill_manual(values=c("#ffeda0","#fc8d59","#d7301f")) +
+  # scale_fill_manual(values=c("#ffeda0","#fc8d59","#d7301f")) +
+  scale_fill_manual(values=c("#fc8d59","#d7301f")) +
   guides(fill=guide_legend(title="Performance Issues Categories")) +
   theme(legend.title = element_text( size=17, face="bold"),
         legend.text = element_text( size = 17, face = "bold"),
@@ -202,6 +220,8 @@ for (ap in unique(test2$antipattern)){
 ggVennDiagram(venn_list)
 
 
+###
+# Second bar graph - USED
 ###
 
 raw_df$keyword <- ifelse(raw_df$keyword == "Slow","slow",raw_df$keyword)
@@ -259,8 +279,10 @@ ggplot(data = keywords_df, mapping = aes(x = keyword, y = as.numeric(count), fil
              show.legend = FALSE)
   
 
-#####
-
+###
+# Try out, keyword counting
+###
+  
 # ggplot(cps_antipatterns_df, aes(x=reorder(antipattern, -count), y=as.numeric(count), fill = performance_cat)) + 
 #   geom_bar(stat = "identity") + 
 #   theme(axis.text.x = element_text(angle=50, vjust=1, hjust=1,face = "bold", size=16)) +
@@ -343,3 +365,90 @@ length(deadlock_results[deadlock_results==TRUE])
 print('hang')
 deadlock_results <- str_detect(message_content, 'hang')
 length(deadlock_results[deadlock_results==TRUE])
+
+
+###
+# Figure 4: antipatterns occuring in Projects
+###
+
+raw_df$project <- str_replace_all(raw_df$project,"\n","")
+
+antpatternprojects_df <- raw_df %>%
+  # mutate(is_ap = ifelse(antipattern == "X","No","Yes")) %>%
+  # mutate(is_ap = ifelse(antipattern == "X","No","Yes")) %>%
+  group_by(project,antipattern) %>%
+  summarise(count = n())
+
+print(antpatternprojects_df, n = 59)
+
+# ggplot(data = antpatternprojects_df, mapping = aes(x = project, y = as.numeric(count), fill = antipattern)) +
+#   geom_bar(stat = "identity",  position = "dodge") +
+#   #scale_fill_manual(values=c("#fc8d59","#d7301f")) +
+#   ylab("Antipattern") +
+#   theme(legend.title = element_text( size=17, face="bold"),
+#         legend.text = element_text( size = 17, face = "bold"),
+#         #legend.position = "top") +
+#         legend.position = c(0.9, 0.9)) +
+#   guides(fill=guide_legend(title="Antipatterns in each Project")) +
+#   theme(axis.text.x = element_text(angle=50, vjust=1, hjust=1,face = "bold", size=16),
+#         axis.text.y = element_text(face= "bold", size = 16),
+#         axis.title = element_text(face = "bold", size = 16)) +
+#   geom_text(aes( label=count), position = position_dodge(0.9),
+#             vjust = -0.5,
+#             color="black", size=7)
+# geom_label(aes(label = count),
+#            fill ="white",
+#            size = 9,
+#            show.legend = FALSE)
+
+# pt <- PivotTable$new()
+# pt$addData(antpatternprojects_df)
+# pt$addColumnDataGroups("project")
+# pt$addRowDataGroups("antipattern")
+# pt$defineCalculation(calculationName="count", summariseExpression="n()")
+# pt$renderPivot()
+
+# print("done one")
+# 
+# 
+# antpatternprojects_df <- antpatternprojects_df %>% mutate(
+#   project = factor(project),
+#   antipattern = factor(antipattern),
+# )
+# 
+# print(antpatternprojects_df, n = 59)
+
+print("done two")
+
+#antpatternprojects_df$count %>% tidyr::replace_na(0) %>%
+# cln_df <- antpatternprojects_df$count %>% tidyr::replace_na(0) %>%
+cln_df <- tidyr::pivot_wider(antpatternprojects_df, names_from = project, values_from = count) %>% replace(is.na(.), 0)
+# cln_df <- tidyr::pivot_wider(antpatternprojects_df, names_from = project, values_from = count)
+
+cln_df %>%
+  filter(antipattern=='New:Magical-Waiting-Number' | antipattern=='Smith:Where_Was_I' | antipattern=='New:Fixed_Communication_Rate' | antipattern=='New:Hard-Coded-Fine-Tuning' | antipattern=='New:Rounded_Numbers' | antipattern=='New:Bad-Noise-Handling' | antipattern=='Known:Is-everything-ok' | antipattern=='New:Delayed_Sync_With_Physical_Events' | antipattern=='Smith:Are_We_There_Yet' | antipattern=='Smith:Is_Everything_OK')
+
+# cln_df <- filter(antipattern=='New:Magical-Waiting-Number' | antipattern=='Smith:Where_Was_I' | antipattern=='New:Fixed_Communication_Rate' | antipattern=='New:Hard-Coded-Fine-Tuning' | antipattern=='New:Rounded_Numbers' | antipattern=='New:Bad-Noise-Handling' | antipattern=='Known:Is-everything-ok' | antipattern=='New:Delayed_Sync_With_Physical_Events' | antipattern=='Smith:Are_We_There_Yet' | antipattern=='Smith:Is_Everything_OK')
+
+# print(cln_df, width = Inf) %>%
+#   filter(antipattern=='New:Magical-Waiting-Number' | antipattern=='Smith:Where_Was_I' | antipattern=='New:Fixed_Communication_Rate' | antipattern=='New:Hard-Coded-Fine-Tuning' | antipattern=='New:Rounded_Numbers' | antipattern=='New:Bad-Noise-Handling' | antipattern=='Known:Is-everything-ok' | antipattern=='New:Delayed_Sync_With_Physical_Events' | antipattern=='Smith:Are_We_There_Yet' | antipattern=='Smith:Is_Everything_OK')
+
+
+# print(cln_df, width = Inf)
+
+# New:Magical-Waiting-Number
+# Smith:Where_Was_I
+# New:Fixed_Communication_Rate
+# New:Hard-Coded-Fine-Tuning
+# New:Rounded_Numbers
+# New:Bad-Noise-Handling
+# Known:Is-everything-ok
+# New:Delayed_Sync_With_Physical_Events
+# Smith:Are_We_There_Yet
+# Smith:Is_Everything_OK
+
+# cln_df
+
+print("done three")
+
+
