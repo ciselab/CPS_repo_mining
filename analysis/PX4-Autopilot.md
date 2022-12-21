@@ -9733,7 +9733,8 @@ Stack size increased from 1072 to 1150.
 ### Message
 SYS_COMPANION: add 1500000 baud to metadata & increase the data rate
 ### Antipattern Category
-New:Hard-coded-fine-tuning, New:Hard-coded-timing
+New:Hard-coded-fine-tuning
+New:Hard-coded-timing
 ### Keyword
 increase
 ### Note
@@ -9784,7 +9785,8 @@ This commit does not change any performance-related features. Test cases changed
 ### Message
 FlightTaskManual: increase rc timeout to 1.5 x COM_RC_LOSS_T
 ### Antipattern Category
-New:Hard-coded-timing, General:Hard-coding
+New:Hard-coded-timing
+General:Hard-coding
 ### Keyword
 increase
 ### Note
@@ -10196,7 +10198,7 @@ Max velocity integral (MPC_XY_VEL_I param) increased from 0.1 to 3.
 ### Message
 AV-X increase logger buffer
 ### Antipattern Category
-
+X
 ### Keyword
 increase
 ### Note
