@@ -12,6 +12,7 @@ Valetudo				93		1
 arduino-esp32			101		4
 johnny-five				135		10
 node_ar_drone			51		2
+grbl					217		5
 ==============================================
 Legend
 rc = Read the Code: from this commit the code was read (beside reading the commit message).
@@ -22,6 +23,7 @@ rt = Read connected ticket.
 mwn = Magical Waiting Number AP
 hcf = Hard Coded Fine Tuning
 fcr = Fixed Communication Rate
+x = Commit has already been analysed and contained an AP. Will not add again.
 ==============================================
 Project: robonomics_contracts
 
@@ -763,3 +765,294 @@ check			17, 19
 		86005e83dfa37602112b0b9046d33f5feb4fde0c Check in navdata fixture
 		971ed3fb210bd3c4276addc4b4d813b3c616a301 Check in latest stuff
 Results: 0/4
+
+==============================================
+
+Project: grbl
+
+Words			Topics
+cleaned			1, 2, 8
+		91d6de90bdb75c9a73efb6c2acc4c5d3d1314f8b Updated documentation. Cleaned up a bit.
+		24ce518fdac4e25b0e16d63d739d74b2313f9137 Cleaned-up limit pin reporting and comments.
+		8b5f30685108fa6b0e196f50c26a11670f68a1a5 Cleaned up variable spindle output (PWM). Code and config comments.
+rc	hcf	f8dd8fa54d21c17b9aaddb5836b6a8d73d59640d Fix for M7/8/9 modal group checks. Updated AMASS frequency cutoffs and code cleaned.
+		a87f25773cfe551509f1f82c9bd997ae33c87aa5 Pushed limits active high option. Updated defaults.h. Misc bug fixes. Cleaned up codebase.
+rc		f7429ec79b621d1a4fb4486eac5bd03f6258589e Cleaned up stepper and planner code.
+rc	?	9488cb329c72dffc6d48d0b14d4f6c908fc0400a cleaned up function definitions for serial and print modules and added a comment about the deeply flawed printFloat method
+		c0b4b8309ab3ca02d3431b4c689be3c45ee2f0bc cleaned up serial completing support for non blocking tx and refactoring formatting functions into a new module 'print'
+		8793b555e0ed0352fe2451b173a365b3fc4d4158 cleaned up data types in serial module, all data now uint8_t
+		6be195ba38164ae044e31b02e5f8f5ebc641054d cleaned up handling of number parsing in settings_execute_command
+		23462de85acc595ba4a36783c3b45743e8c86b26 cleaned up settings.h
+		cdcc7bf86ef5a95243dd268e9d99b0332d127c2b cleaned up methods for enabling/disabling acceleration manger
+		bf4f75d6320404c097290b8122bd2aa9de6f0393 cleaned up formatting gcode.c
+		c8f71cf0332cf592518a3311ab6c3bda49cbac48 cleaned up stepper.c
+rc		db193f4336efee8c4d7e48a55dfd1dae34d66330 cleaned up stepper signal in junctions between short line segments
+rc	hcf	a42c03601d6ee7dc4267fce5293ad53c0500cffa Fixed a number of bugs caused by using abs() on floats and long ints. Added support for selectively inverting bits of the stepping port. Debugged, optimized and cleaned up timing code for the step-pulses.
+Results: 2/16
+
+reflect			1, 19
+		4d8fd7f603a761ddf90fd0bb2445bdbf3e21b3ea Updated version number to v0.8b to reflect changes.
+		c3fda5ac211cff8b02d011a9ddde50ae8f29ed75 fixed a bug where the default step mask would not actually reflect the real pin out
+		9e09a502e9d34413ba1480c30a0d5527fe8025ce updated readme to reflect real state of 168-compatibility
+		9a5fed4fda7012f87d48a72c919d92ef6f4b9f70 changed file headers to reflect the totally refactored state of the serial and print modules
+		defabc80ed8c42ba9ec57417dd83f736564cfab8 renamed wiring_serial to serial to reflect its complete remake
+		68ff56a8b1f81e1a900a1f75434e084997912b42 stepper enable pin now toggles to reflect the active/passive state of the stepper subsystem
+		6893463e80a6d0d3726ae4d6c831fc8c17596fef renamed protocol methods to reflect the new module name
+Results: 0/7
+
+caused			1
+rc		1161056bf25ff13a9031746127233d911aef54ea Fixed a g-code parser issue caused by last commit.
+rc	x	a42c03601d6ee7dc4267fce5293ad53c0500cffa Fixed a number of bugs caused by using abs() on floats and long ints. Added support for selectively inverting bits of the stepping port. Debugged, optimized and cleaned up timing code for the step-pulses.
+Results: 0/2	[1/2]
+
+changed			1, 5, 15
+		27297d444ba8480ee27327c6644c48485601e57d Updated comments. Changed stepper variable names to be more understandable. Added step locking note.
+		a2457c4d70b12c587592441df219ca0d9b4d5a23 Changed Stepper Pins
+rc		ea09ddba99bf739043161316bb3fa04c671113a0 changed atomic access for updating the acceleration profile the stepper interrupt is only halted when necessary and for the shortest time possible (8% cycle time)
+		b4072a3a5e29414e30b75802663f4d3c735a9f67 Changed README to markdown
+		ff82489da7773dd9a90e9a0e5bebcd3361411df2 Limit pin internal pull-resistors enabled. Re-wrote read_double() function. Correctly changed all 'double's to 'float's.
+		4224ab4999bdcad9cff026ab584e17c4a2fe93ff Minor prescalar optimization. Changed up some defines.
+rc	?	bd336867a64d9a22dbbee3fd4fae28c0b894260c changed default fp decimal places to 3
+		9a5fed4fda7012f87d48a72c919d92ef6f4b9f70 changed file headers to reflect the totally refactored state of the serial and print modules
+		ee3139d283219484d32f779a79310ae3b491f901 changed serialAvailable to serialAnyAvailable which does not calculate the number of bytes, only if there are any at all
+		a24fe197200a78b375c5409520b59e39aff7b1ae updated settings version number. Old settings must be reset now that we have changed the format of the settings
+Results: 0/10
+
+error			1, 8, 10, 14, 15, 17, 18
+		a84aa1800c1feef2bec2808ebe23ff06d14ad69f Fix apparent error in restore masking that causes the call to coolant_set_state to not re-enable the mist (M7) output if it was previously enabled. (#469)
+		775acac601558a18633cac158449839738693bb9 Added an error code for laser mode when VARIABLE_SPINDLE is disabled.
+		81adc202cd98f288ca4bcfbef4f71e31ce5c104c Soft limit error bug fix.
+		39a047a35feddc822d4842d92a3b4f25540bb09c Merge pull request #710 from buserror/fix-directory-case-sensitivity
+		9f7f2709912de5633ba50630fe4a523960177885 Fix EXEC_ALARM_* flags: soft limit would lead to hard limit error.
+		3392a8b2c89ce28967af52ee365d38c97ef925c3 add/install probe_errors_enabled in mc_probe_cycle
+		b89d194466e7f69d7d184a5f8c0df794b8b41682 utilize MOTION_MODE_PROBE_NO_ERROR
+		f78eebcebf00319ac2901a6b54430e78d800e837 add MOTION_MODE_PROBE_NO_ERROR
+rc		d55f6b938cd54a95e14d94e2ad7730d1aeb772a4 Fixed probe position sync error.
+		79e0e45826641077fbd5771a139a3fafaf1927e5 Arc error-checking update.
+		60dd609b7956037369d5591bee33b778a6614efd Added Probing to Mega2560 and fixed Shapeoko2 compile error
+		0a46dfe0b91d58c8b40cf12252ac67516458bf00 Minimal probing cycle working.  Supports both G38.2 for error and G38.3 when no errors are desired.
+		1c4097352dd089d6c445db491e76cc5dc9d4b6f7 Update to fix compile error
+		ce45a348db692acbaa3631bbe095af65e270f690 Merge error fix.
+		567fbf93ed6b8fb4e305c420e1ae5387547ff047 G54 work coordinate support (w/ G10,G92.1). Re-factored g-code parser with error checking. Minor compiler compatibility changes.
+		5f09dba95d21707ccf0a1a7261f75f0942f33ea8 Merge pull request #34 from beardicus/pulse_error_msg
+rc		d3f1f82e5f65e83198b3ef0f013ed7c77dbc120d added error message for step pulses < 3 microseconds
+		f4c1cbac3c5e0ddfbdd4e9d095420f8b11a4eded added a fix for division by zero errors that would occur on very low feed rates (thanks to Arthur Wolf for hardcore investigation)
+		60f417b57021d5d72ca1fd3cb8fa936b842f96e0 fixed a double rounding error compensation bug in mc_arc thanks to Etienne Chové
+		31635481ad10a483427067a79307c1f9a3dd117f added informative error message for people building 0.6 for atmega168 (impossible)
+		dce597be45b0cb054159055aeb9d9919e4785b82 corrected the handling of status codes so that 'ok' will not be default response in the event of an undefined error code (untested)
+		9b022a6f4faf6e3786ed904547b011dcfb78832c minor tweak eliminates 'ok' message after errors
+		682e23eb7b1fc46fb9d9e99b96f780ab398cd571 added error messages and dropped echoing of command input
+rc	.	b44577f69f136d254ee594eec39a47a395c40ae7 small error in trapezoid-calculation
+Results: 0/24
+
+refactored		1, 4, 7, 12
+		bf5fc48074f743f03cfd31e42738de0f511313a4 Refactored g-code parser. Saved 60bytes flash and some ram. Edited Readme.
+		b04faaf0d324db2875606bb4d308bcd5c3eaff3d Addressed much larger flash size with avr-gcc v4.9.2. Refactored reports to save 160KB.
+rc		d27dd13a54badd0f8ecb21b3c06dbde7a2ea8cd3 Fix bug with premature step end. Refactored _delay_ms() and square() for better portability.
+		f0843db46e953beda585846c87c0c11fdabf95a9 refactored printIntegerInBase to work without a buffer + minor cleanup
+		69be1240be4ea68779eebbda0670ab0216428bdc refactored a complex comment
+		9a5fed4fda7012f87d48a72c919d92ef6f4b9f70 changed file headers to reflect the totally refactored state of the serial and print modules
+		9876e14f0be06ccde0b5514164142cd7161e8e1c refactored handling of settings '$' command out of gcode module and into settings module
+		a4c64945e08ae8fcd8b034e4cce9aeef98792997 refactored stepper_plan -> planner (untested)
+		c42741032fe699c3cd37f4e5d8dd91dc9c5a20aa Refactored line buffering to eliminate state from motion control and centralize tracking of position. UNTESTED: NEEDS TESTING
+		6d3ff506e86a8c4dd638e2791520a01d0fab33ad refactored compile time settings back into a new file called config.h
+		49a16cb777e8ca4e5c62665436ac29b7021c0bf9 refactored block buffer into separate module motion_plan pending the addition of the actual look ahead planner
+		58ad1ba50933ef048b62552504408bed54f81eb0 minor edits after verifying refactored grbl on real hardware
+Results: 0/12
+
+override		2
+rc		5967839ab38f8e984a384db1f64e781cffb9e739 Improved fix for rare lowering feed/rapid override bug.
+		477a94cd4965a3442e88cd0b69d95ced7452d2c8 Hot fix for rare lowering feed override bug.
+		beaa40583c241f42035e8cadd5fba4319e3d0618 Tidying up parking override control implementation
+		e455764079ccfa9ae277a8fa0078b0dbb36f3a51 v1.1f. Parking override control. Spindle enable pin option.
+		3854d200bb68fcf3ca40467c89d786fcd405284d Mandate all probe cycles ignore feed overrides.
+rc		cc4df3e14b74350bf8344f4a27e1e54af86a5e14 Acceleration independence installed. Initial re-work of planner for feedrate overrides.
+Results: 0/6
+
+cleanup			3, 5
+		5406fa939a1fd669fd58b5509e7a9a46ee975d47 cleanup global var and push probe mode into probe_get_state
+		0894183991bca4c5d7c70de130c561c6d23f343b Pin map definition cleanup.
+		9141ad282540eaa50a41283685f901f29c24ddbd Third time's a charm! No more deceleration issues! Updated grbl version and settings. General cleanup.
+		f0843db46e953beda585846c87c0c11fdabf95a9 refactored printIntegerInBase to work without a buffer + minor cleanup
+		ff73645a14ef72de7f2a180fcdb9b6c5394ea953 cleanup, protected some more module variables as static
+		d2cbca36e89c408bb86de71eed79858e88905e3b cleanup
+		5f005f59f12178e9abe696445926153c4baf8150 cleanup
+		d0f64d8f65923be9abd16139f185ce2d374ecaba fixed the inches->mm conversion bug and some general cleanup
+Results: 0/8
+
+tidying			3
+		beaa40583c241f42035e8cadd5fba4319e3d0618 Tidying up parking override control implementation
+		d85238cc9b70abc94fd4f07e720f8090468d383c Homing search sequence now compile-time option. New defaults.h file. Tidying up.
+Results: 0/2
+
+optimization	3
+		5eee10845bd1ea825f71228ab7131d068bba5fa6 Pin state reporting of all pins. Flash optimization.
+		2dc920a8e575faa47eb0ceed79efab7242f28605 Planner optimizations.
+rc	?	4224ab4999bdcad9cff026ab584e17c4a2fe93ff Minor prescalar optimization. Changed up some defines.
+		6152d16205ebd153c1c4414a3078c7753f91d501 circle buffers now power of two size and indicies are unsigned to help gcc make a few nice optimizations
+		5880e55ce997227501f5bd90423974a7be6b6f03 pcomplete, fully untested, support for accelleration management with look ahead optimization, finally
+		b628a4aabfdca9ebd4a9783c1721a3ae89999de2 added basic accelleration management with trapezoid accelleration profiles but no look ahead optimization (coming next patch)
+		df243d2490f176254f5d3fad79f6bd71926aa883 successfully maintained 30khz, lots of optimization of code and buffering allocation
+Results: 0/7
+
+disabling		3
+		2c913a00bd322d17a4280cbb3eac0faa711fc86b acceleration-Grbl now works with atmega 168 by disabling arc motion
+		67d7607e60855370c14ef679e19fedf6b318282c acceleration-Grbl now works with atmega 168 by disabling arc motion
+		cdcc7bf86ef5a95243dd268e9d99b0332d127c2b cleaned up methods for enabling/disabling acceleration manger
+		4dbe7c4833f63c97968823a251929eb9bec0515b added high-level api-call for enabling or disabling the acceleration manager
+Results: 0/4
+
+size			4, 18
+rc	.	6e3fb6bd13e3c8a0b5ecfe26bdf5b36c8f4e7f82 Improved constant laser power per rate mode. Re-factored for flash size. Minor bug fixes.
+		b04faaf0d324db2875606bb4d308bcd5c3eaff3d Addressed much larger flash size with avr-gcc v4.9.2. Refactored reports to save 160KB.
+		fd02c3a47ec4eab48ffd87ac1720e81ca03c0cfb Updated README with new logo sized for github.
+		24280f95a5b0c257b73a1755df376de44acff271 remove mcu argument for avr-size in makefile as it is not present in GNU Binutils 2.22
+		d39abee37de5557f11f3ba9a2c41c8b5d6f5d615 fix command line parameter for avr-size
+		6152d16205ebd153c1c4414a3078c7753f91d501 circle buffers now power of two size and indicies are unsigned to help gcc make a few nice optimizations
+		2992683c8dd68546ac85bd7d475bff9df1578622 optimized for size and did some housekeeping
+		05bacc436e7ede1a760aac4f064d81e74af8b7c1 optimized for size, shaved 2k
+		5f5bd35ddb48b0ff5bc89648c85cf93680c79235 minor optimizatin for size
+		0c8004357aa01487687ea804bf79c1b8b906d3db optimized arc code for size and speed
+Results: 0/10
+
+edit			4, 6
+		bf5fc48074f743f03cfd31e42738de0f511313a4 Refactored g-code parser. Saved 60bytes flash and some ram. Edited Readme.
+		39cf82294439c7e7b1599b9f919d27290ed7a5cc Edit hard limit check at start of homing cycle
+		29f914391dee2f80b4a4c92971d1c556f239fcd8 peh. Missing edit II
+		bdeb551ea202f77f162e2ad7b460dc913c9ecb66 missing edit
+		35f499c00c2c703f42eb91963dedd72ae3b2aabd minor edits
+		0ac1731488e31737384db1146b9d3e498bd123c3 minor edits
+		58ad1ba50933ef048b62552504408bed54f81eb0 minor edits after verifying refactored grbl on real hardware
+		01ad93fbedbe62dd8043b3df887f077573e9fdb0 minor edit
+		e8f94e6a87f3d8755ec8217fd0edf8ff89391efb removed void credits
+		bf38fae67bfe95b10b73e199850479267ffaad78 minor edits
+		9e6d62e531f63eb62fad076f2a40f94bfa40885a tiny edit that saved a lot of bytes
+		8f3a69b37ed30cc1694cb38432579e64d6f0f2a6 edit
+		02f6699b0aaf3feac3380a71fcc663f984fe02ac minor edits
+		73a357e512114f16822514f32ba4ea13545b9e6e minor edit
+		2207acdf2bb7a2cfa9c031c743acd6b9188f401f minor edit
+		3ead6a02e743af8b1cda4beddc359a2614c4bbf8 minor edit
+		bd9c1a31f6efce93975491b754c318240b435032 minor edit
+Results: 0/17
+
+edits			4
+		35f499c00c2c703f42eb91963dedd72ae3b2aabd minor edits
+		0ac1731488e31737384db1146b9d3e498bd123c3 minor edits
+		58ad1ba50933ef048b62552504408bed54f81eb0 minor edits after verifying refactored grbl on real hardware
+		e8f94e6a87f3d8755ec8217fd0edf8ff89391efb removed void credits
+		bf38fae67bfe95b10b73e199850479267ffaad78 minor edits
+		02f6699b0aaf3feac3380a71fcc663f984fe02ac minor edits
+Results: 0/6
+
+speed			4, 15, 20
+rc		790c666ecbe0775019ee9deef51c27db33409ab9 New nonlinear spindle speed PWM output model and solution. Updated scripts.
+		498dd625728aa6c0e49847bfa98b7720c6f7c763 Spindle speed close to minimum fix.
+		6ab3cfbe7da3fd73508bb3e8422e45bcf5ae9def Spindle speed bug fix.
+		5bfc3a194507f7c977da0221820fc6e4aaf952b8 No variable spindle and spindle speed fix.
+		a0f430d18816a466a83fa523b7971522959e5353 bugfix: uninitiallized curr_block->new_entry_speed_sqr lead to step loss in some cases
+		2be0d668722ed42af66a4bdab71cda672189ff73 Fixed long slope at deceleration issue. Moved things into config.h. New MINIMUM_PLANNER_SPEED parameter.
+		b8eee5ac9a403b84de4ddc86b824606e06390d8f clamped safe speed to 100% of nominal speed. Fixes a problem that might have spelled trouble at very low feed rates
+rc		fc1c1b7e093b4c9a85a8e8d3cacf6b51bb6ed82c corrected speed calculation in planner (untested on hardware)
+rc		f95f48763a426bc0f7a60cd6330c20d0381875a2 corrections in planner, including speed estimation
+		59a9b640876c4abb8a25560cde99fd403f6b4f59 removed a grave little bug in the planner and added a baseline safe speed so that motion sequences do not attempt to go to speed 0, but to a safe, higher speed based on the max_jerk setting
+		0c8004357aa01487687ea804bf79c1b8b906d3db optimized arc code for size and speed
+Results: 0/11
+
+improved		6, 12, 13, 19
+		5967839ab38f8e984a384db1f64e781cffb9e739 Improved fix for rare lowering feed/rapid override bug.
+		6e3fb6bd13e3c8a0b5ecfe26bdf5b36c8f4e7f82 Improved constant laser power per rate mode. Re-factored for flash size. Minor bug fixes.
+		8b76a39d5dfd31cc5e62ac6083118068354a472a Improved option for v0.9 GUI compatibility.
+		d034dc21817059a0ec2e679207ebf532212932d9 Improved homing limit search handling.
+		4c6f5bec481177ab32086fefb03e6e83a1720b2f Improved homing cycle. New settings: homing enable/rates, debounce and step idle lock time.
+		5c2150daa9b6ca9c7f3be32f37907cf1f7b46f6f Significantly improved junction control and fixed computation bugs in planner
+		2ff680a12584c7683f6228921356430dc5740c77 improved some defaults
+		ba13ddadd0390befd0d659c879558572e246d049 refactoring that improved compartmentalization between stepper and stepper_plan modules
+		36fd3a9bfbc858997b297983569112dc9e223e68 improved the serial protocol, added some debug pins for a while
+Results: 0/9
+
+rate			6, 7, 14
+		6e3fb6bd13e3c8a0b5ecfe26bdf5b36c8f4e7f82 Improved constant laser power per rate mode. Re-factored for flash size. Minor bug fixes.
+		25cdeb830b5e52d90ae9e34aa4696be58338c193 Splitting Cpu map into separate files.
+rc		ed417220e1854be9fdda36b7ffb4b3033f7b2492 Realtime rate reporting. Updated decimal places.
+		8c9f3bca659f53790f25008f88c3ae9d53a86d57 Total rework of simulator for dev branch.  Create separate thread for interrupt processes.  Tick-accurate simulation of timers.  Non-blocking character input for running in realtime mode. Decouple hardware sim from grbl code as much as possible. Expanded command line options. Provisions for cross-platform solution.
+		cc4df3e14b74350bf8344f4a27e1e54af86a5e14 Acceleration independence installed. Initial re-work of planner for feedrate overrides.
+rc		e6ad15b548c65bf64c5fc733329e0ed9ebfc0e27 Tweaks. Seek rate updates when set. CCW arc full circle fix.
+		b3b454ee770d708cc0035c2768387cc21aedc1db Generate header dependencies and use them in Makefile
+		4c6f5bec481177ab32086fefb03e6e83a1720b2f Improved homing cycle. New settings: homing enable/rates, debounce and step idle lock time.
+		d9a7fc4680c2228607c4833d41004b89883ef7b8 Make sure we don't accelerate above the nominal_rate
+		f4c1cbac3c5e0ddfbdd4e9d095420f8b11a4eded added a fix for division by zero errors that would occur on very low feed rates (thanks to Arthur Wolf for hardcore investigation)
+		b8eee5ac9a403b84de4ddc86b824606e06390d8f clamped safe speed to 100% of nominal speed. Fixes a problem that might have spelled trouble at very low feed rates
+		9f5365aac9ed8b79e767d8a811fa1a01f74ce75d fixed a bug where F-commands never would modify feed-rate of G0-operations
+		49a16cb777e8ca4e5c62665436ac29b7021c0bf9 refactored block buffer into separate module motion_plan pending the addition of the actual look ahead planner
+		f93d0e8132b6eef2e18bf13c0521b7e0cb9d7508 completed support for separate feed-rate for G0-operations
+rc		960444fb9780d150b7a8277e03d0ec51e626b9cf fixed feed rate calculation
+rc	hcf	ed400693b3e58373743e00b0e2f1051817605a1b fixed feed rate calculation
+rc	?	d012440518695d44ad410adfe905b12d385b1a20 presumably fixed the feed rate computation
+Results: 1/17
+
+computation		6
+rc		5c2150daa9b6ca9c7f3be32f37907cf1f7b46f6f Significantly improved junction control and fixed computation bugs in planner
+rc	?	d012440518695d44ad410adfe905b12d385b1a20 presumably fixed the feed rate computation
+Results: 0/2
+
+clean			7
+		91d6de90bdb75c9a73efb6c2acc4c5d3d1314f8b Updated documentation. Cleaned up a bit.
+		24ce518fdac4e25b0e16d63d739d74b2313f9137 Cleaned-up limit pin reporting and comments.
+		5406fa939a1fd669fd58b5509e7a9a46ee975d47 cleanup global var and push probe mode into probe_get_state
+		8b5f30685108fa6b0e196f50c26a11670f68a1a5 Cleaned up variable spindle output (PWM). Code and config comments.
+		f8dd8fa54d21c17b9aaddb5836b6a8d73d59640d Fix for M7/8/9 modal group checks. Updated AMASS frequency cutoffs and code cleaned.
+		a87f25773cfe551509f1f82c9bd997ae33c87aa5 Pushed limits active high option. Updated defaults.h. Misc bug fixes. Cleaned up codebase.
+		0ac6c8719613c14534c77e8cbbe85ed4912ea297 Planner function call fix. More clean up.
+		f7429ec79b621d1a4fb4486eac5bd03f6258589e Cleaned up stepper and planner code.
+		0894183991bca4c5d7c70de130c561c6d23f343b Pin map definition cleanup.
+		9141ad282540eaa50a41283685f901f29c24ddbd Third time's a charm! No more deceleration issues! Updated grbl version and settings. General cleanup.
+		fdc90f1821f1f5edb7756fcddce75b4b4fbf6bbf Removed comment and block delete handling from gcode.c. Parser expects clean gcode.
+		f0843db46e953beda585846c87c0c11fdabf95a9 refactored printIntegerInBase to work without a buffer + minor cleanup
+		9488cb329c72dffc6d48d0b14d4f6c908fc0400a cleaned up function definitions for serial and print modules and added a comment about the deeply flawed printFloat method
+		c0b4b8309ab3ca02d3431b4c689be3c45ee2f0bc cleaned up serial completing support for non blocking tx and refactoring formatting functions into a new module 'print'
+		8793b555e0ed0352fe2451b173a365b3fc4d4158 cleaned up data types in serial module, all data now uint8_t
+		6be195ba38164ae044e31b02e5f8f5ebc641054d cleaned up handling of number parsing in settings_execute_command
+		23462de85acc595ba4a36783c3b45743e8c86b26 cleaned up settings.h
+		ff73645a14ef72de7f2a180fcdb9b6c5394ea953 cleanup, protected some more module variables as static
+		cdcc7bf86ef5a95243dd268e9d99b0332d127c2b cleaned up methods for enabling/disabling acceleration manger
+		bf4f75d6320404c097290b8122bd2aa9de6f0393 cleaned up formatting gcode.c
+		c8f71cf0332cf592518a3311ab6c3bda49cbac48 cleaned up stepper.c
+		d2cbca36e89c408bb86de71eed79858e88905e3b cleanup
+		5f005f59f12178e9abe696445926153c4baf8150 cleanup
+		0be21a903443d16684354523af931b3233f006f2 eliminated an annoying constant that broke my cleanly layered abstractions
+rc	.	d0f64d8f65923be9abd16139f185ce2d374ecaba fixed the inches->mm conversion bug and some general cleanup
+		db193f4336efee8c4d7e48a55dfd1dae34d66330 cleaned up stepper signal in junctions between short line segments
+		7e152851cca82ffa59d8d4a9cfa3f0b66f2df92b general clean up after refactoring
+rc	hcf	a42c03601d6ee7dc4267fce5293ad53c0500cffa Fixed a number of bugs caused by using abs() on floats and long ints. Added support for selectively inverting bits of the stepping port. Debugged, optimized and cleaned up timing code for the step-pulses.
+rc	?	c07a32258950da2de2bb0c809e14ab9d491b67aa fixed buffering of pace changes and general cleaning
+Results: 1/29
+
+tweaks			8, 15
+		82075627b3b26511c0ce9f585335b677dcc81ae9 minor tweaks for mingw.
+rc		e6ad15b548c65bf64c5fc733329e0ed9ebfc0e27 Tweaks. Seek rate updates when set. CCW arc full circle fix.
+		5e7a4b3ba8a032aa6880d7eb8224a37819f0286c More tweaks. Removed dry run. Trimmed all messages to save flash space.
+		8c0106c247134383dc47174ae005c9242e9be643 Tweaks and minor bug fixes. Added purge buffer command.
+		a9d41c6c646d68f9b91d0bfda72deca2faf3c258 tweaks and bugfixes
+Results: 0/5
+
+optimized		12, 15
+		9ba117c1bb46bdcc4e702b4e3439e29d71c900d5 New stepper algorithm. Optimized planner.
+rc	x	a42c03601d6ee7dc4267fce5293ad53c0500cffa Fixed a number of bugs caused by using abs() on floats and long ints. Added support for selectively inverting bits of the stepping port. Debugged, optimized and cleaned up timing code for the step-pulses.
+		2992683c8dd68546ac85bd7d475bff9df1578622 optimized for size and did some housekeeping
+		05bacc436e7ede1a760aac4f064d81e74af8b7c1 optimized for size, shaved 2k
+		0c8004357aa01487687ea804bf79c1b8b906d3db optimized arc code for size and speed
+Results: 1/5
+
+corrected		13
+rc		8c103d09eb5e7be5211c3156558725926253b5a7 Corrected units of default acceleration values
+		6f27e2cdb1625657ccb8a96c3fbc9bd637f29170 Corrected a minor streaming script character counting bug.
+		b5cc0331507510b1121f27f56076efd38a0108d4 Corrected clearing of target and position variable for the go home routine. Thanks Jens!
+		804837a111e8fddb87074f12d8c39e1d5649d265 corrected an outdated comment
+		dce597be45b0cb054159055aeb9d9919e4785b82 corrected the handling of status codes so that 'ok' will not be default response in the event of an undefined error code (untested)
+rc		fc1c1b7e093b4c9a85a8e8d3cacf6b51bb6ed82c corrected speed calculation in planner (untested on hardware)
+Results: 0/6
+
+realtime		19
+rc		ed417220e1854be9fdda36b7ffb4b3033f7b2492 Realtime rate reporting. Updated decimal places.
+		8c9f3bca659f53790f25008f88c3ae9d53a86d57 Total rework of simulator for dev branch.  Create separate thread for interrupt processes.  Tick-accurate simulation of timers.  Non-blocking character input for running in realtime mode. Decouple hardware sim from grbl code as much as possible. Expanded command line options. Provisions for cross-platform solution.
+Results: 0/2
