@@ -1,0 +1,728 @@
+TOTAL
+Projects				Commits	#AP
+robonomics_contracts	5		0
+dronekit-android		61		2
+cylon					20		0
+android_app_manager		5		0
+turtlebot				19		0
+stofzuigerrobot			2		0
+robonomics-js			-		-
+turtlebot3				27		17
+Valetudo				93		1
+arduino-esp32			101		4
+johnny-five				135		10
+==============================================
+Legend
+rc = Read the Code: from this commit the code was read (beside reading the commit message).
+rcy = Read the Code, Yes to antipattern. Found an antipattern in the code.
+rt = Read connected ticket.
+. = There is something, but not related to research. Could be of interest to recheck in the future. Does not could towards #AP.
+? = There might be an antipattern, recheck with colleguae. (Note: they are not considered an AP until being confirmed.)
+mwn = Magical Waiting Number AP
+hcf = Hard Coded Fine Tuning
+fcr = Fixed Communication Rate
+==============================================
+Project: robonomics_contracts
+
+Words			Topics
+cleaning		6, 12
+rc		2806f69ba157d7b681a1acaa295dec0636afed7d Contracts code cleaning
+		baa0375fd41d405846b27f14b0506f4e3e90a80f Cleaning Market contract; Added Voting library; Refactored ThesaurusPoll
+Results: 0/2
+
+expenses		7, 11, 13
+		3b13c63ec74ebf295cd0ca2c0b8b8438f24d455d Updated gas expenses
+		24c73de4ff93a7184008379a8183ae3a8d38fd4c Updated gas expenses
+		5d52fec91f5fce01d0c470da5a82d4783f2e935f Updated gas expenses, release prepare
+Results: 0/3
+
+==============================================
+
+Project: dronekit-android
+
+Words			Topics
+cleaned			3
+		c1616d423747df397d65214d79e951015abfad98 cleaned up starter app gradle build file.
+		110713c6fa6ce673776aee67ce67881bb1e9ef32 Cleaned up code
+		e50d57c8405c0d46e2133dedc48fb89153b85e1a Cleaned up code
+rc		089a41447a8643036e406710fbfd0b233037db76 cleaned up vehicle uid event broadcast.
+		518be49f188792771c0e69fa77e0bfe6aae25bdf cleaned up obsolete apis: - Removed `CameraApi`: replaced by the `SoloLinkApi`. - Removed the `GOPRO` drone attribute: it will be replaced by a video state field within the `SoloLinkState` attribute.
+		1d8ea40332f87ce9b6035ac4f37f3a107626fff4 Cleaned up unit tests.
+		f87e20d909eb8f30b520936885afdf72ba88f564 Added the `ErrorType` class which contains a list of the errors type. Improved `AttributeEvent` javadocs. Cleaned up unused functionality. Updated parsing of the `STATUS_TEXT` mavlink message (fixes issue #82)
+rc		c59c14ad783477d1a140382069af3e56f3d9f917 Cleaned up drone speed implementation. Cleaned up drone altitude implementation.
+rc		afaf5146333187a072061480b947cf033f8d45db updated flight action buttons ui. cleaned up unneeded resources.
+		80e667e74405a095cb3813126bb6eb6e5d70ed86 cleaned layout resource for the MissionLandFragment.
+		972ec4bfbf6a9e88517dadb0119192efec91fe1f settled on a style for the mission item number picker. replaced the seekbar with the number picker. cleaned up MissionWaypointFragment's layout and implementation.
+		2852477b688c8e1a1fcbc4405231f4365f2610bf cleaned file formatting.
+		2f833912b4b48ea9b4735495f656044c5877fd66 Cleaned up android dependencies in the 'Core' and 'Mavlink' project.
+rc		c4abd871657c5d923296c96fe1192de45274d981 Cleaned up
+		7fc98d7ca4d646630e187ab2d5219fec6fe5cb2d cleaned up languages a bit
+		03fc26d8c8f079c3bf0376147d18afdeebbbefbf cleaned up dp map interface.
+		120ad19c825230e945681cfe22ba7cb7ac5c2002 cleaned up the styles resource file. added preference to disable usage statistics reporting. added 'up' navigation button to the settings screen.
+		03272b89fff9141926a55cb2926c97f50327f41f cleaned up the styles resource file. added preference to disable usage statistics reporting. added 'up' navigation button to the settings screen.
+		b78bc5f5c3df9e7a13e9cc882185813144aa7028 cleaned up unused drawable resource. updated spline waypoint icons, and mission list view.
+rc		17e5189c7ef763003bee12f7dc9b7fdcdbc48eac cleaned up app SettingsFragment implementation.
+		3cd5ea5a2c219c5a8aec87592fb3877713f0897b cleaned up gitignore file.
+		0ad848da6e390a6cdee8af756be4631d3e179260 cleaned up map interface and related classes.
+		46e1f8fdab6596a15d393aa49256ae31afd71845 removed InfoMenu since it's been replaced by InfoBarActionProvider. Cleaned up menu resources.
+rc		bd6b2404ab5c6cb1c4bd2b3567c2294348b93156 cleaned port/rc.xml
+Results: 0/24
+
+broken			14
+rc		f6fd775b4f93cc9540c83af2f7840b17022cc571 Survey: Fix imports broken by last commit
+		b88cbeff162d28a56dd67790178f6407f3ebb6e8 Camera: Fix imports broken my last commit
+		50ac94db12e29f9ea57e18f865a4c5b63978110e Rename: Fix references broken by move/rename
+		61e76ffadd9fcacbd61e3c63ab4cdf4c388ce17f fixing broken references
+		8cefd92fa0ef9c88e3ee323fdcd9727a90dcfd86 Fix paths broken by last commit
+		3c576a37e4fb7bbedc62673313632e0c716e5cb6 Fix references broken on last commit
+		da76d0152082d8df397c70ab3ec96e540066424d Update references broken by previus commit.
+		6f3b4d035be61395c217d5f3343b80c796da7feb Parameters: validation of new values using metadata if available - GREEN=valid, RED=invalid, YELLOW=can't validate (metadata missing or broken)
+		35f70aa4f1e19a22d5cc4a94090edcd3db9c936b Fixing some broken references
+		b3217c05335792f36799cb46cd1f4f5e38f007a2 Fixing constructor broken by last commit
+		8f8de97b3b8b943de6ebf29bb6a9e21a44f71fba Fixing the references broken by the last commit.
+Results: 0/11
+
+speed			20
+		f4ea03bb1fa47cc96bfcf1255490ea99a197a1f2 Merge pull request #358 from dronekit/add_mission_speed_control
+rc		88eb04e40a2b99883f6750b7949f0376262e5dd8 Moved mission speed to GenericMavLinkDrone. Added javadocs
+rcy	hcf	2439e21d1ef95dc7f575e9e9da3af19d3047723b Add mission speed control in ServiceApp. Added Client api to pauseMission and setMissionSpeed
+rc	.	be71d66c9ffaa243a0d27d1148bdfff6120c4ca2 Removed testing logic to set the control api speed.
+rcy	hcf	a4d41067c2d5d79bb4eb39222ad7f229672270d4 normalized the speed parameters for the `turnTo` and `moveAtVelocity` control apis. added `manual_control` support for generic mavlink autopilots.
+rc		c59c14ad783477d1a140382069af3e56f3d9f917 Cleaned up drone speed implementation. Cleaned up drone altitude implementation.
+rc		d76a9b6c2418b8389d54267a72d0dbd0da2adf94 Fixed the issue causing lack of roi update when in follow mode on the nexus 6: the location object returned by the nexus 6 location provider is missing the speed value, which the roi estimator was relying on to update its state.
+		0e7ca3fe7e253cae381ebc907992151e40c20c30 added implementation for the Altitude, Attitude, Battery, Parameter, and Speed drone properties.
+rc	.	01af0f8449eb24d1a131f411549d5a453c74c7ed fixed unit for the change speed mission item.
+		7f7e7204796ea6b3961d20b3af2d7e7f04cdc924 Merge pull request #1202 from DroidPlanner/doChangeSpeed
+		9f4968b12de81b53aff14b2cc6737f6ff08e061c Editor: Add the Change Speed item to the editor
+		e6991f106083a5af77067cf4916d199d2b04bc71 Test: Added unit test for ChangeSpeed
+		65a9b353a17efae676b49fa4142ca06b02adebda Mission: Add the change speed mission item
+rc		062d249fc55d41b18c89620e8334d71101273d81 adding logging to track the issue with the follow me speed check bug.
+		634e4eae5f90558dd4d1ab39f6ede3bec073945e Merge pull request #1145 from kellyschrock/flyaway_avg_speed_upstream
+		a1e6630e084f3cf787e3ac47fa4ab3530aa08270 Core: Add a function to get the target speed from the parameters
+		a9d954aed35629ec8ebc531409be59a1597e6505 Method to return Speed in meters/second
+		30fc3cdd8256a9460b387b1fb071829bf55ec30e Create new Speed class, and update related calls
+		9a6bf958660a847b206535d6728587dd5ac7cd72 Getting up to speed with Android dev so I wanted to tackle Issue #302.
+		94b97016453ba7ce7363aa31c9ef29c42a4cf76c Set Speed - Change hardcoded string to resource
+		bed61ff65bd45561454fdc0d73ed208741adc014 Making the speed indicators work
+		ae75769e7b9fba16557c44f36dd49b5b836fbdf1 Refactoring DialogMissionSetSpeed
+		f3d9d11428e361667af321a89bf9f7de1de6898a Making the radioButtons for the DialogMissionSetSpeed work
+		29de85aba61f801f0742973cb71138510d030c18 Added gps horizontal precision and activated vertical speed
+		a133736581969ffef010f3f5e4683bb3f6b54d85 Adds airspeedTarget and altitudeTarget indicators.
+		3e62739fb29703163bd085d9f1d29e77d7dc2e95 Adding a Vertical Speed Indicator to the HUD.
+Results: 2/26
+
+==============================================
+
+Project: cylon
+
+Words			Topics
+halting			9
+rc		f3efa83643d7d15ed1ceaacf0a7ed974c98bcdb0 Correct issue with Robot halting
+rc		6de922f2fc37215e3384ff0b25c69a36818f8e09 Make halting on SIGINT async
+rc		283b05b08a27a5250fc31561f3b657f0dac4edc4 Fixes bug with robot not halting, which caused connections, adaptors and devices to not disconnect.
+Results: 0/3
+
+improve			15, 17
+		ad94b81e872154ccf2b518e8bad3453583a8dd64 Merge pull request #258 from hybridgroup/climate-improvements
+		c063d254e08147d4d6ccbadf6af3a302cf0c3c39 Improve description wording in package.json
+		ca749fd03ed2dd3c4ea59d827fefb5f9d060088f Fix an edge case and improve tests for API
+		789347f6f8b61cbef15423010d6f83e792cf27f8 Improve inline docs for Utils functions
+rc		a4cfc4b8ecd06cfa17a636c169af6ce31bcd6d15 Improve authentication middleware mounting
+rc		26b92987a8d7c87aa350bf4c2b71e26cb8481750 Improve specs for Logger
+		cb35cf27a5442818b7c659bdda1c4c5688576fa5 Improve specs for Driver class
+		0a631513ee126b25d14be2051726ea1e5deaa178 Improve specs for Cylon.Adaptor class
+		e7f96b8a6cf22dfcf91aae30fe00f2488e0bd19d Refactor and improve tests for Cylon.IO.DigitalPin
+		0ebd4153d446cbfe70b2e9eef3da044d46527d2e Improve/expand test coverage for utils
+		56b66bded4b2ee47b445563e9444e3b09a03cb61 Add/improve specs for Connection class
+rc		263a1e502480cbec20b899314a113c248aa979f8 Start on improved Cylon specs
+		20a67ef590230bb3c6e5acc1b2058964496b9824 Add and improve Robot tests
+		707703cae29909e4fe46777817389d33da6da42c Improve Device specs
+		ae3ddf6045c2378b26e07ace063fba6738098dbb 74-cylon-readme-improvements
+		55d4709f421ad3afbae704136a3f44bdfd8e591e Improved explanation for the example
+		199a6aa59e957e96cf39f9ce227e86708b0055ec Improve readme again
+Results: 0/17
+
+==============================================
+
+Project: android_app_manager
+
+Words			Topics
+improved		2, 9
+		1f77da85db61acfbbea0b2b2f8d06ebbe2b86ef2 Improved scrolling for smaller screens, removed hints from edittext.
+		e2ccfc796a742d5c958912df25b72862f4f9a0dc Improved scrolling on smaller screens, removed edittext hints.
+		b5f2f01092f9ef3d00e4d74a5ea18fd44c68e63d Improved error message when robot parameters are not set (I.E. wrong launch file)
+Results: 0/3
+
+failure			5, 15
+		9af966579bbc963b48124756eb02a39f8e0205c4 More prints and errors in hope of debugging application loading failure bugs
+		63739bc6683eef55d070ee9733dcbc661326931b Some more error messages to avoid slient failure.
+Results: 0/2
+
+==============================================
+
+Project: turtlebot
+
+Words			Topics
+convenient		4
+rc		e1a82cd1ab6922e3b3263a24e68741e6ab08a7c2 convenient paired launchers (no uuids, autoinvitations), refs #96
+		7ec34f8ec3357bb9c9420011a27ee90fac845e81 adds convenient eclipse config files and gitignore for excluding bin, build and lib folders
+Results: 0/2
+
+cleanup			6, 20
+		44770ef7fac1eb3378259258a8347f15cae68062 Merge pull request #245 from kevincwells/r200_urdf_cleanup_kinetic
+		52c6a8f020a1a28726a97dddda3c6b0f2b66d0fb Merge pull request #240 from kevincwells/mobile_base_cleanup_kinetic
+		e7036dec4ca05e950ae69d2562af5e508e40a142 Merge pull request #238 from kevincwells/urdf_xacro_cleanup_kinetic
+		f5ca41b72401439c2662226bb428ca873e79fe4e Merge branch 'cleanup' into indigo
+		968ea3da1911e048258452326d8a03dc7feb0da6 cleanup metapackage. add teleop and remove laptop battery_monitor
+		c91ae12e9cfd7b4a3277807c2dfc296430022d41 cleanup legacy install rule. and remove concert directory which is not valid anymore
+		b2412ef282766bf96ed840934d53006f993383fc Not a python module. Additional cleanup
+rc		c631cf41e804c5db0530113a51eab1a1b124ef84 cleanup linux_hardware
+		99d6e21823dcdc5c97c131edb1c23527fc4ab359 cleanup of dependencies.
+		09811cf517ff65e2de26735ed00f638c1f5420c3 launcher cleanup.
+		9730c62daf5f06de8c9231f2c5d019e043797878 cleanup kinect/camera naming stuffs
+rc		21c25c170c2f62fd33f3ca503a55906a788c4795 Code cleanup
+		05dd4d583f14a2010a2bb95b70d3e63f8a71b5e2 merging cleanup
+Results: 0/13
+
+compatibility	10, 17
+rc		b25e45a4bb48935f646125a0cb32b5ecdc6f1ba6 update compatibility for upgrade turtlebot android apps
+		db6facd83386c43a0bb3370c04f2144c0d8933a8 update android teleop remapping rule and add kitkat in compatibility
+rc		2ae49c873ff9faa687862df3fec88004332b2828 Fix compatibility uri's to filter out PC interactions on Android
+rc		02b821e0bf6d4025b7284c7b0f37e7c1118640f1 reintroducing 3d sensor compatibility for fuerte
+Results: 0/4
+
+==============================================
+
+Project: stofzuigerrobot
+
+Words			Topics
+unnecessary		1 - 20	(It is in all topics.)
+		296ccf97d7e27c198e54eb3327aba2499690a40a Removed unnecessary dependencies.
+		51267f89a4d0da2be536ab7ec3ddf784ec85be97 Removed unnecessary files.
+Results: 0/2
+
+==============================================
+
+Project: robonomics-js
+
+Words			Topics
+-
+
+==============================================
+
+Project: turtlebot3
+
+Words			Topics
+compatibility	1, 13
+		2fd439fd5fc380ed18ffe78c7c1b6f8e8d527519 Python2/3 compatibility fix
+		937f0d09b5f6e4ea26b11550eba6810b41c92468 Revert "python 2 & 3 compatibility update #542"
+		40f11e4e7e71543096b3b52d964f2f4f42c831f0 python 2 & 3 compatibility update #542
+		ddca617172a3549a3077682cd2cf7dc377616e01 Add print compatibility with python 2 & 3
+Results: 0/4
+
+rate			2, 8, 11
+rcy	fcr	4f3cfe51d98b787fa9397ffb2b2baafaf181608e imu update rate to 0
+rcy	fcr	0df54b559219e78a06770c301cd4b7c8e4481053 imu update rate to 0
+rcy	fcr	be6d549085d229eb6eb970f7b0f1ed568bdd0935 imu update rate to 0
+rcy	fcr	8add6660f411a34336161d77f2a54bb8d27a1ad4 imu update rate to 0
+rcy	fcr	f9c5fe30024a90058d7303d02f4cc302d6e1d496 imu update rate to 0
+rcy	fcr	e78b8edce9702e292dec65a5ca549a774512bd67 amended base_scan update_rate and add param on diff_drive
+rcy	fcr	877ea055c17b315890ac0faff46762c2ad2fe13d Corret the laser scanner update_rate in the gazebo xacro files
+rcy	fcr	412dd8a974abee89b91967a409756f07598f5241 edit updateRate
+rcy	mwn	c60c6b3c6883b48767e5c6ccaa5b5b47f933d05d added basic operate
+rc		6cfcc9e5cae58b98bbbcfabb761f1544221d7a08 used integrated bringup file
+Results: 9/10
+
+inertia			2, 18, 20
+rc		68538fb0a2c8a7a2c2ddec4eb5fba7640650157e added temporary inertia data in urdf file
+rc	?	efcaedaf6c3d6988776632b8319ed42e8ec954ff add inertial param
+rc	?	ed9787d4333f79601c0e83600ca2138ccb92516c add wheel inertia tensor
+rcy	hcf	90caa88df4a81cfce3f7b3ab3227f2e31869c668 modify inertia
+Results: 1/4
+
+frequency		5, 19
+rcy	hcf, fcr	01beb9347f8d5e0d91582608bc15027c3e376670 velocity and acc and frequency param amended
+rcy	hcf, fcr	3c7ffca48b93e06d7ea0eed9d9c9381d1a4d8517 control frequency and inflation radius amended
+rcy	hcf, fcr	d42741ced8a18ffcd84d7f2babef0dbd48c04ea6 update publish frequency
+rcy	hcf, fcr	066d7a58a49a1ee55b5a128e01bae8736cc31293 update publish_frequency
+Results: 4/4
+
+size			9, 15
+rcy	hcf	9480d25abb02228ebe500f00370ce4554f04e839 modified the size of laser scan
+rcy	hcf	5fcdb33c709c56cab2580329d0debebb937e0569 edit footprint size
+Results: 2/2
+
+limit			14, 15
+rcy	hcf	aff566b8f168b2868dec87c4987c7a947126b35b change limit vel
+rc		a2e876b3f3b6c5034d62fb4017543cba939a4bbe add constrain to limit velocity
+rc	.	2ef2173e5bed460c9986ed1dce0edf7324afa896 add limit velocity msg
+Results: 1/3
+
+==============================================
+
+Project: Valetudo
+
+Words			Topics
+time			2
+rc		6ed3fde59c69b4cdc8b75b3c314024928a98c1b4 chore: Add time logging to upx compression script
+		7ebbafce307fc5b3e07f73f3652d154a63d3a248 fix(ui): Timer action controls Memo dependency (#1091)
+		ece2dc9d6d5baafa4d0aa291565087bf2e1f6148 feat(ui): Show runtime info on about page (#1089)
+		ac19d5d2c1751c12d614ebf2c8cb701cdc7a0473 fix(ui): Show old ui timer page even when there's no DoNotDisturbCapability
+rc		5252e79b9be28ca2f231e2a572cf62563f10cddc refactor(ui): Minor timer cleanup
+		f790db3ec1eadcaa91726a75ac994b5d527058f4 fix(ui): Make timers use correct time zone offset (#1079)
+		b53d428846f3013768827296b193ed68f4ca0255 fix(ui): Remove staleTime: Infinity for queries that should actually refresh automatically
+		abd63454588e510d23d55c4f08a1caad1cc7c649 feat(ui): Implement timer ui (#1077)
+rc		105d02a67d502ba727e90251f2b9325837833ebd fix(timers): Prevent timer drift (#1078)
+		c2cbd4588dede2b4d6a86c7d0807b16d7308d0f2 fix(vendor.viomi): catch set_timezone errors
+		3f81d4c063595f129d7b08114377b6b4703628e1 fix(miio): reduce loglevel of user ack timeout spam messages
+		db7839d5ff1b4538e6ec730e8fa2a074011ecd38 docs(timers): Add OpenApi Examples for timers
+		de45f72c8080c707df9aab8aebefa19e6d9ba996 docs(openapi): Document Timers Endpoints
+		fe1fa88d715e1002d3ee607ce9646b8d8b2cdb9d feat(timers): Add endpoint which returns timer actions supported by this robot
+		d8a523e40138f679411d2b8c33db3057d5f6c8d8 feat(timers): add ValetudoGoToTimerAction (#953)
+		34443b3bea4feac5c48844554cd9a816df6f60ff fix(timers): Fix zoned scheduled cleanup
+rc	.	e331eda332e12a138cd1d7e8b8994208f714833a fix(timers): Copy-paste antipattern
+rc		7b8c37ad1006aec62e1f19e5aec83d54da94189d feat: Timers
+		fd79163c3e9328562346a789ad5cec6e73bfe52d fix(ui): DND should be rendered as localtime but stored as UTC
+		8e0ddb6d5b389ffdd37054a92952dfcc40818b60 doc: clarify timezone configuration (#897)
+		908d5ddc16b03dbe92e1aafe9e0d4f755312e3d4 fix(vendor.viomi): Fix system timezone in init script (#876)
+rc	?	21b5876362939fc2e0d7ee7edbb4651411be39da fix(vendor.viomi): Fix last clean time (#822)
+		6db4f663a575e123c4455acf9eb2535d75fe99e3 refactor!: Track attachment state all the time
+		bafa158814c3185cffbbaa9c9529227883f13071 feat(vendor.viomi): Ensure timezone is UTC (#732)
+rc		e14935dfa9ef06a15871b3bd7683c55956b4db52 fix(miio): Set ServerSocket to disconnected on timeouts to prevent valetudo breaking on wifi issues
+		e2ea1ce212c4f85bba492dc273c6b7e75f4768b8 fix(ui): Fix #527 not working close and cancel buttons in timer settings
+		717d7315ffebbe2cccf04351189430d2bc66f1e7 docs: Added flashing timeout to FAQ
+		9eaf848ef2f25d17ac8e19702abc24bf6ce19c90 feat(mqtt): added time and area information to mqtt attributes
+		f327db1260e3261cb126a8bb8e0ea9af6b8130e5 Rename doTimesync to isServerSocket
+rc		edd5c575cdc18f305f753b190974e8a40e9e5630 fix addTimer for firmware 2008
+rcy	mwn	9f523eac1866d9664eb02eeaa31c64a389b6d87f Reintroduce extended timeout when polling for a new map.
+rc		9714fa261bb8cd33006ee05b198449b39556890a Make 'timeout' proper Error instances.
+		e8dec55975dd7b27158874be08e37ebaff84265d Disable timesync on local socket to fix local communication
+		a89c44f9fe8f3ac632c116a7a045e51c8fb33a75 added timezone configuration added dnd configuration
+		be58ed5c7aaaa65eb756b122efdc01c884fa87a7 made timer configuration intuitive - Added form for easy timer configuration - Added human readable timer interpretation
+Results: 1/35
+
+timers			8
+		f790db3ec1eadcaa91726a75ac994b5d527058f4 fix(ui): Make timers use correct time zone offset (#1079)
+rc		105d02a67d502ba727e90251f2b9325837833ebd fix(timers): Prevent timer drift (#1078)
+		db7839d5ff1b4538e6ec730e8fa2a074011ecd38 docs(timers): Add OpenApi Examples for timers
+		de45f72c8080c707df9aab8aebefa19e6d9ba996 docs(openapi): Document Timers Endpoints
+		fe1fa88d715e1002d3ee607ce9646b8d8b2cdb9d feat(timers): Add endpoint which returns timer actions supported by this robot
+		d8a523e40138f679411d2b8c33db3057d5f6c8d8 feat(timers): add ValetudoGoToTimerAction (#953)
+		34443b3bea4feac5c48844554cd9a816df6f60ff fix(timers): Fix zoned scheduled cleanup
+rc	.	e331eda332e12a138cd1d7e8b8994208f714833a fix(timers): Copy-paste antipattern
+rc		7b8c37ad1006aec62e1f19e5aec83d54da94189d feat: Timers
+Results: 0/9
+
+speed			13
+		2b5d3e69b9ea9a1ab966efc67652f55e638bf0f4 fix(vendor.viomi): replace fanSpeeds with waterGrades (#825)
+rc		3f4d844c2979527624623bb2ff67654a0961f768 fix(vendor.viomi): Fix water grade controlling fan speed instead (#791)
+		200b13b5c8434375db486b93067278ddca490a42 feat(vendor.dreame): Use currently configured water grade and fanspeed when starting a zone or segment cleanup
+rc		a070c4f705b17bc85b7cb703b6d6e3a6f6302cc1  feat(MockRobot): add FanSpeedControlCapability
+rc		be0efca344ea7fe53858b9a28c7097ad4c99dea1 fix(vendor.viomi): Resolve #672: Fix viomi fan speed control (#673)
+		26ceb95a71154396d14adfb01b6fb1d198fa3490 fix(mqtt): missing / in set_fan_speed topic
+rc		3ca745054d3c159023edb632e198126e89d7494a fix(vacuum.viomi): Fix fan speed state parsing
+rc	.	ffbb8e75ffc4ce06bab6baa6f7328877cf66659b fix(vacuum.viomi): Hackishly fixed map parsing for viomi v6 + fan speed settings for all viomi
+rc		3ca66202c2bc859c015d2f0f84bb3340e4eb06fe fix: gen1 fanspeeds
+rc	.	ecd052f441793059cf91023a7cc7cd8d28758aa8 define fan speed constants
+rc		96b2c9ab95e9025c53ca4c8e02fa1a2dfade2c41 use quotes to access fanspeeds
+rc		c817a762ad7f074f7a762500f24274fee7aed603 move fan speed presets to vacuum implementation and support for new firmware
+rc		abc26d9fbea70293f70423ad4950fbd7cf9bf1cd speed up the build by using 1 run
+rc		6ed35ed0a37404437e15a36e2e7e72f4213743e4 add mop fan speed
+Results: 0/14
+
+timer			15
+		7ebbafce307fc5b3e07f73f3652d154a63d3a248 fix(ui): Timer action controls Memo dependency (#1091)
+		ac19d5d2c1751c12d614ebf2c8cb701cdc7a0473 fix(ui): Show old ui timer page even when there's no DoNotDisturbCapability
+rc		5252e79b9be28ca2f231e2a572cf62563f10cddc refactor(ui): Minor timer cleanup
+		f790db3ec1eadcaa91726a75ac994b5d527058f4 fix(ui): Make timers use correct time zone offset (#1079)
+		abd63454588e510d23d55c4f08a1caad1cc7c649 feat(ui): Implement timer ui (#1077)
+rc		105d02a67d502ba727e90251f2b9325837833ebd fix(timers): Prevent timer drift (#1078)
+		db7839d5ff1b4538e6ec730e8fa2a074011ecd38 docs(timers): Add OpenApi Examples for timers
+		de45f72c8080c707df9aab8aebefa19e6d9ba996 docs(openapi): Document Timers Endpoints
+		fe1fa88d715e1002d3ee607ce9646b8d8b2cdb9d feat(timers): Add endpoint which returns timer actions supported by this robot
+		d8a523e40138f679411d2b8c33db3057d5f6c8d8 feat(timers): add ValetudoGoToTimerAction (#953)
+		34443b3bea4feac5c48844554cd9a816df6f60ff fix(timers): Fix zoned scheduled cleanup
+		e331eda332e12a138cd1d7e8b8994208f714833a fix(timers): Copy-paste antipattern
+rc		7b8c37ad1006aec62e1f19e5aec83d54da94189d feat: Timers
+		e2ea1ce212c4f85bba492dc273c6b7e75f4768b8 fix(ui): Fix #527 not working close and cancel buttons in timer settings
+rc		edd5c575cdc18f305f753b190974e8a40e9e5630 fix addTimer for firmware 2008
+		be58ed5c7aaaa65eb756b122efdc01c884fa87a7 made timer configuration intuitive - Added form for easy timer configuration - Added human readable timer interpretation
+Results: 0/16
+
+improve			18, 19
+		8736f7fc9ee1d76dcb8a5c21975f85040fbfd723 fix(ui): Improve word breaks in MQTT topic preview (#1088)
+		12f706cac0b70e88442b776d328ec08db6f326ed docs: Improve dreame reset button uart root instructions (#1054)
+		a8720b931a4a89b4748470786a0fe0b9b4fd64c4 fix(core): Improve unhandledRejection event handler
+		7e28c663bf4e321c80350df932e7914c4901ca29 chore(mqtt): Improve warning message on retained messages
+		24bb2ea9ae87186341a7f22086844659b3f0d6c7 docs: Improve upgrading instructions
+		7ed177a85ac50ec23a913c5265511e9adf839f8a fix(miio): Improve error message on missing keys in device.conf
+		4c20e60ee16cbaf29770da79b4ac50be6f737a2e docs: Further improve roborock installation instructions
+		eadfb25da55eec9162257d55f42d10077bec2449 docs: Improve roborock installation instructions
+		2c8b27f98a18e0db5a7d148950317c9beb5836f2 docs: Improve capabilities overview + explain MockRobot
+		1138c8466ca776960e0dc6030b1efe5f6e8343f2 fix: Improve state handling in MockConsumableMonitoringCapability
+		ef949be485ba97bd8c65066ff5c3f427fbf35f6e feat(vendor.dreame): Minor improvements for D9 Firmware 1072
+		186abd34852d62b3ab418216a500bfbb72423b85 feat(vendor.dreame): Improve handling of RISM maps
+		8609612e03bc756194982d35b4389d27557842ac fix: Improved dnshack to catch all problematic dns.lookup requests
+		9c9b0d135541d95cee75ec497b32715e51a58f00 improve jsdoc
+		3ef3bc6fd8a1693f9f2bf3fbda5a053d3e4cd696 Improve model name S50 -> S5x
+rc		a9ac38a8343198e8eb2deb704d0a088d3d68bc36 Improved file upload & error handling
+		da00c261e49f9a27660bd30a856d0badfab87adb cosmetic improvements for zone definition
+		fcd3dac936487aba47f026ae07bf8fdd8d28df83 improves zone drawing
+		04ace46a68dc611ac7fc8ca32ba6f0774c7a06df improves documentation on installing and updating valetudo
+Results: 0/19
+
+==============================================
+
+Project: arduino-esp32
+
+Words			Topics
+corrected		2
+		c5a1f3efd77e9b74c52f0a359ba3b63ea30c5aa1 Corrected CLASSIC_BT_ENABLED to CONFIG_BT_CLASSIC_ENABLED. (#5471)
+rcy	hcf	a12d609b221ce339de092cfe096c6bef7542c943 Corrected count of characteristics to get (#3082)
+rc		1da3138ed6bf4675836f6ebaa15bb5db280a6e36 Corrected Flash Mode (#1205)
+		14ed6c4c251b05903be0a8e9001730c6fef4091e Corrected Instructions for Windows typo error (#1210)
+Results: 1/4
+
+optimize		5
+		84b8582acbb8ea76cd8b31400b7ff6edc98afc94 Optimize esptool path for packaging and fix possible build errors in windows
+rc		6707d4d331c1556ff98d9b5b87d6a5d2acc1a148 Optimize timer drift
+		063d608e18dc3df81dcb59b37c3e6844442bdc3b Optimize Update class
+		de017a8a1b362a8bee71d14073f87300ec428b9c Optimize SPI transfers to take one lock and do not return until completed
+rc		6db0ee13043166efcc3d603cddfbf2f4507c4ad6 Optimize GPIO and account for micros overflow in delayMicroseconds
+		d8aa61fa52b889b8605d98b6d633371d414ac0ab Optimize some error messages
+		bfe6e5ae77d10e2b131f4b2bd971b62e6f2f0859 optimize log facility for multi threading
+Results: 0/7
+
+wrong			7, 8, 10
+		5fd737925fc766a66e228da6e1bf33b32e0edee0 Fix wrong attenuation being set to pins (#5522)
+		f4f1c8956beeda99c376b86c7ba3eff1ba431581 pinMatrixInDetach() has wrong parameter (#5385)
+		5ae3e836f9de6f3e850f8ead43e9e357475121af Fix wrong password same SSID (#5124)
+		9710fedaf05c85e3c8e5d23b076bd47561a0ca21 Fix wrong values in .cvs files (#3196)
+		45fa0f829449419aee83d61f967ca32450e63527 Fix issue with WiFi lib sending the wrong event ID when debug is on
+		a43682596fad48f18b87903807bb95e2b56750be Deep-sleep example-sketches reported wrong wakeup-reason (#1911)
+		4e9d1ee23798a127b6754d199194adcbee21f058 Fix connected to be wrongly reported in WiFiClient
+		c1a94b532617e4f7dd13a2d90b50dfb54eeff3fb Fix wrong event description
+rc	.	dd639c4a029b3b31559bb4243a066e2005bdbc18 Fix wrong range of duty cycle (#1353)
+		8332a235d636a8cd28cbf6168aecf3f65fe1104c fix issue with STA emiting the wrong event
+		cfbb7300b768a1ecd7f1300ecac044268153e78b Update to make use of SSL a bit less confusing by ensuring errors are generated if the wrong method is called to retrieve the data stream. (#934)
+rc		1b994d54be9c86043c1fe63d132a04acca54c3d9 Fix wrong size reported for cards above 16GB
+		9fc3f1ebdd531633d2500e1a3a67a35ea02807b5 Fix wrong SPI peripheral enabled
+		1058e89dc3d390a1eafacc4bcbb48bfeda675872 Fix wrong bitmask returned for pins above 31
+		1f0df1ef976b865c97379d326d59f971a7850fc9 Fix wrong return values for WiFi::softAPConfig
+		f49ac391b2bda4c9c0d80575e742ef10c93f2b53 replace wrong calls to cbuf->size in UDP
+rc		fb8f1244b7ff4f7853fc5e6db4714bccacdbee5a wrong count checked for uartWrite
+		3ecb32c4ba7655dfff79f1a4e543318659cb3880 Prevent I2C Bus locks and wrong data being sent on retry
+Results: 0/18
+
+size			6, 9, 16, 18, 19, 20
+		67583e84d600deeacc7a4813ac4e4ffd3f530093 Return size_t instead of uint8_t from BLECharacteristic::getLength().  Allows large MTU to be used. (#5687)
+		2f6f2514008a6a235aba373644d4df5e58c32f1d Fixes boards.txt entries for the atmegazero_esp32s2, and also the platform.txt  --flash_size which is not letting the board compile due to its 32MB size. (#5673)
+		1f59c5abecc17fd450a5806362d199c3aa4f6c25 Adds HardwareSerial::setRxBufferSize() (#5583)
+		ea236e28e53d248b98bf00a69b98f9cdb02cf54f Fix incorrect Flash Size in Esp32c3 (#5279)
+		2082945d36db3fe1f72cefdb7111c285c8402539 Make LOOP_STACK_SIZE user configurable at compile-time. (#5173)
+		a299ddc99e79d473caefe04116daef31c0520936 Change send_ssl_data to use size_t instead of uint16_t
+rc		d1a4b3b822572be65c9f5faaf8129b51e392c2ab Add loop task stack size config to Kconfig
+rc		7d5bf9e38547463452a52ad131a3f792324906ed [1.0.5] Make looptask stack size configurable (#4564)
+		86de90fe24a0e54f382cc713ae20fb2225b4f503 Added partition and flash size menus for VintLabs boards (#3602)
+		36075257c2433d4427882cac9126abb68f11d97c WString explicit converters to reduce Flash size (#3497)
+		c8d8dc226545a096a34bf5164551c087b658d33a Added partition size options for TinyPICO (#3358)
+		b30e55efff02becf1a29faadc6009a841dea659e Added partition size option for Pico Kit (#3258)
+		932666a03f3a2fce5a92018c4fbe316b1c77cbc5 Ensure that _size is properly set in begin (#2706)
+		da8b7c1b80f1375be564674565c609aaa054e41c overload Preferences.getBytes similar to nvs so you can get size of t… (#2498)
+		884e417a4943ae64897fc06db47915f24c00b59a Fix HTTPUpdate flash size check and add SPIFFS size check (#2161)
+		7e9afe8c5ed7b5bf29624a5cd6e07d431c027b97 Add response headers with sketch and flash sizes, and a SHA256 (#2116)
+		af79e18ecbe8fd7cac55c84090c6d222b37fab78 Added ESP:: functions for sketch size (#2028)
+		ce6107480256b3251b0d069f5c678b09bc36d90e Add functionality allowing rxBuffer of HardwareSerial to be changed in size via HardwareSerial::setRxBufferSize. (#1855)
+		058645264c021be78f4108a357c50b60adc50b96 Adjust RAM size and calculator
+		f8a3c61981fffa7f53278ea5ac38a225bf737a7b Add upload.maximum_size directives to boards.txt. Add partitions to LOLIN32 (#1379)
+		f5c2afff31338eb2239a0f0fb1f4e755e3584efc fix upload.maximum_size as current partition size 0x140000 for esp32vn-iot-uno & heltec boards (#1052)
+		1b994d54be9c86043c1fe63d132a04acca54c3d9 Fix wrong size reported for cards above 16GB
+		22d92e7b7f4cb710dce6811928425ab427a5d9de Change size of fatfs ioctl returns
+		b465858563b05addf25e91e1e9407883cd4256f7 Check and format NVS partition if size has changed
+		e8e8efdb664442cebd0285ddcccb6b2aabe26bc6 finalize formatting of reported sketch size
+		ca3556041395c372a07accbd4c34099eafaf282a add proper size formatting to travis reports
+		fe12ebd3fd87f434f87bb29601bc3e2a4525e187 dump size and partitions to prep size format for travis
+		f49ac391b2bda4c9c0d80575e742ef10c93f2b53 replace wrong calls to cbuf->size in UDP
+		0ccde6cc1ad668fbc6cc246fc071655970228fea fix reported data size and percentage
+		01961ef5c64cb061b470ed6258540e880ca5a1b7 use local buffer for printf if size is equal or less than 64
+Results: 0/30
+
+timeout			17
+rcy	hcf	0acbe781f50540290a0d38c1fb0966a3088dff7e Increase default timeout for WiFiClient from 3ms to 3s (#5496)
+		be84c8219c251210afd87cac71b8ef3527b601b3 [WiFiClient] Default connection timeout, when no timeout provided (#5487)
+rcy	mwn	e12d8c8ff1a241160fc38d2f805c5ea169be7a5e fix: WiFiClientSecure connection timeout (#5398) (#5418)
+		bab3a70f543dac8f131916fcfc24b99b6b8252a0 Added timeout to WiFiScan.cpp to prevent getting stuck at WIFI_SCAN_RUNNING (#3197)
+		5137fc5c80e8cd1d9f07879d0bc1ecf5a52e8ce4 Ble notification/indication status and timeout (#2998)
+rcy	mwn	02e51728c4f66d997dbe8c8948e377ccba36dd3e Fix Timeout Bug in WebServer (#2938)
+		9a9ff622166149da30dd13a81485184617c56387 Add connect with timeout to Client class
+		3d6e4e1b94ccdfe269da9c314b755e2345a164fa Use milliseconds for timeout
+		582e6433e913bc0ccc0ddd7c443503294393ec69 Add proper timeout handling to WiFiClientSecure
+		dd649808d174a88063846d6bdabb6cbc1a593c77 Add server connect timeout to HTTPClient (#2606)
+		fc737e08c617d27414ebf1a574f7ebdf9a968f38 Add connect timeout to WiFiClient (#2383)
+		0de0d3f79a71d5d5ab8a34d5cba90680e7d29036 move call to setTimeout() to after the client connects. (#2214)
+		2fda054bea45aa6d1be3ab4265406b0846247357 [OTA Timeout] Added ability set OTA timeout in the OTA client (#1669)
+		95b87545e71a70415500b83359e9e691962a1e54 Make Stream functions if File to not wait for timeout
+		7b243adcfdfdbddc76e571052e7becf310cde757 [OTA] Add UserSelectable timeout for invitation to device + check for OK result in the last few messages (#1445)
+Results: 3/15
+
+timer			19
+		94809ce38bd5fe0087d865244f177a084c4d33cb fix: timerRead() is returning the last read value, not the actual #3434 (#5498)
+rc		8f46bade7afe7b38f861b9da8c7284b3988dd7b9 Fix hardware timers
+rc		be77bd4e27228e10cf7132668f0f1fd2172f4a37 Resolve crash with timer interrupt functions called from ISR (#4684)
+		18832bb418a8cd47637e10dfde6ff86f7fb3fe04 M5TimerCam: add LED_BUILTIN & SS/MOSI/MISO/SCK (#4560)
+		dd1a15478f2635f9840cd2c3035dd03058eecde0 add TimerCAM and CoreInk board (#4498)
+		f32083a6d0afad8efc4d52b11091ccf55249dc29 Fix timerRestart
+		ec40c4c96f9088956ed95f5207b9385f33689602 Cast TimerWakeup conversion factor as ULL (#3027)
+		93c45af25640435f78532cc621ea159f525e502a Use esp_timer_get_time as time source for micros and mills (#1424)
+		20db2ee421f5bba2d1dd6aaab7b3442e498f7cdd Add Time and TimerWDT examples
+		af35773d65a8f328dba8090dff66ba43abe0e7be OK Really change timer allocator
+rc		17ece1bccdd6c9dc671a6b0bfd66c0a642f75672 Revert Timer Interrupt setup
+		6d985556586b6748e1248d35da9189e9b670fdd3 Change timer interrupt allocator
+rc		6707d4d331c1556ff98d9b5b87d6a5d2acc1a148 Optimize timer drift
+		b5ac95b2742cec4c24d4fe16406b95d38822ab8c Update RepeatTimer example
+		a83dd5f2b5bde6c2b2ac846fd1d1a7cd902899da Add RepeatTimer example (#216)
+		4e458fd6fb5fc77c72ab25ffdc4d932b9337e77c Initial Timers driver
+Results: 0/16
+
+iot				19
+rc		10602939cc1b81d10cdb74d0619c5d6ef7dee208 Added support for Trueverit ESP32 Universal IoT Driver MK II (#5269)
+		90d3ae25af576ed918a3d6ef807996fcbc69675d Added support for Trueverit Universal IoT Driver (#5219)
+		1f4491f4ee5b26b0e5996da409965b3f74bbf69e Updated AzureIoT submodule. (#4322)
+		09bff5027db3dd698ef62e5b3e44b82312f074cf Add a new board of KITS for IoT education (#3703)
+		9b75c65fc76ea67b7b8420dbc2c8ccc917182765 Add Senses's WEIZEN board from Senses IoT platform (#3687)
+		c09ec5bd3d35ba7dfc135755ab300e2b45416def Added MGBOT IOTIK 32A and IOTIK 32B boards (#3427)
+		e055b28d1a06ba60b355a1e87da79da9ad0d5590 Ignore Werror-maybe-uninitialized from Azure IoT Library (#2824)
+		512d0d088f5e39b7042669e00574feadcb461679 Add Turta IoT Node Board (#2208)
+		40d85ce5827c0844efa986dd1c669f06c2b7b280 Add submodule of Azure IoT library (#1448)
+rc	?	f5c2afff31338eb2239a0f0fb1f4e755e3584efc fix upload.maximum_size as current partition size 0x140000 for esp32vn-iot-uno & heltec boards (#1052)
+		fb595e575140d2192f181c96228dc4f03e90cf1b add esp32vn-iot-uno board (#398)
+Results: 0/11
+
+==============================================
+
+Project: johnny-five
+
+Words			Topics
+clock			1
+		52d4d564c039b922c7e757a33ab7eaa79a28668c Motor: only consider ["clock", "data", "latch"] relevant for making a register key (ignores possible "reset" key)
+		e468a4074d03f1a4065b9fe31143c792e0873fc8 Led.Digits: Dual clock display example
+		2f18a01f50a1c08691ccd4e5421f50aac2761f2f Examples: clock breadboard
+		cd786ec781bf30b9cf9da04e53a28b8ef221fce7 Examples: led status, clock
+		c35ae3369948ad48103285f4d71f91d6ba487987 Examples: update led digits clock
+		6c20125a9ac7255a5ee3825b46cecba079b022ea Adds continuous rotation clockwise/counterclockwise api extension demo
+Results: 0/6
+
+scaling			6
+rc	.	933043ba776328307d511f8d96ab1e0962b483a5 Fixed scaling factors (#1284)
+rc	.	211a6ace02e540c87d0218809db417e25b877b8e FIX: Correct scaling in gyro to represent default state of device ADD: Clarifications to some things around default values.
+rc	.	6e2cedbff86a840d0bde84b71efa875440839115 FIX: Correct scaling in gyro to represent default state of device ADD: Clarifications to some things around default values.
+rc	.	c7c2a43d8114473697460176d0ce4a6553857efd Light: fix analog scaling
+rc	mwn	add19d16351839f90a2151f2327f5116ed5ad445 Compass: combine scaling and heading calculation; conform to predominate controller pattern.
+rc	hcf	e387f14da5b0b8c83842522a5d4d3443dc3b6d26 Fix esc-dualshock scaling values
+rc	?	912f7ff070a7fcef8577bf4885315793030b39ed Implement customizable "Boolean Barrier" settings to allow scaling any sensor value directly to a boolean value
+rc		1af3ef3445cf15c6a78bb993d444cb57368a0fa6 Add hard scaling (TODO: make user settable)
+Results: 2/8
+
+duration		7
+rc		47df3da4c957b7e518d0e6f860189e4bdc40e982 Led/RGB: time/rate etc => duration
+rc		dba60f373371f310b7b9d72f8d1718cdf98203e4 Fix hint errors, add duration check.
+rc	?	1bd8b9cd10bfe50ec91da0db89d44d08b2f2be3f Led: Remove explicit default duration for .pulse() and .fade()
+rc	?	da060d662629012b6915ef284e06c10225ff620f Led: Make duration and complete optional in .animate()
+rc		49e26a54ae181b1869cd6343f5d7e4f6cce24988 Piezo.tone now throws Error if tone or duration are invalid. Tests updated to match.
+Results: 0/5
+
+improved		9
+		b9b70d2cfd2b4c1d456c5827de4f1a5a96ba1b86 Compass: improved test coverage
+		71ac3aad7cd50994235f3ae1679647c321bcb50c Fn: improved fmap
+		bf98fa170fc10425c60bcf5fd3579a569ea3e4f0 Animation: improved coverage
+		4b4915f7a9d3dce8285fda83b8724a9cc1232a39 Board: Improved coverage (followup)
+		9ba3e907608ef65f4aa6ed44f8bb27e6320ecb9b Altimeter: improved elevation requirement warning message
+		e08f482f44c53d27de3e0f2e2d817a29c5382ec2 Regenerate examples with improved titles
+		2a62407ede5fedf4c199d46f130bbe25215237d3 Improved titles in titles.json
+rc		29ef091024396fdd46731dc0f9580e09c122d84f v0.6.5 Improved multi-board support (initial API implementation)
+		2a1cbca8e3fcdfd57c28dd6980d4d45ffa1d1d49 Fixes #130. Improved Multi-board support
+rc	mwn	caf95b073569cdc3dc541db735d05bea8771e783 Complete LCD rewrite, supports 4 and 8 bit writing modes; Improved 'sleep'; drops 'tobinary' dep. Closes #38
+		1ba41ba1338697797bab4a53fecdf8f1b8a56799 Improved Radar app
+		e86fe2aecfd1145234f2b9610fa16e6b77382801 Improved logging messages from primary Board constructor
+		959e99e0b50fe4bd14bd9981cfacd9684f5f82d3 Improved handling of serial detection errors
+		08cf794a5359c84631c955e318fe0407df5e0baa Improved Accelerometer "axischanged" event
+		c01245fb21f10284005848afe63baef08ae2082b Improved comments/documentation
+		e464bf502b831f84aeea6b0601e64162f52e4089 Improved Servo.prototype.sweep, Servo.prototype.move
+		a9ee98e0408661c8da22daad174a2b5df64b030d Improved Servo API: min, max, center: all range constrained.
+Results: 1/17
+
+nitpicking		15
+		1893635f1258a79d7e66980b001c19f9a62c7d06 Examples: format nitpicking
+		f3ddbb5e52afcadf341d947ce9cb2a9014612932 Examples: Accelerometer nitpicking, Board, Exander, misc.
+		99ce13b5bd80e4792665c17d4325d5d4b3057c01 Examples: ShiftRegister nitpicking
+rc		3c1a68fd1fa122eda0f396ead5fc4f8b9e08cc71 Color: nitpicking garbage
+		1843e4f20c81142f8f272c41d00fc2f9fb728156 Constructor var decl order nitpicking
+		2ebd3810d396d0ea0aab69ea6518fabbb55a37a9 IMU: nitpicking comment notations
+		1d46f58fbf9a03dc1eaf7221b904729e887a14cc Test: nitpicking
+		e194de47a0751bfa3f0b9352c49a5f6bcb6ce20e IMU/Multi: register naming/nitpicking
+		2b423b5db122ea31f35ced0eb199b17c9e03bb11 IMU/Multi: TH02, example nitpicking
+rc		39c4fc03a5e0ca7fee3a2c22d215c8a7f7ed1b03 Thermomemeter: nitpicking
+rc		5d3901940e20c33ab36dc710ee9cbb5ecb19de50 Nitpicking
+Results: 0/11
+
+sensitivity		15
+rc	?	0a157fe31ef3d320b9f0ec7cc87a2782ad84d1bc use full-resolution sensitivity for every range
+rc	?	0e7e9dd15be9a0f60de42250bd23c0c87e6e95bf use full-resolution sensitivity for every range
+rc	re	3a5e2616f0f05b3e802dd41070110ced236e10de Accelerometer: ADXL345 use typical sensitivity (#1300)
+rc		8e3dc90c031c152571f3ff8fc707780cd70d0746 Keypad: invert sensitivity, higher s -> more sensitive.
+rc		98d88873d57afc8adb9de38fdbddcb8611a6ddc8 Soft-reset board to support new sensitivity setting.
+		c17b5835b3478ef54e2db7e64c8132bba51c2cac Soft-reset board to support new sensitivity setting.
+rc		fb2c0d811f2196d6bcfb4a191d827bff07beb6dd Keypad: MPR121 sensitivity parameters
+rc		580c48410b5126dc736707274b6500340ae6412c Added sensitivity option for MPR121QR2 (to replace hardcoded value)
+rc		309ddf6cc40e3116dbe6ddeebdc1c94533b7f9dc changing this.value to this.scaled to reflect light sensitivity
+		f554993735d1bc6eb01f46501f72c71360cf840a Merge pull request #554 from BrianGenisio/imu-accel-sensitivity
+rc	.	6db0358d92ad0f527ff9eff141e7752daec4a9ee Changing maxValue to sensitivity.  Getting the sensitivity from the datasheet
+rc		aa5b2b2c4e3418aa143247ab7a20c7c53df92681 Basic change sensitivity settings for Sensor instances
+Results: 1/12
+
+time			19
+			6a3fa4940d24082b72a7e1aa471f86377d4994a9 Examples: make Altimeter example output consistent
+			7f868d3f63a21c9ed655fe181b04c4669a08c83f Update Altimeter examples
+rc			d3d0607d821ab2fdddf96b7f1ae12f8ba9a846a3 Altimeter: fix floating point numbers in comments
+			13d24ffb67695e9f6dd67cc00d64f5cb7871fb89 Altimeter: fix BME280 comments
+			384ae774bfc811d332c29111991b1073b8ac1ffd Altimeter: fix BMP280 comments
+			df149ecf1c7b74072c3bc1116f0bddf2fcd9fedb Altimeter: fix BMP180 resolution comments
+rc		.	696b1cbd77d0da13b67dfaa6430f4f878dc46f42 Altimeter: add BME280 fractional digits
+rc		.	398e6b67fab6658c2b0222158cd40a8c976732b9 Altimeter: add BMP280 fractional digits
+			4150fa93ae74774034a7a937d1ce71ce80627d25 Altimeter: add BMP180 fractional digits
+			0fe4137af6a3ac940959ba53649544cb38efd7a1 Altimeter: add MS5611 fractional digits accuracy
+rc			010d49635864e784d8f341b4d01c3eed9fe1a56a Offset was being applied twice when to() was called with a time
+			68cde2889e3eeab5e5f2d4ad2e9bb25a9bd9d574 Servo values were being inverted twice when to was called with a time
+			841d69bc243550c9cb00ca7c0aaf138e54e2629d ci: run test and coverage check at same time
+rc		mwn	291a1dbf29870fd1d590725f420d169b1a77806f Multi: implement standby time for BME280 start up. Fixes gh-1274
+			44ed81aeb225d5efa196965439773db3c418091f Altimeter: adds generic Board.Controller call enforcement test
+rc			ace218d63363893726c3876e4f7d5ad9ba69efde Altimeter: enforced resolution for meters and feet values
+			2de3c7c91aa25a93320eea608d9742608afce9db Altimeter: 100% coverage
+			47df3da4c957b7e518d0e6f860189e4bdc40e982 Led/RGB: time/rate etc => duration
+rc			3c608c7ef19c34ce143da5b8ef02f0b4ea25cc79 Sometimes I annoy even myself.
+rc			a2f9fa701157d3acf4f42b5774bfb025a313c63b Multi: BMP180 notes re: conversion time values. Fixes gh-1104
+rc			bf0d1da84897268d5ebe9df522ae354717dccf46 Multi/Altimeter: Corrections to relative elevation (BMP085, BMP180, MS5611)
+			9e7f0ee06156ac61d11ad82b69be6e6e9e1c8153 Examples: BMP & MS5611 Altimeter; MS5611 Barometer & Thermometer
+			dd7423138a4d123a3ac8440652e3fb1eb9925923 Board: timeout property tests.
+rc			3b03090e6909493b0af08e78db1fde98829e772b Made board ready timeout configurable
+rc			b85bcebab8969b689c768324cdbb07029b2dfb5a Board: Add some leonardo specific guidance for connection timeouts
+rc			ee2f739d7596d9df11dbed0f865e1a6085c4ac02 IMU/Altimeter: Finesse elevations that are below sea level. It's magic.
+			9ba3e907608ef65f4aa6ed44f8bb27e6320ecb9b Altimeter: improved elevation requirement warning message
+			52376582f5df5019aada7cd5880f75387398daa6 Adding altimeter support
+			66a7d80b5ed343de6b9e9bedf35c185ba1109ace Adding altimeter support
+rc, rt	hcf	7941d817e4bfa7914940e7a66ebc28acbac74a94 Restrict pingRead requests to 65ms periods (+ request and response time). Fixes gh-896
+			85fa2c06397cccdd33d6873bdaea9a49009f965a Update nanotimer and piezo tests to stop failing on iojs. Fixes gh-890
+			84ede7b3aeada1d7425a6e505ff86eec243843a3 Fix bug in node 0.12.x where clearTimeout expects argument to have an id property.
+			489f19ec28db75c1f27de1328f8a92163ec5eadf Merge pull request #733 from Resseguie/servo-time
+			8c7bc21eb88fa01393c61709bd87616acce9f852 support time/rate in min/max/center
+rc			d4b402b11ccc16a74d09d946d137678456935506 Getting DS18B20 to work with multiple sensors at the same time
+			4587ed9146e1ff70640011b7f81041e6e03e8176 Fix Servo.to(degrees, time, rate) so that if you enter in the same value for degree it returns this
+rc		mwn	e5ac3f30493bf02f883681b65f5f12042993b7e3 ten second timeout
+			b5cbf4739af5b41c6504db00b9ac5b9cd3585536 Remove the race condition with clearing the timers.  Because stopping the tone was based on a timeout.  Two consecutive notes could cause the first timer to clear, but then the callback would clear the next (wrong) timer.
+			8cef9b3ba79050a91cb4b7f1dc5e2a39b257e62e Make sure that existing timers get cleared when new tones are played
+			e065515a36a35dd34a6e43ddb0761a2033f318af reworking the test so that the nanotimer can fire and we can test that tones get destroyed
+			2d851d1bd93e50a38e360afbe6bdf957fd6e0e02 Make sure that noTone cancels the tone timer
+			2395b99ee8350faa4da126fa28fc1ea1683db5d5 Rename timestamp to data and show data instead of this.raw (which doesn't do anything)
+rc			ef7424223d6bb6245735968d61ceae64b92f45e2 Support specified time in ms for servo moves. Now compatible with Torque programs
+			bff833b5f8efcd57a4f68d23acc8ec838f164b2b Tests for #238. Assert analogWrite not called with NaN when calling pulse for the first time
+			be0e428db13f56affd25d5786b22fe3b9f17c41d Rewrite sensor.js to use fakeTimers and mockFirmata
+			e12775a9ca4af8f336345a082950f24fc64e647b Update pir tests to use MockFirmata and FakeTimers
+			5651d32ef3979503eb2d0a15ae6934f7b0388779 [fix] Sonar doesn't emit timesampt
+			b336c8343dae1f5d4748c69136b833d0eef69ded Firmata always wants an options object or a callback otherwise we throw a "Cannot read property 'reportVersionTimeout' of undefined" error.
+			5de2e9e12e883fb2dcd358da2823cb7d8dd9b012 fixes for template - didn't have time to grunt docs due to some problems with my macbook
+			b9048a29c45cb65aaa8054871f4ff2b589e71c82 clear the previous timer if one exists when calling Led.strobe
+			fdfd40f9bc3d06b3779bd8b50cfa804bda2bffed Removed extra LED constructor & timer var. Closes gh-82
+			c9a826700e54be30b8e2077310451a2e2ebdb355 Remove unnec. this binding in SIGINT handler timeout
+rc			aa6da741bcd0f5c72b16f52881309404a5e4933f Clearing potential hold timeout conflict on buttons due to global holdTimeout use.
+			1dec85acc1fc6d07ea0c83ad56db1ccae9e3dc52 Remove microtime from dependency config
+			51a98a603aba87644e791e5cbf5fb7916992d843 Initial framework for Board prototype timer functions
+			db86d57de639602048437597db94afec84754f54 Consistent timestamp
+Results: 3/56
+
+speed			20
+rc	mwn	5f94bb571036f19461e6cb747ff962f9df54698d ESC: Removes speed because there is no safe reason to continue supporting it.
+rc		f7f1eabb1a4978e020bbb86972f2dad8c9ea8c9f Remove superfluous speed param
+rc		fc388cc39b274f98459f83df6a32dda7f9148f86 ESC: Bidirectional speed controller (Forward/Reverse) support. Fixes gh-530
+		56c21c615497873fec71324339cf1ad30e639565 added comment mentioning optional speed parameter in Motor.start
+		5b49e811afa86ddf9a61221cd6c57427154c9e7b Revert "added comment for Motor.start to mention optional speed argument"
+		fe02bde772b4e6614f6bbb7b810892199de3ac4d added comment for Motor.start to mention optional speed argument
+rc	hcf	d558abba2450047654b0560335f33e5ce7094ec4 Speed up ESC writes
+rc		bd44207cc5a58954b92c56b93533a7996f870052 ESC.prototype.speed(0-100%): additional fixes and tests
+		60cc0dd419200a6941cd7400e1e262c79e76f19f Merge branch 'master' of https://github.com/rwaldron/johnny-five into right-rpm-speed
+		23546d0556bd9268974568428f58ce9518e37d0e right rpm to speed to rpm conversions
+		8435a6f17866078505e1c761e4bc5d66f94f4590 ESC speed values refactor. Uses 0...1 (fractional values) as percent of total speed.
+rc		76d6da1ce61ce7a8d49fa2c74ddfd24403ad369f Update motor.speed
+		96522392ed9aedda87d6b8f7062136a9de9cef5a Make cw/ccw speeds 0-1. Remove obsolete "fireEvent" boolean arg from Servo.prototype.move
+		abc3418c8d76195a803b9338e326ef3607893117 Add speed controller and modify the handling of turn controls to "stop by default"
+		71c61b287f43cd03789b9736acd295477baeb707 Merge pull request #133 from reconbot/default-servo-speed
+		3fe5e1dbfed744c52697e8dec121a929beeefbc0 Default to max speed when leaving out the speed on servo.cw or servo.ccw
+rc	?	d1d9dc8b7b4b5eb5330ade4b2423713ac6f6bbec Allow custom Ping pulse loop speed.
+		b73b752644942a4974254f38e22d97ea5e317bb2 Note the default speed of Led.prototype.strobe() in readme example
+rc	hcf	00d8d93a60268e6575dfd09b6f50e26f418c229f Reduce the default speed of Led.prototype.strobe()
+		06c09b47820d1ac5579f715d36107c25c3e8be3b Servo: switch to use Board.Pin.is__(); Document continuous speeds
+Results: 3/20
+
+==============================================
+
+Project: node_ar_drone
+
+Words			Topics
+missing			1, 4, 16
+
+Results: x/y
+
+errors			1, 5, 18
+
+Results: x/y
+
+simplify		2, 16
+
+Results: x/y
+
+timeout			3, 4, 18, 20
+
+Results: x/y
+
+drop			3
+
+Results: x/y
+
+explicit		3, 10
+
+Results: x/y
+
+expose			4, 11
+
+Results: x/y
+
+size			5, 7, 20
+
+Results: x/y
+
+pave			5, 19
+
+Results: x/y
+
+wip				6, 20
+
+Results: x/y
+
+increased		7, 8
+
+Results: x/y
+
+broken			12, 20
+
+Results: x/y
+
+fixes			13, 14, 16, 19
+
+Results: x/y
+
+failing			14, 20
+
+Results: x/y
+
+check			17, 19
+
+Results: x/y
