@@ -34,10 +34,26 @@ library(corpus)
 # project_name = "apollo"
 # project_name = "qgroundcontrol"
 # project_name = "PX4-Autopilot"
-project_name = "ardupilot"
+# project_name = "ardupilot"
+
+# project_name = "node-ar-drone"
+# project_name = "grbl"
+# project_name = "Valetudo"
+# project_name = "johnny-five"
+# project_name = "cylon"
+# project_name = "android_app_manager"
+# project_name = "PX4-Autopilot"
+# project_name = "dronekit-android"
+# project_name = "robonomics_contracts"
+# project_name = "turtlebot"
+# project_name = "arduino-esp32"
+# project_name = "robonomics-js"
+# project_name = "stofzuigerrobot"
+project_name = "turtlebot3"
 
 # output_path = "C:/Users/Imara/Documents/Server_results/Commit_history_20221101/commits_files/dir_split_files/GAAS"
-project_path = "C:/Users/Imara/Documents/Server_results/Commit_history_20221101/commits_files/dir_split_files/"
+# project_path = "C:/Users/Imara/Documents/Server_results/Commit_history_20221101/commits_files/dir_split_files/"
+project_path = "C:/Users/Imara/PycharmProjects/CPS_repo_mining/T-Model/t_model_2/dir_split_files/"
 output_path = paste(project_path,project_name,sep="")
 print(output_path)
 
