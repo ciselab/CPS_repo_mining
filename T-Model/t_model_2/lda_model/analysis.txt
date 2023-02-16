@@ -11,6 +11,7 @@ turtlebot3				27		17
 Valetudo				93		1
 arduino-esp32			101		4
 johnny-five				135		10
+node_ar_drone			51		2
 ==============================================
 Legend
 rc = Read the Code: from this commit the code was read (beside reading the commit message).
@@ -668,61 +669,97 @@ Project: node_ar_drone
 
 Words			Topics
 missing			1, 4, 16
-
-Results: x/y
+		d73074206ee4122ce21f64aa717504f08790226f Fixed missing var.
+		0cf48cb5785b50d85ef59ecf201de1a0152342f3 Missing comma
+		7ca3214e7f38e985290ab94623e222f89b6022bd Add all missing navdata blocks (`magneto`, `windSpeed`, `games`, etc).
+		f0495a401d4778c333e50dcbe21c928406324259 Add note about missing docs
+Results: 0/4
 
 errors			1, 5, 18
-
-Results: x/y
+		aa776a37d28ec3c488a1f6e1d6e6560ad90051b8 Updated to remove listener from socket, forward errors from socket to client
+		320c8d447e73b2287c47d1547a71457cb8e9968b Fixed errors in GPS data definitions.
+		166a049060e6e7b275e010454f4cfe4e3742c79a Fix uncatched errors when failing to spawn ffmpeg
+rc		d1d3dc5dbd855532e54b5bf17a5f5bc08bb789c5 Remove detritus which is causing errors.
+		c2c6615979cfd403ed44f0f760a626f855d4f34f Addressing spacing and syntax errors from a borked commit.
+		9ead1ed41bb0af1582815c961204afbe4dea53a4 Allow catching navdata errors
+Results: 0/6
 
 simplify		2, 16
-
-Results: x/y
+rc		0d2ba9699b93ec6dd7b93585470d4d38301645c2 Simplify repl
+rc		0f97f8cf402adb279aa24acc24bf0bf19cc8833c Simplify code
+Results: 0/2
 
 timeout			3, 4, 18, 20
-
-Results: x/y
+		3cd3037551c6f26b9b6f61a9a2e94e85f54ebae5 Increased delay in test to trigger timeout.
+rc	mwn	9495035c4345448e4ae182fde4439ca6d48efcc5 Increased default timeout to 500 ms.
+		538e61fc94f464ae920b551ac489bb46abe7df0b Handle navdata re-requesting after timeout
+rc	.	c8196ef3fb7628a16a555e1267b02625fc700240 TcpVideoStream timeout handling
+Results: 1/4
 
 drop			3
-
-Results: x/y
+		e9857de828c07f2c3ffc14f4f789740f41e4e111 Merge pull request #81 from janpieper/drop-duplicate-test
+		70c4bbc49b076d43a91a17bc9c65144e97372d5e drop duplicate test
+		d39daa87b819c3e4ae3d59700f724bbb1c3de3da Merge pull request #80 from janpieper/drop-unused-variables
+		e68bdd6395bf9e504063ff098beabb5a79178338 drop unused variables
+Results: 0/4
 
 explicit		3, 10
-
-Results: x/y
+rc		4ec60e035b6f9fe2390d8d533d51e9b6115a2fce remove explicit port bind
+		ecb30f10ebafff32989d5b38d5508488dc6f2bdb Allow explicit flag setting again
+Results: 0/2
 
 expose			4, 11
-
-Results: x/y
+		4a40865afd493c9ee911950c474f16aa74270b30 Expose client to REPL
+		81c4856f3af876816b0c0a245df26b67c19943fd Expose UdpNavdataStream and add #destroy()
+		675343511c606b93bed5a333455907d447cb6ce7 Add PngStream and expose it along with UdpControl
+Results: 0/3
 
 size			5, 7, 20
-
-Results: x/y
+rc		3056077aea721b3e80f81883b30d72d912035d33 add image size option to png encoder, also add frameRate and imageSize options to readme
+		936130846deca3a9710cd61f51b3ccfd961e6c7e Merge pull request #9 from bkw/PaVE-headersize68
+		67a27926fb3529495c9fcc601fab6fb2484e17ca add test for 68 byte size PaVE frames
+rc		77b1d44d32e90f696ef647df4e8752591581bd6b only advance when buffer size allows
+Results: 0/4
 
 pave			5, 19
-
-Results: x/y
+		936130846deca3a9710cd61f51b3ccfd961e6c7e Merge pull request #9 from bkw/PaVE-headersize68
+		67a27926fb3529495c9fcc601fab6fb2484e17ca add test for 68 byte size PaVE frames
+rc		ca205faa13cecd1b1be95d3565d4f72173c57046 add workaround for 68 byte PaVE headers
+		1c3116f8e94b32c82f9748be6be6b1d045c3b1c2 Check signature in PaVEParser
+		1e93ca2b1c03c5d6428bd4a649940114900a5120 Add PaVEParser parser and tests
+Results: 0/5
 
 wip				6, 20
-
-Results: x/y
+		16c9605bd1e9335be009e8347fda99dedb2d3c58 WIP commit. Adding tests for 9(?) of the 22(?) new `navdata` objects.
+rc		ad95d1ffefc4ca739a14247c1aeea3df694c824f WIP: More Navdata parsing
+Results: 0/2
 
 increased		7, 8
-
-Results: x/y
+		3cd3037551c6f26b9b6f61a9a2e94e85f54ebae5 Increased delay in test to trigger timeout.
+rc	mwn	9495035c4345448e4ae182fde4439ca6d48efcc5 Increased default timeout to 500 ms.
+Results: 1/2
 
 broken			12, 20
-
-Results: x/y
+		621dc688b30a1d2e5d07315a8dafcbf9fa71ea96 Skip broken test
+		97e8253c7ad17652efea11e5ba9579ff76595fd3 Skip broken travis test
+Results: 0/2
 
 fixes			13, 14, 16, 19
-
-Results: x/y
+		d57b40a0b5d01da460ceeeac8c0f427a972d5b45 Fixes client up/down, left/right, front/back, clockwise/counterclockwise functions to accept 0 speed. Adds test. Resolves #106
+		9a5d0a553fd148864deded61b61389be20810740 Fixes a typo
+		bdb3d4f9ce0cb36a4db666082ed86fec5ee709d2 Style fixes for sample code.
+		7a44599b6f28802981c60bc796b0940d652e94a8 Document how to access the bottom camera, fixes #35
+rc	?	59368e95d77fe9694a603b16a703ea1836b81f99 New Client and bug fixes
+Results: 0/5
 
 failing			14, 20
-
-Results: x/y
+		166a049060e6e7b275e010454f4cfe4e3742c79a Fix uncatched errors when failing to spawn ffmpeg
+	.	5b3fdb5c3d89ed5571cebd509b0bd3e3e031b30a Disable failing test for now
+Results: 0/2
 
 check			17, 19
-
-Results: x/y
+		b8e199613d88dc4c3315b15df2c5e9a3165c049d check files in examples directory to be jshint compliant
+		1c3116f8e94b32c82f9748be6be6b1d045c3b1c2 Check signature in PaVEParser
+		86005e83dfa37602112b0b9046d33f5feb4fde0c Check in navdata fixture
+		971ed3fb210bd3c4276addc4b4d813b3c616a301 Check in latest stuff
+Results: 0/4
