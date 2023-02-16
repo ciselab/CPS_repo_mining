@@ -1,0 +1,77 @@
+Project: arduino-esp32
+
+Words			Topics
+corrected		2
+optimize		5
+wrong			7, 8, 10
+size			6, 9, 16, 18, 19, 20
+timeout			17
+timer			19
+iot				19
+
+==============================================================================================================================     
+      Topic 1       Topic 2      Topic 3            Topic 4       Topic 5          Topic 6          Topic 7     Topic 8    
+ [1,] "boards"      "wifi"       "pins"             "support"     "update"         "size"           "return"    "idf"      
+ [2,] "update"      "remove"     "read"             "esp"         "support"        "libraries"      "wifi"      "update"   
+ [3,] "buffer"      "ic"         "debug"            "issue"       "fixes"          "handle"         "updated"   "releasev" 
+ [4,] "return"      "fixes"      "interrupt"        "usb"         "boards"         "remove"         "wrong"     "component"
+ [5,] "compilation" "httpclient" "wificlientsecure" "error"       "idf"            "flash"          "event"     "remove"   
+ [6,] "camera"      "client"     "flash"            "idf"         "api"            "connect"        "missing"   "wrong"    
+ [7,] "partitions"  "custom"     "serial"           "uart"        "enable"         "library"        "enable"    "lib"      
+ [8,] "platformio"  "string"     "error"            "cdc"         "minor"          "methods"        "gitignore" "properly" 
+ [9,] "uart"        "pin"        "lolin"            "method"      "implementation" "certificate"    "arduino"   "default"  
+[10,] "api"         "examples"   "sketch"           "serial"      "headers"        "print"          "eeprom"    "link"     
+[11,] "tx"          "server"     "hal"              "menu"        "adding"         "custom"         "compiler"  "device"   
+[12,] "log"         "serial"     "touch"            "feature"     "partitions"     "char"           "udp"       "arduino"  
+[13,] "format"      "correct"    "update"           "defines"     "errors"         "travis"         "debug"     "mkspiffs" 
+[14,] "url"         "enable"     "comment"          "frequency"   "optimize"       "buildreleasesh" "lopy"      "flag"     
+[15,] "returning"   "ssid"       "compilation"      "espc"        "master"         "esptoolpy"      "update"    "current"  
+[16,] "lolin"       "esps"       "ledc"             "staleyml"    "uart"           "dns"            "idf"       "menu"     
+[17,] "pin"         "sizet"      "adding"           "sketch"      "refactoring"    "table"          "comment"   "locks"    
+[18,] "server"      "reference"  "wire"             "travis"      "print"          "string"         "upload"    "path"     
+[19,] "parameter"   "wificlient" "stack"            "master"      "rework"         "list"           "append"    "sparkfun" 
+[20,] "adc"         "corrected"  "directory"        "platformtxt" "camera"         "pin"            "written"   "issues"   
+
+      Topic 9        Topic 10      Topic 11     Topic 12      Topic 13       Topic 14     Topic 15    
+ [1,] "board"        "error"       "wifi"       "issue"       "error"        "master"     "board"     
+ [2,] "missing"      "enable"      "pin"        "library"     "windows"      "fixes"      "update"    
+ [3,] "update"       "compilation" "issue"      "update"      "idf"          "platformio" "wifi"      
+ [4,] "support"      "partition"   "disconnect" "missing"     "change"       "table"      "change"    
+ [5,] "boardstxt"    "board"       "client"     "libs"        "time"         "spi"        "core"      
+ [6,] "ttgo"         "ble"         "return"     "support"     "functions"    "remove"     "idf"       
+ [7,] "arduino"      "option"      "support"    "scan"        "pinsarduinoh" "message"    "files"     
+ [8,] "definition"   "user"        "ble"        "warning"     "readmemd"     "called"     "const"     
+ [9,] "esptool"      "examples"    "stream"     "enabled"     "arduinoh"     "sdmmc"      "issues"    
+[10,] "cleanup"      "return"      "compile"    "definitions" "warnings"     "upload"     "disable"   
+[11,] "size"         "exception"   "pins"       "ic"          "support"      "ttgo"       "partitions"
+[12,] "httpupdate"   "wificlient"  "rework"     "webserver"   "incorrect"    "method"     "spiffs"    
+[13,] "heltec"       "wrong"       "typo"       "driver"      "definition"   "script"     "bit"       
+[14,] "bit"          "overload"    "options"    "toolchain"   "arduino"      "ip"         "define"    
+[15,] "instructions" "rmt"         "images"     "bit"         "false"        "event"      "ota"       
+[16,] "compile"      "level"       "bootloader" "request"     "uart"         "messages"   "ssl"       
+[17,] "espc"         "yield"       "correct"    "arduino"     "board"        "status"     "api"       
+[18,] "minor"        "linux"       "includes"   "micros"      "returning"    "version"    "callbacks" 
+[19,] "variants"     "core"        "started"    "component"   "buffers"      "git"        "windows"   
+[20,] "pulsein"      "adjust"      "idf"        "parameter"   "connection"   "uart"       "callback"  
+
+      Topic 16                            Topic 17       Topic 18      Topic 19     Topic 20    
+ [1,] "update"                            "timeout"      "board"       "update"     "partition" 
+ [2,] "esp"                               "default"      "esps"        "include"    "update"    
+ [3,] "missing"                           "wificlient"   "typo"        "implement"  "change"    
+ [4,] "examples"                          "espidf"       "debug"       "function"   "check"     
+ [5,] "path"                              "spi"          "readmemd"    "variant"    "spiffs"    
+ [6,] "board"                             "correct"      "files"       "handling"   "method"    
+ [7,] "create"                            "update"       "ic"          "readmemd"   "ble"       
+ [8,] "address"                           "updated"      "improve"     "threadsafe" "flush"     
+ [9,] "size"                              "mode"         "method"      "component"  "nvs"       
+[10,] "component"                         "ota"          "print"       "changed"    "mb"        
+[11,] "release"                           "connected"    "ledbuiltin"  "class"      "psram"     
+[12,] "definitions"                       "remove"       "basic"       "size"       "argument"  
+[13,] "response"                          "submodule"    "implement"   "release"    "arduinoota"
+[14,] "installation"                      "function"     "adafruit"    "parameter"  "size"      
+[15,] "httpsgithubcomespressifarduinoesp" "ble"          "platformtxt" "timer"      "windows"   
+[16,] "frequency"                         "client"       "boardstxt"   "ic"         "label"     
+[17,] "uintt"                             "readmemd"     "size"        "usb"        "reduce"    
+[18,] "minor"                             "macros"       "hardware"    "string"     "errors"    
+[19,] "adds"                              "bleclientino" "create"      "folder"     "api"       
+[20,] "external"                          "wpa"          "server"      "iot"        "boardstxt" 

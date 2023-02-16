@@ -1,0 +1,93 @@
+Project: grbl
+
+Words			Topics
+cleaned			1, 2, 8
+reflect			1, 19
+caused			1
+changed			1, 5, 15
+error			1, 8, 10, 14, 15, 17, 18
+refactored		1, 4, 7, 12
+override		2
+cleanup			3, 5
+tidying			3
+optimization	3
+disabling		3
+size			4, 18
+edit			4, 6
+edits			4
+speed			4, 15, 20
+improved		6, 12, 13, 19
+rate			6, 7, 14
+computation		6
+clean			7
+tweaks			8, 15
+optimized		12, 15
+corrected		13
+realtime		19
+
+==============================================================================================================================   
+	  Topic 1      Topic 2         Topic 3        Topic 4      Topic 5     Topic 6         Topic 7      Topic 8       
+ [1,] "module"     "updated"       "control"      "support"    "request"   "improved"      "minor"      "command"     
+ [2,] "step"       "readme"        "cleanup"      "arc"        "update"    "support"       "enabled"    "issue"       
+ [3,] "cleaned"    "cleaned"       "position"     "edit"       "planner"   "cycle"         "support"    "error"       
+ [4,] "script"     "spindle"       "variable"     "master"     "time"      "gcodec"        "function"   "handling"    
+ [5,] "grbl"       "override"      "planner"      "variable"   "cleanup"   "option"        "refactored" "formatting"  
+ [6,] "reflect"    "option"        "configh"      "size"       "restore"   "laser"         "default"    "stepper"     
+ [7,] "caused"     "tool"          "acceleration" "dev"        "feed"      "script"        "updates"    "refactoring" 
+ [8,] "simulator"  "serial"        "reset"        "limits"     "removed"   "rate"          "rate"       "note"        
+ [9,] "port"       "planner"       "mist"         "edits"      "configh"   "compatibility" "edge"       "disabled"    
+[10,] "print"      "cycle"         "tidying"      "feed"       "switches"  "bytes"         "options"    "cleaned"     
+[11,] "changed"    "dry"           "optimization" "solution"   "parser"    "moved"         "cycle"      "support"     
+[12,] "buffer"     "print"         "comment"      "speed"      "mega"      "edit"          "hard"       "commit"      
+[13,] "internal"   "formatting"    "licensing"    "report"     "reporting" "conflicts"     "change"     "functions"   
+[14,] "gcc"        "stepper"       "hard"         "bit"        "alarm"     "computation"   "checks"     "defaults"    
+[15,] "methods"    "config"        "repo"         "interface"  "reorg"     "missing"       "clean"      "homing"      
+[16,] "error"      "slope"         "real"         "refactored" "position"  "update"        "include"    "tweaks"      
+[17,] "feed"       "variables"     "disabling"    "bump"       "feedback"  "spindle"       "scripts"    "steps"       
+[18,] "pwm"        "accelleration" "update"       "arduino"    "arc"       "constant"      "solution"   "deceleration"
+[19,] "scripts"    "protection"    "typo"         "pushed"     "changed"   "min"           "pin"        "complete"    
+[20,] "refactored" "flash"         "output"       "modules"    "space"     "streaming"     "optional"   "goperations" 
+
+      Topic 9        Topic 10       Topic 11         Topic 12        Topic 13        Topic 14       Topic 15    
+ [1,] "fixes"        "pin"          "update"         "minor"         "minor"         "request"      "planner"   
+ [2,] "removed"      "spindle"      "readmemd"       "refactored"    "updates"       "reporting"    "dev"       
+ [3,] "makefile"     "error"        "version"        "probe"         "gcode"         "pin"          "step"      
+ [4,] "laser"        "minor"        "parameters"     "real"          "request"       "gcode"        "eliminated"
+ [5,] "control"      "refactoring"  "alarm"          "fixes"         "probing"       "pins"         "info"      
+ [6,] "command"      "edge"         "pwm"            "output"        "calculation"   "enable"       "tweaked"   
+ [7,] "cycle"        "update"       "spindle"        "comment"       "corrected"     "atomic"       "changed"   
+ [8,] "constants"    "streaming"    "implementation" "spindle"       "messages"      "acceleration" "note"      
+ [9,] "parking"      "fixes"        "parking"        "parking"       "buffering"     "stepper"      "som"       
+[10,] "minor"        "direction"    "overrides"      "documentation" "documentation" "rate"         "readmemd"  
+[11,] "defaults"     "invert"       "feature"        "handling"      "ignore"        "status"       "speed"     
+[12,] "dependencies" "homing"       "format"         "makefile"      "hold"          "feedrate"     "power"     
+[13,] "switches"     "gcodec"       "command"        "testing"       "builds"        "renamed"      "save"      
+[14,] "message"      "housekeeping" "functions"      "shapeoko"      "eliminate"     "eliminated"   "tweaks"    
+[15,] "atmega"       "issue"        "files"          "optimized"     "lot"           "grblh"        "stepper"   
+[16,] "tweak"        "target"       "configh"        "enabled"       "improved"      "flash"        "optimized" 
+[17,] "untested"     "updates"      "search"         "improved"      "lowering"      "rare"         "purged"    
+[18,] "typo"         "commit"       "function"       "info"          "parking"       "error"        "error"     
+[19,] "grblh"        "format"       "bits"           "enable"        "enable"        "pwm"          "additional"
+[20,] "gcodec"       "settings"     "block"          "min"           "pin"           "mode"         "streaming" 
+
+      Topic 16    Topic 17    Topic 18                 Topic 19      Topic 20      
+ [1,] "updated"   "settings"  "mode"                   "flash"       "fixes"       
+ [2,] "grbl"      "homing"    "dev"                    "protocol"    "speed"       
+ [3,] "removed"   "limit"     "request"                "stepper"     "motion"      
+ [4,] "minor"     "readme"    "buffer"                 "reflect"     "minor"       
+ [5,] "defaults"  "updated"   "overflow"               "variable"    "compile"     
+ [6,] "hardware"  "planner"   "management"             "request"     "files"       
+ [7,] "updates"   "serial"    "sim"                    "limit"       "protocol"    
+ [8,] "gcode"     "time"      "baud"                   "commenting"  "map"         
+ [9,] "motion"    "error"     "size"                   "updated"     "github"      
+[10,] "feature"   "pwm"       "compatibility"          "improved"    "link"        
+[11,] "planner"   "updates"   "create"                 "enable"      "acceleration"
+[12,] "comments"  "script"    "httpsgithubcomgrblgrbl" "option"      "post"        
+[13,] "readmemd"  "moved"     "eliteengdev"            "bit"         "safe"        
+[14,] "spindle"   "interrupt" "acceleration"           "refactoring" "gcodec"      
+[15,] "streaming" "parameter" "rates"                  "realtime"    "output"      
+[16,] "parser"    "reset"     "systemc"                "reports"     "updated"     
+[17,] "pins"      "called"    "rare"                   "avrsize"     "disabled"    
+[18,] "mapping"   "debug"     "error"                  "types"       "updates"     
+[19,] "todo"      "readmemd"  "restore"                "systemc"     "control"     
+[20,] "ontop"     "update"    "housekeeping"           "rare"        "pin"         

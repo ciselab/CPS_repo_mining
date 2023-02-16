@@ -1,0 +1,1204 @@
+93e011b984fe03bfba45a976fd4193502c94956e docs: Add AutoEmptyDock trigger HomeAssistant example (#1133)
+bb951b2fcddb6435bfe6b838044cc2af7b0c235f fix(mqtt): Fix zone cleanup (#1130)
+72a470d1fab730c2459a4962b8344b0960ef0fa1 docs: Remove outdated FAQ
+d268013b9c93b4dc610cb8374a3316d9e2a842a9 fix: Use shorter model names
+9b143ecdcef25061cf19981189d78f674557260b docs: List recommended binary for each supported robot (#1122)
+01088ecdadaaefbb7e2b2d812d2377a01277bf00 chore(release): 2021.10.0
+3990418db1927698f8448aec890ea044e9cec8a2 docs: fix robots url in building-and-modifying-valetudo.md (#1117)
+2371878cd48e19b57fce61b4200d76a1cc30257b feat(ui): HTTP Basic Auth and NTP client config (#1118)
+7e9ef04b2fa5d8fb4d5f7e8d3fa88366592873ea feat(ui): Manual control (#1114)
+3e7118414b6b190750e3f606c93e1b052d78b898 feat(ui): Wifi configuration (#1116)
+36a3bae630dfc84c6a2e610ef35e93a002470857 fix(webserver): Fix reflected xss vulnerability
+313caa10ea0a246ea05dd4ba3fca83e374e75cdc fix(ui): Fix mobile Icons in new frontend (#1113)
+007926b90881664e9b0c718e7c3ef21ad306e233 fix(ui): Stop events badge flashing when it reloads (#1115)
+58d09465ea16410079c3bde223d39ca85c2dd0c8 docs: Add Android Companion
+3fb894edc8c4f6c3fcb8de53459e66e20ae5959a chore(build): Increase armv7 heap size to accommodate for nodejs' increased requirements
+935f903981ad5f98e9224cae143396b353a195db feat(ui): DoNotDisturb configuration & Masonry on large screens (#1112)
+5fd0354eabd91aa50cc42120bdabdf6947aaf604 fix(ui): Allow start and home basic commands on error state
+12ec2b3c35ecd588bb291f7279f70ee52278417f chore(ui): Update dependencies (#1109)
+0d02c278edaf1ea60810990455b33175b957acc7 feat(ui): Manage voice packs (#1108)
+c00d1749c26bec217a60a529166c5f8bf6de3dba fix(ui): RatioBar background color
+196a29e1549ffd46fddcd78c7c8bee9b2d1e8c21 fix(ui): Blue line between buttons in PendingMapChangeEventControl
+957463a9de34e4e7c3fafe5d94fdd6360b4a2f88 fix(ui): Root grid height
+da0cce588eee9c6065bb2ad4f2890b19cd8c5e59 fix(ui): Import ToggleButton from core
+1d9a244412b235ed2da71d594cb77d00fd9eae45 fix(ui): Root grid height
+5177c4780d29411aa0d3f8fbb7437f9f1dae91c5 chore(ui): Refactor to useCommittingSlider
+fa3126895dd680bf3adb1fffca1058afca7c54e3 chore: Add valetudog svg
+6777f3aa7bbf4ef5afea5a3ba8fdecd2aa8f150e fix(ui): Remove persistent data hint
+0077e17c224918b363410211236bcd580089c8ca chore(ui): Fix typo
+4b43b370663ca44f03d82ba828026169075d670c feat(ui): Robot settings (#1097)
+a624ddba64c80615c2c98e0605986a387fd92d3d chore(docs): Add MapSegmentation MQTT example + D9 Pro description
+fdabcc52be3553f01648997ec714133e27a6e7cc fix(mqtt): Fix MQTT Zone cleanup
+84f2d6b568d786a19105f9729efe74091b8c9c13 chore(build): Bump to NodeJS v16.10.0
+842aea125b97a33adbf28c3b0c9d1cf84c069943 fix(ui): repair light mode (#1103)
+2f83d8ea02aaefde8f132909071ca9bf7367de74 feat(ui): Consumables bottom view sensors (#1104)
+35f91e8cf43f0be7c22ec35f9a2da3f731a1f5ed chore: Update license
+cc50a8c6e4cab7a04c68ca61d21e59e15a3a59cb feat(vendor.dreame): Add Dreame D9 Pro
+36b5b61327193faf6b694abba9b141c1c96aacb6 chore: Logo cleanup
+ed660d290a4d250f87055de699c2096fa84ba2b2 chore: Dependency hell
+78a9ebe6b1bb3c43f176d6aa7225c8affae01cff chore(build): Bump to NodeJS v16.9.1
+6ed3fde59c69b4cdc8b75b3c314024928a98c1b4 chore: Add time logging to upx compression script
+609bc724206a10cd166244f74d74032d658fe368 chore(release): 2021.09.1
+21bd8aaa9f6eaa86ba37571ba7167b850defab28 chore: Fix docs generation
+94c8da29c6f3f3adc3e9f02b546dd258e4bd30bc fix(core): Accepting/rejecting a pending map change should always invalidate a pending event
+5765994c8d353573464d6c512082004a768de3ad chore: Some deepscan fixes
+d705c5bc67cff5cb4b085893f428bf7794a26bb1 fix(ValetudoEvents): Resetting a consumable should also set its event to processed
+b1713dff26a2bcfd707bd88fa0dcf3acbde4faa1 feat(core): Robot properties
+144d6edacdf264b5a835ee184c1639f982231d25 feat(ui): Consumables in new UI (#1093)
+1721df7dd6969fba8acd63d726a8ca14d1977afd feat(ui): Log with SSE and display log in new UI (#1092)
+7ebbafce307fc5b3e07f73f3652d154a63d3a248 fix(ui): Timer action controls Memo dependency (#1091)
+27fd2ba97e98f534c20ca6e22b0d46510f355706 feat(ui): Navigation and Events in UI (#1090)
+60972ca6dd8d8200d8c25a2e4e084c04f97ef8ce feat(vendor.dreame): DreameDoNotDisturbCapability
+ece2dc9d6d5baafa4d0aa291565087bf2e1f6148 feat(ui): Show runtime info on about page (#1089)
+fa2def7c65a2641ec6321fcdfb4c3975e607867d feat(ui): Add button to trigger dock auto empty manually (#1087)
+8736f7fc9ee1d76dcb8a5c21975f85040fbfd723 fix(ui): Improve word breaks in MQTT topic preview (#1088)
+5b6688778bd3efb884e027b51d2989e28c7252af fix(webserver): Strip credentials from mqtt config REST response and remove ssh key upload
+d371980d3744bcc714eb8d8f126a1f7af749585a chore(docs): Clarify dreame rooting instructions
+bfbf4dd7192a443ca7e49d9efa0f382040370741 fix(webserver): Terminate SSE connections on shutdown for a clean shutdown
+b7aed1afa217ebd90f411c91844a28f05946460d feat(vendor.dreame): DreameAutoEmptyDockManualTriggerCapability
+31cb972d89cba474c3c8732e969015a5bb5d9851 feat(MockRobot): MockAutoEmptyDockManualTriggerCapability
+5678d4fd8e3dab9364182fa8f40fa09465bc77eb feat(core): AutoEmptyDockManualTriggerCapability
+a1fa6d8a14bad572aca4ce6af714cacb9d4e1760 feat(vendor.dreame): DreameAutoEmptyDockAutoEmptyControlCapability
+eeeb46c8a2152049392b7df06c952dc44b101d98 feat(core): AutoEmptyDockAutoEmptyControlCapability
+ca9a49939d9499dddfc9f77aede70c655758031a feat(vendor.dreame): DreameObstacleAvoidanceControlCapability
+e5fab92172dd6c024201218bbe4889a770c3f7c2 feat(core): ObstacleAvoidanceControlCapability
+9970f62587b8d92b324e1d890eebf2ef49568017 chore(vendor.dreame): Set max segment iteration count to 4
+865905ea58bfff9187c7463fce3a312b738a1e90 feat(ui): Show MQTT topic preview (#1082)
+79ec8afb07523da0bd234dd1bfb7e1100e1a5316 chore(docs): Remove link to cloud nonsense
+c4f6fabc62c69b6573782e31511f8df02ea2e7a3 fix(webserver): Remove obsolete mqtt config password stripping
+711c312cc41fff57867e5b97d4e867b3ef41b4c3 feat(ui): Show MQTT config defaults
+2dd83e3a8c8e8c1629f873b9d20a52f7337fbcd9 feat(ui): Implement MQTT config ui (#1080)
+7e6962bd8094120168c960d550027efbf3a53d73 feat(webserver): Provide mqtt config properties
+ac19d5d2c1751c12d614ebf2c8cb701cdc7a0473 fix(ui): Show old ui timer page even when there's no DoNotDisturbCapability
+5252e79b9be28ca2f231e2a572cf62563f10cddc refactor(ui): Minor timer cleanup
+f790db3ec1eadcaa91726a75ac994b5d527058f4 fix(ui): Make timers use correct time zone offset (#1079)
+b53d428846f3013768827296b193ed68f4ca0255 fix(ui): Remove staleTime: Infinity for queries that should actually refresh automatically
+71bd3dd6f32c75bcc5b22eccaf6167e4eb1bc3e3 chore: Remove prettier
+abd63454588e510d23d55c4f08a1caad1cc7c649 feat(ui): Implement timer ui (#1077)
+105d02a67d502ba727e90251f2b9325837833ebd fix(timers): Prevent timer drift (#1078)
+839a74c5afae048ff81c92bb3a568724baa616bf chore: Add UI Feature to PR template
+8874f7b9203fe480e22e2e76e6ba4f96230e2d28 chore(release): 2021.09.0
+2cc365c60415f68e3ec7d454eda8387adf8c9842 feat: Log autogenerated system ID
+0bf79f85d08f94e4d2cb66879cef0f9fa3e98042 docs: Add model-specific information to robot overview
+95ce4bb333911f67afadd769af4104d8286dae6b fix(mqtt): Poll robot state every refreshInterval to mitigate stale data on lost cloud connections
+b55e4a58edc20d3d7e3f67274891d46967f0fd8d Revert "fix(vendor.viomi): Poll state every 30s to fix stale mqtt data"
+492fc59e472dc56bdee43f544815d202f97d8a63 chore: Update mqtt camera hack png file
+79565060c3eeebb8e0963fdf5101b9497ee9a159 chore: remove obsolete todos
+1963fc333110faf65a97464ddde41f9d3524b419 docs: Added mention about import of customization yaml in configuration yaml (#1072)
+c2cbd4588dede2b4d6a86c7d0807b16d7308d0f2 fix(vendor.viomi): catch set_timezone errors
+4ec40ac14f4efc7bece73034825d29fbc2da6b0b chore(miio): Formatting
+b22ceb7288f87540492182eba58f821fe44a544e fix(openapi): Fix examples schema for ManualControlCapability
+33beb5f6b597f1e59601515d48ed8a92dc93ce8e refactor(webserver): Integrate SSE Middleware to fix SSE memory leaks (again)
+888f6aaf61f25557e72db4452ad472542c65c9d4 docs(openapi): Examples for ManualControlCapability (#1068)
+2454a85a650a9323293dd9190cf5a955b8b2e7f8 fix(ui): Change path color to black for better visibility
+3f81d4c063595f129d7b08114377b6b4703628e1 fix(miio): reduce loglevel of user ack timeout spam messages
+f00edb32767a01ed71455fab13b57c205cf4dae2 refactor!(mqtt): Add structure to the MQTT Settings schema
+dfdd7f7de54ad84f0f4fd52e34692879ce0116ff feat(ui): make toggle group full width (#1060)
+db16144512f45c97b8512820609081a7696e62c5 docs: Add raw syntax so liquid doesnt try to parse it (#1059)
+8bf753e16ce9b96cea172c5af70ca9aef7ff4222 docs: Add documentation for adding a segment cleaning component (#1058)
+452674a10b798077afbf9fb5bdfe4b0d5f7372f9 docs(newcomer-guide): removed link to ui-project (#1057)
+7e0153777d64270f6a0d5a9118cfd335d338fe62 chore(release): 2021.08.1
+f798ff5d040e08a7b2f4d2606e61d8c5000957f5 feat(ui): Support segment cleanup iteration count selection in map view
+ac01eb0994822ddacc420e84e946b7a61790ec97 refactor(ui): Variable naming
+12f706cac0b70e88442b776d328ec08db6f326ed docs: Improve dreame reset button uart root instructions (#1054)
+ae163a95e95b384e4e3e2804f9a4792c9e9793e9 fix(mqtt): Fix 100% cpu consumable fetch recursion
+65a335ba020e659940309e1203a4ff0f1999c62e refactor(mqtt): Remove clean options in favour of reasonable defaults
+a5b5929fc49eaca5ed926d25941bc77cbb786396 refactor(mqtt): Remove nonsensical mqtt settings
+741c7114d4b88760cd30ab7e50697816f968ed2a fix(vendor.dreame): Add error code 68 mapping
+dbabe0b3a8e9540aff2d6f8f76dfdea2b68c767f fix(miio): Reduce loglevel for non-pending messages
+83d2a45eb0d21cc15cc58cdf1734833688de0fac fix(mqtt): Remove refreshInterval setting
+8d09fd6dab8413b3b5e9aa89921014ef267b3f23 feat(vendor.roborock): Log rootfs on startup if embedded
+cbde5a4873be1113b0dc5cfee0c1164cdc5bedf4 feat(vendor.dreame): Log rootfs on startup if embedded
+fdb315a33beb6690a68f34a131bd7484802ded7d fix(vendor.viomi): Poll state every 30s to fix stale mqtt data
+f0676efa6d81535069f156dab2611b63b7e4d27c fix(miio): Add proper shutdown methods to dummycloud and retrywrapper
+4d3f4acf8fd864d690850070328b5f9b115934d4 fix(vendor.dreame): Ignore "event_occured" cloud messages
+0e3bebda27553ee7f7b3796a4b89dbd53eec1ccb fix(mqtt): Catch exceptions on connect reconfiguration
+a265879f202feb0881003f872ec0f55b7bf369f1 chore(ui): Less confusion
+513bd8c2778ae2f26186ae48f69030bbfde59628 feat(ui): Add link to swagger ui to menu
+bc82b1542594ce03f36f198a93225458c37e78a7 docs: Add dreame reset button uart root instructions
+4127ccdc413155c5f3d03a29b51fc7c2f10a1353 feat(vendor.dreame): Add Dreame Z10 Pro
+af872030f42d8328a061a04426b99d4dd5cbeb30 docs: Suggest install of hass Lovelace card (#1042)
+1802ef789f034bf636fb3594c49c06c4e668f5d4 refactor(ui): Switch to HashRouter
+2daf8f93d2e6d6c270419a83f6e4400b5b7d8c60 chore(ui): Use JSX fragment in RatioBar
+92de9b3ab18525d07efdcf6865701243abeea962 chore(ui): Formatting
+db985f39fcfdf1bc9048d50a3e2d7d75bc42f3da fix(ui): Only dark mode (for now?)
+6202e93204159085659f627707ecbd49001721a4 docs: Add Zone and Segmentation properties schema
+54df5ca4f6b53a280bad52f0a73f074e1d5122f3 feat(ui): Display system host info
+d5c0adc11c10ff7e82e9070c1f8f923fa4b77c71 refactor: Change system stats load format
+ee8b58b646ce006d8c1d6a5cca2f27d6af32392c fix(ui): Fix minor issues discovered by deepscan
+972e4df9fc840c85324de7ef926763a521bd225d fix(vendor.roborock): Handle more events
+9acb2cd529a1b84dd7db333778dd523d8487c4e7 feat: New React UI
+8128fe17f79071c6a3c6c417b4057a18f87bbd83 docs: Update upgrading.md (#1032)
+ed5dc26583ef5a6fdce9175614a971915f29feb2 chore(networkadvertisement): .setUp() is not async
+4ace37e0aaf88e5bb53dfbab5fbb4bf1d43c685e fix(networkadvertisement): Hopefully fix valetudo crashing due to network issues
+98d0f1e617cae48cbd44a171b5aa9178f0677a0b feat(ui): Added html title to symbols in various map views (#1026)
+343c749a107fdaa4f016965984065585c0872616 fix(vendor.dreame): Fix incorrect status mapping for powersave mode
+b780087eb6344b39bef8788fef267695d3700841 docs: Fix typo in sidebar (#1021)
+e6ae713d4ae18abf530608b2bf594e077f80bb62 chore(release): 2021.08.0
+6bf6a9475ba5ebb5dab90f4fed359bea2f1d96c6 chore: Fix mqtt docs generation script
+612030c830765c3944f2c34c40b27d0d995abb3d docs: Dreame root documentation
+d1699b24d9631e22e4fd189c1f054a10949e4a36 fix(vendor.dreame): Update error code mapping
+57fe90afebebf93519eabd7a80bf74390e0ca4da fix(vendor.dreame): Handle more segment-related error codes
+f1930b30228e34f9c123031f0e559fcd3704a532 fix(vendor.dreame): Ignore some FDS uploads
+4ed64d2f2ccf66994c71091b06d9531f8b603244 fix(vendor.dreame): Add error code 64 for Dreame robots (#1017)
+491ed4b4f6f670f1f148383084de0f7b2528a816 fix(vendor.dreame): Error 11 Mapping for CombinedVirtualRestrictions
+9d25b0a0363fe2fa4ceacffcc20df47f730b6764 docs(openapi): ManualControlCapability openapi: fix schema (#1015)
+b5ff0b47061d997ce2439292e6f11ceea8405de0 fix(mqtt): Publish named as well as unnamed segments
+be033b6efe1806b382a47609802e28a2004130fb fix(mqtt): Fix weirdness on disconnect
+f80e0ee8f26dd71bb72aaf5dbafe4c1b5ed531ab feat!(mqtt): Use select.mqtt for Home Assistant Water Usage Control
+e61cf9840d73a08edd44e1368339afb3d4fecef5 fix(mqtt): Only try to publish state when connected
+40d9226ca56652317341cf0500df1461a40e33e1 chore(mqtt): Formatting
+51288e6824cef98dea0abb1b215762d82020cd44 feat!(mqtt): Support iterations on segment cleanup via mqtt
+a9a02d70e2bdfbcc5a023af1d1866efba5267e62 refactor(mqtt): Use human-readable system ID
+d1428a66cfc7a02a94830c06f26c40ed89943a0b docs: Fix Map segmentation openapi spec
+33b9dc3cfcd6f66d3805c662766c36c494bbad69 fix(mqtt): Catch exceptions when handling MQTT commands
+d7cfd07b681e9e8c76efcaf0257b31f0c54dfcd4 fix(vendor.dreame): Fix cleaning order of segments
+11f4b04e22852f0f4f6f3914fe330a0a1fdfa506 refactor(vendor.dreame): Clean up redundant miot code
+36e3598d50efc04515809f909a1600aa8575a5ac feat(vendor.dreame): DreameKeyLockCapability
+4e2b97b3f214d239af3ef4d032c9a123fad1a816 feat(core): KeyLockCapability
+4cfddd4ca17e40187d2e6f2e4557e122349978ac feat(vendor.dreame): Manual Control
+afded402a5f26c5bcdf409b41f22d3f6d8b7272b feat(vendor.dreame): 1C Manual Control
+a5172a23ef0884dc5cf9f515f85f585c2e0e0624 test(vendor.dreame): Add huge map testcase
+770f977a1e4c76f056e1a83c9aeca76cb45b57ab fix: Fix invalid use of .finally()
+11fec98920afae8b7d99914158706bad38f5f082 fix(vendor.dreame): Remove logging of raw data on failed parse
+5e96f82bb5141a4c0016ca8cbdedf25a7cdcd8a7 chore: Shorten manufacturer names
+cb1c34fc3c0083d5405c2c638120e498a0ef5151 feat(networkadvertisement): Publish _valetudo._tcp service
+af4704f8846cb95630debdabd1753e61a7c76ab5 fix(vendor.viomi): Fix unhandled rejection in virtual restrictions
+4a760293473e57cf49217e9b901f013e2637370b fix(vendor.roborock): Fix unhandled rejection in virtual restrictions
+a8720b931a4a89b4748470786a0fe0b9b4fd64c4 fix(core): Improve unhandledRejection event handler
+c6c1a7f0dd89656b3d2385ffee648e03a5956511 fix: Fix more various minor issues found by deepscan
+37cc55f4431eb01d1b2036ddc9cf1bf458368487 fix: Fix various minor issues found by deepscan
+4ea36a63aa9632b9989755286a2d15ef83de117a chore(release): 2021.07.1
+7b760b2efeb38a20ebfd03ab917d9208fcc6a934 chore: lint
+3cb1cb8dae25b472ab6b79653ea2c8ba59e2c0df fix(networkadvertisement): Don't crash on reboots + human-friendly URL
+5cf19c426734acb08f38b86a88a7743c7db770db fix(core): Catch uncaught exceptions for an orderly shutdown
+7c628fb0b77ef2c1e7af9dffaa0056de6d9a633e chore(release): 2021.07.0
+c158d7718c33d4b14b8710e636a25616c8e1acad feat: Network Announcement via SSDP/UPnP and mDNS/Zeroconf/Bonjour
+a829ba54ab95ea0e00c9e855467d715a98ba4055 fix(core): Reverse event order
+cc8b7a5bc86014f61a6e792c69826e7ebed653db fix(vendor.dreame): Handle sensor consumable push
+7f9322b060d354df13d3238328d99cb29ce2df43 feat(vendor.dreame): MappingPassCapability
+1b09cdec4ab4d3605ae2572f1f3eb187dfd2e1d5 feat(core): MappingPassCapability
+8b3794d9686fb555d0451b093ed9bba7abe24836 chore(build): Fix upx compression script
+aa152381d1c4b73e594b1dd36c04ccfc32de3f87 feat: ValetudoEvents
+4276c3648e06a6951df9ee4f576db7cb1e5821bc fix(vendor.dreame): Handle sensor consumable push
+66e9e090737d2276eba41e298ea00b983f1dc911 refactor(vendor.roborock): Clean up RoborockConsumableMonitoringCapability
+d972121d93f6cd552d868ae0935d698efba28d6b feat(vendor.dreame): DreamePendingMapChangeHandlingCapability
+d27e3b1f626e935dcc1e279d300abc4517f45517 fix(webserver): Remove unused parameter
+ed0455d66a46b7adc16e91d34daff2da3e784417 feat(core): PendingMapChangeHandlingCapability
+e70041fd0318b4f8389db7b78bb4dc6bb6a75a05 fix: Resetting the map should also clear the Map cached by Valetudo
+2bbd86f9df27baeccb46580e3a24b08b02e28ab6 fix(vendor.roborock): Multi-Map capable roborock robots use a different command for map resets
+361dffacea59b76726ac93eb7a3296bb6905c763 fix(vendor.roborock): MapSnapshots IDs are strings in valetudo but numbers for roborock
+5202164714ae8cb9759529511fa9e9ec3c7eab7c chore(build): Bump pkg version and allow reuse of the bundled runtime
+0752de2b862f697943171b4b56ba67ea0db3f203 fix(vendor.roborock): MapSnapshots are only available on Gen2 robots
+51ee17d601a65e83e1bf81b7031e501a2195ca7b Revert "feat(mqtt): Stream map serialization to improve memory usage with large maps"
+cc26898f3f314d5e54c073ee4591b54d60cb36b2 Revert "feat(webserver): Streamed compression of some heavy requests"
+7e28c663bf4e321c80350df932e7914c4901ca29 chore(mqtt): Improve warning message on retained messages
+4c1e31980af77492f634fbaad375cd20d1fb8a2d feat(vendor.dreame): Sensor consumable
+e1161cf6816db67306eff7ecf4935d36b2497347 fix(vendor.dreame): Segments from rism might not apply in some situations
+5dbb9d0474b441a3285cae22140d82ecd71fb3d6 fix(vendor.dreame): Fix segment cleanup via mqtt
+98f8c734b60a74fd3bbc6cf4250567a43fe6fd71 chore(vendor.dreame): Remove obsolete test
+8dc10360f781d698e8be95d2ce0aad25cab46019 refactor(vendor.dreame): Ignore multi-map jsons for now
+90b73465159e65f89d94fce1096cf915b4903985 fix(vendor.roborock): Add filename to map upload url
+d9ba66b0e3df3c3a683b82c005d0aa2053aa783b refactor(miio): Introduce overridable handleUploadedMapData method
+57284b2d5990d164aa1394e3f14cb0767c7c21ca refactor(miio): Cache DID and CloudKey to avoid constant fs reads
+0d21204011426d3e854ce97c11aeee3a4e7e5009 docs: Update dev instructions
+547f8c13271f684d3285490b2365f161415b357d feat(miio): Add easy way to store uploaded maps for debugging purposes
+8eae1786c9d85a10c3222144e1a9561141c10746 fix: Further tweak SSE settings
+6de2f06ba87f1884e74acab32976437cf34cf2c2 feat: Set OOM Score Adj when embedded
+021213e8cd3b932685b590d896dcf640c311a2fc feat(vendor.dreame): Map fast mapping status
+40d16f5332f746f0d589ac530007c170eaa5a024 fix: Further tweak SSE settings
+6da5dc46a24b622b093af15024b729252b3c2e1d fix(vendor.dreame): There actually is a difference between pause and stop
+cb8e01e20b195146b901f405fd87b3e45b3d69b6 fix: Further tweak SSE settings
+40ca9cb55884153c4ad582fd377cff863666d9f2 fix: Fix missing git commit id
+a912daaec73c9dbb6bf0809bb22288b58f8b2cb3 refactor: Replace memoryStatInterval debug option with systemStatInterval debug option
+a0371f4909b58403bf88fabecf2969d400c5487c fix: Fix OOM-issues caused by SSE connections
+5fd4a6a618d6ea9b93991618a3f586ca4df76903 fix(vendor.viomi): Set correct env variables (#979)
+01486b80292ddbafb9cae61f43ac19a0520e0a78 fix(vendor.dreame): Handle uploaded multi-map jsons
+6a834c8ff888ab2c24516048c899f3bf42ec0290 fix(vendor.dreame): Handle more properties
+b15c707a8a7d9b344ba314a2109bc52531f0b395 fix(vendor.viomi): Set correct ssh key location
+421e7dea340c8e364e82bb35770958b0c7b0792f feat(vendor.dreame): Handle more properties
+8db8b6fd0dc22fc1b0cb23ec1052e1fa2e2ceae1 fix(vendor.dreame): Revert Fix status mapping
+6578a99344a6d087450a0e4b45a630398fb3a544 fix: Try logging everything we can get about process memory before committing sudoku
+2f618c030edf2bd27d254992940ac7514dd4b3c3 feat(vendor.dreame): Add Support for the L10 Pro
+c70393a4f19e296642ab1dd4540a3f4a64f931b4 fix: Further tweak forced garbage collection
+d905864f5e2b07579a0bcf6a13be649ec9e5c785 fix: Tweak forced garbage collection
+44e4e4122cea2e644a0e6a3aea9872f9fcd3ecd4 chore(build): Add LoC-counting workflow
+c458b80bad40187af3ad4c747bd6339c815969e5 chore(build): YAML-B-GONE
+5477a164f00977fab11a9f98926026a1511df51c chore(build): Upload non-upx binaries right after they become available
+f699a558d49523f2683c08027538466c01b61ecc fix(vendor.roborock): Enable S7 Water Pump Control + No-Mop-Zones
+47fdf7db16687a97251cf85fd5b75d06910a0772 chore: Remove unnecessary versions
+68c1c0ceb0e13609b32b9637ee07addc67330c45 fix(vendor.dreame): Fix status mapping and ignore irrelevant property change
+0a07d97571dc4bc767bad9b9d75c1db8e3b76067 chore(release): 2021.06.0
+e883183f75124748cfdbdeaec1715c956857db39 docs: Fix OpenAPI Tags
+db7839d5ff1b4538e6ec730e8fa2a074011ecd38 docs(timers): Add OpenApi Examples for timers
+1220aa5622dbf200ef2be88612f1e503ec887328 fix(configuration): Add migration for invalid mqtt port type
+97b0387e9aa9551035f1dd4d2c9fc008959c27ce chore(build): Compression, Node v16.4.0, Sparkplug
+6ea90bcebd2c4a4d998ea95dcc4c814682130c52 chore: Bump typescript dependency for even more headache
+ae7c05948c9cf7252bfedd1fe935c65d69a986b3 fix(ui): Hide defunct zones button
+f7cee31eb20cba824d3fd2ed47cdb73a242de3f9 feat(webserver): Validate actual endpoint existence against openApi schema
+810a21226bb1580ed2afae9e2a2fad2b6faa475d fix(vendor.dreame): Handle some previously unhandled messages
+26d8a4cd4c36410afabfda6f9e87e08fd01e9a28 feat(mqtt): Ignore received retained message to work around common user errors
+32a12cf82c698b64b3cc037a869f058fb4588f26 fix(miio): Allow setting new wifi credentials when provisioned
+de45f72c8080c707df9aab8aebefa19e6d9ba996 docs(openapi): Document Timers Endpoints
+474693ad675a93a6fd0f4f7ef69e69d88133e449 docs: New findings in the Viomi map format (#967)
+39e46137872f6774d2ebaf1120a10d0cddfff45b feat: Validate configuration file and create a new one on error
+c9ccb4a11dc546da82684c5f2a80e96847ff2639 feat(vendor.roborock): Add support for the Roborock S7
+784f628ac659793462e0252f239140f25ddfbed4 refactor: Update OpenAPI naming
+8ea2525245aa6609c03d0da2d3da8a3f176f7d93 chore: update roborock kaitai struct
+b384ac3038857f3e8677bac5859b8c1de99f80be feat(webserver): Normalize reported system load
+7842d9ec0957a9a45f6c83ab357a901884b11ba1 feat: Swagger Docs
+8aebf1b52a885d3507f7d426b6a803dd9e38655d docs: Clarify OTA
+bb35fe58ede68687701c49a4d21d7519e1a11cac chore: Update roborock kaitai struct with s7-related blocks
+ec4ee082eaba88d51d8948ebc97c0cb6e4347ed1 fix(ntpclient): Reduce loglevel of more error codes to avoid confusion
+ec975aaec40c9857e7b35622253128ef75be3fbe fix(mqtt): Calling GoTo Presets should use regular strings and not json strings
+9000f51eaf818ca465ad0b2ef9f91ca421ac2da4 fix(webserver): Properly report memory info for kernels older than 3.14 but newer than 2.6
+5b4b377f98c5030aa13f2133b5a220c3366fae57 fix(mqtt): Use semaphore to avoid reconfigure race condition
+0d7d8364b98e950d186d961062b81fbfff5e920a feat(webserver): Streamed compression of some heavy requests
+98b2757aec0af94392038577eead7749ef659e17 feat(mqtt): Stream map serialization to improve memory usage with large maps
+bc8feb936d373757093b79ed40ccd8b7318e8f67 fix(ui): Allow resetting map when PersistentMapControl is unavailable (#954)
+80743f455dd20d2abc316260308b9d322c33e284 fix(webserver): os.freemem() isn't what it appears to be
+fd908f6da756d3d5a6f8350e1a4f4041990a6cf9 fix(webserver): Fix SystemRouter units
+efc46e69001a2533077b1e30fd1d8f6de910e263 feat(webserver): Add SystemRouter
+fe1fa88d715e1002d3ee607ce9646b8d8b2cdb9d feat(timers): Add endpoint which returns timer actions supported by this robot
+24bb2ea9ae87186341a7f22086844659b3f0d6c7 docs: Improve upgrading instructions
+49c215b752ebe1d0164afe3921d7a5a327f8de24 docs: Add warning regarding roborock.conf editing
+d8a523e40138f679411d2b8c33db3057d5f6c8d8 feat(timers): add ValetudoGoToTimerAction (#953)
+6b35e4d96bfc9f55b7bd8d51172d450a805e8351 chore(release): 2021.05.0
+34443b3bea4feac5c48844554cd9a816df6f60ff fix(timers): Fix zoned scheduled cleanup
+c7efd6af1379de2e94594c440c126b74a36a7962 fix(vendor.roborock): Roborock only accepts int coordinates
+05b338f069feb7c311dcc11d7b50d91e310e79d3 feat(vendor.dreame): Add iteration count to MapSegmentationCapability
+a9a94ce3edc37caf9ca035a2c3e8de152786fe3c chore(docs): update docs for workspaces (#942)
+5e5682bdaa3d284d7e98c6b97c960981ffbdce07 chore: migrate to node 16 workspaces (#941)
+d2b2a9bac22b0161aa87f9f5938b95970843a5b7 refactor(mqtt): Remove legacy Hass topic migration
+d5875a6cb779393290d3339c7c5f321d384ec6f7 chore: upload-artifact github action may only upload one file
+7c4940022346593b6aabd2892ceb0a22050214d6 chore: Roll back upx version
+eccd1fd9f660ace3df2ce4c232f5326c3aa8c395 chore(build): Manual build should update all files separately
+076a244f042589549e1ba49051e1575e3032f87a chore: Upgrade upx dependency to patched version
+f769403ddf7f97e0e04cffdd74a8b90a84f9db47 chore(build): Explicit executable permissions for upx
+3d501b823b03edb994d3330d6df2ad0fee5cf85c chore: Possibly fix builds
+a917a1d80c14af78662d0f13189f31bdaf31857c chore: Add manual build workflow
+a8ca9ecbbb8baccb44114a3e71f1145f4f49f3dd chore: Fix gitignore
+c2b11e8691562a231e71ccafd7abc7c49c43b717 chore: Re-add files that for reasons unknown to mankind went missing
+671aad4a1efcf1ca73e1994e934723cb1d8d6dfd chore: Reorder repo
+3c1244a7ad587701ddc41d94c1ebb8b36c5b8766 chore: Freenode is dead
+7f2522c27f8fd33f7d42f3e0c517f28f35becb38 chore: Move assets to root folder
+29efa33b4283886e97c1fd697d5dfca2659c0221 chore: split repo into two workspaces (#932)
+e331eda332e12a138cd1d7e8b8994208f714833a fix(timers): Copy-paste antipattern
+7b8c37ad1006aec62e1f19e5aec83d54da94189d feat: Timers
+fd79163c3e9328562346a789ad5cec6e73bfe52d fix(ui): DND should be rendered as localtime but stored as UTC
+8fc9ea88d81505259f53e0dad5be3ed0e05d5d6f fix(vendor.roborock): Handle DND as UTC
+e350eba43ab36076d406c02f933c7be108cc8e99 feat(ntpClient): Keep track of the current state and enable configuration via REST
+949d8e306b5de34c3a3755532f269f009eb50c51 fix(ntpClient): Support disabling the ntpClient
+25411138688454d43026d07c12e46b5eab5e9269 feat(vendor.roborock): Add support for ordered segment cleanup with multiple iterations
+835befab88a5531d6de14437a96ece08c5a03347 test(vendor.roborock): Add S6 testcase with no-mop-zones and active segments
+c88df12de41ec05797adeb4c5215bf4d18456c9b feat(vendor.dreame): 1C: Add/fix various Map & Volume capabilities (#915)
+9ebda7eb52185c5d8474344f0e25a653003c1d87 fix: Print error message when failing to load config file (#914)
+eb2edaf969a175648cb0f53405b1780f0ac799d2 fix(mqtt): Only migrate HAss topics if enabled (#912)
+a05dcfec6ad6de3732430d561f4c68cc485133f8 chore(core): Increase the amount of allowed log requests
+6f3dcc5a9a2a39eed6dcc73f2f08d1f438b09cac fix(vendor.dreame): Ignore uploaded multi-map data
+3e02f0990a39c77f84dc0d64f28332262c41f824 chore: Roborock kaitai struct formatting
+0e7ce7c7486498c55dd0443dd9cb0251fde1dab2 fix(miio): Better map upload logline
+2f46d77a7d69c55cf744f78c47f1bec5681e8287 refactor(vendor.roborock): Further improve map parser performance
+4f20b73ae91e08a80435930abf8e0b0684674f65 chore: linter
+f7b42edbb65e3860248e81e6c6b365d0f6be978c refactor(vendor.roborock): Improve map parser performance
+0fe555184bb894b2b9b237d375c562f149403c7f refactor(vendor.roborock): Map parser optimization (#902)
+8e0ddb6d5b389ffdd37054a92952dfcc40818b60 doc: clarify timezone configuration (#897)
+cfe1736998ec57fa7983c9586ee8dc5f699eaf95 docs: fix upgrading instructions (#898)
+80ff083a10c8bd2d86eac9cf499d74d529cec1b8 chore(build): Add upx compression
+c19c353ca5c150637f1cfd9f4f60f08bacad3765 chore(build): Remove node v14 and update readme
+3e304146980c8dc2a394a54e7346528ec5a07620 fix(mqtt): Allow strings as segment IDs (#891)
+80350041fb0b9903038a8b618eb0dcad2e84bbc4 docs: Clarify roborock upgrade instructions (#880)
+0796baf19e915f1f895bc60d74249bf6cf4ea2f7 docs: Docs update (#884)
+f2e2a873278117aa1f7de70694c8f6b6698d4995 chore(ci): Upgrade ci to node16
+4452381fc77acc8ce62facf55bff0e4faf985d05 chore(build): Add node v16 base binaries
+7d68cb683c995fcb584ca3e0e2255f731da63cd4 refactor(miio): Unify map presigned URL responses (#873)
+bf5bbb4070dbb00918b438d34d4063c527e9f0a0 refactor(miio): Common MiioWifiConfigurationCapability
+36dcf47eae8e9abb67f578b8f35cd86440d76cc9 chore(test): Add nyc dev dependency
+2d53b7cf8a4e25764795859f88f6b4bb24a291e1 fix(vendor.viomi): Syntax error in init script
+47422140a77e4253606e1e0f360eaaaebb6831f7 fix(vendor.viomi): Viomi minor bugfixes (#820)
+908d5ddc16b03dbe92e1aafe9e0d4f755312e3d4 fix(vendor.viomi): Fix system timezone in init script (#876)
+dd05c51f4dfa45ffdf973b95e6b4851e423a176c feat(vendor.viomi): Implement DND capability (#877)
+88322b12453684abd323cb56622fc04878d5a771 refactor(core): Rename IntensityPreset(\w*) to PresetSelection\1 (#871)
+3dd97f133dbf2131190cfe95f918422935cd55fb docs: Add notes regarding upgrading using the manual installation package
+16650d2024c625788f1c7e88adca54b2082cf6e9 docs: Beginning of HA docs for 2021.04.0 (#861)
+6a041c62cfff4d2b04eb48e15ee20373512838fe fix(mqtt): Always publish state
+219bc348e95d78ff7dd279c52d498401b5e9d28c fix(mqtt): Publish state for both hass and homie, as the hass device availability_topic is set to the same topic (#860)
+aa85205fe09007b4b411ef9de754513dda98a4a0 fix(mqtt): Remove unnecessary availability_topic (#859)
+5b0e7210eccfde2b021237de1f6c04f8ac4d48eb docs: Add link to newcomer guide to readme
+5a2bae404dfebf5e641a3e490e50f7bd254f633b fix(vendor.roborock): Remove invalid RoborockCombinedVirtualRestrictionsCapability from V1 robot
+7d28ac85cea7a4081f49fe199f19adf678778f78 chore(release): 2021.04.0
+8a791ec7e8110199540a8da87367136de000f329 docs: Update autogenerated docs and add newcomer guide
+2ddfc5f097ca8ac3e98e6f1cfc7dd3c3c2726f68 docs(mqtt): Add better openHAB docs and custom widget (#846)
+01079324727b71acd17eb8d8b16a2547663179b3 feat(vendor.dreame): Add MOVA Z500
+950993d7f4af1c00f801b9234fe28ba2ac013d18 docs: Fix MQTT dev docs not appearing in the toc
+14793c7744aa38f83de5c8eab88b0abfebd1edb1 feat(mqtt): Add vacuum error state description property (#850)
+9e2e194bcdacc141fc87e5c49489eb669de9c8a9 feat(vendor.dreame): Add more 1C variants
+cabd4743757adab7a58cf9e4bd09c075c4b5f1a6 refactor(vendor.dreame): Group implementations by vSLAM and Lidar
+4655463cf6d0b1ae59821c9e896dd5308949cf8e chore(build): Upgrade to vercel/pkg release 5.0.0
+7ed177a85ac50ec23a913c5265511e9adf839f8a fix(miio): Improve error message on missing keys in device.conf
+d494510e0209f743e5f8bc8bef898a9e787bf9db feat(webserver): Add X-Valetudo-Version header
+a18633c97bb3897ecf60d6736b68ab9f9477a3ed feat(vendor.viomi): Add viomi.vacuum.v6 to supported devices (#849)
+f1041890164d451d7ee9e6c8a991a8f360bd394c feat(mqtt): Provide segment information
+1df1caf578242a39666585d8ba498bf1ed62451b docs(mqtt): Autogenerated MQTT docs (#840)
+c0ff5ce03fdcdf282f56adfabf3362bae5de38c6 fix(mqtt): Handle nested reconfiguration (#841)
+e0ea48e7c6f1fd4f05e02d7ca61ce771ad143038 chore: Add workaround for npm v7 deliberately ignoring user choices. See npm/cli#2610
+79194b690d27d4ba012536564ed35cad4d3df3b4 feat: Remove DNSHack since we're using musl now
+8dcc2ce7b5912ca36fd3210fa548bbc1c61a34b3 chore(build): Migrate back to mainline pkg + nodejs 14.16.1 statically linked against musl
+0534888b23295d031fac7358a1846a0355b7b504 feat(mqtt): Add MapSegmentationCapabilityMqttHandle (#842)
+e6fd6e4534db0366078b7cd7797dc0f0051ade99 feat(mqtt): Remove increase/decrease from intensity capability (#843)
+c90d426cb96c26b2326d64e2a7da27694ea08014 feat: SSE Endpoints for State and StateAttributes
+8272dd59e0fcbfd75ad75c0b992b56469cab2c53 fix(mqtt): Make BasicCtl actually home when HOME is sent
+8ac882f75e3b4c67bc2a9192f28074e4609aaa58 fix(mqtt): Map zone presets to zones (#839)
+38b8ca83002d27dbcf191b8cbcc669b461b10bee docs: Add more games-related stuff
+dabafc619bd618db74825d013a1c0af15adf1f70 docs: update links to python-miio (#836)
+4c20e60ee16cbaf29770da79b4ac50be6f737a2e docs: Further improve roborock installation instructions
+eadfb25da55eec9162257d55f42d10077bec2449 docs: Improve roborock installation instructions
+15e2dcabd79b76cdb0fff9f963b9ec486aba8b23 chore: remove carpet_turbo IntensityStateAttribute type (#835)
+0c21609b649d16b27feefa8f0b168577798137d3 chore: Fix parsing foto block in roborock kaitai struct (#834)
+ca4d82e9eff0ab065756ae4e0b574d493f86a1cb chore: Add obstacle blocks description to roborock kaitai struct (#832)
+6a5ec11f9306a5b423159327f65c72a71d19b773 chore: remove unused modules (#833)
+ec289a08de38f4e24bfab61f2467cee9d99e2cba fix(mqtt): Remove test leftovers from consumable monitoring (#831)
+1afa717d6e4815ba773200523324a8e835cc382d fix(mqtt): Await close event before considering MQTT closed
+5c74342f94774333b42398c9a4373015bf9bbc4d fix(mqtt): Do not disconnect on cfg reload if not connected
+2b5d3e69b9ea9a1ab966efc67652f55e638bf0f4 fix(vendor.viomi): replace fanSpeeds with waterGrades (#825)
+271bac7ae0d6d7a6b3fb3d014847c2fcf56556cb refactor(miio): Don't use Buffer.concat on each map upload
+5c8495ce2eff247a667e87b2649c98ee13bddf28 fix(vendor.viomi): Viomi segment edit fixes (#821)
+1c0410c1d6fe0554609baaaa521ebe9d300fe5f3 feat(mqtt): Await MQTT disconnect before proceeding with shutdown
+21b5876362939fc2e0d7ee7edbb4651411be39da fix(vendor.viomi): Fix last clean time (#822)
+b72ca53f99bfa94f693c1b9c36a904cc417c2533 feat(vendor.dreame): 1C voicepack install support (#795)
+07a1c7ad78e3593b90e12ba0bb8286ed0c4f58e1 fix(vendor.viomi): Fix map issues (hopefully) (#819)
+5f6068d7790a8f3f322f4825493608605ed80a63 fix(vendor.viomi): Raise default miIO timeout (#817)
+a3905106347c1640f1817302e881de1dfce22133 feat!(mqtt): Homie-compatible implementation (#787)
+1e6db81e71d43bf2060dec7ff90173a4cdc6e150 fix(vendor.roborock): Roborock expects a number as the segmentId
+df9c6cf6870a1358508b568ba01cfe7fb2e5ea3a chore: Add Kaitai Structs for Roborock and Dreame Maps
+48664757035ebd0a6493c3de5433c02eb197800e feat: Debug capability (#813)
+77e712813191bc427306c80bf79f1b81f47202fd fix(vendor.viomi): Don't store paths with zero points
+3c3df9a584cdb7193715b583fbb90c9dcd8591ca feat(core): Collect our own garbage
+371ceea9e4e7b591b19b0dc3d4887feca3ab8692 fix: MapParsers should not return empty path map entities
+a9d1b1413263e9b857eea914291942cf7b93f915 chore: Maybe fix ci build
+a2e1c21bcc3dbf12a83fdaea84701b98d9387c17 fix(vendor.roborock): do not send empty layers (#809)
+a128a91499d94f0e75d17f87396571f6c889a7ac fix(vendor.viomi): Increase timeout for set_timezone (#806)
+59b9bd5e7a315c21f459613a9f09e8f50787ab7b feat(vendor.roborock): RoborockManualControlCapability
+a5324e8ece40709be7168730ef77978c3f971d94 feat(vendor.viomi): Manual control capability (#740)
+97c832ea527665459ad9e3eb2c8f562f70a08478 fix(core): Segment IDs should be strings
+2129e2278362424f42eab7c2062094461911f720 feat(ui): add Segments on home
+5787afa34d281e709dbe7e5f81af33e5623154e0 fix(core): Lowmem enhancements
+f91e8e7e38d0a14de7f22fd432ef14cb8dd5d09f feat(MockRobot): add PersistentMapControlCapability
+531498b47327ddf4be6337806e68020eafa597eb feat(MockRobot): add MapResetCapability
+2957e25bb57c9f9c8f8c68dcf4691900b4e68544 feat(MockRobot): add GoToLocationCapability and MockMap
+ae4bf248d6c3848abae0a6ebc039aa2f0efc6bbc fix(vendor.roborock): Don't store null to this.state.map on map parse failure
+25836e87b70e9065d943daf1ce85478bee179074 feat(ui): Snap zones and walls to grid and reasonable angles to implement #796
+3f4d844c2979527624623bb2ff67654a0961f768 fix(vendor.viomi): Fix water grade controlling fan speed instead (#791)
+a0fa7f49f7f0779357c3ce61d354badd5bac07ed fix(vendor.viomi): Fix basic control functionality (#782)
+04f2df4c1cb546d195f3414c79557fcf0d320ae1 fix(vendor.viomi): Fix "Unknown water grade" (#784)
+696d76be682a905c809298c86032041243a2e1fe feat(vendor.viomi): Add MapResetCapability (#785)
+e3406502d14a043bf506dc7f118db709e5d9f4e8 refactor(vendor.dreame): set generic type
+d262fedfa6ce46e357b3553797e7a35bb0aed752 refactor(MockRobot): fix constructor jsdoc
+2bb95abae50f7218948c51fcae7eafaf76da25e6 refactor(vendor.dreame): set generic type
+24a802142fb7c3f58aa96e5593e79c23d061a872 refactor(vendor.viomi): set generic type + type checking fixes
+ad549e371abd198487d7a23247ad7ba7c9700d15 refactor(MockRobot): set generic type
+e6788f31bbc04d599a6c921c3dbef3bb1b93abde refactor(vendor.roborock): set generic type
+f1c173513bc8991d81fbc4f0b5d57a1efda91c24 refactor: define linux capabilities as generic
+cfa9d5fb7130a4ebd4704744213c3c3abf05508a refactor: define core capabilities as generic
+07ccfa67cf5c10b7c0eda406d743d0b0cee62e9c refactor: define Capability as generic
+1470c539d3fb0425906b989f59adaad4b9efa739 feat(vendor.dreame): DreameMapSegmentRenameCapability
+2c8b27f98a18e0db5a7d148950317c9beb5836f2 docs: Improve capabilities overview + explain MockRobot
+e5f0f4fe2494ab7faf6825f54bfd38b8217d40e1 fix(ui): instead of hiding settings based on capabilities at page load, unhide at page load (#774)
+0bed81ab4f0ddccdad044ce805dda3af8736eb96 fix(vendor.roborock): Fix segment rename
+306b8ba9c27331bb79f886b468b0edadd86c1e70 feat(ui): Add dialog for renaming segments (#772)
+0123f245bf6b7cedabaebf61da15f1959727c9e8 feat(vendor.viomi): Add ViomiMapSegmentRenamenCapability
+80246490ed99f97d7f66e0187dd6e3a5cdc30c1d refactor!(miio): parseMap should be async
+e9da2cf5ea2cc408365fc96fb34430fcf73585d4 fix(core): Add name to ValetudoMapSegment
+559d1ada913e04258217134f3c7aa148d7eb7e21 fix(vendor.roborock): Renaming map segments always requires the full list of names
+4d6a1a415c67c2d4e43f8220f7babe18e322e641 feat(vendor.roborock): RoborockMapSegmentRenameCapability
+63712911c5a81584fc6482ac94d587aa35e5bfbb feat(core): MapSegmentRenameCapability
+50cb11d2b720eb17d8e2803328a2da70a66e3257 test(vendor.dreame): Add map parsing tests for Dreame 1C (#770)
+a210b0edcadc29e7ab82e29258b2594fc622c53c feat(vendor.viomi): ViomiMapSegmentEditCapability (#766)
+cc66d5292f1ba0306e8b5362b63860d177fb5b0f feat(ui): Toggle button states depending on Robot Capabilities (#769)
+1a9eef40b34fe991ed26989033daafdd8ace856d feat(vendor.viomi): Add ViomiMapSegmentationCapability (#762)
+1138c8466ca776960e0dc6030b1efe5f6e8343f2 fix: Improve state handling in MockConsumableMonitoringCapability
+12d1a27119fad31a9f4d3b56c3a73b9f0cde24f2 feat(MockRobot): Add speaker capabilities
+accba051906cdb111e734bf1950484f918562e9c feat(MockRobot): Add MockWifiConfigurationCapability
+f85194c0192a8a0d5b6b0058f6250841eb08d89f feat(MockRobot): Add MockDoNotDisturbCapability
+7d64a1a90407d555cdd84eca6d1fae2ed828d5e2 fix: Typo in ConsumableStateAttribute
+6d8b8e092ad31190c111c7a0b12f5acbcb319b5b feat(MockRobot): Add MockConsumableMonitoringCapability
+05d658bc90fb8a4fee13a81caae4fb2a0fb5de8c feat(ui): Generate consumables list dynamically (#764)
+c988e6992d85b84a1d24c1f01b097d7734ac6603 feat(ui): capitalize robot states in UI (#765)
+3c64d5d5f73b4d08560ccd8bc3eb637d7d05a81c docs: add a note on finding segment IDs (#761)
+5bd5fb7a99988cc6f0db7d2ed2d39b16d756cca7 feat(MockRobot): Add MockCarpetModeControlCapability (#759)
+22817015de62d93a9aaf46fb9fa4304d66603d6e feat(vendor.dreame): 1C active zone & segments
+83dddfe402183456d50781435b154281d03acf1e feat(vendor.dreame): Update 1C properties_changed handling
+256b9076a3727e3f85bfc8412e296e8009a42052 feat(vendor.dreame): Implement/setup most capabilities of the 1C
+f663425439912e14e334114815d01459fc5b5c10 chore(lint): Update rules
+6cdc3b4ee2821942416a6e579457058570dba475 chore(lint): add eslint-plugin-regexp
+b6d69c281a75d21f116b62d342af04c07da1ac53 chore(lint): add eslint-plugin-node
+cee7728e5112515810a2520eef5c15e5bd9309a8 chore(lint): sort require statements
+4fe0ff7fd952533a073cd51432626f99aeadd856 feat(vendor.dreame): Add Dreame F9
+4bbe4c2d431e7cc5be40450443a987481399079b refactor(core): Remove robot import from ValetudoRobotFactory
+f60fe242ba8b2bba4560a7c91443ba0c07dbd133 feat(vendor.dreame): DreameMapResetCapability
+2d674d4d6381f9ca7f146d71445e671f14195773 feat(vendor.dreame): DreameCarpetModeControlCapability
+fdebd3c45df68797b353866dfd7a1e8684600a99 feat(vendor.roborock): RoborockWaterUsageControlCapability
+cf375ceeb65ace4f0cbe99a7ef58d865426e6e07 feat(ui): Water Usage Control
+34c317678bb4a4f932fccc046bf4d68a1365d593 chore: remove obsolete todo
+710758d4840b06b3bff3bfb1e7dd521e48fa3d3b fix(vendor.viomi): Fix operation mode selection
+200b13b5c8434375db486b93067278ddca490a42 feat(vendor.dreame): Use currently configured water grade and fanspeed when starting a zone or segment cleanup
+6db4f663a575e123c4455acf9eb2535d75fe99e3 refactor!: Track attachment state all the time
+8be7cd437bcd2cb938ea5798f767b112c22f87b5 feat(vendor.dreame): DreameWaterUsageControlCapability
+9a5658ad2048e52c3e0a345a39b627ee88988c5c refactor: Move map parsers to vendor folders
+f0110231fe84f9ae7d7ed219bcece1bf387f2088 feat: no-mop zones
+844444d0bf36920bde207f06420ea9c59afbf79c chore: ES2020
+6cdcc1eb00a414d5f450c83f27f0267c082e7099 fix(vendor.roborock): Fix V1 capabilities
+eb9419a76869dcb02017ffea0c98b304c8e832ff chore: ensure LF at end of text files (#755)
+3811b8948c6d57e765eca5a9779febbadd07e2ca docs: Extend disclaimer/clarification for supported robots
+a6d810766f557340499cf9c091ca53ca466c5d34 chore: Add pre-commit typecheck, lint and tests
+bcda13b30f2d021c79fbc35c1eeb42740a5379f7 refactor: Sort exports alphabetically automatically
+30014c2582f2c8668290bcd1dda0f01e039b1a8f refactor!: Split PersistentMapControlCapability into PersistentMapControlCapability and MapResetCapability
+97f9658f7df23eb5e1559f1d8fef170c5c1cc1ff refactor!: Split MapSegmentationCapability into MapSegmentationCapability and MapSegmentEditCapability
+b072e79a7c15fe4fd99fb098015a9b50ff3488c5 docs: add more companion services
+a686d9b70ba1a01ea5e7c6581a54a603bedd537e docs: add more companion services
+9447025b157f7bbaf69433423100a63eb834437a docs: add other noteworthy non-companion apps
+1f427108642e66a2acef225b5d9a76b11f0e0fe2 chore(release): 2021.03.0
+567cd254880540e1cd55ed9a1be7d29d5af84718 docs: Exclude MockRobot from docs
+5c41d499b2478b09007a1af1a395f3a946dcb2ea feat(MockRobot): MockLocateCapability (#752)
+ea7cce4a27c54412a6818e4b969d294d0190493c feat(ui): Add info button which shows the id of a zone or location preset
+3c05e2d9917e222a777a9d86207712d3b798dbec fix(ui): Fix map canvas size
+25eac7c57eb6b761ac6124fe6278cc628aad24a0 fix: Fix default map
+93c98aa53c8b8bdd97bf0246e106e1f8eac1410f docs: generate table for robot capabilities (#750)
+db643c687f9fb1d43a4a29b41ffe18af93542c78 feat(MockRobot): add ModelName
+584bfcb1ba7e782d0697c36d4a3fd467451c9d6c feat(MockRobot): add BatteryStateAttribute
+721cd78b053ac72fdcbe01df83e7a741f0204a2b feat(MockRobot): add returning state to BasicControlCapability
+a070c4f705b17bc85b7cb703b6d6e3a6f6302cc1  feat(MockRobot): add FanSpeedControlCapability
+96c4bae2750971d121e3165b9aff3cc6f76398ca feat(MockRobot): introduce MockRobot with BasicControlCapability
+565191c8d7024c5e4f5fbb4b42eebd36797b785d docs: Fix autogenerated markdown pt3
+00aba0ec50e252c13d6c13961f0d85aca4bde626 docs: Fix autogenerated markdown pt2
+195d69c61d14407347b40030e36042c898681628 docs: Fix autogenerated markdown
+e46f6889f363bad5909f2a73b2d967c804d29ddb docs: Generate docs from the actual codebase + general cleanup
+a62d7e35745180260d4a8a28d0b40332e7cf1f66 fix(miio): Various fixes related to Valetudo crashing in some situations
+fa8f9097496111d4664600553538729e105d8858 fix(logger): Use the windows equivalent of /dev/null on windows machines
+36f707a1a29601974da4612e684a57e1105eb30e refactor: Remove obsolete code
+4479777743df99ce4f042f5f641ee6a22e09f292 fix(ui): Fix copy-paste error
+036752a58ae73fd7180d4c46ef0424d38b52dc48 fix(ui): Fix new zone placement
+9217f70702eec6fe5ba0b2e41382eaaf42482d08 fix(miio): Fix broken development token refresh
+3630fa36d3137516245b738ee0102721fb4f217c fix(vendor.dreame): Maps are always persistent
+531f8293f139f27e7281d69b184ab732464476d8 chore: fix gitignore (#748)
+d996beb4291146e71c90971dc3654926ed72f698 fix(ui): Only show presets if the robot is capable of having those
+82e4fe3609b706c7a38efd47086604d5e92c1f36 feat(vendor.dreame): Fully implemented segment joining + splitting
+e6677b491284f980280047c459f360ccc26f27c5 refactor(ui): Remove zone folder
+fb92c162cff7f6f42099781596cd82e9afeeca4d fix(ui): Various scaling-related issues
+0c087dfaa50d015bf47208ecbe835f7171500f90 chore(ui): Minor cleanup
+e306569d2daaa6f8ab7cfe75d3cd4a99b37faa8b feat(ui): Segment editing
+abe1f9c52956f0127dce59c64e8cb2a814f69c92 docs: Add link to telegram group and irc channel
+85f2e04c80665c8301dbf0b46cb8743b51d71c35 chore: Updated telegram group invite link
+eda7dcd071ac6d5438fbd1124c5b78704a8dc2ed feat(webserver): Fully implemented MapSegmentationCapabilityRouter
+f9d6ab13ad8939b5fbdb09372b2f8b3fc3ac5187 feat(vendor.dreame): DreameVoicePackManagementCapability
+d81befc121116864faad129a06327325bf3b8dd4 feat(vendor.roborock): RoborockVoicePackManagementCapability
+6279831f16c60a8115c9a2849e1c1258d75e2477 fix(vendor.roborock): RoborockS4 actually needs the MultiMapPersistentMapControlCapability
+eef055ed42b208deb1caaf0d2fe1b16cd48ca046 fix(ui): Remove old paths if they vanish from the map data
+f4c4c1a0784b4930bd6913cd9da6f092e1f0aa03 fix(vendor.roborock): Fix map not being available on a fresh boot for another 60s
+3fa823212fe97cb62704f04c560bce365a5dfd23 fix(mqtt): Log on command-less custom command json
+4512fe08a3c9bbb46aa734a625261fa8418ba6e1 fix(miio): Fix Valetudo crashing due to missing onMessage function
+59aaee3bf9d2cdfd3823ef0f91566d17b388af1d feat(ui): Nice rounded paths
+e274cf145b635e2cd421657da29e53e54c8e521a fix(miio): Discard handshake packets with older stamps to avoid endless loops with 100% cpu
+9fe7efa6c8f1d6f940f149b0647bf3a93c4ea200 build: Switch to npm
+fdc2ef817f70243e850e37c4718a29428f5630aa build: Use tag for pkg dependency
+0c603b8a729d7830054006ed3faefbb2f440a4ba build: Clear yarn cache before building
+9ebee2515df021ddffac52ae1ed537430e9239f1 fix(ui): Decouple svg path generation from rendering to eliminate flicker
+02e34eb7d8dead81d28e4f1bf3865fc3f711b402 chore: re-add somehow missing yarn.lock file
+48e5d54417fb0e11cb92ea82930ce81580f70743 feat(ui): Draw path as SVG
+ab2deeeea3273d5f00a706e93471bc1b23860482 build: Upgrade to nodejs v14.16.0
+12f290741bb16c05530294a934f8167069288675 feat(ui): Render icons as SVGs
+1c4e4f3374251d64f3c79689747050c469a02ad7 fix(ui): Reduce path render solution and render charger + robot as locations
+fe3143854ff94de1b11d5c86720b97dbeff44058 feat(vendor.viomi): ViomiCarpetModeControlCapability (#739)
+2804287ed4e15739f21141f8a0e7a1b88b66c2e4 chore: Fix codestyle
+2d9440832a0f0c5efa83e5a8d065907e1d9b89b2 feat(core): Log and display git commit id
+1c8c667f0083e0a4bf44a33a8c3fa0a0801c3898 refactor: Remove old utils/wireless and use LinuxWifiConfigurationCapability (#737)
+630d2ab4f7c52c5c26d306e2b4e34d518123e64d feat(vendor.viomi): Speaker control capabilities (#738)
+2aba77e1330690bb7b422e29a79951c06d62e671 fix(miio): Bind dummycloud after setting event listeners (#741)
+79871685bec0b4afb89d6b8e41f13d5db4dd8042 fix(vendor.viomi): Use marketing model name for viomi.v8 (#742)
+f9bfb001c68f20f9438ad7703f4bbb3dd9e84626 fix(vendor.viomi): Wait a few seconds after cloud connected before fixing TZ (#736)
+bafa158814c3185cffbbaa9c9529227883f13071 feat(vendor.viomi): Ensure timezone is UTC (#732)
+c953e2b558b7bce5eace00655c3fb2f3ad30b0d6 feat: Add voice pack managemenet capability (#725)
+a8a0b39ebfee16794f62b8cc830287db343f5e58 docs: Add valeronoi page
+5b93d83944a97e4ee5a67fa935a34c839045c20c chore: add link to Valeronoi (#730)
+bc10a291cd1c71062b220fe91b0542af66a3f956 chore(build): Add aarch64 base binary + update release workflow
+75974a5be0735035193118594f0ee3362d3e2a43 fix(vendor.roborock): Fix S4 detection logic (#729)
+1541ca359ac32927f9e12e1157fdf89bd4e6961b chore: Fix tests
+91c30919b6f44c83b8041b68c31dca084445d50f refactor(vendor.roborock)!: Don't duplicate pixels in both floor as well as segment layer
+aa64016c29151499cad8f7fef11d8826e7cd58ad fix(ui): Reduce path render resolution
+2d02570f0c85c078941e67020e5e02a89fa62894 fix(ui): Fix log UI only working once (#718)
+f7601370353659ce8a35e6c2a942c48d4f614226 feat(vendor.viomi): initial implementation of ViomiZoneCleaningCapability class (#675)
+9ddf8e1abdc9e67efd1c9f58fcacd2905b4e8adb chore: Use single pull_request_template due to github not making any sense
+b45b805370bf93417d7559a3a1e47682e1c1af16 chore: Add pull request templates
+5c7dfc37392467602acea038407a12ccb39244e3 feat: Add os.freemem() to debug memoryStats
+a408edce5139f4aa2d767d52da0bb527eec8160f fix(ui): Fix initial map offset (#711)
+a3ab4e6e5641109fb3e8442a74d3e0d126c5b197 chore: Switch to express-rate-limit npm package
+2e47a6cd6d17ffe65dd0e478eb7a18f90fbe5dcd refactor(dnshack): Simplyfy interception
+b8c456d20cfe27946390aa528a7c99ab0a02801d fix(dnshack): Don't try resolving ip addresses
+f7eb45105751827d371661e78b44b5e2d8c190d6 feat(vendor.roborock): Add support for the S4 Max (#699)
+6e3b462a36db49819718d47d58cb708728477360 fix(ui): do not cache API responses (#698)
+c2e7c72c5e0be1a7b34219798bd2aebdbe5c32d3 docs: add random factory reset faq entry
+2758056b58b0484d28d574ad60bdd932ecfac813 chore(release): Release 2021.02.0
+61e98a91c9c5b7f762271a66bb7b5c8e1e551740 docs: remove obsolete troubleshooting stuff
+a61e2dd63772d3ed2bb60ddf40d2cbe8bc5ad503 docs: Add note regarding the VALETUDO_LOG_PATH env variable
+0171a8d1ba12c96045124d0e1f5b1b215655c314 feat(logger): Log config and logfile location to logfile
+8fd53a5237bc847708b7ee631da4afbd8fe7b950 fix(webserver): Rate-limit logfile access
+e5fd0a54ab1e040c2c82c60a4c5c310f4709fc6e fix(miio): One failing message should not kill the process 20 minutes later
+3e2367875b364d4ca63ea98548fbc3c2e841ee15 fix(logger): Default loglevel should be info
+2bd4c820a5f46e77383d9d489867494d4696fc09 fix(logger): Do not log twice if logfile is the same as stdout redirection (#691)
+4bd09c8b8ad0d2f411630430a88dacd3e6230063 feat: Log the firmware version if embedded
+5e6d8df224d845da5218d0836f20f7eb4027d39c fix(miio): Don't get confused by the system clock doing weird things
+58515d97559b8bd2ab2ac12ddfbadd4fad576d9f fix(logger): Logger should log 🪵
+89320f45c4b7e49d8246f9b2508bdacd4c549efb feat: Add Valetudo log to UI (#690)
+be5df6e75edb27cd848c2a437c1f634526a935a0 chore: Try out github codeql action
+22943a0265b7164ad24b2308550b75eca4a57b0c docs: Document the D9
+278a1ef1e4df1f4e08221544494b194192e397c8 chore: Update issue templates
+97ac35e7e34fc7da3dbc3e4774f1f9ecbe7afe64 fix(mqtt): Fix home assistant vacuum.send_command functionality
+5492e4dae0923577a5546a09a8b9e56918f88d12 docs: Various documentation changes
+43aa8c60ded5ed1bf52fdfce406c6bb0933f1cc1 fix(vendor.dreame): Proper angles
+83d1d13bc47bb7a16f1a9ed8937ce616a0f2b5ec feat(mqtt): Home Assistant Autodiscovery for Maps by embedding the map data in a png
+e14935dfa9ef06a15871b3bd7683c55956b4db52 fix(miio): Set ServerSocket to disconnected on timeouts to prevent valetudo breaking on wifi issues
+1509be361552f76148c4f38b3d7ec1da3c400735 feat(vendor.dreame): Volume Control + Volume Test
+4a47939ebea220e19ed9da3b4427c53da429e700 feat(vendor.roborock): Volume Control + Volume Test
+56b06378a8c183d488eb503056bee39ff8872486 feat(core): Change the interface of the SpeakerVolumeControlCapability and add the SpeakerTestCapability
+c7095a7a340cfad293385a37f6f9dcf04a477e61 fix(ntpClient): Intercept dns lookup calls for our ntp server as well
+54ca6068dbe8f09cf8105fd11c50b9107c2b739f feat(vendor.roborock): Roborock/Capability Carpet Mode (#661)
+3c0a644da402f1e392fe7f088ba7fd3da4dafc69 fix(ui): Fix for pinch zoom bug in IOS / Safari (#683)
+2e4421b0e27adc563a40ab9c8d2e3b804128ce57 fix(vendor.roborock): calculation of max elements for virtual restrictions (#681)
+bef609efbe772632b270c67efb660ef2b8f06c0f fix(vendor.viomi): consumables command fix for viaomi.v8 (#677)
+5e037c22dfb27be9f3cdfa50b6d18911998da913 fix(vendor.dreame): Properly parse map with correct rotation, offsets etc
+be0efca344ea7fe53858b9a28c7097ad4c99dea1 fix(vendor.viomi): Resolve #672: Fix viomi fan speed control (#673)
+1230c082b50f9264a27219f4f8e211de54541caf fix(vendor.dreame): Don't store empty MapLayers
+ba37cb5e3d4f27f16f2b1da7d49b7d4786b379f5 chore: Fix test files for dreame (again)
+8b54c7d0066d7b4b306aaf1b096ce1027651998c feat: NTPClient
+ef949be485ba97bd8c65066ff5c3f427fbf35f6e feat(vendor.dreame): Minor improvements for D9 Firmware 1072
+8226e4ad3e840539f13a358d817ec1b9217a2085 fix(webserver): Fix handleHttpDnsRequest scope
+186abd34852d62b3ab418216a500bfbb72423b85 feat(vendor.dreame): Improve handling of RISM maps
+852683b25815a05235b580a313a2464714786f4c fix(miio): http_dns: Block ott.io.mi.com requests (#671)
+a38987affba30f37e0cd09a67627a51adf695679 fix(vendor.viomi): Various fixes for 2020.01.1
+54bc2b71d99c0d2c411e807a2365107eb7949b36 fix(ui): SSE Map updates should use a relative path
+669f19273eb9e849b578508adaa7e37f99d79fed feat(vendor.dreame): D9 error codes
+e986687f649e0f3c061653aac9d362b74bde5065 feat(vendor.dreame): Consumable monitoring
+3f1f4940c582534f6fb5d18442e21e1183498378 feat(vendor.dreame): Virtual Restrictions
+bc6e24333339ed1d199c985bedbf825419a2a028 chore(release): Release 2021.01.1
+58a26186f34e5331fe5373e231e97f403e15e147 feat(vendor.roborock): Use the lo alias approach for more robots
+b37370349514fea07fc8b27b89637a44e6df668e fix(miio): Only report a new token from handshake if it is actually new
+4b3ed974d064b788f470c9439a719a3f3ed95cb9 feat(vendor.roborock): Do not disturb capability (#659)
+fde2ffd8d3c7b5869f221870774a2032232d6c54 feat(ui): Bring back consumable monitoring & resetting for now
+216c3474e7680b90859b47e2ea5308ced8d1c7ff fix: Fix map layer dimensions calculation for empty layers
+a81b8e94a6db0c39b0881bbb29122ca62f5a2247 fix(vendor.dreame): Fix map parser tests
+cd76abe952cda43fd260eda2b217aff677b98d29 feat(vendor.dreame): Re-add support for 1c as well as more dreame capabilities
+71bc1f8b91b47503a45b3771c3217655cc30a7fd fix(vendor.roborock): Use lo alias cloud redirection approach for S6 & S5Max with miio_client 3.5.8
+7114fccb502305e3176b350973f1ba0825e98845 feat: Add properties to capability
+b2f46ec372c37c9ccb8142393d94cd8ba31be1e8 docs(vendor.roborock): roborock ota remarks (#651)
+95190a311acca33c2d066a2d9df628522207f9fc docs(vendor.viomi): Fix iptables setup instructions (#649)
+f75b70d7f7d3092f724555090db99aea4bccf6d9 fix: Set VALETUDO_CONFIG_PATH variable for Upstart (#648)
+f70bd14aae8e7b1680111d11716e09f3c7057257 docs: Extend mqtt and Node-RED integration
+26ceb95a71154396d14adfb01b6fb1d198fa3490 fix(mqtt): missing / in set_fan_speed topic
+7c5e231326bc8ca454e303b31c647f14f6773cd8 feat(vendor.dreame): Basic Dreame D9 support
+28483abd4431cf0d38953aefeb3995e9d45ea2b8 fix(vacuum.roborock): Fix broken cloud connectivity on newer roborock vacuums caused by missing region
+0226cd56a6f245e307944dab623d28bda8fcc288 feat(vacuum.roborock): Re-added support for S6 Pure
+2ced1d9531807d691296b0df27e1098753fe62ea chore(release): Beta Release 2021.01.0b0
+923f941e76e2e41be7a714e47f3a08428d09cfd4 docs(vacuum.viomi): Fix deployment instructions
+6da282201172b3fb5efa1969aac6192d5ead5842 fix(vacuum.viomi): Fix invalid property access
+96462ac752b025a3385e31d4ea0cfbea268b207c feat(vacuum.viomi): Virtual Walls & No-Go Areas
+3ca745054d3c159023edb632e198126e89d7494a fix(vacuum.viomi): Fix fan speed state parsing
+d06520da114f45778527e54446eed70df38e66ba feat: Configure authorized_keys location via ENV variable
+8486f04fdd9176af6e4e7be684bb3eecebaa39e1 feat: Viomi capabilities port
+76a9c5234dfbcce864d70d1d6db781af86d6a98b feat(mqtt): Publish ValetudoGoToLocations & ValetudoZonePresets
+1fde1b987ebb48334b42f6ae7a29c2f3407adf2a docs: Update development instructions
+a06450dd75abaad9ec0c4a5d7e9fe27450939927 feat!: Capabilities System (#584)
+61902edd8b185d116dd27a02827866e3defd01b1 feat(vacuum.roborock): Add support for no-mopping zones on S5 Max and S6 (#630)
+8e8d88acb617bafc1351d34b595d83a8ff5abdf6 docs: Update supported-dreame-devices.md (#621)
+057e1d2b288ae8110b2a13a8af770bd010ebe88e docs: Update troubleshooting.md (#614)
+5cbf50696802f6bfaa1b8945e9400bedf47e5729 docs: Update faq.md (#613)
+89a5485f17e7ac68e7b8d97ae9a8381d2f0a7767 fix(vacuum.viomi): Segments + Docs (#600)
+805b2052c2891e4e8243e6c225538092e815f1fa docs: Add Lovelace Valetudo Map Card (#601)
+8a151ba7d7c523395f19bb8296c51813000f96a9 ci: reactivate eslint for tests
+20d86c3c005ac78d36bab29a78946e17f163f2c3 fix(vacuum.viomi): Added model names for viomi.v8
+ae799a8f4a001120ba2cc34690e1fdef37c07b6d ci: add eslint-jsdoc
+0d53247659be5c7a8915b43c3ab256bb306a1864 style: fix jsdoc
+8609612e03bc756194982d35b4389d27557842ac fix: Improved dnshack to catch all problematic dns.lookup requests
+252c22dc9d457aa69bdbee0829930aa156430a9b fix(ui): fix #565 ui not working with safari and basic auth
+164266ac984171c362adfdb5032854cdd67ee28d docs: Added some lines regarding expectation management
+118705d4a98a3e41f29e5965a4bd757513926126 feat(mqtt)!: Deflate and base64-encode map data before publishing it to mqtt topic
+c059b9baf69e52959f39081e439a583c4132e1a8 docs: Home Assistant Automation for Valetudo version upgrade (#578)
+8d14c0a0991a57fa81a2c628e72a5b24c0c6e704 docs: Added dev faq
+5335a0d71fe925eed2ff01335af5657872900647 chore: Updated pkg to 4.4.9
+6db8b76bddfea636303d1169fa7441ac21a5deca chore(release):0.6.1
+a23d5af95b7986c21e3487eb5e2d4f93c16c8ba3 feat(mqtt): Added sw_version to mqtt autodiscovery to fix #568
+4f7ec2c44e8da163bf30c097df26a3df37380f04 fix(ui): Restore context after drawing active zone
+f3cc9354d6da3149a69ef5476c922d97df0eb8a3 fix(vacuum.roborock): Don't multiply iterations by 10 to fix #573
+8b06203de22871c47be97bc8e353118796636853 fix(mqtt): Fixed #571 mqtt pause status
+039b7411325b74c2b4abbe58a91134fd1d1b9982 fix(ui): Fix mqtt settings checkboxes
+41f3e981a590e76261e7d57ccff8d97b3d4b94ad fix: override dns.lookup to mitigate static nodejs segfaults
+b2410ff5eda5a67f02ff5fcad7ef7c30e498674c fix(mqtt): Fix segfault on mqtt hostname resolution
+a5e086e913198c87226d417dc6ff30f58b7e7a0b chore(release):0.6.0
+890120c76930bb8941459a7e0d1baa0af8577d83 fix(ui): Fix map coloring (#567)
+f14f6cc253766e11f9a95dfe6cbff7cfafc73e70 feat: Segment cleanup via WebUI + MQTT
+0ca13e328d6e4943a444f750eb35365748dd5523 fix(ui): Fixed zone dimensions
+6b61ca816f377c07c784cb9075be43e838ecb405 feat(ui): Added zone size display, proper icon/text scaling and limited scaling
+19e141efc0b6e9f4798a9bff2482feaa10f3772f fix(vacuum.roborock): Changed set_lab_status payload for S6 to fix #540
+7133a50de24d12b99271ff9e3947ee5799e2d3bb chore: Updated eslint rules
+f73c7c61dfe786131704fa90fd93e632263b982d feat(vacuum.dreame): Initial basic support for the dreame.vacuum.mc1808
+97b5cdfd93bc4f562752a0a890f1b972b620119c feat(entities.state): Added Charging/Charged/Discharging status to BatteryStateAttribute
+f1879064b15ea978df32a12f8a23b346ba2e3e39 fix(vacuum.roborock): Fix map parsing failing for maps with no image data
+ef4e010c53a289df9e1561ebfff738ae2f9e0962 Update bug_report.md
+ac86c84c8fa75408b52067306f7e0c4a201e9725 fix(entities.map): Fixed MapLayer area calculation
+a0f68ab2f8aeb6547856bac1e47faa7b6a6fde70 chore: updated and applied eslint rules
+38a0af82db66428b8a6e7340dfaac394bbfcb2ac fix(mqtt): Check DNS resolution before connecting to mqtt broker to fix #563
+51a3564c8a1321eab400031a219b74df3394f2ae docs: Explain that Mi Home really won't work (#564)
+fdd80d24c577a66ecb358f838e675126abd0c084 fix(vacuum.viomi): Hackishly fixed path + angle
+ffbb8e75ffc4ce06bab6baa6f7328877cf66659b fix(vacuum.viomi): Hackishly fixed map parsing for viomi v6 + fan speed settings for all viomi
+e1565d073642c87c084d93c56e031ebbec1160bd fix(ui): Default to colorIndex 0 if solver can't find the segment in its graph
+d462f65e8fe57de43daf098f295d987a11990f9d feat(ui): Use math (four color theorem) to properly color segments
+eb6bece2ea306a6031ad0f5159c34af17b009b8c refactor: Core Vacuum + Map Structure Rework (#544)
+243be0c65e76b14d66c2633032869b192c829c05 docs: Updated documentation on viomi models
+2450ceb3f5cb2653ee32dd3d5ef0fbf2c7e69645 feat(roborock): Experimental support for even more roborock vacuums
+33f94ec6614d15876b5e1f77446500001185b317 feat(mqtt): add support for client certificate (#549)
+17bb01efe088a494563f6037076ade6e13c8c553 feat(vacuum.viomi): add support for viomi.vacuum.v8 + mop enhancements (#543)
+88de212274872eca0ca97c3b0dfadb70d2a4baa5 feat: Experimental support(?) for S6 MaxV
+a025b4724d826f6e5ca08713444bfc572cdfcfd6 docs: update information about supported roborock devices
+f2b6968736b851f0fdc1b999c94ec52c22935401 chore(release):0.5.3
+24579f7acd98e276f4a85344919c4e8a8d356381 feat: Initial Support for Roborock T/S4 and M1S
+b76ce144b4a3eb920a1dbab1991c83cf87ee7967 fix(mqtt): Removed unnecessary availability topic mitigation
+b9097a6f128aa947e4bb4a05fb3d79453f0f9e71 fix: Simplify embedded logic now that 'auto' is gone. #536
+7585f86e9fb1ec196b4b710454e1414673482081 fix: Always assume embedded operation unless specified otherwise (#536)
+e7384917354efa7e1d1b730b746966d4e46d87f2 feat: Try to write a backup in case we're overwriting an invalid configuration file. (#537)
+1a29155094cdd76e02c5cbea28739d4637d90c00 feat(ui): Allow select of multiple zones for zone clean (#535)
+32e94168fb3141fb49721be6019e0611690f3292 fix(ui): Hide forbidden zones editor menu item on gen 1 (#382)
+ffc06d65ba788cfbc3aee33b8e3d9d9e3fe647f9 fix: Removed useless app_get_locale functionality to fix #532
+98eda41e3c9e4112cbe3efc72b0e75b160cdb7de refactor(mqtt): Moved mqtt availability publishing to own method
+f417b4de3f27b0664552471c05adb220592f5c51 feat: Initial support for S6 T6 and S5 Max
+af696739d3119fbd84b1e9ba20b50b3fedce7a12 fix(mqtt): Update availability topic on each attribute topic update to fix false offline status
+d96eb15c8f299ff49d98f9d6661c6f44225bc633 feat: Added debug config option to continuously log memory usage
+ea6dc9e60ab277ea63765bafe1efe58f89220e1a ci: use node 14
+3a5d2df01ed17e7fa915fe164823909b2add5b79 chore(build): Removed old nodejs versions
+074fe95855e056feaa3814042a3cb6e9a0c1a84d build: Upgrade to latest node v14.4.0
+706ddda3235b2e2a244d9153e87d568f731578df refactor: Use named capture groups for regexes
+3f80b30af544d4734859cf57f2b3a156a31706cd chore: Updated yarn.lock
+f65c725bc08efdb7f64a624fcbe685f126d4cddb chore: Removed unused UI stuff to reduce valetudo binary size
+cca96ac829d100df4bce31352908865605eb74b6 build: Use a statically-linked stripped nodev14 base binary
+3b8172ddd9bca19644bfef6156538335ec3b8a69 chore: Fixed test for new segment structure
+1a723a469e35e996dcca754301329046c4c5a7cf refactor: Changed segment pixel parsing and reformatted client map code
+e241c1d9b0dd1870f759fd8ebd1f1e7ec1f7cf61 feat: Added option to fully configure model information via the config file (#497)
+e2ea1ce212c4f85bba492dc273c6b7e75f4768b8 fix(ui): Fix #527 not working close and cancel buttons in timer settings
+e51ece9f34e5934b12b764a5731d6e8cedbc03e0 docs: Added dustbin capacity to roborock vacuum knowledge base
+105557eb3ad39bad0f51a64cf2262f60a88e444f refactor(webserver): Reformatted code and removed hackish duplicate upload check
+15e0e0290fa5633ac16f10c4c8e27c54fc26e6ff docs: Added roborock firmware filenames
+748ecb137420d699f56bea5730afe0889400d34a docs: Updated README map screenshot with darkmode and section rendering
+d90913efc97297c4b491bddba2794a8f7cef9e60 chore(release):0.5.2
+6724e5556f3350c1c3cc6d4d5f09a9e08e8f2a6b fix(ui): Fixed virtual wall placement
+b196625ac73e4932324b2bd2cf487790d6758711 feat(mqtt): Add availability as last will
+8db6ca271aa63eeded999a377bcd02c94fa6dc16 feat(ui): Display Model information in Info Page
+9ef95ebeebd1d6d45992c0ad47de97d16066861e docs: Added and customized css to fix navigation scrolling
+dbc92cc6ced084886a4d11410ca587243a4db646 docs: Remove footer from theme to fix display on lower-res screens
+e2a542c95a4abd147b3bb7f1c151247334347d1b feat: Always log Stacktrace on unclean exit code
+67878263132d3138b2eeb3820ed9c69349d08aea fix(vacuum.roborock): Limit maximum amount of virtual walls according to firmware limits
+8aa96dd5af795d20063582e1fe7d690825ee2f00 docs: Added hardware specs + features to roborock docs
+ac757b2ba126509c7c61eb7d3aa987b9ea17f95c fix(ui): Removed misleading firmware version which was actually the miio_client version
+2b7696565b02615a2aaeb73b6bf4bd1bca7885d4 feat(vacuum.roborock): Add backup map restore to vacuum class
+7a529bbe9a41a058b72693cd7d4f64a09e137e08 refactor(vacuum): Renamed sendLocal to sendCommand since the name was misleading
+717d7315ffebbe2cccf04351189430d2bc66f1e7 docs: Added flashing timeout to FAQ
+88f1149f7f3fd512e7eca6f919f4b60dac5096aa docs: Documented supported roborock devices
+3bbdd80f99339d8a8efb638f9ae1326399a0dd00 feat(vacuum.roborock): added more events without handler
+afd7e5a95781c7429d0d5b4ee2240fc3e26dfd89 feat: log process exit code + debug log process exit stacktrace
+b9f42aa3ef6085a1586041229dd402f93c0e147c fix: Today's lesson: "async" implicitly wraps a function inside a promise
+85d38e1c89db4333588e3b96c76e07df7e2de95b fix: Make the linter happy
+0315be46b75bb83727f67bd1f65b5f310a3758c7 fix(ui): Removed unnecessary console.log
+dd63d75cf2c15bbc7e65e459da7b865be2a3dffd fix(vacuum.roborock): getCurrentStatus should return a promise
+b0f4262a89abf3ecd99717402b2e4a5bcc3c567b docs: Added reset fix to firmware building docs for roborock devices
+bff36388e9aacef0e3669c904a04dbf837710b35 docs: Updated FAQ regarding persistent maps
+9eaf848ef2f25d17ac8e19702abc24bf6ce19c90 feat(mqtt): added time and area information to mqtt attributes
+4c181aee7f9f41a1881267a5a477b1ff499c4875 feat(ui): Added and reworked icons, fixed rendering bugs and fully enabled map dark mode
+c2f4b62e424cbf369324b80b59873e0c9d103a90 refactor(ui): create api service
+964b935a21e5af62e87ec84e32a751e99106b90f feat: new robot + charger icon
+386c344160e5ad17e1d9503121d3ae87abb302b0 feat: Parse and render segments
+cd42a7ed50c5b29d586470461f1c1afd9555419f fix(vacuum): missing roborock onStatusChange implementation
+84e284cd30edea09e6adc4ee2ae75bcc95fec66a docs: add release rss feed
+9ccbed7b46d5e60757918fa26b5c70218609ce18 docs: use domain + seo plugin
+67b9885b5a54c58d6e7e2375c0f5b80330db7136 Create CNAME
+fdbb2b0c2bcafe4583fc33d3c10890030d3bbf27 docs: fix valetudo logo
+13cfb33f655163cc673552ec65c88bb3145483c6 docs: Hopefully fix github pages build
+3cdfbbb2d61c05bed5b99a0e8de114fd2c9dc3dc docs: Updated documentation to fix #505 and #512
+efa8ec2b4a2c03ad9a165ffc8836a79547517141 Viomi: Use Mode enum consistently (follow-up from #514).
+153269538cbaa3828aee737f7264f226144adc4a Viomi: support setting suction through UI.
+f5ae248d46fb1cd59d420fdb05d1f4689f157d04 Viomi: set correct mopping operation.
+68d61f7f956a5e8aea1c26a1e4d89af19c63a3ae Viomi: reset current operation once finished.
+536fe00b0e8606b6af08335f2e8c5f83fcd0a946 Consistently log diffs on status changes.
+4f7ff43bf3ef211f5bf0ea6f41be369bd454c117 style(mqtt): add line wraps
+18261bb1680cc28a80526869c2c2a95974f9072c fix(api): remove passwords from /api/get_config
+c41f6da874373b36bc670507d24ee488e5252ee8 feat(mqtt): split broker_url in multiple fields and hide password
+f327db1260e3261cb126a8bb8e0ea9af6b8130e5 Rename doTimesync to isServerSocket
+697feebf15475016dd8aceb226345b7c2689a757 Implement sendPing command.
+0253cc2c92513066db9d8d80635f427f8f2ff255 Try harder parsing broken packets.
+dea665ea11f8d0461a28cd4f44b4279a8eba68e9 Change deviceId from string to number
+1ab3247089dac4b3e9e0f03a3574dd5ef5e5be67 Chnaged Valetudo clone folder in the doc
+0660785a94304339258c96c648c0be6b7a67a287 Improving doc
+efb480918dec27ba43b82f9bb6e9476f57c10a39 Update roborock install instractions
+606377569cfa31eb968e69536baa07617332213b feat: Upgrade MQTT to 4.0.0 (#518)
+d4845722a37677c9657eacfd77cf8acfd20e6bac Fixing misspell
+dff2a78fd10fd9ee25b3285d8104ce5a15220369 build: use yarn in CI
+9efa812982199603ea851cb9a651dc0a9f9e1600 docs(mqtt): add description for precision
+8b736d7b09047a1f6f94ddcff5c234ac32cca32b refactor(vacuum): getZoneCleaningStatus
+4152bcf3e7fabb62f6dbfae844f396e6ca0efca7 refactor(mqtt): round to numbers
+a5b1ef49e6a223a1dfd4d1823d2c01cfb249f23b refactor(vacuum): getConsumableStatus
+2f4606a3e4f9c113f67ebd478195f26f68a30d74 refactor(vacuum): getCleanSummary
+5acdc4466cb3a33087412e03763e185dfc36599c adding kernel route for dustcloud connection
+b2342ebd7429d7bfbddb9312bbd7574e25392a3a chore(release):0.5.1
+48064afc1b6f7d9359567278327e3a09863c5693 build: use github action to build release (#506)
+c46e57997d1e79740ed441cf0350cb7419711f46 Dustbuilder supports 2008+ now
+29aad862fc5438c659b4b97d149d3e1248cdaf47 docs: Configure MQTT via web interface
+970bf2008524e7c948f0dee2828e4e0e331679cb feat(mqtt): restart mqtt client on changed config
+8c3866ec3876a7d40ecfe45a764f9194da3a7f1e refactor(mqtt): add more error handling
+c151007b7941c8d3ec4c81cfa5fb47e4129f9cab refactor: encapsulate events
+91d241a4a3a8c78083989acd726f70ac1b97bd10 refactor(vacuum): getCleanRecord
+c6d2bb9d222e366c7e1fc6e070c39c8704a0a474 refactor(mqtt): updateAttributesTopic
+4c5777233b722af0ac99b7160e91dbfdb9a4d3cf refactor(mqtt): loadConfig
+d7ed4fb6783ff70cc7a4e29372ea63149cdc3658 Seperated Roborock.js into two different classes for Gen1 and Gen2 (#503)
+60c224dc22a4075ba2528f9523c8b50ff09ba4b1 Support changing MQTT settings in web UI (#496)
+3ca66202c2bc859c015d2f0f84bb3340e4eb06fe fix: gen1 fanspeeds
+f6d423a1692b02fac724042606545f72635dd750 Update bug_report.md
+dd9876b82b1b824784165dbf286ea2edc8f4c738 Removed Basic Auth user/pass length limitations according to RFC2617 to fix #435
+e3ce09ce4f7479c1a21eec9e894c03be13005da7 Fix device.token location
+59acb48babd555abd399e2fe6ac7ffe156714ffa Remove line-ending rule from eslintrc due to issues with developing on windows
+8dea867733657946bf6dc9b641bf2e43ffe79c03 Use os.tmpdir() for soundpack upload location to fix #494
+49872a9e16e1b472529aaf549c88f11f53ba4abf Fixed guide since latest firmwares do not support ed25519 keys
+6b6a54a48b860648b654221b1d94c5d11f7d972e Fix Gen1 Roborock Device Name #498
+e5b4959fda499153b01007a0234b27b7b2716c0c Fix example config
+e566d3df6d3c1a122bf6c621eb05002ee4709bd9 Add instructions for newer firmwares
+691c00cb67b6651430cdfde67063c00a46e2dbfc Slightly clearer Home Assistant instructions
+1bf2b6e60bfafe0a189a5e947c120fb4959b4ba3 Release 0.5.0
+1e3ba04ff61e086712c57e1597969aadf61b02ac Moved viomi instructions to docs and added home assistant device screenshot
+cef5ee8f5b08c746abee762823cae9b40da73ec7 Replaced donate link with something better
+dd7f3188f6a1d5190255bfc9b115dcc3c112d259 add subfolders
+3a2fb5634bf5b264c70a413e6fb589c5c8b4532f update links
+a0aadae9e2a74d38ea9d5cab1123fdaaa8367441 add navigation
+a5c5206392aef8191b5626589b274ca255dfff6a add default layout
+78b483893b7152bc15c3edd1abcd2a48b0580033 move _config to docs
+abcf1a5351360bc54e572b0cf7f83a44cc060696 Remove unnecessary note
+d81041ec15dba6699bab1930aa3baa0f86b33283 How does github pages work
+160b1e5c8893ad8e63477b5abf745e2800d1ea25 Updated installation instructions for latest firmwares
+57579e718d74468440671ac3ad0a01383cdeb64b Updated README.md
+abf1c879c0efd9b3864973cc93c8ba3803334367 Set theme jekyll-theme-minimal
+0180208a7cb14207a223533d71cfa8d0e8174f54 Imported wiki to docs folder
+3743a3d1e9cc0b3ed4e35cae605c37f5464179c4 Fix consecutive persistant data editing
+277061d5a99d5316204b2bc8007c99b6e9c11d75 Fix consecutive spot editing
+04e1720f3c5e4d1061c61781451d9dcd0bfd6fd3 fix maps with segments
+1fffc915f5c5d66fbd3711f725e4d090711d825f add comments and line wraps
+edd5c575cdc18f305f753b190974e8a40e9e5630 fix addTimer for firmware 2008
+4c022735f45ad94889af37e9000cf1b4b7518644 Strict comparison for provideMapData option
+ecd052f441793059cf91023a7cc7cd8d28758aa8 define fan speed constants
+96b2c9ab95e9025c53ca4c8e02fa1a2dfade2c41 use quotes to access fanspeeds
+c817a762ad7f074f7a762500f24274fee7aed603 move fan speed presets to vacuum implementation and support for new firmware
+569067864e5a7323e4d5cf73bb40afe17a36aa42 Convert ViomiMapParser to a ES6-class. #426
+ab910d7ad97b7f922a7cb93164d3dca8b31bba09 Updated README.md
+ea395962160ffb5eba1047e4d27937f82de21f82 Updated README.md
+f8d320c149db8b81ccf53cca07b432fca4fe7e02 Add support for segment block type 11
+e444a6021383e083c30aec9fd01be140d9d794fe Use views instead of offsets
+5d3ab1c9803d1deb956adf9026983993d9c3613b add support for firmware 2008 maps
+093d58010c17bef1c5ff5e9932aa9dace69a687e add test for goto_target
+298a266fc552cf4bda026935780a797100f1b93e fix parsing no_go_areas
+02ec723d7acd7ecd2b134d2ca18b46c96a123522 rename test to better match data
+d48962be3243bb53daf5c50f81cfab44b26a71ae Added device information to HA MQTT Autodiscovery
+8172570d8b5f90bab3e38ceb988b90dcea686a82 Viomi: automatically select mopping mode based on installed box & mop.
+3ed96e06d7a895caf0e216188136364bfa417dcb fix manual control state
+23929468c8eec04f08d5f4b8093a2d39eea4ea94 pretty-print expected map
+bd04b99364ca81e30cc5729d3b51ba6117126be5 add test for RRMapParser
+e338cf551d2751e3aa931a87a39cbdd2da832e73 add mocha test framework and should assertion library
+cc0ce41b8f9b431b9b81f2ae796ef0ed2b92567b fix websocket heartbeat
+2b98874ece33b679062b8081dc1c85c0b43fce44 adjust implementation to changed interface
+9c9b0d135541d95cee75ec497b32715e51a58f00 improve jsdoc
+4a1b1364d23f1ef79f273ebff16d049bdeee6253 api clean up
+30c3dafab3229e37640af68ca96550737252e797 refactor to class
+f0294ea0ad005fc8b184562d2f8624db83d28b9a refactor to classes
+732ebc3e6a3b2d1eed6d588a0f1ff1f3b144bbaa jsdoc fixes
+09b23cd760b5406b3deb69e8284ba0ae2925f591 move upload handling completely to ApiRouter
+09a5df042a00491ea35b33074e9623d34face9d5 move routes to device router
+3eef1a5057068dbe9cd830b4dd7b61d8d0f025b7 extract createAuthMiddleware
+70841030895b57df194b9b9d43999c67dec819f8 extract initWebSocketServer
+8480ac4c5c5c1f109b86069762f8d928a7acf914 refactor WebServer to class
+19ec1b334a99169835f41c3e92483091edc340d7 move web api routes to api router
+480be73da57591dc0c2619ef62240c56ae11df30 Update viomi_instructions, now that more functionality is working.
+037de58e18f624e7f40b593de33f3d9098c6261f Viomi: implement pause & continue controls.
+38bd6374f987412b7202b5d7714ee6ef665c89c4 Enable 'Pause' button when in State.CLEANING
+d9ba2c59114df1377506f23ab89c522acb572f8b Consolidate header production into a single file.
+4534a7874a6b6c59be499a25e193374f97a41f12 Only debug-log trace messages.
+9238fe709c0da13d805ce3028cc4ad4f3d6a9d49 Fix marker configuration js loading (fixes #461)
+c769007d86d7469d57c8868c440438c26efe31b5 Remove rollup dev deps.
+3405391e15ef27b1ee40b9c1d0db0e54b1f19123 Remove unncessary dependencies.
+ee97c3067de4f2a13984c43d766dfbae6080f88c Add typescript to dev dependencies (required for `tsc` command)
+6d3497fd8d99aa1288c86e3bfb7fe678e8285c9b fix startCleaningZonesById interface
+7dfcb43a7858f91edbd62a5bf70ef7f4db39e2c2 remove prettycron from build script
+ee47913df6b8a043c0840235af25748c1670cc4e use abstract MiioVacuum outside of device implementations
+d563d2ccd43d50a8c19aa72c1ebd46381a9644c7 fix jsdoc type
+330f4e30403f53b8c579dddffc43fa7c6f76f72f removed nonexistent parameter
+deb8bd087f3d085eca4433e340e2cf7c6dbcedd4 replace prettycron with cronstrue cause there are no valid type definitions for prettycron
+009efe474fe3f3f044d077f395f1d7355922e2a4 add type checking
+41108c744ae7efec93967a6dc22f2a1f6cc0499c Merge pull request #457 from rumpeltux/zones
+da559b4c07cbd2df578d2a9c5b1e7f139c987ae2 Move adoptLegacyAreas into a separate function.
+d866da1f9340cca60a2c392a5a9625f8c4d2d15a MQTT interface can still use zone names.
+8acda9aedf0643a325155a8bf32ca24e40b261d5 Fix Array.concat in startCleaningZonesById
+ac9d49b88867c083814f2ca418d49e7481df2d82 Fix consecutive zone editing.
+125386f4b9963204ae623279a96e2cb6f6d4a213 Fix zones: save new zones
+7467ed8498cb6d7e351474afe4eb5f2b7de72368 Viomi: support zone cleaning for manual specified zones
+dcd388bb945e1815cf6db2a74422bb6c8d43fcd5 Support robot-provided zones.
+5dc6e438afc1361b1955230a854a8c677da01e45 Fix packet header (broken in previous commit).
+bcf44ccbdd653bc6e5b1b52ec1346169c0bcae08 Fix handshake logic
+ea9cdf41d754bb740a73668d9978f75d11889598 Fixes per code-review suggestions.
+4665e03f1989aa7c3995ddf8a771432fc95c7c29 Save maps that failed to parse in /tmp/ and update viomi_instructions.md.
+3f20ba2caba0f4f6f4ea29d764fd3c94eab7723f Fix room parsing for multimaps (tested with viomi firmware version 0046).
+645398f8274a7f8f81de3c401721a4f576fb1c84 Fix error descriptions.
+64cde0fe76e9e10391fbbe6a8f3217b526112c7f Add more error descriptions and limit debug logging to less spammy messages.
+2148d62c1de9fe68e65128a8989381839a913dcc Viomi: default language to english (boot default is chinese)
+45e06112b657075407cc5d3ed5bdb6dc5927a787 Fix Viomi map parsing.
+cfd82f8daa59e4794e76bf1e5e04b59f3c00636e Actually poll status in pollStatusLoop (broken by 4f8409c)
+670f2d4384d58db53fb45633f58b6b66b5ac6c07 simplyfy zlib callback handling
+366b1d1c63c60d39c398e4504287ea98b1067cd2 enforce eslint:keyword-spacing
+36c404cc8b7cf81971fdcbb909bee9fa236328f0 refactor with async/await
+6de5b853512d19cb346c3c9b5a79c21ed8657751 promisify startCleaning
+8dd36bd5bcd8968f9cc9ba2c8728109b9def6cd8 promisify preprocessMap
+4f8409c43f7778e7b7019fd6387e4eacac875145 remove callback from pollStatusLoop
+64a4ca30eb1ab609a4cf890f5d4b2d6a2ba9de09 fix JSDoc
+73ce1a13e6db78f4eb85adfd03907d10f0fc5602 promisify SSHManager
+34221f32a78d2e48f1302912b11ebdff68f24c34 fix sendLocal in viomi class
+d103b0350e5ed49663af08097d38b22264ae6630 promisify sendLocal
+9f523eac1866d9664eb02eeaa31c64a389b6d87f Reintroduce extended timeout when polling for a new map.
+9714fa261bb8cd33006ee05b198449b39556890a Make 'timeout' proper Error instances.
+a20d5d0ba1427d1c3e7f3b7b4841286e51c07f1f Fix typechecking errors (#445)
+1ef80a28f0cc6d3cf97cd051776b38b90233d1f3 Merge pull request #444 from Hypfer/viomi
+d90775c692e4a651829c8d5557b15f958389337d Agressively re-handshake. Trying to fix #438. (#443)
+8b31536ba1cead75db335328c9f88083de5cfb37 Merge pull request #442 from rumpeltux/viomi
+c41d220aa68ac658c3bd42374e5d0d98b3c48aec Add jsconfig.json
+8bcb417465a16856cb691ba57b16eb8b5198af40 Remove eslint-env browser. It's already set by eslintrc.
+fd23959422bfe92b6c4e520c0cd438acaa062cad Fix type errors in settings-persistent-data.js
+61e01cc3262825c8eca105f0076fe9d8cf064b6a Fix remaining eslint errors.
+062124faa911451cb68d18326922c476e876b801 clang-format & eslint --fix for newly extracted client/*.js files.
+c58219d0eeafe80129554c8808f32cae2424e45a Make sure the onShow() function is also called when the element was shown already.
+813aa058722943ab592c30ae1b423c541feba510 Put script loading into their own scope to prevent redeclaration of variables.
+7d40e25f696c46b9ec9428fce004ab8dce330264 Extract scripts from UI html files into js files.
+66bf366a6857f9be7119e3a152c2aadea27ac4d5 Copy UI html to js files.
+96d8421f4c6fa403c468192b6e009da7854f07a3 index.html: fix js errors when map page isn't loaded yet
+ea084ce5968ea387bbff1e5b60b11309d065d01e Fix Status.status type to string again. #437
+a1401e8a590e7bb377fc5521bea860509325ad06 [viomi branch] refactor to ES6 classes (#437)
+b6c67fcb67358fb0bb7ce698d4ca4fd9176ec448 Reworked Rockrobo map parser
+d3237ee8298e2f01dbfe011451d7642160d024e4 Add some startup info messages for easier debugging
+ec2f7db6785edb58dfb2de189c4a6c82c416095c Properly handle props message
+ea4c339da633e26408c95bda34eda2977ab78897 Properly handle cloud keep-alive packets
+d8f4a260c350453b1ca55ff40887b6ddd4ffcc4a Fixed persistent data settings for roborock vacuums
+5d690d648097f9de08cf8227e5885da021441c2d Properly handle requests with error response
+87caf23ba2c790cd5daf9a13793e2873b06880a0 Use logger instead of console.log
+228e2767f2eb9b63581133b089e76a0ba9561f60 Forcefully quit valetudo if graceful shutdown fails
+0662aad90fbf06c7eb4ae057d9c804c2fbf6b7e6 Lol linter
+9a496f4b76e383912dd26f4117a197f64092bb30 Fixed roborock live map
+9e907e59184e68798fbc331ed8fdd1bbfb3da00e Fix #436
+e8dec55975dd7b27158874be08e37ebaff84265d Disable timesync on local socket to fix local communication
+239b0421969d79dbccf3a7c0f70b465fa5c6dc58 Convert all usages of MiioVacuum.getCurrentStatus to promise
+6ba43529016d8f8c0c46bcc31210df3572f114c7 Exceptions within promises are logged and don't exit the tool. Manually exit where desired.
+652233099a90378b50599f3637cafa6bec7b0d43 MiioSocket: keep the remote stamp. #420
+90fcd656e4eaa8d927969b00d5b42543aff01b75 Move createLocalSocket() from Valetudo to MiioVacuum.
+dbf5bd4356a338369a6dee575c35cfbcbd31e3c5 Add device.{token|conf}.example files missed from a previous commit.
+e0681fa103467aa925a38c06530aa75a2f583710 Move Dummycloud construction from Valetudo to MiioVacuum. #420
+c8832526d8531b5098eb427b2b615a6377e9bbd1 Viomi: add initial support for some error states. poll map regularly.
+bb68247e6c86425381b8ebb82acebcbe7b1ef5eb Add getCurrentStatus to the MiioVacuum interface and convert to Promise.
+8b8ef18e14b89f4e5b3856836972c503ecef1635 Update viomi installation instructions.
+f885fc35b5a732a7135ce482eed43f3b050fa56f Adopt Logger for classes in viomi branch.
+7a47cb84d7ec907fd4999e8738b70cd0caaffb79 Don't warn for LogLevel['info']
+55b01a0c5ea44dc5ad4aed4e413ad3abbce37aef Merge branch 'master' of into viomi
+cc4224250e36af506f7a2827792a5311c96c6e79 refactor to ES6 classes (#433)
+f8c6e98dae96cf87b0f9657560645fae2a94b828 Fix LogLevel handling (#432)
+8688b85f12ca4bbd5eba8484bbdfbdfa31bdb72d enforce eslint:no-trailing-spaces #427
+60610e534ce5ca11e6568fad0ba3159a3ba8fbe1 Prefer sending commands via cloud connection once it's available. #431
+03ccb5bbf297fce561123bc158730e1ade69a40f Convert MiioSocket to ES6
+506a612a69ccb21e20ca82d715cc526cdc27c625 Merge branch 'master' of into viomi
+37affb0d20fd678e0c11453ae7f2e4711dc0347f Add instructions for using fakerobot.js
+c06c06ab05dce15a746dc8aa96c365f23a178cd9 Add logger (#430)
+74c5cbe74355ab87814f6ba907aa5fb3cf3a07f3 Extract the default port DummyCloud listens on into a constant.
+8b19be4efd1cff4f3e3ea6d2fee70ed009967d66 Fix lint errors.
+76019ba6b990f406d1d1cc33e5eaca349d2109c3 Merge branch 'master' into viomi
+3c104225ff8f2b4c7867dec574f323cc76dc4396 Add ESLint (#427)
+3905920f1a37f2b25e9e0521171cb27c762a334a Reintroduce most of the original map-polling logic. #420
+7d89bd873ffed5dae97988e8c0870270b80d5391 Enable dummycloud connection from fakerobot.js.
+94816e83e165e383ee163f69ae177bdb583bda24 Only warn on unhandledRejections
+9c7894aac0fe38fece8a4ac1b41eeec14df0f8ce Introduce Capabilities as concept of Model. Fix persistent_data detection. #420
+58d350e9fc845257aec033f8b1c56a5f75d3ff57 Fix driveHome (turns out the commands are not equivalent after all). #420
+37bf22601bd9777e5a9813046316a9ea94b1d2de Use Promises for MiioSockets.
+3f59588094e756c09ba740ff9c5d8ead98f1ddc4 Fix Roborock map polling logic #420
+48b7612ddd38e347fbb96021f98955fe449fc752 Rename MiioDevice to MiioVacuum #420
+24b874d8c7444884451c9ccceecf138fd034ce7c Fix bug mentioned in #420.
+e94b7912cf39db146c3439daeb28d03c8e7ac5f2 Add 'fakerobot.js' a simple robot emulation tool. Usage: node -r esm fakerobot.js
+98a951d28988c30ac9b49f015ec3d62b87eebd54 MiioSocket: Handle ping and pong commands 'correctly'.
+41836dbeb64467e08eb1cba2709c13b7ce4fea81 Use explicit names to disambiguate logging messages rather than tokens.
+205df272f3709506902d49fea2c12dcf14122d76 remove unnecessary nested loop
+f823a6935d41dec978992c9ac199c7528812d968 set_charge is a command common to Roborock & Viomi
+2d62ceca2d421aaeb39695e365ae77287960b881 Viomi: Fix map history parsing. 2nd param seems to be authoritative.
+296173c42c49aca42c185ab4a7c60d628f697511 Allow to STOP / GO_HOME in more states.
+365ae386b67f7799a4640958020a214edb467ce5 Support other paths and make develop/local environment similar to actual robot.
+5c9f37eef081b28e266b8f3f54057129989f6091 Viomi: add basic deployment instructions
+e1c6b7eb6df211f3830c3db66d4eefe6fb32560f Viomi: Ask for curpos after connect. Map upload always uses PUT method.
+7dd6f2b164f53d0f74b35e94833c23c026439bff Viomi maps: parse charger, robot and goto locations
+f033a4c25157b3e67029aa1e75a6477671077180 Map Viomi.goTo to point_clean. This allows to perform spot cleaning.
+5b2039331188a6915ca9e2f65e00385a0d553615 Fix inverted map display.
+685b7b328b01b9bd8ca9ec5c85a2d11f6b1a78e9 Fix token display. Also show both cloud & local token.
+f250b241827445a1abbf2719443d8aae7db83f50 Move viomi README stuff out of README.md
+04b5f113d81722835db0b9cd4e805be1a0997960 Some more fixes and minor restructuring after testing.
+db5d0d71719c94b0abf636ff534708dc4323c494 Implement rudimentary support for the viomi device.
+7293f3d9135ce4b74c3d2f73ecf194557e034c99 refactor shutdown "callback hell" with async/await
+d751a63e7a8e4733d78dfdbb5ca8d8ca583420f6 Create support_request.md
+9fc8db27d757b196b3036028468ec5f905d216f8 refactors shutdown calls from sync to async
+fa74db60a52fe6af96090234bc7c95f41c8809d1 adds proper shutdown on SIGTERM and SIGINT
+1aece2e7e36d0c1b764fa7a5e2cdc60f83a47167 theme: persist user choice into local storage
+99e8b79d1804e85e795135988aea08633d075f0c theme: honor 'prefers-color-scheme' media queries
+cc69e673fedf303cbc5fb87f23577895a879c9ce Update dark theme to look more like valetudo and less green and orange
+7ff84ece27c2876a19821b088bd10a8b006b38a2 Add a rudimentary dark mode
+0f068cda7efb807f1e033c51a54395ee98e200dc make action sheets scrollable in minified css
+e6fa41ff78abe768572aabe2f115b55493fa2348 Ad unique_id for MQTT Discovery
+4ba4468f1c80a285e13101806a09f55ca3587d38 Make action sheets scrollable
+5addc40a48377b3223255ab3b054c0a812979487 refactor: Convert issue template bolds to headers
+e5535ef763e3ee2fcc9f341c8039ad01adef67ee Revert "Fix MQTT autoconf features (#336)"
+b95c25466b7ca1cceb00c875a0b8002f056b3bec Send MQTT attributes only if they changed
+92d7285b2a3bf76096ce86fb5a7f823f133960b8 Fix MQTT autoconf features (#336)
+fc44d96f0dd6681b56be0ebc7d39bd8c7e7c2000 Update README.md
+501856f58950bd753ed63fb70bf7cfc762a444bb Update README.md
+f21d4531b8fe06762d1af6e9fcecc7d1f696d371 Support for status of zone cleanup (#322)
+d41b5e733baabdec6dcb3c54b06eb4c27dabdcda feat(docker): switch to yarn and latest node lts
+15433304f9e499339e2e43ff6759a45f5cf6389c Fix map click handling
+ee509ca982ee6d556ef53471b9f6ceee806976af Fixed API URL to a relative path
+22be426ac0f24b61ecbb8a099e5ba075781cfae3 Add qos setting to default config
+3ff20c063d1e8300c2a0399c541d2bee10c35949 Implement QoS option
+bff1717be4d3d188e27f026c58bd89f274a8f7f2 Implement QoS option
+95f7f6c7ddc952b382d4b7b0c304c43a079b3101 Update issue templates
+28149f098fe13930c48611b74373210719027ba4 Fix #134 crash on FHEM MQTT Broker
+a140eeaa3956dec7cf548e3d1938e2ccb43a1e91 Fix mqttConfig.provideMapData
+e4e8ad868ccdb2e2fb4c63ca79f926c19919931d Merged some enhancements from Valetudo-RE
+b4ff3563be8e399cfd8ee2a31c855df2a8de74ae Bump to Valetudo 0.4.0
+ca725ef38540d8d80561692259a9bcd3ae4fbc9d Bump lodash from 4.17.11 to 4.17.14
+33601ff403758d33333529c3c9dc0040f763d1c6 fix copy-paste issues in forbidden markers
+948d6eaeac7184591acb2cf9e766d1e95252041b Make mqttConfig.provideMapdata not always true.
+df761e043647b48cdea189bcc3665a633af49f5a Poll map on save_map
+da191f4564bff5eafc0116f774e6e4f0a94257c5 make virtual walls and forbidden zones user-configurable
+0293e3fa7686bcb296fb271e10975e73da08ab1c Adds a button to manually trigger a check for the newest valetudo version (on github). See #146
+abc26d9fbea70293f70423ad4950fbd7cf9bf1cd speed up the build by using 1 run
+ba172d24e8985ca747e4009bd6919ee2fbf410c4 chmod it :)
+4194d171b7b79afe4dfd047113ea78287781a555 Made the image much smaller
+f0844244540dbe483cb15cfd1e31c483ed6c110e make basic auth dynamically switchable on/off
+e91debac633ad59630961e4a0d03534f0f37f249 Fix map with HTTP auth
+2e26966ab58ae435f94a835566593a96aaa58357 splits ui into multiple files
+b6ff0f26c25b4b26b3e1b27aeb508e37ca052686 Dockerfile for building Valetudo
+fb94b7e747741251dad531ec9e3b0865c003945d #255 fan power mapping and whisper mode > added Custom Fan Power in percent if preset is matching exactly
+40ac947a25b1362c547324911d701c68a8ea335f #255 fan power mapping and whisper mode   added matching of fan power to value label pairs
+83c89ad2e617b41e2d12e6d7048d8329e531379e Don't set password to empty string, keep old one
+97edab761173ef9f0fcc53c42a0ba173808fc4cf Hide SSH keys settings if it's disabled
+1b9880b47c450b92deecdea0fb5e9d648c24c8ac Fix wrong id settings-access-control-ssh-keys-input-permanently-disable-button
+c31a7ea1ecd7cce8169a920938a20a8f5834d6ad Fix ReferenceError: err is not defined
+7a9cdc42673af0cc6fc8a5cd03e27d651297751c adds Ping/Pong to ws connections
+3ef3bc6fd8a1693f9f2bf3fbda5a053d3e4cd696 Improve model name S50 -> S5x
+32ff03f1e4fc926d606522b7848c0cd707cf78f9 add UI for enabling lab_status and map reset
+6b304f090b555d6a2cb5445e1a275654bf51e406 Added more detailed non-HA state to mqtt interface
+45cf3ce224e88de786d46230793a3bf7d3876a58 Handle provideMapData option
+6c08f4feb56a9d34ad73247960d72288a03362be Added more letters to text drawing utility
+0288179fe13c37825880fd7d24549ee3d71adaff rename zones and goto locations
+50ef5bc6bbdb9eb6b0ad6657148011e2b3bf0b6f #245 Limit pending websocket responses to one per client
+a21c233ac6f0432e62400266a67b3288165ab6b1 Make "zone cleanup" more appropriate for HASS.
+4565a5ec0288cf0bb362f127a96432657b8dfd30 Minor cleanup
+ae6d291cdcd57b4876461a2508286876968476bd Code cleanup
+de0a28db98d577746ca7bcc185083035dafbdeb1 Flipping the coordinates should not change saved zones
+c00207ad8fe2f5c29090e7bbf6cad6334dca6594 Downgrade pkg version due to #232
+a9ac38a8343198e8eb2deb704d0a088d3d68bc36 Improved file upload & error handling
+1286d06cc042ef84a82aa446079156b5d359f772 Install voice packs through valetudo
+e7a233bdb38407c261376b206a511c0e3b4751ed extra state info
+6ed35ed0a37404437e15a36e2e7e72f4213743e4 add mop fan speed
+901ae066a06eddf5e26700a30b387f7bd66973aa corrected config for new mqtt vacuum component
+df3ed0c459f4361a81f32dd2dfd4a0c92cc27721 display nogozone as quadrilateral instead of as rectangle
+96a12dcd90547466c2fda2a69288bd0f0ea00142 Added map text drawing script
+fa7bdb6215aa5792842cef0826043137ccc2c78d Reintroducing a nice looking default map
+bb2338ec9abee7366783946242ad8fd9f8c589ae support for mqtt state component in future HA
+92e8693884fd8b3ccbb859e2ff687367907ba4cc read model from device.conf and provide it with /api/current_status
+0fce6d2a0273c3a543f45fa3956020aa87ebe126 reset the line dash when drawing predicted path
+7af87314cae16c69b70f1a8664e94984154eb55d add "permanently" disable ssh key settings and basic http auth
+d14a22b9635003f640eafcb6c3d146de39cca1d5 add ssh keys settings page
+e03e69c9c900592c1777aaf9bffa2074d3c9b53c Merge pull request #210 from thepill/readme-back-to-stock
+7e0ebbae4259270733271389fca629ec4a2973b9 Fix me being stupid
+d907459f2e2e131363661bea431ce469a4d30bda Added link to the FAQ Wiki Page
+a97a7d0134af165e4f315e8ccbeb8edea9446a48 Merge pull request #213 from leonardpitzu/cleaning-modes
+6b74c66e5e6bc685fcdd6e24f22a94588a076b05 Update index.html
+b2de34564653efe6cd00ef9fe968ad18d123deb3 Add info to faq about removing Valetudo
+c1e7f5140cb292c38429bf7462ac55cbe4ae661d Use 130px for consumable title width in settings
+b9691e394bcfb897eba4045cf16139b89c5d3c76 Align consumable titles vertically
+2e54e9ce3e9d0311db60e7214fe4b3f86ef120a5 Allow multiple zone ids for MQTT zoned_cleanup command
+e0cd63e33b7a6c48cd3bcad2e7fcc1bf68f098ca add map metadata like nogozones / virtual walls / predicted path etc.
+672a22ce58be58e5df51527e536704245de3e2d7 Fixed lonely pixel at 0,-1
+a9fa64fcec23639b7367a0d3fa61b84cd07eaebe More attempts to prevent Valetudo from going out of memory
+6fd1be698a990e0746fa9eec460734fc8cdfd761 Changed the upstart file to work when unprovisioned (AP mode)
+f4e164ed19b87b29f2452d31e3f0f7631e131067 Prevent concurrent map uploads
+2b8e4e354a092cdb5e7aa0c5f68ce00a58c57e17 Might fix memory leak
+33a4f4502f2ede95a8486972091acf55acd38b7b RRMap Image Metadata actually consists of signed Ints
+9a5e6a71c4c6a65a525f57b754cf2bd85384b45c * Added check if mqtt client is connected to a server in updateMapDataTopic * Added console output if mqtt client did successfully connect to server
+91088195f869d6d6f96bb612770e3bcc7a1d00b8 Limit memory allocation
+3b1a9449af6c9fbcf684c63f144e6b137c27167b Zoned_cleanup + Go_to via MQTT
+25e5b35257e4bb592b890aae894d5a749ddbcd1d Update WebServer.js
+969488bc0ba09f3b024c4019a4a63b4e1039dcd3 add possibility to configure gotopoints / spots
+da00c261e49f9a27660bd30a856d0badfab87adb cosmetic improvements for zone definition
+c05427973f4d164d28414428225b99d912d3751d rebuild zone configuration page to use map only
+8f9ca7b3f8455aa90d2980b612c6ab0bf180ce6b Add ability to edit saved zones on map
+871b76bca4116e86936f97fe528a2272424e4440 replaces "Sensor" with "Sensor cleaning"
+fce79de1f687388897f1740b45b38660a3ca03a2 Always show error if there is any
+a571348ca844219b3c2c1a19e8000be4a4dbedef Fix buttons disable state
+91f751e4aec27862acfe0b199f149259db933318 Fix race condition in manual control start/stop
+3773547701373613c8fcd6d3ff685a1d2188dc08 Fix #187, /api/current_status returns human_error
+7fc2b9bffb9a72374f134f7fa2164a3911d24163 Load manifest.json using CORS (really fix #169)
+8b0abfbb41f43032c543b7405dc7c4f392dfea73 feat: add MQTT over TLS (mqtts) support
+63886f3d2be1a6a0193d23ad3b73e4f304510ab1 build(TravisCI): execute npm run build command
+3bcfb5c74f3439c93235db49d9ae2be62a737afc Fix Valetudo for unprovisioned Robots
+936c3215f24401e3bde5db56cd737f9221c1d621 Bumped version number
+0cc777542f4a83fda2eb2951440a8c1a2b847bfb Add possible fix for random rollbacks/loss of wifi connectivity
+4a59ffe0d8e92359db846be3d58ee2edf007a8df add yarn.lock
+9a0cd56f9b3e3ad2b3cf78d203b8a02d1bd5783c Fix #169
+2e39ecd766bd2771c0dbd263f78e62b28c945a64 Moved MQTT PNG Drawing to seperate project
+3594a712eebc12be5d33d760d22f373269825b3b Rotated the map by 180° and added the remaining map data blocks
+505a638c06fd0c0bff99db9a404a0563aa3d0b69 Wrap deployment files for easy removal #158
+f18f2faa55568de8eb601823377b1a57a9b07c44 Update README.md
+0ea6addff0aa945e55857289270cb8e22f3fae44 Changed Node Version to 8 + Memory Limit
+6b3bf388573d84334e76818c6460f548d95f3888 Add a Makefile (#159)
+3a3a906d19dd358c0b844e4b48307bb616478795 Add stat for the latest clean in publish attributes (#151)
+d8c38176120333f2fcc8ee193f83670ebf237b89 HTTPS Support for Websockets + Limit Zoned Cleanup to 5 zones
+810e5eaa1933c5d2902a53a309deddcebdebac1c build(TravisCI): upgrade Node.js version
+6f7146af091964e9a79b5f06df609ee9d7b465aa Logo Kerning
+382e1a167d29aac0edbd976489e752d29ce86da7 Valetudo 0.3.0
+7ce6d5ce06fd41dcd6d406361aae962c89ef2372 Allow pause of zoned cleaning
+3168c43aaa9b9985fbc53af4b628d0595c59b359 Rename to README.md
+3a47747140a3275fc3d5ab4182596d9525fcfe9f Update deployment readme
+647984926e59dae67a2b6e60cfe258f0f44d9f71 bugfix hh:mm:ss calculations for cleaning history.
+74f1c38f377f0ebccf07590de8721ca71a667e01 Use new logo for client assets
+2d2bc8595788a1354a2fc89fd2ae04a4aa82fc62 Added logo from #136
+3b96262fc1f849fc3f94d2d2cae07c06c28afda8 Introduce resume zone cleaning feature
+005b70f2beaf8120b838261a56516da98e09ceee Update Readme.md
+8f68ab2306fecdc9d83e18e6a786929c5cbc96fe Synchronously write configuration file
+4820c0b3dc93f400e30ab5cd6596742be8602233 Update Valetudo.js
+5e668035334fb2e0ed579e8242cf4aea3ff313c1 Update Configuration.js
+b01bd2528d824d0dfc1d68131140587a0b2826a6 config for topic prefix and autoconf prefix
+276a8ef9a6afa2b449109bb40310016e2a26c220 Implemented Dummycloud functionality
+4610be6d523e54cdce70f2816f30e54fc25ada80 version number
+1f32298956feffce6acca79ef6d1ec9fe65b49a4 added docker container for building on any OS
+a6e822fb901c708cbd743e5adaf0747120bda079 added caching to prevent unnecessary mqtt messages
+5667c2a13f00d8c8092a5d3f8f6a5bdc80bac167 added attributes MQTT topic with HASS support
+d197f2f821ff4a2ced62b30db62787d67deb9b46 Don't crash the process if navmap gets rewritten
+9a847a42b8382288180c0b2335a8f3aba32d7bd0 Downgrade Build to Node 8 since Node 10 seems to be leaking memory
+e13644311792eb47b337a835bab81aed65543363 Avoid crashes due to broken map data
+053fa00fe60af4930d4c2ff6a36b1016376e9d24 Avoid crashes due to strange crop values
+9f5279e67a38a737b61127e9ee89d2b04a2004d7 Fixed broken Cleaning History
+9d44048c8d2fea6266537e387a27b26c0ec416b7 Implemented non-interactive Map via MQTT
+19738af28490c04866cfd529d8d4f9339f1e778b Updated documentation
+d17fe21bf0bac1e7456908d1420489f76a72a5f6 #121 Fix broken remote API
+4b18af9f7e14a53db36fc7821f8b0ced408df3cc #120 Fix broken device info
+69be9df7f2117999ccf6e57e1dcc8444b2ce8bca #43 MQTT Support + Minor cleanups
+8a36b11e06e52fbe2601d90d2ccdead2fabb7a9e fix robot angle calculation when map is not flipped
+4400ddd73c87d302d676d62af002db110b0097b4 prevent crash when drawing robot with empty path
+27e98c17b01fe76344a7e40cc5909dab92539185 account for vertically flipped map when drawing robot
+ea8bab4910ee0b34797bccc4889a64c2895f2812 Adds drawing charger and robot again
+bef7e390a25d03a3975e239246b957a80c8bf51d Adds rudimentary display of zone coordinates to /zone again
+b40f62ab83d6358886615b63a2cc4337d749a477 handles window.resize event and appropriately resizes the map canvas
+d1567937ee6db853112fdf0d7eda7a22b9612d86 Update README.md
+9d044680f16a0347969a6c9b3a2d56bc24b07987 Update README.md
+cbee8aeab692a281cf7072a77a90439efd2b1d29 Bumped version Number to 0.2.0
+7bd95f7c13cf3dd90787b85bfbd14ec02e6479a7 #53 Add Support for Iphone X
+70d6aba9a9fd73bb21a17ad5b50e942d4d21090f Integrate /zone map into OnsenUI
+ef2fb0e0534b7e50e88033f797471b29121cc73c client: Add description for carpet mode
+50586c9361bcaeb85ffba425ceaa52022a73239f client: Use max-with for carpet display
+52b2ee5c2f0a8c970ef03a2093134c2608285d18 fixed typo
+4cb7c72c78b63406cecde37e960347bd89b230bd added AppLocale to Settings>Info
+691659889411993daf9f50b07aa66931bb9b6ee0 Added cleaning history to show up to 20 last cleaning runs of the vacuum
+5f468b9e6d9f5ad0585e5232e87fad1c4f67cdb2 added carpet mode
+a89c44f9fe8f3ac632c116a7a045e51c8fb33a75 added timezone configuration added dnd configuration
+be58ed5c7aaaa65eb756b122efdc01c884fa87a7 made timer configuration intuitive - Added form for easy timer configuration - Added human readable timer interpretation
+a5794338e7daa37714707dd497e5e99c5744146e Valetudo 0.0.10
+05a66c20ddba66e2b8ce17143707e380e7d49265 Fix #89 for Firefox
+4edeba5ae8d75e1437e17d5d171c48b540b0b16a Fixed title of Settings>Info to "Info" instead of "Wifi"
+c1d2aba4f048ac64cf3f7f0eb1038e67df6e56d1 Added Valetudo release number to Settings>Info
+5455cace380833967695dedaf941ef4bbdb19de0 Lets try this again
+39a79b98b3202b712c4853b87f7ec514c199ad53 Hopefully temporarily fix the build
+09ab7c251bfab432b5c25ffcdaa40a3b624f8ca1 use relative path to api to allow hosting with subpaths
+f082fa615f8026704dccfef3665e4852b488086e Delete package-lock.json
+0bf5a4bccb2597f6b0aa9b70cf422e6813d339d1 uses valetudo map colors instead of xiaomi
+e80a07f85fca50d1bd9bec1b999f1f773d80e346 displayed coordinates update when moving / resizing the zone
+8ac910aed97813878fb3a4f955a576f38d3fb872 Adds some code documentation
+2b6835f562dc62e52fe7a08ef68140bf2773c19a make map / path colors configurable via css variables
+e0cbbd45b456ae458d6e8f332bd2ccc2bf8c61d7 fixes panning inconsistencies
+f860400e3fafcd6a33909578787908656851967a adds npm build script
+47db74c87c8752ab882e45fabb6ce99c939866c9 adds interactivity for zones
+967f891563803984c63d6ef161e9ff6ff7e98a90 converts app to es6modules
+fcd3dac936487aba47f026ae07bf8fdd8d28df83 improves zone drawing
+1a57417c35465e637e34ea729224628bef8b30ae refactor
+98a6288c9a5100c1bacac852ca2cb1120d4d3c89 replaces reading testdata for map / path with in-program testdata
+eec5de795ed0178bf7d82861c232e85ad9bab976 Update README.md
+fc21a93bcfff0c69f84bb93cc02410ecadbfb74a Fixes problem while adding a zone to an existing area
+de34943a2b9a7c288a4810397f20c5745f92d212 Valetudo 0.0.9
+0845ce1ba4d31eeaf723e21cae3744c638c0dc59 Change config file location to /mnt/data
+522d7a92dbf38c0b52184dd0a2c25fbbfab53b4b Update README.md
+657dfa6f09b67b2e8733ef47c145fb73e4978787 Update filename regex
+a6643a08bc9a87cf71bad3a348cdeb1a7d4f8f77 Scan newest folder first
+d74f081a047b0c6c6fbed42cf02785011500b1ec Add a box that display the clicked coordinates  (#1)
+5fc8f401c180c14a70b5c95439544b5b2ee6cb83 Adds first version of zoom-/dragable map
+01a1ab3969d27419a80627063c9a7507d5b66efc Fix directory scanning
+04ace46a68dc611ac7fc8ca32ba6f0774c7a06df improves documentation on installing and updating valetudo
+529070b2fe261c738c25f0b382a81961cd3df37c Bump version number to 0.0.8
+3ef2b6955d10e1e5cc4da8f2106fcef7a9d93e37 Fix #50
+cf93d8a00836ff2f2605af27c6a2470f1ae61083 Update README.md
+76f0fd2c7bee4857fd4bd7919770b27caf5b65be Update README.md
+2b38868bf5df113e6fe66788502c9822ef68b71c fixes for GridMap handling
+8f26b73d02c447c1cc449c9a3db33c7ae4186e1e Add Dummycloud approach to deployment doc
+5dfcafad2da78460ff5307da815b28bbfbf0d905 Added development / building script and documentation
+93961828911d53f68a957ac9c8cb7e96c219f96e Add apple touch icon because manifest.json icons are not yet supported on iOS
+195dabed662edc3a37bf16915b8b1df3b03f6150 Bumped version number
+43aa01f7728e8083909f975ae5906b03d81dba0d Update WebServer.js
+ac6b7026165dcb3400e3b4fe4579cc0bd3e8ff60 Added option to directly respond with the requested map image
+c1a837c97173ef0ea1c9b890c876a87889debf7c Set remaining hours of consumables to zero if negative
+d6fbc5d6efaba46ebaab916eafc9cc0fba010cf5 Use fs.readFile instead of a cat call
+33b2d844a5bd4746140cc56e54553508be9f2e4e Add a general info section with firmware version
+1f872ee549afebcd33166c4743948a54c081fe94 Bumped version number
+14b61df81b88552ad30f247176a36804f569e60e Setup Travis CI
+e483c6607a9aaad2d75824f3d0f8c33e69dd21f8 Build automatically using travis-ci.
+60a6ea29cf0614bb97710eb3124a75616bd4c932 ui: add icon and home screen for chrome
+702c4bce6790dce415a50a363ae07e72933c9596 fix for goto position == 0 resulting in "coordinates missing"
+2e49705c4c4c6732feed5b0b5bf3b6520f026653 Bumped version number
+1f0450c1fe13aeb987395260af123824041ed875 last bugfixed after test on target
+8bdb58a7bf2fc419ed519b89ad51015917a373fe added comments and fixed multi zone cleanup
+e48c5c90d6077105c7860bc473d783ff40a3a88b added multi zone clean, online configuration of zones and go to spots, new location of config file and automatic generation of config file if not present.
+712bcaefc3bfab4718f9fc4aae8181b7573c5394 added the following functionalities: - zoned cleanup - go to - spot clean - sound volume control
+2bdc9c6d12897eb7b2a72c4ad4e31be7654c0479 fixed timing issue (json response send before image is generated)
+ea65d2d2a558d5d57a41659c15c8df3345c39b6b fixed formatting
+89de169b2bcb2c8b69b0687ea30da5c51579c717 added json response to readme
+97de29a5e42cb8f37afa82311aa79a094cc95636 just another try to fix the nested list in readme.md
+429950c4680112066e11337b19333d535adc00e8 fixed sublist in readme
+8235c4c4cd878d2397abd05b61a9da08d72660ad fixed path for asset images (robot and charger) for production package
+85e6c20cab25d9c0a0fd6cc0f1b80330eb49df4b extended remote api for: - possibility to draw charger / robot / path - custom attributes (drawRobot, drawCharger, drawPath, scale, doCropping, border)
+ddc1c5f74ec06d63d2438932220e369678998342 applied some performance improvements
+6e13e0095f2e3b4e80105bee82c8ab96f8c1f9ff fixed client path for webserver
+ed4aa1e1090db14f0bbc561579e4b4450ef2a63f fixed client path for webserver
+29b7a5d40decf53a40b4febcfaa802f15a5bb62b Fixed directory handling on robot for temporary files
+7aa2b7076c04c7b329611de4ca600a24b365326a Added support for map generation as image (PNG) on the robot.
+3868ffd85c76795037e053fc173c1e5a7f2cdcec Added oom score attribute
+de276dd903e7ca12e2d878226e14503341d0828f Add title
+d0faddf37e0c85df06a705ae76e09a7452c7c12f Bumped version number
+e050387c850b75ead0920bd1e1ce21237153ab28 Code cleanup
+9564da8aa39ace5e92f197746d8cd54ff7f6f77b fixed touchscreen support for IOS devices
+d79d5180ac43a686e9ace1a7c446a49deaad7f4f - added left side menu entry for manual control - fixed touchscreen handling on manual control
+3aa52a38e52123135504cb1e5047306da2e9630c added initial support for manual control
+8c0208f2249c0f7b1c99b3e5d3039bbd4580b0d7 Fixed /mnt/data/rrlog regex for Gen 1
+b6b3257b644d64cced262cc20714c27b3e60cab0 Added charger icon to map
+1a2472d87b986952571eccfd32596317ad9f3809 Added support for encrypted archive maps and fixed missing paths (#4)
+887b99ec99373380ee13ea19fce4737a39e5198c Update README.md
+b2ba41189cefdaf25075b3f2e6002687117a7ac4 Handle 0 byte maps + Logs
+9c712074464b8300198a17f80581cffaf7ad43e8 Bumped version number
+13152b9b11d658f2d0773b80f4eeb9fcbfc8e59a Removed /api/map/full which was just a duplicate of /api/map/latest
+40ee94a931cc720c310994e25a557fb7e05d0ed9 Merge pull request #3 from MeisterTR/master
+431df94b02db310b30d415a48f89ab0ae8a8ae42 0.0.2
+6a570503fd1931b60bee48f52e7d68c5fcc6cc11 Fixed path rotation if GridMap is used
+081b2aa59b5567bae0cc871b1fd1cf73db9afc89 Fallback to GridMap if there is no usable live ppm map
+939239804f18521c7fff69b6d3451a5bd4eab089 Update README.md
+1d5b4197b3d7065ac0c97656c4846aabc0204906 Added screenshots to readme
+43aa0a7aaecd531a2f2ab77d56f4d6313bdf3f9c Npm is weird.
+32159ff0371671e3d55784477022919fff68b5c8 Updated version
+cc5d6079221d035bfc67eec9a49be8ffb6188be0 Client readme
+a97532b575a2265fcca6543aa9a834d2e4371a55 Deployment readme
+13cb7884d42d397292220c5d361f2986d8d1c99f Initial Github Import
+7c46437065aed773467f0f0f0ab8aeddeebf9579 Initial commit

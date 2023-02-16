@@ -1,0 +1,98 @@
+Project: turtlebot3
+
+Words			Topics
+compatibility	1, 13
+rate			2, 8, 11
+inertia			2, 18, 20
+frequency		5, 19
+size			9, 15
+limit			14, 15
+
+==============================================================================================================================     
+      Topic 1                  Topic 2      Topic 3             Topic 4             Topic 5             Topic 6       
+ [1,] "request"                "update"     "robotisgitdevelop" "update"            "param"             "update"      
+ [2,] "param"                  "turtlebot"  "imu"               "version"           "update"            "create"      
+ [3,] "compatibility"          "package"    "edit"              "msg"               "request"           "package"     
+ [4,] "travis"                 "modified"   "model"             "modify"            "files"             "slam"        
+ [5,] "robotisgitpr"           "files"      "ros"               "variable"          "model"             "msg"         
+ [6,] "update"                 "rate"       "laser"             "changelogs"        "python"            "velocity"    
+ [7,] "robotisgitdevelop"      "delete"     "scan"              "changelog"         "stl"               "bag"         
+ [8,] "robotisgitmaster"       "navigation" "burger"            "slam"              "amended"           "change"      
+ [9,] "robotisgitkineticdevel" "hector"     "change"            "modified"          "frequency"         "firmware"    
+[10,] "tb"                     "rviz"       "parameter"         "typo"              "prepare"           "version"     
+[11,] "deleted"                "node"       "gazebo"            "lidar"             "urdf"              "setting"     
+[12,] "launch"                 "inertia"    "hector"            "info"              "package"           "check"       
+[13,] "setting"                "arg"        "velocity"          "inflation"         "sync"              "basescan"    
+[14,] "arguments"              "updaterate" "testing"           "config"            "eavelardevpatch"   "updaterate"  
+[15,] "scripts"                "collision"  "nav"               "lisence"           "firmware"          "waffle"      
+[16,] "model"                  "lidar"      "realsense"         "bases"             "getscan"           "cartographer"
+[17,] "variable"               "radius"     "description"       "master"            "mapping"           "stl"         
+[18,] "methods"                "readmemd"   "update"            "request"           "master"            "wafflepi"    
+[19,] "velocity"               "testing"    "master"            "robotisgitdevelop" "robotisgitdevelop" "node"        
+[20,] "edit"                   "basic"      "request"           "prepare"           "release"           "divided"     
+
+      Topic 7                  Topic 8            Topic 9                  Topic 10           Topic 11           
+ [1,] "request"                "turtlebot"        "update"                 "launch"           "update"           
+ [2,] "robotisgitkineticdevel" "topic"            "version"                "request"          "argument"         
+ [3,] "imu"                    "robotisgitmaster" "navigation"             "slam"             "modify"           
+ [4,] "robotisgitmaster"       "gazebo"           "urdf"                   "files"            "refactoring"      
+ [5,] "unused"                 "changed"          "imu"                    "info"             "waffle"           
+ [6,] "check"                  "rate"             "slam"                   "modify"           "nav"              
+ [7,] "function"               "param"            "delete"                 "param"            "robotisgitdevelop"
+ [8,] "gazebo"                 "setting"          "arg"                    "updated"          "imu"              
+ [9,] "lidar"                  "rviz"             "option"                 "robotisgitmaster" "rate"             
+[10,] "kijonggilmaster"        "python"           "request"                "turtlebotmodel"   "readme"           
+[11,] "master"                 "changelogs"       "travis"                 "update"           "urdf"             
+[12,] "param"                  "melodic"          "robotisgitkineticdevel" "travis"           "tb"               
+[13,] "sync"                   "function"         "setting"                "link"             "unused"           
+[14,] "warn"                   "mapping"          "parameter"              "urdf"             "melodic"          
+[15,] "firmware"               "parameters"       "size"                   "eavelardevpatch"  "change"           
+[16,] "camera"                 "remove"           "edit"                   "updaterate"       "arg"              
+[17,] "mapping"                "sensor"           "radius"                 "camera"           "amended"          
+[18,] "relative"               "convert"          "slip"                   "origin"           "sensor"           
+[19,] "plugin"                 "variable"         "travisyml"              "waffle"           "position"         
+[20,] "control"                "wiki"             "kijonggilmaster"        "relative"         "travisyml"        
+
+      Topic 12                            Topic 13            Topic 14            Topic 15           
+ [1,] "develop"                           "request"           "modified"          "release"          
+ [2,] "httpsgithubcomrobotisgitturtlebot" "robotisgitdevelop" "request"           "updated"          
+ [3,] "package"                           "robotisgitmaster"  "urdf"              "version"          
+ [4,] "gazebo"                            "rules"             "global"            "packages"         
+ [5,] "collision"                         "travis"            "limit"             "binary"           
+ [6,] "robotisgitdevelop"                 "compatibility"     "burger"            "changelog"        
+ [7,] "fake"                              "readme"            "robotisgitmaster"  "footprint"        
+ [8,] "prepare"                           "changelog"         "delete"            "update"           
+ [9,] "param"                             "launch"            "warn"              "files"            
+[10,] "turtlebot"                         "modified"          "split"             "deleted"          
+[11,] "updated"                           "navigation"        "gazebo"            "melodic"          
+[12,] "robotisgitmaster"                  "typo"              "cartographer"      "change"           
+[13,] "delete"                            "check"             "wheel"             "camera"           
+[14,] "modified"                          "origin"            "config"            "range"            
+[15,] "turtlebotmodel"                    "color"             "node"              "size"             
+[16,] "change"                            "modifiy"           "depended"          "limit"            
+[17,] "xacro"                             "refactoring"       "names"             "master"           
+[18,] "plugin"                            "pkg"               "update"            "request"          
+[19,] "edit"                              "dxl"               "master"            "robotisgitdevelop"
+[20,] "control"                           "update"            "robotisgitdevelop" "prepare"          
+
+      Topic 16                  Topic 17                 Topic 18                 Topic 19            Topic 20          
+ [1,] "modified"                "robotisgitdevelop"      "change"                 "request"           "delete"          
+ [2,] "gazebo"                  "request"                "firmware"               "param"             "robotisgitmaster"
+ [3,] "request"                 "modified"               "function"               "robotisgitdevelop" "request"         
+ [4,] "turtlebot"               "package"                "amended"                "robotisgitmaster"  "check"           
+ [5,] "navigation"              "addr"                   "request"                "deleted"           "urdf"            
+ [6,] "bag"                     "master"                 "robotisgitkineticdevel" "gazebo"            "version"         
+ [7,] "link"                    "robotisgitkineticdevel" "revert"                 "arguments"         "parameters"      
+ [8,] "pkg"                     "launch"                 "debug"                  "voltage"           "remove"          
+ [9,] "robotisgitdevelop"       "warn"                   "func"                   "function"          "release"         
+[10,] "changelogs"              "xacro"                  "rviz"                   "collision"         "files"           
+[11,] "robotisgitkineticdevel"  "getscan"                "issuetemplatemd"        "model"             "inertia"         
+[12,] "basescan"                "model"                  "wafflepi"               "frequency"         "ros"             
+[13,] "laser"                   "divided"                "inertia"                "config"            "modified"        
+[14,] "sensor"                  "core"                   "tb"                     "nav"               "navigation"      
+[15,] "convert"                 "turtlebotnode"          "deleted"                "update"            "func"            
+[16,] "range"                   "update"                 "arg"                    "master"            "split"           
+[17,] "slip"                    "prepare"                "changed"                "prepare"           "camera"          
+[18,] "basic"                   "release"                "nodes"                  "release"           "nodes"           
+[19,] "bringup"                 "travis"                 "scripts"                "travis"            "sensor"          
+[20,] "costmapcommonparamsyaml" "imu"                    "node"                   "imu"               "color"           

@@ -1,0 +1,1324 @@
+0ba0301318fefd337900a121dffef500ca453a09 Merge pull request #349 from ahdncordeiro/master
+f24df1ba89d83488cfaf5d79e391dd9b4474f2f3 test-driver.js - Adding superclass methods
+d550df34f886b6697cc9951f7e972f5164ed455a test-adaptor.js - Adding superclass methods
+ac1bd1ef3f7f6d58f2d489b05041de5a378745fa Merge pull request #342 from mortenf/master
+d72bab16d592e943b35a3118f416c1b8f004a433 Fix missing log output for pin 0 re issue #338
+44497e932cce3d8faf0139b9c4ee774b26177a9c Run Travis builds for major Node.js versions only
+de88b4edfd4eed2c4070b68d9320ae79a89dab9d Add Node.js v6.x to Travis build
+1ff38f2e9fc278cfba10b2620692d3fdaf1f8ad5 Update list of GPIO drivers
+9be1513a240e1d5eaca8c401d19d22f543af2972 Update README for most current devices/platforms
+8c15825ec5a70ba41191eb1e09e2e55385ad6487 Update README for most current devices/platforms
+c0c8923eb76e8cd3e4bd1170f44026c79238848c Merge pull request #339 from danhklein/master
+33c2f3390fee925fac2225e23b8f4fd44f7e6d5f Fixed broken link to browser documentation
+e9796ef2970f9d4f27aefbd6cd083c0c33565085 Updates for v1.3.0 release
+7dc046cbfecb3fe61a007d2d4e4cd7efe1ed6c54 A long overdue update of the sizable list of contributors. Thank you all!
+54c84f15f9067f7bde6cf31b5eee0bfc84d311dd Move CoC into separate file and update source
+aca4ebce70a5c35dc11efcf6527df2d0eb90ca8b Use dot notation for tests
+f6be3b1ae30767c583cbb45fd4f8925a776ffc8f Adds back robot-scoped connections by name, and the tests to prove it.
+17e9cee6dc265e949726febf604eb457fea37e4d Autoload module from current directory when under development
+3787ebda6a6e6de508ded0b1653072338923ba24 Merge pull request #331 from iyogeshjoshi/master
+bb141ee903c9f2d3ffbe21ab97f7409c34d195af Fixed lint errors
+a5923a9d8e3fbc769c1a5cbb29f4197191b3397e Adding alternate keyword for adaptor as adapter
+4f81ca355a970a9997a123bf0573b47fab70e6a4 Corrected name of Sphero BLE module in README
+8df5ccbe5d1362c895642ffce253e136f86035f4 Update README to include PCA9544A i2c device
+4cc9d1ac5daf49b1634990e9f6d82801ae4b7393 Add cylon-myo to list of user contributed platforms
+6dcf7ac26df54d9f7956c4da38c67b3a988ef5ae Build core for Travis using most recent versions of Node
+161aac999062ab0e9c094d811a09ff0d3d8d90d1 Add user created platforms from @afoninsky to README thank you!
+013dc86449a2916204cf6eb016768706f98834e1 Update RELEASES
+9182619baa81f0cadc12c7ca07f267c30b3c49ee Update to version 1.2.0
+ed76890b8a00b6a2a8371b1e576e2e2ae35e48bb Making connections dynamic as well
+16cdb56be6a5a03cd83ade8f140b2cfaa0504e57 Simple example of how to use dynamic devices
+8921e902ebb8273f9a87d8a1cbd2d11cf19a328e Add function to dynamically start devices
+4ec19961f83d310eddbdcfc1b39eb0439d92173d Devices will only be started up once, and can be added dynamically
+9cdbdd1d371dbe40fe14d9806527741b6f7a31a2 Correct JSDocs for 'finish'
+bba5b1e653ba8fae53b577166c744f21ac3c84e2 Add 'finish' to time-based helpers
+9f83eaa7a2e344f07e034c7f794a273efb059473 Fix #311 by setting default for tests to 'silent'
+7415daed0cd2ba5ad3f9d88d6e3df033e8e7279e Add minutes time functions, for a complete range
+012578f012a6e23efd023384909ad37750048c9d Convenience functions for milliseconds and microseconds
+bea67b2e5e43af83f6432459cc210f30c9a9f473 Merge pull request #305 from hybridgroup/refactor/logger
+67f0386bb58ffcbc523155094f1efa6f41f3deeb prevent callback(err) from messing with shutdown
+2e0b92f1bc776e48dbba88b711fa105f58e2fecd small readme updates
+c7bb3dde8c9117a1cebfa8f1f575d710f34da8ec streamline index file
+3a2766bcd962dad927af2efbb19ff32274878577 Stop using `lib` fn, breaks browserify
+3451932bdef1ced38d84b2e9c22e831b6c4a4c43 Remove accidentally-left-behind comments
+8a582fcf8d01cbac8b14e83780e18d9c39a2d847 _.arity call no longer necessary
+843e0a3217be863a71eaba4f8c70572c341650bb Simplify logger
+f14ac10c95703ca92ef301f1e68d75a7c964f919 Add addional edge case handling for snake_casing
+c1bb466d5b5bd2c114711de68a495425195a878f Bump version to "1.1.0"
+a3c2b0544dd5498623b6cf950a177ef750a285cd Correct CI script for codeclimate binary name change
+e8f109508bf9bf69dd06ef8fa44a42b13d4b1ccf Replace tomdoc with jsdoc
+4b374440d94e23861ab6b997a8ae8dedcc75d61d Merge pull request #301 from hybridgroup/refactor/mcp
+def91ffe53126d784beb2d72333e150cac29bbcd Split apart MCP, API manager, exports
+455c06ab9190da9942a5eca217e0ed00822bceff Merge pull request #303 from hybridgroup/refactor/robot-initialization
+ceac0df8dd2defeb3b89aa2890ee38b37e702ca3 Consolidate Robot initialization to a single fn
+1726cdb5f19beb737375ddd7a765cbe49094333b Remove vestigial attributes on Robot
+8fbe9b9c4dff29fa595303618aaa051fec89822e Automate auto-binding of prototype methods
+fd564f61f8d06824a9cc894c07ff67aa4eb5ddd1 Merge pull request #296 from hybridgroup/remove/async
+8403d89e9ff9e889fda263711963f83f9b3f55c3 Merge pull request #299 from hybridgroup/refactor/config
+b1c91b74194d58cff6f065a3badacc3373d2050c Logger should subscribe to updates, not be told what to do
+8ac8d7de94d37df89195be8deb15cc03cec720bd Update config to act as subscribable data store
+93357d50126b48324f07bb9d49874f90e5bc0e8c Merge pull request #298 from hybridgroup/remove/license-preamble
+0b48851885cbf1032d1b8396c3907bc2943f2e7f Remove unnecessary comments at start of files
+0719fa203c06012fad1550ea6915b500e0e66d8f Remove dependency on 'async'
+f3efa83643d7d15ed1ceaacf0a7ed974c98bcdb0 Correct issue with Robot halting
+1be64381a90fb57fbd5a1ed8a0e45c1eb09c52b2 Merge pull request #295 from hybridgroup/refactor/validations
+10982e40039bece4ff3ee81f237564c293115c34 Add additional validations
+4238385be48dd1eabcebf6ecbf88265db0dcdb38 Extract out Robot param validation into new file
+ad2db2d459c68720f2b8b0cd879a991a6d16cf2a Update ESLint, use local for make tasks
+6978826f1bbfab0adffd1c7ccf8acac45c7ef37d Merge pull request #285 from hybridgroup/add/monkey-patch-removal
+9c67d9ba02ab57d1db1aebe7cb1358518b1c7a59 Add method for removing monkey-patched methods
+681e197ed94af34adfe5c799692023a386cb2293 Stop giving robots random names, use inc. counter
+952a25ac2c424ffb33cfb0951bc09f6014429386 Add specs for initializer
+8adacef282a743c9b6219f7bfeced15a8468fde6 s/source/lib for loading files for specs
+68ab6ad44134958e87a7f41040a44e182cf5bfc1 Remove leftover comment
+6cccc41aff034c3bb2f160d1207079b13d3e3ffb Begin JSDoc-ing core
+80a09d55da3302e144ec81faf5f24c550d194d14 Merge branch 'docs/contributing'
+74b92776b08a08413eb24f84cac06daa54ab2825 add relay back to readme
+b1d84d042f38ef708de9d6fdd25d8983c3a9aea8 Correct errors in JSON
+0255b7ff0fcd0cad2ad31ab30ca5d5d1ba4048ad Based on io.js contribution guidelines
+7581dc3c644ce868244015c40e9e52edaea56353 WIP on possible new format for README
+f3cbbe8ad7d9944f2004af2e152b76687adbb646 Merge pull request #293 from pdehaan/patch-1
+760bb87d127f440e89c610422f0542de8c08ded4 Update license property to valid SPDX license
+3f4140bd08057d29ed5e71bba148d9f559214a81 Add util to verify constructor calls use 'new'
+8fe7a500cf802e7efed973a7c90501856320b13f Remove user contributed driver
+9c6e79ef1523a299d4388bd787e664c7e25306c1 Add Parrot Bebop to README
+958239c6f1178c7bd29990e806c7405a0070e6ec Add WeMo to list of user-contributed platforms
+6f000ae5e8ab68fc440813a301ccb6f49ce9804a add relay to supported GPIO drivers
+a66b66bd525d13352409cb2d62161688954eecaa Remove lint warnings
+e9416129ee0de07fa169be003ca05162cbf38dfc Move spec globals to spec eslintrc
+a50508e8d85562c4261119749e7f34956e93f0dc Merge pull request #287 from hybridgroup/feature/eslint
+62cbae7cffde02ca8a81c845d0ec1c3936acd4e0 Switch to ESLint for linting
+cccb3766792f8ac3d6247028a084d6cb88544a89 Consistent top-of-file doc blocks
+7f706b9de7cad4c5da9cf81c260f546bd9aa2c1b Add links to README for api plugins
+62ca6d6e00508beee745c13f967822e0e7d7395e Update list of GPIO and i2c drivers
+d792b5fb767d7408a669f9ba317b8bac6df24794 Update last outdated dependency
+a991e8843d13d4d15eef88a87c3f69bda9f8738c Amend version note
+9a05435bcfc22f388ed9cb55de3bcf48b33b4b85 Bump version to 1.0.0
+98ab80e6f4a0e83b66a3df8fbbd132b71212db2f Small README updates
+8bc2902412279076685018f2815c8f776ba8a54b Update install statements
+a08b8600b36b0683e96645e0b220b62af53c7a6e Remove unneeded extra file
+4b07f1edc590d3ff85cd3086196f4c82336912f7 Update devDependencies
+944d5868dbdc0868bd708758663d393d46058852 Merge branch 'release'
+ccc4c070e070a1fe6cd8beef33842f4364fd68e1 Bump version to "0.22.2"
+9030ad45e7c2c0560acbad306abb3071b0d4a497 Add basic #includes helper for arrays
+65f21865f2c9193b1377cced06932b19580a8526 Correct bug in Registry#findBy, add spec
+4791fa72a9a70ff08c32c71ad81ca75846f025d2 Throw error instead of continuing when #api fails
+2de8f9a44d69aaf2efb780d187a5ea3dc4ad67ea Merge pull request #283 from hybridgroup/add/syntax-checks
+9b04a4ed1599ad58cf6c4ea78bcaf5256673a327 Add basic DSL error checks
+eb5090e9e9faf1ca713f6e05d04cbf2e72d402ad Remove accidentally committed swap file
+56211b2f100dd1c5ada1e66744ed3197ff139e52 Merge pull request #282 from hybridgroup/update/add-err-respond
+287b4205ddca47474165516bbca638013e569db5 Offering to the lint godsgit add .!
+ec4dde7448c2210688cda67f5677bd1b4ad324de Adds error handling to basetar#respond.
+527b0febedbfda4168c61ef311a470143a237ced We don't care about lodash
+93369100df68f1e6d758745ac18af83ac4f30ae2 Expand Travis build matrix
+5a679347917f01d47096f8b16a91c1e827b700b0 Merge pull request #281 from hybridgroup/add/debug-flag
+2ed5fcf64ea00ae82abde64630e17a12a01d7129 Add CLI flag for enabling debug logging
+93dcf18cb568c04f7e27260bdc541e60e73f1fc0 Merge pull request #280 from hybridgroup/readme-update
+fc68b1aaa4499d92e201917b82cdb0a6893d9e90 add user contributed platforms
+99113353d7a686366886443421a7a7e3a0b39a49 Merge pull request #279 from hybridgroup/add/interface-functions
+82ef3d31a281985219919b20cfb4fccb84da98e0 Add exploding interface functions for Driver/Adaptor
+af5300f6cd48570071b8eaeb5fb3596410c9f242 Merge pull request #278 from hybridgroup/add/respond
+c0a3a9439e54d7c305377a4ec07911b0c7cd57da Add #respond method to work with events/callbacks
+a17c70a18b3adaf663cfdd7342fd816351d4e6e4 Bind passed function to Robot by default
+28415f0b74650f641e0bdf50fe24c7a49f45304d Add basic #includes helper for arrays
+6c5208577a65b396c7b9d577fddbb7c0c67d84f6 Correct bug in Registry#findBy, add spec
+e90969eef037a0cecd8503909e2cc0f147f0044c Merge pull request #275 from hybridgroup/remove/deprecation-warnings
+cb492c07477cfe0e4e189d195563e06a250e054f Remove deprecated Connection / Device syntaxes
+a9dd5b80cdeb05fed2234c6d91c30f0871ce6b12 Bump version to v0.22.1
+3e65e2027e26be3c65948b1449401640ecc0f9e0 Merge pull request #271 from hybridgroup/feature/replace-lodash
+4e363e79305879c2f410acd624f3beceed14f3be Add a basic reduce implementation
+2eaea42a726937b958850db0b3d184be9b0abcb2 Add helpers for partial application
+372c384b115d675bb7290dda589e9aa7f55d4c88 Fully iterate over objects, rather than just props
+6e3d7c66677f84b384d03c1803ac74fe74c4865d Add helpers to replace some lodash functionality
+31bdfe31f812f945f65c7bfe3b18a21491ea2a96 Merge pull request #269 from daniellmb/master
+d3b4f926ca7ea0f64ffc2aedb6ce2880827ba13c Delete .editorconfig
+d462e28473f47cdfc979dcb225db84f7351d45f9 Update .gitignore
+ccebab4cc22724778e358f176c7823da92cf23c9 The register method should return existing modules
+618aa8212de09490e8fcc2de3acb3ba23d35e137 Remove lodash
+b17542061ba912113b74310a111037aa2d64ea1c Extract monkey-patches
+aa3332445ea75ab22ad79e0fcc6549d3c7a2d1d9 Add coverage to .npmignore
+5ac95161e281da1f70e23bca07900a7e572d5634 Correct edge case with 'module' key
+b0cb253987d9c45d53b27934a684f7833f6165c5 Correct Travis-CI directory creation error
+cd23d989cfd8610b2e21e6261a6a083b460272ff Fix broken test.
+3d2842567bf31f95f84c79f8fdd8908fcc1c0a7a User API#start instead of API#listen in cylon#api
+cfd37e96216b7f3d9af81860222186618a27fbf2 Updated README with cylon-api-socketio plugin reference.
+e2f617c995fb911d70a4b230f959a0462179572b Fixes validation issue in initializer constructor, `!module` should be `mod`
+990184c0fa2cdcaa67fad100bf060930cad67d5d Merge pull request #262 from hybridgroup/feature/npmignore
+d35cc0b0d7b9aabcbfe2cc746a7346e2ffb43def Add .npmignore
+64a0d76af173b1286f14a54c9398b8bca8a7ac19 Extract deprecation warning into separate function
+980f63667a9dc63e7b3d08bdb1d7048de0f9350c Merge pull request #261 from hybridgroup/refactor/device-and-connection
+147816b3669b8d985b9aa2738f968f0f18bda7e5 First crack at removing seperate Device/Connection initialization
+d56f9bc53f91b110b9d36d72cad1b2d98d6b486e Add better error checking for Robot#halt
+754af3b4db1c42073d4ed679b371ed14d9ba2e18 Add test for Robot#log
+8272efe060e58267829c524ef647c75bcf6975fd Robot log messages should contain the bot name
+5354102c2e0c339eb1306a2822d0da952dc96339 If bad start detected, shut down the Robot
+42ca88f8d0a201aeba4b83c66b4bb96e3b3963c1 Update list of contributors
+ad94b81e872154ccf2b518e8bad3453583a8dd64 Merge pull request #258 from hybridgroup/climate-improvements
+6ac3cad7c146abed4e0271e7aa44614ca75e61c4 Extract even more of function to DRY up code
+5cea07602a86fcef244b769912e224f9f6a036c5 Extract function to DRY up code
+a7e8caf19df742d446faae56837087e8568b79af Extract robot var init into separate function
+b0b16d61294094665ce439c19944535b28c3c6d8 Merge pull request #257 from hybridgroup/readme-update
+93e1a85ebd89e4687a4239fcfb73a819610574b0 add intel analytics to readme
+8fd6f8a99e71256ecc1d5ecb8150d9a91545cd28 Generate lodash script for only methods we use
+ed24da8a047ae4e033a72e1655c8dd92dddfe24a Correct NPM bug on Travis
+c52971dcec5d548187b8f06b531b521a3026828f Bump version to "0.22.0"
+4b377b2e65a54de003445c295ce0e03863286222 Streamline Logger a bit
+b72864ca755ab989fd4916128abd26e43ee52b98 More specific log message for missing HTTP API
+6e830bee346da3a29551365f58da976dd58164aa Add note to examples about installing API plugin
+1316763bac19074980d7899e31f5cba1b7abd4ec README updates for API extraction
+b8766c46070bc458ccb7ffe323a5a0c39b123ec8 Add custom Lo-Dash build, remove from dependencies
+25f12345b9754d83123e9dfa0c80b4033e795125 Merge pull request #255 from hybridgroup/feature/extract-out-api
+9165ab36b448ee3af481b44eb520b410cef148ac Extract API from core
+eccdde81a98e7ee66e56b169b3f6ea09e4b9dc48 Update copyright years
+3c09867c5592c753c768f2a6c1c5a64028070046 Clean up .travis.yml
+34c05faefe95d3254e9366df2e6a89d8d4267d4f Merge pull request #254 from hybridgroup/feature/nested-devices
+8065644b4e96ca43ebf6d3e92f13fac38876c4c8 Add support for nested device details inside conn
+fe4c899f7fa41fa9ae0cf98821109ccbd4b69f51 Merge pull request #253 from hybridgroup/feature/cppp-io-updates
+cf0d24f785c6207f26579bcb45f2906c98fe7c7c Add API event publication
+926da9d3f60c3d1b768b1228e8a3fe4f32039be4 Less strict for local development
+90bf775d1d7465c33552d437a721af453daab5f1 Merge pull request #247 from lorenwest/async-support
+1030a50ca363e00fa0efd221a7fec04cb6733191 Added async command tests
+34ba1fedc507d1c15f58b3ab24323f757d63ae4a Fixed lint issues
+5d2fc21fab7ea1e79a543dd72201e1afa975c442 Support asynchronous commands
+18dfd2fc84c64c49bd568a4b50797a277e8cdf8d Merge pull request #1 from hybridgroup/master
+95768781868f92a9dc5b043ba77c898c13fecc82 Merge pull request #249 from lorenwest/api-command-tests
+163214a2146c488b69837bbc1a67f7e657fe411e Merge pull request #251 from hybridgroup/readme-update
+0a4d91611ce95b165a4bd1fce942509b709a65a6 update # of platforms
+8d5aa817c1e03836f4001aed4280ab72a7bb91e2 update robeaux screenshot
+b124e243638746604b6b77c081eb0c4af35449fe API command discovery and execution tests
+7ccbfa2bc6e2cc7b7f37fe4bf109730f46bc1a21 Update for Travis-CI's new container system
+13c388fbf7324e5e4e619075f234c7ce6843245f Simplify path for method proxying in drivers
+280687099c6db253b4c9bff4e25588185f1e0580 Revert change to direct method binding, breaks stuff
+7109a9d303dc8421ccc74a972607cb41079f5272 Fix API errors, add slight simplifications
+b5907ccd3643723cd9e1064be173a6d8c23ca727 Correct iteration key issue
+6ebbdf0eab7cb93a23f6868ac320c0d0791b0e2f Use forIn to ensure Object iteration is performed
+919a54540f975d1bd00ad7d31f5280508ba26d73 Merge pull request #246 from hybridgroup/add/lodash
+c9e16fe8c220362d2f990d2e68f934f732fa64ef Use _.result to get commands from options.
+6cbf2db122d7dc4f37add2d07f56a40e225f308d Lodashify
+34ed6cea0204e1e9d3f5cedc7f8a4fb26ec22aa7 Add Lo-Dash + loader
+6bffc200200ebd9a524bd526ac0487b9ab0381e6 Block 'make release' unless JSHint/tests are happy
+8685b57c83c2bad40e9927a342ee2f45bc0edac4 Run linter before tests
+36d1505c2f03e2182d89122fe99b7aef36c0c431 Add specs for new #connections/#devices behaviour
+766e35878dcb34b25a30273c3c70cc11a7ee6d4e Merge pull request #245 from hybridgroup/add/strict-jshint
+c8ce4a551588a32101a53c3429ac98249eb8d207 Remember to install JSHint
+0215d8b193266e40f7b1e7b8df0b4f98496c8af6 Add CI task to Makefile to run lint + specs
+ac6b09fe50701048ea6238cf169794336f7400b2 Clean up lib for JSHint
+e2bec78de7d237ab2d1cf1ba7a835c26f2d49f16 Clean up specs for JSHint
+7f761c7268475bf56f15cd217c48e2f74de40336 WIP on cleaning up specs
+f56b680837c1bb62c9db2a4b92a07079f8e131da Updates for specs
+3e960c48a11b0e977241e3c1cdf7ad8339d768f9 Fix JSHint violations in examples
+5315c8b9aeadca92853d7a157546f87071c7458b First crack at updating JSHint rules
+0e77dc2ae85b2b0e05a95676b3a592ebc6e36b6d Use "globals" JSHint option over "predef"
+bc66ac545c7f5f09400acfd624b21f94ec08858c Update dependency versions
+fa4ac454fdfcde795605f2846d6cdd63b637fd27 Bump version
+08a15fdbbba76e0a4f619bf83efc97dfce4076fe Update Robeaux version
+9fe92967bb1d151b899904eab47b3d2d74a4899e Make use of `thisArg` instead of #bind
+3eb1da848191c13110aee76ad2eda84a39c2186f Simplify halt code in Robot slightly
+0077fe4a8f4b68aca67a8af150cf27eb83091d39 Readme updates, new logo
+7528c9a8423f129c2823981736aab1e2152984ac Merge pull request #243 from hybridgroup/add/readme-tables
+edc98c009da2cea4f6722d90fb554ef236434935 Test using tables in README
+45743eb5cb1127e5d7b6a206ed9ab45f8dfadf90 Update syntax in README
+2ea9f9503f770b672df8bda838662e5f091bbe98 Add Ollie to README
+c49e71b9c74da0118e5be1b20d638369de4eb76b Bump version to "0.21.1"
+29583c0bd59de1395dcf93dceb9ec435609aada3 Add back debug logging for device/connection start
+5811cf2518625f4b79301cfe0232d0860cac5f67 Bump version to "0.21.0"
+4f850d5e9e86fa1aacd77a29d177ee9667083eff Support passing config to Logger#setup again
+83153664f51519894a5878f5bd044d515ddcc0d2 Remove deprecated syntax from robot spec
+ca8e22f1e26a6e32c90c9f0f596d99c777a2c8fa Fluent #device/#connection update
+7d4aa1ffee4a8bf46cefab7598202e1014174808 Update examples for new syntax
+9047797c9f6f087d1d13e9e396f6872068fbe6ef Deprecate 'connection' and 'device' Robot opts
+c055f1e8575e35e55cb540ecfb5a8c313988eb23 Example updates
+0541c225d8ef9fd396d2860549be4e556bc3cce7 Update examples
+b0f99d3ff3868f4d5e3e35f353e444386cbc3d13 Merge pull request #242 from hybridgroup/add/imperative-connection-and-device
+15c9b96333bea18ee91045767a900d1f7e1dbbca Extract out Connection/Device initialization
+668acf1e1888c192fbdb2eb05f91957ab41938ae Add support for specifying API configuration to Cylon#api
+25119c170f3ec5de0b394703c3331b330dd6cdc9 Refer to correct element for proxying
+5ff743a4c54a51bce7519ec37c9decc3eb9bab0a Correct API inconsistency
+8da2a179298fcdd8c4f2d74def0e4651dc207f48 Fix broken test
+38bf5fdfedd39617b79430677d69c8def21c28b9 Refer to Adaptor instances as 'Connection'
+4500824f30b003fb32e2b3317d9aaa4d428d2d56 Merge pull request #239 from hybridgroup/remove/connection-and-device-classes
+39f9c8b637ee9e96773e658e608f8e438a9a48b2 Fix up API errors
+ce87a355f0523b1d3a5d3f0e19ad6d761ad0f7a1 Modifications, fix test suite
+e67ae198826aefc636ea44ebc55de5ee567352a5 Remove Connection and Device classes
+aac7bd0de8ea6b6df5dd234c0f15d0c74ac16e9a Merge pull request #238 from hybridgroup/change/specifying-multiple-connections-or-devices
+e93e27989a55b77939f93beb283c5effabf4afd9 Update examples for new Connection/Device syntax
+f1b982feddc65c6891eeeeeadafdb0537da4447e Support providing connections/devices as an object
+efe3d8fef154fba651d4ccb85f3763edc45e5b7b Correct link to Robeaux
+b8a7fab75b1afd37c03600cc06dec45b3be6a5f9 Remove extraneous Leap Motion config hash argument
+7b9cb8eef590c03909cfd76e1cfae63d62b3eb68 Almost forgot MQTT, the list is getting long
+b8e7f058dfe25e837a19198da164fb6200968e46 Add missing devices to README
+6d0d13e5b6ba6306869a73c910e8c7a8d9c3ae44 Bump version to "0.20.2"
+4c539ab9d17e22522b6f8c5117a827a3c23e8aa7 Better configuration for TDR test mode
+277d4a51eef4d7ef46883455358dba41e1852e3b Correct API errors
+328841b80c094e9c63503fb163cebf29f474cbf5 Add API and browser support to README
+e0d3ffbe22deb0438298b8d01cef32eb451570bb Bump version to "0.20.1"
+19f9d57f1a1620e34d9e1f2f250d3948033572b5 Bump version to "0.20.0"
+e9f73228f1a3d797af1e5ad0d587447524ca6abe Move requires around to make Browserify cooperate
+c43978bea240ce6819fe06a6af64af38b65b24ef Add logging for module registration
+f5e427614b5af6da014b090907aac10973726c3a Improving README information about browser support
+60e89c9671b67ba56b50526bf189374c392f9b64 If  key supplied in hash, use it to find module in Registry
+e17dd743c91a78ec4e0eb7bbbc5b54fb69e31788 Merge pull request #237 from hybridgroup/add/repository
+966f8aa53096e093520018a9184d0d07a32fda38 s/Repository/Registry/g
+d62673bc8a9a24c14bcfd79a0bfd65f4a2f23fb2 Stop using extraParams
+1c922f02c1b8ae6384cf7388ebe38b0365aa2d26 Address bugs w/ connections
+44075a1a30f339779a8bf2296e0d450fed22cf22 Hook Repository class up, change-up module loading
+63e43cc553c9ae13805ca04ac1df81584d2927e1 Repository module added, not integrated yet
+0cd85988e496efbdaabf4e7b76c8866f2fd289df Merge pull request #236 from hybridgroup/fix/move-logger-config
+0f59645fd7c5dba0680821efec9d878c831ad15a Move Logger configuration into Cylon#config
+903f8a9518e919fd2653819e9e396bcaedb2378f Merge pull request #235 from hybridgroup/add/log-levels
+3ceb6cda851e5f1c93eebc1a29db4a43946d882f Merge pull request #234 from hybridgroup/workMode
+a8b16a3469bbf1f4a2bdbeb1040fa12a03909995 Proxy all opts that aren't already used internally
+2cb2fc232db0db15fb768f551d00ed076d324b42 Basic log level implementation
+d65742bb493c679cfd1f8eed59524e0ced4fed11 Generate code! It's what the cool kids are doing!
+f5de644af77140ae9227a90c69050a512d331712 Not sure why these were classes to begin with
+7379ce5eea3c5d6a6875588007665d8419024f5b Update README.markdown
+98ad45ce252c4952d8f51ff9ed6bc0806f63bab3 Update README.markdown
+2a822ad947ae49a29f1d364b276794aebc04c82d Update README.markdown
+3f9a7cf14892857a8465cc652383208983d3e92a Fixup some Browserify errors, indicate support in README
+bd95f9eb3c852c3916ea5545f1d7feef746df229 Reorganize tests, under 'spec' directory now
+9be0f779aeee675fa73a1e0db96f3f175e166fc3 Update dependencies
+c3a3f76f24b057b4090a58ddf1ff5a0da7eed1fb Clean up and update Leap ARDrone example
+1f36d5a0308df89bf6dc0b9d9f6f5513328576e2 Add tests for IOUtils
+4e8e65ddea56f89d132f48043fcced79796ff0b1 Add fluent syntax example to README
+157fcec25ecc435fe57e0ac66c2ec5f80bcfc5bb Avoid creating functions inside loop, properly terminates now
+b80ad6e167606a46192613006aa5d7542bbd88dd start the robots in parallel
+d4ed3117f341352e99e7b1a75d114fc6516aca4c enable async or sync work modes
+7f0b5772fad366a09635f515de60d96367616a3e Adding sphero shake-o-meter example
+e6bbdd4b2b59b613fd72d1560784bb9f2ad4b61d Merge pull request #232 from hybridgroup/readme
+ccddf4a86252a943fe393fac79863e9dbb3c1ffb increment platforms number
+e74675d65a7cba5e83e08288271667a7340b96a3 Small fixes to robot.js
+a4498d0281a93ac654660b65c3bf6931e68cc4a4 Reduce duplication in Basestar event proxying code
+2c1c691cbce7312a00470e2cbb72665eaa7069a8 Add new function proxying as utility function
+acc1c322051d3a26a07d51c1f006764874bec9f0 update readme
+156a06f31619ece8fe6dec4e2c34e01227a15c0f Bump version to 0.19.1
+35c3a4b9e99e1f86f7e0407a6289717bf55262a7 Proxy methods after #connect/#start
+198a792b22cec4f3dbc63d38c13ac5805fcc118b 'make release' should update release branch
+2a3b917aa8ac054a9742fa276629aaa4877d3b82 Bump version to "0.19.0"
+d865bac72bcfef5ed88b58a0f91b40318d5de669 Add error triggering
+81dfda5732e0c580228b9cdd506c32fbd0039f8f Fixup specs
+8e0790ad9fdb6f2801bbac56de6d2695531641df Default to manual mode, prevent multiple #starts
+f029438c198c8ca46923965284b8f82ab58b4429 Remove #Robot export, config option is now
+75c8d47676726706b77571cae437bb590bf58959 Remove commands array from Adaptor base class
+6a0a17eca3292ecc469582412a91ead1279e7169 Merge pull request #231 from hybridgroup/add/auto-adaptor-proxying
+77ecc2a82b3b6b53ac43d89878d45e9693d086e6 Automatically proxy methods from Adaptors to Connections
+733c13df13a29f54a8a249bddb532ab6c22dbf5a Update API example
+da9fc2ced6ee9375885bf15f3fe65574687b512d Updates to imperative example
+74e763324b5169fcf9e676fc5d7be8b70292c6cc Fixup test
+de0a8fc0cb38fb6a7f8570168a03ccf5faef56ee Emit 'ready' event, not 'work', when working
+4599d5054ac1da4fb1ea925cbd455a66686dff8d Add imperative example of Conway's game
+8ca8da67117391fd06ac14fcc9a41f3d79a4072f Update Conway Sphero example
+8d6bb1ba712f76ea681a73ae457b67300b2bf7a5 Merge pull request #230 from hybridgroup/change/pass-adaptor-to-driver-instances
+90cf0eed0ae27a06322aa30c6999fccae98ee804 Add direct Adaptor access inside Drivers
+6fa67f0e3b814da052691745317406ea1044a072 Trigger test mode by checking NODE_ENV
+e91bc57de059bd1f63b184c63b853ddd50be070e Merge pull request #228 from hybridgroup/add/imperative-work
+299ade796bca4b59850a7276f33f5f4136b3650d Rename auto_start to 'auto'
+83bf4e3d142a696f042ab653ce413a143b8650f9 Merge branch 'dev' into add/imperative-work
+1b549f2dbbe4fe5b4de01908031ee9bd53ff5278 Remove Adaptor#_noop function
+333dc881ea295eea597daeb3f49e66e68bf18091 Move Cylon API config to the Cylon.configure block
+b7467e7a6377b2390f7468e4bfaa8e36fe0b46c5 Fixup interval in driver
+ce41885ab4135645a81784f7a66f1391e73d845d Merge branch 'edison-readme' into dev
+261f0f408f6db36895224e7644877fa9a4e096f6 Add all new platforms to README
+e72ce5ceac98da95380bb13d4c30f7425b415e5a Add default interval in Driver class
+7560507f11d9fb645badc7d67e075754d431f9d4 Switch to single Cylon#config function
+c182c1316eabfa5642d816f57760111cfa299715 Auto start by default, implement start of modes
+70bd524ebe3231135f86dec86bd3a2cedb7db2d1 Explain auto_start better
+69f066e432267a24e93d0e42016c71ffa0c92476 async the auto start
+3ec6c2717a32b650d02fd41559130ef96d52c57e Switch to Logger.debug for default work, add test for #start return val
+f0d0e4b738806a8c12dee71150987aa5c430ba38 Correct tests for auto-start, allow for non-truthy values
+12ae17eeb29a51938811fb238f24befd088e3044 Fix typo
+021c1756dcd9012eda044963cd47664f99411417 Auto start by default
+f1544e5a8fdf3768364086c1ed999c6a2588897d Add support for work to be triggered via an event
+c443b486cc42e1e9e48833385cf72672ece3e950 Merge pull request #227 from hybridgroup/fix/connect-and-start
+b48f5c3a57074d1b71d0c5810bb14ffe1b51fc5e Add no-op #connect and #start methods to built-ins
+cf643d9d708c21bc20bd2cf52204c67b2f29dc0e Remove default Adaptor#connect and Driver#start methods
+174fe2416fd169fd0674587bac2674f09e1275ec Merge pull request #226 from hybridgroup/fix/halt-and-disconnect
+cb43f341387b0d845d29af98b1328a6029ae18ba Fix broken tests
+14d8bbab000abe355590d202a1c615273d67d469 Remove base Adaptor#disconnect and Driver#halt fns
+9fe9700eeff7fe3a89aac56ee53355bc2e405b64 Restructure Halt/Disconnect Structure
+d87dd7812027b0004d8277561291cede5484855f Merge pull request #225 from hybridgroup/fix/name-collisions
+179c486c8057ca04bc9b9ba4568390df851cc7e6 Address namespace collisions for robots, devices, and connections
+42a0a8affe8bc00a314a0e190ce42ed851afc681 Add example demoing Cylon#halt
+48497b7b0e821f54a03a58f0861bd3a8d9ac49a0 Default to no-op callbacks for #halt methods
+d2b00c7d30d228f7c53b002c295e47cc69e60c69 Attempt to stop drivers, then adaptors
+8f20ccbcf3c21ef604227324ee6508b713419897 Default #halt timeout is 3s, now user configurable
+e840823092098a0554426ffe7f05fb087e2c2fc0 Merge pull request #224 from hybridgroup/add/user-configuration
+3b7c96e81e66e3322b39a7201e6e319dff1320d4 Add user configuration for Cylon internals
+11082b44a90d8d075e0721714f4b602d90868284 Remove extraneous Connection#halt method
+897668f3ab4d0a1dce8253d46c67c9186d16b03b Clean up DigitalPin class
+c063d254e08147d4d6ccbadf6af3a302cf0c3c39 Improve description wording in package.json
+24ae5291848cf206675889ce3d8ac2cb2751b666 Update README examples
+fca5549e29f47119f15ed91210ad714b3d575596 Bump version to "0.18.0"
+55f9445149896d23a37d08121a0d07abfcebd8be Remove #proxyTestStubs in favor of inline solution
+b312f6bb6b692672fb939b54009edaea8bf018ce Correctly proxy functions from driver to device
+d4e34c6f547cec94698e70b40602c30eb3c84fbe Test API routes to ensure they can resolve
+ffc27f9942e5505862d554514db937a5149ccc44 Add ability to pass proxy
+df60282042e52d9988041b59156a586246d87ceb Simplify test
+6e9ceee6cf1d95e36ed55e44d123c18f84950060 Fixes to driver commands
+1f0b214c9710a863d71ac5f173fccd907ee8d2f3 Add Driver#setupCommands method
+bde61323771a3fa61e2b6fb482fb4ea6847b0c5c Merge pull request #221 from hybridgroup/add/commands
+bad414be39eff057968cf9837024e906c0da8ac4 Correctly avoid labelling 'work' as a command
+7a481f6767f70c72298583d53998f9f4ff2c1096 Correctly execute device commands
+e6c567a0908205b2cefc2b0c148b255f2093d8a7 Add new command structure
+ac737e51ba6e139bd930dab40e627ec1e56e6506 Merge branch 'dev'
+0400f4d1e684e64cd894fb723c672671f49ea89b Bump version to "0.17.0"
+4cd4f2d85d9564ab704855a692317f11836d6691 Update and lock Robeaux version
+50f3ece9230a2338bb714c32d81c751a53840037 Add basic error handling
+6bbf9036443feb3675193bdb0b98101aedb811fe Merge pull request #215 from hybridgroup/402-fix-hello-example
+8fbea0b226f9785849ab124ff8d775a8f5cc24db get rid of api line
+833bec5f007519695cb88987aa21ad042f99cdb3 fix hello example
+40a1c0570f55501669b675cd03e2317d7eeed89b Merge remote-tracking branch 'origin/master' into dev
+026d3777e6a1490890ae358a02a46ee9a018ee57 Simplify coercion of Robot to JSON
+d0c29822ffc750eaa7587ce00dc235b01f435919 Correctly respond w/ 404 error
+029aca2e9e693427d6a90601a115721cc095e8c4 Add 'details' subsection to Device/Connection
+25e144b843c89960b72992a27b414699f18845a5 Added arduino YUN to the list of supported hardware.
+eb7b21c71c860d357037e3ba6460969b1715bc63 Add freenode confirmation file
+bbebf668b9370ab5aefd750d61d7844711d77960 Correct link to Cylon CLI repo
+cb1ff9cdf9e13eaba387606dcba0846a66e2e952 Update readme to include correct link to Gort
+57f2a96969019e6e9ddf176f1ceed4a603e94278 Update readme to include all current platforms
+8762820d0caaa07fcbb2c3f7b637f19421ea8511 Merge pull request #213 from hybridgroup/refactor/threepio
+715d9c89af8caae8a4a1d67bf1e91c780cedf00c Emit 'ping' when Ping is told to #ping
+f5734b137e6722ca83f5389a5a21440bab2ed65c Add MCP commands route, fix /robots route
+c97514689be6e845a72148ffcf99fbedabf7b2e6 Only look for command params in POST bodies
+6b1d6e2653763c5f644759f8cf4fe00ffcccf243 WIP on Threepio changes
+4f66bdeb51a5fdc571cf145e8adaa22433a609a4 Namespace API routes under '/api'
+7394eefde298e568b7a60b4c9d2185eaf24fcdf4 WIP on commands + JSON serialization
+d7987f959e24c2a57409fd63fb7f9694644b093b Fix typo
+ace5f15a3681cf96d8406b7c7bebfd84bb22b097 Refer to device connections by name in JSON format
+b4a68d1a3747759a67396b87c9ab819b9bb7d53b Remove connection_id from Connection class
+0184efb4cddbd01cd442a0f2449c05e93f08c46b Merge pull request #211 from hybridgroup/fix/require-connection
+c4d03428e845d9ed47b3f240f5faca334c805375 Defer to Utils#fetch for getting ENV state
+ba295e96425d871bb0c231f1411127b4cc495385 Slightly clean up Connection
+1c8e84cfb2b768bfc82b381423c2b8c68ba6fc15 Clean up robot initialization
+4dd7e013ed1b4077b4e07516fd40832470aaade9 Require a connection if a robot has any devices
+ee366739d3eb356d3e59606cff90e8f3bc419f92 Misc. small refactors
+f1ba43d91960e08d8e8019c59737f3a07d19c911 Bump version to "0.16.0"
+857a34dc4168c7c39e57e79bf09f8b50e61c7a09 Prefer {before,after}Each
+070c4a4fb972626823d62b28250819ff462bd44b Fix test preparation
+ca2bf7e5a9a827c3bbd4352d74a7c464e754eabc Merge branch 'dev' into servo-level-up
+8ba5bb0e6a41b53db3806333e94e96d662811804 Working tests for Adaptor#_noop
+1eabab6ec9760db776c0deb44c9cb82277dfce23 WIP: Change noop to use anonymous function and added tests.
+f0d8b0360b3af22dc5696c03454c359daac295db Remove `self` references in favor of #bind
+ed8d6faeeebe00ac2bc71b1142c4da2e1f67edc9 Chance Adaptor#noop for Adaptor#_noop.
+afa7fe74955536d2a13895f754581c4b6b5767b2 Adds noop function to base adaptor.
+c4b10e66f49428e8d675c75f2ac71e1059726764 Merge branch 'master' into servo-level-up
+5ce0d37640442f2c5596391629ea280fbec2f0c7 Stop using #fetch here for now, it just breaks tests
+5974eb80cd99ba9e8fc4dc0bf9feb18892f75ad1 Just use arguments directly instead of array
+a9b874a91713c954821dae11ec565eb154b50574 Merge branch 'master' into dev
+c5989c2028bfc82c671a11bfdc0a6c5649ec838d Bump version to 0.15.1
+22ea099b79c5a85c0206780602cfd4984f6f2ef9 Merge pull request #206 from hybridgroup/hotfix/tessel-express
+856619e9022fc879271547d392c7f6215bffa254 Only require the API/Express when using it
+d35b3d8438156c21388995a167c0b65acaa51498 Merge pull request #205 from hybridgroup/remove/utils-bind
+5acfd4aed492b0808b67e641d8d365eb228f3597 Remove Utils#bind in preference of built-in fn
+6fa87fbf7c7090f2927f682635898a10ed2859e0 Consolidate logstring generation into private fn
+e8520e3de2562ded3e3f7aaa55c11aed4de0c36b Experiment with Utils.fetch in Driver class
+7a3b1ddf5953dc2726144286931c99aefdcfe1b8 Merge pull request #204 from hybridgroup/add/utils-fetch
+6f42b061b311913f9e5de97d791bc68ce1d16dcb Add #fetch Utility function
+af8cfbe3333ef446bf8efc173698eca05981ad04 Fix JSHint errors
+ca749fd03ed2dd3c4ea59d827fefb5f9d060088f Fix an edge case and improve tests for API
+587efe2feee0e4059c8f3088bb98ceb8a641eec4 Rename API variables for less confusion
+b49c2da3f1e586b3e1b778d578f16e95823c1b4d Remove site config from travis-ci
+62b3df12a560ec20bda5c8b023ba01a54fd02f0e Bump version to 0.15.0
+52ac9fce8d8dbab03fbe1113978d7248130799c0 Update list of contributors
+fbb8a6a192499260e074208702159e65016525f8 Correct links to new docs site repo
+cc9b06285edf38c0fc7a3a43c8bc8330924fd96c Merge pull request #203 from hybridgroup/refactor/halt
+d90c4eef7c8fe4bace746470d85d125c88e5c84a Fix broken specs
+6de922f2fc37215e3384ff0b25c69a36818f8e09 Make halting on SIGINT async
+a44154b1f4d314ebd9c62257495e80ac48da93fa Change README image source to cylon-site repo
+f1c82f60216017647c997d5c4c85cf7dff02310e Merge pull request #202 from andrew/patch-1
+8206ac67af3d1881d2349ebec414e9a8ca9b714a Fixed logo
+613326b90231b0365f18a280113e865115a5b979 Merge pull request #201 from hybridgroup/upd-from-scale-util
+086990952102bfd034ba540b3a703ef03d554188 Updated fromScale util to return top or bottom of scale, updated specs to reflect new fromScale behavior.
+9e1ffad6f65db563b5e1b080dac9f92ed271d66a Add more tests for BasicLogger class
+9bbc7faf5e35821c6f648c60390ee4e79f162c5e Misc. JSHint-suggested cleanups in BasicLogger
+682bfc653628d11743987e806ce69472ab7ca529 Add missing semicolon to appease JSHint
+f797cf4c48e62c9e34e7fdd815cc48a0202f2402 Misc. cleanup in Basestar
+9c60700c0f6931705f1914fad7d8ff45e0d8e2be Clean up declaration of default work block
+b66a1d3fee5c012bb12a4f1fb9a7e12e13046771 Remove unused param for #start callback
+594c73dc601c3ace1819879e9ccf47f2f20d2704 Declare missingModuleError before it's used
+3b312def0d32bb74b009d08c48f215fc09cb4343 Small cleanups in Device
+8d3c89076d6f9b1820d1687f98f6eccc8773dfc9 Allow easier extension in subclasses w/ prototypes
+bdf3c24388f417df9ea038be2dbf52d49539c9d7 Merge pull request #200 from hybridgroup/refactor/commands
+1832e20e174bfe4713e746d68cb0a92dd5ab5fdc Expose commands as array, instead of function
+9406fddaad6385762bd4c32fec559c8516c74382 Use same formatting for all log strings
+17c1d4609f9c813f70319f7f5f8a0e56cc810f09 Merge pull request #198 from hybridgroup/refactor/robot
+2d88470bbe2afe96b1b254e7ebba326888e016c7 Merge pull request #199 from hybridgroup/remove/events
+05179422535f6b37f12fe9a134d80e48ed6eba23 Remove the 'connect' and 'start' events
+3672a1b7120afd9855c8a2e03cd7bd4e3b2465e5 General cleanup of single-line statements
+dd553a55f21668e2a99144ccef08219cbb24a8a9 Clean up #start to use Async.series
+4e43483e9d6c3d2336a720aef38fc7394a61bdb6 Slightly refactor constructor
+dbde3d5b7d6ca12550532da4ab9fb071148567d7 Remove circular reference from Robot
+8c46aea5251c824d16401541f95319c993ec740d Fix typo in IO utils.
+b1d7dd818688dc8696f9c26054b499a981f01364 Generate BasicLogger methods, rather than duplicating code
+08c6b6e3dcceb7ab9c541f5b66edf70a5651eaa3 Update README.markdown
+3717c4dc31a91907a5b25a48bde5c9f70bdda6d5 Merge pull request #195 from hybridgroup/refactor/robots-collection
+de7b35207733c890da5179cdf0e289d5ca8a7684 Merge pull request #196 from chrisbodhi/patch-1
+957ad1790a74f9ebce5302e9133d6faebf784c95 Update keyboard.markdown
+836b7938dbfa8603bf081fcff9d65c85a6f5f534 Merge pull request #191 from hybridgroup/refactor/utils
+ebdeeccd125492ecece5e53cc0287c34a3e6cdf0 Use implicit object conversion with #toJSON
+af4bbd963bcb184f6b7860c8fbe7fc3b6a4ed79c Clean up API implementation using middleware
+5690d723fbcf8df2ef3564aa974f80899455550d Update examples that previously used findRobot
+81fa26096317aa68ab08b3fa61a69959da61c463 Store robots in an dict, rather than array
+2b5e991ef3138b7a5f37764641ef1807a133521e Clean up some of the utility functions
+a60f16b8ea313d14f4235b71e90f6fc4cfa5e37f Fix typo in utils param name.
+f91dd7d5c3395e03937664ac9722854cbdd149dd Refactor Utils (mostly) out of global namespace
+789347f6f8b61cbef15423010d6f83e792cf27f8 Improve inline docs for Utils functions
+a5241e57b5367d4b81595dee1c0a60ae3f5a4d93 All work and no play makes Jack a dull boy
+bc4a1f5cea48bb6d9807bda23dbf9f3ab8dd556a Remove JSHint/Istanbul from package.json
+9b352feeae6ed38df59574eef7f6905c08557bba Move API command param parsing to middleware
+0e019f115148467d570ef374a9eecb56e2cfef01 Merge pull request #190 from hybridgroup/refactor/api
+38ad5eae78831f7b395cb12d62ced05542764e9a Remove unnecessary/broken tests
+ac0a69e63f5b45c19ecf2c73c9d1ca90b1919bbb Move API routes to their own file
+789ce02ad02ff3d044789fe6657a215a0068a157 Organize server creation into new function
+a4cfc4b8ecd06cfa17a636c169af6ce31bcd6d15 Improve authentication middleware mounting
+5e21c52b95183f0cddcb83efe55ab96ad43c163b Add mock request/response classes for testing
+cae754672ee7eacb1cfb041d9ab82911adca736c Add mock request/response classes for testing
+014574a54562c9c496961f9291360f1559433d46 Move SSL certs to live under api dir
+6bc1e9d9443d5fa8216254ed0cdcaca02005adca Move configuration to API class
+e08a5df88b6e58a7169c3a11a7870dc847e70203 Bump Express version to 4.4.1
+62d4ef620e879d70513731fb842abcac4ea4c7d1 Fix typos in new sero IO util.
+293594355cb75f4dc2f02a8f92be9a81ea3443a1 WIP on sero utils
+b33f64e3208bb412dac20c4c697fac901fb9d80e Updating annotated code in example to show properly on website
+736fe03e881456dd2ff685413b507e9cb6df88c8 Merge pull request #185 from ciandt-dev/master
+0302a78294c3f63e8963dc3eb850450f7cd37805 finished markdown documentation
+31635b19400a8eed4e4e7e608821ce6b2c499134 finished markdown documentation
+930b182275f20bc29896effb696883049b9787ce finished markdown documentation
+8afe35b4c90f8468fa4ba0f47963f6496e12dea6 started code explanation in markdown
+adda142d8ec64c9581735a23e3dd9e57067e165e Merge branch 'master' of https://github.com/ciandt-dev/cylon
+52211db1af7efe7bbefa4c9234fd1799ef87cd62 cleaning up code
+cef5a85310870cb34cbc1e47dfcb1898ef46c13b Update leap_ardrone.markdown
+0c8412fe40ea247037b70dfcb46955dbef4db919 Sample robot integrating leap motion and Parrot ARDrone 2.0 through cylon
+92fea6225b6f41180f012c33d76c07723552c0b2 Bump version to 0.14.0
+838fdc7046085fd4d745e703c5c0f53135db29f0 Correct references to Logger in tests
+e27aa46f072945af0266a4e257a3f20a49812253 Move test support file into test/support dir
+774171db71cf75cc486bc3846d95e4489a254ac4 Make 'test' default task, remove comments
+66d76b8aa3bbd0cfd884f4f47f4feb64541ef6b0 Merge pull request #179 from hybridgroup/remove-node-namespace
+b5c1a54971e26dba4adece81936e8fca26d2192a Add istanbul back for code coverage reporting
+ebdac95a7d67d937a369ca70121c2a9008411cf8 Resolve merge conflicts
+69cc76b6a64456865f646372695b6a066ce8a878 Ability to pass the name of module to use for an adaptor. Specifically for case where a module contains multiple adaptors
+c851809bc2e834b7e9be220d7cb83ed74fecd31f Add coverage badge
+9c392121a180e6088f9d2d973b69a5507e359271 Fix travis.yml
+41b5e576ca276e64382d2484f43e4e8ae9c35557 Add CodeClimate coverage
+34e562207d86fe2b6e07b283f1c8437cba08373b Tidy up Cylon specs, add specs for exports
+c22ef95239c940739d914694701a59f67b1a6f2a Remove Logger from global namespace
+43a935192161eb1b67076e44ed8dd53fdd076afd Convert Cylon.Master to a plain JS object
+90e6ab5564074152e7307c3594ca5c8d0165fdf6 Merge branch 'master' into remove-node-namespace
+544e34dc78bf643bc7c1c439ef84566d63b6b2c8 Remove Logger usage from examples
+1e442246606ab683eba736315136bda872300a23 Refactor Logger
+e8d7c8ebb7c14e1c1075c179661c9d10d0951bf5 Remove node-namespace from package.json
+c99ce6571f3b86d974ce86809123276fe0bfcfa7 Remove node-namespace from DigitalPin
+2cca04873dd56bc0151344d8c3c8e7403e9e3667 Remove node-namespace from Utils
+17a0a5d08f4d0f44c1de0a24dfaac58beae6570f Remove node-namespace from Config
+f20ae55bf61547fa29f8d40ca601a183ce0729fe Remove node-namespace from Robot
+a3974f38b72ab93a4ceb83ebb9d9f91578c04c9a Remove node-namespace from API
+7bab3ff65f25b00d03eb0a9ad130a018e7849a25 Remove node-namespace from Connection
+f8e546a6e0a5940b77bc53cc92cd319fcfe652ce Remove node-namespace from Device
+d46de63379386a609f7cc3b49b7ee8023d1b60da Remove node-namespace from Test Drivers/Adaptors
+c8cb7f0e4018b4dcc5efb67230f3fed957de798d Remove node-namespace from Driver
+637bce0e6d6dbd439f8203e0e6d3b799e0d9be78 Remove node-namespace from Adaptor
+2958f148f328cac6f6eedd12a56accf79576f3ec Merge pull request #176 from hybridgroup/remove-class-cruft-and-namespace
+f9d39151af8cc150c8f4c0e9eeb073a2297d9b83 Simplify testing harness
+5eb7bcdc0e2536c1f40e2f1a28aa047378505635 Merge pull request #174 from hybridgroup/readme-updates
+89084ae0f52a0e60560fe99aed17521e42444adf Update CONTRIBUTORS
+a9ae09bdce1f90cecb618bf92bdf3f6fb183af0d Remove Basestar from global scope
+dc09be6bccf41d6d13deff5dcd5ded5a282c8824 Remove class cruft and namespace from Basestar
+bcd9cb84ecec7487221aca2748f15807b5892150 Clean up spec
+31dfd4b6c9516e598db8c69ea8e8f120eaecbe8f Merge pull request #173 from hybridgroup/295-optional-ssl
+3caeb47b3ad2b8d825d057e35e133bb6d1fbaa36 Removing unused requires
+f05025ba68209f4de7b3dcd20e01e9ac4af61efd Removing wrong conditional in api
+394691a8f216dc3cd9d1a89c8e81546d09b706ef Refactoring api optional ssl logic
+f9300afdeb4ae075ae8067eca8ced60b89e33db5 README content updates
+224287744a0a520e97ee23e8a92516b188eae352 Adding test for ssl disabled
+956e757e8e4def17e9dd5dd19a91003f5ab88070 Updating ssl configuration keys and tests
+e5400341d0112830d4d68641bee9e46892ee461a Making tests green
+c159bc466afc9b042672984cf83c1a2950488254 Use the 'official' Markdown file extension
+40b3db1dce2dbfd45b02b8b294e2f2d54b895a4e Changing how ssl is configured
+8f746f1d27de45db4b5b399679f185b1dc09f7c4 Renaming https to generic node
+cc3dac9442f8c1483870d3e65b7078a1b28225c7 Adding optional ssl param in API
+e66c1145d57b2e95ebe8d14835238573587e582e Simplify Master#api
+801d1a5d49c37f8646bc398b5bd62f40111204fb Fixed tests, change incorrect 4 for '4'
+938c11872cf336fb689af43d1a3576383f061777 Bumped version to 0.13.3
+050b20c945daa295897e9f66904f7defc8e9f50c Merge pull request #170 from hybridgroup/bugfix-disconnect-not-working
+37af9c8e625dc685a6565c91804c05c72e2c8c53 Remove circular reference test for master.
+283b05b08a27a5250fc31561f3b657f0dac4edc4 Fixes bug with robot not halting, which caused connections, adaptors and devices to not disconnect.
+c34a1ee28cefe6ac09c0df4555a0968ad60ed4bb Pull in latest Robeaux
+e2a0131b3be284c966a6966d90d3e1f4dffe6534 Bump 'async' dependency to 0.7.0
+9b086c4502f73d95117ce156a7a5280dee9fb0db Merge pull request #169 from hybridgroup/clean-up-package-json
+16a180de7daeec8b4cd2740bf4057454ad131d90 Clean up package.json
+855988372f6d2e3cf93dfb8c9fecc904936e98da Bumped version to 0.13.2
+d8152852a08b8993338bbf7a2a3314c0a336de1a Correctly kill process
+fcd771cadc62c43f3e029bb7578d913d91317a45 Provide more indication where API is listening
+c5428d89ab33879825473c8a091a0a21ba480c2b Allow Content-Type header to be set for CORS
+9e781a2ea169d2572d0f2d219236d2a0dce89feb Add basic tests for API server and routes
+93ec358f9b48ec30bf91548e410dd8fc5b0710d2 Merge pull request #163 from hybridgroup/replace-socket-io-with-server-sent-events
+1c56b5942f2e0cdb28138925f6d6a68443d66c01 Implement Server-Sent-Events for device events
+cf31cfa7b9ffdd3ee3fab3f143ebc444b7a1aa60 Switch from Express-IO to plain Express
+4b409f77777f3597cae78ad80d0110472bdb2d9c Add CORS param for API config
+430ffafe8124a95dfb62ee9f7b1493e462454ebb Update to 0.13.1
+3a1674dcef4d6cf13b3c427f6cedf2004e4be620 Merge pull request #162 from hybridgroup/cylon-april-README
+be2de6de4464116641eb494591a363f8a9532fc5 update README april
+c5f09133b06aba9b3c7ddbc1160bfb546cd72112 Merge pull request #161 from hybridgroup/api-basic-auth
+c81740e3391376065ea946d9b6371fc020bbe38f Add basic auth support to API
+89a5bbae2fb04e7383bae926af04417a05081048 Support passing auth hash to API server
+0b3b2985969659f8072d9a57b3706cd6f1699305 Merge pull request #160 from hybridgroup/api-https
+29b7db0de8841f4a63ed28bbccd829ebb2919684 Add support for manually specifying cert/key files
+ea022d3880e73d62650aee7f48f983f38b3884d0 Implement HTTPS API with self-signed cert
+34324dabd520e00c0095639ce9ee664638fb26ed Clean up API logic
+49b2e91daf998b8a5dd4d0ae5aa94e9790a497db Prep for release
+a80d14d527fd65bc75a5b9667147df62176fc816 Lock Node versions to those newer than 0.10.20
+e664d6c5b934f6b1292b2b8b7a8616a64ebac7b4 Merge pull request #156 from hybridgroup/init-devices-err-failover
+de360ba2b3e7820d2bb8ae645ad414b1ce159d1b Add error handler for devices that fail to initialize.
+6d36709207095cc21e41c9732b4001b47486180d Merge pull request #154 from hybridgroup/global-utils
+1cffa6067ed71b8760a28239786586970b5e0716 Add Utils to global.Cylon namespace, add bootstrap
+2563e62de40908e114f69c687f770a2c5ea06381 Catch MODULE_NOT_FOUND errors, throw others
+a92e51157f423f85ff58e681620adeb8e49ce241 Bump version to 0.12.0
+fe931d0b60d0e451de21b2727be070a941df03d2 Add make task for releasing new versions
+a98a5de44fb5e319b1a4e8662a82894518f03ccc Missing 'var' keyword in annotated example
+51cef5a94f599423862d556df2586e0527684c09 Merge pull request #148 from hybridgroup/remove-commands
+89a5cf1cc055ae07c3ace38287c1f4b4298bfa1d Remove comma breaking package.json
+2d11e754342c63265cfb358c6bc92422354f4370 Remove CLI tooling from Cylon
+da07a5644f940d277539bdb068e2f3cad2464197 Merge pull request #147 from hybridgroup/markdown-examples
+688df7a419fe048a2d7bc5c8ba832691936206f7 Convert remaining .litcoffee examples
+479388e7add4ec6a3724626c46e0906777922b59 Additional WIP on converting literate coffeescript examples to markdown+js
+e7a340fd0ceff787d44dc30dc9da77d67942f8f8 Remove .coffee examples and WIP on converting .litcoffee to .markdown + js
+4c647db88ff31074e57a677b62be5cc84c086431 Merge pull request #146 from hybridgroup/notify-of-missing-modules
+337074f34f6fc008dbd6055e88a83d99966c9a74 Add friendlier errors when no adaptor/driver found
+2acc07b4431555c521eeeb46943d097ab09c1ed6 Fix error with /robots route in API
+cdf309afe2cead566298e1e352254e55bef412c9 Merge pull request #145 from hybridgroup/remove-unecessary-examples
+a0ef75f19381e01521d2f7ae1147702f66827e25 Remove examples for pure GPIO and spheron, also remove testing examples for Salesforce connection and object.
+26b92987a8d7c87aa350bf4c2b71e26cb8481750 Improve specs for Logger
+cb35cf27a5442818b7c659bdda1c4c5688576fa5 Improve specs for Driver class
+0a631513ee126b25d14be2051726ea1e5deaa178 Improve specs for Cylon.Adaptor class
+fd91dd751266e9c4b5990396fc96acc96c24d705 Bump test dependency versions
+091160a443eed8097e3bab53c01b7217b4fd53eb Merge pull request #139 from hybridgroup/remove-port
+e4c43c0cd5444fb2def8e8de840cb61052883e99 Remove Port class
+70dde8148c6ea0858b451336ddfb042c2c31666a Refactor and clean up Cylon.IO.DigitalPin class
+e7f96b8a6cf22dfcf91aae30fe00f2488e0bd19d Refactor and improve tests for Cylon.IO.DigitalPin
+5a719fb5e919863d8eb23b2cfc76cd4e89692cf4 Remove spark_blink example, it lives in cylon-spark
+0d5ac27e5aec7c9ee3ac821f33697951e74201cb Prep for release
+1ee0b8b87a4f45a3e4048d796220667c789a057e Ensure toScale stays within defined range
+bb9838e3e632b5033e72571c59f298469243bb87 Merge pull request #134 from hybridgroup/halt
+f9537d9af88081e7264a6830246ce48782411c70 Rename #stop to #halt to avoid potential conflicts
+20c59f150eb29cbba261622083119426f781404e Merge pull request #133 from hybridgroup/utils-tests
+0ebd4153d446cbfe70b2e9eef3da044d46527d2e Improve/expand test coverage for utils
+4c464f0d88d4b991914289a05e609ff17ae798de Remove Math.ceil from #toScale, JS has no integers/floats anyways
+3c6696a78fe9a17f9dc9b53558d65ccd627bbaae Reorganize Utils for easier testing
+56b66bded4b2ee47b445563e9444e3b09a03cb61 Add/improve specs for Connection class
+0f2ae42452b7e23b8a6fb17d71228bb239a082da Merge pull request #132 from hybridgroup/cylon-specs
+cbbaa10c52f50003d4e8727c3c00ace596b114ed Add specs for Cylon#stop
+a112a5bedc74a303355d0674bc09fdc1f2ef17f6 Add specs for Cylon#start
+a1b230c62dc524ac367b6fe958d98509eab3484a Added specs for Cylon#findRobotConnection
+691547a97fe26a14ee53cf086cd84bf9ee570c84 Add specs for Cylon#findRobotDevice
+56768e1c86eb90877dc0c89c99fb0ee65655bd4b Merge branch 'master' into cylon-specs
+c0c4ce6958f335895e889fd6ddcc3bc1df39fdec Small changes to appease JSHint
+26008f3ee147986e5e32466dead8144ae2781cee Merge pull request #131 from hybridgroup/cli-commands-refactor
+263a1e502480cbec20b899314a113c248aa979f8 Start on improved Cylon specs
+dc22164c0f8ab23fe8629bec909ddd3f321ee9a0 Prettyfy.
+eae946e41fb204387ad97173cbf1d358fb6b2090 Remove logging.
+7412977d476658f24105972e90caef41d6486d6e Remove logging
+541c7402ef1a9098d2cecc20928e3ea06585c82d Refactoring cli commands to make them more friendly and pretty.
+ea83c58097632a8db39f15f154d74e8437c80aa2 Merge pull request #129 from hybridgroup/multi-arduino-skynet
+f761c22849e9f41388f03834da924e3252d12eaf Rename arduinos and skynet connections examples.
+57066668ab2a2e0aed467723716fd9295dc3bbe6 Remove unnecessary example for pure-skynet and remove log messages from basestar.
+490a74d00b2de75ff129ab4300c746901f9fbdcd Add examples for multiple arduinos and multiple skynet connections.
+63d907daf33494f67a8decc12b1c5f167d2f8ee6 Remove ARDrone examples
+6d843f7097401fb6353b1061c768280a3e30104a Remove Firmata examples
+f3135bfd2c028f2da37a15b8570b481a0506d449 Remove OpenCV examples
+86ba2698eaf822107411af7e95b4e6d4b986d67f WIP on multi skynet connections.
+267c9fc7f665374e3999edf9b8be5efe1c1d1ebc Remove joystick-specific examples
+5527a79858088442129c09f9fa818ee7f67cac77 Remove raspi examples
+0859cd12aaefb2b6943ebae202ec731a0f3a2cfb Remove Beaglebone-specific examples
+2cf65b8651d318982d1c5646824b977b1d7eebc7 Remove sphero-specific examples
+4a3fdf7fec47ee0d3aa7165a6f99ac51989d7636 WIP on multipoe arduino controlled by skynet.
+9c5d1c34962fe056d5953e324af960b612dcfe3c Refactor API configuration method
+5120c35f7cbc3aae9cd87cfb3101c8861878870c Provide backing variables instead of functions
+20a67ef590230bb3c6e5acc1b2058964496b9824 Add and improve Robot tests
+ab23b997efdc57d1f895a3a17d7af249981e3894 Update to 0.11.0
+f1d92f4c282a93c82cbc0e8bc8546784ddfd119d Add Rapiro example
+d702d1077afc364561f735eef46e273dba10d031 Merge pull request #128 from hybridgroup/add-stop-to-connection
+d54c9419af99cd9c63a8bb0021e1feb4fe0a2db0 Add a stop function to the base connection class.
+4c5937695b826519cfaf49f18ad352f3f65c77d3 Add Cylon-provided globals to generated .jshintrc files
+89f0e43570c6c03c7acd6090f7176815cded2d2f Clean up Windows readline-SIGINT support
+d8de60a02d070bf8ab1e80c778246148ef4f1904 Clean up var declarations in robot.js
+d12adc64b1c976fde19825331a29a9d423f85bd1 Clarify license year in generated adaptors
+707703cae29909e4fe46777817389d33da6da42c Improve Device specs
+79ff3a1233bec76328c48590f955661a9b32e21a Clean up Connection and Device classes
+a88fe526f4c374c73ed09c410d623894007357fd Add tests for Connection#data
+1de8ef594d59e46cc6582523c2383d486335364f Merge pull request #127 from skynetim/master
+d44b81681f45e4bb9c6105d3e236c9e717442d1a skynet examples updated to reflect change in skynet.im messaging format
+182e8c3ee8248412e1957dccba21619ca72b8c45 Make sure connection's port valid before adaptor init
+e6f6049e1e4ff275c8122d0903c39341ad315b3c Merge pull request #126 from hybridgroup/robot-refactors
+a1d678b7e6c638b520ab96298a5b81dfdc1f2a4d Merge branch 'master' into robot-refactors
+ef3aaf6591dfa9096c76a47984975369b395982e Clean up initialization methods for adaptors/drivers
+5650ce1d6075ae67e55a2c45cc4d530c1b11c342 Clean up starter and #stop functions
+862a3702b706d2dbe0185be4a1999d9ca2c83ae8 Refactor device/connection initialization methods
+d9ef9046e974df08b97458ecef8ebebc57fec504 Add specs for #data method
+d1a3a9f38c3ba36fd84cdc07e3858968b1c16e14 Merge pull request #125 from hybridgroup/cli-commands-hotfix
+b059d765ec41c0a3fa97ccb1bef721d44ef28fc5 Remove unnecessary requrie 'fs'.
+3831c8ab50ffabad840bf8cbaaa695209650e271 Fixes issue with only the last external command being registered.
+89baebd3c12bdbd31a6f486890e46531fe789f09 Refactor #data method
+1ee35f148722b3173e15d8c2e5648836d4527c5e Clean up constructor
+6e3923320e96ca7d24fbeae14f4eacdacedd5b07 Use Ruby formatter for CoffeeScript examples
+f307aad0cd64632433cbce0e035d783e07a74377 Add global.bind method and tests
+a2ee95e5f0a0297cdd7558283b3e4a32788b3710 Add some globals to .jshintrc
+3e8c09aaa59b096467e04001180d7f84e142e9c3 Remove matchdep from package.json
+575d13c417f3291f6a8a571afb11789f9561ba8c Add jslint to devDependencies
+3a46ff78486d11a33ec5859bb664f3c9223cd806 Minor cleanups in basestar.js
+2083af414b98dcf804a22aeb2796324d6e7c43ff Merge pull request #124 from hybridgroup/event-definition-shortcut
+84916f69e3acb477ab2515213cb1518397f1af63 Add shortcut for defining adaptor/driver events
+473e0ab08fc6f0d77912efdecc90ab36851192f9 Remove 'source loading:' log messages from tests
+09b30bbffae6cd3894fd120198e0b764dfa263be Merge pull request #123 from hybridgroup/globule-register-cmds
+9c9407b9fa0466feb3b6e937ffe32abbaca9cc9e Adding globule dependency, used in cylon CLI commands.
+8409661179e28ef550290b687d0864eef7ae9220 Remove old registering process.
+604f57afd950873abace3cfca3f5a16b27ae205a WIP on updating register commands to use globule.
+520c523971a73fbb0bc36b77859da57f7d9c66dd Refactor Basestar#defineEvent
+84f06afa5b8a3071c947e29222524b93bd8a9ecb Add specs for event proxying
+c70ed66b77365fdb471fc55e1ab0ff84a31f0808 Clean up Basestar specs
+cdd3f3310ad7ee52a37bdaacd85e3faf02e275b3 Remove trailing whitespace
+7e3e24f84dc770c194ce46a407bac5fe72abeecd Remove the last of the CoffeeScript source
+d70785328f2d6292b86618440eb9ba44a5abfede Merge pull request #122 from hybridgroup/pure-js-comments
+933c5d26609b84f2c206c2606c70cdcbeae94bf2 210 fix merge files andrew :)
+97e9cd0997e07a3822c063f54c4a243e28faf332 Merge branch 'pure-js' of github.com:hybridgroup/cylon into pure-js-comments
+0067f33505aaebc8fac5a3d293d093b0d7781357 210 fix merge files
+9ef38a6a021bc7800a823a9264d8fd45dddadc78 Remove vestigal CoffeeScript tests
+32f6a592ad99cce088cdcd85d80ff1f2727bddb8 Refactor remaining tests
+642c5c8b1ee2c1d7742bcbc4125315ffac91b361 210 need fix merge
+86443992769d89408e167269e20db7c0c689df0b 210 comments JS
+e8b65d5f4c381869f2a8602a8003202048ec8d9d Why this file here?
+204bf89685bbec8d1e46a8eb5f6c038f1ae4aaea Remove trailing whitespace
+f6fda0efbc23ca10460afefc4921121792b62fa2 Refactor tests for connection & cylon
+df82352a96852297964e230a70070635865239e0 Refactor cylon.js
+bbf4e413d899c1f584854861db4355071e1c4d0d Refactor utils.js
+599a5bb28810d6356eb8fc3e81dc0e67b527ea2e Refactor logger.js
+82effb6b64e9dfcdc2eb8a9910e9ecfdb19257d6 Merge pull request #121 from hybridgroup/pure-js-cli
+4cc55975394929a369e5f2bf7aa2715515d67302 Updated adaptors route to point to lib instead of src.
+86bd9c5ea7056e81181e380e9574888c17834e37 Removed git cli-commands folder.
+655e7c56130ff5b5334b46945088c53df657861a WIP on migrating cylon-cli to pure js.
+f916b38b09a98aa6d0ee289c3db67d9b66179569 Merge pull request #120 from hybridgroup/pure-js-core
+8b5ae2e6a19fc29048488d339c71bb9394be845f Refactor adaptor & basestar tests to cleaner pure JS style
+3694361eeafe329976c7e470680b9835303fd501 Add comments to adaptor functions
+0113091f95a87c95e2a946581da92d07b76b5670 Refactor dogotal pin to pure JS style
+452f07d4ab618fe9b467ab7645156b5e2924faf4 Refactor port & robot to pure JS style
+ddc24eeca91e87252eada1469484b9e9110106c8 Update generator to create pure-JS adaptors
+ce8107d607df1cd23c5fc4df1e346c6d0eb4303e Move generators from src to lib
+c28baa8eeb9050c63e997f9d2ec82d3c5ef56c94 Refactor api, basestar & config to pure JS style
+112c8d42ca7032e543ae5a5d492f7f01288809c4 Merge pull request #119 from hybridgroup/pure-js-generator
+cc5d3e3335ce4036705fc54a29ef6bbe52ac396d Update generator to create pure-JS adaptors
+30228c7f3caeb05e642b5eb7d2c98ef2572dd0b7 Refactor connection & device to pure JS style
+610a6fdf9126c9087b481214bc90ce0e653307f8 Move generators from src to lib
+04a32e522feb047748c244b7f2e1bb545e9fd2be Merge branch 'pure-js' into pure-js-core
+b056ee478dd6f4c6297f06f5e12c30f344d4ca39 Modify test harness to show we're in cylon-core
+c3a87320fd77e2f6092fa08aed92add7f53bc548 Add back matchdep, will use for loading subcommands
+d146c69da26ff22be8e3337b8816c0a0329a91f3 Remove Gruntfile
+8b88e5dc10973daaa62b6b9ea37e248ddd5b2607 Refactor adaptor & driver to pure JS style
+74efee0809f2e8921f1ccd260b50b8e3ff9d0cbe Use make for building pure-js
+1a63cefd60752e379d9a3f0f713ad6e84a2e2be1 Make tests all green, now the real work begins
+b27756abfcc29a4aa969b6b12fec609bba10d8b1 WIP on pure JS revamp
+b614d8565021aa895fd8b6504a94920be85592ed Remove grunt coffee reference from README
+981760bf1aeec75e00deb208fb6fb5e69880a1b4 Merge pull request #118 from hybridgroup/upd-opencv-examples
+bdb0226bed542c0293f9f79479ebc73bb21e4da0 Fixed typos and updated examples comments and instructions.
+e6b174ccde40b48b1229d6d90bb8e26408098778 Remove unnecessary utility functions
+768e45390ccb69af2d11938f6f72c430cb57e383 Update to 0.10.4
+79b5e9947e2c6a7333537f83ee1b378dd34397e8 Fix bug with subclass helper
+7aa0bf0dfdd6dfabc8522a3c7509582964374275 Merge pull request #116 from hybridgroup/coffeescript-utils
+08c7da93bc25d53ad4fc194fcc71bbea7079df07 Add CoffeeScript convenience methods
+0fb3d27a0dd3dec44b4e24264c14f75d612ac9af Switch to built-ins for testing booleans
+fbd558183ba514129dc959794ffeb3a9922ccca4 Last cleanup of example
+2d507fe7c4bd314d8c046f8df869b01169639d1a DRY up example a little
+10c5e12f8d6a8633b1e8329f7a0a8a089c40e9bc Add example(s) for Leap Motion controlled LED via Skynet
+af7207dad3b7938938bb8f49db83b467383133fa Merge pull request #115 from hybridgroup/add-litcoffee
+4a84b4f15bc6da8fe49cf9ed2f22001eb4056b56 Merge branch 'master' of github.com:hybridgroup/cylon into add-litcoffee
+29101a289081f61fb062a0b7c2f86ae1cd482e95 178 add litcoffee and js
+07a7a2c13797ce2bac118ab3cd9a34e24e0ed8d5 keyboard lit
+4ab1e0c8c4e756bfb6b699868dcb9c7864d9cbda Bump version to 0.10.3
+d554f38d08795bec71026db4986f4a4ab804a641 Revert "Remove unnecessary requires from cylon.coffee"
+f487dbe69823c099e2b9875914427985e9dd12d0 Remove commented-out method
+fbb8643cad98643b0d2b86c946bff9ff5f2fedbc cattoy
+55a774b7d6308ae6ae677d9784a9580e328dc915 Update to 0.10.2
+277643bded1cb9f6f3c4b0c51c4f864c54c46b98 Add skynet examples
+e2fa83196d98ca02cd5018f520931c597d110ec2 Add named robot object vars for connections as well as devices
+2ad461f3c6cfb551180d4a7a5dcb3023e8c4fdab New tests for #proxyTestStubs global function
+2b79e04e140aa61d7817313fd541b2cbb9499165 Merge pull request #109 from hybridgroup/config-module
+bb740c5cc2457176b1ff5a9708315f150691e362 Add constantly alias for repeated async loops
+4a85fa7a7a971714736981bf5be904e1d50d97c4 Config -> CylonConfig
+e74bc148d9e3c691f9ff004deaba00f4575189e1 Remove unnecessary requires from cylon.coffee
+d194ca76d3d1dcbe5ac80d6de23c1fb4339d2543 Add Config module to load config from env
+e0f424630646013b29fa915afdfcc990544227bd Update to 0.10.1
+308ffb7fad30f26023d6868a54fdb11c2bc2294e Add cattoy example
+1eb05c78fe8cbf1bf413cd91fba764b9df3da366 Merge pull request #106 from hybridgroup/tdr
+f3da2c4e70983f969f9f18a97de6488ccfc859fe DRY up TestAdaptor and TestDriver classes
+cebb157704af8efe9f20b76b9b0a816119235cf6 Add working event and status to robot
+e59f8f23cce96aa07ca921830f9937eca5a30910 Fix tabs spaces... editor gone mad
+81bdb639c5bd360e75954ab77f35cfb35b69fbf0 Working adaptor and driver stubs for test driven robotics
+44eae49422b6107470efd0b67a5b5151b2bbfb05 WIP on TDR test stubs
+02d0e138bb3c15c261386ddabbc8fc8facc5a72e Add CYLON_TEST mode for TDR
+387aaa618c0f74de7fd932631304fe2133e00ae2 Merge pull request #103 from hybridgroup/bluetooth-scan-cmd
+3d4ccfb1735d6ec1178ddb77cfde4a0516e6bc48 Added new 'cylon bluetooth scan' command.
+80a3e915b5c30263e3361145106361f7e6c81cd6 Fixes mispelling of establishes.
+515ffc38f9ce459e3fefc5f447675c7d0b8567a6 Add tessel hardware property to package.json
+fe93b59d1e3d75c8b12fa672d8ae814785829a05 Bump Robeaux dependency to 0.0.4
+e3bf3092a5ebaf2312790cb71ecc9f77fba7243c Update to version 0.10.0
+e55935f41aa7468067e15712cca4a8d014370f23 Bump Robeaux version to 0.0.3
+75a98854c795011d66b8ce202fb64bc1778d8ce7 Tidy up CLI classes/modules
+f413e13088e4e8c540a16d0eaaecdf5d001d61ab Refer to new name for Cylon.Process
+01a037cd79f346b5d6f847fc081b42a398ab0ae3 Merge pull request #92 from hybridgroup/caffeinated-cli-cmds
+6a83019effdc01278800b946a99e45b6a735138e Add example of Leap Motion combined with Arduino
+6360ed7c0906898c43ec5ebc42de06716cbe3b7b Add examples for MPL115A2
+e7d7a6069127c79b45f2dd84f998f5966f86aa30 Removed all js files and updated CylonProcess to just Cylon.Process.
+60e3ff2bb3685d03037417cdab5d81c1e249b183 Changed commands to use coffee by default and added new cylon-process class.
+2f7719cf2820e41b60944e65b2abaede972a4aba Merge pull request #90 from hybridgroup/change-sys-print
+2fb2aeb953c9c15fa6ecd6a66b5becda691bc71e Changes sys.print for console.log
+ac901599e8924456af134a58fd95eea4dad08bf2 Merge pull request #88 from hybridgroup/134-fix-ext-cmds-reg
+8eef83b3af1206380a4bc5458b7f7a8e5271a474 Remove unnecessary lines and correct variable scope
+3dd0870ff67a26fa4130e4bd10282a12a1f02cc1 Remove debug comments.
+13b185c23e906d8e5b6705ccc3ccfbfff1183015 Fixes registration of external commands.
+f3cb8133ff077ce895560595a921dc94a0198ceb Serve Robeaux correctly
+3dde16d659b6a456f363d5a8b342331258c0f517 Merge pull request #86 from hybridgroup/112-firmata-command
+66b0a29292163744639801dec0dd469270126962 Removed firmata commands from cylon and update command list.
+678cda543defe7c08f7a7dc49084bd9f0d276ccf Fixed mac serial port address issue.
+73fe96ea9c53d7dde28698a69b7973abddd567b0 WIP on adding upload firmata command to cylon.
+63b3e217a4f872463f1987768d6a237b2957f6c0 Merge pull request #85 from hybridgroup/120-scan-cmd
+7eb6235239ff93e2c721307cd2670945c9541b05 Change all connect, pair and unpair as bluetooth subcommands.
+82627351e89ee9a6b9daee588c0b03668a811d41 Updated commands to connect serial and bluetooth pair|unpair. Also updated connect serial child process to inherit stdio pipes.
+01d68bd74e72b328fa836b0dbb781fac33b33d66 Updated scan serial commands and connect-to-serial description.
+92c012a819865ed48a521f8dd3d5e71895e906d4 Github has eliminated nodei.co badges as part of their own analytics tracking
+0dcc59b4cb6de350e8d16e51eeed42ac016a4b7d Copy sleep method from johnny-five cause sometimes you just need a break
+3d2895e9eb527a159db2dd3644d469320a23b550 Added new pari, unpair, connect-to-serial commands and updated standard IO pipes when executing interacting commands.
+b59deb26e83abb239a072b1c58a0ea9348d3eee6 Removed scan command from commands list.
+de75238c7d2840fe93544ff6533c1d7f30d6150f Removed tmp linux commands example file.
+e2ee760663423d8129420e114bddf72cb0e36491 WIP on commands changes.
+c67076bc0bbb061544fa154e120c02189b78c1e3 Finish correcting TomDoc for utils
+caa41a545c45e895741d4f689ac47731b9439603 Correct TomDoc in utils.coffee
+957419cc4a9e9a2292f6b95ead619d3de9d44841 Add digispark blink example in coffeescript
+459dbc15dbd4f581f9f16bcfb228cded87dcd841 Add digispark to readme
+6e38eebdcbe9e5a33135ae3922f734f557221fcc Update robeaux reference
+3fde2c9a36edb41afcb771538cbf6844234c799d Fix bugs and updated feedback messages.
+1e22a3e63b8d8f99eab0967031efc00e8a149022 WIP on scan command.
+24d2c6fc531074bbaaa63705df73a2be1fbb916d Merge pull request #83 from hybridgroup/roboux
+6635af0bfcb8aaf474fec94fd586a40297314b86 Add roboux to dependencies, and direct API to it
+b1666e090aaa79ee459518ba6117f3d73650a0c1 Remove existing Angular app
+6400afdc4d2e072e4ecf97805ada7d4580260b91 Remove interpolation
+aedec4e62e98f46032755112651f2701e3dcf994 Add example using DualShock 3 Controller
+851d7f903209fd663ed2e3ccf9c9d4d9c45a8e42 Add example using Xbox 360 Controller
+f174386672b4462c512cc1846f4b0d4a0f226e0f Fix cylon command issue if no node_modules directory is present
+eced9ab6fe295acf8b9a27e3c34e240d29f59182 Merge pull request #80 from hybridgroup/90-i2c-firmata
+3f235a14d36be51aec1079d2159a9116c91a13ed Updated blinkm examples.
+16bdfaf1416fbd165f74e690519c909cba6fd6c5 Added updated example for blinkm driver using firmata on arduino.
+0dbf703ed990a40f4eb9259a1f83c3d379d036b7 Remove duplicated example for blinkm in raspi.
+f1c5bbbe1f277d6fcd7dfea97c2135e9587c8e0a Merge pull request #79 from hybridgroup/update-bbb-examples
+a32b45d580a178c3de1e235dd34bcb64cdc3a739 Updated bbb examples.
+390aef964d8acc6d4ffb451ac22d43756452179c Merge pull request #78 from hybridgroup/servo-angle-safety
+a5e727430df134ba14713c489a6255547cfe2e4b Updated litcoffee example with correct range params.
+e549f6e0a693bfad48486365e41d29299f119026 Updated servo examples to include the new optional range param.
+dcec9e0ffee3eb134eca4f8a0f214e5b69fe3e93 Clear up param type naming
+a6ac9782bf17aac1e9b35817051b26c72bf6b176 Merge pull request #77 from hybridgroup/api-command-fixes
+edcaeac5b0e1753a15954f2c2aae43d0704e8e4f Trim down long lines
+9735d61560a20761412e0c10dc6d4d8a3c3cc178 Remove unnecessary directive
+4e92c9f7dc02936416e9bbf081799a1d3c302b63 Remove focus outline on param text inputs
+21c7eac304d77c7e1b35cf07e5c2659f2ea17010 Clean up HTML
+81f5eb9aa25b8c483ffbd6f01639922d55873a79 General cleanup to ng app
+83e718c3a0c98b9ff85fc7230d9e279145356798 Correct API and NG app for issuing commands
+ece6f37fbe9f9aae0d93dc2484784347e2ecc048 Add function to parse command params
+46e24a70a89b2e423ce2cf71a8775511f0430512 Small cleanups and additional comments
+ca80791e96a6e9511a8793458dde439d9c5c6030 Update 0.9.2
+d5d228e2d686a600a107e2820bf8e79d3744586f Remove node 0.8 from travis build
+b684700f78ff2c057a7aec6c32ea63e2054eae22 Update README with new platforms
+9cc11a817de1c84404d26a647ec707c67dbe63dd Update to 0.9.1
+773cc9b39e0f035e28b2dba2b2cecef40735127a Update logo image location to match new site structure
+012730596ce7741450224b6b9b4a387dd8ca96f5 Updates for version 0.9.0
+d59d151767fc76818f953ac0aab450f2d4a64411 Merge pull request #74 from hybridgroup/opencv-examples
+50fea68ad2c2bf31245d26df6b71c8e9bfcd35f9 Remove duplicated example.
+323e443c9273f92c79a35c64a8a1b0b0273c5da1 Added examples for opencv adaptor and drivers.
+23f1c0da4805d1c2b0b5429773c5317a1e27999f Allow for passing arguments to subcommands
+17154d8d04d1e5bc7c98bb187ad4964b2a007d4e Merge pull request #71 from hybridgroup/subcommands
+8e6c9193c3e072842ecff0c52a497122fb9670ea Load commands from cylon modules, if they're present
+8956d2f55d9dae073177bce8209c090b99e975c3 Merge pull request #69 from hybridgroup/generator-update
+9382742f206c856e3561d15ff37eaa2cab500d20 Slight restructuring of coffeescript example in README
+32126d341cd16fed9aeefad5d93d8bed78419ccb Correct templating in dist file
+8e86b76a713acb3f55be25ad685ee78c46776fed Correctly template everything out
+d44856b33305e654e82bdbbc2e23c174a22debb1 Add more generated README content
+baaba16cdbb98daaaee8a12ed753ecbd78f191df Add new base specs for adaptor and driver classes
+038bd5d3a7713c62347d055aab02391e525e302f 98-keyboard-examples
+90d9cf849b98b0935ddc1e4ae734ff5398f4713a 98-keyboard-README
+fd22a481c09d70a5a9b7943881696fe5642c1ee0 Properly namespace module tests
+19081cb795440b277082eb8d3789504b0ca9356d Add base adaptor and driver classes
+8062a25fd2b222508f89b78312083b8b3e19798b Update copyright year
+88ef361d0d2cbe449025c83c5a6ff1ba8e6d988c Add helpful range conversion functions
+27554b81996fba324ff29e727a5ab39071b45839 Merge pull request #67 from hybridgroup/api-interface
+ad5bd7337910878440b0523c58c9b61f840f863b Rename server to Cylon.ApiServer
+f4cb3d61c9d38e4629f34a8b89b6121851e19430 CSS updates for dropdown command menu
+e4e9742e0e0fb43279acd8d02188cceecbd18652 Merge branch 'master' into api-interface
+3d1c8cf5ad99390cdaea80e24331a98ab533457e Fix passing params to API server
+fbe3f0add09efa1c39913b24542d575c305486cf Remove warning from deprecated parser, and correct server title display in logger
+44c05a992b7278ef79a49a01ea5347c493ab2c24 Class name clash was messing with the API Server
+e979ebb9437ea1688565e771c39421d27693999b Merge pull request #66 from hybridgroup/sigterm
+8fc5a7f1bd8544e1f8cb81313b5c1feef903df8b Switch from process.exit() to process.kill()
+f3ccaefd016bb6f0380034b4d70499feb216b96a Update copyright year in readme
+09ff40df646e195df8d7805625e49766838e2bb7 Small CSS updates
+063d4b4f5991736013d873b345a9923b50a76364 Additional changes and CSS for device pages
+0e438025bacf4e9570db4b83749824665ff48693 Bootstrap updates and styles for robots
+150c7f1022f226aa353966aff0fe3a0d2c54acee Add navigation bar
+df69e4dcac7c27ccc98f41b654d0bdcf664ec39c Add <link> tag for Font-Awesome
+6283cfae7eb937e9080af8c42f33c41625653d82 Add Angular app logic
+c1c9e24f55df4be116afe22ae375930964ee9f1d Correct URLs for Font-Awesome
+11814e21092b77a5033421360f663fdcc4843074 Add ngRoute for Angular routing
+bb34efb06ab9434595ec1b29dfa5b313e20e8cbb Add font-awesome for Bootstrap
+9f24452211a664b0813164bac37f6562a238e12c Require Bootstrap JS
+30cf20049c88188cdc1148dc9df7365874e82136 Examples should use console.log instead of Logger
+9065a319f625a1a62ada3cde55d8b25a5d330e12 Print timestamp and log level when using Logger
+879fbffb660e982a9c32f2481798f00aeba5abdb Compile a missing previous API change
+31053d3ccf7632dc87d230756da085d9fc97803a Add basic index.html page
+83074612f59d8cacbc34d22f04d68b0a8ffe09e2 Add Angular
+198cd09cc1b1bd40723c83e127fb7ec186e41a81 Add Bootstrap
+3b776df4240a9842aeea6f99cf3c3b12cd384bff Add jQuery
+31d8f792928bcc04cdbb12738e0eabdfff2d4396 Serve static files from API dir
+aa16f56462edf194282737d67d117f67a5bbf726 Cleaning up API
+c830e70b4a52bdfb2f3fc100eda4ba1de3ef5923 Finish with DigitalPin specs
+93ba79977de5b573bda373012ba226ebed83c954 Start on some DigitalPin tests
+b89d2eb821018bb4270e4923e5abbfe3a54bb627 Merge pull request #65 from hybridgroup/89-i2c-support
+96160c79b2ec86a0e1421270a0c05458c6f9c508 Update example
+12ca276ace8271790d2b49233b9ae091328bc230 Remove pin from example.
+74fb4cee76ee2e6087b214679ea0744aae8bd96a Fixes require isse for new example location.
+2fafe60fa584cf923b7eae140f6414cced31fab7 Updated raspi_i2c_blink m example and moved to new folder.
+4e4cc6bbdb2824d4231975808c14a18cd9a7e18b Fixed incorrect driver in example for raspi blinkm.
+c5302fb0ec2e65d7737070d944f0c3bea95e28b9 Add Twitter info to README
+fa26ceb117cef8802dba99cf9dfcc86e7c0618bb Correct typos and errors in README
+9043362769630614a5e2495c8ff9c0f8a5822ce7 A few tweaks to contribution section
+2ba4e0bdb3ddc5a4bd287ee3f4a137a0ed17d042 update contributing section of the README
+7a86e72296561d5e2fcbefd76acef363be35951e Added example for blinkm in raspi.
+25a4fc52f1090779da5f0a4fb085f79695ccb9cb Merge pull request #63 from hybridgroup/72-i2c-support
+c357b646dd06994591f94db285dba78895a60d33 Merge branch 'master' into 72-i2c-support
+800d8c8b6ef24fa4ed58da9d4d372f0563c6e41a Merge pull request #64 from hybridgroup/21-beaglebone-adaptor-servo
+336b11a8d45d03801f31c353ab249fbe1aaf1c95 Added comments and safety instructions to servo example.
+a36869052e70c3fb7c6686bdc31b17e9e54d3fe2 Fixed indentation.
+40e03ce29af33c5be1cd9242eddf783f8a83f9eb Remove all examples and updated blink m example.
+bb3e7efa2e3cd6993b1111379cc8fb589b81cdca Added new beaglebone folder for examples. Updated blinkm example.
+dbcc05a13c09a9c227b3004f808c3c6ea8e5e189 Add tests for Driver class
+fef740533cbbd0e682fd06cfa9516ae9248dd155 Add tests for Adaptor class
+e2e4957f324fb7ea236483fabbc0cfac92358a6b Added example for i2c using blinkm.
+54894ac05a94beb683836ddffcddda6da3e956c5 Add info for release 0.8.0
+e4fb81b8daf8385cc4dceecf43ca89bc295de5d2 Match the new adaptor name in generated files
+b32dcc7337fab0012b27d01b504fe70a2b64510b Remove unnecessary generator components
+897efc4bf8248e5e2916ba242c97a7c42395d46c Merge pull request #60 from hybridgroup/derived-adaptors-and-drivers
+6c1e591f843bd87fe8de2d3bbc96761c3984be8f Make even shorter syntax by removing redundant Adaptors and Drivers
+ed50c385c4eb424d0a2cb116e972b539078bf247 Removing extraneous things from Adaptor/Driver
+c83ce83788f1dafdc4e37794fa78889a637d6992 Default opts is an empty hash
+a341fa4f62f96cee2620e96fa9c2ed12416fd315 Working refactor of Adaptor/Driver base classes
+4cb8742fc33734127b25a8f570eb6ffff4d4e90e WIP on refactoring adaptor/driver base classes
+4a058742c46a78abd22219b26630d164c3c02a3b Adaptors and Drivers derive from Basestar
+8f40826a345579264eb663565ecf1a7510914219 Remaining moves and refactoring for Adaptor/Driver base classes
+0e874c52d5c03be76c351645a68e2b2ab69be880 Refactoring Adaptor and Driver into proper base classes
+3f6b5cfd416e0dd8fe0846a0438f9cc266e07bbf Fix incorrect require.
+3c1efe6f32b0a54be4e667cb57b3ff62b973df0f Update the pin for the correct bbb header.
+4e0a6e16724a224f1b952676c70875d252c92f97 Added example for beaglebone servo.
+1833c304cd9d5a1b4c2a53908b335861981b46dd Remove parens and add pending tests to digital-pin
+13f1f808319ba0fedcbad69d15adf9e9e4fba259 Merge pull request #54 from hybridgroup/21-beaglebone-adaptor
+2e6d7fb56b98122ac156da6f95319cfb31c6a0f9 Merge pull request #55 from hybridgroup/master-README-review
+f1fea363b5ce8ea9d1a8fbdf4e5ba1c50fb0b041 Add Robot#toString() method
+d7f189222e6825a1c3490fd08be58fb222a71e0a Added example for PWM in beaglebone.
+2e8b052452cfcd9400cc7c1c2a2a7df47edfb47a Add example for Spark Core - blinking
+aefd1468bcb48170a086877c185b058ca19814b5 74-cylon-readme-fix-url
+ae3ddf6045c2378b26e07ace063fba6738098dbb 74-cylon-readme-improvements
+e6e448fa5354882080c94d17d9878cfd57324ab3 Update README
+3a251af404f88bbab04ba36dc50be9b94382dd5b Update to 0.7.0
+96d3b15bbce9976bb9cc0e4705e694abc1c6e38b Add Beaglebone and Spark to README
+a6b442116f14d8b6af9025d362760aac86fbfbd0 Merge pull request #52 from hybridgroup/21-beaglebone-adaptor
+a81fd9b9b4f0586a0d488ca738dd5111a138d45c added new push button example for beaglebone.
+5cd70696f7361cfb374133dff56b740e5866a06e Fix indentation of cli output
+4e17d14991e8ca259eb9a05ab8f1ab43c9472116 README notes on generator/CLI
+0d38a2bd5505fbddfaa9147ac3d42bd200820aae Added new beaglebone blink example.
+a6bb6649fb8d7774a0f2018bcb9bf7a3f2c388f6 Merge pull request #51 from hybridgroup/generator
+22bf824273f1e28c6141694be3962291439d5bf9 Update GPIO_DIRECTION constants.
+9a7ea9cf3b6f14e884f4b4fb1eff345dc80e8dd8 Correct name/license details in source files
+286d256ce84f4a755d71a67881af96fbc38df5dc Remove incorrect duplication of 'cylon-'
+d1764bf078f4293070b0a3e9b78006eb551d23ce Additional files to be generated for new modules
+519ce65d0139fb2cc0fda8abf7f7bfbae28b2e8e Templating for generating adaptors in place
+40434a0eb54686113931669ed2dcc65f9759fc45 Basic adaptor generation
+0608e53991c8a179b44ca939d28a803dfd725b98 Merge pull request #49 from hybridgroup/cylonjs-README-doc-master
+a12916072f8768d8ddf7cb14282434931f8faeca 70-README-doc-master
+3c88094b0a21297bd44fee6c6a6d1d356620ce7a Merge pull request #45 from hybridgroup/literate
+b7e4d4b489d0c6ac85076c83cfabb33330b6e5c7 Organization of new examples and literate/js versions of each
+2c52db8086c084078fa35ff05ec9300502eb36b9 Merge branch 'master' into literate
+791b301eda3099e4b16eb0c383875990b942a036 Literate CoffeeScript version of sphero_messages example
+8af9a624b0a4fcea2f8eb1b97b1089ea32282178 Literate CoffeeScript version of sphero_color example
+ab547902b48e948755a230e6cf751d4fc127dfae Literate CoffeeScript version of sphero_collision example
+671e39598437627287aef98edaa3b46a3e791e60 Crazyflies
+068f6bd676cc4833af3d9faa7abe962feceb3ca3 Merge pull request #44 from hybridgroup/20-raspi-adaptor
+da8e56ef9a3d83c815e17f5baac5de023994335d Literate CoffeeScript version of sphero example
+61efedb2515467159f605ca4400072bdfff91919 Literate CoffeeScript version of servo example
+9733a35f9a37cb7e503908de4a84abfa34db000e Literate CoffeeScript version of robot_commands example
+0061b544121626599cb0ffb4fba498250af9047b Add back accidentally-removed API functionality
+8f7e1d0193a656cbfd28ded3abcaacc574f86ac8 Updated servo examples to use a limit range of motion instead of full 180.
+28a1a807d1c477857bee90e19c631f0a48ba646f Literate CoffeeScript version of raspi_button example
+402edc1a1e9e5a951499c2e2948d46bec5b5a355 Update digital read to parseInt buffer response.
+3ceda8f76e17114eecca09a7bba6ef6bd24310bf DigitalRead buffer data converted to string now.
+ad39fdaf8063f9776b02fc49c13d204595e9f930 Debugging digitalPin read.
+b72638de53bd48a41f2b1b7ceb01b8fa75ae4ebd Literate CoffeeScript version of raspi_blink example
+2cebd56b48cc32b6e7152a0abf04d456f42e7fed Literate CoffeeScript version of pure_spheron example
+32c05f8fc73c634849d17d06bd3ccc5a850de548 Literate CoffeeScript version of pure_gpio example
+8ccf93ce40cc36b680451b11ea8405f3feefb812 Merge master and multiple examples
+95aa7f8962bf5ccf6f3505e85ac504e131b5b854 Literate CoffeeScript version of motor example
+10736154c2467d3a8b517afe457dac19eca996a3 Literate CoffeeScript version of master example
+3928ef91d414147b7c2b5441a5ce4ff718c46edd Literate CoffeeScript version of led_brightness example
+b78a907d28c198abe3ec5283739ea12de0ee3fa7 Literate CoffeeScript version of hello example and path fix
+4d1d8fae9ad59c75a8863a83a68f9a34f77feffb Literate CoffeeScript version of drone_nav example
+e26e3f654c938001c5674281bb90fe98724900b7 Literate CoffeeScript version of drone example
+1e2527ede9e61d3064d7a5bfa9afb3a7c7b0aa9a Add Literate version of Conway example and fix bug
+e40289b3ea9d4e1a4520e05d1f6280fbe66a87af Added servo example for Raspi.
+f6a2b246d2b303efed13de38816791cf1a48190e Add more supported devices to README
+0710bc0e9c95e7186e2245de87c7eb6ab93f36f6 Update to 0.6.1
+0a6800260c3b81a5c7e10a46b5c532f6203c27c0 Merge pull request #43 from hybridgroup/20-raspi-adaptor
+d2a0bf9d3ca35d16878df2158b5ed2e948d02702 Literate coffeescript version of Button example
+1e100f47fafa10357f80945970890927c0d6d4b2 Literate coffeescript version of BlinkM example
+4e6c7504c806ec59109b4eaebb6fa92db7705cca Literate coffeescript version of Blink example
+39a0a76f54956673ea1c06f1203d7b20065a389e Literate version of API example
+681e93574b270b31f0fa758dfd824f0055bcf005 Literate Coffeescript example for Analog Sensor
+29f3e9c06d9c1812e814cade20994c92b4794a41 Update digital pin close callback param.
+64809b16cfb9672ac321bbbc67a2b0dcf22380ae Finish reorganizing existing examples
+e13e923e8cc6c8fe576f38b281d35e279faccfbd Fixes err param not being passed.
+0ebdd4fc7d9b8b0e665ccbfa5effcf314ae3796f Updated digital pin and added pwm raspi example.
+dbfa4f859e78bc16d65f08180b3cfbc00331bef5 Merge branch 'master' into literate
+0c8cb41f8f7c515f67db26740f2edaf8953d91a3 Move Travis examples into subdir
+47bc59fe3d9ee4e0d7bc8d8b31ee6c2b3c0fee4a WIP on organizing examples and making sure there are JS and CS versions of both
+d1dd1c7df2a1af8806dd6f6e45f0e8d9d20eb008 Update to version 0.6.0
+54267fd70f6fc732e53791a0fcaa4d1f56680a6c Merge pull request #42 from hybridgroup/robot_methods_in_api
+c237c00bdd1b1262e8c927a1095f6ff6476f3690 Resolve merge conflicts
+b46d4242ea9db77efaa471fa6cd1ad9206a18e45 Execute robot commands from api
+40aa152b779bf64c64a03435a85373c98dc21dd7 Replace api.litcoffee with api.coffee
+0bf4d110a51e4d86792110633b08f4ae7baf3858 Replace api.litcoffee with api.coffee
+46df7ab226177abdec9cab00646d0e2b8aa2afd6 Merge pull request #39 from hybridgroup/correct-driver-arch
+f619b5694df254ff70c9092b9818afc83d01dc9c Switch back to regular CoffeeScript for API
+299b425f940130eabe73e9ef87de1b9ef4693944 Include Firmata instructions
+8f73d7e60d56c6aafd1fed72fa5b7a007afdbb9e Merge pull request #27 from justintsmith/master
+55d4709f421ad3afbae704136a3f44bdfd8e591e Improved explanation for the example
+199a6aa59e957e96cf39f9ce227e86708b0055ec Improve readme again
+7f6d8c8b8a1ce3b9e2a463d80c591ed76cdbcf14 Showing CoffeeScript in markdown via generic code renderer
+fa99d43dae4f0b73e1f3efe936899638a580fe5c Showing CoffeeScript in markdown via javascript renderer
+9becd69ab386ad0fa0f762b5fea08355842b3f3b Add NPM badge
+58c4483cb3b994f9bb8c87372024cefd6cd88eb0 Add NPM badge
+7a179160c5fa30d968b22d82a0e51308d59aae70 Add NPM badge
+3437f4c3e888634325928087041dba8a53d02d99 Add NPM badge
+c90372001efce6be84a9ef2779bbe71281e04d94 Docs corrections
+372dde00783f4db0b5168dc2fcf71fbd7a8a6bdc Refactoring adaptor and driver initialization to simplify, and fix init overwrite error
+2bd8c54b4920909a2306c9a99039ceebe9ac1f40 WIP on tests for Basestar class
+6c8af7b9e2861776a6801746f3e49b252201d50f Remove unnecessary specs
+bbd8ed4cd8252a17d82185f6f7af2fad73e552b9 Small cleanup
+f8ca0d58310cc71cc09f7b8da6c729ed47f192d7 Remove (actually, this time) unnecessary semicolons
+db2283ee1f2fe37b8c4b77c6e2dfc35d52f30c60 Readme updates
+cb2cd02eca8b4f297de1c3d8e3604dafd7e8f6ca Clean up digital-pin
+9c381f55f273ec9eacc8b39da6c4fd4c7c7ae295 Small cleanup to utils
+15547ef21aa4ef5df84cd97884ae0d8fa2d98e02 Update examples
+3af4266fec3ce9dab899188c61d723fe3ce7cc0e Merge pull request #37 from hybridgroup/sf-example-upd
+6cf8c9b2d9c4d9a36c76bee23601c49c4fd02eac Update sphero-sf example.
+95a6f3bc471ce53bad27655816424e1f72333b18 Fixed typo in change direction method.
+f8b822e852acb19e86b749647776da769220aca0 Updated sphero salesforce example with bankruptcy and changeDirection.
+8717ea5f98a463f23270a7be3574fe97bbd16e3b Updated examples for Dreamforce 2013
+637e326c458d45e93527e3863d708e1f61dc5d9a Updated examles for salesforce.
+756f1e78183343c89b0ae3939a49b4637f3e431d Updated sphero to use bucks and charge bucks for power.
+7f6a77b22d434b61daa3452d423788b5084b7d06 Merge branch 'salesforce'
+f5ba325b351c2fb4a57d6b784e1f33966de5a040 Update version to 0.5.0
+77eaa44eadd6e5294326bcbec3b1c711773d034e Merge pull request #35 from hybridgroup/salesforce
+8f3f2c22ed2fc72ec4342d4588dab0dd85b2f033 Updated examples to include ENV vars.
+23decd6b5a12707961e4b9403cc199dff314f53f Update example
+d8083945bd4e891666e6e7b43996fdbc6499aec6 Updates to README for new platforms
+50b4ab3a061a1c8f21c9ce6bc73efd5e2a00bbf6 Update example
+6587cd146a9f8c840fd6b6345cba45f42630e887 Sphero-pebble-salesforce example working.
+19d094bb161766983c5c960059647013e51f2a02 Added adaptor extra params and updated salesforce example.
+6f2c84b5167a7e43bfadb22607ff1a590a89f789 Added example using salesforce driver and adaptor.
+027a82c17eaed69fc475c74afbf48602a8ad2ece Latest cylon example updates
+cb2ef05201737bd4d8ffdd8251b16634ded5ca63 Happy references
+b88e674178eb7a59004051c681893b93985e6c4e WIP on Sphero SF
+22fc963a44a9da91277d44e5075b50f666e6f46a WIP on SF-Cylon connection
+74160047a81c952f3b0d85c8cd2753557d7b3c03 Sf Client and S Example.
+b2900c3d245680805d0123d7087d62fc6305ee74 Merge pull request #32 from hybridgroup/literate-coffeescript
+41313329640423dd51521519cda68331e32987cc Fix variable naming error
+c28e99efeeb82d1fa78ae48fc66d4282bfbf988e Merge branch 'master' into literate-coffeescript
+5665f5b91ab7dd7f37b1f0f33fe2621eac4e08c0 Do not run travisci on site code
+d1799c176100222fd03902d5ae674cf632a7e23a Allow for any HTTP verb on device command
+87671c1427999c7eed44a6090807e1865ea00a91 Merge pull request #31 from hybridgroup/event-payload-fix
+6dd3e3384b94090762bac9b165f0b493392e207c Pass event payloads correctly in Basestar
+9811cd4b1407bb3de2d94dac8af43e2865e648e3 Merge pull request #30 from hybridgroup/digital-pin-refactor
+1f99f011bcf14da73f31465364dd01318ac1aa8b Fix typo in path call.
+2a72ebbf6f0ac64a95df3596acb8ce73c43e37c5 Merge pull request #29 from hybridgroup/20-raspi-adaptor
+0ae37390fe217de09ecb0ae2453e918eaa87001c Remove @self references in favor of just @ and fix set mode to udpate the obj attr when actually changing the mode.
+1fd0a13347811b34194fa7f24381e45ae8185395 Add missing param emitConnect.
+5fa0177d905c2b49649f6501f8135ad236c6cc98 Fx missing param in setModeCallback.
+11fda85e56cc101e3bf6d0f2df2d0aa1d744d970 Refactor digital pin.
+04630c64207dd8886c88fc474e9cc823e6dffb33 Updating unexport path to use function call.
+caf3cc0790e204297f8139bb1e89909e9b4b57bf Make sure the pin mode is setup even if the file already exists.
+661b6815d185f06021dbdf0b6133ae57c780fece Fixes disconnect pins by making last IO calls sync and validates for existance of pin files.
+d65ebdd2be3be8524e3a37c74d2a99d9cdd473bb Fixes issue with undefined path in digital pin.
+f71c24ff0ae59dbbf72243aaabf79ec74df41481 Added pin number to emit close event.
+c47e3db26d2ce952da906630d2337b40e830c2f8 Fox indenting error.
+9798fba74fbfcbc6846e19d705601bfa712c191d Refactor GPIO file paths, added validation to check for existance of GPIO pins (they have already been setup), added new sync disconnect.
+6120e6da0b59c9169769b2b1e54e10cb6a1b9ae2 More consistent internal representation of components
+1cd5883a3fc40d4c1ce8c60f4bbe48abfb9ae13b Clean up tests
+88ab1a2d34fa1aa4454941c141af2c1c5c3d3323 Properly organize supporting classes for tests
+31bfa85fa8a2dff1d2e8e515bcbefd729e2632e8 Simplify readline setup for Windows users
+19929842a290cc006a21f2cdf0d05d309061f564 Merge pull request #28 from hybridgroup/cylon-specs
+b5a48545332b258ecbc6e7bb190cd6c394a87226 Add tests for Cylon#findRobotConnection
+b7add10cb4696c1beacab6417306d214cfe210e9 Add tests for Cylon#findRobotDevice()
+b2f2d11a85ddbf45f57b6dcfdc7a97bc1ad5b325 Add specs for sync and async versions of findRobot()
+d7b3e63afe8976343bf606691833bc25c0c739d5 Test for Cylon#robots
+e747125bba68683cda83ee35f8e81ea482b14cb6 Changed arrows on Readme
+be0fbed32e801e9089aaafda7b03a7e1bdf090a4 Added note in Readme reminding users to change the port to their arduino port
+6d56e4d260b65d6b6b02d90bea38527a243b9fbe Updated the readme to include information on uploading Firmata to your Arduino
+1778312e6c4fb1f66ff631f8d86e16edd9a46e6a Tests for Cylon#api
+da5cb27c21452f203daf7db81c57b8884925dde6 The Future's So Bright, I Gotta Wear Shades
+716f67514793f943a3bb3bf2fdcf0703fd0869af Remove unnecessary tests
+ab3c038dd1b35af50d8f9bd3e1168ba127533061 Use class-based syntax
+fb9dd50242fb30184584597b046ab062c023f79f Update to version 0.4.0
+9d7cb3e5c398ddc152d680c27e161685fb645ad3 Merge pull request #25 from hybridgroup/api-configuration
+620351c7c24141a9d6495168ce2a98c1a4f38698 Allow configuration of API options
+bb1388e879ed00af0f884d341fd4acab20c406d5 Clearer and more representative testing of method proxying
+7543f834e4236c85d320911691473c64a2fb3fd3 Merge branch 'master' into literate-coffeescript
+0b02822f6adf7dcbdda047d20afaee42935648d1 Added debugging log to unexport pins command.
+7bcb799ca67ace215e583e6dff66653a3ea1471d Merge pull request #24 from hybridgroup/20-raspi-adaptor
+c24601139f73af72f4e43fd9b65b4a1e2b59515b Removes unnecessary IO class.
+33f8a876a532a3b45c97b53f820d0d6dbc548386 Update sphero_multiple.litcoffee
+3316c22ca7b934a229698ff2685dc3528a6d46c3 Replace sphero_multiple with literate version
+0c3b319b12d5e45cefdba17f7829174ee8f2677f Fixes raspi button example typo.
+ff978f3a0dcba1c9b0a7f99b42cc8ac3bb743785 Updated DigitalPin and raspi_button example.
+250a0d01667b54abf99ffb076872b9b061523ef6 Adding interval reads to digitalRead.
+c370041329584ecae3d8cc9a21771f1ac3de9836 Added new Digital read example for raspi, updated digitalRead in lib.
+9c0ef5408cb0e26f31f390c7c33606751d7a5fd5 Refactored DigitalRead and setup mode to only emit connection event on connect.
+2bcdd9f683f73961ecc4a40b3d74484fe76f89cc Added new DigitalPin to Cylon core to use in adaptors, for real.
+0cec5a3822f35e5ef894120597aaa07d5495a9d5 Added new DigitalPin to Cylon core to use in adaptors.
+6d703b070712af0a54b0d405509674c11df21ae4 Added new example for raspi adaptor.
+b03019544b5f42535274124a68c8862c46103c93 Updated digital pin lib and example.
+3b078321f103999f83522929a38e0b1f42df2f09 Fixed missing mode variable in digital pin.
+115a1bb40586f45627e972b96fe52271f7281478 Remove logging and update example.
+81bd0adb83ed1fbfe9847a6c96b4844b4b719495 Change events and update example in digital pin.
+3dec21c4595a14a44a9279b9c95e89d3a952121f Added close for GPIO and updated negative ifs
+33f8c95edcc21fc7f345a8f44ea2510d142083b4 Change event triggers in callbacks to fat arrows to keep obj scope.
+87a75745dd402e6cf4e1c41349f050d78d32340b Removed self and changed example.
+3bdecf665acad7353e9fdf609fad698c05f1c750 Updated IO and digital pin to use events.
+239056fa65e81d359590874c6fea06d0e2aa5a9b Fix bug in GPIO example.
+831fbe40699afe837a6c23cf443a893b864bc49b Adde pure GPIO example and updated digital pin lib
+6d694f85b5bd06ef3dc4f7217cae475f43118a52 Added new LinuxIO DigitalPin library.
+52c482a5826de0e2081285a5daa0731be203f971 Merge pull request #23 from hybridgroup/exit-event
+866e07983039212faa22fd3d3c6e4af64d62ec7b Merge branch 'master' into literate-coffeescript
+8be896a5af4504d7b48b1e7e422529e601109368 Remove duplicate word
+041da7acc886ac45fe18ff309d58c594507fe4fe Handle exit event, by stopping devices and disconnecting connections
+53e9d01c01405f82f594cf2d31dd580188052ce6 Merge pull request #22 from hybridgroup/proxy-objects
+bb4859d83dae38b5590021bce8a44655a134a585 Revise proxy to use objects instead of prototypes
+30ce10d627cf34343ad4110e58865c4f9b7e8e36 Literate version of examples/travis.coffee
+d184528312882136a14f525c9536279c4d2d1ad0 Document API with Literate Coffeescript
+3cfc1927fa6f9fb8af4ec4504f94410a7eac4720 Compile literate coffeescript
+d9287be2b146c1c24263669bbee6e33fdfff1726 WIP on Literate Coffeescript version of api.coffee
+8a99d3fe16f827a6b9a6119668b05a1638622211 Merge pull request #21 from hybridgroup/refactor-api
+f423758310ba8ad081e6d06f6abd518be2786d10 Properly set up websockets
+fa53720e17cc4e2d57849669db7e31638163f5d3 API now functions correctly
+9b2b405f0d3579252585ccd28d8ebe4596557c33 Correct bug with defineEvent()
+bba7ef1f4d3d01f1009607ce2384ab7f85561692 Refactor API routes to be more like Artoo API
+82e85e04f36cb7feb4e6976c10982f775d766c5e Remove pointless namespacing of API
+41e5d885b3687320c7c47829794cee8b3e5c35f3 Merge pull request #20 from hybridgroup/namespace
+fb8c8acca80e12d1547b7c1766378bbdeae1246d Namespace Port class
+eda6f9db76c5cb85d2e06843bd905e9d914cf676 Namespace Device class
+ae666f67dd57375b50089d3abd210ab1ec1c4e2c Namespace Connection class
+9d48cba3cf6f8a16b65120d9a64b3c24b5a10811 Namespace Robot class
+483dcf26b90d15ecf5a8d937cc802b32b509c4de Compiled changes from previous commits
+4615ac7c7165c498c0660ce5954e3154dc7be3ad Add TomDoc to Robot
+ac8d888fd6d7c94d19e11e409dbbe37a2464eec5 Add TomDoc to Port class
+46d03e13098d32af8f497b9685241e9d35acc3cd Example retrieve version from BlinkM
+472384ee4b62d338e377a96df635a7f6a344ab58 Add reference to i2c drivers to readme
+9692b4fd906539b1e6cd9bb5997fe859d286c730 Commenting for Logger classes
+e880ff7454d42ec39c8184711b1f3178f04422e4 Add TomDoc for Device
+a0fa9de9484e941320d6553496b32430af2504de Add TomDoc to Connection
+9e908f4027daa5549eb411f7ad3e546c4e057025 Add TomDoc to Cylon
+1056b91c60aa22c9403c1e195a5cd86bb867b1db Comment new methods in Basestar
+616bbbeee31939332bc14d05a99237899fe6e982 TomDoc Number monkeypatches
+bb3c4133cfdbc3eb688d850794ac685e3bac15ec Add release info to README
+3f5ed82f21e392854144c86339f18dc5cd961e21 Update version to 0.3.0
+53ba6e31319abbd892d837777e890ab0c60993b8 Add contributors to package
+64794db454af431c10954f0124d4875d9c177628 Add contributors list
+333327aa63a6bd4fe6d9c51eac43998ff14dab17 Merge pull request #18 from hybridgroup/api
+180d541debc0f5243eca3a10a3269e9b07f3519b Merge pull request #19 from hybridgroup/cleanup-proxy
+ff3c1c427033f31f8420fc34509575e124dbd0ad Refactor Basestar event proxy functions
+a45dd83c51456929a8f06a15d1dcfb2abf937ecf Server now correctly identifies the URL it's listening on
+dc48cb3be5304a0c2f1de7896a9017e5e53f3e27 Merge branch 'master' into api
+3cb8d91af692eca902bc371bf1247b4a8e8ffa17 Switch to express.io and add websocket route
+2c873e374a85b1ef38011f17b9cfb46d12e93059 Add commands to handle fetching connections
+e9a4f25ccd7a743ae80aeb1c083948be7c1dedfd Add method to run a command for a particular device
+b9560b159cd06a68546bef94ef47c73ed0bd43b5 WIP on runDeviceCommand
+a24f30ceec6baacbc69440e21862bb1b5f8cb0dc Merge pull request #17 from hybridgroup/26-event-proxy
+a73a7903279a78a42d1ac98d3d8a7bea496a2009 Updated Basestar to include some proxy event functions and updated sphero messages example.
+d9c0229a6293227ed068e42455b5d5f54a64ab8b Add API method for fetching device commands
+fbadbac5c6046d4e6b86e3eaacb097b16d39b8bb Small method rename
+4120bc3b76bde4608bae86c8761e2ab421f4c996 Pure JS drone example
+54e5226dd6f9becb0f051071438b3f9831f6e7ff Callbacks are cool
+1b4e05575cc6211fc7bfb22d69a9d81cd1f50dae Add method for fetching a specific device belonging to a Robot
+6999236fe0a4026c4ca1edd63ae72ce8c64067e4 Better class oriented code
+a7d4a9d30042046a0eb197a18cc0119b498bd036 Adding some more examples
+0a7dba1128ce6658668bf0cb23d4d5ea01b3d49e Correct README typo
+4f96890d6571e168d61e9eb8e27b3547d2b980fa Merge pull request #16 from hybridgroup/10-servo-driver
+ac8f2208805168fd957d9e3779e77153ba39b975 Merge pull request #15 from hybridgroup/9-motor-driver
+bf86c6f414b85bcb29149aad38cc4053ce00c106 Adding servo driver example.
+ea472f9e129462339a5c347ee9b6189ff3729ff3 Fix issue with currentSpeed having to go through driver.
+65a2e20959df792ab98fb1093196b52a0db6784f Add /robots/:robotid and /robots/:robotid/devices
+2a91066864cb73e335977e6dfa574a98459008bc Start to API and fetching of all Robots
+05c8ad3bdc563fc3f50140c951590bea48aaae39 Add methods to export data from Robot/Device/Connection
+6a9c5eb60e2529b6570ff60742c6f88eeb2bc579 Added speed output to the example.
+b37fe4a99e6e461f45c55b22fc534aa178269683 Added examples for motor speed and led brightness.
+a58ed257b8cb380bb5968951c5b08c56a106449b Merge branch 'master' into api
+92232812e9665c677180968d263850a5db565c90 Need a line break
+a8c8b9f832b7a01726fbb784d0f994438cadb730 Updates for version 0.2.0
+03450dbac78c7c087ab135a718eb9fafdcce274e Merge pull request #14 from hybridgroup/8-analog-sensor
+cf6d2c88bc0614353b810e557efa07978b1fe1fb Removing DriverName param in favor of opts, which already contains it.
+2e0d0423bbb662741ca2b45d311739f58ad51482 Adding analog sensor support to cylon GPIO.
+43354cde418537b24efa267871f6200fa37488cb Start for Cylon API Server
+d7446915c02d3d53dea1aee5cd8a4d50f463cf21 Add node-restify and socket.io to package.json
+46a0f385484ce838a6441b523276b45c7084f18d Merge pull request #13 from hybridgroup/basestar
+3f494dd23dd96ca49610a1c2a0645acc8e015d1d Basestar extends EventEmitter
+562b91af94f6fa334c3dd52cebc6c0320c350773 Add node-namespace to package.json
+1c3d2236a05b6d7d881b8969c9bae21df03409ff Add Basestar class for use in external modules
+504e51bd28d3895d1e98b4d2650868e385a6581c Can now attach users own functions to robot at will
+e53c598ade8f6fe26ac88d445bf8bb7944c017bc Add ARDRone to README
+a95bd2e0ee9cf7e29cb91ef37c5ad0c3e74f940e Some pure JS examples for the purists
+b29f911628d0b1be807c1ecfad8872e58a7932f2 Update to version 0.1.0
+4268a25ad7efbf763cc1c7960fab0d0cd0e8ce62 Merge pull request #12 from hybridgroup/12-upd-collision-example
+c7afd8333623927711c2cac26d7d47947d9448ed Updated collision example to perform better and start running when you drop the sphero.
+83f5e6c4c39829406a111ce0875dbc874199f3d3 Merge pull request #11 from hybridgroup/12-add-collision-event
+517a093604bca0cf9a17953e0c5177b09cb84bdc Added collision event to the messages example and updated collision example.
+d87c63dc267beef94bd4a5141daaeb72149841be Cleanup startConnections and startDevices to ensure proper async startup
+507e381ae663c1751ec5739e51d82ce23ac0b2e8 Sphero Collision event example.
+1f48fd85343dcdd22bf520b3bec9e4474d5c2038 Working button/LED
+5da9ac3216fd95399f483828687336a756a88832 Fix test fails
+76cfbbe765f421af52b805f23058b023a73608bd Correctly proxy methods for classes
+6b5b851b639309b91e67a6d03336d185254ace95 Use the right event
+97b73357840436510d5ba580e262da7820188b6e Merged better startup routine
+9857a45a8a06676060e8f1fa92e4ef259c0c6aa4 Merge pull request #9 from hybridgroup/proxy-functions
+c33a99e4bd0807940fe3b9a94cb86e330f1bb8d0 Add tests for proxyFunctionsToObject
+6a52e7f869ab2203d494b6107e9d2916bf15b128 Tweak to button example
+c5cf70a5af3dc25101f091e02c31b3447e4e25dc Remove irrelevant tests
+21624ffacda8554527b1606d5ef30d9500bac49f Use proxyFunctionsToObject for Connection and Device
+01b2d84bd10174f49946b873e38790d560958139 Add method to proxy functions between objects
+8372486a00235adcf7e90fddc58d8081c4b17b92 Almost the button example
+16a049f5863a01936447bb6bd09e5649823a87a0 Pass requested driver name to driver module, for those that contain multiple drivers
+c94549bf75a413125fefc4ba3d4ec774457543e2 README and example synced up
+3eb09259d8d40b0ab1288482f0a343ff61c6f1ec Add links to readme to adaptor modules
+08da7d3390108a7fc73af3ee4eff822bd849289d Some logging for debug mode only
+79f02193ca9afde2b2fe24fa7458ad3a74c9cbf3 All green
+e43bf8ad458030e2b37053aa9794410597e87a6f Works for arduino blink, with new async hotness
+5e6bf8763bd35275c2142d155b3e07b808b0a7f9 Devices need pin
+9bfd8ce57d157d62d7368d73f9b2ab996f917db4 Merge pull request #8 from hybridgroup/event-triggering-fix
+450a87e17ea38ff5e38a770f4a95a4d1375cea00 Fixes issue with events not being triggered in drivers because .start was not being called to setup.
+7f730ed3be6387f3acc6301bdb08dcd99f9b1fb5 Added section placeholder for hardware support
+fea55228ccf2c89e0e7a026586be63f8f7f87736 Added ping driver for testing
+7a67dbfd22e4d74f2c179d04efca5ef134f694de Namespace all the adaptors
+69a476dfbf62c2f75f880f9681e22f9dd1924632 Correct missing command in loopback test adaptor
+f2cf92644b93bc8a0609f45e4ee22c85c3c83962 Better multiple
+3f19d14fe214e3431171984b1196e4c9a6fb0701 Include reference to artoo
+62d7fbee3f421099792a20959d07716f7302a3f4 Correct code examples, and link to Artoo
+c5392f3e192fcf534bcb6f2846afd054cabfb8b1 The examples shown at js.la
+1064e75128b2eac9fcf372a661694e41d67820b1 Clear up scope
+b6ff2cd361dd4754390c1800f0576dfd2b575377 How you like me now?
+6bf47abf3cfcfbc164362fac4f5b05bb2b2ebc3f Color sphero example
+046c3578a5e0d5b3df578ba39fc17546edb0f02a More examples please
+b0346204a094bfafa1082e77df78da29429e119a Add Travis-CI build status check example
+612ddce14209726ba58beb8ee9a655c0f3b93cac Connections don't need direct binding, just Devices
+b0ea445cb15c00d82fae34ed642ef47fb2935f63 Merge pull request #7 from hybridgroup/add-event-emitter
+838aa9065a19c64b09cffcaf13655aa9e6a49b1e Added colors to example.
+f6797a47825620ac41035f61208f1d05d554da1d Added roll back to the example.
+06f307afc9046430ff774caf4a83040fd5980229 WIP on collision detection and event emitter.
+a50ccc65481e0488c1e7fdc15eb753739f3cdf23 Trigger event on device connection example.
+cc24e89249a1a02d59c9ab1e550713b1d88e0cd5 WIP on event emitter for device and connection.
+f169e5c10b6e59ab6d705076d1caf1ebbf844f47 Merge pull request #6 from hybridgroup/fix-work-scope
+31aa6e490146e1714c9ff3b01260ef22fa19f374 Fix scope for performing work
+3310dee2605c793eafc77e975eb97b7d4a2ecaf4 Rewritten 'Master' example
+0ac38c735ae8eb3fc8cd826f7bce8dde31f73608 Add the new code climate for JS
+10bccd896dda680bb6fe815c6a669292b2207447 A bit more cleanup of self
+f8eb77c95924d83825370643b4f02fa726d20641 Remove the extra messages
+b9165fa09ca39ad747a431f8884419236c6be327 Remove commented line
+dc4d3caa6c6a82ec3594a2ea6fe471ba47128491 Calling into the driver
+a6d29ecbdd508c3f500f5cca589d24d137a8be19 Can proxy commands from connection to associated adaptor
+b8371232d1ae34b5c56912e5a5e08b19c3191741 Proxy commands into device from associated driver
+29515adea73807b975b6ed8af2381be34c1e15b0 Fix driver-related issues
+78db5f3a56751ece76f8e13983c083227309826c Update readme
+35cded3fcf2fa21061fcb2c4b7803089855db199 Update readme
+abd742df3f57f0ec3a5207e7c33a0e8166f7d371 Merge pull request #5 from hybridgroup/singleton
+e32b1b82fd0b5be5daf69adaa163dce96ffc63ea Small correction to examples
+5f83d2f62603c2b064766eab82e618a1e21353d5 Easier singleton generation
+5fba02ae84b107a7a09474739add4c21f8ec0123 Remove cylon-sphero dependency should be the other way around
+ae664011071afd1e6dda2aac8a3fbca37846285a Merge pull request #4 from hybridgroup/connection-port-bug
+015ad3823ca1372b17561dead7d815d72074b774 Move self = this into instance scope.
+b8af863aaddbf8a96d103722eee3c71ab98f9d4d Switch to singleton robot Master
+e8095a2ffde5d0c606844940f96c799c8500648c Fixes issue with connection port not being found in adaptor.
+0e5f27f1c682673cc32918e5d2fb58b66286c540 Allow for similar hooking into drivers
+2c6d7ea7c3a6958823c7c0d9232e8708bc73390c Pass connection when requiring adaptors
+2c34f4c77ef2265fe037e5cd55ffff2cefda3752 Fix issues with registerAdaptor
+61e8c776c3f3d54a9e6353b3b00a992767c2ed14 Remove unnecessary dependency
+4a57300d32a9a15d6b1578356ba2d8e56e10bdb9 Fix test fails
+82c530fe5b452ac33488a0ee63dc87c40749106b Example of using cylon-sphero adaptor
+ecdc417a585cb88e6303938a9e309f933eb701c3 Revise Logger to accept multiple arguments
+945273924479d8b4195b514b3fd6e5556e2cee85 Add addProxy() method to Adaptor class
+1209686388bf8b6aa12c16ea9354059c75b65630 Making test pending, for now
+dbe4ccbbd54000047265a6124b5a9142636aa01a Fix connection test failure
+f0ca9ee60b398799ba0a0b5ec8a74b6609bad1d5 Use fat arrows (=>) to simplify scope management
+bf4d42970e4e5d6e5c140c1f15b2c040b3850d87 Proper initialization of adaptors
+541d70b66da0ad07724d112aefad8b971df72762 Correctly set up loopback adaptor
+72c357b64be21264c3b983aeb90405287c00f5b7 Adding back comments line
+7c551f41c6bc195bde3034ab1e68093597fe0b19 Code runs, tests fail
+b3131fb0b62b0bf7382c0ce42f137cac9e589a00 More progress now just need correct export
+8252d38a5e4a061ccd126bdc4b8bf8fd5631bd88 WIP on dynamic loading of adaptor and driver modules
+68b0c1dc09fbc5924c8ff51e08faf21d69638e6a I like this capitalization
+7e98fdd96b320fbba85aa0c332af273a00c244a6 Both every and after
+a46a8c4a712924aca8e4b991ab7281bd614e98b6 Hello in both javascript and coffeescript
+132282d4c2793ca9df3ae3ab1092c66eebadb6ed Much along the way to adaptor/driver registration and loading
+42cd14cf1484ee536bb4dbf3c9c988ef64737e48 A little test output reformat
+7b67ffadd7411b61519d29c492098351d6a1e97c Merge pull request #3 from hybridgroup/logger
+8b390cc4863d33c47a4497c7731bb60de4502482 Resolve merge conflicts with master
+ca59493a12ced685bb0563e49ddba3a3b44a2fa7 Proper initialization of device
+da95bccdfa93b9b0598510f6dc4701669d117a93 Add global Logger object
+60a7363985e20f7cf603165e4b144aac7ebc5049 Correct reference to parent robot
+c25324c2257be56665d1f4151395770efaf1af8d Specify more pending tests for Device
+7ab34693fa1af5a3bb4a3345296daf17440fdfb7 Simplify starting work
+3b83b5d0f7e4b9231b6677d51a9a4071eb24c455 Simplify robot init even further
+ce154f8d25c09823b09ca07962c58a3355f8697f Removing commentted line
+375c70c1ac8258a69a776888e289f48df8d1172f Fix 'CoffeeScrip' in README.md
+03febed1bb4b7d4ed531b28ef423b8e71c843d90 Knowledge of self when working
+1f93cee8238c2b1271635922f8665b1a807cd3c2 Resolve merge conflicts
+48db540d3746d347b41bdaeeb13621ec5e0cef83 Connections and Devices should belong to a robot
+de797004271af63612f1d633b16e6e10d98e2612 Correct and consistent context for work functions
+30db92328d215ff2cccbb64f2f0f22cf4363bcf9 Properly init/start connections and devices
+719790fc807b4c613e48474bbc8406c6d1c95106 Additions/cleanup to README.md
+bc9dd05cbcc21612c089f3cece7b1b7f9904496e Fix example and globally namespace utility functions
+2e74b8bdef4ee484b5903c7a51172cc98f5d0b8a Starting to build the object chain
+af4636598aabcaa225878276ad29cbdfa22b97fe WIP on device
+f2e90634c595447772af339e7e6421ebe1a55a7b hello?
+f03eac212ebfd9cd8f6d70500ed2567eb7d3c357 Resolve merge conflicts
+8b1f3429642fc93fa06f4429c405bcc37c376069 Correct syntax outside of tests
+ea90ed88894a0745071104f0692f04a827116a72 Add utility functions and monkey-patches
+9e7614a4a1ae085fb708af4c62c74b32f890affa Add Port class functionality and tests from Artoo
+846161c0044109b6118d43f375dd7c0cb01988dd Install grunt-cli before running Travis script
+405632bf96020f1e3d6b422fa5df826c63790598 Run tests with Grunt
+eb984aa4478aa4915f04691610c6a7aa19eeb1c4 Merge pull request #1 from hybridgroup/robot-reorganization
+21e225a4d30cc92568c802578dc06950c391e00c Minor restructoring
+e7a628b9eb510bc5e78b69810d4d44e8ab1ba0e3 Can move default arguments into signature
+008f35ccbccf927a91eef7cac886dbe652982d7b Add some pending tests
+2f6ee5866d0bcf4a48b719bd5be3585356f2518a Add port, and some test output cleanup
+9500b3b23a1327a134329d46b87318e3a5958bac Now we're doing the work
+defa1cc91d79d5def642af767770774d9bb24703 Need to be able to start
+d60c624deeb7e6c717eba8a710766a6e2f9aaa2d Revise README order
+05cc4221aa5e40332f5d1a898e05ae2e143e7b31 Better naming for connection and device types
+520035b842a51e7adc9f1904ed03f1d7e0447bf6 Remove space
+2019cd5b6c7acc86c6387ee84c1f1d893b23169b All robots have a name
+d05083562044cc1eb7cdd6c0f4212480fa048b4b Init the connections and devices hashes
+54f657e76ae7640b72a7fd804d2b3463e260fb40 Start to connect
+d7cc0c37300d6ef94a705e98d508673ec8b37d40 WIP on init/start connections and devices
+17be53408ae92aea7dfa3dc87c4df0c7d537ea05 Remove anything not needed for test
+c9953b8830ee024142aae28d787689058a7435d4 Work and create new robot
+b0f4d9f12b9ddb1f3152579eb27f08240357f1f5 Name is just an option
+7cbf27e636280f598df810208862d236dd864a21 Fixing the example
+4fd5c4e74f92a7c3ba69feb73dadeb71a9cbe31e Fixing the example
+7fc9fec67354d05f519c02af4cbb33def505e878 Fixing the example
+f06cae322c4191b28cd4ed3d2fb4cdd7b572f663 Fixing the example
+354bc357543d24fe66cf01c22077a65c1c84f9e0 Remove not needed exports
+13f3b6b1a812bf4c9e2ab4be68c8b0ac4bbe5bf5 Placeholders for core classes
+e4540ead4646bfc3e0af9f0af81f5b8aabbb4efd Remove commented lines
+92c651f6b32497a7cf1be1f64ad156f40b6ee567 Add placeholder for Robot
+a2786dab482684ec4769d4feae37eb4682bbccd9 Add missing commas to setTimeouts in spec
+029ae0c3876391d93f76b4fd419caad6cd2db9fb Replace additional occurances of deadprogram/cylon
+162db8ea39de104263615b724489af2a78e02a14 Correct Travis build img in README.md
+8d750660627244480a73bf5a9758f8e1827d944e Adding a test robot method
+4e192e4199a202c49497762ce0613f5e80ad0792 Canonical missing semicolon
+543123040c961d00ec46b820b35855be18741683 Initial commit

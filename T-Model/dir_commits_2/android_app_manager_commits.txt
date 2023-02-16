@@ -1,0 +1,231 @@
+42a45583e6c4ff3617c60ad8f096426009199728 Prune dead code.
+9acdda22bce7429fbdca610d873925e0a6400772 Clean out manifest; it's ignored anyway.
+f0fe6508644d434ccb58c24dd715e3fdd5411327 Building with gradle. Untested.
+c43db1bd6822318beaf258198f27705f7e13dcfe Remove old build files.
+cbbc227890952c374ca640860d860e60de6ce8e7 Update build.xml to latest android tools.
+71893e36f74ba724ef4394dd5fb16e36b8321ccd Update manifest to android-10.
+ad38f9187b7eec0429d41a2ac22ead6de012012b Update ignores.
+cb7f16411c680fbf12785124ec9dcd8f6d23d9a1 Add gradle build files.
+803ab6b7049609386e145e778e8adf1179332fac Move out of library directory.
+500a172bf753aaabb6cb9bd0b99851c1fefa29e5 Remote old build tools.
+3df67043cf366fffdc49cc147d9f560eb1697eb3 Merging rosjava-changes.
+584a75dc6e3a88414350ec1c5a20ed42f8662e2b more rosjava change fixes
+988c40e4f7a65aca39a4a560506fb18933985bb8 Making more progress toward getting appmanandroid compiling
+ab48138e1dc32a9bf898c95f3e7488f1ef00e883 Began updating appmanandroid to use newest version of ROSJava
+f080cd934460fc92babd48eee5f660454c1b48d0 Make progress dialogs cancellable.
+07ce9c9e25f84d00658185a743e781ab120fef46 Create AndroidManifest.xml that redirects to App Chooser, does not include MasterChooserActivity.
+de5b0a29a3b0a0a0229e5e14e0d26ad948db7584 Make app icon and open button in Market redirect to AppChooser.
+0e1075b23526e4dd1b91710bf40015bdd809214f Uses new rosjava DefaultNodeFactory implementation
+c3383272dd274a605ebe249b9edda243eb6e53ae Import correct definition of DefaultNodeFactory
+cc4b4867253106f411e8dc1b99e85710e5bad5fe Fix scrolling on different screen sizes.
+1f77da85db61acfbbea0b2b2f8d06ebbe2b86ef2 Improved scrolling for smaller screens, removed hints from edittext.
+e2ccfc796a742d5c958912df25b72862f4f9a0dc Improved scrolling on smaller screens, removed edittext hints.
+496a4a07182089d3fb8b226220073ecd894af091 Took out default text and hints from text fields.
+fb72b96d0a9f7086edfdc25c55e8c4187c4e0334 Now able to add robots from URIs, delete selected robots.
+75b11d0bf63613b9e6a21a66dcf9b17cd8d4f7a8 Added landscape view of dialog so it doesn't get cut off by keyboard in lanscape.
+93994118d00b7b1a8a26fc17049b91a8c367252a Added context menu for deleting individual robots on long-tap.
+96282b003567b9c70415c09965734b3c2bb6895a Added option for deleting selected robots.
+a2038408cc1c6d405efff551d7f6680b7e72fb57 Added fields for wifi-switching, connecting to PR2 using URIs.
+ad7ba2ef0beaea0098451b5eadb0964d960ff683 DefaultNodeFactory does not accept zero arguments in latest version of rosjava. Changed so that it gets passed ScheduledExecutorService.
+f677908db342e006995916b0f3ba2768672f6884 SlaveIdentifier.java no longer seems to exist in latest rosjava. Changed to use NodeIdentifier.
+f56b7b0e1b1c4aa6eeaa4b03b83297db6248cbdc Previously implemented MessageListener and Runnable, changed to match other classes.
+5bff20877e867d4c7fbacc069293d305adfbac91 Fix some issues with the send goal display
+fbf355708edb8717ba1c1b85fa42832ce9695436 createReslover -> newChild
+15953464bffe53328e549ac18cd40a5ca5392d60 New approach to build.xml using android build xml, cleans up problems with duplicate libraries.
+6739b9b2a7612196c0bad517efe12cac20288e92 Massive update to new ROSJava version, which is broken
+032d254d444a8a6db3168486eff4ad2309da6b0d More build fixes
+eb7d03afc1f8440cd4745d851d2b97e7f7b30294 Updates for new android build system
+7434019b7e5127efd8d8118e5cde46741fcfc7dc Fix androidcreate script
+f1bd70202196a3f9eb50b6e63af74eadaa88c5db New version of the install file
+d2642b646f3d5f8dc901d6dabafd10d8a9c4fe1b Fix bug with joystick view where it would not start without setting base control topic, breaking turtlebot
+2c84e9718d3013749ad9d4241346a96d042cea10 Change to a better URL with less confusion
+7cd55f926245d0ac9b5553b5b3eb542179b97735 Also clean gen when doing an ant clean
+f26423f4f204e85671fd5498e4070b42ef25867b Add code to terminate application if the application on the robot quits
+92be453f77dcc28f0f88a41e614a1ff809719a62 app store -> exchange
+a951cd0d2322d16f8235754e2f8f2bfdd6e4f7c8 New android version
+b77b69a451b93d52d66f452da792a4079f0028e9 Add new map_manager app
+11235125e74b8d9ee1265ab4e3ea6cfe9b162c75 Remove unneeded map_store dep
+bd839f0bd5b2bee82b7906c065a4e081f905ec55 Fix WiFi connections that often never connected
+cb0861a45add546a234ae0f2863e7b728fc9e336 Fix bug with initializing the robot
+d6f32a4cc1d27b030a50792a557e00c9d447cdd6 Hide internal descriptions
+7ceb9205cb99d145294a06f81595a865355934d5 Add android_map_manager
+3339c2b3aa67287a7de7ed613ef5fafb12659df9 Add actionclient implementation of goal sender
+be8418e264e49a657867f463895107857197da11 Put some debug prints in for null views and the like.
+a7ff7bcba15275f6c3fce8091a5f7b1b4c862689 Update to new app store
+fbcc97d3a644404904e8251f2dd4c2ec196060bb Fix problems in caused by residual app managers.
+5327b53dcad9118d2eb725ae5d06bc4ec9f3e4a0 Better clean
+69aae902e3ce7dc6c662c6c20e08de27fb46fa51 Add multimaster experimental
+14c49868fb7805ab114b2659808f276e275dde1f Fix dialog bug
+7fbe4d14c0befe2732d10320786450a3c3e062dd Allow state of MapDisplay to be reset
+ac8146dbb55a546a16612de312ef8987eaa399c4 Give users a dialog to reset robots that are stuck
+a16005931e902defb42aedd03c1beaacc536f0d5 Improve formatting and readablity of some methods.
+f9c545a6061add0d5ad7e74ada422b05968e93cb Prevent joystick apps from publishing excessive stop messages
+7dd981cd3ff3a044870ef91e6fba32bfe4cd241c Fix bug with robots that are unknown
+f3e1710f9cd9d55d03f5d3b52ab0b80d9b18555e Fix bug with progress being null and causing crashes
+5dbc425c1ffcdb3010f5c061a16d1715058a88cc Add additional debug prints to controlchecker
+15b9a6334ac7cc5d9b03491a1c2b1794b89c7b2f Get rid of data stored on SD card through use of content providers
+91e20952a9c121ff62e3e0b0c3cb2bae8f048357 Add new script to rosmake all the apps
+0f5be1f15a1ee0818a828d611dcaad515cbaa857 Support callbacks for all application terminations
+8cc74c5d264c5d598e90b164f832b0579c4d7091 Add joystick view to reduce code duplication
+ea026981cc14c97d6225fde7e981cafa539ae81c Remove extra progress dialog
+357387fd035fd6ee6b895890b0cd5a23b9fdaea7 New items for install
+ea1e621ae483c3dc41e1393099c20f1372acbfd3 Add new control interface and show robot user message.
+87c89469c68fcc6563119381296e58cd613198b9 Fix naming
+e04387e70a7bf520ef1675499b222f4fb4bfe5f5 Prevent dialogs from getting stuck
+2b7fb9aca06197620f02b8934ff86e7712d90504 Add script to install all the apps
+8b89e94b194c7050bedb6e1bc129e1605ef7308d Add voice recognition to the list of applications
+9af966579bbc963b48124756eb02a39f8e0205c4 More prints and errors in hope of debugging application loading failure bugs
+feaf968ca40f8869989d7fa899a3dca678fb741c Fix a variety of potential hang-ups with the starting application dialog
+d32ead43e8454415c9010284769ed6717861f0af Update android create script
+3cf037704a108fad1b0b6f03194670478c25890f Add progress bar for application install
+fcc3e1832e333ee79ed127e80496a9ded190b7f1 Clean up application start up code
+9414b478e0e6c24075ba9ddd55979fe2eec0d6de Add map refresh
+82d72a0c95fa156dbd4fb58207de579d681fa89b Add click to input to the pose display
+a2b22e6e4e05cfed177d92a8fe0a3537e108f7bf Add state for the system so the messages can be distributed
+5ed1454555f3887ed406c2b88298fa9b72c621ef New pose input method
+8b5dcab5fd8332f421867b603ac96b716cf65666 Correct topic, and avoid spamming
+2b9cebcb6360982d34750028ac82c37697d2b479 Allow insertion of displays at any depth
+84cf16bc0df3eb85dd4fac452946faabbfe732a0 Change color from green to red when a goal fails in the pose input
+8e747d3aa496f068e36809b2e74e9a73fa358ed8 Change color of initial pose display
+ad6a93f4d0bfc468affea1ed8d429759ba7cc441 Always put the scan display at the bottom so that it interferes less
+846fb17f3fe0e2adf6885f23f46b3f2eab670fa9 Add path view
+c91e951f857f81eea308a2886b2d8782022d008d Fix bug with null wireless names
+980febbe5e1af05a21c9f08a8133e8b2804f2265 Increase wifi timeout
+6c74953f51e7ca0cf2431c72c8161811937a17cd Add android_pr2_props
+0d7c38ac35efe32947d33344ad3fb408cd701466 Add methods for the app store
+220a92f8a544504242401e0b37507972169ee24a Add documentation to android_create script and remove initros
+1b59a5140dc08eda3b3f59446fe3ed633f739056 Fix for exception if master is already down during shutdown process.
+f35a1e421eee198c786a8cec41a749f69d59af20 Merge accidental branch
+ab6962149f9096557afa48988f19d924284edb83 Fully functional androidcreate
+42c495d87c96f174b4c6074c3775af41af98e977 New makefile for new version of ROS Java
+46dfb7922227b94a936e1acc574567a7abdb672a Fix for the barcode scanner
+20e4e3c5fc4c8d1e514fcd623023020838a7f0c2 Adding a robot twice selects it instead of printing an error
+a55200b4b8053216af23ebd83cf7b846276992ab Add rosinstall file for building android apps
+63739bc6683eef55d070ee9733dcbc661326931b Some more error messages to avoid slient failure.
+629f14dde8bfa1befaa0c58133c6d0233e210a76 Fix for topic name on turtlebot.
+b5f2f01092f9ef3d00e4d74a5ea18fd44c68e63d Improved error message when robot parameters are not set (I.E. wrong launch file)
+75788273bc0d6fa27243cb1991497ef24bed6b04 Fix for exception when no dashboard was specified
+308a77e2912043bf41156b7decb21a7b11b5e715 Massive update for latest version of ROSJava
+2d635c3bee80e518c7f0e5e1b5a8e34bcca71b64 Avoid resource naming conflict
+13a268051226b1dd4fa4793bb5db4200b0cfed42 Remove unneeded local.properties file
+7026e97e93af506835f41e2f4a87035eed5efae5 New version of android
+6e68dff36cdb5037ae2c990ae4497c94b521a3a8 Add getNodeConfiguration
+cd472a7b35cf734d895bc5b566b1b5ccc3b7e292 Add script for creating android app ROS packages. Still a WIP.
+91d8e5ed5224a194efde3eb95dfb50e147675d21 Remove app_chooser and apps.
+ed95f13f52388dfd7b9584c8218f2deda0fcb8fa Remove teleop because it has it's own repo.
+7f67e5464548cf4e33b65f47fabfe679d40f8fdc Remove MapNav.
+41fd56bd74317bb79423c76eb2920f1747b9bb6b Add generic build_app.xml script.
+aa4ea8cfad75aaf3fb08ceeeec5a1d8fceebc98b Remove MakeAMap - now has it's own repository.
+5f3494858c74315bd4a2f58291903443f25f987b Change from a .jar library to an android source library.
+a79da0333c9dfc3c835a8af7a5e6fa42003ea882 Fix bug introduced by graphname changes.
+c06d1e20d6458123d881470cb8a3f073f3ea98c6 New dashboard system to eliminate the complexities of dashboard managment.
+3c12ee6b0cf226242de376b7d3f36482c9b5a820 Remove cruft from Pr2Dashboard
+56c581d04f6812b7d2dbdc83f9763015c3ca930d Re-name TurtlebotMapView -> MapView
+33ed5765be323846ef7507c903c6b5e76395747d Get rid of excessive printing
+2f1107c3e9a7398109a93cbf8cec4d40a8d06c64 Fill in robot footprint
+45d0b14e2bbc90c3527cc59a413dcffe75443369 Double buffer the map rendering so that a race condition can be avoided.
+c9b5699db76324895d8e49c82ca539c39c6185f5 Fix error with exception printing.
+cc9bbdf7dfbbb4be9b6b49bd26410c49d3693851 Re-enable map nav
+225f10ee5238355aa9e3f03a988c841384e2c3bd Formating fix
+ce87bfb26e61e7554d898ed6d02784cf6c727fe1 Massive changes to re-enable make a map app.
+b50a4803e2642c455f2468026d5af31469f355f3 Fix another dashboard race condition.
+af851f71939b918c74ba80d6e6ebc73281a90c45 Fix a startup race condition in the dashboard.
+5817dc025f8102f10753f5fc564d17fa7968112b Fix a startup race condition in the dashboard.
+c051e239e2170fc5920df5fef911458e3beee316 Fix race condition that could lead to the creation of multiple dashboards.
+310efbec24661a3039a715e641a523cf163a2aee Fix dashboard exception on exit bug.
+1708999ff81aee8ff3022ffd74a83b1c890deb5a Allow PR2 dashboard to reset the breakers.
+03945326d518ca0d273f2043a9ee5699f2fb90fd Add stop all applications button.
+41d8fc9ed50f795294da5d4834d4c3bdac5c8531 Add highlight to running apps in the AppChooser.
+387ff8e54cfe9e571211c7bb7568671a3f243737 Add callback on termination of the application for the stub app.
+68fe13128dbdc7d576e45cf665579ce42442c8e0 Add ablity to set camera topic.
+0e076bd74e598bf3b70e788237b4ec802afcf233 Display a message when the application finishes.
+416c45055f8f2dcce41954160005d81215556d46 Call termination callbacks when the application finishes.
+c971f2f78bc1a394599bfc904e305b2d902d0ac9 Change spelling.
+25c8d047ba3dd2330cc7a0ff87ba8769a916033e Do not delete robots that do not have a status.
+9998592a9bd141a508a1306f82bda850d2b4ae18 Display actual robot id's instead of java object id's.
+b6290e45958e1b2b1772b8246ca1199ad25ecfa7 Add correct dashboard to teleop.
+2e54a503d9be752c0356762ede4913753833c096 Allow applications to set the topic name in the teleop app
+626bc922231d54e33d15beb6a27f3e9de0cbf5ed Delete R.java on clean in library.
+4b8596bc3de17b7d3f3d41568837e4c27d5b7f7d Add more icons for different robot states.
+f512485f7d88ff80ff294da5b0550ab6b0e90b3a Add the deactivate button
+e1e663b8cabfedbed04ebe3ca7b25bf8f976735a Add two icons for the PR2 dashboard.
+5e44e820515d49ef0e67d0a0b50b6a4ca56ccf6c Update dashboard with infrastructure for plug-in dashboards, and start adding the deactivate button.
+f751d17a6031976ac6378c5d5ec472e8560f94dc The library usable to packages that depend on this one. Also some more deps.
+c9b8c98b99e9a151d69c8444ffc58174f1848910 Fix for conflict between junit and mockhito.
+0eda8b90e8545ae620c5af253c4d5422e16268e8 Merge again
+2d512666e91df54d440f19975363e43848e10b3a Add android to manifest.
+f2ce0d29b6c7204ed9c9b84630480a7baabf3aaa adding Makefile and updating ignores
+fe1d31fc86303a2b5f1594bcb42938608b9798f0 Merge heads
+c353199a3fedd760648922bf2f390a416f77847b New system for connecting to robots with complex connection procedures.
+ad166793e370e25eb35946e22c09657a111ef5ee Add some getter functions for the other properties.
+cdede3df8c843daa97f045a2c139f42b47d9a9ec integrated library build and fixed jar file copy task to deal with ant vs. subant change
+e258d6e189c2e647e92335049a15b61a03e3ba5b added src to manifest export
+f6d3433661ca486dc4efe389329961eec368974b merge
+7c23bb21ae549a02edca1c97d3f6ef30689cf5f8 trying different wrapping invocation that seems to have better compatibility with old build
+86e18b806d1fb3e5b07d5d16eaf941f3516746ac commenting out target/source as that appears to be the android integration issue
+9c5aacf460e39d24776ed60dc04bc9d682fd0cbd copy of jar file resources now works.  still having issues with actual android sdk integration (setup task fails)
+55cd6e71d20c364b6a9b8d65cb1704392575cd42 integrating with new rosjava build system
+7ded4a6eaab5e7850094bb1fcebf21ae7877de6b Brian Thomas and I's changes for the newest version of ROS Java.
+494660cfeee43a58509cdc5925d1e09a9071941e Brian Thomas and I's changes for the newest version of ROS Java.
+773b0683e50a369e4484507306d9a3851b997aa6 Forgot to check this on in.
+2a741687467636362635a91bb0992ffe8a4d4785 Change QR codes to use YAML files.
+f6d25dac83ac8019d4ad1ffe53d4d82c52175a09 Change QR codes to use YAML files.
+41420f63b2eb07051125c1ec774be077c504ff82 fixed up layout for MakeAMap and MapNav
+9b715ba9ec0d5e48a048024a4630a347fa5a8856 Fixed SendGoalDisplay to not jump back to robot current pose after you let go.
+53f422970f6604086f7c222ecaaef4a50448ae54 MapNav: added send-goal ability.  Need to debug.
+5f305f30fdf6218a267584d11e91d146991eb0a9 implemented two-finger gesture in MapNav for simultaneous position and orientation in SetInitialPoseDisplay.
+c72a045d924af74c287af997b9c45f4026688f4d MapNav: a timer auto-hides the set-initial-pose control 3 seconds after last use of it.
+3f83deaaae65c78f9c35783af6f98aa539059eb7 First working version of set-initial-pose in MapNav.
+f36ebdd4a92a07f5f7d7a9e63ad62ed6722aee34 Added SetInitialPoseDisplay to MapNav, shows when menu 'set pose' is clicked.  Not ready for push yet, does not actually respond to touch events yet.
+f18fcea79f6884a8b860f55623cca619515396dd added catch of yet another force-close exception to AppManager code.
+af0857b046bc84a6bc253dc3b5e3e78937af5df1 Simplified Teleop app: removed map display and enlarged joystick area
+121b7308512b7c401a6b3f3b2dbf0795397aeea6 Refactored TurtlebotMapView into PanZoomView and a bunch of PanZoomDisplay subclasses which get shown in it.
+10dc9f260faea0e1c328ca1c120ed98620643859 Got MapNav app listing and loading maps from map store
+09e9c34b5ba21d038a46f3f84b2aa1e0668e59f3 build-app-common.xml now creates local.properties file automatically.
+6af11670cf7df9b53130ce60f23abd90f28b853f changed apps/*/Makefile to be a thinner wrapper around ant.
+dda2de77f6c4047579042f715acdd7bc0e00cdff updated to work with latest version of rosjava, added MapNav app, and fixed up build system including top-level build file.
+19790fc851e1869dbd8dc44a64ddd29d8b76bcae Added new MakeAMap app which is a copy of Teleop, in preparation for Teleop to become MapNav or some such
+edccb5b78207ee48caa599eedc8ad7ddd101da0d Added ability to name maps.
+2df4388c63a84cae25d3f557e13b19b5a2ebdad4 Removed Teleop's use of ros.tf package and used tf messages directly from a tf change_notifier node.  Reason was that ros.tf java code does not correctly handle time=0 case to give most recent available pose data, it is interpolating into the future instead.  This gave incorrect behavior for TurtlebotMapView.
+4411625dc2ecde309fa761e2c007a4a978131e7f Added 'kill' option to most menus so we don't have to go into settings/applications/etc to kill these android apps
+9086338743945d4f0e20d3ec02fcff46cd1fd10e MasterCheckers now run only once instead of continuously, and there is a refresh button on screen.  Made an error icon to display the status nicer.
+379e449fcbe005b917ec922b4802cd0c83b137a1 MasterChooserActivity now changes current_robot.yaml to contain 'null' when current robot is deleted from robot list.  MasterChooser also indicates current robot selection with a visible highlight.
+22fed59cfdb579c8c3f9f362d47769236b8a485b Fixed some force-closes in app chooser and dashboard.
+cdbecd340bb6b991ef90f8fbf7f22cd4614ac918 Added laser range display to TurtlebotMapView and fixed a few 'force close' situations
+9416dca161055c0b20d720bed89fe7ceb90fd7da added error checking and new drive icon
+2814640aafcb02f52fe6e839a72ef30382eb4a65 white joystick graphic
+a25f075873b2c375c39453cce5e5e121490d4a72 Added ability for Teleop client app to start any robot app, determined from extra info in Intent.
+2f7d2e05eb68aec49ac7f52618067aea57ff7f09 battery level indicators now implemented in java and look like batteries
+baaaa052409c61a2044c331932b263ca9ca0caae Bug fixes and more validation
+85b38c74ab232a5995171a80c460b75a11fb833e Dialed back conversion to URI to maintain serialization compatibility for now
+0030f4d1d9a57b88acbff401b4eb388d3b69e7c4 Master checker now just uses a parameter client
+656cf4dd44c25c92a1a455a49b9ce6b5346ff1ef removing as this is user-specific
+53dd1cd61265643a4c5f0f4cef0d2b77cc36dff7 merge
+a51c859bd3167b736fcd3c9ad55630ebb5aff2f8 Added spinner to turtlebot dashboard mode button, caught error condition in app chooser, changed teleop camera topic
+3fdce36827c49701f27daf4c896e0bffd6be9dff Strong validation of robot description to try and prevent invalid descriptions from bombing code.
+52113a6302a842a47d4b00978c8ff6dc09f3ca75 Updated to latest rosjava changes
+d41d1468849bce9d770a09346e86113d79530313 Updated for vecmath
+8f5efbbbe3c597069beca4e29cc8f3a9c9647d67 Removing old implementation
+5c7f441759dcb810ddf7e955f9e301a239f94650 Warnings cleanup.
+925ac446d2ef962684a0f285d5d0b2b3d076bca5 Got rid of warnings.
+d609bdc43195590f2f601c51b46d5e53f92871aa Updated for vecmath.jar and other library moves
+9016e2976447297803fcaa557fb62e50fcc85a5a required library for ros.tf
+91b94ce9f65e9df2d1c1bac13e356aa9c5429f82 Copied SensorImageView.java out of old rosjava package after it was deleted there and we needed it.  Fixed TestAppManager to match new NodeMain interface.
+d4b89b3ec6d76e026d809d6b74a4e5ec4a260080 TurtlebotMapView now recenters on the robot when the view changes size and has a reasonable starting size which ensures the robot is visible.
+1983888aee0ad41c9db2b1c7e98a39aa1b95b4c9 map view no longer jumps when map offset changes
+bb76876ad0607f4d9c8b5126c258e9877b79b986 Fixed coordinate bug in TurtlebotMapView, robot now right place in map.
+9a0b90358e386ffb4a496cd9147b5c0a1a123bfb map display with robot position with touch-based pan and zoom.  Works except robot pose on map is not correct.
+0c1ecd7176d095a5dec513ba6edd1f1aebfc5487 removed log messages from TurtlebotDashboard
+b3bcdb94cf4a470511c91a077c94a84d3393a970 changed MapView and TurtlebotDashboard to use start()/stop() style instead of setNode() style interface.
+3cc3cd5ff5dd2c9a00b255002557e6ca346e698e Got AppChooser building and fixed null-pointer exception in MasterChecker
+d685f2303b339065020cc92c379f8548be99bfd6 got command-line build working again for Teleop app
+a176fe50d0dc40a7335211d7710bb9ed6f06f05d Cleaning up warnings and remove Net class (folded into MasterChooser)
+49b607f2ec85fb706c836fdcf6fec13521e1a515 Eclipse (re) integration and code cleanup (mostly license unification).
+7047ce50c5f5fc811e43b86445065f48ec405122 merge
+c66e25985072aa83789b681a2fb7c0faaf289882 removed damon's files from library/.../views dir
+e99f7865ad09ae19e6bb5524d908d2e7d0125220 Porting build resources.  Adding in msg/srv generators manually until we convert over to dynamic generation.
+2f27437b3e3a7cade4bf57129a6d88da4ce953bc merge
+d7fec38f916bd4098c4588e2195b724dc3c2ddfe added manifest.xml
+40658d52692005030024b489ca3083dfe014d80c adding in AppManager code.  Will move to separate package in the future.
+f9a9ce83d4c6c512719b09b9b794879812f7a06a removed ImageView and RosCamera from new rop
+4676fc86a699d220ba0ed45e229bc8911b74ca00 First move of rosjava/android/apps and /library to new repository

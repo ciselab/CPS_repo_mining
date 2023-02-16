@@ -1,0 +1,98 @@
+Project: Valetudo
+
+Words			Topics
+time			2
+timers			8
+speed			13
+timer			15
+improve			18, 19
+
+
+==============================================================================================================================     
+	  Topic 1            Topic 2       Topic 3             Topic 4              Topic 5             Topic 6       
+ [1,] "featvendordreame" "fixmqtt"     "fixmiio"           "files"              "fixvendordreame"   "mqtt"        
+ [2,] "robot"            "topic"       "manual"            "cleanup"            "viomi"             "zones"       
+ [3,] "chore"            "log"         "error"             "handling"           "messages"          "version"     
+ [4,] "maps"             "version"     "fixvendorroborock" "mqtt"               "handle"            "readme"      
+ [5,] "configuration"    "update"      "multiple"          "path"               "chorerelease"      "volume"      
+ [6,] "mqtt"             "consumable"  "valetudo"          "chorebuild"         "featvendordreame"  "event"       
+ [7,] "formatting"       "removed"     "chorebuild"        "root"               "cloud"             "instructions"
+ [8,] "hide"             "exit"        "settings"          "featvendorroborock" "fixvacuumroborock" "feat"        
+ [9,] "devices"          "remove"      "map"               "zone"               "release"           "assistant"   
+[10,] "default"          "history"     "display"           "map"                "voice"             "device"      
+[11,] "drawing"          "chore"       "loglevel"          "load"               "map"               "model"       
+[12,] "bumped"           "description" "refactormiio"      "node"               "log"               "featui"      
+[13,] "binary"           "check"       "folder"            "zones"              "sse"               "poll"        
+[14,] "list"             "cleanup"     "parsing"           "walls"              "button"            "segments"    
+[15,] "config"           "control"     "interface"         "charger"            "reset"             "broken"      
+[16,] "bump"             "icons"       "changed"           "wifi"               "mapping"           "features"    
+[17,] "consumables"      "compression" "cleanup"           "fixui"              "fanspeeds"         "bumped"      
+[18,] "map"              "time"        "robot"             "events"             "paths"             "chorerelease"
+[19,] "implement"        "resetting"   "featui"            "description"        "extend"            "grid"        
+[20,] "cleaning"         "response"    "fixcore"           "logo"               "packets"           "svg"         
+
+      Topic 7                   Topic 8         Topic 9          Topic 10               Topic 11          
+ [1,] "fixvendorroborock"       "valetudo"      "featui"         "configuration"        "support"         
+ [2,] "valetudo"                "instructions"  "error"          "roborock"             "feat"            
+ [3,] "error"                   "zone"          "mode"           "upgrade"              "featvendordreame"
+ [4,] "sse"                     "faq"           "settings"       "refactorvendordreame" "zone"            
+ [5,] "basic"                   "config"        "fan"            "capabilities"         "featui"          
+ [6,] "deployment"              "correct"       "robot"          "cleanup"              "ui"              
+ [7,] "upx"                     "support"       "remove"         "manual"               "clean"           
+ [8,] "map"                     "presets"       "chorebuild"     "featvendordreame"     "viomi"           
+ [9,] "properly"                "api"           "fixvendorviomi" "upload"               "config"          
+[10,] "fixui"                   "chore"         "issues"         "cleaning"             "fixmqtt"         
+[11,] "chorebuild"              "timers"        "missing"        "embedded"             "fixui"           
+[12,] "mode"                    "feat"          "eslint"         "segments"             "basic"           
+[13,] "compression"             "path"          "water"          "maps"                 "pro"             
+[14,] "manualcontrolcapability" "token"         "power"          "issue"                "refactorui"      
+[15,] "documentation"           "updated"       "trigger"        "robot"                "path"            
+[16,] "enable"                  "functionality" "zone"           "supported"            "featmqtt"        
+[17,] "offset"                  "remove"        "control"        "chorerelease"         "handling"        
+[18,] "syntax"                  "refactor"      "nodejs"         "fixui"                "zones"           
+[19,] "mapping"                 "mqtt"          "typo"           "buttons"              "capability"      
+[20,] "featvendorroborock"      "dreame"        "script"         "chore"                "names"           
+
+      Topic 12           Topic 13          Topic 14       Topic 15          Topic 16           Topic 17          Topic 18  
+ [1,] "map"              "refactor"        "mqtt"         "fixvendorviomi"  "fixui"            "refactor"        "fixui"   
+ [2,] "remove"           "chore"           "chore"        "control"         "remove"           "display"         "featui"  
+ [3,] "segment"          "featmockrobot"   "client"       "timer"           "ui"               "zone"            "feat"    
+ [4,] "upload"           "updated"         "fixes"        "update"          "gen"              "handle"          "chore"   
+ [5,] "virtual"          "dreame"          "capabilities" "minor"           "robot"            "command"         "type"    
+ [6,] "refactor"         "info"            "map"          "script"          "featvendordreame" "featvendorviomi" "ui"      
+ [7,] "max"              "fixvendordreame" "status"       "image"           "shutdown"         "async"           "improve" 
+ [8,] "path"             "publish"         "viomi"        "change"          "npm"              "maps"            "link"    
+ [9,] "support"          "choreui"         "fixwebserver" "button"          "nodejs"           "parsing"         "removed" 
+[10,] "zones"            "color"           "cleanup"      "crash"           "proper"           "robots"          "missing" 
+[11,] "timezone"         "persistent"      "remove"       "tweak"           "github"           "log"             "logic"   
+[12,] "generic"          "map"             "chorerelease" "featvendorviomi" "list"             "featmockrobot"   "settings"
+[13,] "cleanup"          "implement"       "config"       "request"         "update"           "refactormqtt"    "store"   
+[14,] "url"              "reduce"          "clean"        "ntp"             "chore"            "cleaning"        "server"  
+[15,] "choreui"          "ignore"          "errors"       "configuration"   "mqtt"             "featmqtt"        "fixmqtt" 
+[16,] "featvendordreame" "viomi"           "component"    "fixcore"         "dependency"       "readme"          "zone"    
+[17,] "logging"          "speed"           "virtual"      "pending"         "featcore"         "convert"         "robots"  
+[18,] "event"            "import"          "limit"        "properties"      "properties"       "miiovacuum"      "dreame"  
+[19,] "poll"             "dependency"      "error"        "navigation"      "action"           "adds"            "fixes"   
+[20,] "png"              "script"          "upx"          "segment"         "revert"           "remove"          "max"     
+
+      Topic 19          Topic 20            
+ [1,] "fixmqtt"         "update"            
+ [2,] "firmware"        "roborock"          
+ [3,] "version"         "readmemd"          
+ [4,] "segment"         "segment"           
+ [5,] "refactormqtt"    "chorerelease"      
+ [6,] "chorebuild"      "chore"             
+ [7,] "automatically"   "reset"             
+ [8,] "fixvendordreame" "message"           
+ [9,] "mapping"         "issues"            
+[10,] "dummycloud"      "vacuum"            
+[11,] "connected"       "paths"             
+[12,] "commit"          "fixwebserver"      
+[13,] "github"          "typo"              
+[14,] "icon"            "mqtt"              
+[15,] "adds"            "map"               
+[16,] "commands"        "instructions"      
+[17,] "map"             "featvendorroborock"
+[18,] "featcore"        "ignore"            
+[19,] "info"            "workflow"          
+[20,] "improve"         "active"            

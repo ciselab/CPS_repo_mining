@@ -1,0 +1,78 @@
+Project: johnny-five
+
+Words			Topics
+clock			1
+scaling			6
+duration		7
+improved		9
+nitpicking		15
+sensitivity		15
+time			19
+speed			20
+
+==============================================================================================================================     
+	  Topic 1         Topic 2       Topic 3          Topic 4         Topic 5         Topic 6           Topic 7        
+ [1,] "support"       "request"     "nits"           "update"        "examples"      "adds"            "fixes"        
+ [2,] "adding"        "remove"      "lint"           "contributors"  "proximity"     "boardcontroller" "pin"          
+ [3,] "controller"    "sensor"      "fixes"          "lcd"           "regenerate"    "generic"         "pins"         
+ [4,] "missing"       "master"      "style"          "ping"          "grove"         "light"           "expander"     
+ [5,] "bmp"           "comment"     "grunt"          "joystick"      "updated"       "enforcement"     "tests"        
+ [6,] "accelerometer" "badge"       "gruntfile"      "issue"         "sensor"        "firmata"         "accelerometer"
+ [7,] "multi"         "additional"  "minor"          "programs"      "diagram"       "commit"          "address"      
+ [8,] "mpla"          "cleanup"     "firmata"        "check"         "consistent"    "button"          "board"        
+ [9,] "adxl"          "tinkerkit"   "stepper"        "program"       "output"        "temperature"     "boards"       
+[10,] "altimeter"     "module"      "button"         "imu"           "motor"         "rename"          "pcf"          
+[11,] "ready"         "param"       "issues"         "diagrams"      "readme"        "relay"           "analog"       
+[12,] "sonar"         "links"       "lcd"            "changed"       "keypad"        "refactor"        "component"    
+[13,] "resolution"    "function"    "imumulti"       "sensor"        "regen"         "thermometer"     "digital"      
+[14,] "user"          "images"      "adding"         "files"         "mb"            "fixes"           "boardjs"      
+[15,] "gitter"        "clean"       "multi"          "accelerometer" "fn"            "hcsr"            "read"         
+[16,] "module"        "task"        "digits"         "keypad"        "shiftregister" "master"          "mcp"          
+[17,] "closes"        "motion"      "implementation" "tests"         "removes"       "examples"        "stepper"      
+[18,] "dht"           "constructor" "jshint"         "functions"     "diagrams"      "tests"           "comments"     
+[19,] "clock"         "tmp"         "continuous"     "constructor"   "markdown"      "scaling"         "migrate"      
+[20,] "nunchuk"       "imu"         "comments"       "reference"     "read"          "motion"          "duration"     
+
+      Topic 8       Topic 9       Topic 10        Topic 11      Topic 12       Topic 13         Topic 14     
+ [1,] "update"      "board"       "remove"        "class"       "readme"       "request"        "led"        
+ [2,] "lcd"         "closes"      "button"        "calibration" "updates"      "board"          "examples"   
+ [3,] "program"     "controller"  "clean"         "option"      "board"        "travis"         "servo"      
+ [4,] "thermometer" "cleanup"     "removed"       "piezo"       "generate"     "master"         "pca"        
+ [5,] "examples"    "update"      "support"       "temperature" "remove"       "led"            "breadboards"
+ [6,] "list"        "servo"       "altimeter"     "events"      "link"         "collection"     "rgb"        
+ [7,] "closes"      "improved"    "mode"          "orientation" "template"     "update"         "instance"   
+ [8,] "remove"      "repl"        "documentation" "based"       "programsjson" "list"           "implement"  
+ [9,] "match"       "adds"        "ev"            "files"       "files"        "cleanup"        "ledrgb"     
+[10,] "mockfirmata" "keypad"      "update"        "switch"      "rename"       "array"          "anode"      
+[11,] "deps"        "api"         "compass"       "remove"      "register"     "servo"          "coverage"   
+[12,] "typo"        "port"        "comments"      "gyro"        "packagejson"  "hardware"       "program"    
+[13,] "breadboard"  "serial"      "examples"      "breadboard"  "temperature"  "demo"           "common"     
+[14,] "diagram"     "request"     "badge"         "driver"      "pass"         "missing"        "multi"      
+[15,] "wiring"      "breadboard"  "hcsr"          "controller"  "update"       "implement"      "error"      
+[16,] "api"         "tests"       "files"         "chip"        "collection"   "dump"           "ledcontrol" 
+[17,] "packagejson" "fritzing"    "reference"     "external"    "awesomemd"    "remotetracking" "type"       
+[18,] "tsl"         "collections" "references"    "adds"        "note"         "install"        "master"     
+[19,] "calls"       "match"       "tesselignore"  "store"       "serialport"   "adds"           "syntax"     
+[20,] "grove"       "restore"     "user"          "components"  "animation"    "link"           "support"    
+
+      Topic 15        Topic 16      Topic 17      Topic 18     Topic 19      Topic 20     
+ [1,] "request"       "tests"       "tests"       "update"     "remove"      "event"      
+ [2,] "property"      "motor"       "request"     "remove"     "adds"        "change"     
+ [3,] "device"        "constructor" "programs"    "syntax"     "board"       "correct"    
+ [4,] "nitpicking"    "api"         "master"      "array"      "update"      "values"     
+ [5,] "resolution"    "adding"      "sensor"      "backpack"   "updates"     "default"    
+ [6,] "animation"     "updated"     "fritzing"    "node"       "request"     "speed"      
+ [7,] "minor"         "comments"    "deps"        "barometer"  "method"      "led"        
+ [8,] "compass"       "esc"         "version"     "unused"     "servo"       "orientation"
+ [9,] "create"        "ic"          "compass"     "missing"    "additional"  "alias"      
+[10,] "method"        "typo"        "methods"     "ensure"     "constructor" "serialport" 
+[11,] "readmemd"      "bno"         "controllers" "travis"     "emit"        "send"       
+[12,] "object"        "lcd"         "pin"         "ledrgb"     "time"        "raw"        
+[13,] "rebuild"       "refactor"    "diagram"     "ledcontrol" "error"       "sensors"    
+[14,] "ledrgb"        "servo"       "files"       "regenerate" "copyright"   "firmata"    
+[15,] "appveyor"      "coverage"    "rewrite"     "jshint"     "analog"      "ready"      
+[16,] "mpu"           "module"      "logging"     "switch"     "awesomemd"   "fractional" 
+[17,] "hcsr"          "switch"      "board"       "fixes"      "stepper"     "optional"   
+[18,] "sensitivity"   "clean"       "updating"    "values"     "instances"   "gyro"       
+[19,] "documentation" "formatting"  "cleanup"     "color"      "commit"      "link"       
+[20,] "mechanism"     "quotes"      "johnnyfive"  "regen"      "keypad"      "esc"        

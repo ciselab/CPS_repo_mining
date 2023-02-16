@@ -1,0 +1,1445 @@
+bd54ee442b923a194ed3b915ed11d420ced17390 Remove git submodule update (#5696)
+00214d5c2a1c2b1904f2caf6f0d5ddfe952331ff IDF master 3e370c4296
+381e88ec750d8c694d1218bf2529d550d209d4b6 [UART] check if write data is valid
+f87107dedb6aff148622672376ae6a4aefdfd80c Implement Thread-Safe I2C based on ESP-IDF API (#5683)
+ce85cf03cc46cf680dbf5a1d9666952c5e23833d added comment for user clarity (#5724)
+f2a20e8a38a3a0e4b5fd43d31519d7984b868678 SD.open() new feature for creating all folders in path (#5721)
+c5bb8334d7e958912b1215239525a19cb6f69584 include pin_arduino.h for variant USB defines (#5719)
+6de7f16f2894cff717d02bffe71ee826993e4aab update adafruit boards for 2.0 (#5718)
+1688b7c17941c92e133a3997ebbbf4a8c219a413 Fix analogWidth for ESP32S2 in esp32-hal-adc.c (#5711)
+36ff4426985a79427f553b864407324e64b68378 bugfix: off-by-one error (#5648)
+93f10609f4784fbe5a1580021553c1fa4a72dcc7 SDMMC frequency selection based on board type (#5688)
+67583e84d600deeacc7a4813ac4e4ffd3f530093 Return size_t instead of uint8_t from BLECharacteristic::getLength().  Allows large MTU to be used. (#5687)
+108e46716461b84fbb53814e45dc18a19a79fcdd Enable progress bar on ArduinoOTA upload (platform.txt) (#5657)
+91bca6c074b80a6248c3b64703df28a277615287 Fix compilation of HardwareSerial.cpp (#5677)
+204f360dce31649259102bb633c218216000bef8 Append '/' to an URL with empty path in HTTPClient::begin (#5634)
+3f06a38f690b6a19874e3f3248989441f58948e0 SD_MMC max_freq_khz is set to HIGHSPEED by default (#5631)
+2f6f2514008a6a235aba373644d4df5e58c32f1d Fixes boards.txt entries for the atmegazero_esp32s2, and also the platform.txt  --flash_size which is not letting the board compile due to its 32MB size. (#5673)
+e4acfbc54ac6c07c9b05f03d00b0f15d6a7e221e only use ksz8081 for idf versions later than 4.3 (this fixes compile as component for idf 4.3) (#5599)
+79d53bdc4c8e8e4e609a183f593c858d73cd288a Update ESP.getChipModel() to support ESP32-S2 (#5598)
+f3f6dad14ab42010ebd3999281dc26551609d37a TTGO T-OI PLUS RISC-V ESP32-C3  Development Board Added (#5576)
+317be68cefe4678e49f712e263da8064b75c7d68 Merge pull request #5685 from pedrominatel/docs/integration_with_wokwi
+1f4dd7f1316e06623a447dbbb8eb6596ac4583b1 Merge branch 'master' into docs/integration_with_wokwi
+8be2f7b1cc152dd66538676dee308f24ae32b098 Changes according to the PR review
+9f827a66d5a6858b31da04c56e0e387599dd5597 Update README.MD - "Type: For reference" labels link (#5619)
+e1cdbd7816e2c8255fe5227cba62e0684823201e Minor changes on the blink tutorial
+7a35be3e7e8777a449542de87ec80eff8889029e Added blink example with Wokwi embedded simulation
+078671d273cc203df6b87c5aa1a11e3f1235f25e [HWCDC] Improve HW CDC Implementation (#5643)
+541cef91496c6c591bd9932b5fb5db3e93a518ed [USB CDC] Fix data might not be transmitted until more is written (#5652)
+6dfaf6cdd4e9c9701e97cfa20101e74daabc22a7 Add dummy test for self hosted GitHub runners (#5521)
+92ce408f4c71d235f0961a265e8d202f9fd570d5 Merge pull request #5616 from pedrominatel/docs/update_for_release_2-0-0
+453af3800cebbc89a5a3004086da54da10b066b4 Supported devices table updated due the 2.0.0 release
+44c11981d2159565c551028f2498f65764607f74 Added UM FeatherS2 Neo to boards.txt and added appropriate variants. (#5615)
+9eea85f9ffaaa50fbf15ea704670c82854c95345 Check if m_pServerCallbacks is not null before calling method. (#5603)
+24b76cbb14d0ec36086133d4cb31594fb54e0f6a Add string constructor and concat routines taking explicit length args (#5586)
+4a55ff970dc68035c18663ec4728ac287b991ded Add support for the hardware CDC in ESP32-C3 (#5614)
+a62979d8a062ecdb36f4c2d8d82aab606847da95 Add missing upload.flags (#5589)
+1f59c5abecc17fd450a5806362d199c3aa4f6c25 Adds HardwareSerial::setRxBufferSize() (#5583)
+0730e0ec938f3cb6c6a5eac937bc96f747ad0d16 Include nvs_commit() on three methods (#5309)
+c45cff5f839317699c63b428cfa06aa4e7f60d1e Implement USB HID Device Support for ESP32-S2 (#5538)
+b1d072df9fefe1db61a9b060ad3f5b7d50dc3bae Implements UART SerialHardware Refactoring on top of IDF (#5549)
+929cf2c2d587cd3295c3318acf619419fd5756e2 Add ATMegaZero ESP32-S2 microcontroller (#5569)
+87853353db743c5ca96e718e0999c21a23b03180 Add SparkFun ESP32 MicroMod microcontroller (#5556)
+e265bd0d7c77ce1bd31f572fe34845de7a9b59e4 Add new board (Deneyap Mini) (#5531)
+94809ce38bd5fe0087d865244f177a084c4d33cb fix: timerRead() is returning the last read value, not the actual #3434 (#5498)
+29455a044770e88a1878c5c6cb6e82512c0c839f Fix issue #5507 "Constructor WebServer::WebServer(IPAddress addr, int… (#5509)
+78499c459bb4d42017f8aa7f676d938feaa95f08 Added Franzininho WiFi board support (#5570)
+ce680708ec1a6f2842bdc64d6269167354c1a9b3 Fixed the external link to a new tab (LOLIN boards) (#5571)
+90c01dab77f337a35ddd81eb6f4d49bf503e781d Fix build error in ESP-IDF
+000d967db3d493fc71d1cf0bc307ffba0678843f Merge pull request #5547 from pedrominatel/docs/wemos_boards
+44dd99f5a56a0b4e9a324fddb883a1ceb598a153 Merge branch 'master' into docs/wemos_boards
+b580bb23fdcce0d3063b0b0f766a74e32bd8ea67 Add log_buf to pretty print buffers
+a7ea737f301aefd1e0742eba74fc0057e6e92378 Added LOLIN boards o the boards list.
+2af8cc34850c445b1b0694653f086b9f9b1f52f9 Fixes Touchpad Interrupt (#5527)
+e5bd18d6aac65696483b56e8f33f9588f16c7b63 Fix I2C Scan for S2 and C3 (#5528)
+a4118ea88987c28aac3a49bcb9cc5d6c0acc6f3f Add ET-Board BUILTIN_LED pin (#5490)
+c4fcab28e42813e4e93a2b3eb9f445db14ca2006 Fix issue #5506 "WebServer serveStatic () can cause LoadProhibited exception in _svfprintf_r" (#5508)
+0acbe781f50540290a0d38c1fb0966a3088dff7e Increase default timeout for WiFiClient from 3ms to 3s (#5496)
+0b0dfab3cf2bda26b02b2845f2f7848c209e71e1 Fix race in log_printf (#5523)
+5fd737925fc766a66e228da6e1bf33b32e0edee0 Fix wrong attenuation being set to pins (#5522)
+5bb8177aa1feec665938be97607b526a4f0ec0bb Add initial support for USB MSC (#5466)
+be84c8219c251210afd87cac71b8ef3527b601b3 [WiFiClient] Default connection timeout, when no timeout provided (#5487)
+31127f4260cc643493b619064abdd409511e2b2c Support for Transfer-Encoding headers that specify "identify" (#5486)
+4365a45401bf764c2908ba8bc206028f872089f1 Fix WiFi Deinit bug
+023ae75b9718a7e0f14b8ebe246b68339d755dd3 Rework pulseIn to work on ESP32-C3
+c5a1f3efd77e9b74c52f0a359ba3b63ea30c5aa1 Corrected CLASSIC_BT_ENABLED to CONFIG_BT_CLASSIC_ENABLED. (#5471)
+9406f8e464c6f82470a8f8c6f47425be6f2745c3 Weaken tinyusb callbacks (#5475)
+65eafd16b5328a42a8ec6bcaa8aaf26f0ad9729f Fixes ESP32-S2 LEDC PWM #5375 #5050 (#5452)
+d5a98f9a3948a78fc6dd712aebbc3d10a25b36c3 Doc: Updated Troubleshooting file (#5430)
+3780b5c9244761b511a67db3584e59663efdb124 Unbreak integer to string conversion functions. (#5423) (#5438)
+1775dd1faab030ac0bb1423225ed698b61c4823d Add ReadTheDocs CI (#5456)
+6972695d95039b990008d45389baf76bbf25f0ee IDF master c69f0ec32 (#5449)
+e0e5c88658a6ea4bdab733ed61eec422b180855a Create PULL_REQUEST_TEMPLATE.md (#5439)
+6e47e18a1b6f18d5f0b9b21eba2a202ee30601ef Add files via upload (#5433)
+34125cee1d1c6a81cd1da07de27ce69d851f9389 Examples update, add a note for configTime() that only one ntp server is supported by lwip (#5343)
+ee24736042d72dad6e14398d7096a4957325fd3c Update README.md
+5458df0a5435db0914d24770865a93e6d35bdab3 Fixes Serial.end() hanging on ESP32-S2 (#5434)
+e12d8c8ff1a241160fc38d2f805c5ea169be7a5e fix: WiFiClientSecure connection timeout (#5398) (#5418)
+4ada3f5804e8165680141653377826d30a4ca364 Fix Windows USB issues
+268595c743084553a9f44153a15fc327c7eefb8d Various USB fixes (#5422)
+4a0305a05e195b9e8c338c9c07cdb6eaf3dde2df Fixes SD begin() end() memory leak #2897 (#5419)
+6393dbc91b235e297f3230a9380d126e9f784c41 Fix gh-pages update script
+49df8778f983ecf1c8c0965292dc36aa825c9e7a Merge pull request #5417 from pedrominatel/docs/readme_docs_update
+f79411f3d36dcd20cba8a7fc9de8570082b1fecd Links to the new docs updated and new docs build badge added
+db4e7667afe0e169c5f00567f4b59ab8e0fc1532 add callback to HTTPUpdate (#5408)
+f64ca2e084eecaae2f6bb0e2f73c862c3d15fb50 Fixed typo in comments. (#5407)
+1effae46ea470f3d4937b4fbf007bf4d1e74fd50 Docs: Initial documentation structure using Sphinx (#5355)
+d9833f9b6d6a34e7d9ad3666c014605ca8318d5b Remove mkfatfs tool from package json
+0aafa05e8f4ab51a08d405c53dcb5ef8ef21f15e Added function to retrieve the amount of data received from an BLECharacteristic (#5339)
+16f4b0f5baf4d8fe4c679f478dc259aadbb3b68a IDF master d93887f9f (#5336)
+780588dce3d975e4a693cf4c596bd3cbf5a69aaa Remove undocumented and uncontrollable WiFI RSSI filter. (#5393)
+eac8b2def3538ace65cfd888d0c73c92c7575c64 fix port{Input,Output,Mode}Register macros for chips with <=32 pins (#5402)
+a9bd39de666557c9ff0daf3540a6d02afd45a05b Fix pin attenuation being overwritten (#5399)
+5eda278177e536e44fb3e22eea965ab091f7cdd2 Update camera example (#5397)
+c8a4010fa6a4a3d5ebdba3ae8b648a6d36fd59ba Rename LITTLEFS to LittleFS to match ESP8266 (#5396)
+dd25e2b9d6ccab0bf7a91fab5693c8f340f72601 Fix some WiFi issues (#5395)
+cf6ab9c8a39ea75f3f505293818a3ef5e564b023 component: Remove circular dependency around 'main' (#5391)
+676f5cfe30d1130baabb07b4e1f4e51f9677042d fix UART FIFO test for being full (#5390)
+f4f1c8956beeda99c376b86c7ba3eff1ba431581 pinMatrixInDetach() has wrong parameter (#5385)
+cbcba53dff1c37f5d078df9023fbde0fcc0462d6 Improve error message when ADC2 can not be used because WiFi is On
+c37557c711ba9cd93dd4f37cef0db226e03f7912 Update .gitignore (#5323)
+8f46bade7afe7b38f861b9da8c7284b3988dd7b9 Fix hardware timers
+21947ebe76cf6380fe06aa885390b86cc477709a Make String::concat() faster for some types. (#5307)
+c7bdb234bf6ccd2a96866b3344c766a6f1c174cb Update stale.yml (#5299)
+cf43d174b7f64c20bb3499c82739b7240742df8b Add FTM support and examples (#5272)
+b1bcec08f85b1d204a7fe5368147f6c3f43be78c Update boards_manager.md (#5296)
+46d888eb68ae895aaeef41edd77362186680e512 Fix #5293 by adding missing dependency to nghttp (#5294)
+1f4f2b6e9729aa9adeb267cc8b3c9faf06036a57 Enable clock output for Ethernet RMII on ESP32 (#5274)
+ea236e28e53d248b98bf00a69b98f9cdb02cf54f Fix incorrect Flash Size in Esp32c3 (#5279)
+5ae3e836f9de6f3e850f8ead43e9e357475121af Fix wrong password same SSID (#5124)
+eca328e5765827942f66aaea8cf52a674806a1fe Add support for build_opt.h in the sketch folder to use additional global build options (#5237)
+5b5cbb49264d3415e8c29efdf21b63266c764944 Fix softap_config_equal compare auth_mode/cipher #5115 (#5121)
+aec2635b07db3e6bc1792c64b3d60c49ec44bfc2 WifiAP disable insecure TKIP (#5122)
+e7e94ea2471a1fe953d644a46c910dc003f95707 Enable I2C_BUFFER_LENGTH definition for Wire lib (#5172)
+b5ee7ddeed8664c71f3afe18d15d015f6b437a98 Convert hall read to use hal/idf (#5268)
+10602939cc1b81d10cdb74d0619c5d6ef7dee208 Added support for Trueverit ESP32 Universal IoT Driver MK II (#5269)
+23820874ecd1be9b3831d9cd3ff271873f8df993 Added the README template for examples and libraries (#5228)
+4f9e583b29040bcefabd54d981c38324abb2ee7c IDF master 1d7068e4b (#5257)
+7f87d0fc3aa80fcc6584da8ccb4e443816ee8836 Fix compilation for use as IDF component (#5265)
+90fc68d83f4d8a4d45a2da37a6a24abc99772105 doitESPduino32 - Add definitions for SPI pins names (#5248)
+4f8e5b54b7f1d3f0b200cdac37972d657c918eb8 Add new board (Deneyap Kart) (#5236)
+483a424d0af38ec26f11481c3dfce788bd83395c restore apache-2.0 licence to to BLE library (#5261)
+e7d0ad2efd9d2f7b7a01d31b64c903380bd8cc18 Update BLEScan.cpp (#5241)
+77f504453fa459c945816cbaab9fd6c00d25d832 WMath.cpp doesn't include Arduino.h, where makeWord(h, l) is declared, common denominator type therefore is uint8_t, which is in use already in Arduino.h, too. (#5230)
+67de199bac9064d88cf4be5b74bb464eca3a3878 add onMtuChanged to BLEServerCallbacks (#5222)
+39155e70a6b2e0673d94f39bfc972d032c174a5d ssl_client.cpp: Fix parameter name in _handle_error. (#5217)
+f385ee421963a431ab108820599e2b0b19a8be7d Fixed labels on the boards pinouts images (#5213)
+e30b821be13a5543fd8dfa30a00b3ea42d74107b Add missing Wifi Provisioning dependency (#5203)
+cb7aef1e886ffe43213f9a090e0a8968205a41df Fix crash in WiFiClient when read() called after stop() (#5197)
+fb513c79fa1e717b8f2a2cdc5f61dc5897ce1f7e Add uPesy ESP32 DevKit boards support (#5144)
+90d3ae25af576ed918a3d6ef807996fcbc69675d Added support for Trueverit Universal IoT Driver (#5219)
+a618fc1361b08aa968407dd81b7b065cca207f46 IDF master c13afea63 (#5214)
+0db9e2f45b50a261dad997701af5c892bf198855 Update esptool
+a1d8b959b05e3fb1391883ce6f9f2ed87af7da0f Fix length typo (#5189)
+de66c39f04880e3ae05501d7107762381561fc69 Bump library versions to 2.0.0 (#5182)
+1b5696a534756dcfb373c3e9811d8fb0d643eaa7 Bug fix for Heltec boards defintion (#5180)
+955675e7124bd3d41e6ff8b5d9505f624e7f5338 Adding build.mcu to save name killed export. reverting.  fixes #5174 (#5177)
+2082945d36db3fe1f72cefdb7111c285c8402539 Make LOOP_STACK_SIZE user configurable at compile-time. (#5173)
+0d6b1422281e56e53cd30e16e5e31bf183abf65a Update BLE_client.ino (#5156)
+7c3a82a52591894bf31726c64badf68e31817df8 Fix (en|dis)able typo on BLEAdvertising start() (#5142)
+dadc101506347c0ab776ad45151b4f52c2c82419 Add files via upload - CONTRIBUTING.rst (#5138)
+1b2f34b0d6a668ba0e5c353f6c83dcab500c5028 MDNSResponder: Add method to get TXT key values. (#5135)
+76f0a80fe7259edf4ffdfad586eee8d81068a881 Removed second NTP server from configTime. SNTP only uses one (#5127)
+5bfbcfc91cdae6b0f379dd72ba1aad11aa6e2bc3 Added condition to only use tinyusb as needed (#5123)
+7a53c2d3718abe3020b85f385eb8a629b3003b1a softAP should only start modern WPA2 (#5114)
+cb2fbe445dff32e6f0ee02e07e186795c4236bbf Added new boads pinout images for ESP32, ESP32-S2 and ESP32-C3 (#5133)
+48becf8966cbe8b6563f6fd659998bd2d18faaab Update boards.txt (#5113)
+15f8853819272f3d9d975060409a4e2b5042f55d RMaker_readme: Minor corrections (#5175)
+7856de7a57420e494176c16c5138174fe2c1dad0 BLE5 features to use with C3/S3 (#5085)
+e62ff6dc375d1e75682ce9d79248134d18600680 RainMaker library: Minor changes (#5092)
+182499071af81c0b19f9424f6ba44568842af66a Still finding missing bits for the tinys2 board definition :( (#5098)
+cdd48e4ee4e3dd0ea3c1554b03fee610bbfa856e Re-add TinyS2 to boards.txt (#5093)
+0c3597f8d73cfc2490d6839c68869e585826bda4 readme: minor fixes around chip names (#5097)
+82161bebe357b78d1343fa0878e17c1fc8c3b315 Use cpu_hal_get_cycle_count for all chips
+55b8f67d80730331381a71ce37d2e9adb9c29111 In esp32-hal-log, direct calls to ESP_LOG_x macros is more efficient than using intermediate function log_to_esp (#5081)
+9c20f1bdd0fdc6a71b3f9c047a6582e14e816458 added denky boards (#5079)
+b45cf11ff1eae5cc443914789298abe093b8d204 Fixed ESP::getCycleCount for S2/C3 (#5075)
+fb0d63b5763b47b4e9d0d7cc80804a4cc7973636 Update README.md
+5d9b98c9b04e591044078ac2304da95e8c7e997b IDF master cf457d412 (#5073)
+11f89cddf6f331bde53c09b2edf6107952867269 WiFiClientSecure fix flipped cert/key in comment (#5065)
+01c8cae0dcf59267e856ea5734ca7ed4bc259278 Added method to change the ledc PWM frequency programmatically (#5003)
+57cf2fb9f57849050f736323cbbb8adf735cb8e4 Fix possible string overflow in BTAdvertisedDeviceSet::toString()
+41c372c143a9585d67110782e735d80813f1889f [2.0.0] BtClassic Discovery with info without connect (#4811)
+223acb3511d671892fc85045ee41100ec3317ab4 C3 toolchain uses github as source
+f6c9faf4daeff4ac6bcfafd55dbb1fb922b304ed [2.0.0] FS::name() returns the item name as in Arduino SD (#4892)
+89e7893b1abdaa5901c216f75e54f4653c6cec8d [2.0.0] Add BLE characteristic callbacks overloads (#4832)
+7a4e7066f95844a24486951d24a648e4dcb0e639 Add setMTU function to BLEClient.cpp/.h (#4999)
+f3dca15a6f9e79b360e0166637ebbd105dfc8379 Fix TTGO Boards missing upload parameters,add Twatch revision (#5063)
+9f1330c70c32cda856a37b5e0e02a40ee56132ff esp32s2 temp sensor (#5044)
+ec7aeb4903407f77c264669e4e030e81dd4b7ca7 Removed ProS2 and added TinyS2 to boards.txt (#5037)
+9a518cd3d7efe418fdb974d0054d139d3898d368 LITTLEFS update - partition label and multiple partitions, idea copied from SPIFFS (#5023)
+e6ba8c7ac9c55fda98253c9aa4fdc1aba9caa44e Add KSZ8081 support. (#5061)
+72eb3f32fe4c7f333b3ea91f111abcb2d7296ffd Add Adafruit esp32s2 boards with custom bootloader, partition and upload.extra_flags (#5056)
+66b11ff2a416bd9369b5ca36aeffb34e48d1b1df Update platformio-build-esp32c3.py
+404a31f4455d2459dad0b6533b7bfa70347e0044 Initial Esp32c3 Support (#5060)
+371f382db7dd36c470bb2669b222adf0a497600d Fix Serial RX and add option for FIFO Full Threshold in Serial.begin
+425619dfea30fe6a6820029a44a3a4705cf334d0 Fix upload over USB CDC (USB serial must be set to 0)
+aeb4a13aad1d93bd1e337932ec18b67d8c78659a ESP32S2 pinmap (#5015)
+864597198196c8dd2fed999daf02e4f889238cbc Fix delayMicroseconds() to use 64bit period
+5502879a5b25e5fff84a7058f448be481c0a1f73 v2.0.0 Add support for ESP32S2 and update ESP-IDF to 4.4 (#4996)
+46d5afb17fb91965632dc5fef237117e1fe947fc Quote {build.source.path} to allow spaces in path (#4868)
+66746750a43789905cd1ce19604a9f545242dd73 IDF release/v3.3.5 85c43024c (#4976)
+e7a2759b65e1bf41227aad46df57425a92dadc50 Allow STA SSID length of 32
+2ee66b54f039184e52bd8827716344a9348ab373 IDF release/v3.3 c43efe150 (#4936)
+2d3c57635d6ef7d180a1e292e5e6d8b467228afa Fix: WebServer: Digest authentication failed for some clients
+a299ddc99e79d473caefe04116daef31c0520936 Change send_ssl_data to use size_t instead of uint16_t
+93bcf5f2502dbc448ddb93cdcfb789ce14e574b9 Allow passing custom HTTPClient to HTTPUpdate (#4959)
+bd4133426523cc4db35588add881f5ab78f8f4c4 Fix ETH not enabling DHCP when configured with INADDR_NONE
+a451c9ef0de45fee5f73b77f73723566b6949eac Fix HTTPClient crash on GET() for url with redirects
+d362e1ee1adeb6c5e4980457de8c3612235feea4 [BLE] Allows you to specify which channels are used to advertise. (#4954)
+33d9f4aa1990278dd7e161c490c771f5ea46e9af Update GitHub Pages Builder
+63c51d51fb580b9177b9dfaa32482e43add7f7f0 Update HTTPUpdate.cpp (#4942)
+5b845272ed5357a3ef4ca0d118a21e995d69b047 Fix BluetoothSerial TX Stall
+5da4a47bdf6c805ed865c5830e8b8669d132dcb8 Update debian_ubuntu.md (#4907)
+3253de879235e35b48be3b9cb656680837028687 added scan_method = WIFI_ALL_CHANNEL_SCAN into wifi config in WiFi.begin() to let the scan choose the nearest / strongest AP in case that there are multiple APs with the same SSID (#4947)
+a31f30529d3411a0a4a6549c75aadd6e725e7f60 fix spiTransferBytesNL() writes past end of data_out
+35643bdd9b2224fa2231969f2f8aabfec795f340 adds esp8266-style hostname setting (#4938)
+8dc70e0add06e75da5a255ba94fe86df98ae5ef1 Revert "Update licenses"
+b42739dfa4144321e74ac0b6ab9c3ba464acc944 Update howsmyssl.com root certificate
+93d5b8c6724a2d6823ea67b364ca080546d415ff Fix String::replace()
+f815a7c6361aad70acc602b486480c931371b670 Add WiFi.softAPSSID()
+23f6e81d52d4a1a77e9e29a465800e27590b52ae Fix AsyncUDP reporting bad address and port
+e8311b00ae2575426d75637fc9664c84d9b91e2d IDF release/v3.3 0bfff0b25 (#4895)
+4d95e3a7ea072ac61ff0eb24b3304db47de96712 Fix BT not starting correctly and SPP Coex not working
+7dc769d81cc046e735270c9a43a9b318ec205197 Board name change (ETBoard -> ET-Board) (#4858)
+4204d1e60a2ab62afd0a14f1168879ed843deeb2 Handle PSRAM libs in PlatformIO build script (#4911)
+d7fda910fbd6cbd355ef2735c46e4f2f784a94ba Update stale.yml (#4902)
+f7fc8ab37714efc1e00ef640a3e4f51ca647fac5 Use HTTP method table from ESP-IDF's nghttp (#4900)
+0e55f775d3bd92a1bd6da1fdf8ad8d38ae913faf Fixing issue in String::remove
+22a488cf2391ddfbcd2d85a4fd0c123399c6aee5 Fix String::clear() not clearing the string properly
+6e7cc5210dd210603f4e49cf677ccfa8e055b531 Update pins_arduino.h for FireBettle-ESP32 (#4867)
+7a6900a1f23daa28d2b0707ca873788b8ad94db3 Correct issue 4871 - change space to underscore in boards.txt setting lolin32-lite.build.board (#4885)
+0e0a7565e849148aa78eb0795fc29ff515f4bd05 Remove tools/sdk/include/nimble from include path (#4891)
+bd3addeb8e9b05766979caf32b74ee0a0e2ae4c8 Fixed use of Bluedroid instead of BT in HAL. (#4879)
+1cf1c8eb79415cbf4e98da19cf1ca60564fc3d83 Fix several SD card issues (#4876)
+3fe7c2e8cdcc34af0f5d3c55f8b4cb79ef5318cf Add div by zero check back into WMath::map (#4853)
+5d00b6eb16e1fb411ba0baec5d9a96db160dcbc8 Fix case where EEPROM will try to return longer string than it should
+419ba32432a34b3299edb61b942a9f3edc801f57 etboard pinmap upload (#4748)
+a0ddd8a16e744b04ee58a7015742b582bc11eea7 IDF release/v3.3 7a85334d8 (#4813)
+b8dab5ed1a51fd150869571bbe458a8c51742777 Added possibility to use ESP32-IDF log insted of redefined one (#4845)
+2141313148d53ba94b2c645777e127434953ae57 Fix PSRAM support (#4850)
+44aaf13225e349f75f63fdcc059940f451844c02 Added BLEAddress operator overload methods (#4839)
+4b3f5c8ed463b18afe28d132d607bbf164d8eec9 Update licenses
+c282cd8f5fe1f856528f2c83d5117a6de8443028 Remove temp buffer in WiFiClientSecure::lastError (#4822)
+7e59971d2f19d0c63c82130831c517887465fedb Add Lolin32 Lite and TTGO T7 boards (#4819)
+f4b17b3033d2aff89914ba9460456eed51f2fb6a Allow releases from different branches
+1ab550f6f27ac8245fc9f0ee2f076329ba9ad457 Changed BLE notify_callback from raw function pointer to std::function (#4737)
+9be784f69b696d5bbb189a2fe5f1750ce2855426 Improve cleanup in BLEClient (#4742)
+7cdfb8bc7cdcb9e47931e28a65b7a587a721047b Refactor BLEAdvertisedDevice (#4739)
+f13ff656910ef5d93f6adce1f1a80f982fb469d4 AsyncUDP: Added lastErr helper variable (#4789)
+d964873840c8e74b9532d72a98acf80e282c9dd8 Added more inclusive CORS policy (#4767)
+15bae92a72c102331e7eaf7dcb439e8ad6920184 Idf release/v3.3 d8082b7f3
+6f23cd5988aad7f18807e15a691690e6b03ef1cd Make sure that HTTPClient disconnects from the old server if redirecting to new one
+ad4cf1461bea3fb1378402b572383813ea9c2a06 Rework setHostname for WiFi STA
+5de03a39189a95962c3803d03e66bd7f958ac8c0 Fix WiFi STA config IP to  INADDR_NONE results in 255.255.255.255
+4b385690bc4171b75b398e57fb1a3be33c5980f4 Move default Arduino partitions to a separate section (#4747)
+dd513df124bd39736e96c2b03b23dd48bdae0c97 Add arm64 support for mkspiffs
+cee659563d38434abbe7fb3523f186f0f308bffc IDF release/v3.3 7e63061fa (#4726)
+55442a05a445db3dc35bb06ec6b19d7c75a27e91 Remove an unused variable 'channel' (#4725)
+c9b3e512dde1cd4ff87698251f78a81b16645590 Make BLERemoteCharacteristic::getRemoteService() public #3367 (#4735)
+8d0e68db4f73c6243be4e9c5955ef1eb842dd95b Added parameter to Preferences::begin to select non-default NVS partition (#4718)
+d2530850a38af18ada5e805f0f4539e0048c43b3 Copy platformio-build.py in the release package
+7ecbb483da99e004d9b152647008a251dfa85edd Update toolchain and move files to github
+b0e896e9ae7df971de333307c5bc9907cc81a0a8 IDF release/v3.3 cd59d107b (#4708)
+08f4665775067c4778445709f382d2a649b61311 Change fetch depth for release so that history can be fetched
+2452c1fb539246e47a715b74a3ad25b8a7ebbec7 IDF release/v3.3 71df1f742
+5f98370707ed0bdc66c994d185c90ddaeebfa692 Add IP101 support (#4620)
+81b9130d8d714349c54394b316ed781d0adad456 BluetoothSerial SSP Authentication with callbacks (#4634)
+434d02c49f0ee05448ba360a45568c47d4057971 BLERemoteCharacteristic::registerForNotify: Permit event registration without updating descriptor. (#4659)
+15db2971307024df49516b7f657db9c6a4037832 availableForWrite (#4664)
+fe093a5e35b113cc1df8003d46a9f72b85bc1e6c Sanitize compiler warning in BLERemoteService.cpp (issue #4660) (#4669)
+a0ef17a9ddf2083cc8048b07e7c6ecdf2d56404a Use non-deprecated DPORT values in SPI HAL (#4682)
+be77bd4e27228e10cf7132668f0f1fd2172f4a37 Resolve crash with timer interrupt functions called from ISR (#4684)
+ef99cd7fe7778719c92d6f8df0f10d3f0f7aa35e Add WiFiClientSecure::setInsecure() to equalize API with ESP8266 (#4648)
+b05bdf690418efd28c8468b5cb8345d95ba77e9f Update esptool for Big Sur
+442c63a4c6a4a4c26d69bbaa01556998065f74ee IDF release/v3.3 b4c075169 (#4604)
+d1a4b3b822572be65c9f5faaf8129b51e392c2ab Add loop task stack size config to Kconfig
+7d5bf9e38547463452a52ad131a3f792324906ed [1.0.5] Make looptask stack size configurable (#4564)
+aac26a4d1e2c1a1af8f8793b126aa4f9c9848a0b [1.0.5] Update Heltec ESP32 series boards definition (#4577)
+804c2214990db8132c4349431b1537a38cad8152 Update .gitignore
+3236358dedd91c44c7ff32f7c23f384c59c8368b Update WiFiClient.cpp (#4573)
+82e71f9b5005c4c7a7b1caf247811d34fac4c836 Update ssl_client.cpp (#4574)
+2e123927211a1285ce12fe0090f39279e73212ae IDF release/v3.3 c33fc7821
+6b0114366baf986c155e8173ab7c22bc0c5fcedc Fix logic in SPIClass::setHwCs. (#4559)
+18832bb418a8cd47637e10dfde6ff86f7fb3fe04 M5TimerCam: add LED_BUILTIN & SS/MOSI/MISO/SCK (#4560)
+97dcea2b99f1e51f31480ae359cc544b12b50da6 Update library.properties (#4563)
+dcff2e9774c1a712e601fd62d08a68a5e74dbc62 Separate Provisioning library from WiFi library (#4547)
+6d256b64540e1d8fc46954bd70d3be4728a7916b IDF release/v3.3 68b237fe5 with Disable IRAM optimisation for WiFi
+f6bf0f7aa23089887917448351f3148bb6816aea IDF release/v3.3 68b237fe5
+a59eb5d51edeaf89cdc77843f970b17dcf10afb6 Merge branch 'master' into idf-release/v3.3
+adafd9d7c0e4b5041aea1d0e1662ea3738369c51 Merge pull request #4538 from loick111/feature/custom_variants_dir
+ac9fdeffe4822c3af6180cd482992a1de0982fe2 Allow custom variants directory
+cee7b4237c97bf13a3c9bd05aba0d67edf1894ef Merge branch 'master' into idf-release/v3.3
+954df2fc3e364138f52dae6e9774494d381212c9 Disable IRAM optimization for WiFi
+e41fb08b2ad4b6bb2810d5c48be1fc0ac2631293 Update esptool to work on BigSur
+d8b1fc81c03439d728f1cd469035e22a2f0380df Added usedBytes to match other filesystems (#4534)
+378b6ac0326008577bc13342f9cd093b5d62f388 Fix issue in webserver with Chrome based browsers
+cecef8e930014ab35f680cecf78df13e77e20112 IDF release/v3.3 68b237fe5
+a8e99baeab1738b2b86e2304916a319aa37e80b3 Merge branch 'master' into idf-release/v3.3
+b6cc108d49d56c972aba2c4488361783f59e8033 Update WiFiProv.cpp (#4519)
+8816bb5505b19d91a9159a62e6e772610904c9ef Added #define LED_BUILTIN to all pins_arduino.h that need it. (#4520)
+3274602eb0cb3322859c8763c292018a2660a33b Notify the batteryLevel change (#4517)
+534f0810a6e267333fd219cb07015e957a859935 fix bitWrite macro (#4507)
+28a807306915d68aa584300c91f431a6af22c037 Fix issue 4095 (#4503)
+7494c4e76d5a514c70a66c97998f26d7bdc11b2e IDF release/v3.3 44ec7972b
+486a4c66c42a09c73586ffb50b67bfbe9cb1e502 SDCARD: First sector always written twice if multiple sectors are updated
+c1951670d1cb0013e86d21a354f23a445489eb7e IDF release/v3.3 66d3783c8
+ad07d3693214da70b60882f901d525a7e201e930 Update README.md
+dd1a15478f2635f9840cd2c3035dd03058eecde0 add TimerCAM and CoreInk board (#4498)
+bcb7012a322c8ac2ba2b4eabe907d0cfafcb402f Change variants folder T-Beam (#4496)
+3968821834833389cb40c3a390efb3d147fbd8f0 HttpClient uses Serial.printf() (#4488)
+90f869e7721f73ee480c7490bb5c63493f5e4d06 Fix BUG: Parsing of first line fails (#4484)
+be4d3b6cb87236a749a0abc8288b49cb6b79710b Try to fix issue with GIT 2.29.0
+60606e5ad077661e96278765689ab8c0e0e00bb8 Update on-release.sh
+22b427df0fc61b44a48769378a105745c4683a81 IDF release/v3.3 (#3672)
+6e5be7883811ba910743ebd0215708ca658bbaeb Update install-arduino-ide.sh
+e2452c0dfc18fdad6ebbbd8c7831a256f0f2eb23 Added isKey method to Preferences (#4441)
+56a7ae871204cdf24fab8520ab9f76782d94b599 Trailing spaces (#3738)
+76afaf2d6b0a4ab87db8271f66e1420aa7a10119 Add more options to the AI thinker cam. (#4253)
+c2346c37da642a4539098f4e818d530dd2fbbe03 Add initial support for arm64 toolchain. (#4117)
+3491ca7845b6dac3d69fa2279705275ad2af8758 Add virtual beginMulticast(...) stub to UDP class (#4061)
+0e341a6192b758dc4a62639fb7fe0ea423769522 Add sdkconfig option CONFIG_ARDUINO_UDP_TASK_PRIORITY, which sets the task priority for the UDP vtask." (#4131)
+76cd2e23757944ee5f438d00ac7023260e837737 Fix BLE connection handling (#4137)
+9f7ff009c6c75c5b9d8b8452e4517d1ae776285e Fix parameter to BLEDevice::updatePeerDevice (#4133)
+704b71dabebd55cbf280dc5dfc011cb554799b29 Fix header parsing
+7c0572172c96c9762b1346dbaaa987ba48fa9ff2 Fix for issue #4158: BLEAdvertising - Crash with stack trace originating in Bluedroid (#4182)
+f57c36782fd6104cb258ad8115fbc198f3935648 Add sendContent overload that takes a const char* and a length (#4276)
+3054bdf5a5d4d9fe79d36d0dd1b287f5a70109f3 HTTPUpdateServer library (#4244)
+1014ba40af94ef2f2b4c180825443e313eeebe62 Update ISSUE_TEMPLATE.md (#4416)
+d6b91872cb5785be1382a26cdf7da9fb60a02e13 Fix for espressif#3460 issue (#4424)
+d6b383f84b94655ec8825c9dc48413507fc20b7e Merge pull request #4429 from Bmooij/feature/Add_flash_helper_constructor_to_Uri
+cadbad88506ac49f710439580975de2ed7855dc9 Add partition label argument to Update and ArduinoOTA classThe UpdateClass in the Updater component has the ability to update data toa SPIFFS partition. It selects the first available partition using theESP-IDF esp_partition_find_first() function.That behaviour is problematic if one has multiple SPIFFS partitions.This change allows a user to pass the label argument (defaults to NULL)to UpdateClass::begin() so a specific SPIFFS partition can be updated.Additionally, ArduinoOTA can set this partition label using thenew method ArduinoOTAClass::setPartitionLabel which is optional.This change does not break compatibility. (#4442)
+3cbfa2ffef2e9808310207ae791571b2ff13c85e Add partition label argument to SPIFFS (#4443)
+360e04fa36ebcbcb1aa506820c8a89f209a28f3e Fixing BLE GATT Characteristic notification and Characteristic Descriptor read (#4464)
+57145ade6ffde1e444acf5900513a58263110f27 Small description comment correction (#4471)
+f39024675c720d0a02bcf8ed40b76a8161d3a6fa Don't convert to null-terminated string prior to writeValue (#4473)
+f7fb00632e04d74a7890a77fa7dbbb8ae572e866 #4293 added missing '<tr>' (#4450)
+7e40de226fee6ef7189e9f024ef373dff581a777 Fixes #4435 - WiFiClient improperly treats zero data available for read as an error (#4448)
+ae240a39026d62f3e324eded8c0a1f323fee8648 Add flash helper constructor to Uri
+1287c529330d0c11853b9f23ddf254e4a0bc9aaf Add missing "-mlongcalls" flag to PlatformIO build script (#4420)
+25bd585c250e7ab86cb9e5f29f8eff203f870e84 Corrections of Stream.Find, FindUntil and added FindMulti - like AVR-Core Libraries (#3442)
+d79a1f3d100904c90e089f4fee7125f7e55880ae Add an aditional (void *) arg to the RMT callback (much like Ticker() et.al.). (#3345)
+831f0ac29af1e2f7d174875a5e88d8ab1d97bd95 Rename eep -> partitions.bin & hex -> bin (#4143)
+ee3bb16c774432a96ee465edef8c9ce253f558d1 Fix support for following redirects added by ee88c42c3b5e87a2fc09303f9e82dd8172e99990 (#4240) (#4385)
+d8dca9c73bee0d7d643f87160cf49b1566017e2f bugfix (#4389)
+c3f3497048720f86b5fe3a60c2388034046a4fd7 fixed some typos (#4395)
+18c3345451a8768fe4bc488b0a1e05ceb0dfc28b fix typos in WiFiSTA.cpp (#4396)
+b07f1c11fea33200e0d9c23b30297f62f435bf63 Updated Readme.md (#4400)
+2685a5dd7bba4a5f63ff5d8bd839ef41e5b630c2 Certificate isn't be free in case parse failure. (#4412)
+675a40b25790901a906b5ead57730b3053cc8d00 Fix Not by reference. But the value was updated. (#3279)
+3570d48eb9f2f5fa1e14416b1130c6d7b85f2016 Added the DoIT ESPduino-32 board (#1520)
+f76ec4f50b6e59770c0a51017375137209b4d590 adds debugging to dnsserver (#1046)
+fb6d5ad234729ea4e3b40e5d55684090b76f5b05 Add Inex OpenKB Board (#4002)
+219ff3005b196ebc84c89eebef7794babcfa7a09 Add missing slashes in HTTPUpdate examples (#4238)
+ccab428e4dc67e47a2db22ef66d983164a21e7fc Added definitions for TTGO-LoRA32-V2.1.6  (#4205)
+d2d24a14e0ac00a9abca1b0967e16547e724dac2 add board WiFiduino32 (#4218)
+af119215353b26d944b80d7126bed68e060e6697 Add support for S.ODI_Ultra_v1.0 (#4372)
+82112384caedd69157ffbfdc5d1539f12e07f88e Fix missing headers when compiling as IDF component with Cmake (#4377)
+99aa86647774704e21e71cecd168aba75f626260 Update MDNSResponder::addService to return a boolean (#4365)
+82670b96f88e25e21dbeb09f7ee0dd9ab4f074d9 Fix for missed scan response data (BLEScan). (#4358)
+9e7b13e46dacafa1e7a37179a40752ecfd2e0d6b WebServer.handleClient delay (#4350)
+2243081f85318e7f30bf6e1f0d0ce172a768230e add I2C_RX_FIFO_OVF_INT_ST handling to i2c_isr_handler_default (#4342)
+1f4491f4ee5b26b0e5996da409965b3f74bbf69e Updated AzureIoT submodule. (#4322)
+aa529eb5a0dd89afdd7c0b500ab26e564d7c8421 Fix getString() freeze on empty responses (#4317)
+a9cb7c6d6fbd8c6b1f71506c08b8f474f301b7b1 mismatched parameter names.  Fixes #4310 (#4313)
+45d47e2be0a3c4556870a29e283563d9829139f0 Fix duplicated pin constant (#4282)
+99c94bb4829467ab3c4b20c03868a43b8a1fa317 Set SD state to idle before unregister (reduces power) (#4272)
+f98fc7ee9f266a0a1d10ec711e05184688c6de30 fix hwSerial tx only flush (#4263)
+0957776855284f00283cada540728784121084b3 Reinit updater md5 related fields (#4260)
+d93245d0f50e8138ee19d3879326e8dd910995c0 add m5stack-core2 board (#4255)
+ee88c42c3b5e87a2fc09303f9e82dd8172e99990 Add support for following redirects in HTTPClient (#4240)
+837cc3d271821a0fe6acada9f0ce79e5d28ddb22 Added SparkFun ESP32 Thing Plus board (#4224)
+9b2ae12fb79293fba7b6bf86b874e12155404cdd Added D pin numbers (#4220)
+86e221d087952edccdf3fec34000fc9eba270bfd Update HelloServer.ino (#4219)
+663effa00e74e90b9c89f066ca9dd158dc45b62b Update Parsing.cpp (#4217)
+6f237a84152d59537a012e7bfc3edbabd6adbd9d Fix ttgo twatch & tbeam board definition error (#4212)
+c3c38a8eb57f54265e7f0918c821b2e9649a4d1b Enable precompiled libraries (#4209)
+8fcc91485364b334c51447686bc168e9160d093f Added facility to invert the polarity of input UART bits. (#4200)
+d03f8f1277b67eb873f796e71fe56a7399df975d Update pins_arduino.h (#4190)
+882b12c44e9aca640a8adad16c11cd41c67e0f7b rmdir causes issues in SPIFFS. Fixes #4138, albeit not very cleanly (#4154)
+93d850f78367da29127c6a85c195583d65e35c57 Fixed comment with correct FQDN (#4152)
+4f48caca2ce91e24cd7c3b064438e47a125b88a7 Set scan_duplicate in BLE scan params (#4126)
+80e9e42c3b7a8ad646cd8803c9f4f84e35c9ebb1 Fix issue #3522 (WiFi does not restart after stopped) (#4114)
+494061af264c40141981ab3ac6c298488b6b86a4 WebServer: Fix OOB write (#4088)
+2fd3d042b2deda7685f31f8a92eba9f93c7bd0f0 Fix #4046 Details below: (#4086)
+b551310c37662008c3c940262844617cba267108 Minor change but could confuse some (#4084)
+f30edd040eccb367104f8e646749e8d54588391a Update CaptivePortal.ino (#4080)
+b7c5e502e7d5e45ddc1016e0738df67291bc913c Add static pin support (#4078)
+fa8a1c38d5041dddaeda1ad9671e1c9e2b133b2f fix #4071 (#4072)
+d56267bd8c7aa0980daf847528e55ad4d6bfc3ae Update GetChipID.ino (#4070)
+1f6b0b35f83d1d3f3615c5aeee21f452ea43875d Have BLECLient gattc event handlers verify conn_id (#4064)
+342b9cf2d88cdecd6deb0b405f01a2738ff14434 Fix handling of registerForNotify in BLERemoteCharacteristic.cpp (#4063)
+11d071b1c8ee6a607b6f7580952f32551c1a755c Fix to allow more than one certificate to be loaded (espressif#3248). (#4056)
+f48d9016fd81b54cb2e730beb684176d24770297 Update T_Watch board properties and add revision selection (#4025)
+a55265f74bd007eb7d38f7aeb90c9a7a33d04656 Fix clockCyclesPerMicrosecond Change from fixed value to current value (#3993)
+c1a7198e7d939cab8e6cba8029ddc5a91620f36d Don't change owner if take() doesnt succeed (#3987)
+4d4a1fde36b00acae57f3a87ee654d2173742d58 Added HealthyPi 4 Board Support (#3985)
+d219e56872c0f78e901194b22c261b6310b08f0f Update pins_arduino.h (#3908)
+19ccc479c31d7fe35d0f30d23329a21ac4b805a5 WIFI_PS_MAX_MODEM feature requested #3896 (#3900)
+c18d50cb910a7f186a730ac94d1ec590d779a99e Use esp_partition_* functions in Updater.cpp (#3898)
+80418fadcfb91c75d5100a8fddeb9318a8ef7d42 Fixes UART detach.  Fixes #3878 (#3894)
+8b6d02035294c1d86da0c84e2f8870707322f7c5 added new board Logsens V1p1 (#3880)
+51979169837eae718fa2887f8ab14a9e4a336d63 Fix BLEClient disconnect bug (#3876)
+7e9d42da684f342100848123ee5ccc61e4431cc7 ESP.getChipModel() and ESP.getChipCores() (#3847)
+e34e0b45ded28856baac1a94c854f9a26d1f80f5 Fixed bug where mutex would not be unlocked (#3837)
+ef2b54547e1a7ddbcdbd46dc665e3b54ebc81ca9 Fix issue #3833, data parsing of Eddystone TLM data frame (#3836)
+9856f0cc2892ad66ae3017a1473c3eb447f3b05a Update RMTLoopback.ino (#3823)
+daa8c55667be33bbc0309d3daec1019bf37281df add new board mpython  (#3814)
+af7ec4ead1ae4fe962bace935fc780f3dc3cd99f fix EEPROM class example (#3786)
+9e65ed1af1dbbfd6dc942bd660884ab32d8589ee Process compiler.libraries.ldflags (#3783)
+7a92f89d12f5acbd977d09be9f1a3910267d1f7e Set TLS cert options before calling connect on client, so verify works (#3774)
+5871ca9ce951413114e08c882a13777448a8a029 UpdateClass::printError now accepts the Print object (#3763)
+0dfa5babc214a65fbfc2cba6c173f8228b0f7d03 fix typo in WiFiMulti (#3737)
+7af4490fcc2b9f549414921d9a8ad1392303f4d8 Update SPI.h
+4204869ec9fde1e5a9ba3080f82b4e358269dca2 Extend Print class for 64bit integers. (#3688)
+5999b7ba4686bf8a4fad30fa09801a32d0dafd80 removed double delete of characteristics (#3521)
+7b613c1238c7a3024f16326c267355f5898a809a Added documentation regarding delay() resolution in esp-idf component (#3014)
+cee2359e33e52fef3f6065d61285640a237d8980 Update pins_arduino.h (#4211)
+37a7fb3d6ada8a9230c96e2df999c95ef10fd4d3 Update PlatformIO CI script (#4307)
+9d547a8a441f70755c5b9d385e1092c1728da098 Provisioning fixes for: 1.Space 2.Provisioned (#4291)
+1fd5cd79c52c7896985a5646211c4a169e612b10 Add OTA update feature
+4d98cea085d619bed7026b37071bd8402a485d95 Add Wire:setPins(sda, scl)
+b92c58d74b151c7a3b56db4e78f2d3c90c16446f M5Stack's product offering includes various ESP32-based camera devices. (#4030)
+35d9759fa696be68ae5c0a52d2913e09222f689d Fix for issue 3974 m_connectedCount incorrectly decremented when no connection exists
+09bff5027db3dd698ef62e5b3e44b82312f074cf Add a new board of KITS for IoT education (#3703)
+79f77afc98ca3c7b2ddc76fedba038f2385aa402 update M5Camera pins (#4021)
+594ee6d249f726a0f3335533b911a401d4eb028d Update SD_MMC.cpp (#4020)
+934841e2360e3f3c87354fd5bf9d5789308bf9a8 Added missing wifi_provisioning dependency. (#4003)
+49b76649f13acdb8abaf795015d2740bc5f6b340 HardwareSerial bugfix & improvement (#3713)
+5d9bb5cf5070f269cd72c22d253f3df7a9902b18 Allow using custom linker scripts (#3735)
+c8215315aef8a11529743dd403f2e894350ad547 Add M5Stack-ATOM Board (#3883)
+4d118b36a29684e65425716632110b23c34ee85a Minor modifications in provisioning (#3919)
+2c9b648502f1cfdbe2e9a1ef9c26582718633830 Add support of unified provisioning to Arduino
+5508689ea3ac8309ea39b52a6c079cf76288092b Update install-platformio-esp32.sh
+0f772270fbb32099cad72053755d6b4c7e8e1f82 add new board Handbit  (#3807)
+13e02063d63146096952fc6a6ef0bc3ced5b1203 Move _STREAM_BOUNDARY before _STREAM_PART (#3720)
+9b75c65fc76ea67b7b8420dbc2c8ccc917182765 Add Senses's WEIZEN board from Senses IoT platform (#3687)
+ed220bd0420236e9ff95888f7459f0eb9c97a570 Minimize HardwareSerial Receive and Transmit delays (#3664)
+b50a1755c8b027826d6adce3ca189fc3ea644e90 Use python3 in CI
+bb0a194bb78592cff3e198b661bf36b2d79ee833 fix WiFiClient.connected() (#3654)
+ed59ae6482f6b94dd36848c50f0c65727c26a02d Update README.md (#3653)
+b4a9684a7438e0dd1a425703982b5a65156a3072 Fix SerialBT.flush (#3579)
+1977370e6fc069e93ffd8818798fbfda27ae7d99 IDF release/v3.3 (#3339)
+307b1368dd3688f892d0e75236cb393a3796590f Implement BTSerial onData to dynamically receive packets from SPP (#3649)
+7637a739cc8ade68107d2e6038fa2f6a18a82a71 Fix recent commit d8b2098 (PR #3377) which includes esp_adc_cal component but does not update CMakeLists.txt (#3648)
+cd8523925286a5bb28f3cc41fcc8190130ec732f Added file.close to examples (#3611)
+ac9d04a400b8b514f5ac42743571dcd936d036d7 Add BLEDevice::stopAdvertising() helper method to compliment startAdvertising(). (#3624)
+2195109ecc0c7bdfa17cc60aa5a03ae78ed87205 Added the channel parameter to the scan fucntion in order to select which channel to scan. (#3638)
+8d938c849d994731e5a505ea1663a42fd263daf3 Add HONEYLemon board (#3640)
+cb005fc8b5a24a8ecb12859e47ba20d5e2b51603 Extend BLEDevice::setPower() to include powerType parameter. It's optional and set to ESP_BLE_PWR_TYPE_DEFAULT for compatibility. (#3623)
+86de90fe24a0e54f382cc713ae20fb2225b4f503 Added partition and flash size menus for VintLabs boards (#3602)
+5960cd3e2a33ce1028d625bdbfd4d53a597b505e update coreESP32 boards.txt (#3569)
+82e208c8c91c0d9e041903022c44677d48c8b8e3 Fixed incorrect board name for TinyPICO - You can now use this to detect it's a TinyPICO at compile time.... (#3567)
+e7c98136251db9fea4b97549c3c39d72236b2787 Added Piranha ESP-32 and Metro ESP-32 boards (#3542)
+dd7879431104ed120d77f283940f94e4169eb548 Update CaptivePortal.ino (#3628)
+0607d36734d52d67be1b88764bf446fac7eb62f3 HardwareSerial::write(const char*, ...) API compatibility to AVR, ESP8266, et al (#3585)
+6e77f7f3e5b99c0e6220596d5e76a399a0cebe79 Setting loging level to VERBOSE on Semaphore::take (#3545)
+915d45de7d41899f1721fedc8d71d239b84708a0 Defined BLE setAdvertisementType (#3535)
+c2b37d95e0924640e2c278c7bf439503ecad9d5f Updated BLERemoteCharacteristic to exposre esp_gatt_auth_req_t parame… (#3531)
+2f13a960acd1baf1599d855385c64a2716708f85 Add WIFI_REASON_CONNECTION_FAIL in WiFiGeneric.cpp (#3529)
+579e04be25464c01078145c844ca8c1a1fa59ba2 Cleanup SPI_Multiple_Buses (#3527)
+5443d7ca933ccee850f75db6d5ce11c5ae57d09a Add TTGO T Journal Camera module & improve commenting (#3515)
+7b3c1dfd508aae0bdd0d66332b2e09e1f019430a Fix inability to use all buffers in RMT (#3512)
+85ef51ffbc74d3fa31b873a3375c89cfdcecb7d8 BLE: reception support multiple service data (#3502)
+36075257c2433d4427882cac9126abb68f11d97c WString explicit converters to reduce Flash size (#3497)
+7de17176403f719400792d4986ff4259fc16f973 Fix replacing of headers with overlapping names. Fixes issue #3483 (#3487)
+8869d39d7997eb57177f1cd95f32fd3c26300d13 Created variant for LilyGo TTGO LoRa32-OLED V2 (#3479)
+cfe8526ec8bf1c899f78d610051f6ab79ef022d7 Add Uri with support for regexUri and globUri (#3441)
+c09ec5bd3d35ba7dfc135755ab300e2b45416def Added MGBOT IOTIK 32A and IOTIK 32B boards (#3427)
+d8b209846131119ad6a84af5987e8625f37900df Use IDF's ADC Driver and Add analogReadMilliVolts (#3377)
+3fc974f3aac37da42fedc7c1ddae1e1a63579378 bugfix(touchpad):swap touch8 and touch9 #3584 (#3620)
+dac493fb92807e96db54d47edb2dd88b6ec182e4 SPI: Fix discarded-qalifiers warning when compiling with all warnings (#3458)
+bc3d11364f5ea38719bc2214b54711aad1a834a6 Fixed incorrect usage of xEventGroupWaitBits (#3446)
+f41beb92bf4434f52209bd15655c1b2f2447447f Fixed so configTime will not crash if tcpip is not initialized (#3470)
+8c4ca5a2355869afb0d0aa018e345a48430de961 Update BLE_client.ino (#3463)
+b3085d4a8b8a5bcb39746ab5dbdc26c9b7a8b17c Add menu items Partition Scheme and Debug Level for node32s (#3455)
+547c2d334674e96d418f5e986d7728872d44bfc5 Root CA of webserver has changed, minor changes (#3447)
+7d2632c024c721e9416cace840e013863804a122 Implement Tx only Flush (#3433)
+e59355df71065fcb6c6a1e73efe4321edf69d488 Docs for lib builder (#3415)
+ec63d09e545322b3d898d52936f8ac97972bd682 Fix WiFiGeneric event handler (#3412)
+188560e7f33c164b46eb1b8ce3bf2bfe69eb6bc3 Some event log messages were off by one. (#3391)
+91e095f5a76ec35f06c86689a87892425395b8db Add an error message in case of invalid configured dependency mbedTLS. (#3364)
+c8d8dc226545a096a34bf5164551c087b658d33a Added partition size options for TinyPICO (#3358)
+b847f41e24c1080d1e29aceb92b6a0199b05047f SPI: Ensure all read-only data pointers are marked as const (#3356)
+611ba8ea8acfd504174e2eec1e198a64e67cd748 Update README.md (#3353)
+0cab2483e6ba069f4931e91b2a39c566a3c971a2 Added a description README.md for libraries (#3349)
+79e4339582ca0891a6e6e35220c90db613c0254d Remove warnings if no debug enabled (#3334)
+a35035f827196db4e32382d0d8091cfe0173fc4a fix authrization problem (#3329)
+9ef3e2d2a6b79c951f894dba1dd71c811317ca6e Allow sketches to have custom partitions (#3328)
+0cdfb0b193d9bf04adc50bf0d6020e95a28f7d21 Add support for WiFi long range mode (#3190)
+e50613622e3d9dc3f7204b2c24f53ab026cc756f Fix typo in SPIFFS and FFAT examples (#3322)
+24b277ad92d1f769551cb9bf5f07633e2f24950f Add readFloat to BLE (#3321)
+c2b3f2d6afc1911db1974a324782730dd642d524 Make yield() overridable (#2991)
+8fb8e7d060217ac15c450207b193dcf55726fe94 CI can be used on windows desktop with msys
+048b26547a56eebd236ff955d0cd863255dc0fb2 Update boards_manager.md
+b10ed77aafd87555142a612d465bb606f09f1005 Update boards_manager.md
+4638628873a061c36faffebe4d146d13f960076d Wait for client.available() to prevent ESP32 crashes (#3154)
+6f70e27011d1f1aae222b735cdf6dc1380b062a9 Base64::encode : const correctness / String by reference passing (#3314)
+d0b064a1ee31be1b298aa3dd5134771f89f499af Update CI scripts for better error handling (#3316)
+85c77a9c3f16f6e4884bf81d2ccefdf1455cc9de Fix CI Builds for Linux (#3313)
+c8e3f0c732a8adf8ab3a08947570a84d86d329ab Support Pi 4 on 64bit kernel
+5ad468f9dcb5f9cc7249a4fb987aead4f1d9b136 Add ARM toolchain
+b334b2c2f92eba356a163dad13b5b65d8371e542 Add config, menu partition Wrover (#3147)
+8a46697168243f1a511be438aca7ecf08108e325 Fix for issue_3209. (#3210)
+270a2759d919a3d87daf033cc6611f519d3ab5a5 Add pages action (#3311)
+01d9345d284a8bb7c18f7eca74188710468ba2ca Update development JSON location
+71e3d515f370a6f778c0c6e3fc851168d2feaf71 Fix BLEUUID toString (#3289)
+64cfb33deb63a5cda3c994190fdb03ae41119081 Add Added unimplemented getCharacteristicsByHandle function (#3277)
+5f1dff7dad965581b98ae4dc3fdfe21e3b552072 IDF release/v3.2 d3e562907 (#3292)
+40ebee1cb15ba8c43ec0b5fff506e3aa68fce584 Update BluetoothSerial.cpp (#3308)
+ed96d2a1b70ea02d925435d06b71617bd451ffec Use Github Actions for release (#3309)
+caa391ab3420db0316b8ad74ba13d8fc3ac66a9e More efficient CI builds (#3303)
+3b71e136e11c030ad5991309bcb03a880d045446 Builder scripts update (#3300)
+1c77790a5b5c911718e8dcdd4087339f2acedfdf allow the examples to build in a more strict env (#3299)
+9bbd720d4c6424af3f3731189c74a7a0e0c55a88 Update BLEDevice.cpp (#3267)
+589bb7032d86d3674d6f999e363adefe689f7a0b Update WiFiScan.h (#3266)
+f8c06894c5ff80158cc768616496d045477520cd Better cleanup on mount failures, as the idf api now seems to assign handle and mountpoint before failing. Fixes #3265 (#3282)
+a5c873b786ba3aa2c5ca3ff061de89e6862568c2 Update README.md
+895a150840337e3354fc48773736a7496d02d763 Update README.md
+ca88fdc27316f20369f72b464f4d94ce65b83f60 Fixed FFat::end. Fixes #3244 (#3245)
+f32083a6d0afad8efc4d52b11091ccf55249dc29 Fix timerRestart
+b30e55efff02becf1a29faadc6009a841dea659e Added partition size option for Pico Kit (#3258)
+0ac2de7aab9459031cfcdcc7265ea777a1064e43 Add partition schemes to adafruit featheresp32 (#3255)
+0eec630314af81dbba95fc478ef75e9908e9d0d2 Add missing env to PIO CI build
+731fd19bdf9a72d35bc7be4a5b25ded6ab828c84 Update get.py
+298c6104a2aeaf408b2ea7ce7dfcdd41c2c581c2 Added board defintion for VintLabs boards (#3252)
+8ea12f89f396b0577d18096263b3c7dc1dfeae5b Update pins (#3249)
+a5935ce1cce7f2c3fa79d9008d527724b2b31fbe Add sample for Time date for FatFS like SPIFFS (#3234)
+96d6975bd58c192ca211ec7b3721c6babd9f90b9 Changed WeMosBat.name (#3240)
+9eaeeb660c7bc0b42e942870845e0e38a60d7ec8 Change the first argument of SPI::wrteBytes to be const (#3242)
+e22d8b67876079634a8aca881bd07d669f05e694 Update stale messages for easier filtering
+56fe2dbaff1ac8fb61b4722972e9ac8373e081b5 Fix F_Fat::format return false when succeed (#3220)
+06a399b84aaeb99a80588582c621e946aba58b11 Extend logging of ArduinoOTA (#3217)
+4ce2cc3c1d1e80d5de5d1c43fed69bbf6ee74394 Fix HTTP Client with SSL (#3216)
+07390157dfd968ad79449af1d98a2406302c8c33 Fix Camera Example (#3202)
+bab3a70f543dac8f131916fcfc24b99b6b8252a0 Added timeout to WiFiScan.cpp to prevent getting stuck at WIFI_SCAN_RUNNING (#3197)
+cd4f9038eecd0cc7c314c84fdca3d4bcb1515c12 Fix WiFi disconnect event not being propageted. (#3085)
+7fe2812f7f619404f8b0fd428f9a6b28b7f9c3f6 Inline ESP::getCycleCount() to make it safe to call from ISRs (#3165)
+9710fedaf05c85e3c8e5d23b076bd47561a0ca21 Fix wrong values in .cvs files (#3196)
+f5cacfee1a2dfaf693afa8d610e8f2c92b74f375 Remove extra connects from Client.h (#3191)
+f71a4bd4062d72bdcb2cccbab8b36d7630fbce16 Bugfix/detect baudrate (#3188)
+5f77b0108b964fb929a2c4b7f892de61cc2a8e59 Fix return of Print::print(timeinfo, format) (#3189)
+717ca79ecb1f3698db7a32b6548374026cc1a56c #3181 printf double vsnprintf() fix, malloc, va_end (#3184)
+07613b31582a352bea0e1c1d4e8666aebcd9200b Update URL to point to upstream repository (#3187)
+80ea52194012e9241a15dda47f50bc4a5a021058 Add support for 160MHz rated CPUs (#3135)
+5c04de6f39a4e564086e0e08b1eb0638cb39f034 Fix packager
+0d163a1ce274cf389f8a263d66daaaa36b757d6f Update IDF 3.2 to 7dd492319 + WiFi fix (#3177)
+2a7e509978938aaa4cd4340857b854e4dded659c Fix long Ticker period conversion: cast ms to uint64_t when calculating us (#3175)
+1b8c7e34f988b4106cad3e5c667b71d2750e16a3 Try bash only examples build (#3164)
+7a574399b17e552800459e3eafb72d9158c05968 Rework the sketch builder to match the IDE (#3146)
+fd089d8fd3a6b40c2b3741c70da2902222b6d61a Pull in ESP8266 String::replace() fixes, others (#3143)
+f356ccd54a20c9e305fcf1746693a44d2ef462d9 Added the pragma line to the top (#3139)
+6daf773464b62f9c832f0b9a81ef8b4cd7b36f10 Fix travis deploy generating bad json
+70a896481d978f02567c32350768476ad2d6bb9b Update Both CIs to run parallel jobs (#3120)
+d5e2bb12ca02ae9066e9dad84d9dbf268aca6fa3 Update IDF to 90747cc8b (#3118)
+f4acac4c2bf83d76f49241489e24fc1d6bbb64e7 Bugfix/http client (#2867)
+5137fc5c80e8cd1d9f07879d0bc1ecf5a52e8ce4 Ble notification/indication status and timeout (#2998)
+03066e42efef8630778c7aeac6f28438d0ec5094 Flush UART RX queue too (#3009)
+cd5257ad78f0d62d28afaa579257904a767842d9 ESP.getCpuFreqMHz fix (#3007)
+ee6336a312cc2f51117baefa47e772061382290c links http -> https (#3010)
+61f71930e9459220315d23950c86f2564f2bc0d3 The progress callback is now correctly invoked with Update.write (#3024)
+ec40c4c96f9088956ed95f5207b9385f33689602 Cast TimerWakeup conversion factor as ULL (#3027)
+2bda4a96179846a80b30c61b73080f8564f8d51a Fix BLE stop advertising not working (#3034)
+91b9fae111b8e601d8bdbcddf2dd430e0170706a Add generic IP utilities (#3038)
+2a1fde77365e6e40d084a72597b1de93d8296bbb Include stdint for uint16_t (#3069)
+a12d609b221ce339de092cfe096c6bef7542c943 Corrected count of characteristics to get (#3082)
+73576674b81c9715bbf820f2e42a1de0e51aa66a add core installation 1.0.2 (#3064)
+007a93ec7e7aff538d2002d3bda13cd01c2e60c7 Update Print.cpp (#3060)
+a5f3fc6fad7cf669fd2fa632c080a5d6c2f25808 Magicbit Variant (#3107)
+65e256c40a885633a39cffd50f47b727aa809147 Try github CI (#3115)
+fa55a2c91d31eab673c0115bc57e9437350488cc Update stale.yml
+a070884441308c5bfa6805d6f515801769ea0b1b Update stale.yml
+a9c8b46b1a1e748f3843484dd863d48ae7109d9a Update stale.yml
+69541501769a7772a4a3d2b6a804fe7a743cb0fa Create stale.yml
+548f712df2487e5a8790001e2f088a426324a04f Fix empty libs being included with the builder (#2997)
+56ce580b0e7a25085a1fc967dcb76053920872df Fix incorrect definition of FPSTR() and move from pgmspace.h to WString.h (#1371) (#2961)
+509d31ba511f83df910e8655aae4eb40acaa8477 create variant for magicbit board (#2987)
+9e32cec9a287f78f212ecdae72aa6d0912b87448 Update IDF to a8916daeb (#2992)
+3376ea1bd55b1bc1ea80bc20c15cbe25ca04ad92 Added more menu settings for TinyPICO - Fash mode and Flash speed. Set Flash mode default to QIO (#2976)
+1c7e329140e547facb4d5f25b8d39d3f344a76a6 RMT: Fix in bitshift of NeoPixel example project (#2986)
+c17b212cd0ec574eea945ef73fd454f0c5bead36 WPA2 connection fix (significant improvement to connection time) (#2989)
+7dbda4988b60f83ecfc887c7f92233b2fb3f63dd Update boards.txt (#2933)
+d1134fd45ec82193c9a754599b5b0f4ec54dd618 Fix issue with semaphores (#2974)
+d5fdd715efddfe5838996eeee7840223f81f52bd WiFiClient.cpp - Fix connect() behavior (#2784)
+ca7106e97e69ac6f5b91fcf18927c3d3c529571d Added convert method to EEPROM to transfer data from partition to nvs (#2841)
+87e5787cf7edb627b665e4c12555306cd6140759 Added support for TinyPICO in the boards list (#2901)
+c13d11e7d10ba4e53a9d30338ec8f9b1bca114ad  fix empty reply from server error (#2903)
+b0d8d4dd442b2953e57b16d05d6bf2a893334f1d Change some WiFi buffer settings to match esp-idf.  See #2899 (#2912)
+05de017bd557a20f21a2519e7f977f3d42f99f6e BLE Library onRead Callback fix and Client disconnect feature (#2913)
+c29ec9da3d4d55cb8588cf5ad4a90034e99cba45 Removed partitioning comments from EEPROM class example (#2920)
+b3783fba951db7070ee991282c96eefac97422c2 fixed typo (#2927)
+a22ec4a9787dbfe84afbe67543fdd2e22b995aec Reduce flash usage up to 214k in one click (#2929)
+20498cf8b1cbab707777928ce73a43c726c6e5d6 Expand gitignore to cover files created by Visual Micro (#2934)
+02e51728c4f66d997dbe8c8948e377ccba36dd3e Fix Timeout Bug in WebServer (#2938)
+d2816b2f3264086a24f6436067e406d4e918a9a5 Fix Unused Variable Warning (#2940)
+2e32022611b417d752aa9aebee323cd815522370 ESP8266 => ESP32 tidyup, set correct default port (#2948)
+74ffdac74a96fd5f8ceaca9e39f503197edb5acf fix for BLE Library Compile Error #2866 (#2876)
+4ee17ec3ee0aaf873853b243ca05e0e9b00e0832 Fix warning -Wempty-body by adding braces to 'if' stmt body (#2951)
+476660f763bf334a194c2f30586a7be8245f9c39 Cleanup WiFiMulti (#2955)
+f558e69181c39000fca9cbd3050b89bee7ee9211 Fix warnings in platformio (#2960)
+5bf3aab5277c6cd2158e104e0c45c389a56db003 Make a selective menuconfig option for FFat (#2966)
+1aced120ba02247a498b5381281612ab23f28dd9 docs: fix typo (#2973)
+7d7824701fe5e22f08555d3e1ce3180a922b2151 Fix persistance issue found, see ESP8266 issue #6152 (#2851)
+89feacb813f3791ff7cd74498b2b568aa7b7e4ba Fix map() division by zero (#2848)
+aae6f24a3780fd408796e72018813c662ef1db2c Update (#2838)
+43b781a158e610998ed22467e0d307ab294e994b Update AsyncUDP library.json (#2837)
+e055b28d1a06ba60b355a1e87da79da9ad0d5590 Ignore Werror-maybe-uninitialized from Azure IoT Library (#2824)
+714ba948e6dd506700d42babc32321e3321bdb01 Update BLERemoteCharacteristic.cpp (#2800)
+e57de64a3cccfd6097046e925b070146e87323be Fixed multi_heap_free failed during setting the value of the characteristic in BLE Library. (#2789)
+fd5a2f08f95429234179453a8d0c44fcb4770843 Fix #2750 (#2763)
+e9389e3122fc47227f961eaaa6541380ef4f2b0c Fix AsyncUDP buffer error
+0acf19af8f5e9e459f9cc39142138d2f5c351146 Update IDF to v3.2 977854975 (#2771)
+aff2e42ac612e32e6c52283e16d85d83ed6ef03b Add Pycom GPy board (#2754)
+2743e7b73991996c8d84d973e9e87f285dfeb0a1 Update mac.md (#2745)
+c453a0037b8dbb2c77a336a41094fdb61b30eacf Adding TTGO T1 board definition (#2744)
+2f249edb8e2627421be87c43167a187e55ed7db7 Use std::abs for a float-compatible abs() function (#2738)
+bd57ff4ab4011fa88be9b191d9217c363927cc45 StreamString SSO fix (#2736)
+43bf393dbf13d6a877e45c890447e2693f60e8c5 Fix semaphores in IDF & std::string assert (#2728)
+bea7bd1852bae767864dbb582ea4d4123bc968c1 Implemented ability to change BLE address (#2690)
+7dd537f8d3a6e62a2c7392e72fe53cda7e9b9d66 Fix libgcc not being in rom
+50d142950d229b8fabca9b749dc4a5f2533bc426 Update esp32-hal-rmt.c
+d13de284b834efcaf6288ee23dde0c66c3c18c6f Undo the redefinition of FPSTR from 8266 merge (#2726)
+697d4ff7c4c35cf774aee8952126dd98daef3868 Add board "WEMOS D1 MINI ESP32". (#2710)
+932666a03f3a2fce5a92018c4fbe316b1c77cbc5 Ensure that _size is properly set in begin (#2706)
+a0ad987029d08da7de09050e9fab00e6d4ff1496 Add TTGO T-Watch board definition (#2681)
+271e5cd206054d0c70a9998cf3d165cdc8971708 Fix Werror=reorder for idf.py build (#2707)
+0202ba7c21cceda180217dad5ffa58ba73b58baf Fix reorder error in WebServer (#2700)
+119ece2b0f96ca7d5477d446a62f210128a4b19e Portability from ESP8266, virtual Stream member functions. (#2701)
+606446a8301d852cc9b42219e601cf4ad949e5e7 Update ALKS board (#2694)
+a28cf00295702c6ca7ee297e4810df36489689d7 add lolin32 CPU freq choice (#2682)
+672e4faa92b0560352f34fd99f67ff388e05d413 Add optional support for CORS headers (#2688)
+f8eebb5c3907928d100b3b9d7d0fb0256e1dffa7 Fix indentation
+6bf104874a453596ac4b2d71feb9917ddaea53fd Add LGPL 2.1 License
+9a9ff622166149da30dd13a81485184617c56387 Add connect with timeout to Client class
+3d6e4e1b94ccdfe269da9c314b755e2345a164fa Use milliseconds for timeout
+01d7ea7b80a7badbe30e6fb6f33f71375e0b133c Refactored use of LOG_X(LOG_TAG, ...) to log_x(...) (#2672)
+af23d0bb10d1d624f372c513746dd9328544f8b2 Return empty string instead of "0" (#2673)
+582e6433e913bc0ccc0ddd7c443503294393ec69 Add proper timeout handling to WiFiClientSecure
+ef07a84ade7c756f1ec6cc4693d2bc1cc11d2694 Update esp32-camera driver
+ea043cdb1440f8c26147cf8a63ba8b2c13e0a47c Fix WiFi Multi not clearing password
+c60092951f5911c690a8a783a378d5a8cf7c3c8f Add missing definitions
+fa74767b2e4b4808439f81b97cb454e1118621f8 Allow selecting in IDF the running core for Arduino's core tasks
+d922557e0183fcf5faf0e59c3e0f6dee52d091d4 Set default Serial1 pins for Adafruit Feather 32
+33d4186b3546d5fe5bdd7f1941b851055a7740f8 Add board "SparkFun LoRa Gateway 1-Channel". (#2664)
+6dab3f6777b47e077fecd5b27f5f316664dd6096 Fix LEDC channels above 8 not properly clearing
+1efcd21ba91c08e702a0c6e47e00a2d0a8c06b84 replace with strerror (#2663)
+7b5cd47d07353747aa4b92bb9ac212d18371da20 Set ESP-IDF to 3.2 (#2662)
+14126060a135cc35e3795301fc001fc086e3ac83 Properly allocate string and remove warning (#2652)
+25c0b52212798f64552c43111447a49cef3575fd Alternative Improve _uploadReadByte  (#2656)
+e0beac88c93457c8a96b85242340a0670bac61fc File with more than 32,767 characters (#2566)
+67445652579676935c415e596652676b99f3ba14 Also show how space is allocated for the default partitions (#2649)
+da8b7c1b80f1375be564674565c609aaa054e41c overload Preferences.getBytes similar to nvs so you can get size of t… (#2498)
+91508030d8e426d619949306a8ce4a720f894e97 Hide log_v behind conditional define, reduce excessive logging (#2641)
+a0c975dfbce684695c1011e2462df303651fbb87 Reset retry counter upon successful write (#2638)
+0906bf580f639c17c4b899b9cb0828088ac239bd update getLocalTime(). (#2629)
+53a4bf33b64756d7b3e5611742fc20f70c8a4cc5 Added 2 ffat partition schemes for 4MB modules + improved descriptions. (#2623)
+92220b76430e567658e0bc80e7b1013e43681520 Added PATCH request. (#2610)
+dd649808d174a88063846d6bdabb6cbc1a593c77 Add server connect timeout to HTTPClient (#2606)
+67ee7c32e72ca6be40f3437316505dc208509c0d workaround for FS implementations that do not support fflush() (#2596)
+8091c2cac7c14b46cca4daca0c555227c5d94115 Add M5Stick-C to board manager (#2594)
+4930853edb94313b1078dd2a01a3f8568d46f707 Add support for ffat on 4MB ESP32 Dev Module and mhetesp32minikit board. (#2588)
+8e8c5035eaaac577e93fb0fc7db9daaa2c476ef7 Added rmtDeinit to header. Fixes #2585 (#2587)
+1db72a27c4ac8347f77f9b733582e9e7acfa9e33 Added ESP32-CAM board (#2572)
+e28dce7eb7810dadfbdcd103d20c71c7a745edd7 Get Odroid-Go's PSRAM detected (#2564)
+d5f71ce545a51b5746aa9460ecff0f301dedf537 Added a parameter for max files in SD (#2563)
+7df50a97d17b0953ea01cad0355410a66bd8b8b4 Update IDF to ebdcbe8c6 (#2539)
+566f659e909d0baf3106051db09f2196bc8c1e0c Frog Board ESP32 definition (#2515)
+cb0a939a6f2d864ec0d130685ff4d8366457d699 Adding debug flag to PIO build script (#2510)
+cebd8704c8e4eff334124fe8c96b23f788a1dde3  Default pin remap for wESP32  (#2508)
+ff85f3e90e37736d7fccff27cf80d8329e6ce57c connect only to provided creds (#2491)
+dffda0bd6e5fa40a409aa1f73238fffb8f2bb3f2 log no networks found when scanResult is 0 (#2484)
+2ceab7c2797f8dbfd4ec8f1829d0d3906ba05026 return macaddress (#2477)
+84e458a9e1594349eabb17e16f717c00e97f6463 Add Heltec boards defintion and update board menu chooices (#2475)
+f3c1a91f8e50f63e17bd4093f53e8fdcd3dfbe2f adding uartRxActive to expose the RX state machine status as a boolean value (#2457)
+5af03361775e78fc7a0721ceec198663d2f1db44 Changed the description of file (#2476)
+628b8f0c299148b3f90369bc6dd77aa031b2f09a Fix Olimex board definition
+2bb32bd4b0699f70674b1a9537155814463cae0f Unbiased random (#2468)
+89d6b895d1d3758eee58900d7d81ad1195690f09 Fixed missing null terminator in EEPROM.readString(address, value, maxLen) (#2439)
+010a7c60f7000eb17c6333309c87156769848a0e Update IDF to abea9e4c0 (#2458)
+c0345eafbfa4c7f5d4b045e318feef0576af9fe2 fix missing the first bit in HC589 shift in (#2448)
+71ec3c3e31c8e2fbc7290eac1846d2a669eff6e9 Correct millis() error causes by micros() overflow every about 72 minutes (#2438)
+8ec76405b92ada0a5b4c365dbcd614161ff518be Fix compile warning, esp32-hal-i2c.c (#2434)
+8806acfbf95ec2e0f259238a3f5443cbcdd27320 Added partition menu for OROCA EduBot board. (#2429)
+2e9cb5945d99745a5f2b4bbcb09ab1b540154961 default FORMAT_FILESYSTEM to false in FSBrowser.ino (#2425)
+c001996eeff7d0112e4f3b8d622b2996baf5c0a9 Add default pin mapping for Serial1 and Serial2 for wESP32 (#2409)
+c1344ae094c103c36a11dee8b180a88034755e21 New version of the ESP32-EVB/Gateway/PoE boards (#2397)
+f6b9e9c2abe9eeaa557314cd04b3dd4d191b03e7 Clarified comments and debug messages in WiFiClient Example (#2389)
+fc737e08c617d27414ebf1a574f7ebdf9a968f38 Add connect timeout to WiFiClient (#2383)
+e302a6848a84ae4ae7eee17a56e39947b4731a36 Board T-Beam: Update pins_arduino.h (#2380)
+aa2393b5738551d7d3ee3d48649a5224e97641a5 remove useless condition in if statement (#2371)
+755cd938f7b65271f102b0f153071eca1c832bbe  add missing EEPROM lib to CMakeLists.txt, moved the EEPROM files to proper dir (#2333)
+86fdb5b23dbc90a37ffa140dadf22b599fd9913f Fix compilation errors when used as IDF component
+ffd15e4637545826773b67a5ab16a8a7f83cb804 fix log error code format (#2366)
+29d59876b4eb0c62567c97e2731fa7c8c0e3f2fd Webserver library - fix logging (#2355) (#2359)
+8cbc60edbc35bb3385753175596403ecb5286796 fixed rmt receive data pointer position. (#2353)
+00a546ee06f267e1a48ab9a580bb20c181de93af python2 get.py does not work behind proxy (#2349)
+2ba1e6606071ffc956b8cf2e3dce8f10418cf53c Fix SS pin for Adafruit Feather variant of the ESP32 board (#2344)
+489feb8727914eca9ab19a35e8519bce858e0028 Fix BananaPi-BIT and T-Beam pin definitions (#2343)
+3350476d1d7f84e03f3916ca20df4990a98b2761 I2C debugging and Log Dump Explaination (#2325)
+fa6f75952df530ff66e0475b93aa69423248fd0a I2s adc (#2309)
+6718da03504f8319551f829182dc163ee150c346 Add ESP-EYE support to the camera demo
+45fa0f829449419aee83d61f967ca32450e63527 Fix issue with WiFi lib sending the wrong event ID when debug is on
+6cf307dbd1cfc46d489609cf675fab2806e6054d Fix copy/paste error in RMT
+81844f53600c3035fda6b9affb79c19573ee8f1d Add API to feed the loop WDT (call from loop only)
+f7cf583b87fe57f55a98be1d65876be0017647bb Update README.md
+e8a2c16c8f75e2f57ae468e4dc93ffa54c6d5863 Update issue templates
+566b69eda360d639f92963a05249422fa8dfb2c6 Test @PlatformIO with CameraWebServer example (#2300)
+e544e678385587609ad6e35773e61fcce07ed6a2 PlatformIO: Revert back default partition table to "default.csv" (#2299)
+b0582e1ec885a595c6191b026c088e7f28a52bfd Fix compilation failing on Windows because of liblib.a
+a539257a3829c699092ca1e048a1657a36c357be An example to read high frequency analog data using i2s_adc (#2295)
+70656aa129701114c1af05c70b8cba93846be960 fix leak in log_printf
+fa61b3bffedc0c5b65de69c1a550c7c07d437faa Update IDF to e931fe9 and add esp-face (#2291)
+452c27a74a7e074eb38b675d346415a452c52915 Added ESP32 FM DevKit - Fixed unused pins definitions. (#2288)
+2fd39b1aff1c1f2be60bbd9b5fbd9c88638b0fcc Handle APB frequency change (#2250)
+ff18a211e4638784d7d892e500c9fe67e36eeae7 Add OROCA EduBot Board (#2264)
+a6e3b29004b3905ac3e06b442e0f48c531f187fb Added support for using TCPIP_ADAPTER_IF_MAX to join igmp groups on all (#2279)
+812d1316631ad17b1798235e9bb00ed1bdc3d97c Correct comment in SPI_Multiple_Buses.ino (#2272)
+00e69a28bc5b12f6dda4675781ec5cb679b901ac Redo PR #2259 because I messed up my local git (#2263)
+6dd8be32629a3d9cd6610da93224f3559f63c6ee Use more agressive disconnect on wifi connect error
+28ea39cf053d1069b698a7ac57f0eb6def82cb48 Add WDT API for Core 0 and disable it while SPIFFS is formatting
+f49c854ff3d2917f54c138339c729bab03ff574a  Update IDF to 97eecfa, enable reboot on WDT and add WDT API (#2248)
+879388e170452f056a2a63bceb83f23f63ce9a06 Update esp32-hal-gpio.c
+1085e9a8f0907d9150c2813d51013a383d5fb1cc Fix bad multiplier calculation
+bed9c96f4104065d9a947494c5257336d05c7c34 update board files for LoPy, LoPy4, T-Beam (#2241)
+5af139bb74d1c10c133eb6c7fd0b8f4c75f82f8c HardwareSerial - add changeBaudRate method (#2223)
+4f9a90fa0e7dff6ad26a89fe3daf3448ae3e4ff1 fix #2232 and #2033 (#2233)
+310e78e6fded9414411eb48dcf212018c3791483 Support CPU frequency changes (#2222)
+1628f533a18a84bc540ce9d57f8c4eaa46f69878 Add Camera WebServer Example
+3e66aeff84d4e2a633b9fb5394d25e78bf9cbc5e Handle better 160MHz cpu clock
+66d33f792c1ee44555d6b812bba77d653ad31220 Add support for CPU Frequency switching
+0de0d3f79a71d5d5ab8a34d5cba90680e7d29036 move call to setTimeout() to after the client connects. (#2214)
+512d0d088f5e39b7042669e00574feadcb461679 Add Turta IoT Node Board (#2208)
+77810471ce927359294f57be98d6f22e5f1ef362 Move Example to proper folder
+be081ac02674ea42a94f7fed3bb33c455f6eb91f Add FreeRTOS multi-thread example (#2067)
+4d3f6caa0d23b741f668f3a72c18a93227523bd8 Add quotes around macro value (Issue #2193) (#2197)
+2db811f7f3bb13a96a4459269e620cfcb3e18e54 Update build tools (#2200)
+39836f12df01dc8b838204b82a0a49c649842d83 correct bounds checking in Print::printf to avoid corner case of len=64 (#2204)
+25fd2d0f3b4e9b5995af423317ffd2cb905c4273 OTA success reporting fix (#2202)
+278fa0d87ab80451b106e28c7540d117242b8755 Fix read(), peek() and available() in WiFiClientSecure
+e602145c2b822a6d9288ae31c0d9ca8a7ee097d1 fix #2105 (#2192)
+6f6ee98188e6c4dde11d821d7b2b1f259fae0330 Update ESP-IDF da2116f + esp32-camera f8f26ab + BLE b232e7f (#2194)
+1289f4be4b46d26ac244c71b338d3ca4a9664c67 Add MD5 computation to Esp and add request header with MD5 hash of the running sketch to HTTPUpdate (#2176)
+70f000da7114f4e38853f2568ad8cb2929134d32 Fix a compilation error if Bluetooth not enabled (#2172)
+884e417a4943ae64897fc06db47915f24c00b59a Fix HTTPUpdate flash size check and add SPIFFS size check (#2161)
+bb7dea1566cfa25d32c4fee100e528dcb5bba805 Fix missing SS define for D32 Pro
+bff9f0b6b1241af66ec8bbc02367bfe55ca5d239 Fix error in PR #2048: if ::available() is called before ::connect() _rxBuffer is not initialised (#2155)
+72803703fd41910f0ab1db8ee0bc0a59f1d53477 Updated table of tested locations of Eduroam network (#2157)
+0596a2ac86f59e26ae04cad24490392a9732a297 Abort update if http.begin() returns false. Fix a typo in httpUpdate.ino (#2156)
+fe1fdd27900f06a380c16abb1f9233e91c36ae45 #2147 available() shouldn't return 0 after disconnect if there is still data in the buffer. Otherwise, how would we know it was there? (#2148)
+af7e489f016c919249a031318d7123589414c04e WiFiClientSecure: add support for PSK (pre-shared key) ciphers (#2133)
+5cfff190e9bc6edd7c9dfc31f8af50957c863872  removing log (#2140)
+7a332864ab554f4fc42aba4cdcadf997635bf65c I2C ReSTART returns Success  (#2141)
+8aa6e2e143c2ccf33b9e22675604e7df33ecb53b bugfix lopy/pins_arduino.h (#2135)
+b5f317010cc7718b8ba6b49690062d75b78825fd Fixed Arduino SPI/Ethernet compile issue as described in issue #1623 (#2136)
+f644d9d157cb59f77f63754d06f0ba9c15d8d33b Use right function for BSSID (#2132)
+a15b7e90888fbfbb99753e7d6cf5c68f60bc3e25 Update IDF to afe4c76 and BLE lib (#2130)
+ce340faf94ccaf1a6d1474736d8a066f9e010865 Clean warnings when all warning enabled (#2112)
+b69b04cb2bdbf2a93c4cd23adc653c660bc4293b Update build-release.sh
+0cbba8a71d3bae05f129fe98f5db89b8555ba600 * remove git clone --depth parameter (#2124)
+9e1f8cc457eb214820150cdb16a90d9dd669ae08 Update pins_arduino.h (#2120)
+cfe7e011583884afcf3d8938ed4bba68b67eecd3 Remove F() macro's (#2121)
+fcd734a13cc510d6e55a30e44449335c72ea8e5e Some fixes found by gcc 8
+aa030e044c0b9e4fc7b938ab5da9d78864fca400 Temporary stop git log to build prerelease
+95d417cd93ad3c267598f32e58fa9cb0b165b41a Update build-release.sh
+df4eeb300577d783d32a8671dfe7fd3c33e57d48 Update build-release.sh
+a360064768f5ba7ee52772c09a47a04553aaec45 Update build-release.sh
+bfde8daf75b75c536d3ddeb0d3ac1dc0d9bc211b Update build-release.sh
+e583a0e879f0d651c51c0f51e1b017b0dfc80de5 Travis: Set proper dir before checking git
+7e9afe8c5ed7b5bf29624a5cd6e07d431c027b97 Add response headers with sketch and flash sizes, and a SHA256 (#2116)
+dcb007a4855d28ab45d9c833121c618c9fb1ab01 do not skip main.cpp when checking CMakeLists
+bec6f872355989d909448e686a20d617ac8fa620 Update CMakeLists.txt
+4ae64c541ec71f3858180e014ee27276e0031f88 Fixed missing return value (#2090)
+46257c03b3673d7a34ba0084b7f1352cb177e5f7 handshake in ssl_client.cpp (#2044)
+0640964879ffd420530503aa64524a6c1c8076c6 Solve issue #2092 by initializing * _client to nullptr (#2097)
+e609c78f20396413695cc48abf1dad60597316be Initialize detectedBaudRate to prevent compilation errors (#2101)
+04963009eedfbc1e0ea2e1378ae69e7cebda6fd6 Update IDF to a0468b2 (#2108)
+c3ec91f9683954e567ebddc77312c004ef42c933 Allow to add custom callback in BT Serial (#2081)
+a30005949ab234c29680745612fa49d5ad841de4 adding D-duino-32 board/pins (#2030)
+acefd4bf2e34609b5a02ca0be903cd2fc23c8de3 Fix Partition Calculation for min SPIFFS (#2072)
+c700e5694f08a50a0d639fd30e9005a5713323e8 Some fixes to nghttp2 to provide basic functionality. Added the missing main header. Removed the asio headers which require Boost libraries. Moved http_parser into the expected location. (#2068)
+0d564d7b1d7ed2a85dcbd80e4b4e6f6e393e486d Limit the number of simultaneously connected devices to BluetoothSerial to only 1 (#2061)
+44ca2ee97650fb90e3754b72e64a3fdbadd445c9 Fix uart TX flushing (#2029)
+af79e18ecbe8fd7cac55c84090c6d222b37fab78 Added ESP:: functions for sketch size (#2028)
+273196d7e67c489c0ae3efc322059f750877f479 HTTPClientEnterprise example (#2023)
+5d2460c74a0256c09b7bfd081f23ab9ec31fdb03 Working example for HTTPS over Eduroam network - WifiClient secure library (#2022)
+259ff80d603d70c106d09f83e4e8518f6140777a use libbase64 macro to calculate base64 length (#2007)
+3902aa4019134a353c925283440cb53efc16e2a1 Adding path arguments to WebServer (#1994)
+f9d1b24c011ef6e6c275e96159cb9a7a189fa04b Update (#1992)
+c7fa251d782d9cef0541a1ee04e8a8fc9d5d36ba updated WifiClientEnterprise example (#1988)
+7b811f9b3ad2200143f27b9a3cc5d8ba4131f041 leave possible endless loop (#1986)
+1fdc660641ab77d30f366857354def46becb464b [Feature] Boards added: Pycom LoPy & LoPy4 (#1984)
+a53c9de09dbf182d577148aca74b939fd8325cd4 Updated table of tested locations - Enterprise wifi networks - WifiClientEnterprise  (#1980)
+b58a3509b895d909cff287ad723aa4ec9f4d4be0 Feature/http update (#1979)
+01d22c8807cf9186e242c7c64198d67e88939db9 Feature/http client (#1973)
+b70737d276e4f815edd28422ee76c77bb2167cc1 Fix partition tables to reflect that M5Stack Fire has 16MB flash and 4MB PSRAM (#1969)
+233d31bed22211e8c85f82bcf2492977604bbc78 Added baudrate detection to esp32-hal-uart and HardwareSerial (#1961)
+65c861ad4c9a9d945ff8cd1afb8c1702edb84b2c Added loadCert methods to WiFiClientSecure (#1959)
+f6a71da37838a662b055627ea3595366c659ce80 Update pins_arduino.h (#1949)
+b8c9819e7fa0d97f9e6028047c653d6cffd7db0c Update pins_arduino.h (#1948)
+1bc1e8c6028503cd98927c9d7b19d447a3988e27 Update WString.cpp (#1936)
+2132d9f8095ab2f693e3d3fbcce5f9924d4ef055 Update WString.h (#1935)
+14ff311479065c84c01eb75b7efc94627e230bcf make WiFi.softAP() more robust (#1925)
+a3ed5118847614388d6188225174e859682c0a57 WiFi: improve WiFiEvent list in WiFiClientEvents example (#1917)
+9e2888392e439d1803488654d6569d11c44e90d9 Added a message for all event types. (#1916)
+a43682596fad48f18b87903807bb95e2b56750be Deep-sleep example-sketches reported wrong wakeup-reason (#1911)
+825b6ea79e383accda89f1ffeade9608cc8751f7 Fixed previous error (#1908)
+deaf339bde33e5ed3048d70d5b3f8bb1ff0676d4 Wire endTransmission() fix for issue #1725 (#1888)
+f12df4c71997b9bb829d535b15ee722c83cfc890 allow component projects to compile with CONFIG_DISABLE_HAL_LOCKS (#1880)
+85032b226c7775bae510e954112823a2ae32181a Do not break UDP if pbuf is null
+e5ea089a7fd5cc8a96d68aae64dc3b4dcef2315e Reduce resource requirements, Share Interrupt (#1877)
+96822d783f3ab6a56a69b227ba4d1a1a36c66268  Update IDF to 3.2-3276a13 and esptool.py to 2.5.0 (#1878)
+4e96bffe0ef0e3929ba0ecf540c9c6f299b31e14 Initial version of rmt driver (#1525)
+ea61563c690ea4c41cc8cfa808799f84bcfa0540 Functional interrupt (#1728)
+5be3078b76de9886c31d1c0a57293ff0c080de71 InterruptArg should take voidFuncPtrArg as argument (#1776)
+7206b2f39707ad600e8bdfd6d74e4957189932dd FAT on SPI Flash Library (#1809)
+3028ec42c739864e6a990a7b37552b441f6e80a3 Add BananaPi-BIT Development Board Support (#1810)
+145904fb9cd3f1bccd0d0546ce379a4313034fe4 Add wESP32 support (#1821)
+cb8d72fdc779df9135ce3ac93bc2b0ff2b3e9af0 Fix WifiClientEnterprise - STA mode set (#1782)
+1e4bf14a3eef4894f65783b4940d98777d5e2263 cores: replace max, min, round macros with imports from std (#1783)
+f9f995b283e3e64be572136c6a64cb5025ecdfd1 Flush serial in DeepSleep example to allow print before sleep (#1791)
+c8fe87396544cfd72910b089c26fed01952438af add WiFiAccessPoint example (#1833)
+18d260ec6e5617ee3ddbe810b47661b3e8c44516 Fix for TFT_eSPI and Adafruit libs (#1837)
+3a8ac27a864fed554673da7b9512a7afd782c648 layout fix (#1845)
+a6a9a518a723df969ab9519d5dba3ba3b6ab5b6f _uart_isr use wr_addr != rd_addr as test for internal queue not empty (#1849)
+02ee799f3540dc7412e2869b3144fd046704810b Add T-Beam Board Support (#1852)
+ce6107480256b3251b0d069f5c678b09bc36d90e Add functionality allowing rxBuffer of HardwareSerial to be changed in size via HardwareSerial::setRxBufferSize. (#1855)
+339618f8ef12f0022b83157137d966620e261172 Updating Boart.txt ESP32Thing in PartitionScheme and DebugLevel (#1860)
+6e4e4c96eee72152b7160999de9a8badaeffd03b Updated ISSUE_TEMPLATE to try to get better postings (#1730)
+65511b23d3f7e97596211b8a2864fa7f52de36ef Add separate method to get free PSRAM and report only internal in getFreeHeap
+14d6f6e7e6342b25ade2dfac964f4348bada7255 Correct pins for actual hardware (#1768)
+9db207afbe3761ba6ad20d3b5b95ad2a3fd3d55c Improve bus recovery (#1767)
+a989853d4aca2c5822cc6c4987bcb162a76cb130 Update mac.md (#1760)
+172802b18e3540e39371d5125ba4dc70d07046e7 Remove duplicate ota_data flashing under IDF
+fff178304644a93f72e9c280b52a8c4d9a7ef828 Switch to isolated build flags per framework (#1748)
+cb53ec4891b292e6ce61e9ad28094f13915cb973 Informations about WifiClientEnterprise.ino sketch (#1737)
+7d3a67ada0645409b017cc7a83af93eb1dc4b61f Update Arduino/hardware path (#1727)
+d057e544e01c6cc7327b1c3887e19850f90ee55b Added a freeEntries method to Preferences library (#1722)
+b05430cfd9f273d627baa6c4dac6c215d6cde902 Wire ReSTART fix, with others (#1717)
+e346f20aa9f455f3147d9d018e09dd7c05818951 Fix WiFiMulti Logs
+bdc45e39efa6179e163bc5cdf805e813c06548b7 [OTA] Fix "Error response from device" if OK response comes to early (#1695)
+a7ddf39521e7edd00651bd56d0a31a56aa9e9607 Cleanup on README and boards_manager (#1693)
+abb8ea99d545541fb6fafcb528d50157bad7dfe2 Fix WiFiMulti Logs (#1690)
+30b3eebabc32ba653defb4a4b4e3bc58624e83e3 * merge only annotated tag messages into release notes (#1683)
+3222e6490a535ae8c4c51aeb537caa6c9f80a846 add LOLIN D32 & D32 PRO Board support (#1688)
+2fba81223e3a2779e4e15cb184df3ed59652f92a Added instructions for installation with boards manager (#1630)
+e51f7a5b8718658052c81911956696481a84a265 fix compilation errors in idf
+7d2560cbbf068d2581dde657f5b3fa57c1c3a8e3 roll back the while loop in _parseForm
+17065dfd3a55f1e22cb770514a623057d4831724 Added a define to format the spiffs in SPIFFS_Test.ino (#1662)
+2f5b3c0c56cb1e7bf232a11882b869809e420abd Functions _uploadReadByte and _parseForm were modified in order to (#1677)
+1fe3ee87b64c42578ce52902572fad4c37eb2605 Feature/selective compilation (#1671)
+7761ebd9f20ba0f123c1d3118dbba92f22790b43 Add M5Stack-FIRE board (#1647)
+f9a382ab9f4d8dcead1b0e38c8cdd8981a39b8d2 fix some compilation error and warnings in i2c
+d854dc1bf6234219d8862391d9e5988efe558a92 Create WiFiClientEnterprise.ino (#1640)
+f1f8d7e306bf31d292550fce9a3ce463da6a58f1 Packet with zero data length (#1659)
+da798c7db0ac2e266446d76f78ed27bf5519eb12 Add TTGO LoRa32 with OLED Version 1.x Board (#1663)
+2fda054bea45aa6d1be3ab4265406b0846247357 [OTA Timeout] Added ability set OTA timeout in the OTA client (#1669)
+e157ec06a78d6abeaed1aaa9745cea6d7e155490 expose post args during upload (#1650)
+05d72f963d91c94518e6d08e2805a0a078c8af44 fix WiFi STA going into loop in some cases of disconnect
+b14f82b65f69d62209822231af582ccf5ffc17d6 Release notes formatting update (#1634)
+c830511f012271d3738227cd70d6bc45172a54ab EEPROM library: Move #include of Arduino.h to header file (#1641)
+cbd4dc53a67c23afe28d48e7260b56a7e7bc293c Add ALKS board variant (#1643)
+44f5a4dbc8272bd236d6eb82bc70d71f19e622be Fix Client returning disconnected because of VFS errors
+e63aa4065092c9a3a0547b2649a509585866ce87 Enable PSRAM builds when used as IDF component
+ddfeae90d0f537805ed4d1ca87618f41f8032359 Fix AsyncUDP server exception
+ff90778173b049cda97a2185bbd699a5985b047e Fix HTTP client returning disconnected when there is still data avalable
+4e9d1ee23798a127b6754d199194adcbee21f058 Fix connected to be wrongly reported in WiFiClient
+c1a94b532617e4f7dd13a2d90b50dfb54eeff3fb Fix wrong event description
+3e160587f3b52a09d49ff9556478eca78e7b99ea Fix WiFi Client not properly reporting connected state
+79010b6498af1d55d15532e6733d61ca45f49683 Add XinaBox CW02 to supported boards (#1620)
+9925772db0b828745bdc82a0038784edb0903a55 * update 'version' in platform.txt (#1619)
+c77aed4ac4f343fb6e7e7b9bbaa36b3495eda4cc Allow using argument with attachInterrupt (#1535)
+901a341949f23afe54bc6fc5c6617974ff9b36a9 BluetoothSerial: set COD to be compatible with macOS (#1304) (#1556)
+9f6d0d295836a7d3cdc862bd882a54257b90677e EEPROM.readstring was returning an extra character (#1609)
+9efecc1be03a7f319df1d86b58f56ae73a6ae510 Implement RX buffer for WiFi client to speed up small reads
+b0c6991bcf6f5ae76a28bc697989814146ed1066 Small adjustments to the web server
+8afdd71b3a3498caf14edb9866c8cff332889c6a Add missing event string to WiFi events
+871dd183d8b28af9b55fcf7331c12578f1242579 Print to debug the IP address obtained by DHCP
+05111bbde70a6a3aeb5538b2f7ca78eeca9ce9ad fix case where library source subfolders are not compiled when used as component
+bad53905e8e84664b968c29145924f978f9658a0 Prevent exceptions in WiFi if not yet started
+95b87545e71a70415500b83359e9e691962a1e54 Make Stream functions if File to not wait for timeout
+9f8f05735b0ce630c9879038fda2457fcf117618 * relnotes handling update (#1592)
+a835bb26c4ef80c6cba8ab493830b6c00352cfc4 Add missing flag to fix psram issues
+5e46c9bae6741196130a41d3d5e8dba316153b1e Add Wrover Support and Option to enable SPIRAM
+659c8ad528f806c3eba564a671d465c263de4944 Fix TelnetToSerial sketch
+2fe965259a74480dcf7bfaede95769f495ccba4e "fix" SPI
+0161e2861458a5694038503cf31d3b7971a2fd3c Added OTAWebUpdater Doc (#1583)
+4e5cbdaa7f4ae6d4f76a378e010d8979da9532bf Add declarations for all Serial, SPI and Wire buses
+12ca9e8b521127c5455b8e45b463371cc0cc6d3d Port UART reset fix from ESP-IDF (#1408)
+8b01b9e187a99fa54226ab5f42f024b9c3fab9b8 Change esptool version notation
+c4c946a83da06a0343b0ea2e4cd5a1e918578ab3 Broke HTTP_Method out into a separate library for reuse in ESPAsyncWebServer (#1562)
+3967beb4fb74b23de096d74043057e20fcb1279e Added WiPy 3.0 board (#1572)
+6411ac4e3c5c8e0ca360a2a5f959964e87e7b1db Remove confusing Debug output. (#1574)
+184bb069f2b816c897d5151307d8bf0d6519895a Fix io16 io17 and PSRAM support (#1564)
+b855eb23a7e5c5d242a754313ab9b2791a9babb0 * arduino-esp32 release mgmt. update (#1557)
+eb4e891344e3f52f17254c932adf250242db8455 Update build.sh
+47421b869fba0e6384a7de3ab51616346494d01e Added OTAWebupdated (#1544)
+a8ccbd40a421a86c5a5d753c841d82d71c7df46e Update esptool to be compatible with the packager (#1554)
+58bdebc5657efd4892d9b3efe401532926d757e8 * release deployment comprehensive update (#1548)
+ed953a0d2ed2877451f3a56b79f7037050dd2f75 BluetoothSerial: check return value and return number of bytes written (#1538)
+93566a4fad4209d7ee536eaaa7d802ecffe98bb0 fix PR tests
+873876d94c098cb72660df3f0ce46f9ad01ce6c8 Fix peek, read and available logic in WiFiClientSecure
+058645264c021be78f4108a357c50b60adc50b96 Adjust RAM size and calculator
+cde668dada2e32a0a56978eb2e23d5b8d0b4aea6 ArduinoOTA endless loop (#1533)
+7abd5862ed6abf1804a24dc466bdf3564328a4b6 Add component CMakeLists.txt file for use with CMake-based build system (#1508)
+c7b38008e24a2a9350fa32e86a4db7ed2bf0d09f Changed pinmap to show pins34-39 as GPI (#1510)
+36c8020cbcbdb4354751f88726b28d1e521e1154 Added WiFi.disconnect to ESPNow examples. Fixes https://github.com/espressif/arduino-esp32/issues/1425 (#1511)
+33392af3156ab2e30e398e04237443726cc52a8e Missing include gpio.h in esp32-hal-dac.h (#1512)
+d06fa8ee70dd2541aada77007fb08bedc941323e Make scanNetworks return int16 (#1496) (#1514)
+c63d746a069103ccb9f6afd35fa5a21e73f1340a Added SPI bus pins (#1454)
+83810fa1563f77145272583e36dfb076d3a92018 add support for TXT records in mDNS query responses (#1480)
+8e4ebf49de8bdd279203ca72c2d7be607cffc822 Add "ODROID ESP32" boards support (#1506)
+89859f7f4c07ce3e5d487a4b689dbda78f5d5c3a Calculate an absolute path for a custom partitions table (#1452)
+a7b627cd787f5a4a8caa68ac0a12fe833cb36709 Update espota.exe
+7b243adcfdfdbddc76e571052e7becf310cde757 [OTA] Add UserSelectable timeout for invitation to device + check for OK result in the last few messages (#1445)
+03808e3b8b3b0774287592f3b95a3d4bbb8845f3 Remove xtensa headers and adjust includes
+40d85ce5827c0844efa986dd1c669f06c2b7b280 Add submodule of Azure IoT library (#1448)
+900e0a02579399a4ee9a11c330692d0f9f0be653 Update commented pins in SPI Multi example
+9570b77abda4a8cac0caee354a14f5e4a35a7a04 Custom Partition Tables for @PlatformIO (#1440)
+e7338998d22b2748cfd9b1461bb62c2d28e485fd Selectable (from menu) partitions for MH ET LIVE boards (#1430)
+7aa8fc4b26dfb66de46b51f6baae3f33367e4c6b Added IIC pins (#1436)
+4ad27b4adc1e84d83ebcaacc453b812db881fe2a Added link to compilation issues for arduino as esp-idf component (#1435)
+c24a3404c638ababb7d8ded5f2c8612ec109952a Add `SYSTEM_EVENT_WIFI_READY` call back  + WiFiMode fixes (#1322)
+93c45af25640435f78532cc621ea159f525e502a Use esp_timer_get_time as time source for micros and mills (#1424)
+dd639c4a029b3b31559bb4243a066e2005bdbc18 Fix wrong range of duty cycle (#1353)
+f14de5cf14e78db925e0aa081d60c1d1823e82d7 WiFi disconnect reason message updated (#1323)
+848cf98ba9f24e2cbebe1f54244c761afb50b3cf Update ExternalWakeUp.ino (#1332)
+25678f47aa66c135abef26d8288c6674481996ee Convert - to _ in build.board names (#1341)
+f5246cf4c10d48db2d3dccd22b79d6a0c2383fde Adding a getClockDivider function (#1355)
+6bf7619cccc0c8ff8ee7dc53da4eda515382215d std::functioanl for WFIF event + Minor fix (#1366)
+7bf1f47c97d9ab76532b310591c3188c826ccb5a Add note about sketch book location (#1374)
+f8a3c61981fffa7f53278ea5ac38a225bf737a7b Add upload.maximum_size directives to boards.txt. Add partitions to LOLIN32 (#1379)
+6f12b691cfdb3fafa72432d671e2defd6f915742 Selectable (from menu) partitions for m5stack  (#1382)
+611db61d84906a012d8c86efeb0893498fb8ba9d Fix WiFiClient error handling (#1388)
+00f962439a8d4c7017895ea4dfbdb3f6e6d9b3c4 Port SSL fingerprint checking from ESP8266 WiFiClientSecure to ESP32 (#1397)
+0ea9ea4447ab665d0884788292b1ee1ed7b2a221 Fix WiFi.persistent(false); having no effect. (#1406)
+cef5433c8bac068cd7b1bf980dc1d9f4f67d773b Make extra images independent from a prog tool
+b9ca9223792163135b0961c1903c225ddf2c7925 Initial support for external JTAG programmers
+bfed6eb07292821602238280776ddea6a995fa7f Allow to pass a custom partition table
+68265084b1681075f8c60ea47e1d4b8f9f68c91c Created example program showing usage of both VSPI/HSPI within arduino API (#1368)
+1424b6d1a4435830b908d2d45c74b1af06831ca7 Add guard to handle to check for _initialized (#1321)
+c92b61739743e6df0768bbcba1e0b53755ec91d8 Convert the few remaining cr/lf files to use lf for eol. (#1316)
+1da3138ed6bf4675836f6ebaa15bb5db280a6e36 Corrected Flash Mode (#1205)
+4da5d46ecd5df363e926c530115eb1c2ee39383c Additional partition scheme min_spiffs (#1302)
+febcda0095e9754787eeba3569543c953635da3e add WiFiClientSecure::peek(); (#1310)
+69f72eca849a44688e2da38028eb9aa707e91f08 Update IDF to f586f5e (#1296)
+1cf42702dd9fb53664844e1019cd1a25c23ca757 Add Hardware Reset when Initing I2C peripheral (#1201)
+14ed6c4c251b05903be0a8e9001730c6fef4091e Corrected Instructions for Windows typo error (#1210)
+2ded419486a6ed444195ce99e54f486b7bb8f792 Update WiFiMulti.cpp (#1220)
+7eb6fc5286f0225af26c8841ec4f6972d5102889 Add Core Debug Level for WeMosBat (#1222)
+aa1288aa6eb47a179480108742f1e32e67acdccb HardwareSerial - availableForWrite() support (#1226)
+149190fe119a526f32223db75c3591a4afab612c fix Arduino component build when CONFIG_ARDUHAL_ESP_LOG is turned off (#1228)
+7998e2321dbf17c6fa7292466651ca4590e06ab4 Preserver custom pin assigments (#1239)
+5abe49e8eb833b7f6216e91f47cc7fbdf726ff7e currently, when M5Stack board is selected (#1242)
+c01e5563c83d917f84d0d512a9d0810dede53202 serial global instance fix (#1243)
+f6a4b024c7d33a2057695decd2bbf68928b4fb05 fixes #1249 (#1269)
+25dff4f044151f7f766c64b9d2ad90398472e6b3 Fix Bluetooth Serial
+3a4ec66d41615cbb1c3e830cb6e761cdc4cca9d3 Add hasClient for BluetoothSerial (#1183)
+e9ee0ab7df325f59236fb66431182f923dfcda53 Fixed M5Stack build.board name (#1187)
+146b2f6a23482eade5e9e4fd94230347b8ab8b25 Use correct separator in keywords.txt (#1175)
+b4b9a79eead317d899fe4f199b4d536b99c25112 Add BluetoothSerial library (#1144)
+835268c326e0a6c95a36e66f5b6a6d24c2c51f8f fix thread storage
+adf513fc170d11fe3462b04b50ced78352f5575d Unify time modification on SD and SPIFFS (#738)
+7141e3e29dc0c5758313bf4e0ac93fcca15dcecf micros() returning inconsistend values when call from different tasks (#1165)
+1256f2e53924db45224863026465221434522a8a Updated to download mkspiffs 0.2.2 (#1159)
+848f98e5f0250fe787773dd5d2121e9db28f5ad2 fix event reason logging > 176 (#1132)
+bb8b2554297680b835ff69650debd13026b8e570 fix issue 1081 and 1086 Wifi connection error when using STATIC IP settings (#1129)
+e2f7736cf016c4a63602fb4fbd6d426143d7c4f0 Fix coding stype as per PEP8 (#1105)
+7aa7c3f0ddb75b7e662d68a3dcfd6f96926533f2 Add additional test detail (#1099)
+0f9595e31e191e513d072decf4a1726ff15f19a8 Fixes SPI mode setting (Issue #1094) (#1096)
+494ff217aabfc21db00d228c87d58028bb4c7498 Make ESPmDNS compatible to ESP8266mDNS (#1085)
+2718d69c19a34c56abff770a02e1eb5ec84ac689 Python 3 fails,  unicode is not needed or supplied (#1082)
+da46d0b2642fd692292b12be9a3ec2b54088ffc1 FIX: getEfuseMac can return random data (#1059)
+8e29347d4f022a9585f6bea48f612471f15e6cca Add Ticker library (#1057)
+f5c2afff31338eb2239a0f0fb1f4e755e3584efc fix upload.maximum_size as current partition size 0x140000 for esp32vn-iot-uno & heltec boards (#1052)
+77a8e479140f4d45d4d937c4fecfdbd1355384a3 Changed Python version in Debian/Ubuntu install instructions (#1043)
+3310e2e31d818efa095a750571d030cec6261f45 Add EEPROMClass and examples (#1034)
+694c3a453f8977dc61e2afa26a9e761557f09ac1 DNS Server : bug fix and prettifying (#1011)
+d29cfdb10407d5d6c01880f8b66de6677bcd621e Add Pico Kit board configuration
+a153f6ad280e5932be9c80341556348ff505d586 Sync with the latest changes to Arduino platform.txt
+c8596cb9bb9f15578cc6ac0582edcd81976e585c Update integration with @PlatformIO
+7fa8cafb27a1e28e3da74c5d44d4b0c50a252f05 Fix issue when user name contains a space
+52d47054c2cbc4554cd8605235cf24540ce6d91c enable exceptions in build flags
+bd932a99de7c1a0c04484f6db03f0d867f9d3fcd Update BLE lib
+615c9279f79f9f721eedc3d48b3506b3c3054492 Add DNS Server
+8332a235d636a8cd28cbf6168aecf3f65fe1104c fix issue with STA emiting the wrong event
+dde5e297c35b87e25e85b19ba4107e2895ad9b52 Update BLE lib
+bac560901f4f87a4619c3e8c1cd431e7c732483f Reorder Updater init
+d650ac6c3cffe5ed985127f909c2f25973d0ffbb WiFiClientSecure::lastError() method (#945)
+81e0250983a8a3005fb414fa159a83bf306d1c44 Update windows.md (#946)
+2633fc3c7412d12a081d520f758f10d720988d5e Add progress callback to Update::writeStream(). (#948)
+78acedd2cf3590afdab81c794229f59d879f9424 Workaround strict-aliasing warnings and added missing pgm_read_ptr define (#996)
+964287727f78eccfae36474402590896ff6ca426 Small grammar fixes and clarifications (#1003)
+528caff7f9f2253c6c5b9b8a67c60610cfc5baf6 Added missing include directive for stdint.h (#1005)
+600f4c4130f2411e8ff33396d0ef40a7ec257cd6  Update IDF to 1c3dd23
+70d0d4648766cea047613062ed50a9ecfc9de31f Enable static IP via ethernet (#924)
+cfbb7300b768a1ecd7f1300ecac044268153e78b Update to make use of SSL a bit less confusing by ensuring errors are generated if the wrong method is called to retrieve the data stream. (#934)
+75bc1e648bec2dd82c86e801622dc00694900880 Allow configuration of Ethernet PHY clock source (#916)
+20db2ee421f5bba2d1dd6aaab7b3442e498f7cdd Add Time and TimerWDT examples
+79e5d4c40da01306bfc03aa7150440d1fcb65f41 Allow PSK instead of passphrase in WiFiSTA::begin (#897)
+7d2bffb0e8e9371191e66e16faf368569c07f8f0 Sync "-u __cxx_fatal_exception" LD flag
+d1d56b597af91e1f662d2ca468e24cd9a4199305 Append Core (IDF) after the user libraries when linking a firmware
+21791821883cc085970d63e3dc488e29fa37554f Merge branch 'master' of https://github.com/espressif/arduino-esp32
+88bd512bf57fb8e01fcec2e5dbfb8aabf0a69a9a Add missing flag to LD
+b2d01e0ad2032efd29a1d7ce9a14128a3e153283 Rollback to previous toolchain (#894)
+f0336b38adafe86453a7500919330d26a01d4d22 fix change in IDF causing havoc when used as component
+46d1b1731987ee464bebf97702a113c021d8e56f doc typo (#889)
+3e87abc62ef175ced77351b824c792e82ef4b6f3 Merge branch 'master' of https://github.com/espressif/arduino-esp32
+62fa954f141d3952c6643e82decb12ac0ca7cfd8 Import SSL in Windows (get.exe)
+3198f25c19105ff933da4fdb33f132304bb3afaf Set HSPI ports by default when HSPI is selected (#874)
+aa83fca438a42d4cb80bf2a563909ae2c1f8a96d Update link to PIO Core (#877)
+1fae11a7f20fd0b483a46dcd84ad7703a2ed2da5 Merge branch 'master' of https://github.com/espressif/arduino-esp32
+823fb8fdbb865c19a49c60d58f1e4ac576ebd921 Reword some instructions
+dac7ae757ac0df98145a2997f2a50abbe4e8eed2 Minor fixes for PlatformIO (#881)
+6fe9202c6c931a04242ba450bbce38c2641b7ab7 Update platformio-build.py
+8eecfd21b41838761ecf5a3cb62446e4d53dce36 Sync flags with platform.txt; Custom partitions per board (#875)
+a907113ba2c67d2dc3785b1ef93e5ab298d82412 Use real flash mode and frequency for bootloader (#873)
+3300a346e881a04d582991f8834efff7c3ff35e6 fix upload for linux
+62c5f3337d3e734dfc1c8fe1ea94109e2826fa24 fix bootloader for PIO
+a53d41f1c1d2543306f22bb54a6440aaa168073a Fix bootloaders for different flash configs
+cf45d5147662310f5c790eeb27fb9c21ef5edc2f Add stack protector flag to build
+23cf233ecad1121d56a3a93adbb9de2e5889e665 Remove unnecessary library from linking
+81a9c45a1ef5833e80c9235ff393a7641c669a94 Update IDF to e5b2c1c (#865)
+a3a9dd3af97772280733fecc6d52bc4db753c8d4 Ignore .DS_Store
+b788da30a842bd5009ace266f7b1c6872fb908dd Update get.exe
+80a7d6084bc0297d371198cbf4d0eab0b98ddd0c fix enable ADC on pin37,38 (#822)
+8ba91b945330303f9013f30da75c49c4d6dd8a09 Feed WDT (#817)
+47cdfff4756876ac952832c1bcec3adecd982a49 Now SmartConfig works! (#807)
+1b994d54be9c86043c1fe63d132a04acca54c3d9 Fix wrong size reported for cards above 16GB
+45d5d9b3600faa0cb10caef3e2b8a9e8a9479f02 Fix SD issue on failed mount
+14dd44ad06e311657030573174ed0ae8d198bfec Reduce net_would_block calls in handshake verification (#795)
+c1ce87e0a5624b9d405a128a3aa2e1ed9900c4d8 Fix Heltec Wifi-LoRa kit pinout (#799)
+7890e1192b78dfdfa3f8b4fc8b741d50e282b92e Allow chaining of methods for more concise code (#809)
+21026e23739dd5474ca24f0d3a70b8766f737cbc fix NodeMCU-32S .build.board property (#812)
+1b2eb443ef6a1e87e60cb0c54e3840ded2968c5b Fix compiler flags to be compatible with ESP8622/Arduino (#813)
+126674c3b65d414edd4cc60cff4619edcff6f53b Fixes for zero length packet bug, buffer overflow in parseInt(), added end() method (#757)
+b7db2da17cc799baf1f8f1843a7b55ea507cf6dd Unicode support in get.py (#781)
+a276ae0bf3fbd6dd79826470bfd928499753e7e2 adjust partitions for 2MB (#780)
+3dc30dce811c0de1ca15d825ba0b898239070311 Add compatibility macros with esp8266 (#783)
+36dba996c11824014989eb1b0ebcc4d96bc82298 Extend HTTPClient to allow connecting with a client certificate (#788)
+07685903321a1968174f1a5027be88adb77b8817 Add new target u-blox nina-w10 (#771)
+aa9111adfa7cdb52d1d6b3385d58ff1d8734c5a6 Fix flash command for Windows and Linux
+84b8582acbb8ea76cd8b31400b7ff6edc98afc94 Optimize esptool path for packaging and fix possible build errors in windows
+4f55293f5901c4d060c1d58540988e0ac9739a3b change esptool path logic
+55289a45af1e7898ca0b8da037d92a83baaf0083 Update IDF to 9274814 (#767)
+95123681d5340defa24472e441758fba88e3a34f Merge pull request #754 from stickbreaker/master
+11565343e629cc748dfeb0ded6ef8043882d3f96 Merge branch 'master' into master
+2a1a62a90a849a4aa172036bf79ef1097495b1a7 Merge pull request #751 from espressif/longReads
+4470e28ca1421e6cbb0561b1cd9a523ba697e5d8 WiFiClientSecure fail if gethostbyname returns null
+a695187de8226c751b54a855af102bfe1cb8b6a9 Correct 10bit Device address handling.
+1270f400664e755acc55c7b0522f3eaf36d882ec Add initial handling for long I2C reads.
+0c038b406394f6ccbcb2cbc0e11f5bff899dad48 Update WiFiGeneric.cpp
+43544d89c5236d47bf7e725f6a70322fdccb666f Run WiFi thread on the Arduino core
+7eff707ba6193533b9fb4ea69f55d5d9c02814ef Fix Early return when Address NAK is received (#750)
+81f225a4c56a938b3f18e717ef62eec3ca8fb35e Fix ioctl undefined in latest IDF
+c8ad79e3f3327f3acb7c0bbccddaf34615b0d44e Second occurace of parameter^Cfno-rtti removed (#736)
+3261348e8132b46006874455be9a8cf69dbf14de remove instead of delete (#730)
+2f73dd792069daa3865d006bbd79ec049ef0a835 add alternate location of this directory (#732)
+7216977234349cb2775b9678bb2559ce93962edc Update IDF to 3a271a4 (#735)
+9fe32304c8c73cf16f9405cca0b925cae3dbf96a Update esp-idf_component.md
+409c75da042192ba5dbeb13cbde6c41e0674ed6e Implement ESP_LOGx override option
+c8ffcacd64fc0f16c2573c505b7aedbb8d7d935c Add mkspiffs
+60b8b47455dfe5adfc464a2068d41e28862f2b54 Update IDF to de750e9 and add BLE (#723)
+e6a5b68e403e865218141c8b9c59f0e0c516def2 Added argument to HardwareSerial.begin to specify whether the logic levels of the UART rx and tx lines should be inverted (#719)
+cabc4c5bb578fe47af56a575f156129bf177c22f ESP32 default port in comment (#721)
+0fa25c09ef9b0e5c2b48e7cc2f086fb04db62e21 Fix possible leak in String
+f1e87d91beedfe06f5a53af28516d3d145938080 Create ledcWrite_RGB.ino (#688)
+3fea101944bd9258d84cf17d3dc5ce138296764c Changed update example to use different controlflow structure (#711)
+de408d0b59300ebb89f97c0b455f5987bf124188 Bump arduino version for IDF builds
+22d92e7b7f4cb710dce6811928425ab427a5d9de Change size of fatfs ioctl returns
+2f0cfa92cde9d4e014c123aed4c1de0ebdd7007d Update pgmspace.h (#707)
+8dc0c86457d913de9147054638a2b449b6398d1b Chip revision fix (#704)
+3b972e86ca1c7e7dce3ec9450ad888b9347ed0a3 Link cxx_guards from IDF libcxx not from libstdc++ (#695)
+171032b701ff525242ed7e8b15c527ad715efe2d Print an error when serial number is invalid (#691)
+17a1a24009dbd2f316ff14430b4f56e99565af98 fix SPIFFS example
+d208a3683630212b130f381e23a3e77475f4df0f Use correct sign  of offset for TZ variable (#685)
+a20f94ce62d751c49b34141a7c2cefc14a0e95d3 Revert "Add mkspiffs"
+c2406749704bbb45886a59915bb90bc4ac0830db Add mkspiffs
+28be506ce33c1230ad6a0af0dbc43a56e32c2391 uncomment I2C debug so it can be used
+0cd62852da1a5f00fda596d0aa455044f978558e I2c reset functionality (#678)
+10ff1def6dadb060990d2b343271376a119ffc0b Add example to update ESP32 via SD card (#628)
+e72895b7224e4f34c7727491017023433d885df5 Quiet SSL and HTTPClient debug
+7aa1913506e64f8abe61dbb4e70628710739d8aa Allow HTTPS without certificate to use begin(url)
+4230aeca83d7b7e703966b1502a1be0ecfe5f74d Allow HTTPClient to access HTTPS without providing a certificate
+af35773d65a8f328dba8090dff66ba43abe0e7be OK Really change timer allocator
+17ece1bccdd6c9dc671a6b0bfd66c0a642f75672 Revert Timer Interrupt setup
+6d985556586b6748e1248d35da9189e9b670fdd3 Change timer interrupt allocator
+f9b2d42a61053d87ab8cf2a8fd8500bedf673cda Change Touch interrupt allocator
+7991161f06746af770405578de4d21984cfd5a7d Change Pin Interrupt Allocator
+28b7b4e287dff65c0124a47c92a36518c31bab2f Move network events to their own task
+3ba46c7fbcb71e46acc9b7d0fcfe07e6b657426e Add totalBytes / usedBytes to SD/SDMMC (#673)
+a66b544d18daaa99508e69a5ff199a99b71759ae Added ESPNow Multi-Slave example (#669)
+2b6d47ac178211a8e5cf6705ccce15fcbdb9813e Fix race in SPI endTransaction
+db771954044928358f725a698d9e5d965d165f6b Fix Serial
+cc00af38ece6f3f086e39a5a18de958028e04a62 Update opensuse.md
+dbf7b108f1cd51f51aa4b4acf12cd52342680fdb Update README.md with install instructions for openSUSE (#585)
+4c36e033812a4142ba417565926ff8f919a32646 Added ESPNow basic example (#667)
+d27d29719579cd765ef032b76e9a50b71bcf2a84 Update IDF to c4e65d6
+e2bd93c0920346cfbe3c792e82b0b3f99f4354a0 Fix UART0 not able to read/available
+eb282131ba92dd81aa07cc2e2d36c7e189d716e6 Allow DHCP to be started again by giving a zero IP address to STA config
+1407654c52dcf473b28df513a94afd294e3ca819 Must include sdkconfig.h before testing defines
+c66a020e8067f657e730d018700e7de5b23175d4 Add guards to not compile BT code if not enabled
+4092fc409e5fd9d37b875c64ff598bd9209a552e Add baudRate function (#651)
+17add63139d5cf1576acd285fd6a2239fb516792 Add Example Code for WPS Functionality (#648)
+4cf0e98f32c16436e5838506a8405b4ad0c6a7e0 Fix desync with IDF in dhcpserver
+f648ad7ceaa5c3e0af54de5777b3ed30b3dd1119 Allow WiFi Event Callback to read the event info
+db79c2ee95e709d5436101871824023fa0bcedca Add api to get CPU temperature
+ab0ea2f6da9ca842fbb3bce90179daeb3580d3da Fix missing method from SPI HAL
+79ee46ead23fd91669ac4fd60b8ac8a8e482dd90 beautify partition
+658acfef2a96d6ac033ed8cfc4d636a44c66e572 Add missing headers
+27d54b331d38377efe337e320cf347803e6f877e Very slight difference between LoRa kit and WiFi kit. (#629)
+9fc3f1ebdd531633d2500e1a3a67a35ea02807b5 Fix wrong SPI peripheral enabled
+29a253ac9823fdb8189cfd72745a28143fe3c37d Add initial SPIFFS library (#627)
+39fb8c30440a4abd5fe0e2c87609ba6798ae8013 Fix header deprecation
+ba929be27a88b573ff632c5878f984a5eb1e073f Update IDF to 9a26296
+0bce98e72ccbd2f7b38a23c79eefb7a36d3baa74 add Microduino-esp32 (#621)
+bb078ca943a2901fee11e1a1b7eeece03e0e3f28 Add Dongsen Tech Pocket 32 and fake "WeMos" WiFi&Bluetooth Battery (which is a Pocket 32 clone) (#620)
+59a6800cdf71b33cfdca7d35d53cb3e0d7108946 Enable clocks for UART1 and 2
+9edf65d56e05d8f3768e7639e15a78257fe91f60 Static IP example
+234c855c9ba7c05159a9582f6fcff600609c3921 add configTzTime() to setup sntp using TZ environment variable (#608)
+0f83dbcfd6efd7b0747ca1860b0f6350dfd25628 Fix PlatformIO build
+fd9cc002e8f0b774861a13759570315fc374ecd8 Fix support for some arduino libraries which don't put source files under a src directory (#605)
+a7108969a3b638da250374b60cd483fd05d3c2e9 Missing missing xcrun fix. (#601)
+6707d4d331c1556ff98d9b5b87d6a5d2acc1a148 Optimize timer drift
+ad179548e41b410b9040700a783ff4de350da7c9 SNI support (#592)
+04044e22452cade83296f33508017ba82bf58800 Use correct extra_flags property in recipe.S.o.pattern (#589)
+adff0716f92d493ab34e9533bff29876a117208e add mhetesp32devkit and mhetesp32minikit boards (#587)
+4649db5e073908db7cf15e0348bf2d31d558fdb7 Add ESPectro32 board definition (#586)
+8bca8d546639e81bf8de842c81540f8990ad1761 Update IDF libs to 969f1bb (skip BT commits)
+856823ef195ef5c28516395356e8a30f8af8e917 Add support for 2MB flash and future option for different partition schemes
+be34c9e498aeac1e20f54d85bb237d4b3d36173f Add Heltec Automation	WIFI Kit 32 and WIFI LoRa 32 2 board. (#584)
+77b03472c6ce1a22ffd4ec456c3962b22a574593 Set uart queue to NULL after free
+7d643df1edf8fbcb8a3137c2a3f604a7ddb949df Update espota for Windows
+20d40f08681e6db134b062f38d2f9bde7a391775 fix OTA
+1b3e8fa2cf53c87646025132553c5dabdce585f1 Add "M5Stack-Core-ESP32" boards support
+e6ba0f62810121da1ebfff56510531aee753ee79 DOCUMENTATION: Moved installation instructions to separate page (#561)
+3a8e28dc87755d6d408542d778c187314b973713 change esp_wifi_scan_start to async mode (#574)
+41e36a72f309fbfa5e2bdeebdca93661728bddb3 uartEnd: Unlock mutex before detaching rx and tx (#554)
+9618eec19ea470bb59b9a25ebeb8c0c516ca89cc Set DNS IP to type V4
+a1bef8b5c3a156e8a0a9c56011849b7f1efd2d3c improve Serial repeated begin/baud change
+3af1710a9211f70439e54c94820aec0b7ebbba8c Add initial support for Ethernet and examples
+5c1b10f3bbc8979bacfc1611284f225183f8325c Small improvements in update example (#552)
+2aed417d09be57db5bef3ac20e91515a6dbaacab Enable 1bit SDMMC for Olimex ESP32-EVB
+91d02cc6d5ecd09ac9282d4192d52d619f695bc6 Change disconnect function (#466)
+f54b0fcd146640e390245bc0ce8e0f8894f7ec80 Create Issue template (#504)
+706bf48708e6668077187ba3f5543d0f7b49e132 EEPROM_library_ported_Partition_table_updated (#535)
+0accabcee0aa685d3315a50143b2127f787e74d9 Fix some compilation errors
+ca7f6cc516ce842cf7c6b35dbde4b0d4a5a86404 Update IDF libs to 9314bf0
+b34d18f5769b1dca526fc52926c51abbded593cd Add ThaiEasyElec's ESPino32 (#506)
+37ef5a43e360bbb95def6be8a997d0c7a75ccf33 Handle partial socket send (#503)
+2eaf846134f0ed45331775876e91e619b916f533 Spi pattern fix (#502)
+b3fdfda914dbde9ced49a05e0d17bf534d386057 Bugfix: Put every SPI access between begin / end Transaction (#509)
+d8330cceecddfe4b74a8962c8656e97d5c6219d2 Added file.close() in manipulation functions (#514)
+13bb22de301de79f600ff6b8bd5fafad2ccb2d95 Fix SD Card not properly initializing
+9d0ae7a6beb71784ca64447b7c57d6edd960b686 Add support for OLIMEX ESP32-EVB and ESP32-GATEWAY boards (#480)
+ad2adce65ec26b1913fdb140cce2cc2fc219801c Edit comments for clarity (#478)
+1be6a5c361d051f9136a825020005a3e05588ba7 ESP32: Add DeepSleep examples (#473)
+cfde5579161e337c0f9d264a52468698931a81b1 Heap optimization (#471)
+87093368d9b42d8a211d95ff54b8d3d2e26120d2 ResetReason: Add an additional method and a test case (#467)
+23acb4d17be66a55fd142657afea4218b2012c7e Two Stop Bit Workaround (#461)
+839318c0eb319da4e4778056c7f8c08eb0bd925d Create hall_effect_esp32.ino (#450)
+023a32bc12d9782620ed1174eac030460a4f0d1d Print last reset reason example (#458)
+7811668fb185c65d57c3c262114fbe51c083e345 Make sure that WiFi is started before trying to erase configuration.
+24085a3b24ed64943c1b0fc10de024b02bd46759 Add for if user has custom sketchbook directory (#446)
+409926ef778c8d0beabb53c09d6515d94b3fe00b Fix commits duplicating methods
+b05c7dfa59da634ef688bc7e6f207c96c4d24447 Additions to WiFiClient and WiFiServer (#404)
+6af648e8f5baa6f4fd199709e31c4b1495c0c3c9 Add DOIT ESP32 DEVKIT V1 board (#415)
+26677a4b055e572320de4e61ff90679081f75e52 Add WiFiClient localIP and localPort (#428)
+73cd8d7f7efd36c51ee122edf5486e7c72ae96e1 set max clients from code (#432)
+4d47deab249dd96437d3e7b7fc07eb2be4356d17 Some grammar/spelling fixes (#438)
+8965358bd3acf77db2921caabcd6bea3f180110c added OTA Update S3 example with a sample bin (#445)
+bf60ca7e3b4a0639a9f243dbe97972a5ad0194ed Fix enable Update partition (only)
+c2f83f48e04e49124488a9e32502b79f16c049ff Revert "Fix enable Update partition"
+2e5743eaa1b61b846f9217bf0c9ae87e3628562c Fix enable Update partition
+1d4973a40b64630899703044baf6e16fd2763545 Fix heading (#412)
+fb595e575140d2192f181c96228dc4f03e90cf1b add esp32vn-iot-uno board (#398)
+5b216b6622e11a723093d73cffca31e189bdc2d4 Updater was missing enablePartition
+063d608e18dc3df81dcb59b37c3e6844442bdc3b Optimize Update class
+0e513f3a4bf20089774ae91b82debe36651487c8 Make sure WiFi is initialized in disconnect.
+5d927847106f84e4714ee2a50545880b0911c1d8 Call esp_wifi_start in WiFi::begin
+432bcf5a0aa0d234346c22598bea8e248c156c79 Add WiFiServer hasClient and WiFiTelnetToSerial example (#394)
+db09ca8c162a096271333ff3fbdfea1bf5be761c Make SimpleBLE work again
+b6e83fac62bbb21f032ec45122a43cb5f963bf24 Initial WiFi auto reconnect implementation
+7db8f709569e66598a786ddff70033c76507c14d change return type of micros() and millis()
+21ff3d0e32eed03e7b332b51bbcf7820fccf9f72 Slight rework of WiFi Class
+88293a4284de16ed096df95851c0fd805b6d2087 Implement WiFiClient.peek()
+06a76eebe8788111e0540d77ac3708c6dac4de4b Remote tcp disconnect not detected (#389)
+05a3de262a4e7bd8205f2e773f7777182bf58399 Remove LEDC_BASE_FREQ to calculate duty (#381)
+d36e9bbfa936adbdf4ed5f3c18e778d575ede3c9 Change deprecated esp_efuse_read_mac method
+4765554afd97a4ba6da55a45ecc324e92a514246 Update IDF to 1e0710f
+4b47402afdb198cd4a62f0356dbcb20ab0bc3845 Use static buffer for log_printf
+befebb724251cd1b1ca6ed63c2171f2fa875bce4 Change DPORT access macros
+c64796c7d26f2d921b10c60a64b1ac54ec9194b2 Add NodeMCU-32S board (#375)
+7b63f5868391bec3d3c0f487ff182b28d241832f add support for widora-air board (#367)
+e960bb64f08fbad86d23dd14def75431ea2dc1cc feather variant (#364)
+3b86e0c0bc16b2ef70a957802a2b86e06f06b013 Update LED_BUILTIN pin for LOLIN32 (#362)
+376961d16844a3190bfc409e74c6acd0a4c93224 Update IDF to 65acd99 (#358)
+450df7e3f8305612c96919e5803ebd8c7ae63552 fix libb64
+673f453da02fa8fc5b07c3e85b133233d7334c99 BT define the hal methods even if BT is disabled (but return false)
+768e57f28582b57974fe77b02b2d9232c79a6172 Fix BT enabled check
+b1b77a658f1f361928264ad43671cf76f45b0882 WiFiClient::peek should return -1 instead of 0
+b879f800176d9de247babd55b47e594742c42a27 Allow Arduino to be run without BT support in IDF
+a38ffe58fe1d73a56295edb0c6051a46932e0175 Add ESP.getChipId() function to get ESP32's ChipID. (#322)
+cc73f17add01c067a847cd689be3612fa4d6eddc SPI_MODE2 and SPI_MODE3 configurations inverted (#345)
+6006308575e4801311ef707063ae3884b063d010 fix some compile issue in cpp project(like WiFiMulti.h) (#350)
+32c028a27e6b3c3c3df769bb42f0d87917e0309c #334: Update boards.txt for Onehorse's ESP32 Dev Module (#337)
+a95b1fd33ba88a301a8136a34567447407a20f3c Update package_esp32_index.template.json (#324)
+a0c6ee021b1c3562d4da1088204280eb83346fc8 Update default.csv (#326)
+aad4b336d63e7dbd472b3117fcee53856f1f7dc5 Add default config for BT init and offsets for partition table
+57028ad65e4cb492fee2d57f648694fb1657119f Update default.csv
+7d0968c10dc540709d69a28eab2457075c1e4fa8 Update bootloader to better handle QIO
+ee14bc2cc6c735976c1baed28e24cbaed0ccea03 Mute leftover debug from WiFi
+56ef31f899670ab6b6813bbe58afbc7f7395efc1 Update IDF to version 3cad00f (#310)
+fd81fd0ac33f4fdddbf173333652feba78998601 Fix BT init compilation error
+6519a35799774364b8a2a731ac8106c19048ee08 Fix WifiUDP::beginMulticastPacket()
+2b075f320477278be0eec55a34de9eca19426019 It's pyserial not serial
+f13127bd36039619c21694038dd4816d3fdab6db install python serial for travis
+2f02e27327aec9c4bb425548b802cbb8369c2244 Update esptool on mac and windows and revert linux to use python
+7e5b2781072305a8fdd02be8c09454c133b85a96 Add new control to WiFi Scan
+b465858563b05addf25e91e1e9407883cd4256f7 Check and format NVS partition if size has changed
+80322311f1b212db1c8dd4c983b4bb196b8715fd Update IDF
+7e45310771a43b9a47ec0c4556ad945176d4556b Fix UDP TX Buffer not set to NULL after free
+ba1efb98975683d7815c80cbce26a36ee5335b18 1. add IntoRobot Fig support (#284)
+b46f1e2e3cf341a9108ab9916ff82ea259722162 Support self signed certificates (#291)
+fcbb3e7987bfc0df27b2dd24e2a5f20f66276f3b Reconnect WiFi on Auth Expire
+90322ae7ebf1ee1ddeb973f0216562c355d932f6 Make I2C work reliably with interrupts
+a07f9842af1cbc49f0484b5c957616d5f3843879 Fix SmartConfig not saving the correct config
+dda89947a7ceace414e29818a7099f47b9fa9bd5 Fix writePixels
+87b7182ef1ad0383dd32df88314cfa1c7181acd2 Give WiFiClient more time to select for writing
+9388d8358eefc1bdb7f500310c8365acb0899845 Return true for boolean test on Serial
+9dae9cea373abac265f5ed28210bffaee78c92fd Fix for WiFiMulti (#264)
+786425509e1c6ff1b9a61eb0ddacf098e8199d0f Track microseconds overflow
+e81d4d3f722262abb7d5245ce51feb621110d5a1 Fix SD Card not mounting on boot
+a70954111b1fa6d2b430171c3dfe231d29977745 Fix compilation issues is certain situations.
+01b2ef780aa9b44e4134e16e1009f5805240e66f Set proper default pins for SPI
+2b24603aab1836114cb38c8860600d74d916ee68 SD library explanation (#262)
+64ccef75fb90ee1f7a8b64559e76a7572eb56d0e Do not use inline functions for mkdir and rename
+bc7aa60a30101f11fc03da84f18a2d029f2d30d6 Catch exception if host is not found
+fa1716e73eb746088921ca2d3695a04f68beb1b6 Add Ota and mdns (#257)
+2f5efed220a16835b749c0c1599080d97f835dc8 Add pin mapping for SD and SD_MMC examples
+e30447449feac1588945dd544d39405a4ba0fa20 WiFiSecureClient fixes and improvements (#255)
+e625b3b08ed7a5bf2ae0d8cbf068ba534f91c23a Add FS, SD and SD_MMC (#256)
+56ffec855d2d6b2fe9ab36f27cc11a6fd947db03 Update IDF libraries
+161a224543bceb276edc5d71b33546943c859508 fix IDF library includes
+8289f34bf9f3bbf1ed199281ce77a3b70f38b1b0 add DFRobot FireBeetle-ESP32 support (#239)
+eb46978a8d96253309148c71cc10707f2721be5e Add Arduino SAM compatible analogReadResolution and Non-Blocking ADC api
+8fb8478431a00cd46b2340c4dacb763688e79057 Flush client with single call to available
+1058e89dc3d390a1eafacc4bcbb48bfeda675872 Fix wrong bitmask returned for pins above 31
+946e52da986dc332d158ebafca1258b38352b412 Break on any error when flushing a client
+6fc96b977f5b4b110cb174fff3327ef9245ee0d6 Add WiFiClient flush to clear all non-read data in RX
+72ce040785c4c69f35ce10c48e912fdd67347891 Use wildcard for core includes in IDF
+f0fc28f0e309c8aba734cab705cee3f4dce24c3c Rework WiFiClient (#238)
+770830aa01c883ba4a5219b77e1cb20bf5a8ef09 Revise WiFiClient::Write to handle EAGAIN (#240)
+5f2b00228c60995eafbba3d4ad8849ecd82d505b IDF add some defaults and allow Arduino to run in single-core mode
+bcd6dcf5f6f8a4670db53a495ad8c8b556c2a8fa Fix compile error with IDF and mbedtls debug off
+00c1a6561267dc148d674d1cd9a1b4870d0d7377 Improvements in EspClass (#222)
+1d759380a6ff0d201145658bf54c423ffbef4c7b Major IDF and Arduino Update
+b5ac95b2742cec4c24d4fe16406b95d38822ab8c Update RepeatTimer example
+e873d577f701eecda3a4cd677dbcb1b83ec69427 Restructure Arduino.h a bit to help eclipse code indexer
+422d24b43f6fe3326af74fa5f698ae0bafd02321 Update IDF libs
+a83dd5f2b5bde6c2b2ac846fd1d1a7cd902899da Add RepeatTimer example (#216)
+95cb54cedefb086fdaa69a6daea5d9507bfd86fc [fix]  return add --- error: no return statement in function returning non-void (#205)
+90ebfdbbcc970dca8324880c8feda7ae48da285a Add some Arduino defines to IDF
+3cbc405edf2448cf1d77b0a30a5e62ddab806a85 Add helper for sending 16bit color buffers
+d0232d126a200fd9d22117ad1cd73bebd9002fdd SPI implement transaction locking
+9bd5de11a7d19960a85d015e60778276cd557ed7 add hook for bluetooth to Arduino INIT
+43cc3dc8159d981bd3cd2e783fa1694f9b34324b Fix for implicit declaration of function nvs_flash_init error (#204)
+a36ef2aea8afcb2422b48cb9508d2051a638619a Added LEDC Software Fade example (#202)
+8c1e7018c9809f654a2c008e5d9c52d8e7f1dbf4 Change library name for IDF
+f9ba8e9ccfd80763a4be90403bf711eff1329ef4 Refactoring EPS32NVS library to Preferences library (#199)
+4a90aeebc969d1ca4055bdfda6bc929c3ada67d3 fix ESP:: getCpuFreqMHz
+450ea0d211739090506113ddf893d133146e9505 Update ESP class
+a28a7f12d51c055b0a3b21e4c558316b0e8babfb Add default partition table and app selector bin to IDF
+09f5f7266ba51648a3a58f069609d928da6ac0a1 move yield to function
+8ab3231e31cb3b94d80cbfd7dd1c1eac6f646236 Add WiFiClient secure lib (#184)
+0fb5e5ca116b35e2122fa84e431570b43f6ddceb Improves in ESP32NVS library (#196)
+5de2429bf8d22f9b86ada1d5435b376e0f370d08 Wrap "gen_esp32part" command with verbose action and own label (#198)
+d92c7686b0369eaaee86df9994dad8361c9a8ff6 Add support for custom partition table; use built-in esptool.py (#195)
+fb8fe671d695c5239a6f8f5e549d55ab1776d55f New partitions (#192)
+1f0df1ef976b865c97379d326d59f971a7850fc9 Fix wrong return values for WiFi::softAPConfig
+0101564219839f3159c954d8d0d40b2ab0917739 fix compilation error if debug level is above debug and less or equal to warn
+8df22cac80b5048f29f7fba77d7d284c71cc8c91 Store WiFi settings in flash
+6a058275e791a52122ba6a1541f95d53bc303dea Remove unimplemented methods from SPI
+3e87dcf748102d7762f0c29032543dd9cfacf11a beginPacket can be used without listening on socket (#185)
+bfa979a90074339b8e605746d7e3882d815ac80f Add initial NVS Arduino implementation
+7a7b697ff9360416faa7a5dc239c004518538903 Add ESP::deepSleep(us)
+fdc4f53eb677678b2de448a99a27ad427c304a9c fix WiFi disconnect reason index
+67128fcb2c01205da697cff04d45ba7566393183 Fixes implementation of __FlashStringHelper (#183)
+cea41d965ade046ac814cd784517bf2edbe23445 Add Touchread example (#175)
+e62ecb3ef489e017bbf72e1a57dc0bcd56e5f1cf Added boards constants for LED_BUILTIN and KEY_BUILTIN (#177)
+d02c1c786e0a96493b955adf1e5bd040c93f760a Update IDF, fix SS definition, add custom partitions and debug level selection (#174)
+ee8149e207ad9d11e1b1ef9e7898cc9bc0289346 add better debug messages for WiFi status
+f4ad2624c953a8fc3eed1e7302041cee247d3bdd update travis and build script to not fail
+c66b54a9ebd00347060b01738418d4c96b72de32 Add touch example
+bbf48a5d54d03bb0c67468c180783b681b6fd86c Add (ported) SimpleWiFiServer (#158)
+9101e1366e0383ee988d145b5956ba1b24a5ad84 Test nested examples with @PlatformIO (#172)
+a80b2b24a4ab57d728315ffd04d70e9ab8fbba81 Add ESP32 examples folder and sigma-delta example
+150d2cec69e1c8551d0731685f32ccda16cae558 Add hint (#170)
+97e9a120bdf27011ffee7a92e03660a53fcfcc81 Added a basic WiFi UDP client example (#114)
+de017a8a1b362a8bee71d14073f87300ec428b9c Optimize SPI transfers to take one lock and do not return until completed
+672631ddf03b704c4692e6da8f071b1aeb0dbb3a Use CI cloned version instead of master for @PlatformIO (#157)
+6bec26cfbfd66f78265039963f45cf5080051b79 Add @PlatformIO to Travis.CI (#154)
+4bae4e060be696a160c4e7f2641f186c51edb823 Added reference to makeEspArduino (#155)
+e5f6c2effa2184ae8dc7c52dbdb917d2166667a7 Initial version of build script for @PlatformIO; CI integration for Linux, macOS and Windows (#153)
+73161688df4272ebf667ad8d6b7af56944dd9b0f Update README.md
+e8e8efdb664442cebd0285ddcccb6b2aabe26bc6 finalize formatting of reported sketch size
+ca3556041395c372a07accbd4c34099eafaf282a add proper size formatting to travis reports
+7a68cefaa0a0e14e481a14918151873b2f99d790 lines forgotten to be commented
+fe12ebd3fd87f434f87bb29601bc3e2a4525e187 dump size and partitions to prep size format for travis
+3a61fc245eb0df0fd9d6175eb9c6d71c5356ca04 create default libraries folder, though not yet used
+25f7993f5137761723b926eb53f6d36d1385ae7a fix missing arguments for build.py
+46a7500a26086ac4813fc1d0749e73f428f1bf70 travis should install hardware in the home folder
+19261c0aef9c458e80c86f5a1e9ea4fcdbe9a0f1 fix build board for travis
+b0b21f73355a68dc9d43ff52da45110f8f687076 remove unnecessary build steps from travis
+77a04a01a3a87ee74e1f31aae375f0abf12acd8a Initial travis pull from esp8266
+6a1e7c1e993b4db0a85c0891e815a3be16cf688d Fix cbuf not being able to hold the full length
+5f203e1a98e99e25df01f2f87e1619534aded7f5 Add ESP::getSdkVersion
+c8140f8288b41dc885443910cbe98cb060a83f13 add configTime, getLocalTime and support for time in Print
+6dfbdbca29dd4ea872c8fb37e3153d359c4ebb08 fix WiFi.config not being applied
+3c7d0e990515b8806c127e272acb7633524824c7 add RSSI return and fix SSID and BSSID methods
+13f3ac569b1e235608f497840588baec911833a0 Enable pulseIn() (#140)
+57dbc9ab774c4730f52eef2069fbfeedf7e690e5 Add smartConfig support (#136)
+78f2c6f31e016449b9f9e8eeb876fffdc5ede4de update IDF libs
+ada57f36fb86beedc16c5894f73d6834d7ad763f Update windows.md
+4fbee226b6ec1d74e6e0dc4db1881089d56f00cd move to binary esptool. Run get.py/get.exe to get it!
+93d2bc7f1e812ae78c3e77c091e23436cd5a9ae2 update get.py and add get.exe
+9e6e3249b62232f6acb89a83e724a5d196dd1b0c update windows toolchain and platform.txt
+be7871677ff6bffb257aba6151425152eddc6871 Update WiFiUdp.cpp
+a2931e7a5babf68e898cbcd2e40468809e10a32d Update README.md
+cbb256e45d9269d14c08ebb83c523269c0fc78d0 Followup to PR #126 (#139)
+35316de8d3aa6ad13abf93de8a38f68ffd5dfc39 revert toolchain for windows
+3b874d51e85e3ac587fa2b3d74cbf4e7597c2d79 update IDF libs and includes
+49a476c5f03dd8b9c02ea4ce4622c1711fd01df8 add new toolchain and fix get.py bad chars
+151f275ed1633001bf6f949db412d811c370cee8 Add brief explanation about app_main() function when arduino used as a esp-idf component (#99)
+365a0d85927a533f7840e04e3f4d445f31fe6803 created board defination and pin layout for ExploreEmbedded Hornbill dev and Minima boards (#131)
+cefbf25280aad4ea11f9498fdbf9538f27acedf9 (Real) fix for cygwinless win10 TLS error (#126)
+ce5df79674aa3830b3fba2b43109dcf632c022b9 SDK headers: Use new esp-idf signal name VSPICLK_OUT_IDX (#130)
+6edf8a7795e86f6704a330787af38c3e4c7ce7bf fix renamed method names for SigmaDelta
+a4305284d085caeddd1190d141710fb6f1c6cbe1 LEDC Driver Update
+8e948096d45e1ba6b63f2da1cc9b95d01488e749 Rename sd->sigmadelta in HAL
+5977877dbefd1dd3c4e7234e64469608471b82c5 Update Kconfig to autoenable SO_RCVBUF in IDF
+7cef2e2954356ca65ce1e4cb0033c3e4b4d94865 Add initial IPv6 Support
+22f05773393a0b1b7ad8443b5ed814a51663d544 Update README.md
+b5858c19049deab8b4da252b43496c769ccf9f76 Error Handling for Window10 without CygWin (#117)
+8b96b1a5f4ca41bba771b40b1fb7ab99a48e9a38 update IDF libs and esptool.py
+d84d91297354194f5509249ba58f569fab01f048 Remove MONITOR_BAUD config
+9be672fdd806562bb432f377e62d9a8f0711ca8f Remove monitor command from component
+f49ac391b2bda4c9c0d80575e742ef10c93f2b53 replace wrong calls to cbuf->size in UDP
+4395efa3fc46a5e69146473fa5844c953f207c6b Update README.md
+e383a112918db6b17567efe7af7936657b2c2628 Add Server and UDP and fix WiFi.hostByName
+f6d48436806f4182c49ffbc8286f8ae95f5ded2a Update IDF and Fix Error 88 for Client::available
+668c3811b881a316288e8ab07b2d28ab4120662a Wire: wait while bus is busy if ack failed
+b86fb30b1d282b2f772f1e20df56ec49223af716 cleanup read commands
+04e0902ca6c0e817bd88d53a510a03935e3d6fc7 Wire: if we are reading only one byte, do not send empty read command
+917a4fd6f0e269677fa799532173f103cc254a56 allow setting internal pull resistors for any mode and enable them for I2C
+c19fc061b02a65e1fe4049f1525ced7bd864707e Hopefully fix I2C/Wire
+e92634a92b2e04fcdbaf14b29b2c1144c07d0f0d Add analogSetAttenuation and analogSetPinAttenuation
+7defc6ebf395974e07f0d9b1c6e5f0649f3731ed Update README.md
+551e4224238905145f1a5d2c1a9f13f76f945910 Fix typos (#95)
+c336989e933150ed0b8756b295bd3c045284bbd2 Add Gitter badge (#96)
+a6c02bc71024308deadc3c0e04e137bc621069f6 Add some missing defines
+54b1b8b1d39bad6edbc2e4359142a98feefb2ab7 const correctness (#89)
+d8e74f2cbf46dce0f98351aae1e26d5efdba1c6c Format README contents; add instructions for @PlatformIO (#88)
+8e7d00b9a887fcd31578cfb79ace51d0e7166ac6 i2c revert to old fifo write
+4e458fd6fb5fc77c72ab25ffdc4d932b9337e77c Initial Timers driver
+f5d6828c5a2924a1c41a6bdb70fb65e8aeaa20ae Adjust interrupt numbers for GPIO and Touch
+35e54f2a59db941382300d7cdeb1b7d9a2225775 Add definitions for ADC, Touch and DAC pins
+ddb2541f5eaa4c386cd57ce5e300ee545a4fa58e Update README.md
+758553a786520b138307691e842e53b25606960b Add analogRead, touchRead, dacWrite and updated esp-idf
+48abb79ed3b8641cb774e06100ad1c82789fffb2 Remove autostart define overwrite
+13268b9d3cc5786b5a14238f2831d748e427975d Update README.md
+42c1d5897bf282c82bbadfd8c94e6beac958b290 Update windows.md
+ee4a8259e225f2fc9c5ee625edc457e2633eca9c Add from-scratch Windows installation instructions
+ba04076f162b23f1070b465edeeb12df6d3bba76 Move definitions to not conflict with C includes
+6dc34077c4aeb19684ac946b755104959507c717 Add correct definitions for word
+ee36407b43227674ba99039ea3a472e6a3b05f6a Update IDF libs
+e77ec634a9d1b54f410eb6a46150874e6dc5c464 Fix deprecation warnings in ESP.cpp
+49f35ff070fcb8c82a11866ae6f81bab49dba6e3 use esp_random in WMath.cpp
+6db0ee13043166efcc3d603cddfbf2f4507c4ad6 Optimize GPIO and account for micros overflow in delayMicroseconds
+3c81739b3391e0976c0f4230e4e0871b244cf222 need close(sockfd) before sockfd = -1, "_connected = false and close socket" means stop() function. (#73)
+8904f52c392a44b9bc2398212f5af7210eea686e Allow phy to be initialized only if WiFi/BLE is used/enabled
+57c3650ea2162512c6bc7b9081ed30f4006469c9 Disconnect WiFiClient on destruct
+b82d0e166aa364ef246ef83bf6114008c09dfe8a latest IDF, 240MHz and BLE enabled libs
+1d1aeecde26b9de7379641e9e9ed51eb6a0249b5 simplify WiFi boot procedure to prepare for on-demand stack load
+f4c2135a30f4e0e22bc4cc7d889135d75ba4250f RTC pins have pull up/down elsewhere
+be2a26b3ffa9b0cca8b772baa5a6aa654e4422df set SCL to OUTPUT_OPEN_DRAIN
+d8b229031342ab3f27dcf9be7e37ac5088c9624e Add 'fromString(const char*)', 'fromString(const String)' to IPAddress class (#68)
+67fd6521777a16e406639a0eb0d113bf2e896f97 Create pins_arduino.h for Node32s(#64)
+dbf030fdaae40fa3389e6b11b97826de09db9116 Add Node32s to boards.txt (#63)
+58ac6fbf46f4657945f980c53c3d9bcaabfb50cd update idf libs
+1252f7f96e0fa85306ddbe7d679e2c69faba0a5e add "monitor" build target for idf
+5703b769f214ae3552d016627be758bac2955982 pull sdkconfig early so IDF does not warn about redefinition
+c30012ab78c9a3e25110e0b868cdc39fd0b62419 Add Kconfig for IDF and option to disable HAL mutexes
+c82699a83dd79a2f257ba6260a9a6b82565f82c8 Make Wire inherit Stream
+c0266615d5e6d02a22b2178bcf4b0815a0c37bf9 Add TwoWire::write(const char *) (#56)
+7abb15ca6277d4fb7645a4c90641d4d40109a191 reset i2c cmd buffer before read/write
+6d097cd4b5563d880f2306438428497afab84119 Add definitions for yield() and optimistic_yield()
+56cd8f63f0454adc8b770c486c460ca95c16ba1c Add HardwareSerial::write(const char *)
+47babd2098daadf6133be3b5a31f36f08214d745 shave off some time when sending multiple bytes through SPI
+ff9d1fb05c70e3cfa75c541034b8cd4d3afcd5cf Add "Noduino Quantum" board (#49)
+d8aa61fa52b889b8605d98b6d633371d414ac0ab Optimize some error messages
+7e0811ec56dbe7eba92757c7697aac78b7b1ff1c Update tools to latest IDF
+f0b7959425623e3229aadadd4145560b4064aa79 add default pins for UART1 and UART2
+b5e0ebfc899f4d74365f8f8dbfcc57223470f267 Set Wire to use the pins defined in pins_arduino.h
+2cc1a6a1dabfd3359af80321dc53cf953383685f add shiftIn shiftOut
+bfe6e5ae77d10e2b131f4b2bd971b62e6f2f0859 optimize log facility for multi threading
+a5d52ac4f7917745d988b8ea00a03dda16a01202 Do not include file that does not exist
+2515a3cfed79488ee68effa9ef2dc11c071b9124 Make compiler not complain about 2 random prototypes
+d1b94df9a9ce7ebea2b32ab85837a1afac54af57 Add board ESPea32 (#36)
+bb9ea85ae294a0eb9be1c2ed25dea59bdb2ae696 Change Nano32 SS to 5 (#41)
+6cc5a9f05b50feb4e93fe64208bad01eb782c442 Add "WEMOS LoLin32" boards support. (#35)
+fb8f1244b7ff4f7853fc5e6db4714bccacdbee5a wrong count checked for uartWrite
+38513ed804b77da30a545d659717ad5fc05709f5 fix not booting when compiled through ArduinoIDE
+3c071e1d899707bc4d63aed63de4772f62d5be53 update IDF libraries and includes
+261bc5ae85a59aee5cc2aae103b7bac21eb74388 Add from original Arduino.h (#26)
+6465d4fa8e4e244472b660a1c3e72168d5b5b885 Make Arduino.h safe to include from C files
+bdd98828c784abfe8d71bac1c9ab7d5648f1595f fix some returns types
+a92f20edb213db060037fb77f5458af7e529b968 include stdlib_noniso in Arduino.h
+29feaaa2d04308b9deb9f1bf009e3af1bf3763a9 add some missing Arduino defines
+d7aed639ef9f08b2cb8a7d19cc73d30b3eb87ae5 Add noniso.c implementation from ESP8266
+50c2ea529bdc9cdcbe5d07098edb02ba8f21bb4c add ledc and sigma-delta api
+886d0044bc9bacc2d033320b3bccc427d90cf072 Add Nano32 board. (#21)
+bd1dcb82ca9d7fedfd047672e8419b079c133f28 First addition of ESP320 support (#19)
+4865ed0d1382f67d7ed482edc20b81ce6835c0bb ignore ssl only on windows
+0dcf5a49d26eba49982a5abc6dbf1ef3bec67f47 Ignore certificates on windows
+9f9fb412539c69efb8e67ec94c0029114285b847 Merge branch 'i2c-thread-safe'
+9a9ef063ee8247d72d447b1b3873a646ac0c82ab Merge branch 'spi-thread-safe'
+cb2110ce88461a746d008fa6afd8e3c8d7ddd60a Merge branch 'uart-thread-safe'
+6327bbd3e9b1caf8031a25585769d6efc381ad33 do not lock for ets_printf
+0ccde6cc1ad668fbc6cc246fc071655970228fea fix reported data size and percentage
+988bcbf08f87993814d25746dbee00acc557b86d Merge branch 'master' into i2c-thread-safe
+9116cc4311eabd83f4dcd906ae8186d52dfb1749 remove unnecessary locks
+7de6da591afe9f62628c9305bc69ade9bde17ffe Merge branch 'master' into spi-thread-safe
+cdee64cb079bed463c7a44bb296bd0d84f6b8b49 remove unnecessary locks
+242bca94513d29d6cd3a554050e23cca87e2b1dc Implement thread-safe uart
+17c8ceb1b9bb2998182cb8ea5e2e7e12243348f7 UART rework
+d4dd33d2dfa91418d348d3771b41ee0126fda192 implement thread-safe spi
+f9f895797acd8821c7b2ecd6dbf3be9f614e3e7f return proper errors
+9ec4389889a8ff822f4aa935821c806c461e410d implement thread-safe i2c
+50b060ab323b810874a85b7097289af1129dfe6c really fix attachInterrupt to work on either core
+6125a40f93c1384b6cac3677be23a27389fabf28 fix GPIO attachInterrupt
+5d61d8ddd004e83fec3d5cabca46c1990fee7b13 copy va_list in Print::printf
+658f81b7921cbe776ddac03f191675b8ef3a7bb0 attach uart isr on the current core
+1cc9f3bfefcbf39e13190c91aa9c9a45511058c2 fix Serial RX
+e7d2c18742ece8e5564ed7fc53ff24c1a15c3f0e Do not delete printf buffer if not required
+01961ef5c64cb061b470ed6258540e880ca5a1b7 use local buffer for printf if size is equal or less than 64
+3ecb32c4ba7655dfff79f1a4e543318659cb3880 Prevent I2C Bus locks and wrong data being sent on retry
+45f5449fbf8e872562c83e479aa2d2337ebabf75 prevent some devices from locking the SCL line
+f3af437774e33b9c396141cdc4a702778f889efa I2C SDA should properly register the ACK bit from some slaves
+cc3c55bbb16ad1c7d127c78bfc7d71285badabbb fix i2c hal
+917286acf28d656f2d42b3bf8af415aed66ba4ff Remove non-working WiFi examples and fix some that require changes
+2ba4c40acaa76f9cfa2e5c22069fbc17f1eeee48 add more definitions to pgmspace.h to match ESP8266
+063b563079f019d0aa2666bb73c9d93aeb2fcc97 Print::printf should allocate it's buffer
+bb9ded7ed470c4e0f9acdd6e44aa24bc64b395b8 comment out __FlashStringHelper methods in Print
+31773cff31971fd6995cdd72b172ea31429f0935 fix F macro
+7530db5f06bd4efaa2d66fee96560d31b325e937 include math.h by default
+af0cef4ec71aab9f886491a03e8f16fc44e5123b Update README.md
+ac19ecf3d512ee0a4338966b70974f2f5fc7a913 On app cpu (#1)
+b89cf412abc5e0b5b40810c8c83bac6a41b9d065 add component.mk so the framework can be used as IDF component
+fb4f1333d256f524ae340a4413f81efecd73fd58 Fix UART writeBuf and flush
+03f5d62323f238552de57e91b48cff41a7a7009c Wiring.h -> Arduino.h
+a72b8d5635a9873441b614b85cd5baa03664cbee Remove leftover debug
+831917a47ed6126ab03aa86c5f1f04ccf8de6594 Add pin map image
+efcd034622ac202ba71d32a49ec245fdd60162f9 Update README.md
+9717dee13aa189c2f75f8ce0c2d277b51321b47a ignore dist folder
+5f3a205955ce7fdb9ae1a4dc60d4ef25c300e901 initial import
+668acc2c08ee823fd851ccc6ffdf3c9b4dc273ba repo init

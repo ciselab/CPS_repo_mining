@@ -1,0 +1,1142 @@
+bd830d85f04b317a6dcaa8673b2acb3ebd0bf66e Add optional euler angles to pole macros (no effect by default)
+b3b48f505cf57a5071080e10185e42cd0d32131c Replace the cylinder collision model of top and middle plates with a simplified mesh
+feb176b10f13bcdc517e7f305c39327dac6388f0 Add Jetbrains IDEs .idea to .gitignore
+81def9b9d227c3962bdf64dd8c8434d008d02ce5 Drop asus_xtion_pro_offset.urdf.xacro and use instead a parameterised asus_xtion_pro.urdf.xacro (#280)
+2589162d4d19ff1b7e5b02b3e842ba8b1f3ebe16 Fix xtion visual (#279)
+5a97fdd2661354a866ee41238e2197244c220840 Add xacro xml namespace prefix to macro usages (#278)
+be980234cc42b9de969978c410a7d0652635b464 Remove '/' from /camera_depth_frame, as tf2 frame_ids cannot start with a '/'
+eae40f02f812c8fe4cf196e5024e0ed8dc21f9bd Use openni_launch instead of freenect_launch (missing in melodic)
+6a040ab03ec33681609275030b4ac0916022d565 Drop wrong sensor_pole.dae mesh and use instead hexagons/pole_kinect.dae
+50e71a08c9cf00bc3d3a94ae6ebd804b6809f747 Use scale on Xtion Pro visual (appears like a threatening flying monster otherwise)
+4fe88bd7bd204b9f2cc0b32cc6c7662b0c442d06 Remove --inorder option from all xacro calls to avoid the noisy WARN
+a66b6eafe008a4d150bf0ed9e490911cebcc3d8d Add a license (#269)
+99bf4e6c6a8e17e0840ec373f0016c957480acee Merge pull request #263 from kentsommer/patch-1
+a6e93c8bedc72ee11769d8c5ed700560ad1c841c Patch teleop_key with Python 3 Support
+bf1295d1fc9aba169b12adb34fb247b9450c0dec Merge pull request #262 from T045T/kinetic
+294988f7997af55c74160b07268e00146e5e9458 remove up_axis tag from DAE meshes
+2723773486625ca647ff6d7326206a459987dd3c Switch from xacro.py to xacro --inorder to remove some of the warnings (#257)
+dc873ddb2df02eb02231db6d9f3f1545da9fea09 Merge pull request #254 from marjinal1st/kinetic
+3206c4b73ae732380d0f9849cb381b923ce5d25e Merge pull request #256 from cuchen/kinetic
+cc0bafce7f111b9647bc2438e071dc1fd84b88b4   Fix bug, components: turtlebot_teleop file: turtlebot_teleop_key line: 159, except shoud be: except Exception as e
+780de8eb6d657c7d84068c0080a6454cff59ee55 Fix xacro warnings and remove whitespaces
+fe98e7208bba439dd3b744b1ac1b84d102a43364 2.4.2
+d389100b06100d4a4df078db50aa8f87ea4dbbc0 updating changelog
+931d04516ee2257d21b68646b89a897b7650e70d update astra urdf by Turtlebot REP (#248)
+55219d0ae4b59594dd975ca6b4fbc3d35da467ce Update velocity_smoother.launch.xml to handle namespaces
+de7936bf65e9ca9a7d2a31c334981c6df877af5e 2.4.1
+bbf2ed5edcb318668da0c706e35ac5c01fa60376 updating changelog
+721326325aef18996cf79edec7bca49504434e9e Merge pull request #243 from kevincwells/vel_mux_refactor_kinetic
+44770ef7fac1eb3378259258a8347f15cae68062 Merge pull request #245 from kevincwells/r200_urdf_cleanup_kinetic
+2995f78b9b242daaa8167133aaa5f4169dce36e3 Modify R200 launch file.
+f75529854651f8df45d8b962b355cb748b473a88 Update R200 URDF
+2ebd22426d6e30ebd9231bba77077e17bfde0cc9 Refactor cmd_vel_mux.
+52c6a8f020a1a28726a97dddda3c6b0f2b66d0fb Merge pull request #240 from kevincwells/mobile_base_cleanup_kinetic
+e7036dec4ca05e950ae69d2562af5e508e40a142 Merge pull request #238 from kevincwells/urdf_xacro_cleanup_kinetic
+ec4669647136b5bc2f8ad6dac3d043e34ce9d7d8 Remove unnecessary mobile_base.launch.xml layer
+bf3e001b8d1e91269c61d9b22b969f438545fa3c Refactor urdf.xacro files to stop loading unnecessary content.
+f3ed11dbb0d02a92a92287e7647242e0d1b3f1af 2.4.0
+6b66c67e04271a2bea47aa07fa795f14f101b33c updating changelogs
+46e5f32ed932b2cf6c583a46ae5d15edee455464 Fix image format on Gazebo using B8G8R8
+f1aa8210e6adf17cd0bdf89f26e7bd79e0101523 Merge pull request #230 from kevincwells/kinetic
+4a4eac74b3d25f755336b17b63cde52984571823 Merge pull request #226 from turtlebot/simplify_launch
+288c08370a41757a4612a5a118b049e40f9b9631 Add support for Intel R200 camera
+bcca0cd7dbc6d76ad9d125dd66b743ae72d3eeb1 [bringup] remove outdated broken comment
+de0dbd8b2c8c779622e6064ae5be683c1b41dea0 Merge pull request #225 from turtlebot/no_laptop_battery
+35a704ac565f1e81f2e7ba6bb045662287535cf5 refactor concert content out of minimal and create separate concert_minimal.launch The concert_minimal.launch includes minmal.launch
+4901a69d7db20bce40983b61f08378e6c38946ff propagate netbook battery to other similar launch file
+8a156679a574c7dc416061e38b7b5c4b1f6c95c3 disable the battery node if TURTLEBOT_BATTERY is set to None
+ac997e4dd97d2d9a471c8b5a2fbaf53414458f8a 2.3.12
+bd79414e8236396a9883a831c97a4d4e0f81d070 updating changelogs
+1ee58d72a452ffbeab16778e772e4d8546ef61d8 Merge pull request #223 from turtlebot/kinetic-testing
+e33423b451ccf7703d42d9c91f542a783f1c6fd4 update xacro usage for jade deprecations
+75f8388f4df169f4d075e7f55263f13a4fbec1e5 add astra_launch run dependency
+8cae2c3d85212d59622fd9d74b31f52543f4a504 [turtlebot_description] adds orbbec astra urdfs and mesh
+59f0c14247feb7f7c1d9b38b15f1c65822b8c571 adding initial astra launch file
+0612a7124a96b222e417c338f58776f66ef42eb5 remove unused eclipse files from the root of the repository
+a499447877eba78a87db5d43c4ed3ec6d57ad541 Merge pull request #215 from turtlebot/joystick_follower
+1f6cff59dd8975ec6526b2df39687cee9c29fcab add the teleop switch script as a default input to support joystick interactive follower
+55debd9b972c72ccf6bf64a51699876dd86ee6fc Merge pull request #213 from slivingston/indigo
+1647aec563bd349d43fd03bdfa6e3c88cff07c5f Update URL of TurtleBot logo in README
+66d2dfc5b0a5c801b9ff318fccdda9a652344e58 Merge branch 'indigo' of https://github.com/turtlebot/turtlebot into indigo
+8c60dff62230ff8922c08f38e0459fb7deebb213 use rocon_apps/make_a_map for make a map interaction closes #210
+bab3e7d153612ad410c8751a8d249c4376b0f801 Merge pull request #209 from commaster90/indigo
+931887e7f6c5708f499da3498be33eac5d84f84e Fix typo.
+1a1c5880a017c6a0bc42968f301a04acb6bda729 Fix icon for interactions.
+182f9f3c19a431f69db1f7cb9c8bb29ed5710d3d 2.3.11
+7def1bf038cb64a9a25e4ec956dc91fdeab5c444 update changelog
+2494c988c59735a595ca46a1c41717fae16036af interaction fix closes #208
+45ab0ab1d92546bacf39720b1df7fd71068549e3 2.3.10
+4c1bf7409b452b814c55926b797d79d745dcf3c0 update changelog
+39ca26b6f3068139110500ab285fd1191a3735ae Merge pull request #207 from dwlee/indigo
+924582da92b0c29de87a371a49de36f8f95a0f4c update interaction name regarding android pairing as change of android apps name
+834d75a52d2dbcc9e2e16f8047f62448f3d32982 2.3.9
+63d75c14914288ef3abab55bfdaabf8820b023b7 update changelog
+e60edb997823dd0d3d373b2a215bc51284ff7137 add chirp in android pairing closes #205
+ae74c06469caffbe7df644a21ab691e42cbdf589 2.3.8
+671c8ee05f9ab71ae2ad4f1851604614f3993666 update changelog
+86026e175ea2daaf08a6a3d15b4fc35d0f493a32 Merge branch 'indigo' of https://github.com/turtlebot/turtlebot into indigo
+9670b654d2bde2d471bc9f5a8a0a7d3137958a6d update changelog
+162a2f67fff0881ecd278daf36fa0dbde1b60c68 Merge pull request #202 from dwlee/update_rapps_setting
+b25e45a4bb48935f646125a0cb32b5ecdc6f1ba6 update compatibility for upgrade turtlebot android apps
+796a7f6f3f09fe077adbc779e9f5d47cd1b9c410 Merge pull request #201 from dwlee/indigo_teleop
+f5ca41b72401439c2662226bb428ca873e79fe4e Merge branch 'cleanup' into indigo
+2eb954e93f829435dc5607b0130ea3192bdf4049 [turtlebot_bringup] fix conflicts in the turtlebot base launchers
+fbb8bd39fc7f991c42d309bccaa1d098e78f26cf [turtlebot_bringup] doc strings for roslaunch args.
+db6facd83386c43a0bb3370c04f2144c0d8933a8 update android teleop remapping rule and add kitkat in compatibility
+0c9e5e9e21510dbc61cc10a9559f74baa507139f add rapp preferred configuration
+361a6b81c187ff538dbcbf08df7dffac2ddda74f expose the interactions list in a way that conforms to the rest of the turtlebot environment settings.
+76ab6f1399bd0a2910952c0c8c23f3e330dca974 doc'ified some url args.
+dff30963bd6bf23d775bee231f1f5ac0b36a2857 Merge branch 'indigo' of https://github.com/turtlebot/turtlebot into indigo
+fc0e1b8d6e8b0f22a69d4958a5e073a48d87e291 bugfixes incorrect concert_whitelist arg default, fixes #199.
+340eaccdc5ea7a3b4612c47f8e730613f232f13d replace fbx model to open collada model closes #198
+e799e45abdfe3106ac105ce21dd43283381ba180 Merge branch 'indigo' of https://github.com/turtlebot/turtlebot into indigo
+8640e4ce71f96b9a4ad24fa63facf041e7d39fc9 visualisation interactions
+c9cc6d9aeb38109dbd4f4b7f532f5af877ebed6f add ps3 joystick interactions closes #196
+db8d08a8c2d31140cdda9afddaa711dceb6dc1cf 2.3.7
+30fdf1c7f0a77facb9cca167c7b1355c2839d399 update changelog
+b8da35627c6340ebedde7d0944b01ced1fc92458 Merge pull request #195 from turtlebot/switch_openni
+7ce51bfd437edeaf2a36379bc17aab0279f12a57 switch openni driver to openni2 for asus xtion pro
+4e2417a6a1d9d559d5e616c39b2c5c535c9caf81 2.3.6
+f9d660af662e3d7ff4ea43edbd14cd4654caa42e update changelog
+5f1c1e59b6fce42bcfe46b1e5f541fca5af855f2 add reasons for comment #194
+a56e566e17b1447abafeac3da95b283ef96c9aff Merge pull request #194 from turtlebot/asus_center
+b1c2c917cc8b7a60bf729a432ce82e274017af5d update urdf. now new position uses asus_xtion_pro. Old position is asus_xtion_pro_offset
+8399ac8ba733090e3747b1567235d043642be368 add asus, mount, and new pole
+f340e1b6342203a8f8e98081c43a0c09d4a34d4f update env hook to  to use centered asus
+3490ff07f970a9f309b2fb5c94b2f1bd772a4cac add 3dsensor aluncher
+663e03bc4adc3388d69b57673a6f4d2c22b1667c add urdf for asus center located version
+459f60ffad6c273be29f93ff48e30f9fd0acfbbe asus is now default
+e65f747c8d25dfb1fa5c36a2f9289039f7b2da1f remove turtlebot_teleop library from catkin_package call closes #192
+fee9733124358c011ed6bd0a711e73da1500d64c Merge pull request #189 from turtlebot/tfoote-patch-1
+53e5ee7b4b28e469cec4fdebbe2a959d8df02ee3 remove old rosbuild imports no longer necessary
+a20143ed3ac39f3b23f184345fa579a9efadce7b Merge branch '3dsensor_config' of https://github.com/turtlebot/turtlebot into 3dsensor_config
+960d556e66f1429ee265ffd8914558949465a60e 2.3.5
+ce1750a25050393c0e06c2d96db8db41bce40887 update changelog
+21967e2549d3e6a5b7e7dc4afa7254f8f3dcd538 updates
+c77e53d01533fb39b900b7453b08f9f2c0934c17 Merge branch 'indigo' into 3dsensor_config
+339078942cf67457bc472e07a3e75e9895ebf2f7 bringup depend on capabilities. capabilities should not depend on bringup #185
+fe0aa1f1ccf0feaa1d9678f6f37f9f4a323a89d2 separate launchers for kinect and asus
+3339a099564bbb3386fe98222001e2ce9d174bab update turtlebot_teleop url closes #188
+1db2e3b122c5b17efbedf18c9fdb6f40f0c1aed4 2.3.4
+b0dd557193224c6dec2c2946fa38368870fc6751 update changelog
+2aaf79cc434244eb1c65660161aa1bbf9dadaf66 remove turtlebot_capabilities from run_depend closes #185
+136fe416a39c15280652a45bc4917e56c4bd1efa 2.3.3
+b41e274668131c0dca88d668f7f5d394d97acc08 update changelog
+efd01942b11b00af76bceadab5df998f664b5524 add kobuki_capabilities and turtlebot_capabilities as run_depend in turtlebot_bring fixes #184
+da0291486b4de4ca4cde2bf38a1dcb1f6c081846 2.3.2
+8634efdac32dc311e9e762c855cb5f54ae86cd9c update chnagelog
+968ea3da1911e048258452326d8a03dc7feb0da6 cleanup metapackage. add teleop and remove laptop battery_monitor
+a49ba075f75126f51a661283d76c50bf1e5407b5 2.3.1
+cb6dc6a9e1d15ea3381e7bd39c5a580eed9d247b update changelog
+3f8c66951a7d3146ec8c6b947747dc13f7a8aaee replace viz with interactions #183
+07e3f52a74e28abbb69881870d2a859bf1d38604 add README on turtlebot_teleop to explain why it is here now fixes #182
+22a4337a4567d62b244a2fb0a7f11199e45625a7 Merge pull request #179 from turtlebot/turtlebot_teleop_migration
+61dcabdbe1d5ba4e075a02cd41293df3587f9bc4 Merge pull request #178 from turtlebot/use_env
+9e68a30df371ca8a6c0b52b27eb252b6dc5ff6db sync package version with others packages
+6459b12690f08ec41fb6e6e40c1ad42e2b7dc040 Merge branch 'teleop' into turtlebot_teleop_migration
+dac9e8b7396d0c9221cb058b246042c28f2133ee remove gitignore
+8eb252384803e86c444b994f3788d033fa7ed823 turtlebot_teleop to be migrated to new base
+08b56be84b311e54ce32c17a590c10ff6f35c584 use env for rapp parsing
+270b23f9a11d196b850d479f231aad4d9a0c2d59 Merge branch 'indigo' of https://github.com/turtlebot/turtlebot into indigo
+1d8989d9521c94a1afefeda4ce3f9d1934f45818 use turtlebot as envinroment variable prefixes
+31537e1b747f35740fd6fbc4a6cdb91622f05784 Merge pull request #173 from turtlebot/inertial_real_values
+64e2277f20fa7c42f8cc1e42b59d17b9e6bfa8bc install interactions directory closes #176
+8f46abbff4110e68aae803d85d95086131941e6e Issue #172: Provide mass and inertia real values for 3D camera, stacks and poles
+e2c208d484e0b0b2675aff01013351a527f973da 2.3.0
+8210f35bca0f92cb90f1cc75693a50743ca33d78 update turtlebot_capabilities package version
+e58a7f4cdc244f090fa1824371c3444eb658d131 update changelog
+bc18ad122ca2c20062e634667388161c1f2be428 removing unused args
+36ceb8dc37e0f930986cc86fe3ff2a9f1a930322 move out turtlebot map file environment variable to turtlebot_navigation, refs #163.
+cfcee011e8dcdce67740545ac8b27407df30eb1d Merge branch 'indigo' of https://github.com/turtlebot/turtlebot into indigo
+51a4e95cafc522941cc8ec4cff3985f3c1730469 fixing typo in concert_client.launch
+af8aa52cc27602221aa5409bff387f4f86613d20 add interaction icons to fix #162
+8146967bd4d1983254d5a4c478af622b0d3fcb91 Merge pull request #161 from turtlebot/update_rosinstall
+734306ab4f266346cd3f13b03d8bce8cb0d59569 Merge pull request #159 from turtlebot/migrate_linux_hardware
+e03882c524a608e712e641e8c8dfe77f1d953045 update turtlebot.rosinstall to point indigo branches
+e79c95d8f54402dda51fe550421f6d32b4f0cb98 migrate linux_hardware as linux_peripheral_interfaces repo
+7c32d345dc3717730b673646917c307e86de9861 Merge pull request #157 from turtlebot/revert-155-indigo
+c5c81add28ff35e0b68e41281cd4be99c695a016 Revert "Adding the rosbridge setting for using rosbridge on pairing mode"
+ab649cc39cc18c40dea155d5909da7520e31ae4e Merge pull request #155 from dwlee/indigo
+030e570830077b07d98e425840b65694bcf35fce align the arg
+5561cc23ae0b842f128bc83cddc7e7c2fe849c7e add the rosbridge setting for using rosbridge on pairing mode
+c63b278615d2fb3a65412ad89eacb749c9a86af8 Merge pull request #154 from turtlebot/envupdates
+41c6fb7446debb501432e07b4926a96b969dbeba Change env-vars to not overwrite already set vars
+f0a859a490c2908f9ce29c645adfe16d15c29b45 Merge branch 'hydro-devel' into indigo
+03243d7d50dbcd425be5c89403f4b4fd68445620 Merge pull request #132 from kbogert/hydro-devel
+ffa656ed0a3574d3ed3d910b44751391ae3dd218 Merge pull request #150 from turtlebot/teleop_sync
+4935f4fd581dd1706bfd010e66a578d1916b3fe6 concert version turtlebot
+c8cda2e4633499ba77dab290c0c1c17e2aaeddff proper remappings and use video_teleop virtual rapp
+752a5b5768958669c463862f0a3f2bc2860c2ce1 Merge pull request #148 from turtlebot/irdevel
+c5658a74d79f9b626fa8562132b0d0238850d411 Move robot name and type to environment variable as mentioned in #134
+2ae49c873ff9faa687862df3fec88004332b2828 Fix compatibility uri's to filter out PC interactions on Android
+cc000c6eb9bb6f4616cde06216595b1ceefbb2b5 Split Android and PC Pairing into seperate roles
+9a761089f7fd8143858094a73fa45897d005de62 Update to use env-hooks for Turtlebot
+f0821cd00656a6beba76c395f81015ff52873813 Initial Android fixes
+e774c2068e3aed9ac78c5f7bfbcc9dd6473719f2 Merge pull request #147 from turtlebot/irdevel
+1f29c55d636a3b38efaeaceae3b27d40e3aedd43 Update to account for turtlebot_rapps/teleop change to implement rocon_apps/teleop
+11dc42721801d3219fe09c46bbbc078eb3d785a7 Merge pull request #145 from turtlebot/fix_install_rule
+c91ae12e9cfd7b4a3277807c2dfc296430022d41 cleanup legacy install rule. and remove concert directory which is not valid anymore
+95de673c329ed8d0209e7ddb9625dd05f659f09c Merge pull request #144 from turtlebot/irdevel
+474cf9c7eb21255e8d54c37e9b805c59a0a684f7 Rolled android and qt make_a_map and map_nav into one
+f2dab6cc0e1e3900a0147a40f82a8fd6351c9c04 Remove unncessary launchers as app manager and capabilities are rolled into minimal now
+e3305f4f1f2ae00ea06d40d26db7ef0c6ecf8faa Enable capabilities server for turtlebot on indigo
+09dc5f87c81ca66b926dc27bd0d0d2efd9323048 Fix mapping for Qt teleop
+7e46b7d362581496628203c6fce3bb8dc7922337 Bugfix changes - small
+66318372ce116ea59016b91ee69dd9977f1db4cb Added more interactions
+3b6e239c46d371f587f1ebc912bd70697d5f2e35 Added interactions to Turtlebot on indigo, collapsed minimal_with_appmanager into just minimal
+3b4d11ef5936ac5b571a9eab26b708dac6b2621e better acceleration defaults after experimental observations.
+cdd80421b266f736fc00bdf039776c205302733f better exception handling and logging messages when battery info not found.
+91e6b345f1ab4df4fa593ecd95305f56e6a831f6 update publisher queue_size to avoid warning in indigo
+40b1d6e54079e470a8896ab1d2864433901a7e48 move messages to turtlebot_mgs, #122
+d62c0f544ce6b46d23b8e1c93e9b91efa722160c update publisher queue_size to avoid warning in indigo
+f9e71646eeb3c7394885b18ccd6c3fdf427d1cf6 refactor turtlebot_core_apps -> turtlebot_rapps
+b10613eae0010bdf6a550b3891c4acd722747214 removing unsed source turtlebot_key.cpp
+22a2e48278dc125c29a1816c7657d6b21c1ee734 Remap cmd_vel for the calibration script
+1ba7630da9ffa102ff3848edc4bf088b7d43653d Load calibration on turtlebot bringup
+b912e54ae0c7ad7ab7a15c6e86473b11510fa611 Check if unit-testing is enabled
+3e32933c829e308600707a9f971334d13d1cbe19 add depth argument to configure scan_processing. With this configuration scan works for both depth_regratation false and true
+b26d199a18d350e72495c4d8935e5b1ccc64d75a Merge pull request #129 from turtlebot/blacklist_arg
+72b7042d5ba702d25d2cc17015ab89d34e0db546 add blacklist argument
+dce7ad19599726d0d6c79bf81b88fa4ec02787ac Merge pull request #127 from turtlebot/rapp_fix
+a9b38293b823edc1d58c59117a433ff4bc564f00 Update turtlebot.rosinstall
+005098dfb2ab662be9e4ca8537956f6e5df58d46 use rocon app platform rosinstall instead of full installation of rocon
+43df24764966c52146cbaed0aec05efb2afc05ad update rosinstall
+e553f0a718bbd710ada03c7ce171d33d2b7ba90c compatible with new app manager
+a563740d4a1bf3218eb64dd0318ca673d929dfa2 rapp exporting for new rocon_app_manager
+e8b2d0572696a7cddd63b24a5b6ddb7c8c029172 patches to keep the consistency of arguments #114
+5fc90f8bc60dba38343e3c9fd31b57e1c78f130e Merge pull request #114 from mayrjohannes/hydro-devel
+772c8b1c529e4653a932e404b332435b6b5490df Fixing "Error with diagnostics.yaml for roomba #110"
+ce4d22127ebb196aebad97626465140e2460c650 When deadman is not pressed publish once a zero twist to make the robot stop. Publisher is now latched as commented in https://github.com/turtlebot/turtlebot_apps/pull/75#issuecomment-33087125
+ab99c24ec4667b6fe32f5ad7fdb3ed38d9625fba cmd_vel to 0 when deadman button is released
+ef6e334be634d54ecafd0213749b3b0c193e9132 Merge pull request #121 from turtlebot/capabilities_integration
+94000b76b2676e4e41fa59cba261d015bb5d2549 updates capabilities-specific rosinstaller
+f631542e5acafd10862e41d9211fedc0520e91b3 adds turtlebot_capabilities package and related changes
+6cc25630ec23f2e86e38a4df35204bd7998dbac7 Merge branch 'hydro-devel' into capabilities_integration
+97a72c6bff2687169caaf818fd34628e6b8cb7af Trivial comment spelling fix rhoomba -> roomba
+890df423a108caadee0eb39f1f366ac8f42c354c Merge pull request #116 from turtlebot/rapplist_fix
+88a4e1855b6b00f9b39cb16c0b335592abc7b7b0 Initialize deadman_pressed_ to false
+b8d019e7b2be645cb8b3e6b0a0e577b12b6d67b5 adds updates for turtlebot_capabilities rosinstaller
+37b577db0582e03aa8023abd44eadea8ca395b65 adds rosinstaller for experimental capabilities integration
+d283062800b262a76d9105e0c13d99416f2ae00f turtlebot_bringup: adds capabilities (server + default provider configs)
+9fbf47b5a7dd8e2949c18ad7d325b1ae60cc940f adding name for rapp list
+891cb680e98694e63a55394140bffdcde43f3f5e Issue #113: add missing dependency on yocs_cmd_vel_mux
+9033b1ad9548014415e79fdf564b9bd92b8ad0b8 Added serial port as parameter to launch files 	modified:   create/mobile_base.launch.xml 	modified:   kobuki/mobile_base.launch.xml 	modified:   mobile_base.launch.xml 	modified:   roomba/mobile_base.launch.xml 	modified:   ../minimal.launch
+117fe8d34aeca29a932c9c52df8e8dfa03ebcbc7 Add yocs_msgs repository, stripped from yujin_ocs
+928306ba94acbfcc4e0ee61c7c8e432561b0824f Issue #102: Battery info fixed for new laptops. Also I have changed the default path where to look for the BAT0 files, as the current one was deprecated long time ago
+0c0f53217bbd838d89f6be5584ae1b9f45106875 Merge pull request #104 from rk4an/patch-1
+74c3fbf61783027f7aca64c979736b5424d4ea82 fix renamed files for Ubuntu 12.04.3 LTS - Kernel 3.8
+29b67691265dc9a4e966023c1e96d8ad0a87d52e 2.2.4
+d73d15c48b278571f2c5bb883504b65d8c33692d 2.2.2
+509f33f49b604aed2cb34ec5ff4a3bdc3b15f31b fixing typo. single quotes caused error
+3f10d7fff093450ca4fb37d9ba99490662946549 Issue https://github.com/yujinrobot/yujin_ocs/issues/19: rename cmd_vel_mux as yocs_cmd_vel_mux.
+a0fa474bf45683e9e2d8de16ecc64575f37d5074 temporary fix for hub whitelists so pairing doesn't get distracted by concerts.
+8033bd0b9b4d93e184724a8c91e51c257762be00 Remove unnecesary dependency on cmd_vel_mux package
+c15308aa69794d990c50984a4d9808c357529631 2.2.3
+0d9177973a2b24013fe2544cce74292a6e6840f8 2.2.2
+c3b42e233695dceddff813308f7504ef59882c28 2.2.1
+f97ba32445f827e377cc9cc91f78c02fdc6286cc 2.2.1
+ba24d077ba843ac26056fda01b45247bb36c9b0c changelog update
+4a4de853949323324b1c1ad8b4fad659b6a47094 Merge pull request #99 from dirk-thomas/hydro-devel
+ed7e8c63fd6555f9cdd0439e213f813707f81a39 prefix test target to not collide with other targets
+3b7518ffa78df8d83ef7eaf22a5dfcaf6e166ed9 Issue #97: Remove install rule for non-existing directory upstart
+ff33cb6dd082c07b6e520c47ee4e406982d2ac29 Don't need navigation sources anymore
+07f7b7c0e8d1ae421002a4890b40cd9a3c6b6a18 2.2.0
+cbda95fe1e6bbfaf89286550948032773397c346 Changelogs updated for release 2.2.0
+748b4ec9bff8c8270c4891b633ef826776bc1ff3 2.2.0
+651abbf7334c1949882360ce7ac5fe51f4374939 Adding kobuki_core
+ddf582d6cfcb8d98e0ba64f4a7cececb34343d13 Updated for 2.2.0
+e1a82cd1ab6922e3b3263a24e68741e6ab08a7c2 convenient paired launchers (no uuids, autoinvitations), refs #96
+4960e058bffd88732b702bee03382b28d51606e3 Merge branch 'hydro-devel' of https://github.com/turtlebot/turtlebot into hydro-devel
+6247da3d57dbff8d2404593a9a7e3d3e9ce7123d turtlebot_description: fixes kinect's collision model misplacement
+4f91c6fc614a647a1533b842b865ce389bff1280 turtlebot_description: changes hexagon stack plates collision models to cylinders
+1b830a7598ca79ebd31c7f56c2d1f7a52aa2db09 robot description in paired master.
+8c2b65c48c9d71adee9ea8ad793b8554d29fcfbe modularising robot description to use with paired masters.
+4c6d7b3e79e8074dec5ef3380c2c712e1ba3aa62 turtlebot_bringup: removes outdated upstart directory (closes #94)
+5e071acfd45a5bb5e3f8e7a22d7952584b36e945 Add bugtracker and repo info to package.xml
+c33258521f361a134a31eb6f8ac1cce850c65753 Issue #60: Add bugtracker and repo info to package.xml
+b03599a53c5dc5b95fb2708a28a1809accfebb09 Required by issue #14: CLip camera view farer, more closely replicating real kinect.
+bf451bff021a90852cc7d74214ee99e5a99b3ed3 Merge pull request #95 from bit-pirate/hydro-devel
+c932d3c9660c41e6bcba3435ceff640bbc4d1e4f adds fixes for include launcher renamings (refs #84)
+1982f329e2ed2638dd0d433951eb03aea9dd18c1 renames include launchers to *.launch.xml (refs #84)
+c0588bb1160149a9599e44f909968fe21dc93512 Fix URL to the previous changelog wiki
+9c510f18b352931edbff8e2cbd6d778591813545 Issue #93: copied on wiki changelog
+59c9217ddc8b2fd29497136320fa75de530443d7 https://github.com/turtlebot/turtlebot/issues/91: Changelogs at package level
+f219f26c600c7de4a378a8d4f150bd1ea6707d35 Outdated and useless
+1dad1161caae06e62e838d1cfcf2d1616e9d278e Issue #91: Changelogs at package level
+098a26849a2fffb0635d56c59ff9d676c44cd9b4 Issue #92: _mobile_base_soft.launch is a legacy of kobuki_softnode experiments
+24572cb8fcc2c9d3b16ff8cf39c4a83558126ac8 Do not use robot_pose_ekf for kobuki base: https://github.com/yujinrobot/yujin_ocs/issues/7. Instead, use imu for heading and encoders por x and y. However, kobuki_node parameter use_imu_heading makes trivial to switch back to the previous system.
+230b058f691a51a1b4af6e92f98495551a088b9c bugfix turtlebot_msgs location.
+42aba322ac23d2489b7dda817bcf91b93d6f7d02 bugfix bad char in the rosinstall.
+bb211bd2663f48d3bee6acba96a911ddde4de2f7 Adding turtlebot_msgs
+5ac7ec4555ece1e673f394be4e7ce9b26bbf99cf Fixed map store released.
+08c3048c379c6bc4ba1abc0ac7ac72d827e1a62c Merge branch 'hydro-devel' of https://github.com/turtlebot/turtlebot.git into hydro-devel
+3bc993df0d9fbc7ed38df6b9445d1c4df3c0df1f Issue #88: private topic image also goes below $(arg camera) ns, and so needs its own soddy fix.
+57ce110f9755de0f6a5fc8cfd06179d5dd81e6bc Issue #88: after a fix on app manager, we cannot use the $(arg camera) ns. We replace it with a second remap:
+1bbaf7f96a0696f4cbb9b8e36af8ffb8e2a503fb Add missing eclipse project
+b1218bb841eb8040ba240264821078ac62bc2818 Merge branch 'hydro-devel' of https://github.com/turtlebot/turtlebot into hydro-devel
+c65f2fbe374eab025c74c51cdeecf3dc8336c6aa Issue #82: resolve namespace conflict. Now it can resolve multiple robots environment problem
+ed5288b360fff7d93d23f2240b8ad52b06662ab0 Issue #88: put depthimage_to_laserscan on camera ns. This doesn't fix the problem, really, but makes it explicit. To fix (temporally, until we really understand the problem) we must get an absolute topic name for scan
+1d7f17517e8a47a85f1519c8c99928af1f1ea87e Don't need our navigation and map_store forks any longer.
+405d4e21c992d6676ce064b86e14fdedcc83c0a9 Use our updated fork for map_store
+12ff786e4262484365880bf09f0b586d128fee65 Add our navigation fork to the temporary hack
+bae800cdeca9477daf725af2b8dfa207afb00074 Merge branch 'hydro-devel' of https://github.com/turtlebot/turtlebot into hydro-devel
+2d1d73283acf39adf1b8fc819f34c1a2f7c93797 properly depend on the abstraction, turtlebot_description rather than the specific instances kobuki, create.
+4e7526cdd7ff285f45d72cdfe50a1c83dfde6825 Temporarily adding map_store till it's fixed.
+1c4c2411b007973ac923125995757150458fc601 update dependency to openni_launch and remove component dependencies.
+692979fe82e8519720935a0896dbd4e5746d181d add missing include_directories to the teleop build.
+43c4aa00d753382f1f865549b8adb375a6565856 Merge pull request #87 from bit-pirate/hydro-devel
+9bb4bf8c40518a3f0e76a62145e40d61df6e2142 turtlebot_description: updates Kinect Gazebo simulation parameters
+b9359959de9e751b5aa14746777fe8bdda57d9a4 Merge pull request #86 from bit-pirate/hydro-devel
+b77f02248030d986a880be41be2c68ef1ed5f58e turtlebot_bringup: fixes TurtleBot name
+983b6662dfab4f58cae8ce8b124b53bb67e05ee0 turtlebot_bringup: adds map manager rapp and some rapp-related namespace changes to 3dsensor.launch
+c5fc4e580678d0213db4047942691ac0c49399e5 turtlebot_teleop: adds absolute namespaces (#47) and renames include launcher
+68448dfd4be222d87096a86640a30770bd0a5a7b Merge pull request #83 from turtlebot/3dsensor_test
+91d5971a199a8372f1f43975d0ec992498e2f513 correcting errors
+04a6cc06d7c0e53f08f50121acb0241445a96ac1 maximize use of openni_launch
+010ba35ace263b49729ed508f54107510cc68f18 Use the new app manager app list format. Remove turtlebot_sounds, as it's already included on rocon apps
+5874536c60014c4f0ca994871d87a410b05a40e7 Fix on rapp_lists construction; missplaced bracket
+e12fbcb5392f4011e403824246f0e6334900fba0 Merge pull request #79 from turtlebot/updates
+72db20395d26f85d094eebd632d35694a0908b75 public master for android app
+8d1d46f7bcaa1708a3b248beeeae833a8a847252 now private master is 11312
+adb0f21a63600226d9e18879d6339ea5de766043 2.1.1
+ec5905345629ddda78c144a7201f3b154104c97a Merge branch 'hydro-devel' of https://github.com/turtlebot/turtlebot into hydro-devel
+6e805e8c1aeaaf67af0983e7ad23e7b15fcbb790 Add safety controller to navigation demos. Rationalize the use of velocity smoother: remap properly robot_cmd_vel, add comments, and avoid meaningless topic names"
+f780947354ca4013976b9c1d4f089c08e65fe925 Add missing dependency: depth_image_proc. It's required when 3dsensor is launched with depth_processing set to true
+9bbf4971ce3847299a53f7433d66270c2336f91e Add missing dependency: depth_image_proc. It's required when 3dsensor is launched with depth_processing set to true
+64c02a4d3e79fe749b1e275f43d0d8392f8d1fd6 2.1.1
+a1c3bd6c6153fdb8f1b8976f47a67b06afef7c00 Set robot_feedback as 2: end robot commands
+0f3e5f4bda8cca13bae60f0d67c16d905d64b510 Merge pull request #78 from turtlebot/new_appmanager
+ec3b6d2fe1cd3dc79259cedd0c8f8c59bef17a39 replacing turtlebot2 icon
+86b41cfc9e1a237384e4ec8684ea51f8d422cde4 Add robot_feedback parameter with default value (just informative)
+d920563f4a1be8220c71acf183920ffb064db42a Merge pull request #77 from bit-pirate/hydro-devel
+1dee079425a67937b1b6b911b15351e091351a2d removes graveyard folders (fixes #76)
+3a8e2f1e5ae3ad0d29842aeb5f7b11c18f0e4053 removes forgotten create meshes (now in create_description)
+950e277610b3ce28b4aaf1aafeea1d0127ee2009 adds missing run dependency on create_description
+15d1dc8ae173ced88a1406ec4c8f2d403188540d Merge pull request #75 from turtlebot/new_appmanager
+768fa674e1ab832bc52852899e4266aeca63b62a minimal_with_appmanager includes minimal.launch
+41db0d08a37a7da0627c118b56b92b1a4e41b577 adding turtlebot icons
+9365775334e7c41d9126801303c9f7c6f872dff9 new appmanager is ready
+f0ab1b0242b3bffc826eb692e27fe714b94deaef relocate bringup
+df973bfd347cfdde0d82422c6e8767294d1379db app manager sort of ready
+388e1cd2b7a61c0b596d23f8d66ced47626b8d37 migration
+9b16b48f0e88877202c1e47cd79419f7d11e5610 Merge pull request #74 from turtlebot/new_appmanager
+072473c64369618e94d57d662797325bde611dee adding missing run dependency
+73d3d5d2389a6468c2ff7621883131e155830064 Why he doesn't like markup links????
+0da3a14d6f4eaf92374814b0bb23d6951559cbec Issue #73: Migrate changelog from ros wiki to this repo
+b2412ef282766bf96ed840934d53006f993383fc Not a python module. Additional cleanup
+df562adaac46db7f8683c60e8d36133e5958917f Updated for hydro-devel; no anymore divided between catkin/rosinstall
+2aec897a4e897e2460775a2ebe5f46f9b8eb48b5 Install fixes
+f2d0287906b701cda18da38e4704cb50a34b6291 As its not a pythond module, I don't need all this
+d7869cbae872979a3b48ded7f126e89a48a076b6 As its not a pythond module, I don't need all this
+d91b65d092144a45e80dc1292732bb5e3ce1b5d4 Irrelevant
+1e12e1b54da05258d6ff104f0933bb53eec8e1d7 Added missing puthon configuration scripts
+62bfaa95e6fb167e5ebe6a7d3707d97bfa17887a Catikinized (but not tested)
+52a2e4a4fd8775e00ce00bab90be3ab30ba0eecc generate_messages() must be called after catkin_python_setup()
+13d3ba166111121288f20da03252f7e69bd657a0 Added missing python configuration
+54fe1a3c01a308292de99267d69869ac92fd1c3a Unexsistent include dir removed from package description
+78fe5e9915cb69f839e11a078afac5d2d8682721 2.1.0
+84a66dc5c0924995e45a5c3fe5daf42f7451bfa0 Add rocon_app_manager dependency (replacing turtlebot_app_manager one)
+82dc88ceb5c83f2aa19fe8daa8d0bacd87ecafe0 Remove Jihoon softness
+d231ef9ab32b5cb16c6cbbf9d889b5d563fcde09 Remove pre-catkin fossils
+2b8943bf09694895767715ea15a72ecbb915f63b Removed obsolet turtlebot_app_manager, as on Hydro we use rocon_app_manager
+c0a4c44dc3f0524b5a5342abed1e25150802604d Merge pull request #72 from turtlebot/launch_correcting
+fc41d6d1384910d9dbb23c724a5b2cefb8103080 Change rapp_list to contain a simple relative path. Also add _private to paired.launch
+346f1c5af97a749111fce29b85a711bf121e7deb arg should use default
+aaf73e3ed187c972b9878602bcba3f97ebbeb2a3 turtlebot_description: adds roomba xacros (same as create, since now roomba mesh is available)
+bf67aca8f8c73022527350834fc71f7f5d0abd96 turtlebot_description: removes old readme
+2493fb6d0b2e2a4255f9fe11902a2a2cc14f7254 turtlebot_description: fixes readme
+b1fd3462d5c7af2b3034c9420f152e1485bc6b87 turtlebot_description: adds updates to xacros and urdfs for Gazebo simulation
+bfd96e4473c81f809f9c0495c7ba1d2cde24d222 Issue #67: On hydro, xacro.py script is not under script directory anymore
+fc5aebfa02a0bcf013861454987f44394aeccc52 3dsensor
+3f065ac22507338b444e71307d4c4373d4f21cb0 typoo
+7e9d6136d7ef91e2f82cba9d41013a24a009fc8c typo
+a9b96495cf4d95289d8d669c566da2529f85715a turtlebot_teleop ready
+bb705927f373135ddde1a8b88b357740cb333459 preparation for catkinization
+8427483633b6cc31337c81fedd6682861cb7a235 app list to rapp list
+fdafe416f61e889eae0e9b624e029e1fd5b3ed30 appmanager receives args from minimal
+1c5a047cb27467875f7f35ffa33786e81b4fafd3 bash file for appmanager setting
+d9cbafe599543035383e38fa8f482d99a065c70f now appmanager takes env setup for robot name type and app list Still need to figure out how to setup default app list tho.
+a38bb822490f2768d3af128914f2d8ed07899343 paried app manager ready
+2e03489aacbc432815fef7cc9fa2d4c7b0dca23d typo
+b1d42c8b651eda7f4182197c682fd695a210cd9c Merge branch 'hydro-devel' of https://github.com/turtlebot/turtlebot into hydro-devel
+c11b95d2a32f3fe2bf9d4fc3450c5901f2cd84b3 adding buildtool depend for meta pkg
+065ed48ba424a154b838da5436980c04fc1eba03 Bumper2pc on hydro reads sensors/core instead of events
+034e4c5e746cc0cd639c38c0a452023105d29b67 Merge branch 'hydro-devel' of https://github.com/turtlebot/turtlebot into hydro-devel
+60aafbe049c8b38773e80eb5c231ef4f5254dd84 soft turtlebot is added
+5653d856ab6e0e5df6942d38d842a2613cf7fe22 fixes broken turtlebot 1 visualisation * removes scaling * corrects unit in collada mesh * adds eclipse project files
+4211500e725a98f51832d311451fe1107335a164 updating mesh and urdf from master branch
+6de77cc8b2bea39badb84117e395f145531ba6dc updating place of xacro
+8ca6cd379a7167420822d3c5f0b899a1d1bd7ae0 adding cmakelist for meta package
+40d32b71f5059d413272ae6e80c20ac5fdf8292e Fixing roomba mobile base launch file
+bdf3080e8a0c14d1be0bd82a93c049fa826f5d9e Making laptop battery script work with the new /sys filesystem organization.
+4505c573881389779508287934703eda12626386 Use more agresive acceleration limits
+ef4fba7d76559afa798cb6a12c508239f6c8cbbe adding ros wiki link
+c1b1c015bd772bc7af098a2b9ed59d56417ca7c4 putting new app manager
+1b49eb70fc2bbecef80efe53092f2ec1bdf79821 Update turtlebot.rosinstall
+dcc98c50ed5de71fbd1f6344b7fb85b1b80bbd89 updating rosinstall file
+c631cf41e804c5db0530113a51eab1a1b124ef84 cleanup linux_hardware
+1a30e1b68ac86d929d6449133836b59a60cacd6d linux_hardware script in lib
+8d6a0a7d303a531ff3f022ddae24bfea5f37b888 removing global python module setting
+bbe6e2398587f7b973d5bf5b1ff9ec92335abfe6 update xacro location
+a2a6d4a3488a793b691f517df8de82686cb66bbe removing cmakelists
+ff88a32b013ce72caa293b412b3088886c2dbadf removing stack.xml. warn that rosinstall file is invalid
+54c7516002f6b28560cf10bba724b231c7e91074 turtlebot meta package
+5875d9b2da8df33ef63178601c9af44a0c80d088 catkinze turtlebot_bringup
+54a967dab9c3843887d9aae669bb7fb9ba4b44d5 catkinize turtlebot_app_manger
+2389252134d2bb15b4aefce6df46050b6b932076 adding message_runtime dependency
+64b687db002d36db7a24ece7037e10d8fa02b995 error fixes
+6f5582a11507ce9cb8cc3b75d6585098a13ace02 turtlebot_description cakinization
+aaee189231e3d15941cc81d44ee94dfcf13de577 turtlebot_description cakinization
+2a1bb6a52bbc863b576a7a1eef1dbcaba0413c29 package.xml and setup.py
+1bc656a1ec2e380468ad9031304ce9541952b5e1 catkin linux_hardware
+0434e56263c572079a7d9883e8e007b75c6c3b1d preparation for hydro development
+290f3c414a4964ab8f67b8d749c33e5827ccb4fa 2.0.0
+b090762e458f32f9e374064d7f14854e47343eaf Commenting the launcher for clarity, #55.
+e214479f3128ae32fce69f4aa9d693251fd3b349 now depth_registered/points provides xyzrgb pointcloud2
+951555e11913dfea4abd7a2f331cf235db7cbd9b bill recommends a generic logitech launcher.
+7540a64ab7d270523a199f9900c25b2e7fe63ed1 Pointer to the installation instructions.
+8130a207ceb4a2bfc5a1105ee34f2db78cc78339 Remove misleading comments
+54c50a2dccee936fa3de961376cc64b27e17df81 Using source paths with init instead
+ed7cad3a498bae32e02e84f8528e793fb5108706 Updated comments pointing to the wiki.
+4fd2c85e9ad11352f43b2d4cccf37725837dcaef Update turtlebot.rosinstall
+dfcf3c8ecb1d550f34dac98c0297790ec537aab6 Dependencies for the catkin install.
+7ce4e1ecc9e92835cbf7fd9072524c838ba16f1f kobuki description added to the rosinstaller.
+bae4d7121e3d832acb64ade8cd1a66bfcf3e16fc kobuki_description has its own stack now (catkin issues with xacro). Added stack dep.
+57ebec491e7d7e29d25afd959e8f26f81019ffd2 turtlebot_teleop : Updated xbox360 launcher.
+4d0871ed5d84eb45708deaac59c760cf8b25c57e turtlebot_bringup : Udpated create's launcher to restore node name of create_node.
+6576070bb54232d0ad798a4de08ca34839f70928 turtlebot_bringup : Updated create's mobile base launcher for identical topics remappings with kobuki.
+5b8254ba383f5d8c7c319cf23efbcf771a876132 symbolic links for roomba to create xacros, #50
+eae4ea8eeb7c7d65aeceb9352255d17454a84d07 symlinking identical create/roomba diagnostics.
+092a81e00f343f5d235dadabe279ae2f501f242e this is no longer used.
+226f6c567e4d2321f43653e8706962dfb922680f some comments and renamed setup scripts to help the user.
+cce0328e6b0db6e7033177330199f52028a5369a adds motor state to the diagnostics_agg topic
+8ecdaa1356a2476dcfd9ee7adb29bed4535fa50b Progresively moving repositories from turtlebot.rosinstall
+f41dac13e5f001e507fd1bc8c09080e86fdef7cb Progresively moving repositories to turtlebot_catkin.rosinstall
+58988d575d1f2edbf763c3bd631efbc847f73920 Splitting rosinstall between catkinized and still rosinstall packages
+9954fa405e3d3d4e7825723055a102ebd64fd45b Default yujin_ocs version is groovy-devel
+a25ccfe638d9e1fcf60adb92d42c0284a31d96cc Added missing package on header instructions
+01b6cb3d1eb199d828d2345aac69c1556825f6d6 yujin_ocs version changed to groovy_devel
+2617ae6bbc57d107a42b73c3b684ef0620821310 Merge branch 'master' of https://github.com/turtlebot/turtlebot
+a7f8828d648c44fa57d9574b06a6d1f2b6fb274a Updated turtlebot.rosinstall.
+87ab204a8025dfe937647bcc43195dc3b6d7e7e3 Merge branch 'master' of https://github.com/turtlebot/turtlebot
+1cc41f08b7ce5b73786a6b0d7a7c9835ccc3833f adds turtlebot_create_desktop to rosinstaller
+072d366d11eaedb6ea5a87f639ff30d28db42627 Include bumper/cliff to pointcloud nodelet
+45471ad0ab6cee996fa40a97a449371ad6a78bed Kobuki specific packages moved here from turtlebot_apps to keepthat stack base agnostic.
+2b9ae142b6c28d49df6b4d4f152d8304daf054f1 Related with Issue #20. Set scan_height to 10, to make is less noisy. I have also reduced range_min to 0.45 (the default)
+f512862d0cd62f23be945048435174be86377944 Merge pull request #50 from lukacu/master
+e16142e3a649e0f87677476b827577f2c3bb9ed6 1.9.4
+06a3933e61f55d80b8607ba1a8689fb377e0910f Added missing dependencies.
+ae817a5d3819597f2cca5bf0e8afb1ec8c702025 comment/delete rosinstall sources we're not developing for right now (avoid confusion).
+45078fa814d5ab083fc1adf9c6b67c5b204160bf Update turtlebot.rosinstall
+1a36336c51460417d64e75c7a47fdf87d4f1135e Created missing roomba files
+ad0f40f8605b9b923b313231990bbde3111312b9 Merge pull request #48 from abencz/master
+419059eb1a820d7ee41872b832b495476153b5fc Updated launch file used by upstart.
+aa547323a0e5baaa81aee6621546ce14df253d55 Updated missing system dependencies.
+4030230c686a0dfc12b37c22bec13799761bdf5b 1.9.3
+00e77145a7ac98b28adaf321123ba5f6a7892514 Update with yujin_ocs
+cb814aee153d00ce6b97960dfb1298c6b9e565af Remove mjpeg server (unused) and dynamixel (deb)
+bc9daa69a8c4a66cf4531a38670bd872bc4e5764 update rosinstall file
+522ca2fb01102fe436af9f61edf6d9ebaa8b392f Fix cmd_vel_mux settings.
+e4788a5e97881dabf089cf998250f96e400258db 1.9.2
+73189251c82287d7057ce40010415471841debc3 bugfix last commit - missed a group closure tag.
+f17e1eecddc2acdd59362d936e9254fbd1f05202 scan processing option.
+a2b5a0dded249343a53e933ab8fce27ceecbd10a namespace zeroconf.
+2c71f27c6a90ea31d707024d9dc6d4f536726ab3 removed all base specificity from turtlebot app dependencies (common mobile base nodelet manager).
+6d46188a36f2d4e0e13fe7920c6e694596ddf095 removed all base specificity from turtlebot apps, #32.
+72253b59c2daf704fe188526801e59856f526852 minor fix to do odom_combined more conventionally.
+577d87140b6272fd3429240694c0034e3b9bbbb5 groovy navigation working, both on pc and on android.
+9f16be17d35d82651c2cac0c7dc2a942c74cf588 making use of a centralised mux.
+e422429b9d4d87f31556c7c7244fc3e24ab3eb65 centralised mux.
+da02ff202896e3cf9c65a8a5cd0551796ee1166e eradicate unused argument locations.
+ff11c98121dbd59c2e847fd04e765abee61b02a2 slightly easier naming, added some comments and fixed ns for depthimage_to_laserscan.
+552392fcc6ff23e7690e7e6c1e545b959c9b121c allow apps to configure optional depth registration and depth processing.
+b13d861cc134a7f221236e0b5f62d3371d471eb8 Optionally loadable rgb processing module.
+777dc8b095df9a8d7b8e2398dbf87e0d3443bccb centralised smoother parameters.
+687a37f8cfecf8e52dd72c65e4cfd532599f8f93 default params for the velocity smoother.
+5e6846e0177e0bb0bfa838517821681738dcb83c updated 3dsensor parameters (removed unused ones).
+f640e185f2184c1affb2995daab916de84845a23 more sane timeout for teleop.
+a31348c12d6e9a41639f5ef9afb3a3c770361577 saner acceleration.
+b4d5bfef5e78444b0243fa937e565daa615c6c68 remove the kobuki prefix to diagnostics for android (was changed from mobile_base).
+dd8a0f9d9adef3e5118a8e155cba7e6b8c9fcf5f remove optional full openni_launch now I know how to add processing units, #32
+8a1f9d9cce98792a2c835a0587550a8e9bb8feac added image processing to the 3d launcher, #32.
+4de1d1109d4ff1af012f043f5434cdd21b6e6f5a hide the kobuki and create launchers inside the includes foloder
+01e514cb232ad30b8fbcf8d64684c4e1aa40ede7 more meaningful node names for the nodelet loaders.
+fe0b479c69363ad747831aa138568ebe8536c6d0 remove option screen from all minimal launchers (use --screen instead)
+d5a8dc5d1ea666a873ad339519938a6d27fea2d7 ps3/xbox360 teleop apps added.
+8a163860ee1feaf562d824f5a8c36fd59b02ae23 created xbox360 teleop launcher, deleted generic joystick launcher - better to define them joystick by joystick I think, #32.
+95459f698248c12e7e37b6b5dec68e4ae75b43ec remaps fixed for keyboard_teleop.
+cf9c666be74aadd523cff5dd1c68a31a8229c212 now housing mjpeg_server in turtlebot_apps until a separate deb is rolled.
+74148260af1f08f470c79a0607a8da9563e5cda4 Update turtlebot.rosinstall
+9b48f290e7290b703e84880db6a9a9032b5bca37 Update turtlebot.rosinstall
+cf1aa408eff5e6f0f0984ecbe8e381d1cb8b77e7 rewind the multiple apps commit for app manager, it breaks stop app, fixes #47
+59286ed8e0cb28e7bf39179a248dcdff07881ab1 minor comments.
+94332bb56cdd62d8fb80bc55c544c3d34ea15e76 disabling the safety controller for now, not as practical as I envisioned.
+ff4905bacb3d4da68abb6e4beca1ad66f0d2f656 eclipse pydev project file.
+9db3dae6da32d1075cc3a8c6a6a5e77b7ce3fdc4 create/kobuki teleops - keep things simple, just one teleop, default is safe teleop.
+e37320f7a4a6b67c294211a6916379f7e4578774 updates for dynamic cmd_vel_mux.
+ed97fb55c0addea3833c583784616915af5e2e52 Added ros-groovy-map-store to header
+788e4e9ab5e0ed78dc326e17f83ba9f07bb1005c 1.9.1
+3af2e4bea85a01a07ce4ed3f57b604bda90bd1c7 dependency for depthimage_to_laserscan in the package manifest.
+f18aebef80275dcaa91808901484a2477a6e54a8 big update of stack.xml dependencies.
+294dbdddb9fb00e38894522ff7deeb326aaf4f10 moving base link back in sync with create convention, closes #44
+2b9bd365932226da1646eefbc0ef79fae0044fa0 Merge branch 'master' of https://github.com/turtlebot/turtlebot
+5a027e688bee98aaa1cdb7acd8b3c0c1b8efc2fd updae
+e0f5c209a5261b37014d2e1316951954ce840e55 minimal launch for new app framework
+e5f980d16833e6c6cc84c67d3681859d25464722 moved view_model instructions to the launcher, less redundancy.
+4418560e1fb319c2176d8538b002ce831280afb7 hook the asus into the bottom_base_link, just like the kinect.
+8b1d101b8816de81c4b809ac726d19eb8abeabb1 version bump.
+99d6e21823dcdc5c97c131edb1c23527fc4ab359 cleanup of dependencies.
+52f8403b97ee8aa140d4f1a0014bacc33a3fba63 eclipse project files.
+4534a83568bd8c5200be533ee5195890696fd85f diagnostics launcher moved to turtlebot_viz/turtlebot_diagnostics.
+65587ec52f16fdf716f043b0d19e826d0589ba2d clean up manifest, put in correct dependencies.
+ace0f70438d3d79b7a0f4352a357ab7e38690d31 removes obsolete joy dependency
+ce721c511767ef9ccab69c8fc754d2ec3f58eee1 Merge branch 'master' of https://github.com/turtlebot/turtlebot
+a741765501294256cee718195bdf35bf4847dc23 updates stack.xml (to get it through the prerelease
+987c499b8be7d9af4be3158961afa4172b90440e Changed parameters names to reflect that velocity smoother is now diff drive exclusive
+72eb062b9760345e272fb2ddb65a7c8b972bf367 adds velocity limit parameters to velocity smoother config
+1a7b0d0d63c79efefdbfdbe90b143ebb42731ac5 Merge branch 'master' of https://github.com/turtlebot/turtlebot
+0f1e02ca284a552b15d3741240de1f86c722bdd8 Added auto_docking app
+a63174e4d94e781296628ffa43f60e9ace04f621 cleaning
+c8fee8f02db48956f2fa4711a9b8d1bad39d0e8a restores accidentally removed 3dsensor.launch, also updates it
+372e27d5afe4327fe032568ed6d17d19f5df0f61 trying to merge
+502640d3167c7b550f540d46d95774c7f91df8ed testing depthimage to laserscan
+fbc0f66bba5accd2d86d99976b820a320e1b8afb Merge branch 'master' of https://github.com/turtlebot/turtlebot_apps
+b55a26447e5b8ab0806c4c463860175951b15474 adds minor corrections
+d58fdc6231c46a47e8c68f0fba106b547a2f8690 merged chad's change for lazy depth scanning.
+5611de50916165b46eb7fd62d312158dd1814d67 Added lazy depthimage_to_laserscan to 3dsensor.launch
+fe7092d0c49b765d71aa42290456acf8838b070c merging conflicts
+6f83985679d690445c3a9428e2060bb43885a4b1 shifted old deps from teleop to core apps.
+9bd829785569b455d7486485f6c2ef9d1c93afd8 Merge branch 'master' of https://github.com/turtlebot/turtlebot_apps
+00017dfa625487531297131b91c74383fb5aa3df adds safe teleop launchers and parameters (refs #24)
+50331e08074aeaf3c4e1fc8e920c5330f0e5d789 Update turtlebot.rosinstall
+c395a37d821b4d8dcc72427dad3ab1f7633e77a2 adds turtlebot logo
+39c775fc2b9826f4f9dd7974c52c36303c74c2e6 Create README.md
+7bf9a7dc140e3e135be38e18c365f650797affaf rename turtlebot_netbook to linux_hardware
+550415b2578dd959c4cd2452f434198a89fde7ed remapping topic
+0962dd74ec71c8e495a4228404835cf4228f12c0 updates
+4331389a59cf1e043945c757b4c624372a44a054 ecl dep
+c7b5427d2931dc5a3df1663405b86b68d58fe7af Merge branch 'master' of https://github.com/turtlebot/turtlebot
+a45ae2763ee41e980cdebd4ba59cdccf79f66c0a adding ros-groovy-ros
+4a2e1c4c40d3588e21478b50b6b48b298e7ef6ba updates
+d35ce198dcb6de626e5ec06591826b0458e6b224 adding ecl apt
+692455e55bacee2448e42f89a21dc3df9dd8078a Fixed _ to -
+f10c9fb06ac49532a11a7d4b5932fc183482af1f now uses default values for camera and use_openni_launch
+48c5d5ff9e99da058e72515deffb2f69b0c3b712 Bring back ros-groovy-image-transport-plugins; it has reapeared on repo
+938a1f4ccb61a5e6a803ae508b1749f951fb92a4 respawn=true in launch files is EVIL!
+7e83b9cbca98b65a9ce7b78a79b8d070eb65d20b version bump and stack dependency check.
+d900198d3129f83206c4e506417a7a309d1ea6bf Added missing package on header: ros-groovy-python_orocos_kdl
+9cc334df9b4e2422494224e48cf2bf94d6972e71 Remove desapeared package from header
+abb5589ec1aea90270737c700cec0df5dc48d8d2 remove ecl.
+621994d00573a95f9b9580f374ee1eaf82ab7e06 Added package to install in the header
+fd1b136b1671b62045c7ae3af67126f1fc66ff4f Change nodelet manager name to kobuki, so it gets compatible with kobuki_node minimal.launch
+1b986f19cf57cd8848a8b2c2b470958770822cd2 turtlebot app manager was broken - hash id's for the messages no longer conformed with the android apps...so now hacking, depend on android msgs, but patch app manager here.
+0c2497ed037715f2478c951fd45b8b93924e8225 add turtlebot_app_manager as a dependancy.
+02def72b46fe1be145dd1ec9faf86f162fb8839a remove dependency on pointcloud to laser scan in launchers - all now in turtlebot_apps, #35.
+61f82699f1fe1a7c6c950dcff9fb0ffcdfb8f170 remove dependency on app manager, #8.
+87ab150faca39e96b208f0202787fdb3a25440d6 patched app manager brought in (temporary app manager only), closes #8
+71b67cc321bb6a934f0738e1a68baaa435b6f1f6 moved out kobuki base params to kobuki_node.
+956a5eb9e645347a8e1cc508e79603b9e40b888d retarget pointcloud to laserscan.
+f2b778b67afad95449a115928a0a58a9d6cfddc0 build it, we need messages.
+a74e7efd1565af584ea8d9356c6f939cbaf4114f modularise fake laser.
+a24c88c5290dd25a5b1a5bc1d3bccd9c348fd660 redirect apps to the core apps location.
+9130340c3086c734aefa6972d2791f35b948f0c3 Merge branch 'master' of https://github.com/turtlebot/turtlebot.git
+5af912ebda69191363f3ada44f1ce1aa89c89b8c add broken jenkins ecl to the rosinstaller for now.
+e50d8489c792100d5bdb1da7c12c8b128044ce7c pointcloud_to_laserscan moved to turtlebot_apps, #35.
+34892085756295b5558cc92ff2bd3a8677b2c686 app reorganisation, closes #29
+d5c856d88d4be5f9269a6c7e2a4adca9f0ea615d Two deps renamed from turtlebot to create
+e2704f735ed7c812721b3a69eb1d0452cfdee269 Added two missing dependencies
+33d2af4d5f6aee03e3e97ce50ca03a203a038537 added turtlebot_web to the rosinstall, removeed duplicate turtlebot_apps, #28.
+a6085a81a5bd2c199657d82bf9886f163d5dd1c0 Merge branch 'master' of https://github.com/turtlebot/turtlebot
+4fb4532744f1d774433d070dd04260a32bdbd881 remove web dependencies to turtlebot_web, closes #28.
+c3af7db0f2a25bf0429501038a2b247cf845982f gitignores and project file.
+5b9a1dee56dcf81e103565ce6024f16274c24534 base configuration for kobuki.
+c953aec4cbc1a4c3c1855918bd8c0584ca6add59 remove old robotworld launcher.
+d1790f98cbf8a6a768b39b3447231cab41d5d48c mobile base configuration for kobuki.
+14110ebc4f25d6ffe4b759e8a2a5fdfad87496fc mobile base configuration for create.
+8a6aea85a43d653218248a75d58120598399bfc9 Update stack.xml
+ccbf2cb06eb5c5d9ca3b822bca866f977ce385bb Update turtlebot.rosinstall
+1d29e187291b711b0bf1fed5c500ce1bc67d3547 Update turtlebot.rosinstall
+e197149c580bbb5a180f0139599d54ca62ad897d bugfixes for laptop_battery python imports.
+08d3819138b320fc82acc4a84e7d6e1d44bd69b2 launcher for netbook bugfixed.
+2dc134ccb5a3833435ee8cf4528567fd29fb7d5a moved turtlebot_node out to create, laptop stuff to turtlebot_netbook.
+2638278b0e707f891ca6a35d7696b005e8715939 update rosinstallers, only groovy now. Also rename turtlebot_create back to create.
+72e7005619956b3f1f2dcc63951b60c789822a8b using deb'd rqt now.
+24b00c7003e4da4f5dc573096d8699b7c8fc9b9b Merge branch 'master' of https://github.com/turtlebot/turtlebot
+242d87df5ae750c73fb9907d6548c2f41ea8a789 fix sudo apt-get comments.
+637f7ee9a4bb0e26f504fd92d0f93b7c1b16a8eb removes yujin_ocl, dependecy has been moved to kobuki
+9cf362e497752e44942190b1d5bca271b5b52f09 Merge branch 'master' of https://github.com/turtlebot/turtlebot
+c944b2fc962676250306be83c4f9038e3fb4f623 moves kobuki_node launch to kobuki_node
+8d2007c81275845c69d16b97b0bca730e27a0b93 Removed some mismatched stack related to Yujin OCL in rosinstallers.
+7df388564369a19a1f971b2fedf103019c556b18 adds yujin_ocl
+108b734def046452066bf702df9de2fe9cdd1571 changes yujin ocl repo name and url
+3e848baec0871bb04021c28bc4108631040d42c7 minor changes for #34
+ae5523717139fa91f14702b490703e9a3f2b4f97 Merge branch 'master' of https://github.com/turtlebot/turtlebot
+97192bc03253ceec582712f3cc20237fbc29529f moves kobuki's base.yaml to kobuki_node (#34)
+849916be05ae2852836093d7771b6008b639f7b9 Include command velocity multiplexer as a nodelet
+22575eb2931df714fdb39340701868d3823aaeb6 Update turtlebot_groovy.rosinstall
+4a0de8593921c0f22def6f7ad85bee4afd93bcf3 Update rosinstallers.
+383aa1ee52189acc3381cf028a51fc79d409002c Update stack.xml
+db4f4ffb697bf8ded9ebafedf3bed22aec2015c6 Merge branch 'master' of https://github.com/turtlebot/turtlebot
+5aabb20b323d27131221a40d96c38127cb30e105 adds turtlebot logo to collada mesh for top plate (#20)
+08760d57afa7b0dc4eedee0040780a636ddc41a5 adds nodelet launch to kobuki mobile base (#166)
+ca350c6331cbaf3a9be79a21c7321ee63207ab22 cv_bridge not needed, its a dep of openni-launch.
+59064cc3431f055aca9ac8eb1947cacdceea3f76 groovy dependency on ros-groovy-cv-bridge.
+7ce6085db498268763c9581efe14e128023dd304 Update turtlebot_groovy.rosinstall
+ef93c28ff0cd6099eecef8c720c546dd375e93e6 Update turtlebot_groovy.rosinstall
+1309d3e6b14ac395f86c3b261d1f188f7e664e27 Update turtlebot_groovy.rosinstall
+e724b56e57f2d9ac299a3fcd6f50733c7545c4d8 Merge branch 'master' of https://github.com/turtlebot/turtlebot
+3be2117da9a8e84cb12912a4ee0c4f4035d39a9a 3dsensor use openni for now..
+27184b9eb15375119b78fe9ff3163bdd2517d90d removes stl and adds new collada meshes for the hexagon stack; also modifies the urdf accordingly
+42aef58abdda6bfb21265436dc5d49ceaf24d24f brings in a base_bottom_link, which aligns with Create's base_link, for fulfilling the REP
+8d9c04b276e73bf3b5ddb31a0de1753a161303f7 changes cam_py to REP value
+161e369d0d299be0118662c0ffb8442f988fda00 reverting changes
+2372c4b0f0cf1c0918c096f523765de9144d8446 3dsensor with processing.launch
+6fc77683bf2d7f04c11b0c365cf0dd8060dbb3e1 need those rqt stacks at a particular version for current development.
+a82d0ff8bb35cf1bf4e176b653e57e49fa67cb0d no more rqt, use debs.
+ab865377c30a9100f6634b2595c5449ae9f4fe4b Fixed unmatched branch problem in rosinstallers.
+0ca4e4668590bbda2c034cfa4da57dfed1d52475 adding msgs stack
+7c89c1db68fc15bc2fe30eefc661c3226e61fea2 removing wanderer for now.
+d5ddd6e5177c923a1b6a26383da86bb51685aa81 moved rviz launchers to turtlebot_viz.
+4c3a39d339a5e9de0971e6e563dd334fd7660636 launchers for rviz moved to turtlebot_viz.
+ec0a7abe0441183cb8b6c31b1093e7b9fe12fe4f updated rosinstaller for groovy, mel's new create and no zeroconf sources.
+8b085c62df1a3e9599850a136a93491be60fa14a Name change to create stack.
+9690c5a00b5fae94e604b78e33fe899d8929449f If we're targeting groovy, distro environment variable setting for fuerte should be false.
+668bed465282a017d1e53c30ae9f260c7a10d50f changes in interface
+02b821e0bf6d4025b7284c7b0f37e7c1118640f1 reintroducing 3d sensor compatibility for fuerte
+60f15029abd9b5251a04a72ff0d575032a78ee7b pulling back old fuerte rviz files.
+2ea79bfd31ef36136aa5f4432a78a1d5846beb7d handle script name change in robot_state_publisher from fuerte to groovy.
+5a0bf07fc65934afd61d1300d2d1b52e63a65f10 remove greedy eclipse project files.
+8112275c0bb538165445dab1e0f991d66e212463 Merge branch 'master' of https://github.com/turtlebot/turtlebot
+d738c9960a9c91a729b15638a0abbe834a7a2d66 Updated unstable rosinstaller to checkout exact version.
+9fb5554a2c669dfeaec0ad1fbed14fe99a23f84f fuerte unstable rosinstaller.
+d4bf791e460604c95c6e40b18b1c92cb00f95597 unstable no longer makes sense.
+7e11911a312f18c6eaafd9f3e15b628028974318 fuerte zeroconf and ecl to debs.
+28f9a52650f9bae8608e75ab11c7a8a6ad3b8398 moved ecl out of the source install.
+afd9da9fa6f69ee5ee03ec266d0278cb50f164be ecl is back, one or two bugs with the debs.
+bb98ceddeebb8a780dac16404a7f2b98d1989e01 ecl sources removed (debs exist).
+6edce51fd6a4df8ac0d7be96085e0c83b2a320aa kobuki simulator has moved to kobuki_desktop.
+c9364f0f14c0d38762e90489907dbaa09690a5f1 rviz viewer for the robot.
+2050cb6db31c3cd38869fc9dfce5e5c16d9e1127 don't have explicit kdl package anymore, so removing it from turtlebot_node, #25.
+2d782fb01cd6575c35945a7def937ca40fadca44 correct driver requirement for openni nodelets.
+6b096f0c6e0ccacc8d440278816a30c5d5efe7bc updated sudo apt-get requirements.
+fe5657c8c4813bb93949b8949e92a3bd9724c66f moved view_model launcher and configuration to turtlebot_description
+7b4d4d440f1115714dd8a97096f93a969e6b66db added robot-model-visualization.
+e9f7e96e2f1e7105185e0a9169441a08bacabca9 view_model updated.
+2a177bae09a5a5fefbf2d2c201ed08c57186bc4f merged modifications.
+80e36b56ee7c498d6ec151dec6a6b46e0b3f6e95 cleaned up sudo apt-gets a bit, added rviz.
+4c6e8a749e376423d1245d01dbf4f21b95560f0c add openni
+1cf4787f3174a7b9ade36f6b4cdcf6227266f0a6 new url for rosbirdge_suite
+cfe5018fda7b6441b556689832488a228fba3976 Additional stacks/packages required for turtlebot apps
+9f24263cc8f65fb28cb08e8926246a7c0b2ab4df migrate turtlebot_driver to create
+266d223e9925e0769cba85b21f1d820fd344b224 Merge branch 'master' of https://github.com/turtlebot/turtlebot
+ea88b3cfbdb441bac03a774235bb944d617ce3bc Additional stacks/packages required for turtlebot apps
+45449be7f0e1fac512cb4bf465963abc934e18d1 updateS
+f1f93b5296e8f580870c97b9541bf76501122078 updates
+16aaf0c437449090b360f4f4b0791eaf85dbe651 comment about rqt
+b3e1fafa0ed0dbe793dc8cd2c12425ef499c69e8 Merge branch 'master' of https://github.com/turtlebot/turtlebot
+31d8a31aec69c847cfb1a8d114bd63d195ca09c0 added dynamixel apt-get and sources for rqt.
+b358462dd4ef0e248a0e1aaed478dcd115fc79f9 Add PCL
+f8cf00713a05e214e83baf68c09a73de0fb4e3b3 updates
+b5cdf0a3cbddbc9d68f06539af6896f056622701 add navigation stack
+23649a4d2a5598d4d4927df6455ed8e69a82a57d add the old stacks folder to the rosinstall.
+ca8cf779aaa837a2ce971e311dbce3ef508b91fc add gazebo dependency
+63aeaa4f85e38436e9fa4363ed06efd5fe8005c1 add gazebo source
+9168272e0545cdd3d5999a55422be0f9c3230fee dynamic reconfigure
+43ccac4ed2260470cc9b0b0c4602ca1f6ea1ea3c add bullet
+b0c425038f1c2b70be46b360b1d721e900fc95b9 add visualization-common
+29e8fcab1f5b2e83e494c03c1151c51b87a51aec adding nodelet
+6a32d4130bc0f48458f9c1b2e7c805b0f2516a34 adding more deps
+2831a2011b399c654d77e4c911c52155b2176120 add xacro
+ee985effe2aa686bdccbd173b5598c246500b461 calling the split zeroconf stacks.
+0c45d371607fc6b80b96420bb6414099814346d2 first groovy rosinstaller - passes rosinstall, no idea about compilation.
+f839aa4d74536818ba64e29b13fd3262d8e62e27 tagged rosinstaller for last development point on fuerte.
+a58a525937ae8481ae16adf7d52fffc0c9c55045 more aptly named export scripts.
+70bc4f907aeb6e921bce303c675d176b5b737086 added comments for the REP base link rgb frame specification.
+cc926eedc3b30b4339167d693f8ac8389aa2c4e9 remove rqt, nothing in turtlebot directly using it yet.
+c33f47e1f0a5c7acf9ff5c1fa18e502d9b1016b3 uses deb version of mapstore. create stack is added
+abdd7806faa30ae7913da0c656246271fea55301 add simple script to set env
+a97749adc105bb5a3931f2cf988559dc31de90e4 extract out create from turtlebot_library.urdf.xacro. Now there is create_description package
+26b52987f034d3287c26a6ae4ef0d6f935d34662 apt-get instructions for mjpeg-server
+dd396475d74890f57b414dad0cc79e6e2f2b1a18 Merge branch 'master' of https://github.com/turtlebot/turtlebot
+680684b4edd86a6e7ed45e32d52705b6aa65828c bring in the new visualisation stacks.
+ac90c07eb3b111981dd7941063d8f7007aa5d5b4 Merge branch 'master' of https://github.com/turtlebot/turtlebot
+9c4b8f1f8cc62fbb75745b06b4432dd839f75a40 removing 3dsensor from launch file
+c2654bae1fef3fa137736f1ccf5ff4191ce13e38 adding gitignore
+2c062f4ba5abd2a0655c7d8474664bd67c259ed2 uncommenting 3dsensor.launch
+742aa7bb6694f50ac6d7754d6e81f371138e0e66 original create urdf's for circle stacks, kinect and xtion pro.
+81b45b125f0c77b0217f9916b939f410de96a3cc move kobuki and hexagon references to updated base_link at the bottom of the base to match the create convention.
+048c021b0c520d360d446856f80d5b07363ebd88 removing 2
+da51bfb4036003be369f90f026964eddf16e385c Merge branch 'master' of https://github.com/turtlebot/turtlebot
+685097e61dceb49d7b4e42b8a1790f621aa96df5 updated rosinstall
+21f44cd82caa5a2588fa391311b43186ee5d602d adding turtlebot2 rosinstall
+dc8f89576c7f38b9e2cc7c78baac60b9948d6df2 Added app turtlebot_wanderer
+d115119020b7101d6c14441ee3a30b123fd709b6 found a bug, xacro globals get confused when pulling asus and kinect into turtlebot_library.xacro. fixed.
+23662716ddc9d01af140945856ae0950b0781a2c Merge branch 'master' of https://github.com/turtlebot/turtlebot
+32bca530ce223d80e71099aadfdaf46ee22e435a rename mjpegserver
+08b5afd3ffa65bd74c219732a9b82c4b8442c51c Merge branch 'master' of https://github.com/turtlebot/turtlebot
+4ce69c7dcb3ac8b55fbca028383237e3255c24e3 Added dependency on rosbridge_launch
+55b737173e3edc113eee49540ccaf1a4d783f250 Added dependency on mjpeg_server
+f02087ae884711a32ecff361bbb221f568057d2f Merge branch 'master' of https://github.com/turtlebot/turtlebot.git
+0780b837d4ede212f303a288ec4d185afc1654ba Added dependency on kobuki_node and kobuki_description Removed dependency on turtlebot_driver (already required by turtlebot_node)
+52d8fcc612500fe21c5362ebca7439a8cffbef2f Merge branch 'master' of https://github.com/turtlebot/turtlebot.git
+9aaf89bfe8087cd01f244901f55f630dfbbbb8ec Added dependency on zeroconf_avahi
+b1a4ffa1578649c77a0a21eb22ad334fe1acb6a2 Merge branch 'master' of https://github.com/turtlebot/turtlebot
+880f41fdd784172e269174d17be620062057ca1a finally making progress on a good asus/kinect xacro formalisation.
+e97f5844a53caf58c67c35313817c13826c66c9d need the joint state publisher to publish wheel joints if there is no kobuki/create node.
+f4c3dc644bc041a4cfe772a6970a888b0857ecc1 standalone launcher for quickly inspecting the robot model.
+29a6f2c23dd0dae939e9d91838d4608680ef87ac rviz viewer for just the robot model.
+bdf8917a6b7d440587bcf25ddc165a105e65f112 rename minimal_3dsensor to roboworld
+1489c7000a57d6078206fe2264df5ad09f00b844 Issue #152 implementation: don't use hard-coded joint names Also odom_frame_id and base_frame_id removed
+3ae8dc609c1d95766b89c99e8aa593245557eee2 commenting out 3dsensor.launch in app #10
+fb3213f5c91bb1741b938e170b8bbfa2ec6b12b5 minimal_3dsensor.launch added #10
+a7292cd036605a89a074e31dbff4846dc8dc16e3 renaming kinect to 3dsensor
+1b97f67f5d4e9a100a14e3bddadc35d3cd36e706 merging
+24a18d3188b9e7558e6d21cdaa2fd7f9f3dbb415 renaming kinect to 3dsensor
+31fc2ad0508bc2530b1228a294fabbfb1bcc617f asus xtion pro description updated for turtlebot 2
+f72f66a6e478dfa1d7fcca982387ab7d5f149e80 Merge branch 'master' of https://github.com/turtlebot/turtlebot
+d52880670c1669e7487d5fc289134f1decb81702 kobuki chirp no longer exists.
+0494d2ddaca5f492addc56598d31f089ccef7818 Parameter bumper_pc_radius value increased to 0.20
+e5e6383168187123b197bff0c7ee0d3d6c4aaaaf getting ready to test asus descriptions, but our asus isn't working yet.
+76832a86e26a2c41ebd70091181f2de13ce0b8fd second half of the turtlebot library description changes.
+7e9f7db0a91a3518827dcd301e7523f03f4e5d09 trying the idea of a xacro library for turtlebot to simplify the xacro collection.
+f9143f16f93e2f345fcbd011ffa658bbadaa262c don't need kinect_frames anymore, turtlebot xacro will supply, closes #12.
+4a5b722937613f64860fdf74b05218d5b0457e97 simplify by combining the kinect breaker with the create base.
+676b56656146a96ddf44bbd2b9beec0d812b449c Merge branch 'master' of https://github.com/turtlebot/turtlebot
+9d44ccfb77324de3bb0286de4d75361705af0bd0 turtlebot2 descriptions rejiggled.
+2ad7456d96a4ed205fba401cffc030b45e6dcb58 Merge branch 'master' of https://github.com/turtlebot/turtlebot
+fbc9ee6cb183df73e4fb43753ff624d0a9b03fc1 New parameter: bumper_pc_radius. Needed to implement issue #1: bumper sensor in navigation.
+71e63367b3e26cf1a6d743d9baac6d4abc76106c added throttled and rgb cloud configurations.
+0a333cd9069a8584342504a13adf9f3de56f632a Merge branch 'master' of https://github.com/turtlebot/turtlebot
+af4665ca540c2e2f608bfd23c8e6bd9bc44b0efd adding panorama app
+5688ad17da43ca1c5fa180dd5473cd8b122eb1e6 standardised launch prefixes and folders (like openni_launch), easy to sort.
+e720923acb9c8b458f130ffc7a20389bac7f8856 standardised launch prefixes and folders (like openni_launch), easy to sort.
+34bc02a51c3ec906d84febbd8bfd1c2096963623 map store dependency, closes #6.
+8ea40a624332a049320aab94941d4e1c2bde38c6 Merge branch 'master' of https://github.com/turtlebot/turtlebot.git
+599d71190fd828cc046f1c04a4aa41da8f2d22c9 adds a bunch of parameters Gazebo was noting to be missing; default values are the same as Gazebo was choosing so far
+af8d1895f07ce223979e3418f56fd4ea503e628f changes remaining kinect/xtion mentioning in the link/joint names
+c25d5c7465a1ff34f112d62298c0cb6994c2b116 changes remaining kinect/xtion mentioning in the link/joint names
+68bfbf3a0bedb171f144c5b7bfccf05b82a76847 adds minor name adjustments
+70bf776d769d2b1b54ef6f7f3e99166c2b946afa adds a bunch of renamings
+4d75d30305102a25e624045bd6765e36bd1c5dd3 adjusts the xacro file name for the turtlebot2
+03165f3165d462290f0df0d7b9fc1fea540b547b adds meshes (stl only so far) for the turtlebot2 stack (plates & poles); also adds IHeart's Xtion collada file (thanks IHeart!)
+8664cb96130d1a876000090998fb6703a99d99b6 adds urdf description for the turtlebot2 stack (plates & poles) and the kinect & xtion with poles
+01a281342da989ba6f20dd5be727913f5e8741e7 adds xacros for turtlebot2 with kinect and xtion
+7ec34f8ec3357bb9c9420011a27ee90fac845e81 adds convenient eclipse config files and gitignore for excluding bin, build and lib folders
+de3079d18a3d01b1259db5cd82266c417a7e5dd8 changes openni stack name
+d2905bc7d4301a6628fa1a80689e98d16fc64d39 use kobuki description for turtlebot2
+a534e889673d56bd20aa8d7a7d119f7ca621c322 merging teleop_key script
+4fb1303bca5250564813e0026021e69bb429c799 remapping argument
+573673855c2a0f3a4ee5f6ffd0e771b8af46b530 creating directory for logitec teleop app
+b6ce4254e48657475e95003ef9746a8fa8d291f1 merging kobuki and create apps.installed file
+2941b4ee9d7b4e363c9c9210f247a7e4e523f7a9 restructuring
+ea129f8f46c6db2e3b6aac5d5d0a56f7dbb7d49f make_a_map map_nav teleop fixed.
+4943ec285c988e19340748449f9782e001983d98 moving launch files into launch directory
+6e0a4ea7329e081d775413e6f504644ea834d410 kobuki map nav app -> turtlebot, #15
+7be2f3157fca35fcb47a4249dcca4b718273ab19 depth_registration to true for the openni launcher, #10.
+6512977a32feab4523c49f382a4678de28574ffd remove commented old map_loader reference.
+644dd94c6857dc1749d8e3005c46e511530fc463 app map nav fixes for fuerte and updates for turtlebot2, partially implements #3
+df8ff0e0ea0430ecd814773bfbbc0bb2dc30b8b2 eclipse project files.
+dd70a283906c3a4fdc9b10dcb669014000059878 environment variable for battery settings - move to a proper configurable solution later, #16.
+90fc0a687f1b88cb064be816c71fcac839eefe32 rewinding mode setting back, closes #11.
+aa839af49e337e4b01495bf00274a20d64f11de5 testing with the kinect...a crudely working openni_launch usage for reference.
+eadff801651b25ffc7114df7d48bb3be417464a6 trying a lower resolution depth mode to run faster, refer to #11.
+0124de87b476fd9bf4047ac96e6ebb3fc0e5bc76 Adding a turtlebot2 changelog.
+0f860067782c08f482720683c908bd4c6960fa4a diagnostics monitor.
+61d9754f15fb1a5a45cdd4a0f97d2b5951ffa79e checked, and noticed the oepnni_launch method is recommended as too heavy. Made comments re that in the file.
+69723e35b66308addf6f92c8c1e43bcfa91cb20a updated robot rviz configuration.
+a79706dc9b9f408e13ac91ab48414a1304836cb6 some rviz launchers, move these to turtlebot_viz later.
+48961bf08e3241c85caaeece105321d2c0f3081c kinect launch file merged.
+d0747aba10ce83807dbeef2d66ac0736e60439d1 exception to gracefully abort with a warning when battery is not present.
+63cd6412e811134b941c3e450208d5a9841fcbfa Merge branch 'master' of https://github.com/turtlebot/turtlebot
+c9bd4eeaedc82b4ed1cf6bd675a460584ad38160 kobuki_node->turtlbot_node and reinsert battery parameterisation, closes #3
+13662eb4ce5a3be9e20987d3d7d470424b2b1754 kobuki_node->turtlbot_node and reinsert battery parameterisation.
+09811cf517ff65e2de26735ed00f638c1f5420c3 launcher cleanup.
+b17f0829899a589095eb46c622dc7ebc1e66b6bf rewound laptop battery power checking (kobuki's used an earlier version missing some changes.
+7581608ddd51a0c3d770566edd431a4255322823 bugfix the laptop battery check.
+ce65ba74178477a933f4bf30829a03aab054ccd1 launcher files moved in from kobuki_bringup.
+eead1ca99553178de421e2ed0ae29eafe8410dad git tags updated.
+5a90ab0f53305551277528fb96a0456a321d237b Added tag fuerte for changeset cdf5a14d7569
+eb798fab08bcd22033361aed941ea61ccc37e48c Added tag turtlebot-1.0.2 for changeset a9980e742035
+ab2fb7beb6543e2228db2ee3403095da56c45099 ticket 135 changing from map_loader to map_manager
+51808acf20c11f11cd92f9d3cf0e9a4b52ebd270 adding battery path example to launch file
+7ad7639ba27b8f6fcefc8811fa18580ee95eed92 applying patch from ticket 134
+590794544c7f07dd26cf251b3d98d9f1780f5547 preparing for release
+48841e0c8ff0f54a51e30050fdc84bcd4235a018 #122 added a parameter which allows the turtlebot to be teleoped in safe mode
+0cd00282c9ac80ec76b19c505cfd0dd0d312b2c6 fixed turtlebot_bringup/upstart/install.sh to go to `rospack find turtlebot_bringup`/upstart before it does its thing.
+5fc05d78f67e19f14f6ad6e411098358ab3e6fe2 #122 added a parameter which allows the turtlebot to be teleoped in safe mode
+8a950d303b7803ee8383b048deaabcb2450f08d4 added udev rule for turtlebot.
+d8a9a6660e476a01249bc38f113f2a763c7e186e Removed redundancy.
+06f7936098e5ac7b37ec729b4a294ccfb73e2b0b Added auto-detect of default wireless device. Added check for existance of turtlebot user and group, and creation of said user and group if they don't exist.
+788a8a0c82256bea981a33a62a58ed5e3442ebfd Ros fuerte + precise kinda works (it launches). Currently I am aware of 2 major bugs: kinect does not work, and teleop does not work.
+477e447ca2d778e79039098208c41ebbffac35e0 Add web interface components.
+d9e90ed4f43d96f2fea825d95918ad8980b737c4 Added tag fuerte for changeset fbb02b99d055
+593143e0c97890369ff288b8368144b759f041fe Added tag turtlebot-1.0.1 for changeset 33c7c0164f7a
+a6973179a0e34b5f32dcad02640bc60ff395c588 merging
+f6de76e66a59bac1b06da92b0fe64ef6d4942d98 preparing to release 1.0.1, it's all john's fault :P
+22405a0c2ab370dd68cf8e01323bc673239ed4ff adding dae
+9c7b14ba3f27d346759791373e34a82b50c99dba fixing the models to work with gazebo
+e009f86c9a55bbba383535b92b7521b8b3700bd3 Added tag fuerte for changeset 40005608d1e7
+2c255831883a1bb7c263c05eec3e058ea818c03c Added tag turtlebot-1.0.0 for changeset 7005f3c75ecb
+af4b5a334da734aea74af2cab9f0351eb2184ca0 OH YA 1.0
+b1e358e61fad2f0e1aec99ba78ca4e57aaf3fa26 removing rosdep.yaml
+d69b89c3066df7df87c9f0cf7138f1c9df490d2b Added tag electric for changeset 6c40283d3090
+d43136d7a3ad033da117827d82f35651f397127c Added tag turtlebot-0.9.2 for changeset 13aafc71be77
+8e9e932476ac05faac08c5aab4b124d7c6dbf643 preparing for release
+1d67b34d1f55ebadb678f72a32968b2bd93ee361 applying patch from lorenz
+5b962ad9e21c5f0f83ae638617ccd3fa74314eda fixing gazebo urdf
+73d4e3ba00876f2990b392de75e8f7f596eef52a Added tag electric for changeset 2dd9a0884353
+0c75a71517b0c8fd45a841409a64700fbaddb750 Added tag turtlebot-0.9.1 for changeset fe9754b74001
+50caf73a5655c1b3523bad619d69fef769422381 preparing for release
+fe2f9d0ef71921fa3f9000900490b9efaad43c9f initialize max_abs_yaw_vel
+e5b2710fb35a46bc91b5b7afa9953b405993fdb4 bring back mapping apps (they may not totally work... but we should support them when they do)
+889724eac31bf68b9369e7c99d44f83491ce4671 patch #121
+c7002437a053503c339d17399209779a629e95fc trying to revive mapping apps
+ead51275c71afa8c42549d903364f26079db9b09 Added tag electric for changeset e71e4c8a9d1a
+b5598abb6bd1f5934c9339dc85baeb9c60586ac1 Added tag turtlebot-0.9.0 for changeset 3dd21cf606f6
+b4c9c48aae3ae41e78871e7b789d9dc749fa7e62 preparing for release
+7cfc0c89f976f14354358ef6b1863727be8b11d5 cleaning up driver
+9730c62daf5f06de8c9231f2c5d019e043797878 cleanup kinect/camera naming stuffs
+065171ab1bcc6b7e0e3483399a80b273f9e35f3c Added tag electric for changeset a763ec3f8300
+b2eca04938e15ab0afe7e6c2a55075c35a5513d4 Added tag turtlebot-0.2.4 for changeset 963c9a6cd9a4
+d7aa2eee6b2409f288f278a35d2cc663d7b561fd preparing for 0.2.5 release
+9088d37d7f92c73641ca03875f7374f31ec7cd97 make turtlebot teleop awesome, thanks to brown university
+cd51bc0795448843f29edd041f7de8ca7b46ab0d merge
+3c0e1bc2b774ca4ed3fd32f14f7065fdbfe5fd3e merge patch for #25, #108, #111
+4b5b3189c0235059eff9a6101a7086c1fbe86508 closing ticket 124
+9803cccb620e07244d7976a144ebc5fbf8c62afa updating config file
+5bfd76f9d76f470cb425e33af65f2d90e0255e20 merge
+5ee860a79e1027c988fae193a9727e8c582674cc make turtlebot work with 500 series
+951547c1daab78bfc32e16b75a1b347f4864721c merging in tbot_improve
+42cb0abf87a7b63441a7c9adc62cb4637bada897 close #118 (add param for baudrate)
+5dff7ff1aac91feb729e936d6e89427afa4b91d7 close #116
+d2a7db007c0d300b41f659f3f74bb4b465899e9a close #96 (add rosdep for daemontools)
+993f22cfcd0d7dbb43bbcb976942d4e75b25c1bc TurtleBot node stores odometry to prevent it from resetting when Create shuts down
+30555ed57d1f12417943e76d7a4c7d6195c13170 Adding TurtleBot file for ASUS Xtion PRO camera instead of Kinect.
+3e9e928d9c9ba6d4dcddabace81f051d982da815 Refactored URDF for TBot to allow replacement of Kinect
+521b68cec7df813783f2ab5754339d9d6ed4b74d Switching to new-style xacro:macro's
+5eb303f7aade0793a0582f631518e2ac6d0aca31 merge
+022d632f9a7d484e93846f7ce3f353cf11109e0a Fixing Turtlebot URDF to add IMU in simulation (#91), adding Hokuyo sensor to laser link
+ae1b83a2238db7604de79e15e47fe81613804980 Discard first sensor readings from Create on startup
+550cc165c6d9b4adabdaf9a1e296bbc25824122e Adding turtlebot patches for #110 to tbot_improve branch
+a67ef5e821ca1d6b38aca521ed2bc8c40393b0a8 adding critical battery level in full mode restart 15% battery will for the create to start charging
+7c3a96d01c6ba800a940b446222b2945b9866a63 better diagnostics for when the turtlebot_node is not connecting due to power button off or when cable unplugged
+f262c28868fd121dce5e762413a061eace83d16e removing extra parens
+4ea59fb5dbbcec6fe0b42b3cee46f737b52302ce Fix syntax error in turtlebot node
+6c6343586c96127cddfb9be1bd93d5f2d68ac160 merge
+77dec503b90589d72e4c3cb6804283bb4cce35d6 Change robot state publisher update rate, #104
+385f6d40753c413690fd16a4a5c32b302b4b04bd updating dynamic reconfigure to allow for negatice height values #93
+79e6c89f8a717e4594dd4c1c57812843d4ee3be4 Turtlebot laptop diagnostics correctly sets discharging rate to negative
+041c5c53270473b3fa711bca3102b2e2bdf9e962 Cloud to laser scan lazy, fix min range data in output scans, #99
+16b02aecb1a94feaccdb0f1f667be9beb80f158b Fix base clamping logic, #92
+7071f8d92fe979461263e0cfcbae54f4ab61c7e1 Rewrite of laptop_battery_monitor, #98
+fe71cb8fa5b870e5201ce9ebdc59cf731f6d7ddf patches to fix android teleop apps
+bb7f056f868b4c9c3b5b0f7e80e09f5ec3f9733f Added tag electric for changeset ad17ceb6659c
+f7cd575d90e41bf5ea6cf79960432516d4962e5e Added tag turtlebot-0.2.3 for changeset 9a0a6de11a59
+4509e562e1b4f14517d2cdc79eab9060665ac625 merging
+c3b161d81d02332fb292094ef772d942b96c1e88 preparing for release
+ae45e4d32f44274c7cf36b8177de2a3e5f4151be updating cmd_vel topic
+a1e69c92821ebbc6e015033167dca785b3900362 add -p to mkdir
+f766bd1b3e69c82b26c54aec6a3b49869629629a Rename chirp to turtlebot_sounds
+8981b2fc55042e40448107ae972946d2de8faf03 set use_sim_time to false when loading minimal.launch
+cce3fea833c0bd1322ea0a6ab2a3acd7991ab79b reduce the number of launch files, #70
+396dded3d909e73102534348365669b6c663f455 bring cmd_vel to top, fix #86
+ac24276e25941708b03b53cecadaaddc7b1203c5 bring cmd_vel to top, fix #86
+5c4297a11710ae2b05b60ef0c5d3b826524903bf (turtlebot_bringup) fix chmod on upstart install script
+22c5957e27f99a0e337fde245b58a5885e61c239 Added tag electric for changeset 5dd9fbd3c603
+c15a122d7ff42ff3530cbd1f7bae45228f33f197 Added tag turtlebot-0.2.1 for changeset ffb17335ea67
+f7bef8a143c9b6177c5dc9c035c41d6cdf9786f2 preparing for release
+ac13f4a59770fdd5ca9320a356ae02898aeec836 removing unused launch file
+c2298b213ccdc5cdaf6325fbda64ce078cec3465 removing robot.launch
+81b1e7d391f2b37a5688b8dc38061a60c37da03c Fix launch file nodelet manager
+2719f34b1a429b6fc5e72a8e1ed2e3df4acc2f18 fix dynamic reconfigure in laser
+53d334e96401f8aa687dcd911b005d430c1d29e8 add note to upstart script about installation
+fc31152a857108303b948a49c719fb36cb502d1f make upstart executable, add default setup.bash
+138c74a5b0e8000f9595ea4381abd1c325489b57 revise upstart to match pr2 stuff
+2cc1dad7e4d4cd6e49c67714675f7c3707e823df making casters fixed.  fix simulation params, now the robot is controllable.
+40c473374d54235f2e9b0231ac883603e076c3d3 change back to fixed, not sure why, but must be useful?
+bdc51f3b7634945988ef6307bd321cf57f03abde fixed joints get reduced, breaking plugin looking for the joint in simulation
+aed381e1e16bfc3b47364e7b18408eda839f8302 merging
+fd8dfd28da01927ae54dff023d45fab0ca5f82d2 fix masses for turtlebot
+da337922f46fa5469fa5378b25a9f217a231344d Changed rear_wheel_link to be fixed to fix the robot model.
+6a86d33cb2ec0c7f225b3f13fc2fc0c13e11de91 don't reset breakers 1,2 if already on when switching to full mode
+39d66daedcfe0e985d1cc055a38f0ab91c6e1296 replace teleop_keyboard
+89c4cf89adc2df3043dccb9622c2198e12768512 replace teleop_keyboard
+1776e405577f5aa4e6400b596ccf245be88ea09c rework upstart for easier storage of customizations
+9af77892cd9b6de94de8042f91eb21da16819531 odom_combined->odom (close #3)
+e7bf7dc5a55acd4599c72adcad0430baeb21509c merging in changes
+87162f4d429dcbaefa49d8b6945bfeb3dd31e2ba adding more info to the diagnostics
+8b8041c34b6322495f3e151540bcc7eab24c592d update launch files
+bdd885bedbf71e8f0fe0821eb960af82899390e2 add space for calibration
+c1d4883b8a508f634fdaa5f1faed04778847995a Roll back to diamondback-style driver
+8eb00ca664ad736e3943397309b19bb60cfac175 Roll back to diamondback-style driver
+6884b235f424cdfc81a30b65a91e68b77362e3d5 Roll back to diamondback-style driver
+8f9b34a69a23b9a7d351c1870507709e98047237 Update teleop to use sensor_msgs::Joy
+1c7ce95b2b15165e2c4c06ffcd7ef89f92a54e86 Update upstart to use /opt/ros/electric
+3176e80a23fb0200c10326b7b2cdf38f5f7d0c8e Added tag electric for changeset 8d96df9b46a1
+439260bc66dc266af11d77972f85000ef53616cf Added tag turtlebot-0.2.0 for changeset c2f6b4a56667
+a0c75598b770caa91371387672f383549380eb09 preparing for electric release
+a799225f364e9cf206505962fca49e7fb6b9dfc3 merging into head
+31db3209ad05519f6c4b2d185c3cefdb0e82c085 adding launch file for kinect on electric
+85190ecd670c66063ac06d55ad6e6f86ca670cb9 clean up
+7cebe2a98b0e466b8add50af2e69ac2b6a4d9d0e Added tag electric for changeset a3c8d0a5e14f
+2fad502aea79944cb75702fe4d6926911e8a4938 Added tag turtlebot-0.1.16 for changeset 187c56a864da
+29b77c38bef6bdbe90a963eb03c88e4130b807a5 merging
+f981ebb8098f748dd725f78ef0eafd2117446e3e updating gyro scale correction for dynamic reconfigure
+403b13865c488db28ef695089aaa677d99011351 Added tag diamondback for changeset be9ac410a4f9
+97c46b8ee03b91d6ecf636863dcc9a06bdc24c9f Added tag turtlebot-0.1.16 for changeset ae11a9d0338d
+6dc6f063ae6c8058ac85f9b0060a019b0cb5fcc1 merging
+3d4f5cc3b5580e701a99e1b47273d87e819fcd13 reving for release
+fa707a1ad268c180b952497da9d3802dbf270082 adding config file
+7821f326888ce6879f6cebeee6fdc4e8831bce4e adding dynamic reconfigure
+b64e372982596c5dbeeda14bd8009d50bca5f69f removing bonus bool from reconfigure
+3b70afc491809afc28f774cb8f84a314b7b2f7aa adding dymanic reconfigure
+26639f15d902a37b3a4e996eb3cfb9809f03cf0a adding dynamic reconfigure cfg
+8cd757047206953595584c461125c5b6052b2b90 Added tag diamondback for changeset 1a24d31ce109
+d17f313ff29b1f960af2acb906c2a2ca4ca4c54d Added tag turtlebot-0.1.15 for changeset 0d48066bc630
+2f38fbe625b30f95cd58bf681403b18a3dadbb6b reving for 0.1.15 release into diamondback
+f04a2af6e2cd2d443435938745bb459e8304a8c3 tuning kinect time offset and disabling registration for cpu savings
+9c432dbb04605313f6f755114247795fb8db8a05 setting near cliff to warn
+e0c1992f8c50870f85ae03c1ddbc0e2674d37586 adding breaker to launch
+7b02d9e3405750fce38d168f3d865be31b85660f Add launch file for the kinect
+a5790827cb6c75029c8d5dfb7a389879e086d8c6 Rename launch files to avoid joystick conflict.
+4845ae294fe7f90a8369150a329afa34de0b54a5 Change map launch files for new warehouse
+f48925e52d70cb344643306f130947b8a4a450e6 adding test.launch to test the urdf easliy
+1051e817ec256f4fd2060e4bd20ff51019644a65 updating urdf to reflect production turtlebot changes
+01084d632eff58f5146f7cffd140ff45d4337eb1 fixing diagnostics bug
+f896e6afdcc8082973d462b0e77721889f86975a fixing diagnostics bug
+f0baeb15d374a474fcb4f4a5cfc79e1581d036d5 renaming to be more consistent
+9a7e5aae4fc2d78275760e1419d2886257f38534 adding state to diagnostics to catch quasi on state of the robot and notify user
+2bf0516b00cebb389229509f492af2b91fb4d255 changing enabler to put the turtlebot in full mode
+38c59e0536e6c75e95d417db57042258738f38af bug in diagnostics when gyro false
+01f43219dbc28a1c70bb4c60bdee4cd3ef16dd62 Added tag unstable for changeset b69a58fe92d6
+566a682759231a0a4d0eb49b99c9b870234ab5ec Added tag turtlebot-0.1.14 for changeset b982ddc77143
+bbca58ccaf10edf9b9505651c9a81add43a6015c preparing for release
+4bac12a3f576290439dc20a260ded408adb24066 changing topic names in gazebo urdf
+265eb3d05e9bf8521cd9bd7218426189ceed6abc changing clipping plane to mimic kinect behavior
+ecdef59c5703675ef518314c48e6ea82e46ec020 updating urdf to use the new gazebo plugin
+8cc784acec61cc093ea2bd7432eb01bcd3b406ea Added tag unstable for changeset 6c2fcb5338a3
+aa5feedf5caff26a2b3c42218c0c209a39aa0f24 Added tag diamondback for changeset 51bd9aab3a1e
+6d8345f86cc34296b88086c1b2d757e3c4e2cd32 Added tag turtlebot-0.1.13 for changeset ac636db76744
+c28a41ffbd8ef908794a7b63f5d6aac9417b9354 rerelease
+e06438e785ec99cd6ee73b47fa0e24c7a080817a shortening delay
+b0596b2f1d720e39d79407df9b4b3807755ca7e5 merging
+89f7e9875706a1a9f6619ee45b321e53f3c0bdce turtlebot auto wakeuphg diff hg diff hg diff hg diff
+0565fed1e9a843ee5fa3240fef1580452ceebcc5 cleaned up turtlebot_teleop package: moved app files into app subdirectory and removed extraneous app files
+fb557ceb942542ad571877b852a284807f4b5c83 merge
+6cae19642755fb7ca1e2105cd43e7c2d22253edd pruned out extra and unfinished apps from mock_apps/turtlebot_apps.installed
+f2b9862ff44b84beede25c1dc3bb4a0e621227f2 fixing typo
+875cd1833b3028f31ed4cb24ccccf7e14b6c9acf Made sensor links have non-zero mass. A zero-mass caused urdf2gazebo to ignore the sensor links
+3313b9d5e06eece1439a995c2159ce945a628775 merging
+b6b3428ee6bde5aa7d0826aa45a8907422c2468b removing turtle_drive for release
+172a0193966fc4857a70a40d11e9f31558f2c415 removing rpy from inertial elements of links, to get rid of not supported warning
+a9c2ecc575c30e96ea2f6ba1d595a286216930f3 added android_map_nav app to mock_apps
+54b572db7be4e075e65fc7209c467eb2392a691c added android_map_nav app
+e1d3056ed2209cbeeeb119d4dbf06166565953c0 Added tag unstable for changeset 936dd741c9c3
+f09be7784d7c86177cc16b5387ff449e55086c83 Added tag turtlebot-0.1.12 for changeset 60e779d17dc9
+81228fb4a4cd4e5c24f228b86665d15ce9d7e1d8 0.1.12
+fa02053a3fb8ae73fcf44142093538081203a503 Added new 'Make a Map' app to mock_apps/turtlebot_apps.installed
+365ea6a1d4a6d7b6c9a917c82b261365d85728bd merge
+acd66210db5e7073418f1d825cc20f44e0c34516 removed lores camera node from android_teleop.launch, was causing trouble.  Added android_make_a_map app and launch file.
+3900d37eb7871a501c061f6a2bbf267b26edae83 switched from base_link to base_footprint frame in android_teleop.launch
+780c83d3f5f0fc7d517968ac7140282f2fd44fe4 fixed teleop.interface file to match latest minimal.launch to make ps3 joystick app work again.
+1c3fa8e23ec238b4fcdd267f018998dc9ef57733 changing default behavior for bumps and wheel drops
+4b38a75323c0be3bcb46e588d56dbef329e80dfd new version of turtlebot_bringup/upstart files.  Now you specify at install time which network interface you want to use.  My previous attempt at an automagic system was not able to do the right thing reliably.  See turtlebot_bringup/upstart/README for details.
+c697219ea098bd52d1f45c9ffbb4716866f0cde3 Modified upstart scripts to handle arbitrary network interface stops and starts.  New version maintains ROS always running with IP address from most-recently-added network interface.
+071c5cb29b065e494e52c88f14c62a5914521188 reverted change df3795d5bcd1, my botched /dev/ttyUSB1 failover code
+b91bc7e3521cf3892d4f77985b4bb1f72063c7b9 added a tf change_notifier node to android_teleop.launch to narrow the TF firehose going to Android
+e1055f9db5a16e660af6e29d4ae3d820d838ec5d Added tag diamondback for changeset 8fb64da4917f
+152d0cc8760ebb8cdeb280b8e0ad8919073c2950 Added tag turtlebot-0.1.11 for changeset 99e8462a1474
+7f77917a2200780abcb2469df1cbc8450cf6f488 0.1.10
+b7d8aea714afca9d3d34cff40ad3e6b73c4939bc added no-map and no-map-no-cam versions of android-teleop app
+83269d0dc602c17d0107e15356440e7600185356 added no-map and no-map-no-cam versions of android-teleop app
+f976c62976e10ae75c4caed2c4e46f820380ab6c added fallback from /dev/ttyUSB0 to /dev/ttyUSB1 in turtlebot_node.
+9cc5b07ce209712878e49bc4658dfa93274eecb3 Added links for more sensors in my previous commit
+e78c8da42d736d4b255403ddae0df770181b3878 merge
+7d81ccd7f1497c9e97601bb4328be268310c8278 Added sensors for the cliff sensors
+591dd34b7c06120f72b06553370c82d04a80c5b6 For android_teleop app, reduced bandwidth consumed by camera images.  Fixed conflict between two different publishers to 'camera' topic that was causing output to switch between high res and low res.
+68f12d1d18d219f337b83943931251d2d04c3f6b Added tag diamondback for changeset 1b61b704c4db
+1da688f8ccf9a0299934fa036abc41a33267cfe6 Added tag turtlebot-0.1.10 for changeset d8539fcc35da
+6d55d8440c4e1157fcb6bf6f4acd3c8a678733a4 0.1.10
+66100a8cee119ee622da7c0819f921b1e7ed6fb3 merge
+66e7b05fc94394bcd415c9c7b1ec8da0500da24a Adding follower, removing base
+4a5b6a613ed7056b625663c8e3b3d3ad23ffc4b6 Added tag diamondback for changeset fab37275a4c5
+c270bc8ec734ba3de206c5d0182be46e7c905b3b Added tag turtlebot-0.1.9 for changeset 6d33eae9fa67
+21f476a4a005bc20df5535516c85e84c2db1d5fe 0.1.9
+a6e86cadf9e4fc5fb0d495d767b2ae7d14186c02 robot_state_publisher into minimal
+f656908ac1eaf307fb758362b7061bb276b7884d moved laptop_battery driver into minimal
+489e2b9231bd6db45829b7a110d91db555a8984a Fixed soft reboot logic and digital outputs calls
+a04e3ecb64986bfc3b2dcd52401fb054ab4a7552 Removing duplicate driver element
+7bc2e492f9977967b29581f61df7d1066751c98d new driver launch element
+394844fe0182bc2cde9052448aefa0b683548d32 Respawnable driver is now more robust
+72632f8884cb1d2b0e204187a982e09e8872ea6b Restructured launch files to use respawnable driver, which is now part of minimal
+6602bea3d7686ba77242d7af06649437d31e7131 Add back in logic to catch DriverError and keep device up. Usual case is Create is off, rather than unplugged
+99ee3cc3a6d9b1b42d87c3a9086719c3243fba74 merge
+f2d46b705722b61948313e3f2ec167dcaeeb3359 node now fast-fails if USB disconnected and has a --respawnable option to throttle restarting
+720c4e11830f66b2c8c672c4af7893664d08ad4f adding extra sensor to urdf
+97f88f92575e6dc6a25fe68c34653e818f4fdeb1 Changing except to 2.5+ style
+b9ab8e2c7e6c8c067c74ed6b7b05f27c09a639f5 Limit joint_states to 10hz for performance. Bug fix in rate limiting of diagnostics to 1hz.
+21c25c170c2f62fd33f3ca503a55906a788c4795 Code cleanup
+833724ddaa979741f6d96fc9078719b77f255900 moved pubsub init to avoid race condition with setting breaker state
+ebbc89b64fc5e89b3a63a9a3cd5c97d6e0eac0f8 bug fix in new gyro code consolidation
+79e566165e5c52b8479d88797ffc94d6a4c4633c Moving more logic from node into gyro/diagnostics.  Moved song table into songs.py.
+cd1d8329f6a12c574d92f1299bd5e6fc2f59b3a5 Removing old deserialization code to eliminate confusion
+387a32793125a3bac44c124749c055e6d33a9a26 Tweaked watchdog behavior to allow longer timeout on first key press so that the robot doesn't jerk around as much.
+67739973c07d39b20256af505b715aae9aeddfbf bug fix to endianness
+69a9ef4a39efee436e4a92ee0e1f8a48a292580c Numerous bug fixes to previous refactoring.  Mainly issues with deserialization.
+33c16a2069f5aef7868c9387b256f95b91964f71 Optimizing and cleaning up turtlebot driver.  Moving sensing up into the ROS layer.  In progress and untested.  Still need to push more state back out into Gyro and elsewhere so that actual node layer implements very thin logic.
+00d68a05f0a56a1620c9e1cdb5760bb1df63848c adding other maintainer
+d4edc9f738e11c60b3ab84419a94d72828e2bc95 adding charging soft reset when in passive mode and adding switching to mode when vel_cmd sent
+aa2693d9a0c3eaae55a0dd6853e5256f02e5f465 merging dave's changes
+af1f47d4385c381863fcbd71c0c30fea72115dac non freestanding launch file for ps3 teleop
+3447575e17c5694fd6732f628fd7b377fdf15a3f spoofing joint states in driver
+59c666b52a887ad4c02b5e1ea0966f5b10aea9c8 parameterizing update rate and only sending commands when they were different
+83d5c6a3bb74d7bc62929dee208efaabde4125cd turtlebot android teleop now shows maps
+91d2805d8136b79d2ab5ed440b73f7783dcceffa Added kinect to the gazebo.urdf.xacro
+074d4c9461f2c3b3fbce0364c7b4b6e50f369bd5 patch for #ros-pkg4877
+3a5a0425eea670f0ea45ba1ba90055f5a08b6523 Fixed up the robot urdf and meshes
+b20600112adf88ad043ca49a2c54f705fe970d21 0.1.6.  Bug fixes for joystick app.
+fd032f8fd06e2b5415ada2930d0adbca44daba2c Added tag diamondback for changeset 27de0de4fbcf
+f878d28fce7d1aaa4c10f3738e1eea5c6774fee1 Added tag turtlebot-0.1.8 for changeset 5aeb162e3e8b
+829af76890add94a854a6c0ea4e54e6c27dcad4e 0.1.8
+7a0d2bf32828b7909416592d0efcd211bf4ec621 adding base app
+0b5bc3d0848a7ecc0a67d80d22405cc1f91e0657 ps3joy upstart
+2d9e6425526f9c9385a1ab84bb02c6835e695027 Added tag diamondback for changeset 869ad2668f60
+a91b1a53110616201462dbbf22bbcdcc576a8556 Added tag turtlebot-0.1.7 for changeset a942707f5e4a
+02a195232588fa94e5e01732808488fb4afc2110 0.1.7
+450e968a44f6cb86865e860da286b8b6a905d96b enabling ps3 joystick app
+202d870f7b290cba131eeee3da591e65ce1af089 updated ps3 for app manager
+20a42e20f83297d190b360f6f220a28569675ffa added nodelet to produce narrow scan, for localization
+f111d8e782b50ca5d376f2242f2293458f768f77 Added params for stopping on bumpers and for setting minimum abs yaw velocity.
+d43f7124ab32e154d4e83a8dd558fd9093942161 Changed android_teleop.launch to respawn open-ni node, and added android-teleop icon.
+26f9abc72e5dfcd35527763c06dc4cdf47d93dc2 merging
+881aa4ea324452bafb5a5ada880386751d61b03f removing unused path element
+ef8200922daabc44e67c6cc7597b9820002bb14a merging
+7da7c541f9056df4d6feecfcd88fcc890c37c7e0 ps3 joystick
+b206a71869478a01abd2590a7e07cc4d8f2b1e6a working upstart scripts
+5124ba1948f11bf1bc09a16b867c9dc9f71f20b1 merge
+435169a00defc0f308eeb81b9a27f411244d2aca Added chirp app to mock_apps list
+e7bbe919488a237d6b7b89c8e00ad769869aa5c7 merge
+2603de13510a4cc2ef79230f6200d13ed5f5aca7 QQVGA for images
+a933f06d9cfbd930530b9782e2986755fbb78901 adding cmd_vel to interface
+4b64360c33836dd81041c82722a59840d2d35098 appmaster now part of launch
+bc7190e2e94940f641e99a01321a186944e71c18 Bug fixes
+19997eb9929e6e47a661f89677cea764b045a1f3 merging
+85c10d719c9cefe6ab4bf5aaaf3e4bbff6eec573 simple script to determine wireless address
+4560c2d1f50ae8ce9a00de336bee18fb75a399cd Added tag diamondback for changeset 0ef5da3dee64
+4bc6fb69e493382edef6cc050e5227682f0ab216 Added tag turtlebot-0.1.6 for changeset 2be6f78a9cf3
+fbb1913b2a86744da66b8b44ad4d471050c8cb44 reving for release
+9092beb8d21740d23cea09f35e4656933316e47a wake did not work right
+98aa23544343f44df1ebc4e111a95f3d40b971b8 better error catching
+32034bc66b6e4a257e17766fd5a214198e32e1bb adding in attempt to wake robot if unreachable
+d30b4804e21751b12cb5ab2442f18d21548ee150 turtlebot_node now robust to robot power on and off.  It will wait for USB port to appear and connect.  And give a nice error message and quit if USB is unplugged.'
+1914bf87350a180b95d80f07ba52e428c453a819 fixing xml syntax for parameters'
+f2ad0efd40d88f3b7e289231b768fbe89112c65b documentation bug
+3dbb1e8d008765f5917858a336be0c6eb3646158 Added tag diamondback for changeset efbadaf304d5
+6da0507bb8a471f6ea5348edd125d6f27e971368 Added tag turtlebot-0.1.5 for changeset 3e24190d956a
+73bae9e3a50e6f5951b58b2ea8a12469a2dd7343 0.1.5
+cf095d416304aa015971524130953347812d9267 merged
+91b7cf3b75ec7c2de60c1a50c9c3160ddd95ed1a integrated with app_manager updates
+423e56caaa0c8280285d7cf6a49df749068ccf7d fixing filename
+de08f8e2ad7d6ec20e34b67694fc1ac14ff1baa3 merge
+eb057b5196e753ff3ce682111c49e9795c10de33 reworking launch files to use minimal.launch in bringup instead
+84c9a77a8d2b9ab1ee28c4ac07cc4825dd0746c5 Depends on multimaster_experimental for app_manager
+eb1e207b9ef1bb82a93f2feb4acfda4d15c07f3b minimal bringup depends on app_manager
+2649cb9bea45c8750942fc4007b8b7faea7e9efc paring down minimal more
+e77f7a606cbfaaa5c1302765c681ca03c459d5bf Creating config and launch for app manager on turtlebot
+993ce9bceb676bdba97de2e186dd8270189c2cb4 Adding in android teleop capabilities
+7ddeb8f5d99c35c1b01a030637080290c83fbe7b merging
+2b7c1449123aa354e1f85a8da00a25230850d580 updating kinect_laser.launch for driver updates
+69c73e76b8470c71918028b5d73cc9dbadf7b320 Added tag diamondback for changeset 7bcce823ab26
+cdddfc7bbe190d8f58539f9b712ef48fe9f2d758 Added tag turtlebot-0.1.4 for changeset 299c8a293c8e
+07166becdda81a2f4762ec753a21f6c6d38e4bf4 0.1.4
+d386f48d6271d4d813bfcc915dd15d631260b58a skeleton of simplified interface for controlling turtlebot base
+e132f2e8ff111f7511afed63499c09960e28405d experimenting with more minimal bringup file
+0d4a05e7a7ba059e0bee29ab56c47f188ad42e6f adding image_transport_plugins as base dependency of turtlebot for teleoperation apps
+acb58690e3c0285568467ee2ff43dfab72b2015d Mocking in more app stuff for the turtlebot
+c2142797b69680771189729e2c384cab5b7dc2f4 Adding app_manager to bringup
+04e8d8f0a79096d86f90945f67514b6461338359 Added tag diamondback for changeset ff56c0c163ae
+a049cd0c75bf5201fd0b9410a3b5fb58525576bc Added tag turtlebot-0.1.3 for changeset c156420ab6ca
+1cb62b52a4329cede394c7c834185edca840f031 reving to 0.1.3
+3d1bdcde46d080a1d48b9963b9df456360fcc1ed double mutation bug in debugging code
+6a3fc48e7b255ac1ccd41ca6b52d552b933fa752 Added tag diamondback for changeset ab8cfe867fde
+c52a8a3f09b3671b56571f47f1660b148b2ad82c Added tag turtlebot-0.1.2 for changeset e0f250656685
+815fcb76ff9dc7f506406250871176dc033dd0b4 merging
+7b83779066529361cd7200ea4542dba8c20d1d8a fixing revision 0.1.2 0.1.1 was already out
+c46a77b0a08591dcfb0cd1a827dd1dcd96d1f01b Added tag diamondback for changeset 12fe9695c0f0
+dfee68a137c7dc0661f346bbed0a0d5241fcc055 Added tag turtlebot-0.1.1 for changeset e2ac34e73bad
+fc239611fb877e411c66a019c8a6871f1f2eefc5 reving for release
+a93471898b59f5328e41961e071f03f538063942 updating error bounds on gyro
+d33658443960b865c2b686abf5049bd56d5a7d49 typo on parameter names
+18d3ea2ed4c324dd3aaf1b245fe13e39ee7b7131 adding imu/raw and turning off breakers on shutdown
+917b0eda25b3688f9c127865f78a9c69c2c381cf one more catch on laptop exceptions
+a0952b9cbcd23d94bb57fefcbb64b9e2a439e69e increasing gyro averaging period
+26313943003a7dd0a91a75a4905dcaf63128aeb7 fixing laptop battery stats
+122fdea0ea28b6d04d68f0e892dfab40288b0109 exposing angle and linear correction factors for odom
+5088f8b1d13b5d2837c5f1d1acbdca28d3b0b8e5 exposing gyro_scale_correction as a parameter
+076482a1a902e2f1926df01866ff31b74c278e2b changing to update covariance instead of zeroing gyro
+a8ecb4106bea1a39b71e7e10649d01d47b1b0c12 switching to openni_kinect stack name
+77bb3973fcc8b9662f40c951ab94f1687c78fe6b merging
+e168d5de4abb217eb1969a6f0bba46cd251b1e20 simple script to turn on kinect breaker at startup
+1b81dde805b4e6bf5777fd6b974dd5bdfce91ab2 catching more to get clean exit when Ctrl-Cd
+1a774c4e2c4f32bbd10fd4b41dd805acfe8c95d9 adding keyboard teleop and standardizing with joystick
+0a2bb201590d67d73bb1ec06b2245345ab470e91 fixing the build
+af6bf9e6959ece1559c6e3440f0551355253e585 updating stack.xml
+0792c474e87f5d3ee595a5aa2c077c54fc90e1ca updating manifest
+739ac3f840306695f136fb0eb32c093ac081cbdf search and replace urdf
+cfee07be79ed627dcbc36c3915d9296ecd66d8ee merging
+b28c90772204e5e19919bcf7200018f8de90b53a explaining the nameing as turtlebot
+17e906746c9e85349bfad08448f8b930f337fda8 search and replace on urdf
+c48109bbcad09bb111aa0926ce783f91f95efbc9 renaming urdf package to be consistent with the rest of ROS
+7cf16af6881637d5c89aebecb5fe21fec7c262a8 robot_pose_ekf into robot.launch
+a504509f813245a673d1d28d5c099901bd329e8f Added tag diamondback for changeset 0ea30d24edf0
+fbfd9dbc3de0179c8c1241400c56112e5d77e839 Added tag turtlebot-0.1.1 for changeset 3673fe052a7b
+05dd4d583f14a2010a2bb95b70d3e63f8a71b5e2 merging cleanup
+79e6b8a59db4e4b672dafba919b0866a8f9e1265 reving for release
+9a0cc1f8410ddbaa5d381b3b9b9452a62f295b55  updating dox
+a85a2d9b8b7325e490450dcdba4e6af95de34bf3 cleaning up the urdf package
+f97cb75598ffa3f822e950ff636f1fb604eda44f making frame_id match
+49bd4cfdc935a4be17be702bc064d719b4ca7bc0 Added tag diamondback for changeset 377aad7b0e15
+ec2b145b2dc26fc71efbb90e5e47d137dc33db15 Added tag turtlebot-0.1.0 for changeset e9f242f8330f
+12e6d04cfd33d555feb04c262441e861266be249 merging
+97c2d60fb97cda42b026eef5b04707b6c99b723b removing circular dependency
+aebc7cd75431f59187cdade981a50c201cd5e298 fixing stack dependencies
+dea638389b439bdf33b98b1c129fe97203f50135 fixing parameter name
+faf8ce475cf38d9b4e082073798b20268c455cd9 merging urdf changes
+edf08c143f85f1d9cfd22eedafbf7e3dfe671cdc adding base_footprint
+d5c3310f9cb90c7a86e1ccaf90a06d77e19cc11d updating frame names
+2cf4eed1a4b35e7e2c224ee00f57df5b69998117 adding final touches
+850b98036dd85bf494140cb175e3211061a5b8f7 adding new mesh
+11673910795853d7ab8202129ed53f8e37fc20c8 speeding up teleop to full speed
+7bdd081d6e31e5f08ce14ee2e5ecaca76ad35b9a missing depend, and switching to use nodelets completely
+308410dcfaae3b2229c8c3266fd3f131fb8ac79e adding pointcloud_to_laserscan from ni stack here
+e970aef3fe59804b7a02f1c62ccd4e117b0e7687 merging new urdf
+016a1ceb24f879f060320b0a746f9fadda080cee fixing parameters
+94137e64d23cf2989b05f76b77ed493e53b1f550 first pass.. ned to fix the top plate and add the kinect but looks good
+781d2f7043ca14c6ae5ab750708fbe91aaf7c79f added two more layers to the model almost done
+d9d13eaf135c743f664c153840f1641f8af49ab2 adding the next models in the chain
+165752fc1c8684e976cd6617c0afa204bcfa2f0d adding new cool models
+79aff0d032ed26d5ac95f182730ecad7d0d4510d adding create dae
+26539d5c63227d6143cd5a2b068232098c8c7f77 merging
+a8e4ba24038445c976d7edcff6329c0109c8e283 adding a starter urdf
+e3cd21a45a629b3269c5a8ce19bff5817c6f9d0d migrating analyzer definitions into bringup from dashboard to break link
+a7fd8c69ddc7ee605e7d73525245bcaee952daff removing debugging code
+7fb72a03ddf01750754c338f73595517f670031a adding direction to current
+fc2471e55819db1f990d328abab3e5f3085cdbe7 merging
+3f5fe1dc7042a1252551884002ebacb4cf675038 laptop battery status diagnostics
+e9cd43dce0b3a0037007274c969f48aae5a3e5fd removing blacklist
+5ab20f90854d41b531acc675070269497664026d adding .hgignore
+6c9c896cc41200dcff6d665b746ea270ca883f68 remove typo
+e27409f577e8b3d49e1975cf8c826db618599e59 base robot.launch'
+4695de27cb4d5db86fc766584304365e5f505486 teleop launch file
+71a360f279441fd927e7537e59a1dfa22f04a15a adding ignore rules
+c4147e2dfa74ef547f60ff2684090658bd857b4a mostly running with new repos
+b1196e1f2289e9fb42d992ba9bddd8d76a52fa11 fixing typo and frame ids
+b7966f85f46c62d74ce26504716e63a4a8250ddb more file renames movements
+b055f2bb89397a5574e46afe2625d20daff1563b two more renames
+18b9e76c4f816c1c5742e10984ae24143e13e65b one more rename
+b1a382e4ad7281cef55661b02e4fa06335609e71 initial stack files
+acac4820e5b83490339b3ce74149720ec93aad0c global search and replace create -> turtlebot
+72e61dd44fc96f39fda0da17fc749ea6bee2621b initial import of turtlebot_apps
+89552839d49b04e760a0473eff16d1544e79e135 fixing filenames
+66ca864805824b35750b285cc4ac71499945090e global search and replace create -> turtlebot
+3d86a6bda5d750f62e5830db02a65e92e7039ecd initial import from create_robot

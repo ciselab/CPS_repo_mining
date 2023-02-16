@@ -1,0 +1,526 @@
+c89e366ac6f5690db90d7c74352d8452d146f380 update for galactic
+b6ffaecdbf686c1c9e30f1b959e33c24a5599319 fix master ci
+348925fb8adc8261fd69751be67b027326bc643d Merge pull request #725 from ROBOTIS-GIT/develop
+1e86a63d1111dbd56cb15bff53a4a5c912b0d1e7 use github action ci
+fd5f8394003b63b8ff4d2efd493988304a1f3942 prepare for release
+bc309c0e3fd1b84c0768848fe3fbb1c724437297 Merge pull request #691 from ROBOTIS-GIT/develop
+fa62756f20e38518ac53c04a81ba0ff6e4066c92 revise travis
+9d5099bedb3cf069829bfdbfab4e1abc1ec757fa Merge pull request #680 from PinkDraconian/master
+d4e49872d804d61621cbf0564fded2f370c130ca Merge pull request #656 from seanyen/patch-1
+4f3cfe51d98b787fa9397ffb2b2baafaf181608e imu update rate to 0
+0df54b559219e78a06770c301cd4b7c8e4481053 imu update rate to 0
+be6d549085d229eb6eb970f7b0f1ed568bdd0935 imu update rate to 0
+8add6660f411a34336161d77f2a54bb8d27a1ad4 imu update rate to 0
+f9c5fe30024a90058d7303d02f4cc302d6e1d496 imu update rate to 0
+bd0163a4adfb8472e6046bf737355b6a692a572e Update turtlebot3_burger.gazebo.xacro
+2fd439fd5fc380ed18ffe78c7c1b6f8e8d527519 Python2/3 compatibility fix
+ba10294ccb02891cd6af456bd4662e77813e3245 Merge pull request #644 from ROBOTIS-GIT/develop
+4d3411b83ec64a738a56bd6673f128d97ccac82f update README
+da0dd361c7b455ba3dc8d7304c70ab06276b909a update travis
+504a0b724d0cd75528d4aa8226da01867a065851 Merge branch 'develop' of https://github.com/ROBOTIS-GIT/turtlebot3 into develop
+005eecb2f43df3f8168ab6e6411c2701d541657e prepare to release
+8d78d1ea7cd6f3e194f2932b9a652df752c534c7 Merge pull request #612 from ROBOTIS-GIT/create_lint
+67e54e9992c75586eb5d33c264cd0389dc143b35 Create lint.yml
+8f294229e5f974a7ee572f97363022e2df73a99c Merge pull request #588 from rkoyama1623/patch-1
+516996c7c271d7484267b950c95b2ae7a3fbdc18 Merge pull request #589 from ROBOTIS-GIT/develop
+e521df9cff26f152814953fdf284c27fcc927336 apply #587
+607ee5b72e28fbfbcd3328370baf41ac9ea06682 fix link to bag fie
+dab96bed46491e13bb61f0b51b467711883cec80 Merge pull request #584 from ROBOTIS-GIT/develop
+1a3e7191a1d280883026531a0cb72be8f64e4ef8 Merge pull request #577 from artivis/master
+bb0258f7f0cb58d36f8bce8bc590b3ebd147cebc simplified modeling files
+bafe362f40c42c1cefcaab183517d7343c40a909 mv gmapping param to yaml file
+a8e7647d809497612ff82b564a55ba17c5b5e2a3 rm useless param
+a9101c9c4b56920c2c551c0f036a673c1857925e Merge pull request #570 from ROBOTIS-GIT/develop
+35feb4f0f15496e9ac0ca02ab0c59702081c5cb6 add file turtlebot3 burger for autorace 2020
+5744eab1c3962c64eb754203180c95ae6858c043 Merge pull request #560 from ROBOTIS-GIT/develop
+07eec7d44026167b33beeee485ada7dbb2faa5e6 updated urdf files
+ad2ebc2ad6b0c9f558e0f8820c9e41c4e306c153 Merge pull request #559 from ROBOTIS-GIT/develop
+ee350b65181679a0a4ad817d202aa2862a639a67 updated urdf files
+f5382305ba43b8ab620750bd7ab5120429453082 Merge pull request #554 from ROBOTIS-GIT/develop
+9e527f8e1c640ea40c89e194cb1cd29f3e68a572 Merge pull request #553 from ROBOTIS-GIT/melodic-devel
+fb2387eca63b91b4e2e8c8efe5de6005e40356d6 Merge branch 'develop' of https://github.com/ROBOTIS-GIT/turtlebot3 into develop
+5f64ce2ddaa0c657c4c75a8682c41ee28d7f7ffc version update
+8ab0fd51ba74092bcb6d853e70560564f5cab090 Merge pull request #552 from ROBOTIS-GIT/develop
+96bdcef51e11689deeb6413b91866a1321eaedc0 Merge branch 'develop' of https://github.com/ROBOTIS-GIT/turtlebot3 into develop
+68538fb0a2c8a7a2c2ddec4eb5fba7640650157e added temporary inertia data in urdf file
+84d9b4d45283f8b0829c3660f3aeae279a7e3446 Merge pull request #550 from ROBOTIS-GIT/master
+166fd24c387d86891f5dcc654a699b8462beb749 update changelogs
+ee7cff080e03bd61137c5992d77ef7a30099ba33 Merge pull request #551 from ROBOTIS-GIT/kinetic-devel
+1b283fccdc51d37fe4c65c586e09a6c8b41550a1 update changelogs
+90e06ae89ce4c27b5ad3ddefc6896ea17ad86df5 update changelogs
+937f0d09b5f6e4ea26b11550eba6810b41c92468 Revert "python 2 & 3 compatibility update #542"
+4bbefc41a7f316dba2ad6a7e43373eb0cb23439e Merge pull request #549 from ROBOTIS-GIT/master
+9f7a20fac2ae5a2f5ce735d48ce68ee9659b1f44 Merge pull request #548 from ROBOTIS-GIT/develop
+cff226587a2f4ad432201e0e0688062601cdcdfc CHANGELOG, package version update
+b5c13c9579fd49374b6e5f0a7eaa95817c1ca707 slam for TurtleBot3 Manipulation
+40f11e4e7e71543096b3b52d964f2f4f42c831f0 python 2 & 3 compatibility update #542
+52021c3b48d99eca6a02fb92f5419f6138b65300 Merge pull request #541 from ROBOTIS-GIT/develop
+f81798beae513241084e27c42de582a6d88ff30f Updated tb3 for omx urdf files
+4df96786d2bb30aac5ac9b7f23a103c2f5eb0590 Merge pull request #526 from ROBOTIS-GIT/hotfix
+13e9d2ee5357c18173a5bbadf705254b96e87f30 hotfix for #524
+4875d85c02d061d50f991b6093d4976cb04a71a5 Merge pull request #493 from acxz/teleop-python-3
+ddca617172a3549a3077682cd2cf7dc377616e01 Add print compatibility with python 2 & 3
+bde59d35d5c425243e72d2795013be58d62dc531 Updated the CHANGELOG and version to release binary packages
+1c6665b61cfd7dc202620b6fdf33f3f67e35ac06 Merge pull request #477 from ROBOTIS-GIT/master
+c42960067c10f3a273a5b497f6f89ca2ce03542c Merge pull request #476 from ROBOTIS-GIT/master
+be8b6fdcae0221dd650be4b80b8a9f2e80a079de Merge pull request #475 from ROBOTIS-GIT/develop
+6900a6c1ade1cc678e30deb6dfb57094f0f87ba7 Updated the CHANGELOG and version to release binary packages
+60e169410e822547f7552a14078996e9f1ccd9cd Added CI status for ROS 2
+695483d09a84b95cab0b51b9716e004faa467bf5 Added some questions for ROS 2
+5818b3518ff1d9639ca3d22b50bd65fc90e38e36 Deleted unused line
+9e2c0b74ddf54ea9e5f51a65230d1d834b6ef232 Merge pull request #474 from ROBOTIS-GIT/master
+b6e1dc7774911ee1c81348ad9bc3bd662599776a Merge pull request #473 from ROBOTIS-GIT/kinetic-devel
+68def659ae37fe31e113a0a00fc39634fd8eb8c0 Deleted test code
+ab6551de3c7c2a4811381bc0e6ed362661a847fd Merge pull request #468 from ROBOTIS-GIT/master
+d3cdcc6647812ae9a83f05e626cdae322923ac84 Merge pull request #436 from Pallav1299/text_edit
+2aec404db42b4cd52c9e1fadaefd43744863aa9e Textual correction in comments
+040ae08023d0f63a5a83f3dc665e96527811e060 Merge pull request #419 from ROBOTIS-GIT/develop
+db7e3988e78acfcc68bd5f3735adf4e8de71dd55 Merge remote-tracking branch 'remotes/origin/master' into develop
+97410bc655873b936cd1267f195abce814e3c12f Merge pull request #415 from atinfinity/fixed-dwa_local_planner_params
+c1180ebc2576850c64f1bc74917ea0993baf200e fixed a bug for release version
+36166ef18615f23837362970059a11c664b97230 fixed dwa_local_planner_params
+33b726b399eba5f2c12011d588e654dd036bb916 Merge pull request #402 from ROBOTIS-GIT/develop
+69b4563d754ad539d2b2c71fe6f968b3419fb3fb delete '/' to sync tf2
+a45139352fcba0a485148feccf8831f1cb4df11d Merge pull request #389 from ROBOTIS-GIT/pr-337
+8afe27c1e51a73415fc5a913377633db78c0dcf3 Merge pull request #337 from ipa-jfh/patch-1
+cf7d872eb10d020c72c132139338cb8d66439649 modified turtlebot3_model launch
+73bba8eb1e5348d30905e0e121b2e809e84fa88d Merge pull request #380 from ROBOTIS-GIT/master
+c39608d8a0b524d3ef4bb49a5769521da808b660 Merge pull request #379 from ROBOTIS-GIT/master
+4da5676fab45703e1ee5ac8b675d7f447c13489f Merge pull request #378 from ROBOTIS-GIT/develop
+41cc23e361cb7c556a91b2f157527f2a003ef469 updated travis setting for melodic
+3190148b9bbe08f66af59ac2fbe2c7a2cba03d61 updated the CHANGELOG and version to release binary packages
+615def9e1e8f8ad8fe8a5012c8338945c34555b0 Merge pull request #374 from ROBOTIS-GIT/pr-370
+98fd419b1fff5fb22d2190bbceea5573c447613e Merge pull request #373 from eavelardev/patch-3
+922d46b49eb7c790c42cb3a11de6cba6414bd861 change math.ceil() operation
+67193fe05a5908d5e7a07cdbdb35470da94157c3 fixed TypeError integers
+6ee169a14ce1aceb549554353cd9ab828084e63b fix read of scanned samples when there isn't 360
+0aa0e655ffc28b7411dbb01b8b936688d3b58bc9 Merge pull request #358 from seanyen-msft/win32_teleop_fix
+f09990f821c9c50665b1daf22c3645ce69c4a302 add windows port.
+23cfc5746953e3b0b199683936c9060859d888f5 Merge pull request #348 from linzhibo/patch-1
+4e481e48f96ddac8a529686611d83a4191f5fff9 Merge pull request #342 from SteveMacenski/patch-1
+4d9bbd16fd51c33ed781bf5977ad85640dd46478 Update map.yaml
+e3e0a5eb2e87b9961ec4595e5b0e794b80466b14 rosdep key is incorrect
+5499e8ed01f79c49d709e53870a2fe312f5c649d Merge pull request #339 from yoshimalucky/update-launch-files
+6746e80188f98fe8116d60131e207b715ff3e7ed Added an additional argument move_forward_only to prohibit backward locomotion in navigation.
+63e94ce64e7eff481b7dc48808724606835a52f0 Add test arg to turtlebot3_model.launch
+cfbe45ddffb6082d077ea4b1fafed0a0866f1f98 Merge pull request #280 from oiz5201618/master
+9a79b9f1543844ae748d0e6a08dc149fef4e8925 Fix typo The correct parameter name in dwa_local_planner is "vth_samples".
+65c19f59e7abe80ac06d4928671d43e1cc44011c Merge pull request #265 from ROBOTIS-GIT/master
+467c76bc4fa2e34162f57107388839d82d3bcc0e Merge pull request #264 from ROBOTIS-GIT/develop
+33c55db9a080b899275dac1560918baff0c2d6fb updated the CHANGELOG and version to release binary packages
+5257aa71582f10f4bf9f6023c9bc0e7fcbf7221a update warn msg
+adbe83c323a6c7c7ad4a896344d526da0e07c244 delete debug code
+9ffc924aff659fe9c9d896323216968d8dc3be83 update split func
+b548e0e5b73388cfa753ce22defa58066c95ffb4 add split func
+8f8c088ceb8e975d70338b2a61b4742306324492 update get firmware version
+b468e8c88be0ea83ac152e43b10b52ccd5b49c56 add debug code
+e45443cbbaee8914bff2a2bea12acefb31966eb6 delete ros log warn
+351e91441fab27e62be8c80ed9bb6361967b1ed2 update version check func
+f70f0cbcd8af3d518a53861aa61c05d28b6df2b7 modified version check function
+66bd595f512d9cad0a442ecd49836e9c02f0f90c updated the CHANGELOG and version to release binary packages
+c1853571afe2295bad691f8ee3dee86c0a51c67c added ci badge for melodic
+71bcfc83739b7cfc6aa2c8a5e996a83364c603a1 updated issue template
+235253753fed77a59d056ed8f810d5ddedb2aafd added melodic on ubuntu and debian
+e78b8edce9702e292dec65a5ca549a774512bd67 amended base_scan update_rate and add param on diff_drive
+cf1b02779a3fa99d38b8d16c6e700cd5cb279e69 added odometrySource
+f99f8807616ad1bec6e18c7a1927edd384d0d50b Merge pull request #258 from SHTseng/master
+877ea055c17b315890ac0faff46762c2ad2fe13d Corret the laser scanner update_rate in the gazebo xacro files
+58e0b47afcef7c97e4ce52e5e80108460d1a3c1f Merge pull request #252 from ROBOTIS-GIT/master
+75b685241f9b7e448ecdbf107296d2de08f842e2 Merge pull request #251 from ROBOTIS-GIT/develop
+ce3205d8b6822cbeabd046d083048908f19cf063 change arg name
+fdad8efa9a2284f853871a766821cd78ee1ffb3e add arguments
+324f826dd27f93727f54c80f70758004cfafc1d1 update firmware version from 1.2.0 to 1.2.1
+79560d9cb165222c9c40b72bfaeb59026d98a747 add arguments
+de98b27d3197a92fe4e199c011a377c30f9ffedd modified arguments
+c2617ab7c16f0257cc05f25d0caa023297b5302e Merge branch 'develop' of github.com:ROBOTIS-GIT/turtlebot3 into develop
+eaea4eb2190d22c0a019073f9d867b7ef6bd0ee3 add argument
+7ac6ad2011ee0b94191d12cfbca30d99cddfc820 changed camera topic name
+04d08bc51d9da560165f36d028b07d477b0607f5 modified topic name
+7007e670c414ac3ed5c6d4c5047f5d4b572f89c1 change arg name
+57456f33d15f9fb289791412282d831acb6500b7 delete ns
+27f42b14443cc240edb97ea6a67b0b3afcfaf6ba change arg name
+18ccca7931cf4b08b8ff5c4aad95e9689e3cc5b6 update arg
+7aeffdac6d934ef5eb1d8394d9841f97a7b585b9 add argument about namespace
+88d59c2dba1dfd864bdcc4a44fe3081bedf52201 add default value
+02ebd947da1ea34790587acfc19c35fae28c9a89 amended origin of collision in waffle URDF
+e44abe434e4c2d1074568fee087ed5352ae6155d Merge pull request #227 from eavelardev/patch-1
+629cd81f2d4cef92f09d38f634567d10c17ffad9 implement get_scan function
+904647137338008a1215f86de1da80448c96c9d4 delete unused get_scan function
+c2e272faf915e6cb416d50fa16ef971c6f402d9a Merge pull request #222 from ROBOTIS-GIT/kinetic-devel
+9f6db49609345609e3ba9b553e4fb6f2a4ff19b8 updated the CHANGELOG and version to release binary packages
+fbe154f0c67c066c89d6268ed2d5d2f5d85a7ee9 updated the CHANGELOG and version to release binary packages
+aac5d338d5ae7e5c18ffcfdb31c56d93c99b5c47 updated the CHANGELOG and version to release binary packages
+86162a7dded8259a4ddd744313b015cf624ad590 Merge pull request #220 from ROBOTIS-GIT/master
+3ac5cf1b6102c131d38b5616abf29015bb75918d Merge pull request #219 from ROBOTIS-GIT/develop
+a02be625b693aea958fd2127de7653b591554f7a update the parameters of Hector mapping
+8043c927f3bfae554d56808678971d521bf506ea update the parameters of Hector mapping
+438d6ae877eb0f05b2129e77a1e1646d254e781d Merge pull request #215 from ROBOTIS-GIT/develop
+c48dd332808174ea0d183b367a325dc3817dbb5b fixed amcl.launch name
+e3df82cd0d058633f2fa688fa8272e586169cc33 Merge pull request #212 from ROBOTIS-GIT/develop
+153c57d5472838d103cf583a1e82d894ab5ecd13 remove launch server
+d71f611ee2ffbe23b659e12c131610c55222e378 added nodes
+c5854daa1e64b59365df8f39a881ce017e523406 added scrpits
+9d5185563ef97e1e8443f8651a325bace2401f12 update
+65abef4c6a2b3b6b3deff09104df8acd30292632 delete unused space
+958e8f1905b0c07acfb4d7e231fc53904b0a4810 add marker_server in catkin_install_python
+605ac352ab6ae11f18305508ed29516a34f4bdf0 remove scripts
+63fdec9ab537e1a2870f297e13866cd807272eff modified nodes
+c84143399536119ed7d948fe76cfee6c0eb5e747 Merge branch 'develop' of https://github.com/ROBOTIS-GIT/turtlebot3 into develop
+137d47c9e24657d875f99395bdf36159cf19279a update firmware version
+7cfd8bf4c9b2c7ad1147d6a9b8c53565ccdef107 modified sensor launch
+697fc598807caf974d24196444a78f140e4e9aaf added sensor examples
+a666e4803508566379e4716936ababc3771db3f8 update param
+c20d38c61ce7141449ce63bd50d3e44429808b4a update
+b682e7b358a31bb3e675da2891dd4ed7839ed67e update param
+539af861df817d11e1a764a57ea438a03920296d Merge pull request #211 from FurqanHabibi/fix_global_topic_name
+6b14129dd292cf1d2b6eaf225a03d2654c9a01ed Merge branch 'develop' into fix_global_topic_name
+6f84d9cf86f8a24c60ed920dd29b74a3658a6f63 convert more global name to relative name
+fb46638818bed06eff0cfcb7f8153dac0d8173f2 convert global name to relative name
+f3e37ddf9da6934f2c0822b55e8f585026f0e88b Merge branch 'develop' of https://github.com/ROBOTIS-GIT/turtlebot3 into develop
+cd3fb19745744ecb0d5bef0fdeb623740ac853bd change robot name
+00ab30025a9e993006b96a64a69bcdceebe9d10d update range of lidar
+8a9e4a0c5fe376883c8bee8efa9637af8f7e9a1b added burger model
+5f9335865fc0cfa3ecbe8c6ea91c45cb99ef256f changed  tracking_frame to imu_link for real  and made fake for gazebo
+9480d25abb02228ebe500f00370ce4554f04e839 modified the size of laser scan
+287ceefeb2012869eae44bfca78bad6ee84ba0cc added frameName for imu on gazebo (however, there is no effect.)
+8b9156cefcd092f5ccd25447cef9150cd30cc0ef modified comment
+59dc5234bae8d927e430760dee564e187f55377f add new file
+d1296cb43cc532679c29807d6056137751269f84 add check version variable
+742d24f73f85c49c9cde0880f8e8cf4b4fadf3ac change name
+aff566b8f168b2868dec87c4987c7a947126b35b change limit vel
+c4a97705cefb88864ef43c93b3cbfe9e266b0375 delete count version info msg
+f14901db9f2880b4f3e10f12d0d5f612f1a2f640 add variable to check version only once
+226a5d071ae096475a4e089ed4d4ebb99bc33b0f Merge pull request #202 from ROBOTIS-GIT/feature-cartographer
+05145d801f8fbf58e17d5fd1f238ad4a0e7214ac modified the rviz and navigation launch files for sync with slam
+1a26e4b03642ae5f8655d5d5e7beebbd4b54f931 modified the rviz files for various kinds of slam methods
+ad528b1a339dcaeb017ba988b95f625c03a1c5c3 modified the launch files for slam methods
+0f9844a9b2f77d8a2fadcaaf21d76f4ad9b03ca6 added selection options for SLAMs
+dfe29b5b681ccd03e568ec24d45c835199d7b2c2 update for cartographer
+966ef2d589c5a97c93ce086dbf2a0ebe62e8ea37 added karto slam
+06c7aff21e0ff3950a6b4dc9ae66bcbe1c4db085 added hector mapping
+171270c979560f3210e0023dd3b1d5be7bc1953d added frontier_exploration
+7e69ac3ae556b18b9a906c8428549d6cc6e3dd04 added cartographer
+b0492a461fba1289f21de48acf0adfcef191daa8 Update ISSUE_TEMPLATE.md
+8620d60fb1914899310b3c0ca7ea9916100ecd7f Create ISSUE_TEMPLATE.md
+ab4733048e23451f9b2342d20ee8b21146703ead Merge pull request #200 from ROBOTIS-GIT/develop
+0f2328cd8d1fcba6e97e17a2a23a8967da2cec7b delete warning
+b592784de7b492cf2f08686cb29b6b9e0e20af9b update scan param
+514ad528e1834d4c50d46ba839ef9544dec409ee update scan param
+d2e90f9e765da99808b000ce9868958205a491e9 delete
+fb1f6ede646a91fb61b2340b24e7700558399a74 update file
+7039de4bdc6236d288ed46e54d9a1de6af4f5384 modified  plugin param
+3ce3a754438043dc221d5beb6178a7b29fa9b6f8 update param after experiments
+ff8e2ced6f67e25da2be2706efa8e16bbe829d40 change color
+8f3ecbd62aa7f34c9fa7b9296c3e6d5b40e806fb update param
+b7e491de24e6c9cfca9ae50b3cc5450ac823daaa modified rosparam
+01beb9347f8d5e0d91582608bc15027c3e376670 velocity and acc and frequency param amended
+8db5a484cf4f6224cd1a268d8325f62df065fd35 edit obstacle range and inflation radius
+b43b62ce2260caa01802d2f9e4358727ad9daed2 edit velocity and bias
+5fcdb33c709c56cab2580329d0debebb937e0569 edit footprint size
+3c7ffca48b93e06d7ea0eed9d9c9381d1a4d8517 control frequency and inflation radius amended
+a429e266e491418b118efd0efde62a660c1be9cb add const value
+bb929df71f2ace82275ea28d1e95e894a2186f13 add function to check angular velocity
+25b682ba3e4c61c709837ed60b00732654dfffc6 Change color
+1e8fa2ef49856678d4cb30aee6f27256fe129b99 modifiy lidar position
+d0fc0a8ffab445cd2482072595c7a3d448b194c7 modify slip bug
+4decba26327a1b6f1c8bb8a85a8c96dbdf234911 modifiy camera position and fixed slip bug
+d9d2d2c6126213d8a351d8eb5ae9201a8e672794 add model
+a2e876b3f3b6c5034d62fb4017543cba939a4bbe add constrain to limit velocity
+34f95ab48e927782a2f5f52cc9dc01974c998de5 edit lidar collision param
+bff00d77b06158db783cbadacd1c88cb8bbfe5ff add lidar
+a2f781b6adda78543f99c818455e80bce7be6b9b edit collision
+1d6bc4c62a774c0c34324c0e01f7371113b33b46 fixed mu1, mu2 param
+5a7d0c32f81542e463f709a1e30661be636088cf fixed  collision param
+efcaedaf6c3d6988776632b8319ed42e8ec954ff add inertial param
+ed9787d4333f79601c0e83600ca2138ccb92516c add wheel inertia tensor
+a8222d3a2c2702d44caf0b453fb924c387abf976 update param
+87c34b4c07cb6159ce7e4a813e3c4df4a5af9bcf update param
+49fdb4c48fa7a869b544c682d4703ccf901cd665 modified initial value
+46273777af6e1d55bc4fde055b5d187951220b35 make profile function
+40f84341d7ca6861f3fdc7c794d1d62095877076 modified collision models
+4a458c08575ed50605d8fcf04a18d113eb394c51 add gazebo params
+76ab4240eac7ae4877f30d51e8dbe51c04387d77 delete property
+3d31ae8a613d4cc415e649321ca8d8f1807cf64e modified camera param
+6cf72cf29167079e85abbb85d7e5c378cc8e1cfc mu1 param amended
+4fccdda7fe88c495bc56b8eeeb3f5e735f974497 modified camera setup
+412dd8a974abee89b91967a409756f07598f5241 edit updateRate
+6d8d4766a45ca40c49d0a4eeb9512c6ec8565d0b delete focal lengh param
+8fa016660b2886e91375af3dab78fbac534e0033 delete warn msg
+d447e7540c70d75e5ac30ff79d03dfde04ad688f Update .travis.yml
+d0e2f62201b20d8bafd42fea3769bbbe08a69bcc Update README.md
+4bf14ad86af54087dc582a9fbfe50be195c403e8 Update README.md
+8c6a01e16c329782e31f2bb511e30cc4fa8ccfbf add naked gazebo
+64b1cca5ae665885f4b205bf69905a1cf1809157 bug fixed
+adb6edcf40c2f3f5202cc7d0b4031925b25bb66c update stl file
+2ef2173e5bed460c9986ed1dce0edf7324afa896 add limit velocity msg
+1d91f8ffcdddbdba04b0a8a2135023e0c8925137 update gazebo param
+687c714c707adf7131e37ef45c17d041c09c3a70 add waffe_pi_naked
+bc9d20d36490acad49d6927cf75a345248d8b4ba delete base_scan tag and add imu tag
+17a5aad4270a5605728b8f14eee47e0f71a56c7f modified xacro param
+e3c52ef6cdb0ed86a21072800607f84ff8220682 * changes: turtlebot3_rpicamera.yaml gets camera_info_url value from the initialized calibration file
+b5a2d6818f091755ccb756a72f2ed57e3d63fb03 Merge pull request #156 from ROBOTIS-GIT/develop
+287912cc9e7679cef35e15f917ae50c250a7382c update firmware version
+85d17ad9473d81edab997c3d2aa942e9249ade79 Merge pull request #155 from ROBOTIS-GIT/develop
+588ff730f38b3c93ef9eeca25438ea0239bdb84b change waffle_pi stl
+7cc3012c487678e859043f5c1d0600f5a26585a7 Merge pull request #154 from ROBOTIS-GIT/master
+ab2cbc0ea19480116c58de86e7fecbd4b465c511 Merge pull request #153 from ROBOTIS-GIT/kinetic-devel
+3feab6056d2cc1855a9fc1b9d89a78e5139a5905 updated the CHANGELOG and version to release binary packages
+edfe09a07454a3b6922249716c0882002ada6baf updated the CHANGELOG and version to release binary packages
+d7fbb41492a0612880ad73b3493ff11437b2728f refactoring for release
+9721b992449c5a5fe5551875ab7ebd9ca9aba537 Merge pull request #150 from ROBOTIS-GIT/develop
+ae5f12bcd1426f26e6cabba8a11c5eb4ffbeecaf update firmware version(1.1.1)
+9560e9dc85c9b5063951ce10b5b6a4c855cf63e8 Merge pull request #148 from ROBOTIS-GIT/master
+1b92847aef44612130d3bbe988267a3b02f93332 Merge pull request #147 from ROBOTIS-GIT/kinetic-devel
+eb64f182c3bab23c85237bf66388142d95380e03 updated the CHANGELOG and version to release binary packages
+ee2ed6f1b50102215706105bcb233218711b28f2 Merge pull request #146 from ROBOTIS-GIT/kinetic-devel
+7eed225d0af6bac6f5a70288b52c7bfe523d57af updated the CHANGELOG and version to release binary packages
+3647fc37e410fc55c9dacd737b15855b0038822d updated the CHANGELOG and version to release binary packages
+69c3aaa51266b393a65b4378e124eddd1fcd8d49 refactoring
+7356f0e94e3d055054604de0e4407776154a1d9a Merge pull request #145 from ROBOTIS-GIT/kinetic-devel
+4744f6dd3ec3200a6eb6b4c82e299a2671706cf1 refactoring
+5b18ba5bd3025d88599ca0a6601534d4eb18ce8f refactoring
+bda72785bb244548ad7fc2296d07ce22bea6eeb5 remove the large bag file and added download command from other site
+afbaa3d0539a95a174f2b14a190d7fb6f0a19283 modified the travis setting for testing
+411dfdaf6ec479a0755c6c0f0bd31c685449bc36 modified the travis setting for testing
+09ce1ba18b732b57d31dcc2940bb6d4fdc53c943 Merge pull request #144 from ROBOTIS-GIT/master
+ca035461d6b4c4534310f54147a1d258ff28d6c3 Merge pull request #143 from ROBOTIS-GIT/develop
+074e7454c58e8cc073b953171f6ff3a476fcf7e2 modified the README file
+7146a3c17e191e9eff51d3eb1ed42558c92cba2b modified topic in server.py
+8e5e8c992c3ede08c99ce857a8cdec0e984c1425 Merge pull request #141 from ROBOTIS-GIT/develop
+4b31e270f476e533be5eef83d32fae7714d6940c update fw version
+2d41748c1ff3f74aac011bea05e4e29a3597f101 gazebo plugin topic amended
+ad2bcbf64e3419524701385413d25e149407026c update firmware version
+00ad0f53553d7e039df2ba87298b0d2aa281415d Create .travis.yml
+afd219b42faf08337edf77526e7089cc0eb6059e Merge pull request #136 from ROBOTIS-GIT/develop
+50afd40b4385b81f935e50a4b7811c7ba620a582 modified param config
+00d803729bd1d72efd93ba693496023287b3c2b8 Merge pull request #133 from ROBOTIS-GIT/develop
+0515816d8dc264034bd24c77e1742cb530e54c07 merge example package
+c8f9a4161563743a7394ae431c49d9149055b270 turtlebot3_rpicamera.launch added
+a9b2ef92d0ce2f87dea12860c152d35f31ca6db6 Merge pull request #123 from ROBOTIS-GIT/develop
+83858da06ba5d2995f09fb1a9c13a8260bac6401 Merge branch 'master' into develop
+7a64f758c7c9f5b912ec7613fb5e79385c081959 Merge pull request #122 from kijongGil/master
+24728bc10c25d4d198bb8fae8793c6b26a451dc3 update
+9f9c2a4ba389780f36a477c0127db48fe2658dc6 add
+71fa0105610141d8cde1e69325bfe46a45313c6f Merge pull request #1 from ROBOTIS-GIT/develop
+858b12c092d4e4af3861bb19fd8159b8218e99ca Merge pull request #121 from ROBOTIS-GIT/develop
+1c35c00c61e9a0905d79efce2c085f9a6e807656 Merge pull request #120 from ROBOTIS-GIT/revert-119-master
+907c143c699c2c4bc98793cb5f099f96d6d8c64b Revert "modified lisence"
+c45c82784192c2df90521f62c2e3cbcb6ce6c17d Merge pull request #119 from kijongGil/master
+bf524208d22c09596eac044c7afb3750222e2a52 modified lisence
+7f839deabb6aedd90579c76151018e619b2d306b Merge pull request #117 from ROBOTIS-GIT/develop
+2aa43322af303cdf7fc2a264f2fe1a3c92cbdcb1 edit firmware version
+981a052579327d97a84b831f3a021803664f4748 Merge pull request #116 from kijongGil/master
+c60c6b3c6883b48767e5c6ccaa5b5b47f933d05d added basic operate
+d462e1557dbe16cec975763cdf25ee70818c9104 add example
+8b497084e8f2d9d65fc99920ce3a0d7d2c413beb add waffle pi
+68899064ce3fe9ea4b49a40c4ea88a1f04d9b6b8 Merge pull request #107 from ROBOTIS-GIT/develop
+7a7cd2036eb8e8a7eafe55295a97ea84026880c6 modified version check
+78b389ab221e46e2e36a80364d0226d7418d3b84 Merge pull request #105 from ROBOTIS-GIT/develop
+f6491068251eaa6ef810e08f64a3f8bb976bfb4a add license
+cb8b1a95847304f6bd20cb30f05d9f93096da190 add verion check function
+1096773ed42b6b8f593af4fc5dfc2e90916533c7 add diagnostics node
+16a3ba3ec088919fd6738c7a0ca1f6f28d6730d9 delete rules
+85def5ee4343087fdd36d4a24888a63d2ce4ddab add scripts for reload rules
+16b112320b0da1fdd7e8d4fd3993aa46a1c8c959 add waffle_pi urdf and gazebo
+d743de3a275d51a08425280077868e73d0bb4953 update waffle_pi
+e153011b8208f7122aa08df47b804492b68a4fad modified r200 tf tree
+d9c62ceb8c0249e96c907657a2d58832ce7d2621 Merge pull request #76 from ROBOTIS-GIT/develop
+d7a59ccb04745b5a82a95c8c10943f90145687f0 modified gazebo imu link
+798522388ea72d8fcdd46a5eb4816baa85505235 Merge pull request #75 from ROBOTIS-GIT/master
+7e669a8affa1bdfb3f7dee8de4c9039447b02dd9 Merge pull request #74 from ROBOTIS-GIT/kinetic-devel
+90af3d2d5e0877a9339450260a056f9737fa77de updated the CHANGELOG and version to release binary packages
+091418f18ffde7498eed51dd693dc759bc946562 Merge pull request #73 from ROBOTIS-GIT/master
+cbab99bca1a767b1b9fdbd1924cbf1e9b26533a1 Merge pull request #72 from ROBOTIS-GIT/develop
+dcc7428365de83a53d286c592fcfab72f2c02cdc modified model
+4792b1f499def5178af2b53c21622db8dc1233d4 update model.launch
+32a9c44eba2b43232afc010102955766850539df Merge pull request #71 from ROBOTIS-GIT/master
+a417cf4f0533aad4beea7b1800ade6ad0069a79f Merge pull request #67 from allenh1/fix-xacro-deprecation
+8fee29372759fdf4f9d36ffb3a4e1c1567e00dc5 Merge pull request #70 from allenh1/fix-run-depend
+9f9b80d9976b08d46c324e030be431381196a3fc Fixed typo
+3b5a5110825aa5ea0e54b3bf8a4be40da08167bc Fix xacro.py deprecation.
+9135354975ae8336cfddf4c571d05d03b3f34a15 Merge pull request #65 from ROBOTIS-GIT/develop
+93473a73a7f16e8f8d7039138b632723beeebc17 update imu link
+f0ab39e0a29d3f5dc52a816b8d327af01d0101b6 modify file location
+dcb0c9e003035789a8b53b6c81823268b5614c2c Merge pull request #63 from ROBOTIS-GIT/develop
+839ede7a7190f802c9ff0fa193a67cdc62bedb30 update gazebo config
+1e56b883e653d8620fb96ebc3dd4c0806f6af476 update gazebo config
+9ada3027dd4ad49b8a9762204a6a1f8498c5fd69 Merge pull request #62 from ROBOTIS-GIT/kinetic-devel
+0079ee2a2700f28564271478c394d9602fb6ed28 updated the CHANGELOG and Version to release binary packages
+b8cb5935e3e28b7ca2e7440d8ccf5181d9b746d8 Merge pull request #61 from ROBOTIS-GIT/master
+79ba48c8cfa75da042c5d4048546042f28f92bc3 update nav param
+6eb9ef497966c08c53281ab1be048c8666243ce7 update slam param
+68e3a3e8821639493c479cbf6111445d272fd918 Merge pull request #60 from ROBOTIS-GIT/develop
+764a7755f4005ab16cff2e8fce18eae909b70549 modified bag and map files
+9053a346feafc981fb6d4aad541fadd67620a762 changed the node name from hlds_laser_publisher to turtlebot3_lds
+ced639688e6941eb0d909986d4d03399457b6ad3 add SLAM bag files
+36b116cbe8e3dbe517d2d45c1fe4bf3ec50f306e Merge pull request #59 from ROBOTIS-GIT/develop
+538bcc49660ed2a6df69b9a0cbc82a990dd18a46 update turtlebot3 waffle URDF
+6b8089827171569277a8790e691664458a508578 update URDF
+4e965847eeff08e8764abc69a3dc18a562d2add3 Merge pull request #58 from ROBOTIS-GIT/kinetic-devel
+0e28c3b93a761c7a7183c1c1bddd7568abb21a7e version update (0.1.4)
+ebde18129e0ef39b5e6591933acf1ae8b8c163fb version update (0.1.4)
+08ec1c90bc77c708369af0518b7c90339f20c3bb Merge pull request #57 from ROBOTIS-GIT/master
+97c19893121784898f6135107aeca98c5da789b7 Merge pull request #55 from ROBOTIS-GIT/develop
+4e51b77a1d6fa7baf9b88a38e31b884c46a9cd7a modified launch file name
+4ee7f58d7000697774d8b00b47f62bf6079bd462 add teleop package
+98caa725382e5300bbfd73464d3d13bce897c7d2 Merge pull request #54 from ROBOTIS-GIT/develop
+73e9947076e3b7c49f21cbbe8fe3583bb3e97428 add rules file and realsense launch file
+91400d42292ba899ab87265ef3dd1700e7b59687 modified launch file name
+0f21d8eb9774c520c436d1122757683d7812e4b9 modify bringup launch file
+a12748d29fdcfe73b2534983273e9932d46bed4e Merge pull request #53 from ROBOTIS-GIT/master
+c23cdd7721187a85a6a0a0e7fa8484a007331188 Merge pull request #52 from ROBOTIS-GIT/kinetic-devel
+2b747a797d6a8ce04502105d87d8a20791fb7b77 Version Update (0.1.3)
+7fc071bf364daa25dbb9420b3781c55970ad73e2 Merge pull request #51 from ROBOTIS-GIT/kinetic-devel
+d5ae3da2df473aa299cd81745262c39789e2abf7 Version Update (0.1.3)
+a29b938c816d009efc2908b2765432e01439e76b Merge pull request #50 from ROBOTIS-GIT/master
+513fdec9725d8048b9c523ea074793321abd8f17 Detached turtlebot3_msgs package from turtlebot3 package for uploading to rosdistro
+503b9001b5354de88a8a27f9f8484e0a377e4d4e Merge pull request #49 from ROBOTIS-GIT/develop
+f778da92fe55cb831d4ca7faecd8d26c4b6085f4 update nav param
+97b1d3068dee47c8ad984dd3e702d9a9a867b890 Merge pull request #48 from ROBOTIS-GIT/develop
+40459b627bdc285a42ef3d46e7f8a95b9aaf8afc update waffle nav param
+c073bb98b97ddd977fe1dbda0070aa4cfe33249f update nav param
+ccb6c8b5c41ba957eddc3ef5c7c9183d78ce2439 update slam param
+b649d567a4c0dd7b34e72551a9d554f2881d5ba7 update nav param
+f21100d196433c617b81759f7d41fddfc6a06ba5 update navigation param
+4e1a232033b5656dd86d9a211bebda75c3d3ee14 Merge pull request #47 from ROBOTIS-GIT/develop
+e65753b2c1da728f74e9f11fa3e3c24c27d274e8 update amcl param
+23dc9ba42ccdaa7396a2ba1ea7c1df66a19d9e47 gazebo tf bug fixed
+81ac275168b5ae86bda7bae5d5ab5618726b26f4 Merge pull request #46 from ROBOTIS-GIT/develop
+2912f6b7e5ae70b158bd2c46d89d8dae5b813b97 update navi param
+043b84a8b66e64e45583a34cdb8a84f55113f032 update slam param
+98857b6f5dfb3a929f068d424ff9a321dadb5ff5 Merge pull request #45 from ROBOTIS-GIT/develop
+00df091dd35b933c06994591d88b6d1e3d0d3332 bug fixed
+ca68b77ef8c17b2a26d5560be3c33195dd3c44b0 Merge pull request #44 from ROBOTIS-GIT/develop
+44511b1063585fac13d10f4760ee91c692f25196 modify launch file
+ff92a64564b2695daf968e1b37919576dcdeeb47 modify variable
+90caa88df4a81cfce3f7b3ab3227f2e31869c668 modify inertia
+d823df51cc4502874b39a791923f3faea700532e modify variable
+0000fca01d9505fee2bb1cc910eddd1e5ee621e1 modify footprint
+4a8285421d15eddf6021476c3aa1019df303c4df Merge pull request #43 from ROBOTIS-GIT/develop
+5f1e4c64b0d47126f56b322fb113419228e0ceda update turtlebot3 gazebo
+ad48828bdc5830c0a43fe22e6ce59992211039a1 Merge pull request #42 from ROBOTIS-GIT/develop
+56d214d6c68bf738ecb44b9d038e9d2c905433f5 add gazebo model
+4c20183481fe821ca913763fad4c5dcf0ba2dac1 add gazebo simulation
+a652db4cfc1f6319e95429a8145f01cf07a6b0e1 update gazebo file
+8ebb58a919f2a8fa5ca9c50ac4b2ccbd2d525f71 Merge pull request #41 from ROBOTIS-GIT/develop
+8d55ad41de68f7e5e0c35fd233a68e6c1d2687de modify gazebo launch file
+721a15bb302d540a92ab849ce02ae3f9149283ff update stl and urdf
+945047ecda7a9280a0260103c2723b3b7278569b update gazebo launch file
+5f2253a00133199a582c9221fdf2a52a2fdde514 update stl and urdf
+d42741ced8a18ffcd84d7f2babef0dbd48c04ea6 update publish frequency
+066d7a58a49a1ee55b5a128e01bae8736cc31293 update publish_frequency
+2f81351651587cbf5d15727f547ade8e4d5f8d65 add gazebo package
+46ae4218c02ce5c82746d338791d53b6aa7bab17 update urdf and add gazebo
+fe59f2725fa1eb80f6f52bbb3c94c594b3362683 TurtleBot3 navigation - costmap_common_params.yaml divided into two files depended on TurtleBot3 model
+7eb88c68a33288d7cfa3fd854fc670646daab08b TurtleBot3 navigation - costmap_common_params.yaml divided into two files depended on TurtleBot3 model
+89fd79a2f9359d89f2c726f2f635edc8459b2856 Merge pull request #40 from ROBOTIS-GIT/develop
+1d6d7fbb03f259c44dce7d993a0bdc5dfdf40a56 modified the TurtleBot3 wiki site addr.
+b79622d02a125b8102b1b149561e3f71aa6c66c8 Merge pull request #39 from ROBOTIS-GIT/develop
+8d311110e31e55d3bce2dac3d830a635dbe730a2 deleted applications pkgs
+0d29a7d0acb0c098e71831e336d1ca95df91d389 Merge pull request #36 from ROBOTIS-GIT/develop
+9827492bd20c8ece486df40a512d919483306c6d added rviz environment file
+4e07cf13f5cabe64eb1011509634859ed549e99c added rviz environment file
+88a239085093d13a106fa8d5bc948e192868a937 fixed the bug that return the origin point
+a05165ef37778d4bf58d698988b2dfd788396f4a Merge pull request #35 from Chris177/develop
+a783d4fad4720d894bac9ae967b143370fd64426 This is a update to run panorama demo on turtlebot3
+1cc53121413478e2699dea02b48f44c0b318eb1f navigation bug fixed
+a9ad9a4959c2e869d298188200a8f3a132fb48a2 added a package in meta-pkg
+e965297f7da01e9ae0f63b190800432beb341f7c Merge pull request #34 from ROBOTIS-GIT/feature-fake-turtlebot3
+631261ec18b8432785a6a744de83f24b3fff2b87 added turtlebot3 fake node and package
+cca86d28b9df58494bfb030260d2d1c5395cec08 Merge pull request #33 from ROBOTIS-GIT/develop
+40a2646e6fb3366596b257a3f96d9323d25cbf40 added view mode
+e0c4b7c01dea047d6d4ee2a9234b79a86f659dea modified the materials
+98315a5e0c73571bc1c329457c5504e4f156f4e4 modified the name of bases and model names
+b0c03dbffb9e481e5f88ab17c37c10b1e86ec186 modified the name of bases and model names
+70c396884179e94a067625c3b47ef6469b6e14f3 modifited the description, authors, depend option and delete the core package
+07911c588ae1b5c3f626dcaa206f922edbeedda0 update navigation parameter
+c9fa43db735f795fa64e0fe0bfe06c813fda492c Merge pull request #32 from ROBOTIS-GIT/master
+f5ab5c5017e24132e44f9e096448dac808a170cd update navigation
+603fc71df194fabf39186312c3b0433f9af38486 Merge pull request #31 from ROBOTIS-GIT/develop
+8cf0e554f43bf7b29b03f202b201ac48dfe8fae9 modified file name
+744de81d65027e99ebb77f5a024701299fa1552a modified basic and premium urdf
+4f2e1edfe159d06cd4a2cfcf0ab95ca1064da52d Merge pull request #30 from ROBOTIS-GIT/develop
+feb2de79b2235049257b577b545e357e93334a21 added wiki Addr.
+47ff07c951eb0aacc33a1c3b083ba6a05a158116 Merge pull request #29 from ROBOTIS-GIT/develop
+4dda202d8aa08aa9f0ba32c60bb89209834a9b78 added wiki Addr.
+0ef44356ba48ff9bcb475547d8c2808ede2f2103 Merge pull request #28 from ROBOTIS-GIT/develop
+d0d02fb713aa6d24fa5201dd73dfd5cdbe479790 modified the turtlebot bringup files
+5ff997774a7d9c15944dcb7b07673d8975809850 Merge pull request #27 from ROBOTIS-GIT/develop
+145ebb484112571a691ed1505b233807eff63b37 modified the units
+bb99753fac3c876bda3aa4b118181be2a72ba460 Merge pull request #26 from ROBOTIS-GIT/develop
+6cfcc9e5cae58b98bbbcfabb761f1544221d7a08 used integrated bringup file
+193771eb32404aab6c3c8f700418298b0a55fcca used TURTLEBOT3_MODEL
+9ad4069bb8a099163e4954c4853ec5c2aa8e75d8 used TURTLEBOT3_MODEL
+b47a0a33acfb7a54fbb961b74927e216deb5dcc6 modified the slam  pkg
+68363f186d60165b89b539a5c1799116b26f8208 modified the navigation pkg
+61898d3936ea299e2be0fcd006d3691c852edb66 modified the param
+947089cf51e40e24b0006532e87905fb0b2aaab6 modified the navigation pkg
+7f0dee18250bc5badaa20657ebfe1a935aa32fa4 added the IMU quaternion values
+c22096c00ea34fc69e9a059f3efea37d49ef006a modified the define namings
+2c9f3950c19bbe2c30632f84e140d1ea8f16faac Merge pull request #25 from ROBOTIS-GIT/develop
+06e471943ff2d1e3a4873d8e3dfcf3aa7bef4769 modified the laser node name
+a54641363fd4b2e1bb0c88548df208006a968e88 Merge pull request #24 from ROBOTIS-GIT/develop
+77696ea7a3ab1e7dc1ef6c8ed49b8859d26b8b47 added new model of turtlebot3
+bece3eb30940e5fca2f835b1dc4d82f2507eb520 Merge pull request #23 from ROBOTIS-GIT/develop
+04dbbe2a0d6ee9dc0fe0eb708d414f10348a76c2 added battery voltage msg pub
+5d9f848b19b093db61947a76562fa43087b44542 added battery voltage msg and info
+bf75a1ec45e86c70df041ef534874c3621a21b2d Merge pull request #22 from ROBOTIS-GIT/kinetic-devel
+8fad2d35107736464c9a3d3a467666b16020de71 Merge pull request #21 from ROBOTIS-GIT/develop
+d7c22ae19c0acbc346d6a14dd92047e0f2c32b16 modified the camera_link info
+8992986b3e0166d9b3fb66ff0611f2c992d162f8 add sensor info for Intel RealSense R200
+a1b183677c9bc08c5f5aa952cbc62f1ec898efbb added a launch file for r200
+de34b53cf8256f0114ffeea6592156c0954ef201 Merge pull request #20 from ROBOTIS-GIT/develop
+4d9b047fc0d825eb7cf094e8968e5cdb4d6287be added lds sensor
+3ddcba133f49f00a29ddaf72d8b725a088b81b95 Merge pull request #19 from ROBOTIS-GIT/master
+50482de33f9e959e1d0c150aa66bf8501267062f Merge pull request #18 from ROBOTIS-GIT/develop
+163a2a0a86c872a80aed1e12279d7950282accb1 modified turtlebot3 model files
+74acb3755eb7289e634c673cc61828c1858dfd7d added turtlebot STL file for RViz
+9f6183487850160bf7612d1c763d56f9af4781a8 Merge pull request #17 from ROBOTIS-GIT/kinetic-devel
+749f2d67da8c17010b3143775177daad7c66afb0 added a urdf file for rplidar
+8c77575c8a2b046f016a31ad5df575e6a80d15b0 Merge pull request #16 from ROBOTIS-GIT/develop
+f862f6b13ca4a5e7e8d8b3d1afc06a429987aaa7 modified pkg setting for turtlebot3_core
+07013b5165b38c258502f33707f3f351e66409ef added turtlebot3_core package
+85f9e9a37f76e7e2f290b1140b2a1f4574a8c929 deleted turtlebot3_node
+8ed9b3d51a2809af4d2cbf5e2687be4182e8ede9 modified turtlebot3_node for core package
+4bb1800c96137613a2c8c97af2db322aac3b4482 Merge pull request #15 from ROBOTIS-GIT/develop
+152477f92edf31a6301bbe2a3dbf4c7d39a5a938 modified the remote control function using RC100 remocon
+5190fca8b676ad85f5e8cba5a3b6eb5ca4d9a68c Merge pull request #14 from ROBOTIS-GIT/develop
+5dd617e1a6263c7b620e932f74c16f5d91c9170a added information about aoftware and hardware
+51a857ce5124b6961fc54f5f0ba5d2b74849e33a Merge pull request #12 from ROBOTIS-GIT/develop
+42426826ae171b647dc60b7b10e99b50a35955e7 modified the publisher for IMU
+df99b63abcccc2c7c46c3bd1c63c7abb10d3f162 Merge pull request #11 from ROBOTIS-GIT/develop
+2255f871c7dabcaa2740ee1e0cf442c87e6f9983 modified the loop periods
+e03340e8e6ab0bd47f8406fd83a109010a74311f Merge pull request #10 from ROBOTIS-GIT/develop
+e571b9fedcfa760ac51fe8aca771924432b79a7b updated the turtlebot3 information
+285247d8c14efed0d04b3286640b3619dc4bba30 Merge pull request #9 from ROBOTIS-GIT/develop
+4f483cf98fb112ae9edbb195533ad5aa973d078f added the firmware (turtlebot3_core package) for OpenCR embedded board
+5eb4481134a33cc33110d12962289c9363181ca6 deleted diff_driver packages using USB2Dynamixel
+8953129455075f43f00e590d219bf09f322f832b added new msgs for TB3
+63aec54c2528af1dd72c94189bba2f652bc234a5 Merge pull request #8 from ROBOTIS-GIT/master
+4671caed59e71d8e312bf5da54ea9640c5632726 Merge pull request #7 from ROBOTIS-GIT/kinetic-devel
+85af3876343c657df702012eb22ac0197f440f87 add remap option for image
+dd5b8802d8ea6340d8459943b5687b5307d3788b added new package for TB3 test
+0c8fba295cb7ad9ce51265e4e92ce5dd43ab7968 added launch file for keytele
+ee27fa9f80b14bd9d16de10102a1ccf3e84105f8 deleted a depend pkg
+68e67bbd72a97a82fdecdfa5a6551892de075e7d modified DXL comm_result bug
+e92c987d4420d04084b839d1470db8e916bb67a3 Merge pull request #6 from ROBOTIS-GIT/master
+e7c7538cb8ebeeba5377901c22521918476c9fc9 Merge pull request #5 from ROBOTIS-GIT/kinetic-devel
+8aa7a99541dfca0a845d1927c8dcd741893db945 modified the package information for release
+aac95409088e35356920f3da40c438c5f03f5118 modified the diff driver for DXL
+a67a826df0b5131cf73839879e9f42c56fa4fe51 added two packages related DXL
+288fae099bc1d369b5ab04f42b26a2df1706b9f9 Merge pull request #4 from ROBOTIS-GIT/develop
+ea25acaaff149c47b29e1853ec992c56be4d4ade modified the navigation parameters for navigation test
+eac49f51a2325565f5766e9897919aa0d4c788a8 modified the navigation package and turtlebot3 node for demo
+7ea732564699c5d506b32e8879751c01cb6d1df0 modified the wheel speed gain
+d316107a048a63b16d8bb69a17cb477fb00d2488 added navigation package
+0999539c31de55b2f4bd1aa79233a60f8b8f9eaa minor change
+6997301ead26cfee37276b85265cf1dd5db40c38 modified the processing of upateOdomety
+5e0b75fbd881fa089eb6832af04bc8128d8a1107 Merge pull request #3 from ROBOTIS-GIT/devel
+e213d453463429736064de1a0e83808cb77d6695 changed the rviz setting
+d953905806beacad33b9e9fdf81064688457e439 Merge pull request #2 from ROBOTIS-GIT/devel
+a067a787cbb186dd15ac2597459cb254c915ad59 added SLAM package
+1498de8d410ef49d5f2d6f7e5b61cc2a06dd08a2 added features for SLAM
+10e6f5094fd949e6320ce7f02490997c3cdbaea4 Merge pull request #1 from ROBOTIS-GIT/devel
+76c4d0d49916191a2848f07f3de990769a152fa9 added a description package and launch file
+22b98b0f39c7971e3c30c8b0adaf7fe7a0be6cb9 added init files
+2a1e8592c93f7b5a5f8199957cafdaccf33cb9e9 Initial commit

@@ -1,0 +1,278 @@
+11667d4640a55111a6ad0206336685e69c7323fb Merge pull request #164 from Skyguy92/calibrate
+b1af120f941233916034befad12b7cd36625c09c fix build
+957845ceada89009bd08e778f2f629e39d68d6cb Moved FTRIM into Calibration function and included it in the readme.md.
+9a9d60fd925e735d3c2cd67e65bcf7e2a14e6d59 Merge pull request #158 from xxGizmoCodexx/gizmo/navdata-doc
+518c9656ae748ea4439c25effb826a442a1a65ef Add link for created NavData doc
+047311e88a818a62ade0c634f81491bb4a2edc22 Initial API documentation for 'navdata' client event
+53e66221e6d7fc48fb2ccf8d9f11275e8d1e1092 Merge pull request #154 from paulhayes/patch-1
+ed48accdee692824ec010446e1e99e14f62fc467 This should allow Travis builds to now pass.
+228bd4573e765bed3861f259ce7e66fcace15f43 Merge pull request #110 from seanhussey/patch-1
+135105d8c784d27939bb67d1978a5ac21912b4ca Fixed typos.
+0ac5ccc73a42ee5cafa71399ff79e2c2b1d2c1b6 0.3.3
+8a58d0ec213785b5f75d9dff75611120f9cb36e1 Merge pull request #107 from michaelshmitty/master
+795ad23173e8b2438c8d2004b7af219e4bd1cde2 Merge branch 'refs/heads/allow-zero-speed-fix-106'
+d57b40a0b5d01da460ceeeac8c0f427a972d5b45 Fixes client up/down, left/right, front/back, clockwise/counterclockwise functions to accept 0 speed. Adds test. Resolves #106
+9a5d0a553fd148864deded61b61389be20810740 Fixes a typo
+f1b48cd4d71227a650fb54004eeae5b1f753f46d Updated GPS navdata definition for firmware version 2.4.8.
+e0e3144b963cd7af3ee85f8ceb04faef089ae15d 0.3.2
+dcfce2013cab8cd0194957ac2612effe665464eb Changed NavdataReader.char to call buffy Reader.char.
+0945d4fc13c1c44cca9326761eed2bc39ad7a821 Merge pull request #88 from gdi2290/patch-1
+46a1dc77d76781f2212691a2171082e6c168dcc7 ignore .DS_Store for osx users
+07d799bc2633e47919a1a942ef76a1b5b4311139 Release 0.3.1
+1fb4e285f347da12b3b2f6f8ac46641219c2413f Merge pull request #86 from rschmukler/reconnect-fix
+aa776a37d28ec3c488a1f6e1d6e6560ad90051b8 Updated to remove listener from socket, forward errors from socket to client
+fb735eeaa98811d0f4546fe00aaa6f7ca8fa0cec Updated so tests pass
+3bc3fe083839cca2deb5567506c9cbda8838babe Fixed TCPVideoStream trying to reconnect 2x
+f83cd0ab41416b1959e77e4116dac7135fb216aa Removed examples/tweets.js; It just prints tweets to the console & doesn't use the node-ar-drone API.
+bdb3d4f9ce0cb36a4db666082ed86fec5ee709d2 Style fixes for sample code.
+5ed584c392fce8895773f3f7437c960b8bec83ca Merge pull request #84 from mcqueenorama/master
+a2fd2fa28465ce05d16a3550456fa5208e0bb5ee some demo programs for tweet driven drone and testing tweet stream
+1393ce84173a0d36ac0dae0a0abc6f2eda1b6567 Merge pull request #83 from felixge/stricter_jshint
+0d48cfd2851e8436b38632abe8d6fe6c38c3880f Set unused option for jshint, removed unused variables in code
+6a05eebe1aa6e69d404a31d310bd7546ea6077f9 Set undef option for jshint, fix code to comply to this rule
+a9f56a970397bbec4357253970d3f4e5bbf8ab62 Merge pull request #82 from janpieper/jshint
+b8e199613d88dc4c3315b15df2c5e9a3165c049d check files in examples directory to be jshint compliant
+04736689c07ce792d4e64bd22aaba50b1313da68 tell jshint we're using node.js
+31ff514891115e673600048d2b6265f35e611f9c disallow trailing whitespace
+2b936c59b3b0f1c823bc2f24b72e1435e4caa102 force use of curly braces
+14ad836ba2dae9c181f1efc513c04feea09a9ce3 use 2 spaces for indention
+53a03129e4b845473801eb4b87cc9ae8fec7478d mark single eval as not evil via inline jshint config
+fa68d995c23d384f070af0f32fdbc648a340fb65 make code jshint compliant
+e9857de828c07f2c3ffc14f4f789740f41e4e111 Merge pull request #81 from janpieper/drop-duplicate-test
+70c4bbc49b076d43a91a17bc9c65144e97372d5e drop duplicate test
+d39daa87b819c3e4ae3d59700f724bbb1c3de3da Merge pull request #80 from janpieper/drop-unused-variables
+e68bdd6395bf9e504063ff098beabb5a79178338 drop unused variables
+695abef0a141ca3aa42aa2d1091b372bb522e2db 0.3.0. Backwards-compatible new features for Client.config.
+e699edb4cd00a3e2ef6c707c033bf85a51790370 Merge pull request #76 from wiseman/config_acks
+3cd3037551c6f26b9b6f61a9a2e94e85f54ebae5 Increased delay in test to trigger timeout.
+9495035c4345448e4ae182fde4439ca6d48efcc5 Increased default timeout to 500 ms.
+03512ad37cf4e0f19698ee6bfabeb6ac1f8dc4c3 Fixed config signature to bring callback out of options.
+3e77b5a79061fddf53a7c49edaffdf43e0b4cc92 Changed signature of config.
+031d2e3800d9ab64f06930a142c5a103cbcde9cb Merge pull request #77 from janpieper/fix-small-typo-in-readme
+67adf4959f62f89dcaa2336187289fba034ff027 fixed typo
+2be22dc0bfc678837df98c7e440b3beb1f0933eb Added unit tests for CONFIG ACKs.
+d73074206ee4122ce21f64aa717504f08790226f Fixed missing var.
+17806ca1514741bbf38bf33b33e56309e7cf3b67 Added handling of ACK for config commands.
+5df9ce2a7942df0e369efef51eda7230dded64ce 0.2.1
+c2027e6c72021ac33587fba8e28982b73324bc9b Merge pull request #73 from wiseman/fix_tests
+f58c8eb930c63f95aed167b0b221cae4c446ef12 Added unit tests for gps option.
+2cef8740c65559c12d922144e5e496ff358710a0 Fixed test-parseNavdata tests (issue #72).
+b04f97c7276eded00e25011cb0ff68c0dae77237 Merge pull request #71 from wiseman/fix_num_sats
+320c8d447e73b2287c47d1547a71457cb8e9968b Fixed errors in GPS data definitions.
+4bbdb635a2e8b3e97ed070ac5c361a16dc3bda2c Merge pull request #68 from andrew/gps
+74d7e6bce8decaf2a3a77c2a0bbc69e6f51e77cc Merge pull request #67 from andrew/readme-tweak
+0cf48cb5785b50d85ef59ecf201de1a0152342f3 Missing comma
+c75da8d71cf4c3fe760f8a312150fe04e92abd4d Reduce time suggested for animating flip in readme
+5f9244d00b69fa9c0ca703b20116f061c6db46c0 Preliminary GPS support
+879f64441f130bcf0f94428adce6760e331085cf Merge pull request #64 from phated/master
+3056077aea721b3e80f81883b30d72d912035d33 add image size option to png encoder, also add frameRate and imageSize options to readme
+8f544a5494e2425221193c9c65a5765cfcb725aa Added a Changelog file
+da3a19e548ae6dc5f00549c1fe75b0bd36231b5a 0.2.0
+9307871755b97bcd9b722a8f04249277759c2cdb test comments. closes #62
+7e26979d643c2f08f7d37a35b06667d5bcdcb74d ignore pcmd methods with no arguments
+de5ae9dfa965a19f10689c102b22758fb59e4498 Merge pull request #61 from janpieper/fix-heavy-development-link
+2d610ab7365b6353cfe32bd0e5f062b1096076fa seems like we only need the filename
+9517c584adf84f8543629b75f1d37d38bc4fd2f9 fixed path to CONTRIBUTING.md
+05e402957e0472a1c483cacbed65b603504481f9 Merge pull request #54 from eschnou/feature_ftrim
+060442519c5536512e2bc9c5b36fe6f83d299a28 Merge pull request #57 from eschnou/fix_vidiondetect
+a3ab4df7cba964e67b8317c050e2358f75e4faf2 vidionDetect -> oriantationAngle is a float32
+197a588797d86ec6c1eeb8684b6a0508e7a614d0 Added ftrim() command to the client
+15b92b1c060368f07eb829c13f1146964dd40c40 Merge pull request #56 from adrianparsons/master
+ca941c96e1065e655a19da0299bb25b709fbffa5 'cb' -> 'callback'
+0dc71440ee9c192560d2ed42a6bf0d5653241545 Merge pull request #50 from eschnou/save_video_example
+d673d15a843632a8bfb0ad3cb5a4ca0750b4f402 Merge pull request #52 from wiseman/master
+fd2085f19c10a69d2ade250b30ad3205313c6143 0.1.0
+972a453f31d97893d13c3b1f8fb34fd47e176608 Added documentation of client.calibrate to the README.
+09528d87491a34f0f7888556776e9ef920e5b67d Merge pull request #51 from wiseman/add_calibrate
+6ef16f3240e98fb81a5d10265f0f83804db53578 Merge pull request #26 from janl/battery-levels
+de1bc8f6039f3e5a1a46013f6b57f13a485a6194 Added calibrate command to UdpControl and Client, which according to the SDK docs "asks the drone to calibrate the magnetometer (must be flying)."
+c0d219b41cb883ebf011996d53ff04fd4c3217ee Added an example on saving the video-stream
+86273288bd796b45d51c527a9e1d7146300f1a9d Merge pull request #46 from eschnou/refactor_client_getstream
+daf486d9c9c3b48d81d378f4b8c591b359a411de Maintain a single png and tcp stream in client
+508e9cb8e4f1030cd7425535417b606e9e1dca10 Merge pull request #48 from eschnou/fix_tests
+621dc688b30a1d2e5d07315a8dafcbf9fa71ea96 Skip broken test
+7119cde22d00299dbbd178adfe765ef3b0baf3a8 Merge pull request #45 from eschnou/fix_44
+166a049060e6e7b275e010454f4cfe4e3742c79a Fix uncatched errors when failing to spawn ffmpeg
+37233e1014893db405395162d32c38feb69d0220 0.0.6
+fbb54d56e98bc70bb47255096d98354c46113c07 Add takeoff/land callbacks
+a8ff73c3a77c8dec1e7638345d14fc37b0b07cf0 Request navdata by default
+7a44599b6f28802981c60bc796b0940d652e94a8 Document how to access the bottom camera, fixes #35
+f3659f6cb3f8fa370ac0d2306431e21befe8bdd0 Merge pull request #39 from MarcusSorealheis/patch-1
+e8c51c2ef06fec7cca8e60f0a1961b6d4d9b6147 Update README.md
+80f003b387d9ced83d1135675210bd072574806e version 0.0.5
+6598123ba0319fd22f01c71319b89f5a62ce5002 Merge pull request #14 from csanz/patch-1
+75682ff192a7282e8e6215909c7a6362553e4585 Merge pull request #21 from Contra/patch-1
+7277573bd4c027c099155ed617672269bb5c3420 Merge pull request #30 from jfsiii/feature-new-navdata
+9c168388746fd4a4fae5bbb54f820cc44ad95539 Add tests for the 9 `navdata` keys without them.
+69d7a4d9c14f73f0c18fe05c32062f99f011ac0a Add tests for `vision`, `visionPerf`, `trackersSend`, `visionDetect` keys.
+16c9605bd1e9335be009e8347fda99dedb2d3c58 WIP commit. Adding tests for 9(?) of the 22(?) new `navdata` objects.
+a5a3f369d41f362ef38871d82f27e212bee42364 Add tests for data structure introduced in 5319cfc.
+5319cfc092e00b547d676f8612a86b16e013eda3 Use new structure for `demo` & `rawMeasures` in `navdata` but keep BC.
+4ea2a5104342885f7b05610854ff795369f4772e Some guesses about units for various navdata properties.
+b4a0e7d49edd643da0a9fd373b0e84db4da61452 Missed one in ff9be5c.
+4144e7e9a7259c46e66fd37888b6a16c8d0b55b2 Add two properties for navdata option masks.
+7ea11d33d6b65dea1e561e5895da92ed844f5df0 Fix two typos in the `navdata` keys.
+b17d41e58a943a27d17d3dccd950e64dd11491ca Display wifi signal strength as a percentage
+d2b457793856d7ed1b70e3a34222c38e4cb7c014 Whitespace change
+2d770c6c6ee31f36b6d965ec1ea62cb96f87b20c s/gyrometers/gyroscopes/g
+af8c0d8b394537bf75911ebb6795f1ab45b879e5 Not entirely sure this is correct, but going with it.
+ae8594305a18b3013b9198cfccc133107b827e24 Adding items which, somehow, were omitted from 7ca3214.
+d1d3dc5dbd855532e54b5bf17a5f5bc08bb789c5 Remove detritus which is causing errors.
+01e008e710c4a4bb5a9e396ef9a42c2cee034018 Need to supply context b/c NavdataReader methods use `this`.
+c2c6615979cfd403ed44f0f760a626f855d4f34f Addressing spacing and syntax errors from a borked commit.
+2f89091e72712cbe4d1ea65277513826c7608243 Add functions required for dealing with navdata masks.
+7ca3214e7f38e985290ab94623e222f89b6022bd Add all missing navdata blocks (`magneto`, `windSpeed`, `games`, etc).
+9877ea00aeb85e0ea0e73ca3d6d104d662c1c62f Alter `demo` navdata block.
+154d4c9d7da1cb0df5979ef241d62a024e162282 Be consistent with `gyrometers`
+b613e99e5c1436cb9a1be8e44b8490fc89a3c6eb Use `droneTimeToMilliseconds` utility function.
+ddde825fc954b8082b88861bba9cbf60b4f50c33 Alter `demo` navdata block.
+bac622cd341dfc4e3ce6484bc9dff94494f27841 Add two utility functions.
+dfdb6b3a623ebd477a2c9a29ddf6c74247116508 Add new types based on structs from C SDK.
+6b08477a43667724b5b5c3bac7c15b7f013ec27f Add flying modes
+efc484151ae3356c5ddbd949c98d1de5860fea12 Add lookup for detection types.
+95cd887eb90a2ec284469215d7b70f83f63592dc Make JSHint happy.
+8a1debf33f3edccf104fc5558812364cda03a590 Merge pull request #22 from Contra/master
+c53167a1748d03856c797bf354366861c384968a Implement `Client.battery();`
+619847308d3e78d3b75d97d2c1b20738a14fe66d more docs
+03759775eb141b828026d4c8726ec1501ae6281e event docs
+bfa07cdae035b793d84f105918182154a027ad4a 0.0.4
+d52bcfdd7c0cd9c60e74c6a656190466d40a7819 Merge pull request #18 from Contra/master
+2a6e98492f8a33b9d9a8053fa652ca96bb55866a remove unneeded test
+4ec60e035b6f9fe2390d8d533d51e9b6115a2fce remove explicit port bind
+198b59ddcc7e605316c239a55e527ca0724cff64 Merge pull request #19 from cbumgard/master
+d20d095b907a8a554f791bb5e4d85467d92c346f Fixed typo in SDK url
+da958666c82f6da3a9b25f7a8a10792461d03689 split out + split hovering and flying events
+f7cb45b243828c13da87f915e06c3d600eee91b6 fix lastState typo
+90dab765dd14b658a18541db794727a3c9c6cf52 custom events
+69a52ca8be28afe64261f609875978c4b2ba9465 Merge pull request #16 from usefulthink/fix-altitude-millimeters
+b463228827b2224618dc3635ba78588ec7c08341 changed altitude conversion
+0bbd535e7f4186c8e7f81917616f78af9edbbff0 Update README.md
+8dd570b5e51ce9194b29515d50aa0cb4dcce93cd Merge pull request #12 from csanz/master
+2e2fa96c3e4e6bc3c4b64df1662789ca187891ad Update lib/constants.js
+4f8636dffdf53b44838d167cef377a6b35261d8f 0.0.3
+671834079f518beb9cf00dda9606f2522953a3b5 Ignore *.un~ files so they don't end up in npm
+ccc1e53dea91a9309be034d706235d7e8763065a Update 1.0 info
+022a3c7fcf911bddf8c9a945de49d404d1d71aca Link to more info
+42abd45b84029244a5335ad299c4196a9560544d Add note about 1.0 drones
+936130846deca3a9710cd61f51b3ccfd961e6c7e Merge pull request #9 from bkw/PaVE-headersize68
+79aac27764a4e6061889f35d813f6f866e4fa580 make 68 byte frames the default, compensate during paring
+234f4915551f62b7d6050012008723fd82f97bde Merge pull request #8 from bkw/ffmegDrain
+67a27926fb3529495c9fcc601fab6fb2484e17ca add test for 68 byte size PaVE frames
+77b1d44d32e90f696ef647df4e8752591581bd6b only advance when buffer size allows
+d13c7ecaabc9a6b126b2af444a828be7676625e0 fix last-minute typo
+ca205faa13cecd1b1be95d3565d4f72173c57046 add workaround for 68 byte PaVE headers
+072f9f0539fee57e7bd5fdbe1fd2ff85df4f7c4f reenable ffmpeg back pressure (works for me)
+f7ff3177d9ca9222499772913d2831463fe5c766 Merge pull request #4 from domenic/fix-test
+39e9393814a531ba4ba7c55dae1e52e6c94cba9a Merge pull request #5 from domenic/update-contributing
+5581c2098b3aae8eeecb0a97f83f80ceb2a4c5d1 Add and document config command
+1f3365edf22d04c6b787be1dda6b0bec4bcd04a5 client#disableEmergency is implemented
+aa2683e92db2ff77f77f54be91195594cb4b67fd Use npm test as primary test runner.
+7d60e6c96fa3bf5915afae9f8317d316de267363 0.0.2
+ee77d3c541115bcf8ac5e7dc972da125c78bd65b Client#disableEmergencyt
+4afa7c15fcc9ebe772b2c552fda30b276349dae4 Update todo
+a39edebc2a59fbcce26878210f3ca117215e85da Moar docs!
+d095e804de9a126583eb0bddf78b757a6ec6c93e Implement Client#after API
+4dcd022b26ffc9eb3678897fbae491da17573d03 Fix link
+e2b644e0aa3e6e0180fbdddb38802659c5b46dfc Work on Readme
+9db07c952716d98f67e397727039e12cd923e27b Hook PngStream into Client
+a9949abed01728c8cb1b9e533b0a4b6bb20efe4d Somewhat working pngStream stuff
+1c3116f8e94b32c82f9748be6be6b1d045c3b1c2 Check signature in PaVEParser
+3a95b6bed1fdc6a16550f53ea586de5ce04a6726 Delegate navdata error events if needed
+9ead1ed41bb0af1582815c961204afbe4dea53a4 Allow catching navdata errors
+adf3c3a7bf519d906541f24ae2004573fe5190a8 Move file around
+a1eacc088d66a9bf694e58ad1934e899fcb652a2 Rename method
+0d2ba9699b93ec6dd7b93585470d4d38301645c2 Simplify repl
+5e662c4c6fc10833721be7e301df1c55ebe745f0 Implement flight animation (still untested)
+4a40865afd493c9ee911950c474f16aa74270b30 Expose client to REPL
+517a4edf8052b4e6b20d7feb0ad6eff65ed5b24f LED animations for client!
+5bd7055849f5d8a8391c8e3b3c2a264b6dd420bd Implement AtCommandCreator#animateLeds
+e938c679deb297e3537fb19509594ac18a510eb9 Work on API
+185bc6a23955f225b059d3e78badd2ee7169d0f7 Implement config
+59368e95d77fe9694a603b16a703ea1836b81f99 New Client and bug fixes
+9d4332fbf9ddaf3c55a16d52a61c551d2e2ba928 Delete old test
+418169176c340884160f267bf5e662f05d0da35f Fix mistakes
+4b9bdcc871e5728b22ab03b9935f55029d618e2f 0.0.1
+7c32289f037c23477ef4b6f4e7c2cb0a889d859d Use methods, not properties
+240f714c1b133f222d7639d5ef2370d9842c47ba Ideas for high level API
+a1374518cf7bc456c9ef8ea98515799697e58b05 Typo
+5a27a28323f56d43a4dccc0da03fecbd30be5f65 Will find a better place to track this
+6ad64ab56fc7798a4247cf336063b3b891aa5a70 Remove old client code
+8199f4288a518dd1a866031759ec90dbc575c91d Remove old readme
+f0495a401d4778c333e50dcbe21c928406324259 Add note about missing docs
+fbb6345ac81f4ca09fa35d1c4a203789fb4a6507 Build badge
+9c0f41445dfd796ccd754cb14ce5a7c2410e76dc More Contributing info
+fa5739b8e75d783fe73c3449777f88cefcf74e0b Don't build in node 0.6 for now
+97e8253c7ad17652efea11e5ba9579ff76595fd3 Skip broken travis test
+79c80e34ab293c6a053d79b0fe35cd5fda8b2352 Contributing
+d0dbecb29c91c3126e7a06ced4f27d2673bd598b Try ffmpeg install for travis
+344717a7b05a34c45ff617fb0d07be80b0986779 Comment
+5f4ca6e007c28f25be583a4df8a6dd6e7a8fd48e Handle ffmpeg not existing better
+b49a6aea34564ac2e07f9b5dcd3fec85c5118ff5 Add travis config
+03ee1d6027824f9a8deead5c69d4f2f50a7195a4 Remove unfinished test
+7e3e362b262662cb5aa75db4fc9896408c2e7b88 New docs
+661600b3c143bda4e7c945c00750171827ff89af Fix whitespace
+8942ea978b4ed4260ff4b11d17aa7063b6af755d Some navdata parsing
+538e61fc94f464ae920b551ac489bb46abe7df0b Handle navdata re-requesting after timeout
+9eeb153b8dafd6a383c895a1652af8f0ef3b0593 Upgrade buffy
+86005e83dfa37602112b0b9046d33f5feb4fde0c Check in navdata fixture
+81c4856f3af876816b0c0a245df26b67c19943fd Expose UdpNavdataStream and add #destroy()
+b6727761fa6ace0827e4751314f2486170802167 Finish UdpNavdataStream
+1b8f823c55868e21e490676e85d61f13652ad0ac Start working on UdpNavdataStream
+714556d373a971a3c034d03b41dcd4b8fb557671 Update examples
+ecb30f10ebafff32989d5b38d5508488dc6f2bdb Allow explicit flag setting again
+e82c5508e55ef59fcaa59abb7167e8cf10f031d4 Add CONTRIBUTING guidelines
+7cf74fd9847d460ae598234b1c3ec200eafaf45b New Readme
+6d0819aa8830061f0f90ade8dde1bdd1e8c3b0b5 Add License
+2ca9d77915f29992e9d5ff4112760ea0c8d7d7e2 Whitespace
+ca767dabfcb34f812a180a542a4e9332c4ce670d Slightly nicer
+14f1e4ad3f5bde4269be9a6ce0b590d2ab8ea334 Flags and refactorings
+65b96f6e0bc6f5d7ed169ad1a094b0e9abfd1a06 New interface
+abf48220d53a1bc87402144d730032ffb3035b5c Rename
+db94edbe5b09e569709f99c238f68251930ff3d4 Implement raw() method
+ba8a2357f309fb2cefc9d95bad9acacf342cc300 Groundwork for new PngStream
+0f97f8cf402adb279aa24acc24bf0bf19cc8833c Simplify code
+75cfba3145362fc53ab96c479e776001ae0c6109 Improve PngStream example
+43977803065ef8bf5e69c5dd7008e734312e4f99 Better / working PngEncoder ! yeah
+6fcde6a744fa057d894751679959456c4fcf8f46 Implement PngEncoder
+f0b8c902c1710b3233fa54665dca7fd81d2043f4 Moar comments
+f2ea1f38c922e06c369bedbf5a263e9779d04dc8 Implement PCMD options
+4d07f410639e772909b812d3aee8bddccf5e463c Add comment
+bf4314ccb81ac1ee684a805b7c7c2a8853aad8e6 Add comment
+9c14c96bbe34c6267a4ebe971b98cfd408ab5545 Implement at module
+776f401fd6d5d0ff9875b43f01e51f0c1eac563c Test main api
+675343511c606b93bed5a333455907d447cb6ce7 Add PngStream and expose it along with UdpControl
+e21a295bfa3d93f351fb7b05a8a95431c0fad99d Fix package.json
+0760020630eaff48e8a971aeddd416bf0e4a4aa7 Fix tests
+28d8c636bd43fc3bf1991aff51f33b467d1ea6ba Default values and TcpVideoStream example
+c8196ef3fb7628a16a555e1267b02625fc700240 TcpVideoStream timeout handling
+776db3bc0eec0d67bce2a16a3a32041fa2b5f3e2 Move stuff around
+f3a3787b1de9668119be054f477eef3f6a337d02 Initial TcpVideoStream implementation + tests
+3834ec15659e6dd64349b658e4cdfb6bd1e370f9 Add UdpControl example
+ab5a1d0cc11dcc453348958e5b337b01134f8bef Implement UdpControl
+b55077b69df79b2fb6745a6b70feceb8f2af7687 Implement partial pcmd
+e8257b07c675ed415b4c8fdc11322745aa11c02d Rename to AtCommandCreator
+acb57a703a9641775622bbb6fa7b089febd44e71 Remove some stuff
+5c709e38f8abaee990e96a481c7c85bcc1b444f3 Start new AtCommandWriter implementation
+5b3fdb5c3d89ed5571cebd509b0bd3e3e031b30a Disable failing test for now
+1cec9124cefb4f32b631fb39557d471aed6a4d2d Add test command
+781a3ee77c7cf588a829f8a4e7356923d49779a0 Include buffy
+1e93ca2b1c03c5d6428bd4a649940114900a5120 Add PaVEParser parser and tests
+98125d07c6e66d55c897afa5a23b68559b1a630c Add fixtures path
+875a8567ac9da0605e3bad49e70580f86d7f69ff Add research doc
+5093ad4cd766b9b9d7becdb5f16ea8e4e6c083fc Add link to AR Drone 2.0
+be0e61bdfa329055dc53e0e5542770feaefe56d9 New stuff
+c7226ce7f4859ee2d84ada3d21a7a9810078dc05 More navdata parsing
+2483ae27b0b881483d7a5f76b38a223d76c3b020 Some tracking stuff
+7c781913cbb6a10c8757f6487ae2bd05b3a03e95 Weird, is this it?
+f35952d3ba7828f2cee5ece5ad12e9e6f7259332 Trying markdown fix
+cc2c4fd1e83aec1ed804b67a549055183f33790c Fix markdown rendering
+a8b8fec11f3ac01bb98a723a7b3a8560107a0d75 New readme
+ea40047a2cace66cc3b5aea4b46177977254ee9b Add PngSplitter#end
+ad95d1ffefc4ca739a14247c1aeea3df694c824f WIP: More Navdata parsing
+34bd9a33cb31cc0befecb4a0933402ea92dcd8f1 Implement client.sequence() feature
+e20f2eac16942ac6f05ce03ee563d561f6bcd35b New png video streaming and other things
+971ed3fb210bd3c4276addc4b4d813b3c616a301 Check in latest stuff
+b75c0b6ede7bf0723ebfd734c831541f7f267146 Some more working stuff & repl love
+60735ebb79d8b7ed5c226c434fb5a7ba3df066a9 Some initial stuff, some of it works
+e2a492ae30700336816730ce86c8dccf14f0f2aa Gitignore
+75fdf5edca4a118239927a37caf5da7ea0b4cf6a Readme

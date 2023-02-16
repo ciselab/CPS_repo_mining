@@ -1,0 +1,95 @@
+Project: node_ar_drone
+
+Words			Topics
+missing			1, 4, 16
+errors			1, 5, 18
+simplify		2, 16
+timeout			3, 4, 18, 20
+drop			3
+explicit		3, 10
+expose			4, 11
+size			5, 7, 20
+pave			5, 19
+wip				6, 20
+increased		7, 8
+broken			12, 20
+fixes			13, 14, 16, 19
+failing			14, 20
+check			17, 19
+
+Removed from list after consideration:
+Words			Topics
+typo			2, 7, 14
+alter			4, 19
+frames			4, 6
+updated			7, 15, 19
+removed			7, 8
+changed			8, 20
+stuff			14, 16, 19, 20
+
+==============================================================================================================================
+      Topic 1         Topic 2         Topic 3     Topic 4          Topic 5          Topic 6         Topic 7           
+ [1,] "navdata"       "request"       "remove"    "default"        "request"        "readme"        "client"          
+ [2,] "function"      "navdata"       "drop"      "missing"        "errors"         "jshint"        "readmemd"        
+ [3,] "gps"           "ignore"        "readme"    "methods"        "client"         "navdata"       "unused"          
+ [4,] "errors"        "link"          "masks"     "pass"           "whitespace"     "link"          "udpcontrol"      
+ [5,] "compliant"     "functions"     "navdata"   "gps"            "update"         "options"       "pngstream"       
+ [6,] "missing"       "typo"          "event"     "timeout"        "info"           "methods"       "typo"            
+ [7,] "readme"        "version"       "pass"      "udpcontrol"     "navdata"        "update"        "updated"         
+ [8,] "ffmpeg"        "buffy"         "timeout"   "alter"          "gps"            "wip"           "version"         
+ [9,] "bc"            "examples"      "comments"  "contramaster"   "tests"          "frames"        "removed"         
+[10,] "parsing"       "png"           "flying"    "events"         "tcpvideostream" "pngstream"     "stream"          
+[11,] "start"         "block"         "implement" "info"           "demo"           "method"        "variables"       
+[12,] "pngencoder"    "simplify"      "explicit"  "frames"         "drone"          "comment"       "single"          
+[13,] "request"       "ftrim"         "events"    "expose"         "size"           "request"       "increased"       
+[14,] "ftrim"         "function"      "moar"      "pngencoder"     "document"       "ftrim"         "options"         
+[15,] "readmemd"      "readmemd"      "parsing"   "implementation" "commit"         "function"      "signature"       
+[16,] "link"          "api"           "request"   "request"        "pave"           "readmemd"      "png"             
+[17,] "api"           "client"        "ftrim"     "ftrim"          "ftrim"          "api"           "size"            
+[18,] "client"        "documentation" "function"  "function"       "function"       "client"        "pcmd"            
+[19,] "documentation" "event"         "readmemd"  "readmemd"       "readmemd"       "documentation" "command"         
+[20,] "event"         "pass"          "link"      "link"           "link"           "event"         "udpnavdatastream"
+
+      Topic 8         Topic 9          Topic 10        Topic 11         Topic 12         Topic 13        Topic 14       
+ [1,] "api"           "tests"          "sdk"           "request"        "tests"          "travis"        "typo"         
+ [2,] "documentation" "api"            "ftrim"         "implement"      "types"          "request"       "demo"         
+ [3,] "event"         "implement"      "callback"      "config"         "buffy"          "documentation" "stuff"        
+ [4,] "changed"       "contributing"   "repl"          "expose"         "tcpvideostream" "fixes"         "function"     
+ [5,] "removed"       "update"         "gps"           "api"            "option"         "buffy"         "travis"       
+ [6,] "increased"     "structure"      "adding"        "typos"          "single"         "variables"     "fixes"        
+ [7,] "options"       "properties"     "bc"            "tcpvideostream" "default"        "handling"      "default"      
+ [8,] "signature"     "handle"         "explicit"      "whitespace"     "broken"         "ffmpeg"        "handling"     
+ [9,] "unit"          "implementation" "request"       "signature"      "ffmpeg"         "properties"    "failing"      
+[10,] "comments"      "request"        "function"      "command"        "structure"      "utility"       "request"      
+[11,] "flying"        "ftrim"          "readmemd"      "ffmpeg"         "utility"        "moar"          "ftrim"        
+[12,] "implement"     "function"       "link"          "comment"        "markdown"       "handle"        "readmemd"     
+[13,] "events"        "readmemd"       "navdata"       "ftrim"          "request"        "start"         "link"         
+[14,] "pngstream"     "link"           "api"           "function"       "ftrim"          "ftrim"         "navdata"      
+[15,] "parsing"       "navdata"        "client"        "readmemd"       "function"       "function"      "api"          
+[16,] "request"       "client"         "documentation" "link"           "readmemd"       "readmemd"      "client"       
+[17,] "ftrim"         "documentation"  "event"         "navdata"        "link"           "link"          "documentation"
+[18,] "function"      "event"          "pass"          "client"         "navdata"        "navdata"       "event"        
+[19,] "readmemd"      "pass"           "travis"        "documentation"  "api"            "api"           "pass"         
+[20,] "link"          "travis"         "typos"         "event"          "client"         "client"        "typos"        
+
+      Topic 15         Topic 16       Topic 17        Topic 18           Topic 19    Topic 20  
+ [1,] "client"         "navdata"      "config"        "request"          "check"     "tests"   
+ [2,] "implement"      "drone"        "navdata"       "path"             "stuff"     "jshint"  
+ [3,] "request"        "stuff"        "npm"           "note"             "fixes"     "option"  
+ [4,] "typos"          "fixes"        "paveparser"    "udpnavdatastream" "link"      "byte"    
+ [5,] "updated"        "functions"    "rename"        "errors"           "api"       "changed" 
+ [6,] "tcpvideostream" "demo"         "check"         "unused"           "client"    "command" 
+ [7,] "option"         "whitespace"   "unit"          "compliant"        "functions" "skip"    
+ [8,] "adding"         "missing"      "pcmd"          "files"            "updated"   "request" 
+ [9,] "commit"         "png"          "udpcontrol"    "timeout"          "tests"     "config"  
+[10,] "properties"     "pcmd"         "comment"       "update"           "stream"    "timeout" 
+[11,] "ftrim"          "flying"       "markdown"      "contramaster"     "examples"  "size"    
+[12,] "function"       "update"       "request"       "ftrim"            "files"     "broken"  
+[13,] "readmemd"       "repl"         "ftrim"         "function"         "document"  "failing" 
+[14,] "link"           "simplify"     "function"      "readmemd"         "alter"     "wip"     
+[15,] "navdata"        "contributing" "readmemd"      "link"             "block"     "stuff"   
+[16,] "api"            "request"      "link"          "navdata"          "pave"      "method"  
+[17,] "documentation"  "ftrim"        "api"           "api"              "pngstream" "rename"  
+[18,] "event"          "function"     "client"        "client"           "request"   "ftrim"   
+[19,] "pass"           "readmemd"     "documentation" "documentation"    "ftrim"     "function"
+[20,] "travis"         "link"         "event"         "event"            "function"  "readmemd"
