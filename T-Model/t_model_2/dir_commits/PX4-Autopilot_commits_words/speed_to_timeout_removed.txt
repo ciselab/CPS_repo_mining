@@ -1,0 +1,4 @@
+f16913c175c6c9ed192f7246ad62f535ad472631 mavsdk_tests: fix timeout at 1x speed
+c524e61b973f6de96fe93edb2a3aee90c5db488f airspeed_selector: fix timeout check
+1eaceb17dc538e930253e87ffcbdb1dd37f19233 mavsdk_tests: adjust timeouts by lockstep speed up
+5f670754813932eac63f86122245cc5f60abca68 mavsdk_tests: raise timeout for realtime sim speed

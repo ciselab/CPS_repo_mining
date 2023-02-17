@@ -1,0 +1,2 @@
+a7417657c36f4af4f9a30dd7b6ab60eb392b2bcd EKF: ensure fusion timeout counters are reset when required
+92a6c7d7344ae0a463e0c04c3b5bc6cf8f4ddc53 Set timeouts back to short, now that we have multiple tries in the uploader. This ensures we try often enough in the 200 ms IO bootloader wait phase to hit it.

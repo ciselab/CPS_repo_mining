@@ -1,0 +1,6 @@
+3cc53f551d724c215302fe9a76671eeb5e7d6ab4 MAVSDK tests: Use full system timeout off Depending on loop iterations for timeouts is not accurate, as usleep behavior depends on the system load and asking for a 0 ms sleep can potentially return immediately.
+c5f750dcca156ce84d1156ba66f7d25b797c3f45 ekf reset: more granular reset / timeout strategy for gps fusion
+9259406a2981083e08d6497376251eb0aa7c5e81 generate_listener.py: add a timeout of 2 seconds
+fe357a9a667e5076fccbdb28ee9bcae55c18f5b1 Separate timeouts for battery and high pwm
+f14c90c2220fffc51bc6e6e89bac6f9e726ff505 Some timeout needed to be raised for now to make ubx with baudrate 9600 working
+f81d00594c156c51ab976d3b6d101915377d7afa Made PX4IO FMU timeout based on IOs HRT, updating mixers now on every FMU update and not at fixed rate, this is WIP and currently does not support mixing with RC-only

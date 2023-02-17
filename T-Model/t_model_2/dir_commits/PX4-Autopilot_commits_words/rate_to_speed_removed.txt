@@ -1,0 +1,15 @@
+4922659ef4c890e3c307c46092e62a774b8180bb FW Position controller: specify in params that the airspeed setpoints are for calibrated airspeed
+8f858d95e6b4f1e6df57716b5b45fcf89be76d8f Rename equivalent airspeed (EAS) to calibrated airspeed (CAS)
+a5a43dbc6c6e1cb12d2a117cebf20da702ef95ec EKF: Convert airspeed fusion to use SymPy generated auto-code
+423219c60ed2a9e4f97484634e2e4f4adc218d5b pga460: Change variable initialization to uniform initialization style, format whitespace, and change baud rate unsigned to speed_t type. (#11861)
+42d0522cddf191c66a14f7e9d7661f9c95a64be6 FixedWingAttitudeControl: removed check for negative airspeed and slew rate on airspeed scaling
+b59aefc989d34cad32317b0235192310ce4d47e7 Airspeed measurement: Add accurate models for dynamic pressure
+e39b38ba96971245aaf6d2b1c249868c8717665e landdetector groundcontact: adjust climbrate if landing speed is low
+b511ccd9fe9a3aabac6f896252bc35edf2a57810 mc_pos_control: integrate complete order and limits of velocity setpoint calculation - one warn_rate_limited was missing - vel_sp_slewrate was in the wrong order for smooth slowdown/speedup on takeoff and landing - slow_land_gradual_velocity_limit was replaced by calls to math::gradual - smooth takeoff speed got controllable by user input - comments were corrected - an additional check for the sanity of velocity setpoints was added
+eb067291bf06d9ac736e6e14b54e929d7ce5c224 airspeed sensors apply offset separately
+e0fc0a847c87ade89eda1f33e20d7c690dbac0af Mission: - weathervane on takeoff - separate cruising speeds for VTOL in MC and FW - cruising speed resets - mission work item logic is more clear - fixed double execution of certain work item states - enable cruise speed change on the fly by command - moved VTOL transition target position generation to mission code and set always
+508c782bab689cd5a2f5a992986332ebb0f5560c mavlink: Add support for high speed baudrates
+1b7115dec9d91d4b9868b640cb2fc389b3f23b5f increased airspeed fusion rate to 12.5Hz
+234a200e6081bc19c0489a5bd266ed4d00cee917 renamed heading controller to wheel controller, added groundspeed dependency and separate parameters
+d7547d388fdc60c74b838987a99f81d19ab1a8c5 Remove auto-generated airspeed topic
+3c6f01bea8a65e2c347d1b893b3fe0d152bff69c tecs: speedrate: use p loop instead of pre calculated speed rate for now

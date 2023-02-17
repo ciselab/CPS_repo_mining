@@ -1,0 +1,5 @@
+e3972d563a4bd6d8c3dbda9837588cdfb273c3cf cmake: ensure generated source files exist before extracting events
+f21bc89a904c6812a8747fd4c4d8e869218ec424 Unit tests: Retain atomic operation This ensures we get absolutely accurate timing.
+0a1fbef8c8980856967ac42a065df3e40abcf966 pwm:ensure that a rate of 0 will invoke the ioctl
+e8a9c200561fea02f24a97883e6c617d07b251ce EKF: Ensure we start with zero local altitude and zero GPS offset. Since the filter is not publishing any data at this point this is not relevant in operation, but might be important later if we publish a separate altitude estimate topic
+71ac33596836519a341001bb48a8835b8af75cd3 Small improvements to autoland, ensure that throttle can be shut down close to touch down. Depends on accurate land WP altitude

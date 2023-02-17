@@ -1,0 +1,4 @@
+372a519ac419e6760abb6edc502dfa5465505906 wind estimator: added airspeed and sideslip gate sizes for innovation tests
+6cf24ac106688d70bdeda9d13fa252246f599b5a Increased comm buf size to better deal with higher-speed MAVLink transfers
+382c637fab66291a28b18f7481aad3b866de6639 Fixed stack sizes for airspeed drivers
+2ebcd0fdcc4b743c3a8a32bae0852e9536bf3a6b Switch to optimising some things for size rather than speed.

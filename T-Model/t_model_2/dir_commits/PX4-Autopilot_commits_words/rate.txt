@@ -1,0 +1,1118 @@
+e0bcc17f5b1e0dcbe422dc79875dc599f655dafa mbe: integrate pre-takeoff mag bias estimate in VehicleMagnetometer
+d504b49695bc68df92296e7a0ac7e4fec00ca9e1 mc_rate: compute control energy and publish to status msg
+9a3fa6199bf079cc105bc93f3a0590fc0dafb1c2 uorb top report total publication rate
+92a48657e341fa1e7a796938c4c20222c863a693 Jenkins: hardware tolerate listener command failure
+3ff9295cbdbc25db40f874054f5e0499f3f7b312 Jenkins: hardware nxp_fmuk66-v3 limit IMU_GYRO_RATEMAX to save cpu
+369776cd4e8ad37cc729377c68ef1f462b626b78 Jenkins: hardware don't tolerate px4io status on known hardware
+00d939995b0577300d93d905699881cf61519018 fix micrortps_transport: set poll fd when baudrate is 0
+810dbbd25b5a1e3a27918d1cd51f3c1059335cc4 AFBR mode switching, rate switching, and test
+8aecc64a737aad85bd5b4a908de7697a6516d7e6 generate uorb - support multiline descriptions
+51fa834ac6907c475d2ee8da7786260ad76077c0 generate_msg_docs: generate better page title
+ffa70ac0fdbc38d0b248732305da6c888fb7efa2 microRTPS: generate_microRTPS_bridge: run fastrtsgen only once for all files
+4609949bbb6e89d1795c38f2aef65582bcb28598 microRTPS: generate_microRTPS_bridge: only run the generator for the topics that are actually marked to be used
+86dc35022a6eadddccfa32007d5cae9bfc3d10ea generate_msg_docs.py: simplify logic a bit
+da6275e43a54e11dd6fd7ccaa7e40822551a3628 msg: add script structure to generate docs from .msg files
+1e2877cedf561dc229485dfe318e82360310ba73 Tune down solo roll rate controller
+7f4ffcef9309048c622db5fde01892b2fc764e16 Jenkins: HIL add separate status for flash constrained boards
+ae0438e8f58081371eb61e5f829888896d85905c Jenkins: HIL no longer tolerate SD failures
+c8e6d93cc0f9146d46db9de306bec170e39d025f ekf2: backend apply code style (generated code still exempt)
+72d08fe915f2831fda4fbedfa7e6a15356e3e8ab improve airframe generated output
+2d8e183aa3b85cffac172fe73d0f0ca1ea198c0e update EKF derivation auto-generated code
+7c5838116a677be92150ad0cb531d8ea53ca2bdb Tools: add parser to extract event definitions in source & generate json output
+8d74e52bb712bf73659fd55804c196730740f3bf battery: omit separate publish() function
+6d5f12d2a2ab97f17070179cf3ccc94c3cbb4845 microRTPS: client: add TX rate limiter
+64db89ab205347c8e5134fa2875f8d7794806799 px_generate_uorb_topic_helper: Use inttypes
+468aea94099376028d24f97825d8b60863560eef cmake: enable --ethernet to generate common param metadata
+ad9288536b39183c6ec69e05c70b69de58073acf TECS: enable direct height-rate control
+f6de99d42ee631bb67c1fac6233a7dae19e2d232 FixedWingPositionControl: control only height rate when using pitch stick in manual altitude controlled modes
+19449a4e75a045f5601748d46f60a863bbdbf30f FixedWingPositionControl: use target climb/sink rate parameters as maximum rates in manual altitude controlled modes
+a5cc449e69b8e0cade8471f6b33b386c71b11bba tecs: propagate altitude setpoint based on target climb/sink rate
+4b7416c05bb10155c308922d33d96daad73b7d10 FixedWingPosControlL1: added target climb and sink rate parameters
+d430e13401040464885795a9a986c1369c1d0eca sensors: wait for real sample rate to initialize LowPassFilter2p
+3340fca33266bdda48e3289336ec0c4fb9b51865 sensors/vehicle_imu: move accel & gyro updates to separate methods
+a5979e16be61ba087060f46227ba5424c1f3da90 sensors/vehicle_imu: move publish to separate method
+b264577daaed7c28efc16475568378aef43114c0 sensors/vehicle_acceleration: require valid sample rate before running
+e18b1c0355597d344186f8485014e835005085ba mpu9250: tolerate missing/mismatching FIFO samples if I2C slave mag active
+44cdc52ef82702c40dfcc583b40214cbc52f19cc PWMOut:Use rates from single instance & init all instances channels
+b898aabfed4926b75786b951215c5bd10768a9a9 Fix the repeated configuration of PWM rate after initialization
+3664d9e4ceb787e9915a748875488fb865f05827 rover: publish actuator controls with rate of gyro
+ff67da1bb4c29e0e65cca4809bc1efb87c3bba49 SlewRate: add getter for current state without update
+3dad16bc40cce9ab9702c1a868ba8bd62b6664bb RTPS client remove redundant baudrate check
+76e15b4a2150ca00a9d126a4cefc24344d9fdfac RTPS client get baudrate parameter if requested, and mark the device baud rate parameter as used so it shows up in QGC
+047fb1392236fe4141bc4881f8386458bb8e690c IMU_GYRO_RATEMAX: enforce reasonable constraint and update metadata
+bf09089a26b9b7672efc12a467fe6795cb81d471 PWM out: Collect settings for all outputs There are settings that have to be the same for a split output across multiple instances, like for example the PWM mask and rate configurations. This change collects them for all outputs of the same underlying driver structure and applies the complete set.
+6bc11596fe72771210ff5a6aa205c3a8004a19ab VTOL mixer: Correct alt rate channels The baby shark config did mark main rate outputs (50 Hz) as alt rate, resulting in the alt rate being set to 50 Hz.
+aa22407d8758bb0826d10fdfc6aaf18c98659950 drivers/pwm_out: only print rates if changed
+f33fee99c16a4f6a5de502bd16c1aef383c30baa ROMFS: init.d-posix/airframes migrate EKF2_GPS_MASK -> SENS_GPS_MASK
+5f4802a239321b9f3d1845f4e7b4262030752039 SlewRate: add back dummy file for mac build
+34a5948692995d9a045931ba103c931d34dd7007 Adapt SlewRate includes to convention
+346f269d8fb9ba862a08d5aafd75a0cbf7bf3080 IMU_INTEG_RATE: add 250 (used by SITL)
+e58af90bac2d8b14520d2c84f274590067ac43e5 boards: holybro can-gps-v1 create separate default and debug variants
+c4ae667157239d40bde642cb3f4ded95716421f9 generate_board_targets_json.py: exclude uavcanv1 for now
+32012cb3ee517fb24fc3e31dd41cbbd87fe6f3ee for cmake option GENERATE_ROS_MODELS to make ROS sdf models
+82a2126f97b9c769d8e8bb2c7f8f89cbba4c7a28 TECS: add feedforward gain for total energy balance rate
+01c9a4f24dc38e071e4a0f7831a673a5870b1d75 ghst: fix warning generated on PR (Clang Tidy)
+893eee4cb8a55dee2e971ffca3b1857c3bf34fee logger: double sensor_gyro_fft logging rate
+6b4ccaa53e4e1c7ff45fe057bc2d1745dc7597f7 Handle invalid yaw rate setpoints
+06e3d38bbdb889a196ecfe9138a8c5ab4dc623ce Fix yaw rate ignore flag for attitude setpoints
+1d8c55db4a5ce9aa95069d1db362e5020f2fecef mavlink: fix yaw and yaw_rate ignore mask check
+3f872ebf208482abc98c498eb6aeea0a2c5cedbf mavlink: move HEARTBEAT to separate stream header
+0c138b7e031248ebd1a4dd07113cfffb855a7d2a mavlink: move CAMERA_TRIGGER to separate stream header
+b955c41a63f20b7e0fe053253f41929d1d1bf289 mavlink: move COMMAND_LONG to separate stream header
+801202f2088236a230bf683e7cee99233021a21e mavlink: move BATTERY_STATUS to separate stream header
+dc1418a3b452ffe5b1d6ad30f25f74193e9bb6b5 mavlink: move SYS_STATUS to separate stream header
+5a025cfa28ce0a1448ab057c2d410db875cb22a1 mavlink: move SMART_BATTERY_INFO to separate stream header
+ec6758f5affc2c0a0ddd944fa82951db3a4eec42 mavlink: move HIGHRES_IMU to separate stream header
+248978b25ea4fa67e40b5762ef71ab9824a73a4f mavlink: move SCALED_PRESSURE to separate stream header
+c6311324d2022af2a8b686f22411ca7c48575327 mavlink: move VFR_HUD to separate stream header
+d46ae7983f007022e86421bf22b96d76e82048ae mavlink: move GPS_RAW_INT to separate stream header
+67a204206a846181562b96ddcff93a2989b6ba3a mavlink: move GPS2_RAW to separate stream header
+e2f7427679b45ad5cca428963e8b59a577f92b3c mavlink: move AUTOPILOT_STATE_FOR_GIMBAL_DEVICE to separate stream header
+462d67f2b6ef9bbbdf4d7d984091c43f4d50439f mavlink: move TIMESYNC to separate stream header
+849000ebeb9b2546cfc639ca01470bb0f161e456 mavlink: move SYSTEM_TIME to separate stream header
+af06adecd36ea8f512fb836dc5617b196575ca55 mavlink: move ADSB_VEHICLE to separate stream header
+ecfbd79a90f0ed00a6fc691d875f7beb7ec8fd5f mavlink: move UTM_GLOBAL_POSITION to separate stream header
+e04252151c6fedd4378a3cfb84d3251add5eaace mavlink: move GIMBAL_DEVICE_ATTITUDE_STATUS to separate stream header
+c9d44d57413619885157a8b703d9cd68e0301f20 mavlink: move GIMBAL_MANAGER_INFORMATION to separate stream header
+aaf7b41dda053afee5451030611de5823e0e6c2a mavlink: move GIMBAL_MANAGER_STATUS to separate stream header
+581e28eb334c3ad4714d92a936df8016acf6535c mavlink: move GIMBAL_DEVICE_SET_ATTITUDE to separate stream header
+ddca6698521523cb47a350268f366913ab82841a mavlink: move CAMERA_IMAGE_CAPTURED to separate stream header
+50bd7570373d5d22cd0bba7e1cfdf8b8a9cad6f8 mavlink: move GLOBAL_POSITION_INT to separate stream header
+ede01e8f1a2f667e0c0a3889f236d5262318e888 mavlink: move ODOMETRY to separate stream header
+7daa97f279e408832f6a8ff1c87353287107d1ec mavlink: move LOCAL_POSITION_NED to separate stream header
+5f7d577e0434706e30b12e9c0ad4e9e7f7a9dbb0 mavlink: move ESTIMATOR_STATUS to separate stream header
+a1a557cfe3df6a7d8dfaedfaf45cf6c35b52f025 mavlink: move VIBRATION to separate stream header
+239ed19827ad076f39a0aed26d87b09e136dc02a mavlink: move ATT_POS_MOCAP to separate stream header
+3964cfb3a72aaae8ef1a45eed10ce338e51b94b3 mavlink: move HOME_POSITION to separate stream header
+f7ee6b3c5e8a47e36f64eb869bd81b8ddedbe3ee mavlink: move SERVO_OUTPUT_RAW to separate stream header
+5eef9358d9de41431381978d9a9b704a8d4ac26f mavlink: move ACTUATOR_CONTROL_TARGET to separate stream header
+dff975698e7a1b3422072f97be362872c4e7ec5e mc_rate_control: delete unused _landing_gear_pub
+cc3c6f63e5acb997d5025632be21095aaa264432 mc_rate_control: simplify manual_control_setpoint update
+d5e468a19ed9e7f5fa94ca988d86daf5a0464570 change typhoon_h480 roll-/pitchrate P gain to reduce oscillations (#17044)
+5d441d65e1d4c7c72bec8e74be68b92dbadcaf28 Accelerate tilt fine alignment by reducing obs noise when at rest
+c9a2d0ed345a7e9b348d763fa8de58ed0901a797 IMU_GYRO_RATEMAX set system default to 400 Hz
+a1be55997874fc6a7ae059239a81d838251c9a0c canbootloader:Remove Rate limiting on FW update
+5f3e883f2c1bb59fe5bc9c89d5662f38a1c87495 sensors/vehicle_imu: vehicle_imu_status include accel/gyro full raw FIFO sample rate
+69bd3ecf952c43ddcbc8fb3bd8828380fe7e8292 sensor_calibration: respect board rotation even if uncalibrated
+5c27c477465d85a8e8add4eb2e094b26bf62067e Jenkins hardware limit px4_fmu-v5 to generic quadcopter at default rates
+cc11fb281854a1f9154cac9d8258262e60898c99 Multicopter rate controller: Protect for full throttle scaling PX4 supports -1 to 1 as input and this module was not protected against the input range.
+8a448718b97bbbcf0d6be820ade2fc660cab4395 RC update: Do not constrain throttle If the user calibrated to negative throttle, enable them to use it.
+da1a38b44ebcd1b9ff5ebdf7c18ea0952beca8b5 parameters: merge generated files ito single static constexpr header
+d1a3590aacfa9f706aca091d0727aa31ce16a94c PWM: transition PWM_{MIN,MAX,DISARMED,RATE} -> PWM_MAIN
+8b8adbf48e2d2d0113e625be853a4e7bec727264 Jenkins hardware reduce IMU_GYRO_RATEMAX on some boards
+bb7dd0cf0016ac1998a79814ec52b15079a74c1a modules/sih: move to px4 work queue (wq:rate_ctrl)
+ce76c84ce2b9ea5fcc21b9177324cf73de57eb24 sensors: vehicle_magnetometer respect publication rate limit SENS_MAG_RATE
+cf43d07f708fb13f41b69ec9770231e2983e5fd3 uavcannode: refactor into separate publishers and subscribers
+b422da45ec0539af7120fb535658cdd9243c5775 boot_app_shared automatically generate UAVCAN bootable image
+75f02d64b6556a8d567b39d80d17f7dd18f77c8e delete unused PWM_SERVO_SET_SBUS_RATE
+4922659ef4c890e3c307c46092e62a774b8180bb FW Position controller: specify in params that the airspeed setpoints are for calibrated airspeed
+420ceb76fcce230cfe66d4ea8a64b12889ee6141 cmake: NuttX generated vscode launch.json requires DEBUG_DEVICE found
+5c4c2c240c5c39bb8743e480e817c798d8cc17f5 tecs: dot not clip throttle integrator during saturation but only allow it to propagate into a direction which does not saturate
+2ca426946431ee9683fafe2a7d793cf7d031ea41 TECS: separate integral gains for throttle and pitch loops
+d0e8b882a23a009fc1fefd2f579376f6a0fff495 TECS: added alpha filter classes to energy rate and tas derivative
+6b8fa417e192bead013f93e54aa657b1aab02f0d SlewRate: Add SlewRateYaw handling [-pi,pi] wraps
+7c727edc3fc9ecdf4b51b4219ef44335ff5afba5 Simple mixer: add output slew rate
+3cc53f551d724c215302fe9a76671eeb5e7d6ab4 MAVSDK tests: Use full system timeout off Depending on loop iterations for timeouts is not accurate, as usleep behavior depends on the system load and asking for a 0 ms sleep can potentially return immediately.
+f52bad87e2a2e1ed12bf4715ddef93c2efa6d996 mc_pos_control: separate out flight_tasks (into FlightModeManager)
+adb98d57022dd515e0a2056341280200576deffb mavlink: move HIL_ACTUATOR_CONTROLS to separate streams header
+3b20310e9c9d8ff18f51dea5c7ab911bda01fda7 mavlink: move POSITION_TARGET_GLOBAL_INT to separate streams header
+672a1c90aa3ca42263173e399882447b12972474 mavlink: move POSITION_TARGET_LOCAL_NED to separate streams header
+6b1d02feb7aceb49e4cbbad1bb2593348bdd0549 mavlink: move RC_CHANNELS to separate streams header
+48be6962d1e7cd3b629efe3567308303fa8e35c9 mavlink: move MANUAL_CONTROL to separate streams header
+629d03b6842eb83ad54ba8a6a0ff6f20bd7eda16 mavlink: move TRAJECTORY_REPRESENTATION_WAYPOINTS to separate streams header
+5762c3b3565cf60b1184c6ba42e2e13fe7f5e940 mavlink: move NAV_CONTROLLER_OUTPUT to separate streams header
+c7db0942ba5d46f17a47d0aa44419eeedfde9ed5 sensors: vehicle_imu don't round measured accel and gyro sample rates
+bf5ee99952c72d3f18b368ec78e40af10cd2f167 sensors: acceleration always get accel rate from vehicle_imu_status
+7038cb8518ea12844c4f9d49d5236493abc8ebfe sensors: angular_velocity always get gyro rate from vehicle_imu_status
+053bf7e732ecbd3732cc3a24d64a069ec2d2bff4 Jenkins HIL tolerate certain failures
+ab43a942249091eb325a968610d162fd2294173a gps: keep track of RX data rate
+8435742dd51e13f2a2bef1ec7c54ff24a27f5df6 logger: double actuator_controls_0 and vehicle_attitude_setpoint default log rate
+4ed3ecea415dfad230fbc42a6ed84561c985598e lis2mdl: reduce update rate from 50Hz to 20Hz to reduce spikes
+cb4d974977b3fbe6b443536b789caa4da8c00aab mavlink: move GROUND_TRUTH stream to separate file
+283264603a4f6adcf264a6eb3680e9b4397bf361 mavlink: move PING stream to separate file
+97dc988f869f08b8f2ffb56035c00cac7a48bc3c mavlink: move ORBIT_EXECUTION_STATUS stream to separate file
+826dfa1941520ca51c705336727745a701f906c7 mavlink: move OBSTACLE_DISTANCE stream to separate file
+94146a7b166dfbda7dd0c3ce3567d720282a3743 mavlink: move RAW_RPM stream to separate file
+9c4abf334b772f5263f6de93605945181c516e72 mavlink: move ESC_INFO stream to separate file
+1ddfd61d34bdf3d8e8ea164c1a9d62b1bf8266ad mavlink: move ESC_STATUS stream to separate file
+674cd1e3b50de12d8298cf73c7d4c321a9d4c990 mavlink: move EXTENDED_SYS_STATE stream to separate file
+8f858d95e6b4f1e6df57716b5b45fcf89be76d8f Rename equivalent airspeed (EAS) to calibrated airspeed (CAS)
+98c8cbb27fca8a2e3876e1eee7defd68df136721 ekf2: fix odom body rate sign bug
+9d3e159e65d2148d801e4ff8031783204a48b6ad Make mavsdk test runner handle generated sdf files (#15797)
+ed357cf3563804ed1fd8b323124cefcfbff5f0e3 mavsdk_tests: move math things to separate header
+390edb770d5a6c09bd858049b4af9273127cfd92 Commander: separate failure detector cases
+4addf8ec3e6a5088336ba946d0b4f5f7cae3e4f3 thermal calibrtation: do not calibrate sensor without temperature sensor
+c43307b8cf1af2590614c056ab0bd5624ac08d73 EKF: convert drag fusion from Matlab to SymPy generated auto-code
+168dbdf6301f64449d3d21114db10e331d25890a EKF: Convert sideslip fusion to use SymPy generated auto-code
+a5a43dbc6c6e1cb12d2a117cebf20da702ef95ec EKF: Convert airspeed fusion to use SymPy generated auto-code
+1592db8f347636d49a7d02c70b6fde8542d5b8b0 EKF: Convert optical flow fusion to use SymPy generated equations
+1f386c1bb8d8a294e1b556573f1de9e76d20d227 EKF: Add yaw estimate SymPy generated code files
+0aa2f17562817432ebb6a7821990b57a5a3644d5 EKF: Convert GPS yaw observation method to use SymPy generated code (#880)
+21cc46edd7598fcde738cac4fd0f5ac5f24199f0 EKF: Convert magnetic field observation methods to use SymPy generated code (#879)
+5e739f66d69372eec94050b39194f8792f858555 mc_att_control: inline control attitude call and rate publication
+c5eb08423667e9438a6d8503ea8226c4c2a24dd0 mc_rate_control: use angular velocity timestamp for dt
+310b989c9aaefe69d9a29c0d670f3afbbf34ad03 refactor start of gps into separate function
+f950fe8a38748e701f353994932c9050fa92a9f3 uuv_att_control: added bodyrate setpoint to the geometric controller
+958d5a36ec9dd52a1e44ab6ff8dd92086babe0f2 params: generate param metadata as MAVLink-compatible JSON component info (#15389)
+acc3866ac93a180301984a54fc6ba6959e7b23ef generate_microRTPS_bridge: make sure that the ROS2 version of FastRTPS is grabbed in a colcon build
+c01bcd41f793f39eab10dbed8667d3956f6cb38e microRTPS: minor adjustements so to improve the readings; add more baud rate options
+77b11129fa567160a2ec442438ed513cb9de89e7 EKF: replacement of covariance prediction autocode with sympy generated output (#870)
+1394b5d7bcb6189ce978f80cf5bf9c8e025883ba sensor_baro add separate timestamp_sample field
+19059a80bd7f969082f6231748595f8ab9800751 sensors: throttle vehicle_air_data publication (SENS_BARO_RATE)
+8020d6407f1045f6f40c3142c80056ed6a2cd450 load_mon: remove obsolete rate comment in description
+b0458fbded813572a0c69eb63085a575bb57f2db Refactor output buffer updates into separate functions
+ff4be5d81582e5f4bb5dda616f44fa1fa1c1b0ca Set rate when subscribing to velocity, specify units
+8763d71bf0b603e0da42ea16fceae7fd2590546f Jenkins: set IMU_GYRO_RATEMAX to 4kHz on holybro_durandal-v1_default
+2af72c05b5eece5b1d935636bd0fec8cf9a3ef48 Jenkins: set IMU_GYRO_RATEMAX to 2kHz on px4_fmu-v5_default
+41b9e4f628103e0d11330a27d888244416def839 geo_lookup: move tables to separate file
+32c2064673dce13dc293371850ac47886155260d migrate Jenkinsfile checks to Github Actions
+37817dd0afb60d2ebac544c6075039b20696caf6 github actions build and run tests as separate steps
+6c78c62d9d3a016634a6f32d5190c2a679272adf BMI088: accel get max rate from PX4Accelerometer
+ab060cdab076fb6934a86a75349cd9330c873432 bmi088 accel: use IMU_GYRO_RATEMAX to configure sampling rate (with 800 max)
+0fcb873636ec2b8c7abcb9587f582d3f79db86a5 logger: add raw FIFO high-rate IMU logging profiles
+39a33a35ae0f02a58b45e33de5cc8cb844b52755 sensors/vehicle_imu: pause computing publication update rate
+5d6a72e383f36557a3381ec31b952ccc0ab2eae3 sensor_simulator: add possibility to set GPS position rate
+867453eada66f96959165a0da04e274314acb2b8 posix rcS: always set IMU_INTEG_RATE
+61a2dd8ec65aaaec3a09462fab5c1cae96580b60 Hex CubeOrange: limit slew rate so IMU works with DMA
+acdc15e2cdfc9fc25bddefe0a4b5a0d0323e873c mavlink: create stream even if rate is 0
+aef2a5755ebbc5fd5afa62d42697f44bea44fbfe moving storage_information stream to separate file
+62e15cbacf865e7ea32623fa6dda87185b4f3a5e sensor_simulator: set IMU rate to 200Hz as this is the new value used in the Firmware
+6126c190b221fd6890bb9ea3214b63a83f2d23f4 sensor_simulator: update EKF at IMU rate
+73bb18a05355d3789d34f37dc609927c6af4ae4e px4_fmu-v6x: Limit Slew rate So IMU works with DMA
+a9dacae57e1a20636ffb7d386450790725f1c0f6 sensors/vehicle_angular_velocity: limit scheduling to IMU_GYRO_RATEMAX
+96f043cd6247ea8ab3531c99b9399cf5b17e4964 sensors/vehicle_acceleration: limit scheduling to IMU_INTEG_RATE
+bc1960ef2b21e9a5ddb87e9d8e7c1450f914a153 mavsdk_tests: make offboard tests more accurate
+d92e66863ac057a4a691d482b8566081700e9e1e mc_pos_control: migrate MPC_*_VEL_* parameter to acceleration scaling
+bd154bf33c33763e57820b5298ca3bcb767ac250 FixedWingAttitudeControl: removed parachute from gimbal control group - parachute is handled separately based on flight termination in px4io
+e577c3b610894df3763b282a42aa3d354bee3a35 fxos8701cq: sample at nyquist rate, drop duplicates, throttle temperature updates
+e73380f726510585638e4e3ea487b9e8bfcbdc2b fxas21002c: sample at nyquist rate, drop duplicates, throttle temperature updates
+b5e23f544e7ec59ec431b4ab684736ad898e28ea Tune down solo attitude rate controller
+b461066ac529dc45c0462685a42b6ac68c3398f7 bmi055/bmi088: remove TIMER_REDUCTION, sample at Nyquist rate
+ca998c1822bd2330e6d4da3690dea860ed722784 IMU: parameterize IMU integration time (IMU_INTEG_RATE)
+3ea52fecd36956f35688bdfcc572f2c595fdc9c2 Added Roll Pitch Yawrate Thrust offboard test. Testing...
+48c60d354defe4adda4a742b20b40ea4b5f19cf1 mavlink: move tune publication to separate class
+3832214145705db3661816e8b4e323f81a9e1883 PX4Accelerometer/PX4Gyroscope: fix calibration offset for integrated FIFO case
+37d5d1b4d2abd8b65f88c01d64265d7cd96b6880 PX4Accelerometer/PX4Gyroscope: integrated data avoid loss of numerical precision
+06478d99972548d4c4c2f370f3608bd031833026 delete obsolete SENSORIOCSPOLLRATE/SENSORIOCRESET and systemcmds/config
+1ac6230758f5d400a0e6cf30d821a7fff8cccd20 boards: always change default IMU_GYRO_RATEMAX on px4_fmu-v2/v3 and mro_x21
+2020b77a438b4c3ecc4fc609902dadd4c73f2d87 microRTPS: use FastRTPSGen '-typeros2' option to generate the typenaming required to interface the bridge with ROS2 topics
+b3fe235129a6b6960233dae3faf5a7015d3e15df drv_mag: delete unused MAGIOCSRANGE, MAGIOCCALIBRATE, MAGIOCEXSTRAP, MAGIOCSTEMPCOMP
+b3d744505935bc529881fb0eb39075b79d2d9bbf PositionControl: acceleration based control strategy
+3d44077f2cd54f506ff152bbdeadbc28fc7c6135 camera_trigger: lower the polling rate from 200Hz to 20Hz to reduce the CPU load
+2ef37cd065afc58e5c0394b201fa03be18a13363 Spawn models separately from gazebo models
+336745f9f7d617a9bc88ffe29674386d0d308930 tfmini: reduce sampling rate from 10kHz to 143Hz
+df99555132dbbd1b59d4c75af1f4798980f83d1f refactor ll40ls: split I2C and PWM into separate drivers
+9d5aebd235bb9cc6abbc7a8d7b9c3f07eacc5958 Commander: Run continuous pre-flight checks silently As we are checking the current pre-flight state and validate wether the system could be armed, we do not want to spam the console or user with continously failing checks. These checks are reported to the GCS separately and are processed and displayed there.
+093e9ba1cebbfeddbbc4c7df53f4ef5d27568e12 mc_rate_control: use vehicle_angular_acceleration topic instead of differentiating
+7612879ffdeb1893e346527c1d7d398a3ec6a305 microRTPS: use FastRTPS version instead of FastRTPSGen version to generate conditional code
+512c405834fa093ccb4d33688ab481b43dcce77b microRTPS_timesync.h: fix comments notation so to be properly generated in EmPy
+b4ecfb77237669942686afa6edbb5a9234b99d75 EKF: Fix sign error in earth rotation rate correction (#763)
+bcb6056a12ae88c2bc04425e3fae8992997b5cab simulator: make sensor update rate dependent of the HIL_SENSOR bitmask
+d386591d0cf5d86108f55e20d55fc60036d577b9 logger: reduce rate_ctrl_status rate to 50 Hz for high-rate logging
+6c8f39c5d8b28be77cd5f4b59064fb9bfa274f78 MC rate controller: limit K and P values of PID controller to in pitch and roll (#14210)
+0ac300f77ad5bc1f957ff5cd916700edbd87bf06 Rename generate virtual RC setter/getter
+8df22541ef4b4e334a14ad900e1d70601620c0e1 sensors: filter sample rate calculate with simple interval average instead of perf count
+98aee29ddcb4d8f71d8fec2b9c982e2cede743d1 VTOL: Manual Pos Flight Task: do not use yawrate sp from weather vane if position isn't locked
+37db7d3bba965c379ac5e997661fa4930783daf3 ekf2: define max number of range finders seperate from max number of mutli uORB topics
+d4683886434ef7e5c654c0bc710414f75989c5ea Coverage: Run lcov separate to fix paths Without this the paths of the different compile units do not match up.
+b2f4dae2c41a2900b45d0f8e2136ac4cea92bcbe boards: fmu-v2/v3 limit rate loop by default
+d1260aa28c1f5815739cc5cfe8f8c8ebc070e022 logger: add safety (switch) at minimal rate
+c270e7515671f245cee76589f69bf46dab950fec vehicle_local_position: delete unused and redundant dist_bottom_rate
+66300876542dcc74fa268ff9c3611b3efef844ee TECS: remove height rate complementary filter
+250d5b8acc4de26269f9805794bb36e6d5b6bee9 TECS: remove height rate complementary filter
+0cb1b250e95668fc06fa28c190b3e60a210df6b3 px_generate_uorb_topic_files.py: update import error recommendation message
+b9d85c7176afe9c17b921077363c98a2756426f2 logger: Refactor new boot_bat logic into separate function
+a21a7cd5b9e5c3812152e0898c776938fc34a4c4 Remove output argument from calcEarthRateNed
+5dfc8f13625c02dcb445a4dec5042d4b9607677a mpu9250: main handle init and alloc failures separately
+d5fb7f47c2d78913d6c664634084b9ba3fd59d2d sf0x: split into separate header, implementation, and main
+156cf16265606b2f7fe75c0e4e0f6c3e4a42b052 logger: log all raw sensor data at a minimal rate
+04efd91840f954693b41bfbd7e789617f3b48ed2 leddar_one: split into separate header, implementation, and main
+fc1341208f16ac71655cf0b08237b8ae064c927b INA226: Integrate with PX4 (#12673)
+e189733bb97db12745446bf6afead84e09d8bf3f l3gd20: split into separate header, implementation, and main
+e6b18fe2da90a69d2be1e92ff5260ec0be2bfc09 mission feasibility checker: move checks for VTOL landing into separate function
+e10a4c50026d64c3332f08243e8c623d629b87b9 refactor logger: move subscription initialization into separate class
+991a0d35921f4ed8730ccea29c7f140f08ccb77a fix mag calibration: remove px4_ioctl(fd, MAGIOCCALIBRATE, fd); call
+ffee103ae05647a4e7936ec828905bcf037d1c6b FlightTask: add 1st order lpf on yawrate satepoint for smooth motion
+a255789be439e689990111d2ff7edcb26d0a8984 mixer: px_generate_mixer use static constexpr
+37ec78dc2aa38cf5cf1d3e69900c5b4a8a131903 mixer library split into separate headers and name consistently
+16f663ad52255fe9fb483a7426cfcaffe0a94cb3 microRTPS bridge: fix UART baudrate set
+84fe64b1c20a4ae8067f04b1e21a961263bac4db create new multicopter rate controller module (mc_rate_control) split out of mc_att_control
+1c4a8e7c1112c825abea2338394a1e1725241388 cmake NuttX fix generated launch.json (vscode debug)
+1a79f75f94ebbcb9ab5a17e4ee7560322c063e6d Commander: start pulling arming related parts into separate folder
+bf48004fb9118bd90794bd121a97166839363e90 ekf: move "reset" part of the init function into a separate function add getter for the vehicle at rest flag
+fc59414a2547963224e8dd5393e843dd58929c0d set_attitude_target: set rate thrust according to VTOL mode
+1a4ab069c9f3bb595fad80de8a2c0a40b48a26e3 rate controller: add override specifiers whenever needed
+644c816a2a757a71e52da48a159c793e9d4ab66e generate_listener.py don't use message length
+2837152983726c4d3fd278da110dae1b4e888a12 refactor mixer_module: move some code in update() into separate methods
+bde36f0f4a27b7cbfa9916175a27d84205a3328b ROMFS: rc.vtol_defaults limit inner loop rate (#13196)
+9f639d1f3be72b2e265e6376c33100bfdbee80e9 mc_att_control: move rate control to RateControl class
+f91770f9cdc2439edb9445df78be0cebd017b88d generate_microRTPS_bridge: fix fastrtpsgen version check handler
+bfbc9dda91ae94d5a7815148af23109c0bb5cbe6 VTOL: fix front transition rate publication (enable FW attitude controller to run instantly when transition is started). For that the vehicle_status_poll is moved before vehicle_control_module_poll in FW att C
+86dc4c5a005281528703389cf508fc1eddfcfd34 cmake generate vscode launch.json
+e9ab6a75bada21ff907ce7b76c9fe42a59b87585 MC rate control - Scale the integrator with K during the integration part to avoid having to scale its saturation separately. This is required to avoid premature saturation of the integrator when using the K term. Also remove double saturation of the integrator
+c13835c0f07ba0a74f1a2f00a88773f16ded91be replay module split replay_main.cpp into separate compilation units
+8cc2a7018e17f62fbc682dee6cc41dea4bfcf75b VelocitySmoothing - Re-enable time stretch, integrate dt to get local time. Also split a few functions into smaller ones for readability, fix formatting, use geters to get the current state of the trajectory instead of return arguments.
+3c5b24037a2a4c88d86cc59f1c8c4897a7003f9c AutoLineSmoothVel - Improve virtual pilot logic that provides velocity setpoints to the trajectory generator. Constrain the generated velocities in the NE inertial frame rather than just constraining the norm.
+9bc19fd7328ad1a44d1a87c5e73cdb6392bbbfe4 IMU_GYRO_RATEMAX add common options
+4d9f2bf7764dde0545044b977b971d49b498e2bf add IMU_GYRO_RATEMAX to optionally limit gyro control publication rate
+0817ee40f8f9f2481ce12c6a025a61087ef7fb1e Add generic vtol tailsitter airframe/mixer and incorporate modifications from PR 9849 in 4001_quad_x and 13001_caipirinha_vtol.
+f3eafdc296a8b0413283916ad80450b668b027e4 Fix wrong initialization of PWM_AUX_RATE.
+a5d3e10c67240df50403f01cf21a099499c28e94 MPC_MAN_Y_MAX: changed default from 200 to 150 deg/s - we have set the maximum yaw-rate MC_YAWRATE_MAX to 200 degrees and it makes senses to leave a bit of margin between what the user can demand and what the limits of the vehicle are
+11a28665b778fd229c9ca8cd30b9969ae90834f7 px_generate_uorb_topic_files: cleanup uneeded conditions
+85bcfd7d722df3344e7d1ae6e2e2642170056150 generate_microRTPS_bridge: remove commented code
+3d9f83a4f2751cec6d7c4252f1d694d9cab00535 microRTPS_bridge: structural change to make possible to generate pub/sub code for multi-topics/aliased msgs
+d24c415fd7a8f63351c903bada8e9ad9f372799a PID rate controller - Add controller gain to support Ideal PID form (ISA standard)
+27ef1899c729a7e40e249ef725bb749ee826b077 Fix up MAV_X_RATE as html tag doesn't render (#12449)
+423219c60ed2a9e4f97484634e2e4f4adc218d5b pga460: Change variable initialization to uniform initialization style, format whitespace, and change baud rate unsigned to speed_t type. (#11861)
+4c4bcc5fdbc17ca1a29877839f8c529cb1be20f8 Mavlink: Fill in thrust field correctly for offboard rates setpoints on fixed wing (#12311)
+f1c66749e358e674bd91ba3999196849996c6f29 vl53lxx: migrate variable initialization from constructor list to declaration uniform initialization (#11896)
+eaa3d4a24f7349a729c9d7761210da464144163c tfmini: migrate driver class member variable initialization to declarations (#11893)
+2ca40bfc65a2264040ed6dda701227b4d2bf679f Changed navigator to properly separate xy and z distance to waypoint
+ae6fed4f2915def3df6adadb850c559b050055fd Migrate remaining variable initializations from constructor list to declarations in mavlink_main.cpp/h.
+cecd009ddc01e4c28d5a60d6599ea3faf757e213 mc_att_control: fix vehicle_rates_setpoint_poll() error due to merge timing
+a707403eaf0a189edac485287a3c3a3ec54d7030 mc_att_ctrl: added yawrate control from offboard.
+ac002db25c1a7eb3652ac39fd3b54f8acb67792d MAVLink/Commander: @Pedro-Roque's offboard yawrate handling
+d13dfdcd24585587a4052f644819532b59f5ec04 AutoLineSmoothVel - Remove duplicate of _yaw_sp_prev update. This is done in the Auto FlightTask, _limit_yaw_rate
+3499b6ff89c6fdae3226a67583e3c745ba31acb9 AutoLineSmoothVel - Do not generate heading from trajectory if the velocity vector is smaller than 10cm/s This is done to avoid generating large yaw changes when the velocity vector is small; for example when switching into loiter or reaching the last waypoint.
+03332aaa20eb85b8089f858c1616a16173d5b497 PX4Accelerometer,PX4Gyroscope: set_sample_rate requires a filter update
+95f144dfb77cdcdead833c522d4f6fab2deac7cb msg.idl.template: do not generate typdefs for builtin types (not required)
+21194239c7f4fb460f3cb8a03a4ce5b3da08cc6a FlightTaskAuto: revisit yaw rate limit
+581d25f77f005f7250e4c4819550b2fb82f5c70e Auto mode traj - limit yaw setpoint rate of change when generated in the flight task instead of clamping the yaw rate in the controller
+73fb30f2510f53dfc3e628354ff6a2550a0621d1 Migrate an additional set of 16 variable initilializations from the Mavlink class constructor list to their respective declarations.
+42d0522cddf191c66a14f7e9d7661f9c95a64be6 FixedWingAttitudeControl: removed check for negative airspeed and slew rate on airspeed scaling
+d9f8e37288d8e34baac79b32d71862045946534b omnibus: use default clock rate of 20 MHz for SD card (CONFIG_MMCSD_SPICLOCK)
+d2a0c857edfc64d1b97ebd8965b7d1cfb0e182da sf0x.cpp: change baudrate to 115200 for SF11/C
+463d5512d92cf30b2bad05c5576a0c7c1fb2aff2 mc_att_control: only adapt yaw rate limit on control mode change
+7e8cf87d0d08f30fb4bf181731a37b65bcc6d0e5 mc_att_control: move attitude control calculations into separate class
+32ca6f7030a60f8144aab07afe99928947f455e2 ekf: scale wind process noise with low pass filtered height rate
+471e1bc86638bcc1d681c6e7860bbec426c2ff2e serial/generate_config.py specify full loader (#11667)
+1f65887982f6f136b088bdd6664f318585a3bc51 Migrate a few more var initializations from the Mavlink class constructor list to the respective declarations.
+09da8e7dfcadeea574c855d583a9d20a64a68463 ekf2: Split static pressure correction into separate RH ad LH ellipsoids
+e0c48d1d76bc2c436fd58cf3640dac481474c76f PositionControl - use dynamic constraints to saturate velocity controller for now as it is needed for the current smooth takeoff logic. Will be reverted after smooth takeoff refactor
+3543071eb9a386534ea65d4fbdcc70797cc6e749 Position Controller - Saturate the controllers using static parameters. Handle saturations in the flight tasks only
+986ff96c3e2017ac0dd960412b516e0f1865d0ea Jenkins mac compile run tests separately
+8dc050998943a8c8d7fcd91b985842dbade2378d mpu9250: split icm20948 support out into new separate driver
+53a127beb922325a5e39d37c3fba006ac7b40e86 Oversampling rate for MPL3115A2 pressure sensor (#11332)
+8da1ff4cfff699b9db5e1989c1362ac7324ccc03 generate_microRTPS_bridge: add the capability to receive absolute and relative paths
+504372f551d37d64141397c9add67c9d35b2338e MAVLink: RC_CHANNELS_OVERRIDE generate correct RC channel count (#11219)
+52c848a556fa7b82273dac7ff915893f43dd01f8 mpu6000 split into separate main, header, implementation
+c5fece6568cce7a2e36fc499ba94cf25c042279c Redefined reading strategy from serial to get the latest available data. First "stable" version of the driver.
+dd300dca0adbdbe01f6d5aadd099fc4f3ebfef20 Solved frequency rate issue. Now driver publish at ~10Hz.
+591e8fde5d01204588180da7a88a808ce5834901 Initial commit. Integrated new distance sensor hardware.
+766f911005dc4949925a46507236c62582d54d59 beta75 - Reduce MC_YAWRATE_P to avoid oscillations when battery is fully charged
+d295320e8285b659799d2122ffd8363faf1bad07 sitl_run.sh: lower rate for jMAVSim to 250 Hz
+e485885344dfc59bcf81ffec0192ed81fc82ed84 platforms: remove unused Rate class
+dc49e259b3c92fd64a0066e0ed87314d7b79b4ea logger: add separate profile for vision/avoidance
+43034922e24691e74515b2bcd8a82d59bcf72972 Mavlink: Incorporate changes in UTM_GLOBAL_POSITION message
+33a9eb946a8a727c54aaace7c30d48bf011b690b Mavlink: Reduce rate of UTM_GLOBAL_POSITION stream
+90bfdb6f0a2832268baa4d91f88a9e3130a335ff VTOL rate control architecture improvements (#10819)
+bba475aca19ecbcf83db1ea9c4fd3f5c919012c8 logger limit trajectory_setpoint rate
+c3a4fff0cd6081417be6076929909b69676896e3 Auto traj - generate heading from trajectory velocity vector if possible
+aa586ca327685b23e89a460b594ad5242c1774bc Trajectory - Overload integrate function to allow for custom integration period
+84665672ad11bc9ea7818c1cfc620c59686745de Vel smooth - Change jerk scheduling strategy
+22780efcd052377df71e3cccb88a5cba1ff89acf Trajectory - Add time synchronization between trajectories. Split update(...) function into updateDurations(...) and integrate(...) to be able to insert time synchronization in between.
+d2ed091a1d62eac14d4820151f74264ced740d74 delete IOCTL SENSOR_POLLRATE_MAX
+556a9422b5b5cfc0c5de24ddbba98890ab4b6063 delete IOCTL SENSOR_POLLRATE_MANUAL
+8dfd55fc9e147293586ad0b4dd340568d18c71f8 delete unused IOCTL SENSORIOCGPOLLRATE
+0ea18b2b73a397704123cf32bab1047d9e21a889 delete unused IOCTL MAGIOCGSAMPLERATE
+60a40ec131790164471e2d2527effff04b7fd312 delete unused IOCTL MAGIOCSSAMPLERATE
+aaf1667b091289e606a2e88df3a33f8292e1ffd0 delete unused GYRO_SAMPLERATE_DEFAULT
+3daf37433e2154c1308ac1bdaaba4676d2bd9684 delete unused IOCTL GYROIOCSSAMPLERATE
+60c14fe8f16f0767441fc30cf473396c2c4f27ce delete unused IOCTL GYROIOCGSAMPLERATE
+e759e0e1a513936799eadb532f993a38b694fc5c delete unused IOCTLs ACCELIOCSSAMPLERATE and ACCEL_SAMPLERATE_DEFAULT
+8ad59160c9333f869fc1c7be9df9f02017d9781f delete unused IOCTL ACCELIOCGSAMPLERATE
+f59f0d4b2d5734a388fafc292870bcc8a989810b delete unused IOCTL SENSOR_POLLRATE_EXTERNAL
+d552c2a362142178df8b44bc24dc9f3fa1170ffd refactor mc_att_control: move publications into separate methods
+3a462c2ba72c97bc22e420db9e070d0091168953 refactor logger: move debug buffer printf into separate method (DBGPRINT)
+0745ba9052b02035ace49988945c3760ea720377 refactor logger: move some code inside run() into separate methods
+5eafa1b34b802dbf8a6f256721139f5af6584460 refactor logger: move some independent methods into separate util file
+d832b4fe28375364a413f983b24a7a6740889530 rc.mavlink AV-X reduce companion baudrate
+50e46f89b671e9843c94ab821b0e4f664bb38187 move get_absolute_path() back to generate_microRTPS_bridge.py
+3fdf60a1af9e09bccf320cbfc27c7d041618910e for now, do not generate srcs/headers/idl for composed msgs: needs update on the PX4 IDL template
+703a5376bb6dace2e2a573be8bb7787a14011072 bebop board config: add a separate SOC_ARCH_ID
+fc980493d7d487111c14d45e61b7d368613ab9a8 px_generate_uorb_topic_helper: add a check for the existence of the RTPS ID for each uORB topic
+078f5ea198636d305188954e78d1a6410b879a76 serial generate config add 10 generic serial ports
+64912ed7f683b02eb6204c5190c330f76c43e5e2 rc.serial.jinja: remove 'param touch' for baudrates
+ced37fdf3031cc45dfd3504de49df0802dca73e5 mavlink_main: use px4_get_parameter_value for baudrate, datarate and mode
+a3d9b84b1e67b281684fb099ab1fd48c56d15f68 micrortps_client: use px4_get_parameter_value for baudrate
+5bb75a7ff81ba0ca1f0cd196f40abd26814f37ea Tools/serial: add script to generate ROMFS serial startup logic & serial parameters
+28521ea77c1655667235327474005d7409ee9029 move parse_yaml_msg_id_file() definition to generate_microRTPS_bridge.py
+a50fed1bf9ab79f6f642d029b467e2eb50d3b0e3 generate_microRTPS_bridge: state that RTPS msg IDs definition file path is relative to the msg_dir
+7031bb5a6d9f869238bb8ffef6e7d8957d16d903 navigator: add yaw_acceptance getter to incorporate feedback from position controller. The yaw acceptance is defined by the mission item. If the pos control sets it to NAN, then the yaw at a waypoint is ignored.
+93daec43d3a0b81fb4cd60ff0687fa08eca26ecc generate_microRTPS_bridge: add option to set preprocessor include paths of fastrtpsgen
+d708c965eceae8db631ca9af9738091ed69c0f41 px_generate_uorb_topic_helper.py: beautify
+4137517d123f773682c44806970698e63f921831 px_generate_uorb_topic_files.py: beautify
+57f5bb629052d1a3295b4b342f0b39e61ee14c4f generate_microRTPS_bridge.py: beautify
+1ee6c03627a2c2efed902dd562ea4beeb6543425 add --generate-yaml option
+96f3feb08853aef5eecf59cbbd653e926b1bfb0a weathervane: get rid of passive strategy
+6038c22174cecf6b84af2bd03be5cf58f86eb7f6 added a weathervane library - computes a yaw-rate setpoint that tries to rotate the nose of the vehicle into the relative wind.
+0d0fcb140ce59ddc6ab50fef177534e544ce31a4 Updated rc.vtol_defaults to correct PWM_AUX behavior for VTOL airframes. Added PWM_AUX_RATE to rc.vtol_default and set parameters directly instead of environment variables.
+e17f0802cce17d3e241d4c239c41a44e806ce9e8 tecs msg: changed flight_path_angle to height rate as clearly we are looking at height rates
+334aa57a5f21bc9b394e58c73054d0a04dc99e21 Fixed-wing autoland: Remove the dynamic altitude acceptance calculation and just use a simple separate landing altitude acceptance radius instead. This gives users that do not use LOITER-TO-ALT waypoints more control over their landing procedure
+454d175617d383e75a20090369042aca7c7196a9 rc.mavlink:Seperate sys compaion init dependant on MAVLINK_COMPANION_DEVICE
+ad4bd6b0d6b7737233cc9fd0e2eee696744b26c5 Jenkins add separate Ubuntu 18.04 posix_sitl_default build
+f100cd73ef03e462fb2a03fd8c0ab6163c3cb99e msg: Create message for GPS drift rates
+d50042f58d2c940ccc45d029ffcec977b73caa95 xnphlite:Intergrate tune control library
+c53c035ec6701e5303b547cc8be3256ac761ba60 px_generate_uorb_topic_files: add check and throw error if no timestamp field exists
+a5de82aaa87bee699bb027b30f3bab51c4989a18 cmake: add documentation for px4_posix_generate_alias and px4_posix_generate_symlinks
+8090708f76906246caee481f66153995148453b8 FlightTasks: generate tasks depending on target
+81f0b64ad32ffaf446ad9e3f937986711f353ac2 gps: add SER_GPS1_BAUD param to configure the baudrate
+5500dfc55035cd3992c8693c3b3814e9c571b599 px4iofirmware: moved the simple register updates down to the fall-through block, moved the sbus rate update up so it doesn't get called on each of the other updates which would set the wrong value
+76848456bbc0852917345e452ae43a64647fe306 Jenkins split SITL tests into separate pipeline (#10144)
+2bf90574ed42459626725632c12bba0655bea7d9 estimator_status separate LPE only flags and comment
+a24b614dec0f59d5c11f39f93532c4f7640375de FlightTaskAutoLine: generate heading along track if yaw setpoint is not valid
+2302c6400458c0de22b1029e457fb5d90d64e010 listener: add optional rate and cleanup existing arguments
+d85481be6d631aeee5011ba27d82b4dc9c368d97 Restructure FlightTaskAutoLine: -add FlightTaskAutoMapper that handles the different types of waypoint and generates setpoints for all types except of position and loiter - FlightTaskAutoLine generates the setpoint types position and loiter if the flight between waypoint is a straight line
+8b1381ead9803f8fdcbae6fc2f79087a0cbbef3b update ecl l1 and usage for new roll angle setpoint slew rate limit (#10005)
+ca42483794287b0d2d3d549df0257e0fc6319f68 update msgs fields from camelCase to snake_case so rosidl_generate_interfaces() is able to generate code for ROS IDL files
+ac8f44268ba724a2c0d38bbb8ba3492f66fbb24e Added remaining two channels of PWM_AUX_DIS disarm parameter set commands, remove trailing whitespace from pwm_params_aux.c and pwm_params_main.c, gps/params.c and added block comment headers to separate sections instead of whitespace.
+4a8a3a4079cc3e032219947ca32cff5dfd6be21c l1 controller: simpler way of doing slew rate limiting
+fe4e6779f3b248af9c992f6a514022efb0bfe25e l1 position control: added roll angle setpoint slew rate limiting
+ec16a4d0637d0fa551e585d14857b1f6a756ab71 Migrate LOGGER_BUF argument to rc.logging, group OUTPUT_MODE instances closer together by relocating UAVCAN logic block in rcS, and alphabetize hardware specific logic in rc.sensors.
+bf4ac7a9d639f26fc7557345a219ffd1bec04764 mc_pos_control: for terrain following use range sensor climbrate for velocity estimate
+a5e8eb23ad41a2a3df118af2faf7c8a458b29ef3 PositionControl: saturate thrust integral
+72a213aff71af09b21db0b14295107a99843837d FlightTaskManualAltitude: valid altitude/climb-rate is required
+3c40aa0d9c7023740b08a89cd7e8fd4993915c13 PositionControl: if valid velocity and position setpoint available, always prioritize velocity setpoint generated from position error over velocity feedforward
+89a902524a0314ac9c12c3597d800c69a22d2d91 px_uploader:Revert the rebooting text to have baudrate
+4f937a2ff6fd54b3bd2b4953fefdd2922162d0a6 Migrate px4io logic into rc.io.
+e1f2360560738ce35276639c0f22dd21b25dfefa gps: remove unused field _baudrate_changed & _mode_changed
+4d71686ac6daffff87b2e7681d75cf897e4e881c gps: add GPS_YAW_OFFSET param & properly initialize _baudrate
+5dd981a7be453ae6016d0371ba8a52fcb186f44f GPS driver: Initialize baud rate and improve output
+c199ca51938d33e9f0bd37185986b178da291ef9 msg generated print support boolean
+e12acc4b282d26ae1b8c1e1cb4220b53ef54b097 Migrate hardware specific mavlink stream cases to rc.mavlink.
+cd07e756b9963252eb6e99fd93b78f14565367b8 bmi055 name separate accel and gyro perf counters properly
+9fa882119d8309b79a39f9d7114956188266e197 fw_pos_ctrl_l1 remove unnecessary orb rate limits
+6579b7254a78618641acc296a7f9780374fc46de Change TECS max sink rate minimum value, because very fragile aircraft might not be able to sustain higher max sink rates
+77d4554e6d38358d489cde76b725a41493001aea Modified comment about feed forward of yaw setpoint rate.
+a6883c3a0d21b6549179f2d69b82c9356634cac6 uORB generated header use full name in C define
+d177e96508d2572f6fa8eb7ff41852749c882548 EKF: Fix bug causing slow drift when high rate flow data is used
+7f1686171b3a2dafa7d88a0ec864b5755913ea3b sensors : add parameter for maximum flow rate
+e4d863b95f940e2e454491bb86e42c0814bf83e0 Subsystem_info status flags & checks: Separate the functionality to a) set the health flags inside commander and b) to publish them from external modules
+533f42adb8bc3f40d6751f2c916cf64c6b6248c9 crazyflie: add probe() to vl53lxx driver and set imu sampling rate to 200 Hz for this board
+4098d50ff9e48935bcf38adcb5658e514acc4e15 pmw3901 driver: remove integrator and publish data at sampling rate (about 10ms)
+e33da0a821b54be098eae0f794adde328060733f fw_att_control set default yaw rate max and update parameter descriptions
+6cadc922855c67120044a8b30ab78d5377cc1bd9 EKF: Don't reject saturated flow data when it is the only aiding source
+868bc010878adaf5a124fc0c9d6cef4045fa06ac EKF: Relax minimum required range finder measurement rate
+2e92484325ee99ea7538a39e2f3fa623e8d974ab ecl update to latest master with separate libraries (#9406)
+c5b2f59f5767ffc5f5401677ab917b0f114a072c PX4 style fixes (excluding EKF generated code)
+b98cd6ecb55654498d65c26d8ead128881fb9f32 ecl-ekf tools: separate the analysis from the visualization and preprocessing
+f2cee9970c658fea586aab98494f93cafcceeb40 MC acro: add separate params to configure yaw expo
+c0efe2db56cc59c3615d9e70279cc7cbc568364f tap_esc: replaced PWM_DEFAULT_UPDATE_RATE
+41de588a73465f2a3f619df1ca9cc8496f6a5143 Move HIGH_LATENCY2 stream to separate file and update some comments"
+fb1bb7a769f0dbc4d3710fdf4d9b2280f986bbaa Move the SimpleAnalyzer to a separate file
+2a5c7efd8df5a93234d738ffb410dbbd9558b2f6 Mavlink: Use filtered update rate for HIGH_LATENCY2 stream instead of main loop delay
+1124a397f2b2543e826294361c91fbaf6cfc8534 Commander: Move telemetry logic to separate functions
+32815dc1d3898182bcf4b0cd1b472507ce7a30cc Only generate the HIGH_LATENCY2 message if transmitting is allowed
+e01763a7c7d0b47c11f7b9124efdf15c1456bbc9 Set the HIGH_LATENCY2 stream to a constant rate
+75ed9b002bdf67420b9f8f664dc8d8a698a8010c Add the SimpleAnalyzer to generate messages for MAVLink streams
+00f6ef1d2f35043d84ba3d070efe7b463c0a4821 Style fix and iridium signal check rate fix
+ab8527cc8faf125e1e6878ae915be4cc8eb8373c FlightTaskManualStabilized: limit manual yaw rate in flighttask
+d64b59b95ff7933ecab3e776026c4713016fbb39 FlightTaskUtility: remove duplicate slewrate
+c4fbde395becd2ae7afee492edf218b51e918e5d ManualSmoothing: new class for smoothing setpoints generated from sticks
+e763642a8bb996cfddd9dc429cade6c7003d48df FlightTaskManualStabilized: this task will geerate thrust and yaw setpoints. Thrust is not yet supported
+b4d56ed51a629e224c73cbedd8ccfb1b18e16d67 mc_pos_control: publish yaw_move_rate
+03c81a8948734c7f48c63a343fd90e7b3314b093 ControlMath: never saturate in xy when vector is below minimum
+85c1627c7461e2a44d1e719f94f942dc356f3c5a TranslationControl: new class that generates thrust vector from state and setpoints
+de872ca04723666b23f677be1a14c03b60230537 FlightTaskManual: remove the smoothing from the task to add it later in a child class also separated the velocity scaling to enable sport mode
+888a63c00151385c316584975636951862d1461b FlightTasks: bool return values for clarity & introduce updateInitialize() to have input data fetching separated from the update()
+634a67d058024caf9a19728997146fb4540f5c63 FlightTaskManual: Smooth flight integration: slewrate now works, set to 0.2m/s^2 in all dimensions for testing
+1f6571729207097e546f82c77104428bb5e41544 FlightTaskManual: Smooth flight integration: Make vel_sp_slewrate without any refactoring compile     analyzing detailed semantic and external uses of the variables still necessary
+1b858f5e5656fe1f34678a9c23b50f74d86c98b1 FlightTaskManual: Smooth flight integration: Copy over vel_sp_slewrate without any changes
+c4c4441c8785ee3243ec3673e2d86f9916a059a1 generate_listener.py combine message exclusion
+e76a7e48c801f26acd2a0cdfc6440aa2155be94f generate uorb topic helper ignore _padding properly
+a98c7cf5c88a3f59f6cbfa3a90f1a1559d8b6b7d generate uorb topic helper rename px4_printf to print_field
+3db17a04fc9dd7e035cda5a1a952bd04ee3d2954 uORB generate message print functions
+096e2ec6293eab5b93187454b63c4ad585376629 Multicopter mixer - Always unsaturate high-saturated motors when possible
+5da2842dbce2a1b21edfcd75f02430b0cc5d5f96 Multicopter mixer - Always unsaturate low-saturated motors when possible
+6d445cf5a6a1353754839cd75243cd0ef84afce7 Adds ability for generate_listener.py to process out-of-tree uORB message definitions as well (#9097)
+64b97cb18e0dd420eaca0a6a9b6f52657696f33f fw_att_control: in acro use thrust from rate setpoint topic
+74730273c17ad84a56459b6e11d0795e5a268dde fw_att_control move angular rate limits to body angular rates (#9023)
+041886a28957c17505b19367eb8703444123a4c3 attitude_fw: move angular rate limits to body angular rates (#404)
+426f2cce2e54bc40c4ca74cf0385ee199493cd5e fw_att_control split header into separate file
+5b7c062f67c2d971f58b0f22f41587fdcccd01c9 mc_att_control_main: remove unused _rates_sp_prev
+f346b00ee0b975fcea9d1d826f523192f498c0e8 mc_att_control rate controller: use a butterworth lowpass filter on the D-term
+12c343317cde38c9866c3bfd346fe842d739b341 Add aerofc baudrate to list
+83133b1bcae2eae59383dad7d1b6070657e9d279 This commit fixes the way baud rate is generated from the program argument in the FTPS client and agent.
+f866698fb26defbe0262106f2a7260f89b7276f0 ekf2: Update parameter description for max optical flow rate
+d53c5319791945130f8cfedee9337f29853c5445 mpu9250 wrapper: set autopublish rate
+915f728145eae90a8184149978fc0d5ad1f655ed libtunes: Separate the default tunes from tunes.cpp
+2bea09a997d953c7ee61ae39dd8363c4bca0d992 rate controller status include rates
+98441ac1004c937eb9c065f710b004ba9e8378e5 Log rate controller integrators (FW + MC)
+5a189f3c4a8b2f599c10d9277f5d11e77c01b367 vmount mavlink input: rate-limit vehicle_command topic
+48edaa7ef63c360d3d94f7e655756f9da999ade2 vmount: remove output rate-limiting
+b7d7d1209b331a571b205d5a0006e543c1891357 px_generate_mixers.py: scale mixer so that sum(z_thrust_scale)==n_rotors
+dac2a93ea2edfb4998121b9610f27523794e265a logger: add sensor_combined at full rate to high rate profile
+a02cd869c342fb33b0c2163b9deb302108f483f0 mavlink receiver remove unnecessary rates setpoint class member
+1f63d85869b3495f3f66a3300b365c57469f1020 NuttX generate Make.defs per config from PX4 cmake (#8573)
+f86d4b18f815522e74a34ee32617c40db935b05b Jenkins generate uorb graphs (#8571)
+4d08f56faeb024bc806f9932f25ac5fa6a7d1344 cmake add missing generate_px4muorb_stubs dependency (#8559)
+90b4afebb55627a28d62e412d252a518a7733909 Commander: properly separate preflight check and prearm checks
+51952108931470d994c934b96e03e4e128f139e5 CMakeLists.txt: add custom target uorb_graph to generate the graph JSON files
+e2d6c0a8f9bbdd566beb9262bab08b45af2800b3 uorb_graph: add script to generate uORB pub/sub graphs
+024589d63de054e699ae8f5b079973ca1f6e7a74 msg: Add separate vertical and horizontal validity flags to home_position
+b21af471ac9b1505871e76ece6368e17351ce892 QuadChute monitor tecs height rate (#8395)
+1a4f4b083c37f8da1d681cdd6c0db51f78d44a2e cmake nuttx keep builtins generated by nuttx apps (#8323)
+b0ad8269a5f49d8fb1624e15845a052a60cae69d EKF:  enable separate monitoring of aux velocity innovations
+26171df9fc08838aba37f7d466eed6249f12e394 mc_pos_control: save previous velocity setpoint after constraining, fix smooth takeoff to be still excluded from slewrate
+26d95ef67479b90212f5ea8255d43721865ff904 Mixers: Include mixer_multirotor_normalized.generated.h everywhere
+2c4228ce985d0f3e46a7721c5e5b94689f427842 Mixers: generate all versions (new,normalized,6dof,legacy)
+99f6c4dbc3c5fd9f9e84dc1f37add76da3f81afa Mixers: Generate from geometry description files
+e12bfa30d42d9add1b095cc1d19bb87e727ad339 mc_att_control: defualt parameters set maximal acro rates to 2/1.5 turns per second for roll,pitch/yaw
+3ce5525b7ce56aeb8fc9a66967fd674858abaae0 mc_att_control: use expo input for acro mode to allow for high input rates without loosing input sensitivity
+be6079bc52fac0b3423094f7f377325662f55201 logger: add high rate & debug profiles
+474f216a0a315981ed43483833898806924a2eae UAVCAN bootloaders split into separate repository (#7878)
+5922e08f5e052d455b5aadc0a6bd601843ccd12b nxphlite-v1:incorperate master's led changes and fit
+e281958b4342c62021833f62a64bef80859f7c50 nxphlite-v3:incorperate master's led changes
+53e9ce83528ca1edb55748bba2f1b19ed667bf3c incorperate master's oneshot api - not functional
+b59aefc989d34cad32317b0235192310ce4d47e7 Airspeed measurement: Add accurate models for dynamic pressure
+c1199d1202fb1a1b8fb1e14df73098faf88732d1 mission don't apply slewrate for altitude
+7a822c9db27792bfd3fd478789ae71504f8c3cf3 mc_pos_control: don't use slewrate in mission
+e58766c3942ae773d1d2f6d78855eae43be30fd0 MC pos controller: log exceptions but rate-limit them
+61351792021576a4f2b64ee719857322073de22c generate_listener: Add support for uint16, int32 and int16 arrays
+49c0947cc2ec35787ab3023066e474df9a1510d6 generate_listener: Add space in array output
+e39b38ba96971245aaf6d2b1c249868c8717665e landdetector groundcontact: adjust climbrate if landing speed is low
+7a3a9a75d50d11f527cddc69a4fe160810d1ce78 Add command line options to PX4Flow app for I2C address and sampling rate
+560e9e88dc0977bbecd53386fa5572347d5fd43e Apply slew rate to reverse thrust
+305a95aef9dea790ebb7009fe04c98532768a82e Integrate Python-based tests and benchmark into Travis
+73d23742ea5c297f262c0e03caec61ee482977b1 vmount: rate-limit the update of the outputs
+c05ea542d9f94fab15b56fae2ee7734ab797d6c9 Added requested information about generate_microRTPS_bridge.py
+be090c0109a08500e15091bff02d0568629a024f Fix GENERATE_RTPS_BRIDGE logic
+09f1373a08543024672b43b9d47f70614f061113 MAVLink: Adjust stream rates to match real usage
+c1f5feac831776b5721c0f400782faf7b784c848 MAVLink: Queue transponder reports and send them at full data rate
+2e85a4363e618e20e8e1712f8ee35b5291e6da3a MPU9250: Separate mpu and mag resets
+cef3a29ac9b3995c8a6b7d214a07b8d53530b68e refactor replay: split timestamp offset into separate method
+674ae5292ee420a45c769cc9ac0cb0fe0da78334 markdown module doc script: write how to generate the modules documentation
+7a4f557a7afbcab5433f7ba1f22165e7de1668e8 px_process_module_doc: separate page into one page per category
+7b108eb879417e1836c409f507fe9177bebd990b Reading the pwm signal from shared image. Both 8 channels PPM encoder and 8 channels revicer are required. Before launch px4, ppmdeocde programe should be launched. To download ppmdecode programe, visit https://github.com/crossa/raspberry-pi-px4firmware. Pxfmini and navio are not popular autopilot hardware in china, I can handly to purchase it. So that I use raspberry pi to build autopilot separately. This dirver help us to decode ppm single to pwm and pushlish it
+3c42c8f7fab5c9d7fbeaec52071f8130da081f90 mpu9520:Use maximum clock rate
+81c46b6f92842a5528d079a2e10ad89b4d56ea95 VTOL Standard - Disable pusher-for-pitch strategy in manual control
+b511ccd9fe9a3aabac6f896252bc35edf2a57810 mc_pos_control: integrate complete order and limits of velocity setpoint calculation - one warn_rate_limited was missing - vel_sp_slewrate was in the wrong order for smooth slowdown/speedup on takeoff and landing - slow_land_gradual_velocity_limit was replaced by calls to math::gradual - smooth takeoff speed got controllable by user input - comments were corrected - an additional check for the sanity of velocity setpoints was added
+2758a4a6fabccd8ec31981a563caab7682445d8f mc_pos_control: add warn_rate limit function
+eb067291bf06d9ac736e6e14b54e929d7ce5c224 airspeed sensors apply offset separately
+6f3b6bf55be22abaa146c383b801d9723111fc73 Update parser to get class information and create separate groups for each class
+cd8c8ea5de150d12f4d95c5e828398d6342a8863 FW default PWM_RATE 50
+d6e9287f516aee8fa69ca571a400090de15e58ba mc_att_control comment out unused rates_i_scaled
+69ba69f30ca887198c6efd72cf0743996c4f21c2 controllib split blocks into separate files
+c84611f0f5a76f459f46999a93a1c405e35c8b3e MAVLink: Fix rate handling for camera trigger messages
+a89980f440a16352adf0b0d90f005b401e8112b0 MavlinkParametersManager: update sending rate
+0d22e97c09e493559b8c9645bea21e4cd7c53077 sensor_params: document PWM_RATE=0 for Oneshot125
+da31e6e0b5a913e88d8487b915f2648a32bb0242 bmm150 max datarate changed
+e9aef2eb958e6f11cbbf5ca1cf1e0b341ecf28d3 px_uploader.py: properly loop through all baudrates
+2467297acfe5a03697add654db6ecd8705a3bfd4 px_uploader.py: fix exception on baudrate change
+709bd8cb28a214f40da7b0059909e01815a54b20 mc_pos_control: combine separate pitch and roll maximum tilt angles into one because there is no sense to have different angle scalings into different directions it would lead to unintuitive piloting experience acceleration is directly coupled to the tilt angle regardless of possible assymetric multicopter vehicles
+6a99281501d80155bfd7e4bb572612fab9c5c9c8 Incorporate @bkueng's feedback, inhibit bogus output on first pass
+3dee42b5ca737601671af0ca57c243d44ed69ebf stm32 : deconflict pwm_get_rate_group from all other timer modes
+8c9affddc8159a82f13f99608855b7c82bd9b3a3 travis-ci generate and upload parameters.md
+ade6336fd0ee86a0357bc10057266245ffe575b1 ist8310: lower sample rate
+e535156599dfe4781762a4c8d61c09a68297154c ROMFS: set baudrate to 460800 for aerofc
+a5cdff06d5630a769e9f6b1306ca16fc10f0857c param: implement rate-limited autosave
+a6eb0053c5ca4af338487a54afe096e822d22db5 TECS default FW_T_HRATE_FF 0.8
+e75f5a4642a7c9784ba9a75849740fd2a4ce1e6d perf_counter: add perf_print_counter_buffer & perf_iterate_all
+9f3043f9cad0346aa82b17cec2736ab270910a59 printload: store total_runtime in a separate loop
+d21c44704d691bb47efe38b752f34941f3cd3001 Propgate any errors in setting the rate up.
+dd25366b86750540472e987076cc4ddcc0a1652e clean up timer_set_rate and add advice on hacking counter frequency
+2d5588ae02560aae029844410212aab38785d671 simplify oneshot mode selection; use zero PWM rate as indicator
+fd3889b5a6a268de2fd5876bb26765419a7a4eb9 mc pos control: auto handling such that it does not use slewrate when goint to pos
+5e2f18ebaa26996827f9fd9ce4059c66c862e94e mc_pos_control: added separate velocity control setpoint slewrate for deceleration to improve the smooth user experience while accelerating but not have any delay when braking
+e4c012289ff2edd1189c25f3cf38a145ff2b63e3 Logger: Sync setpoints and states to same rates
+f7e4d8453db823a69f81e75e518042dd3b4012ff Logger: Drop position_setpoint_triplet to 5 Hz since its not required at such a high rate in analysis
+30841ee6bf1b750a9de42f01624d81cea5d83a20 send_event: separate initialization and wait until started for 'send_event start_listening'
+4811ab6b137784a84c67c64bffa4917a7b7f0702 logger: reduce rate of some topics
+4eea89bb42377cc4c9b7738119ace8fa4e92565b refactor replay: move topic publication into separate method
+b2d47adf56cc2157659945afd241aeffdec320b3 jmavsim_run.sh: add -r option to set the update rate
+3961c46d6834f2ccac29c52d5bff78de3fced8aa UAVCAN: Incorporate manual loackdown
+3e88b2f2b102b9ae22539422e03396e8ab112b04 Rate-limit navigator update rate
+47411b052cd4303a1d65b4d1f106eb76d4d6ab41 aerofc: test 115200 and 460800 baud rates
+f9795ccbabd02527a35e91385b16cceae1200c90 px_uploader: support multiple baud rates
+6121119631d775d134100225a92c32da0ed05ee4 ROMFS: allow to use 460800 baudrate for onboard mode
+f300877db40bc0ee2848ed203a6e505f2c58ebee yaw controller: computed desired yaw rate based on coordinated turn constraint
+aaa24b0cc877e60bdb421574f9357f664dc786b7 Reduce attitude rate but add Quaternion
+c4a8aa9c68b0a38e4fa8c4a762687305f287e33b temperature_calibration: refactor to separate code & reduce code duplication
+9e80a6c9d68661df1246daefcef44e895161cef3 sensors: rc filter no unstable cutoff, better initialisation, reset filter on change, constrain output Filter gets unstable if cutoff is above sample rate/2. Filter initial frequencies do not matter a lot because they get replaced by parameters anyways. Filter delay values get reset to 0 when the filter is reconfigured otherwise there can be some weird spikes in the output. Filter output gets constrained to the range again because of possible overshoot.
+d991285406fad2d4b39ecdbd2337b0fb773ed16a sensors: rc filter: added sample rate of 33.3Hz and lowpass cutoff 5Hz hardcoded for testing
+27a4ce26918a12ab8fce570303728051592c2010 sensors: rc added lowpass filters to the 4 main channels without useful samplerate and cutoff frequency yet
+f718b3a97ac95ebd8d94d06a85cc3d8180c95476 mc_pos_control: limit slewrate different in up and down direction
+9e9e0e23ad68f451cea0a5b412156afc807e8bd7 Land detector: Detect ground contact separately
+7e6daaf3d120047c6b55d0cc2950f79b23c6f8e1 tempcal: remove separate temperature calibration module
+7e21aaf0c97fb9e1bf39c4825aa71fb9a40b84a8 Tools: Add script file to generate sensor thermal compensation parameters
+117826a31f0682d152fdd2d3c35fd065f6e722ff sensors temp compensation: refactor into a separate class
+967197adeea1a9f051c06a851ed64130a079cbb9 update sitl_gazebo to used flow with limited ouput rate
+8cd913c148f8a0753bfdcef30f18acb11389b9e8 gps.cpp: add gps baudrate 230400 to qurt
+e90bf8f8e554c63213a5c6834f48973241fa4bbb px_generate_params: Sort parameters by name after parsing the xml file.
+6fe9b8e54351c8fe620f959b62ce1902b514f3ab use CmakeLists scope to generate te XML file
+e0fc0a847c87ade89eda1f33e20d7c690dbac0af Mission: - weathervane on takeoff - separate cruising speeds for VTOL in MC and FW - cruising speed resets - mission work item logic is more clear - fixed double execution of certain work item states - enable cruise speed change on the fly by command - moved VTOL transition target position generation to mission code and set always
+3a17c07b1e7b582e05f68059311135e730dfde51 Implement RC and DL failsafe action handling for multirotors Move RC and DL failsafe actions handling from navigator to commander (credits to @AndreasAntener) Separate manual kill switch handling via manual_lockdown to prevent override and release of software lockdown by RC switch
+64449883928182ca5abb516b91cf9818bd74bb18 MAVLink app: Send messages on average at a more correct rate and send on first call
+42101671f4a7509c238ed584ea22d1ad8004def1 Drop rate gains for H480
+8aede5d32bba9ac4c80513e28ef44b600b7fa41c mavlink: add 500000 baudrate
+10c6ae77aeeffd5f1ef45e96c86d8ed6dc9f1e4a Attitude fw yaw: Initialize yaw rate properly
+d4da626e78e0b415a0e46cc345017d1ca6eb5873 sensors: move sensors with voting into a separate class
+f9b3b5a799667e0ec4b1bf29692892533514c9cd sensors: break off parameters initialization into separate source file
+14f75bc8a3b9b6af44cf3a6cb9eaadb86eaf0b56 SITL CI: Remove log upload from test script and move into separate one
+8e8336a83f3ceda0e27c3980c2ec2a0f112a7f7b gps drivers submodule: updated after removing unnecessary baud rate
+0acdf32ed571fd5c4dbfb09dfae8ba7941620a4c gps driver: removed unnecessary baud rate
+d10c4dd824865b1bdc9ad2b822286f5b9a94da61 gps driver: added more baud rates in order to support bebop2
+17f49ec8cb2da6034dcdaf1c1b6adf1baa73f5d7 Integration tests: use separate commands to set mode and arm
+508c782bab689cd5a2f5a992986332ebb0f5560c mavlink: Add support for high speed baudrates
+4edd12c44ae1d67df8b3ae5e7f010caeb9875f9b Make PWM_RATE configurable via QGroundControl
+0734db1740ca5f8f480418892067bfe3da83dfc3 Ignore all CLion related files as they are all generated from cmake
+bf9a1c5a1881f3992269f8e9b271736b68445d0c Removing alternative io timer rate for CF2
+c5f750dcca156ce84d1156ba66f7d25b797c3f45 ekf reset: more granular reset / timeout strategy for gps fusion
+3aa9a72562f8d78b71eb06228a754f0824403960 mavlink_shell.py: default to 57600 baudrate
+318c970477394d61445276b818a3867cf72e4cc6 mavlink ulog streaming: add rate limiting
+7d72f31a295ad0dde3600581110326e87924cab2 mavlink: integrate MavlinkULog into the main Mavlink task & receiver
+b9728ecf3981cc16dde07497cb8f4df503d2a707 Uploader tool: Add option to set different baudrates for bootloader and flight stack
+71e87cf2876553b769aea9779389f3a2e45a7e21 Set maximum publishing rate to match MPU6000
+fde165b4f1679a6f65fffdf7f55028f99fb4edff Fix 2000dps gyro rate setbits
+cf8f48486898835dcbb55dcbe8c54a4427349022 mixer class: updated comments on slew rate limit method
+c2a511d81d2356191ee812e8b4d192d397a3295c multirotor mixer slew rate limiting: naming and fixes
+8b889caa3323b1b4809f1bce052bbfe9e7ce5d1f slew rate limiting: implemented for fmu
+2607769470450074cddd73c8c516874c20bfe1df slew rate limiting: moved logic to multirotor mixer
+66ddea01d144aff29a6f815c9cedeb29947b7289 implemented slew-rate
+e0618422197d4f9a98ebbaf36be2b928cde730bf posix main: only try to generate symlinks if data path argument given
+cf5338df02c52af1bbdf4f4fae9b3326f0ee6d45 accelsim: lower publisher rate to 250Hz
+d1850f5112497dfe05bb1238d884c99c1d3f49fb uorb top: measure the elapsed time to give more accurate results
+e42ff72d6a2a24c3fde35a7096d02fbe4a47f948 Standard VTOL configs: Limit yaw rate
+3b58caa32a15f371dff1c11b2a0dc10b332ea75a Updated motor RAMP timing to match slew rate limiter
+79f2cd79d93e26ec44c89838508328ece94c453b px_generate_uorb_topic_files.py: add multitopics to generate_topics_list_file_from_files method
+e7afecb544b5921e719c9a3acabb13009cd340d2 Tools: add separate jmavsim_run.sh script
+d5c96ec66ac7f27d446496cb3b3b1781fa189218 LPE rate and stddev changes for mocap/vision. (#5467)
+3163cf90c9916855e56a64a1692694443f85f2b9 FW: simplified flap/flaperon logic and always move them at the same rate (don't jump)
+d84a3250101da6df242a5f7a8c929504f5eee7c1 Integrate DF BebopBus into the wrapper
+f07cd13fe82eb756a2a19ff0ac41349cddc6e3bf circleci update to tolerate submodule changes (#5451)
+ce27cc8326c24b4835d1af0e01fc63cbce7641c9 mpu6000: Separate DLPF params for MPU and ICM family of sensors
+00d4eae373ef1eeb184000c1586ee4a40328e267 attitude_estimator_q: don't filter output rates
+422cf7e21ce4be26f02096739389e568389e9e23 assign timestamp in vtol vehicle_rates_setpoint message (#5227)
+3a0f4c84a516a6a5f9c71c532112015c3c9f3faa motor_test: add iterate command
+a1b710025b9c686b4ce4ccb6e96889239fe8f122 Improve new logger update rate (#5073)
+71d150f6ec0789d36d4f7af85a2e44c225846d51 MAVLink app: Fix rate handling
+5de19500c2e0cb0acb20ab36ce26372862f10de9 TAP-v1 set Console Baud Rate to 57600
+c4e77cf41113ae775b87078104b239d88bd28603 logger: fix '-r 0' parameter: should be unlimited rate instead of 1Hz
+bc6e83f5e3a3552afe8704ba43829c6682eb58ae Version reporting: Be more accurate about platforms
+25e749de7764bd466db0108ee849fe524ccbb6ab use MC auto rates always in AUTO removed duplicate weathervaning limit
+998579befc22d15c22c9c5b78ff612dd4de06f56 mc pos control: zero yaw setpoint move rate in attitude setpoint topic
+57fa9d2070b92ebaffee51fcff59707dbe46c681 use separate altitude offset check in FW
+6739ae9dfc96e4e8bc3857d191722bb7b1ce7e8d ekf2: substract gyro bias from control state rates
+2f113a4ce3138d3ec9b595636aa0656b47a31ebf MAVLink: Allow data rate updates
+3ef6ee056f5fbae679417897e9da3d32c17a48b7 Sync rate control gains
+65da9173b92ca251090f92b1bd0c2f86cef3a225 EKF: capture innovation checks and reset events in separate variables
+afa3429bdbcf09c4104461bc789fc4a851d6e453 210qc: Fix sample rate
+aa355d86d08a2198273f09ef21aff442ef68aa9c 200qx: Fix sample rate
+2c6a8c0ce619a7ba57fb55a474e7f6ac35b682ef MS5611: Drop readout rate to 25 Hz to alleviate self-heating.
+6e7c605279f77ebc66b5da17a296f0741cc326a5 Tools/px_generate_uorb_topic*: combine the src & header generators into one script
+093eece29b039697ac5aa20ed1199876a1de902a orb message templates: move common code into px_generate_uorb_topic_helper.py
+7d4c4c0401fd9f4e488f22bbbac797234116c40a px_generate_uorb_topic_sources.py: add search_path to the environment
+12165ba5a48ae8be1cf0c4034f138f5bfcad7a14 uORB separate tests
+468b0b25de5c74c93fefb1f94a060a23c7761ba9 added different parameters for ascent and descent rates
+f1b7e7714e39626d2ddc1aed5d25d925558ef71f EKF: Make average update rate of EKF closer to target
+aafcae7e6f1bf3161b630430edf073d63725783a MPU9250: integrate using the FIFO sample interval
+4269db73a059998387c48650e80d683859d461ca refactor semaphore: move into separate file
+1a57488ac68e147389050752e8b6b9bbf6620a56 orb: add a separate uORB::Manager::initialize() method
+1b133931a621237042e670473a035f6811cfcbf4 Battery charge estimation: Refactor the filtering strategy and move it to the backend, doing integration before and filtering the resulting charge estimate
+1827f78ab727aff59b56cb79179ee9c4adeb485f orb unit tests: use orb_unadvertise & create a separate test for it
+58a7db51c373416bab894e8f55582c616c4d41a0 gps: add RTCM message rate to the 'gps status' command
+630146686ed73f64545f16ee48ed32ad8181df19 Comment out line which checks for attempt to set sampling rate beyond that supported by device.
+8c246b3219b07065d6fc67646f0eb9cac9348817 mavlink_receiver: only publish the distance measurement of the mavlink flow message on uORB if they are valid On the snapdragon, optical flow is computed in a separate process and sent to the mainapp via mavlink. Distance measurements come from a range sensor and are already published on uORB. Here we make sure that meaningless distance values in the mavlink optical flow message do not interfere with the ones from other sources.
+d2ecd3c9f574925c918ff980861d62b819f94c23 Modify config files to incorporate changes made in the corresponding non-legacy CMake config files.
+fb97edd8afc2a091201ad0865b5d40ab7f7aa6a1 Adding new CMake config files which will be used to generate a build which uses the legacy sensor drivers.  This is only temporary until integration with the corresponding PX4 DriverFramework drivers is complete.
+6344fa0e8cab9b63baa7b82158a5ba62857916fe limit maximum rates of all measurement at which they are stored into the buffers
+5211da9f5b56dd140930051a2fcbe826d20a2755 Adding new CMake config files which will be used to generate a build which uses the legacy sensor drivers.  This is only temporary until integration with the corresponding PX4 DriverFramework drivers is complete.
+fde635ef5ab2fbf45a576719406095481a3b5d43 px4iofirmware: fixed display of sbus rate in px4io status
+c5f5b9f53c0c65cca0b0ca5c4069f7d0159b189f drv_pwm_output: added IOCTL for SBUS rate
+30ce7fdd48fed3143a71a8294b44483f275493e0 px4io: display SBUS rate in px4io status
+6290e621d4c60136cea16f902247095fbae60ea6 px4io: added control for setting SBUS rate
+f19761d278bc725289615983564169f4801e74e1 px4iofirmware: support setting the SBUS output frame rate
+58122ed33d0534626c13c063c2088317c0fc84d9 sbus: added support for changing SBUS output rate
+7acd5fda22b05797d1d9f985b78807ea96c6f075 ekf2: send flow sensor yaw rate data
+9259406a2981083e08d6497376251eb0aa7c5e81 generate_listener.py: add a timeout of 2 seconds
+1269dfbc43b8a2dc2a593192c1fd8c88c23b7c59 generate_listener.py: fix listener command
+0bfe3a44037b06beb507189609a31d3b5429c180 Updated lpe for separate sensor source files, also made more quiet.
+4bdfb8a10775ab2f8feeade1c622de259234052c Drop Wifi rate to 20K
+04cfc23c013086c894d7505e808fa40fe78ebdb3 allow pusher for pitch strategy to be turned off by setting thrust scal param to zero
+db2a53d95df220b1e7df1ab99655b59d254575f8 added parameter to allow scaling the forward thrust used to acclerate forward in multirotor mode
+13967975c1de26c37a9dbc4db388eb02edfe64ad Wifi link: Drop rate further to relieve pressure on ESP8266
+d3f5cf5d936efce10907e858fe83de4fe3970fee MAVLink app via Wifi: Drop max data rate
+55e4e75a4f30237ab1cf5ae3b75a79958f34e71f SITL: Generate SDF from xacro on every build
+eb41d25ff6972d1a443d9c63bc369313f2dac746 reduces update rate of progress display, stores message time (not TIME message) as floating point seconds, automatically extracts TIME message, updates usage samples accordingly
+079151b3fe75401cf0fd71aab15c8695dc336ceb New strategy to build and run jMAVSIM
+e66a3bd99ff0b9dd6a27895ec2fedabc158bb773 ekf2: incorporate fixes to covariance prediction and initialisation
+c6bd93ed401b784d8743da648099fe4b7a056a86 EKF: Include all output files generated by derivation script
+470098e182523919c4f9674cb7a861ea17d57904 EKF: update default tuning parameters Parameters needed to be changed when covariance prediction error was corrected. The magnetic earth and body field process noise now use separate parameters to help with tuning
+76a9ee261890416e8ad8ff2a60656ce527a1a491 MAVLink app: Limit to max updaate rate
+ff338d8920a40ffd8aff111eb50951d124598379 set mavlink data rate for snapdragon
+1b7115dec9d91d4b9868b640cb2fc389b3f23b5f increased airspeed fusion rate to 12.5Hz
+0cab404cb892f6463dda9d8c6e293ab4246476a2 Recuperate 1.7K RAM with leaner startup scripts
+647526407a2a7cba1a4b3d740dac61fef000b9f1 snapdragon_rc_pwm: cleanup and raise bitrate
+cd2f0eca9503df8421153958e7164a3bb25404a9 uart_esc: major cleanup, raise UART bitrate
+2dcd529ad873555a9a67002509f0530c6fb01c76 sdlog2: Use more appropriate priorities and locking strategies.
+37079dc7437087def1718e2d0d1fb27a7017ed7f sdlog2: added separate replay messages for flow and range
+122dd9c53125242c84d1946c15726df481b8f626 EKF: Add source file for optical flow LOS rate fusion
+74694e3c77fca90e7f11bdf29b2ddfd3a746462f Commander: Support fallback strategies for rejected control modes
+68e45057a05d24e87e3fcd7aea2b571be0a1434f sdlog: compute logging rate correctly
+5aaf74bbe6a7eb841f7dded9da93df762fb92f04 MC pos control: Allow higher yaw rate by default
+44e885f3c3d48c67379a7561ae5095d1e055a91d Att control: Allow higher yaw rate by default
+c6a30d74c1a8750cc099fb4597bce428f8fec609 Bump VFR HUD  rate for OSD
+1d0c968a888b7395a8dc67f2c59d56187d2bf4fe Widen rate gains
+caa94d58a6c28eaff7ed38eca2167783f9e2af66 Manually integrated Jim's changes from integrate2_jim branch
+020cc5978e3816c15c4f1071cc00e029e57d9504 EKF: Move calculation of declination into a separate function
+c7640723c9096f09ebccfa8bbf920758562ae7bb change std::fabs to fabs and rate_threshold to double
+dba462b9f34636193d9f3b698d0a7242e3d4c0e4 EKF: Improve efficiency of optical flow fusion auto generated code fragments
+48ea0230e1e1f06416b947e149a0d8e72dc56ec3 minimum clearance for separate takeoff item needs to be bigger than acceptance radius
+4123da4963904f6db8ce5132c346a5460a2c6a0f SF10a: Run driver at the default max rate
+9eb46fa7a06126416fb3e0b05c414e078415116c Conversion rate comment added
+7edd07f8cbc9da3da62c365b0ec5ab78d69ec76d Rebased on master, removing the default_rate field and using default to 0 for rates
+76da9ab82bb75b51f8287daaee248b01a111da8f Set default node id to 1, default bitrate to 1M
+f35e3335be8092d14136c82f35f48c253e0b250a - only use takeoff strategy when in auto mode - after jumped takeoff set previous vel setpoint such that thrust setpoint is continuous
+bf03b8cb18ff6404911ea172e673428efac329b9 Yaw rate limit: use a lower limit for less twitching
+e17f3441190bbd3b8437e000550feb13d6edc929 MAVLink: Enable 4 streams and fix OSD rate configuration
+19b81b9ab26e4576450d6cb946ee06a127b2c6ce Commander: Rate-limit preflight check
+751a95deb84d6fd5a948431724057bfdfc6d233c Commander: Operate blue led on pixracer
+4437727b970282a5c2d720a1791976cfd25f839f Airframes XML: Generate new icons
+f22c574b877070b919fbad03d2a5e0a7e846b952 Integrated cmake_hexagon for qurt build
+a4018bcbc1d554a2f06a1a0bc2a9872e40bf3f11 Update to higher jMAVSim update rate
+7c3a67e3747e67defe05fe9ab92b607fef37ba3e use optimal recovery strategy for tailsitters
+ac4e95df058e481bce20ed377f2daeee77343ce6 use optimal recovery strategy for tailsitters
+ee2e3811d73c18158d0ca0dfe2c99a21f636b3a2 RC lib: Support separate config from init, allow DSM bind from all boards
+b958928095cbd65a8de2eff9fb454694315af73e publish rates and quaternion on attitude topic
+ba00b2742ecc56093cc9dd271843315a02d62b30 QAV250 config: Set higher max rates by default for attitude
+989b65912bcf7bde040d12aea6c7e1e0058f7f73 jMAVSim: Drop sim rate to 400 Hz
+76c479170a3fdb61e21b302f20e0d3f2fa08e01e add transition back throttle value and angular rate
+67dd28e2c4e4e6fb39c345e74c40759baa3f5500 update distance sensor separate from flow
+719881b4a473d8be66a00be17bfc740637891a08 EKF: Run vehicle status updates at full rate
+17653113d53c7c70451daca4efa62ff102c6b39a FW att control: Run all topics at full rate
+4b56587188d9b990809dd15f045e8103038adb17 Gyrosim: fix rate and device id, also output of info command
+e41c3cf87676e64a1cadb42840998791a3bd1981 Missing Close es and poll rate reset
+d5c89c53923d0eacfcc1614d07887b7db77e383b BUGFIX:Take 2! CLI "commander calibrate acel" resulted in hardfault
+2ffccc5c9f1667aae5a2908e66e8a39df7faa15e BUGFIX:CLI "commander calibrate acel" resulted in hardfault
+6200cf6d869d1eb452519834f24557cfa346f4b3 reduce gyro update rate to 400 Hz
+234a200e6081bc19c0489a5bd266ed4d00cee917 renamed heading controller to wheel controller, added groundspeed dependency and separate parameters
+b93f34c99bb5d71bc4260541235b9e906d9b2796 use separate heading parameter beacause the other one gets reset in auto
+7ddd5712c53da99715ff14602510f44fe56fe8b6 Integrated DriverFramework
+d04a4969e211a2fad5d2c18fdb266a39bd5d773a Integrated DriverFramework
+56d67c6f6c8f19d5362936257ed4e6a76513c0dc Tools: Support injecting param meta, do not generate code for these
+15e8f28c88c90440b2da8f37cb578978610c576e VTOL att control: Move param file to generated version
+90023b2a0c2073fa0a8610729214a10e94056af6 MC att control: Move param file to generated version
+54fff33e8ff9c132b0c986dc40afe68543089b9a MAVLink app: Move param file to generated version
+b54a149b908f3fe5fe580ff39a8d0112803d104e reduce PID rollrate P and D in QAV250 config
+27df787bfffbc5858e2fd3e41491e293521c8683 Separated matrix lib into own repo.
+83079e0e11854ee4517c0dbd2a7989d7c2e806fd Inertial Nav EKF: add notes on use of generated code
+8a6e9d17bad1348682c8e6f727c4261f4530df07 MAVLink: Do a better job at receive rate limiting
+af6a1961870daba1b43a612eecd151f92b021a5d Add generated code for 24 state Nav Filter
+d4a19163bb49b20612643b4fd531cf10e0496892 Added switching from attitude control generated rate setpoints to manual rate setpoints when in rattitude mode
+c4a82d78c880b9de3800b3c6983e827890f9ec8a Added commander support for rattitude mode.  Still need to incorporate attitude/rate switching in multicopter control
+43834e3fafa09ba38fe6f995cadcf191e666250a Att Q estimator: Lowpass output for all three rates with adjusted lowpass frequencies
+468bac71c2997f17b04546f03b50f84c54adddce Fixed PRI64 to PRId64 in generate_listener.py
+44bb50e9eae36713a37624e9686eca62221a0360 separate _DZ parameter to XY and Z. this allows disabling pos hold for XY and not Z
+a7c6a343c6ea0d27f007ee250415ea3bef81514e Commander: Do not enforce sensor order, only enforce that all present sensors need to be calibrated.
+4d7cc41921101cf9ee91793cf12e21c3d94a7c19 EKF: Retain minimum Kalman update rate
+4e4d10d8b9b1b814729e529a461a37e284f8f0f2 generate_listener.py don't depend on platform dependant slash
+1bfc919c83e93eddcd333a606a3da6df3b0f0dbd cmake generate MSYS Makefiles on windows
+e8fd711a5c721230ac829db0904bc3d4f00ab455 uorb generate interally set required paths
+8d756055b8517a153667ca78a0c00f73cf09158d integrated control state in fw_att_control
+6dbf4e45733c551d67038ba85f704ce937fbae3c integrated ctrl state rates in mc_att_control
+78f5a35d1214f3d60878e4c0104428b98826d919 integrated control state in fw l1 controller
+90f2e8d61a82be3b2cd60d112cfbd7fcf48af76b Force CMake to generate UNIX makefiles on all platforms
+5c52efece4b988ca8f13fc12c3975e32705f927a Sensors app: Rate limit new sensor discovery
+f43ccdaea1f515d06508b6edaafac0d0be956dbf Make parameters a separate library.
+e6cbee74bf04dc4ceee610139b51dcb76bc92329 Tools: Fix param code generation to generate correct union access based on type. Generate #error C-code for unknown types to prevent silent failure.
+a470e03cf0dc50665b1327479ed74d89722f4f32 Rearrange default stream rates for MAVLink
+d5e152f2cddaab6ace64f656baef7569c9b7c44d Attitude estimator Q: Add output filter for rate outputs to bring noise level into manageable range
+dce31a76a82ceffd42c510b1ae2487ae80d05110 EKF: Set correct interval / update rate
+9950d5e9501bc6921cd7d9d8b84f61521ba4f7b7 EKF: Use delta angles / velocities if available, fall back to rates / acceleration when needed. Remove unused sensor offsets. Store estimated offset on landing, but do not yet load it on boot (we want to check these after real flights in logs first)
+4143c9402972c28aba55a3c0376fb8d4dabf0d45 sensors app: Re-introduce sensor rate limiting
+33bd30233ef99ea8e0fa8010e8dad36dd84619b2 Remove mission topic and move it to auto-generated
+b9face97660482faa6d41aac8c7d7197ca6155ef PWM in / RC in driver: Move to generated uORB topic
+b0a9679fcafd82f147b93eef252a1fd965a7a6d6 PWM out driver: Move to generated uORB topic
+647c2e2a3a7d0e0b67f5311d436844b8c80f0618 RC param map: Remove non-generated file from GIT
+b530582e5970f934650c75d22e7e3c9807f9e647 RC param map: Move to generated uORB topics
+36a787bd91a50f0b3b16aac93b536f2a636d942d Mag: move to generated uORB topics
+1d1431e532a63ba35bb384609ba642826abe1525 gyro: Move to generated uORB topics
+7e24240ec394ab4e0c011e2891d30b955f9b0f38 Baro: Move to generated uORB topics
+33a1e3127a3e92f5fdf9a4aaad19f5ad3e7fa0aa Accel: Move to generated uORB topics
+bf9bbfa27fc5f2b5ea909600d7dc983998f2ec4d Handle turn pitch rate compensation in pitch rate controller instead of pitch controller.  Also set inverted flag to true if rolled more than 90 degrees
+39732abf1f16d4dc9ca643001ef39cf73a462727 Changed ecl_roll/pitch/yaw_controller.cpp to no longer transform ctl_data.angle_rate to angular acceleration as the angular rates are already angular accelerations as calculated by ekf_att_pos_estimator
+c9d0b54a6f102a08fbb77cfa4955cc9317a85fad Attitude estimator Q: Integrate data validation lib
+9df860e92177faf6cf3e137fdd4c55a1311c5eea update uORB for generated topics
+b3c1d5692669e72ca41c15152b8028e78532281c sdlog2 update for generated topics
+16cb9edf19853a3ba603c8cd7ee548d74023a8bc Converted telemetry status topic to generated topic
+c3d10c4cb309bcf1d260f257a569b86e0edeb19a Converted multirotor motor limits to generated topic
+ffb9e8716196389cadf8b73f6488c5f5229b3381 Converted satellite_info topic to generated topic
+c826451ac187321368711106d20c98759ccaa973 MAVLink app: Do not rate-limit trigger messages
+06a4e9c58593ecc311c70d623d7e6d9877f5caaf Rework trigger to operate on work queue and timers without jitter
+8b7f1cf560220f649001d2927e4831dd9504be31 MC multi attitude control: Limit yaw rate to avoid mixer saturation.
+ebb061764a23d075dfd22a7d6fc3a8e03f048ae9 MC attitude control: Limit yaw rate further to avoid mixer saturation in the first place
+e0870d09cd98a5329f45c279142e14abd20018e6 TBS disco config: Yaw rate looking good
+fbc1b78b3819beeec9f5327ef40fc3de1d599808 Attitude control: Enforce rate limits by default to prevent jittery control outputs / steps
+0d9d5d1fa5d443cb397a14751105213304b173ba TECS: Limit rate demands
+adda7702f9cef732dd6665f80af421f0ced8d6ea MAVLink: Reduce default link data rates
+d19718a23bc0fb757002fadc5fa50393daf7e911 MAVLink: Reduce default link data rates
+193e02ebe601143100bec240508047935aa780af Remove rc.autostart, as it is generated now
+d26cb08b3bdf4618600f3fa191587181e7ae9f95 Firmware makefile: Generate autostart listing automatically
+fde0c65d7749a1a951a1dc3389c2d1dcfba2d09d Airframe generator: Also generate autostart listing
+d94f2aa407741a86256e1971197e5efb3ec93ddc MC pos control: Use separate params for manual control
+033c512fbf45cacc59262a6cb1cad9c437270122 Add separate params for manual throttle control
+d0d46c97138edbc2583866a0da9e12df2ca1cd0b MAVLink app: Use better default rates
+482641e40313eb1a7e810021c72b0610d3b7882c MAVLink: Crank onboard attitude rate up to 250 Hz
+44eff3681955ee03c9611fd17a218edf32b3ec67 SITL: Run more streams at higher rates
+fd63ba7b898b95469b62f6f3f42f12e042aae619 FW pos control: Widen acceptance range for yaw rate to re-engage heading hold
+f0e9817f2b2cd2eef15af1c4b6c00cc94fd5d39e ROMFS: Adjust onboard data rate
+319f9d820f2c77cb8b63cd3342accbd5a183d6de telemetry: Crank up rates to make param downloads and other things less painful
+5b354b96310fb5fed71bfa944db00052c3ad5bfa PWM driver: Fix _IOC to _PX4_IOC for getting servo rate
+74bdec2cc642b23302a80ab75a4500854ac32d39 Merge pull request #2459 from wingtra/estimator_LP_rates_log_covariances
+da29b88a04cd8f144ef48bf3b8b66652e5d46b91 added LP filters (10Hz) on attitude rates in estimator
+adaaeff48a4d7b3b36e407f832a837627171d67d uORBTest_UnitTest: Split test function in 3 separate functions and add a test which fails because it does the subscription before the advertisement.
+2ba8ac44382d7e88cc22b73471733c2d01d9305e Move mission result to generated topics
+adbccfaa1cd100609490b61f2081a0619b0a36c8 Saturate velocity command for mc_pos_control.
+28d3729acd202d8bac131ac98e59534e8d08f25a Backport of Fixes mavlink_if0: invalid data rate '(null)' bug
+4df833d25d03f6cdeb7eb12c5bd2ca54bf606b29 uORB: factor out ORBMap.hpp into a separate file
+ef6e07fc9bf6f4cdf51f74c930b57d8becad185d fixed wing position control: - only lock on yaw if yawrate is below threshold - remove more magic numbers
+363a4821656d5fd8afef2887150f6ee705074af5 Move navigation_capabilities uORB topic to generated message set
+d7547d388fdc60c74b838987a99f81d19ab1a8c5 Remove auto-generated airspeed topic
+3da7da9466799a854febed0d57c4dc730b78fbea uORB: Moved wind_estimate and vtol_vehicle_status topics to generated topics.
+a75c0d8eb1b4aed14e95ae1ce004c8809d0e8fed uORB: Moved vehicle_vicon_position to generated topics
+411e0b2f84b5aa006c6ab030dcc9a47890fe7ebc uORB: Moved vehicle_land_detected topic to generated topics
+5d62fa419a109c1ef56e723707b004d143e59bb3 uORB: Moved vehicle_command to generated topics
+7fb581291807b28e001991db9b6a1f514fdd1f8a uORB: Moved time_offset topic to generated topics
+38c0a1a251d0f8390e5a3462136a2eb3897bb045 uORB: Moved test_motor to generated topics
+b36fe0232f34aa34e703809dd68b6571b7fbe7e2 uORB: Moved tecs_status to generated topics
+520d830cec15866ca1d018bdc51b6133cdb08491 uORB: Moved subsystem_info to generated topics
+f1d038efc07edb336dcf930e199a21e7f214d6b7 uORB: Moved subsystem_info to generated topics
+f7563816d4c1db10846285b84d2c6509b04eeaad uORB: Moved servorail_status to generated topics
+7b90746a7fab9b0a591791d298c5a4ffa93c19ed uORB: Update objects_common.cpp with newly generated topics
+0e51092eabbec4993036ce88e2c09663b5232b90 Move geofence_result to generated topics
+a994e5826705018e394c7c4bbcb598f7fc2b8ff3 Move encoders to generated topics
+d400643738f6a3b9d9f245a87d0c837f55daa179 Move battery status to generated topics
+06ba8d924a116f670efa96a90145b21a80fac0d3 Move estimator_status to generated topics
+a190d01ade748f06ac595fe6ae2454f6c376c833 Move differential pressure to generated topics
+961b6b7802b4fa68e1a2bb8ddd5672fa26bfaea9 Move vision position estimate to generated topics
+01d72adca5f5193f8ec868526c0d3ea091667c50 Move debug_key_value to generated topics
+6ce097546cf9a7195eed1e69b28b9384c41ac484 Move fence to generated topics
+e07731de7a5d3cf5f7a5deedd60556b761399bb7 Move esc_status to generated topics
+b980e34c3c473c8b6b19b67c18a23c9b4cc8411d Update uavcan app for generated actuator_outputs topic
+f73a942c05dd08a6106aac2a0c7bac0c35092dda Tools: don't try to generate messages for hidden files starting with a dot.
+5b6f1b5ca554189cc25a52926066f857c543d80c fixed rates feedforward: plant for feedforward is given by derivative operator
+7f5a5e085cedc9f76f549f4fc5ecebe62b9ad0aa Add "calibrate esc" command
+16df7e1656235b2184955363186e08d7882ad923 fixed rates feedforward: plant for feedforward is given by derivative operator
+fe357a9a667e5076fccbdb28ee9bcae55c18f5b1 Separate timeouts for battery and high pwm
+a6af1fc0faf529b214f9158bf172f34488517be7 Add "calibrate esc" command
+7da96b3bac49ca8fc391e0bb44c31b344c0818b0 POSIX: Fixed uint64_t print in generated topic_listener.cpp
+9179fcefc9ce138f8fdbbe9e194ca11ecb116b33 Calibration state machine fixes, generates less bogus error messages during calibration
+1978f1bcac1d854d035f78672decd8d4ac67f6ce distance_sensor: remove 'distance_sensor.h' autogenerated header
+00296ba24170d808bfe610fbde3e89e95d6f3908 POSIX: Fixed uint64_t print in generated topic_listener.cpp
+dabcf63c506f5ead7978d49df039e4e193cc3a15 mavlink FTP: Drop rate to realistic value
+542dc9f65d05291b8b9661374044f8c51a4dd209 added default rate I gain for multicopters. added default gains for FireFly6 in mc mode (from Simon Wilks)
+b6441d29661be76d6790a4c492114065424174a3 implemented new mixer strategy
+5b91f172e397ec57420869680e35653f2f844edb topic_listener: moved generated file to Build dir
+3af6e9d76e9ba6cd860a2addf0f0ab197aac2807 added autogenerated code for topic listener tool
+ecbff2885c6af9be03c97422fa62b4bc03a772ce FMUv1 config: Recuperate unused interrupt stack space
+0ebf626632675dc5d54d08164be04d37ec1d74d2 MAVLink app: Allow higher max data rate
+31818b30b6e7402ee6a6ebac9ef8381478f4ee20 Linux: Ignore generated messages
+192d70e5702534fa09b8f364d564476bf17dbd54 Linux: removed separate path for dataman file for Linux
+63d741e3686d4dd1fe872426aec0b1570f897628 Merge pull request #1993 from philipoe/PR/IOActuatorUpdateRate
+77771b2bbf2ed784fee48d535bbac2e8ea717c49 fix comment on MC att controller rate limits
+7f418445f2a2108b1026a31b3763da5e6d960fe1 add new parameters for roll and pitch angular rate limits
+a07712bb1e41538de72686562c8295f2688f6880 apply roll/pitch acro_rate_max in MC attitude controller
+93eff2bb956e920b99b2058550fdbc3f23ec6155 px4io firmware: Allow actuator update rates down to 25Hz. This allows to set the same update rate on PX4IO as on many commercial RC systems (e.g. Spektrum, which works at 45Hz servo update rate).
+989aba363df8d98b1cb548a4b5dc0f915c49e771 Merge pull request #1928 from kd0aij/limitAutoRPrates
+6ccfc222d38ef0f409e7d9d237aeb4c6e80bfeb3 fix comment on MC att controller rate limits
+b356508f6b05504af745dd1ee2ba2ab00816057d add new parameters for roll and pitch angular rate limits
+6b26594697a305477b81aefa4788e1521de63bc5 apply roll/pitch acro_rate_max in MC attitude controller
+a184aebf0f27a77d528921d66965ab1304c4fca0 mavlink: Crank up param transmission rate
+9d61e3a7db733309c02b238703c3773d436864f2 Use new calibrate_from_orientation api
+631e518c45b054441cbe9eba5167d3075d5d2a9d BIN_TO_OBJ: Change NM radix back to hex so multiple leading zeros in NM output won't generate octal constant in C.
+2d8908ad01cc75fd7fdcd3bc2c94c6d398322662 Merge pull request #1905 from PX4/mc_att_rates_ff
+7236f22f12dc5609f2775b846d12a62175c11d80 added feed-forward for rates
+e191958ce656dbc31bc0029b9d0e1ed2fd4db72c Made aux output pwm rate, min, max, disarmed and failsafe values configurable the same way as for the main outputs
+7bf6c3bae867e3ed350043a89e7e1ad4b87b9236 Increased update rate to get rid of glitches in servo movements
+2b71bff85879fa0264877e9391f579d53071ea13 Generate messages first, then check submodules
+6635d4113eaf29c278045d74f9a4c6e2974ad485 Remove header which is now auto-generated
+a77420ede84b293e41855ddc7b23b647cc64da96 corrected rate offset calculation such that units match
+172179ee2ef3bb680ed58b5e7267e0732266e8c4 removed docker/vagrant stuff, is now in a separate repository
+53ffde30c257a00f4760e93cfb3b02bac085f682 fw att: add param to select yawrate control method
+3a2256dfe72b519fb0ee5225fa179d4a46a3cb76 Set up ACTUATOR_CONTROL_TARGET message and stream rate correctly
+76901c6414ac8612552546aedc194089dc45c510 AttPosEKF: Moved data collection to separate function
+004118f929a03e0d42e363dd2b74330ccf6b82fe LandDetector: Change rotation rate in rads/s to deg/s (more similar to mpc params)
+f53aa5628e12cdc0cd47906c4b6846f8717e3bc0 sensors: init accel and gyro with default rates
+a4961092af2d0e09a3dbe04e8c2f0a362476d21d mpu6000: check for default sample rate
+dedba4307de2b99ee3a9fd2d6c31c031bd4524ed lsm303d: check for default sample rate
+90b29efebf846da195af53492ee2ee0c50b6d7fa l3gd20: check for default sample rate
+e2524b9aed144db6fc023e169e716435c9c93052 drv_gyro: introduce default samplerate
+0e1832452fdbba0ecc3de944bbc25c2eb9c2f313 drv_accel: introduce default samplerate
+e532b81ac1f3356a3f2771d605b8d92d88d19d67 uORB: Remove last remnants of ORB_ID_DOUBLE/TRIPLE and migrate actuator outputs groups to new style interface
+8da83cfc80d2209e41cb47dd1dd2831d18a34012 objects common: use separate files
+265139f836b1fefdacb1e9498f0d25ecf2ecb47a add msg/fw_virtual_rates_setpoint.msg
+d7e57061c976ba18c69d8be9949660e85f645126 generate message wrapper headers on ros
+738f65a705c5dd2e664fedf54fd1064f685ff5c7 generate wrapper headers for uorb
+b795705640c6a14ba359e381c935351f9377aea9 improve efficiency of non-uniform rate LPFs
+ea57dec24b14d94ec82f04b67bc31775b1f4a9cf revert to original ms5611 temperature sample rate
+f86c0ed892c0b63af11d23e860c815d1c087ff8e remove fw_att_control base classes: as long as they are not integrated into fw_att_control_main they are useless
+154111d4c011a9fd58812cb88fbbbbc38e30e08d move checksubmodules and generateuorbtopicheaders dependency
+213f08ee07c57d4781002cefe797f7ce9e9fd561 generate uorb topic headers for tests make target
+3606f5370af4d439afc47d1585a76e0b66e34336 cmake generate mixer_multirotor.generated.h for unittests
+a6ad8b3cb74bf02c269c18187fdd938391581970 Travis CI: Output generated mixer table.
+18bf501992afa8b561822615104c3868091429b9 Added output of the generated multi_tables to the terminal as well as to the file Changed compiler C++0x enabling flag to check if it is a cuase Updated copyrights
+1bc6c44a0e30059620bc5fec85c5d096cd911df0 Fixed compilation of tests target in clean checkout Moved mixer_multirotor.generated.h generation to the standalone makefile to prevent copypaste
+59fa170e54a4a88b4bdad86622e75183e9fbdc51 Automated updates of the C++ code generated by the multi_tables script, now it is placed into the mixer_multirotor.generated.h file which is generated by makefile
+c4471d77d7d6a20709240ab933c32d87ba7c07fd Moved quad_v and twin_engine to the multi_tables in order to make all the tables been generated automatically
+a0b767f4676a9204260442c56ab309108d47638d add yaw_manual override variable, effective only in ALTCTL and do not publish it in attitude rates
+2f332f0e9296e57187c152673fe4df5919cd6d87 Integrate the Google Test framework.
+e697413667579ffb1c5900193a03da257c05d11a multiplatform subscription: uorb: separate class for no callback case
+4a42f6ca6a95c9b05ed2c1e66cc251ea0e001c59 Restore EMA. Works better for low rates
+9c09a9e8d56b69797b64e5fa1f17d2bcf760e2bb mc att control: prepare for ros integration, move class into spearate file
+99d89577cd4c7e663583773eccf0883c1df773c4 vehicle rates sp as msg
+0e33e52d4ae2df06467f5b862bb0734c3ba23015 use uORB ID to determine the correct rate_sp- and actuator topic to publish on
+fa8ca2fc107ccd0a8e74dc3798bc27f8422f0a56 set correct number of PWM outputs and PWM Rate for caipirinha VTOL
+e28e8c11bba0779386fc16ee47deac4db39b51c0 make default apps compatible with autogenerated attitude and rc_channels message
+30d851284606476642c6cf8a54070bc08ab923c6 MC pos control offb: read altitude sp separately
+5f6d03099e07e20abe9cec685fee1244d7c9a0d4 fixed yaw/yawrate bit masking. fixed navigator overriding offboard setpoint
+ddf57813f4a571a274c9080bc9ef04c86dd70e63 Merge pull request #1416 from sjwilks/calibrate_usb
+c7f7de352d7e0f2921526e33077c6da6a46b404a revert some of the OBC rate changes
+a960fcbdef475e5ab264760568b15867d55b7774 Increased ashtech POS frequency and increased baudrate
+964fddb387b8e635d2cd13fb2248643791304489 make geofence update rate independent from positon update rate
+21009e89a4c748d8a61174058bb378c1d6306b8d flight termination mavlink outtput: limit rate
+25b2d4b823d339c69365baecc7b9eada37e0a529 change rates for mavlink streams
+e3cac1999a0b4398e669f90cd28279ec2a0784a7 navigator: geofence with global pos: reduce update rate
+808cc60cdad5c085d74e583d967cd86126ba1fca navigator: geofence with global pos: reduce update rate
+9608e7adeb069878d5cedd3ece9edc7f4ac40ce4 flight termination mavlink outtput: limit rate
+e056fbb7038e4274fc54f4e19e66c8174ffff28f add heightrate ff for tecs
+e8c634d87a981977d0ff8fa2edd5e83e64a1d380 Merge pull request #9 from swissfang/tecsaltrate
+4e9a52fe45655aa853bf9af10223d32767bb60c4 heightrate ff: fix order of calculations
+dd1945bb7644b41e765866aefd3c6cc14e433b37 add heightrate ff for tecs
+132c9180ead0c64c2edcc36dec2bf8896679a040 mc_pos_control: move position offset limiting to separate method
+ff28b5e930dc07105b4e1f7b43ff3b9f7b09f7ac Merge pull request #1313 from PX4/onboardrates
+b150c3092c2bfe532618678b91c1eab42095c486 mavlink_main: raise rates of onboard mode
+55fde23233de3d311d6c8d0b2cd368e45af3caac support new yaw and yawrate fields in mavlnk position_target message
+8f2fa6da25ffcb83b27e732e4d22b845a652500f Adjust rates for attitude and attitude SP
+8a066a85faa7dd15265f705eba78a9dfe53f9f1d Fixed bottle drop to operate in GPS outdoor test, pending test flight
+03f839a27ac61178be8ef77526faa13a46c4cd6b mc_pos_control: more accurate position setpoint reset, keep attitude setpoint continuous
+32e32d92bdad3eb4e92e9e53c112fcdcf848c7e6 Add throttle slew rate param
+3b1c92e42f57277a12d40963c22fbea9820ee0ad Make throttle time constant tunable separately, group TECS params correctly, make climbout alt configurable
+fc2e0fad4731ef543be4c3da73de6b670d40d804 TECS: Added separate gain / time constant for the throttle loop to allow independent tuning
+68415137b9e1117a1f7b4d54b9a96ed39af6a713 Merge pull request #1217 from PX4/mavlinkrates2
+cec472eceaf262f7b0dec27cc4041383d07858c0 Merge branch 'master' into mavlinkrates3
+17bfc06e9c16851c42121357735996c12ca2f52b Merge branch 'master' into mavlinkrates2
+e3bc5571556d043ad5c8c4fcabd1f9b371599397 rc.usb: set RC_CHANNELS_RAW rate to 5Hz
+2cf688312a83d3c8ad5b813de0643901891886c0 mavlink: show 'rate mult' in 'mavlink status' output
+5f0fc4b566993590bac90d577047a24e8c545415 Merge branch 'master' into mavlinkrates2
+a2ac45f4e0b0b2a1f0acef4f116fa3e0ad99483d Merge commit 'bd808ccf3a825ac1304a72dcede12478fda76857' into mavlinkrates2
+c5a623e15892d63eb3571bc450edea368b2894db rcS: set rates for parameters and missions on USB connection
+1938ef16e39ff937a3076489f3eff0a2eb4bbb65 mavlink: don't scale up rates, debug output removed
+ef363edfcd810e3b153609f0a723f53db0cd3885 mavlink: TX/RX rate counters added
+0c0b1a4c666671e964d295fe6aea64d7b6a98fc9 Print mavlink radio module rates
+dfbbc6600e67618e030c366dca5b440dcd0ddcb7 Seperate vision position estimate correction logic from gps. Add vision weight parameters. Fixes false positive of valid position indication
+07d11583bb0926ac9fe1cf2f1c7e11c683606a4b Rely on theoretical value, as the closed-loop test with multimeter suggests this is the most accurate measurement
+1f3625371d787cdc452b45ad9d9a01423ae51f96 Obey radio status in opportunistic transmissions as well. Last missing bit are adaptive rates
+cbfbdd27883b4f038032aff907f67544fddd090c Merge branch 'master' into mavlinkrates
+41003a243793e465a71e9b142e7c9aac132d3923 mavlink: TX/RX rate counters added
+52a9513e64dacf1004fd0e11df3daf5eb607b0f2 Update rates
+730a520362caf9c9d3e506a31441d9921e008144 Print mavlink radio module rates
+0c5ce3d3a23a32556b38bb0936b315d12290e4ba Hotfix: Allow the HMC5883 driver to continue to operate in auto mode
+5e62ae7a9e2a7d3ea05d293900f7171884fbb448 hmc5883: added -C option to calibrate on startup
+bd5d3ebf70dc9e1aef106b60a840c17824d35b9b telemetry_statur: use 4 separate topics
+28a31708f98eefa4ceb04617f2da3dd7892c99fa Merged estimator fixes and mavlink rate config bits
+2bd5511d096c3351bf74c81072e2cc00b344ef79 geo lookup lib: Moved to separate module and compiling with -Os to save some precious flash
+194aa491107ca10a65065edef3977c20c02a507c Merged rate config changes
+9f3758582f31066ba6ec0af2efc5c959fabb1baf update mavlink headers, headers generated with message definitions from the externalsetpoints branch of mavlink
+74ae18c245514d918e6ea58f05de98b9fe4b63a5 Fixed rates flags
+5be741607c0d8d477ff30c7639edbd3bce427e7b mavlink: mission manager moved to separate class and reworked
+44481e3773b7a576b31727c64931216112d953e0 mavlink: sign of climb rate fixed in VFR_HUD message
+3538773b99d4231bf8a64e9c257cfe0299a93021 Initialize rate values
+ef6af184aa7858a9124de13c958f02b140b0f712 sdlog2: Logging wind estimate at low rate
+ffe095646c5984236731c88fabfe2b2b0cedf983 sdlog2: Set logging rate and extended logging based on parameters (overwrites commandline if non-standard)
+78637ff74b4c12edca0fac9ea8eb65f38993b49f mavlink: publish attitude / rates setpoint in offboard control mode
+e72a7a7dd78cde4a93d42a53328553e71560fc27 fw att: robustify main loop against non finite numbers and limit error output rate
+157c360caa14a7b172cbcd6b6085f18292e29edf Merge pull request #894 from PX4/yawrate_limit
+ab5e76e3d9da5a76d6520e166d5370c6bdfc4a53 Fixed printing of bit rate
+75796e95b4232f961b7ccc9e8c8a76433b389eae mc_att_control: MC_YAWRATE_MAX parameter added
+b96669a5314198b88e406fc02940ed2ced291f2b Logging changes, baud rate changes.
+a66dcbf7e92a1028765f6c5c9a545945ce1a5dc3 mavlink: publish SYS_STATUS at constant rate, don't look at update() result
+b1e4b34a56bfaaa98adb253195d9751f960d5a94 Logging changes, baud rate changes.
+de3efc0975f1b84cf556bae11bbebe95609dbcdc mavlink: publish SYS_STATUS at constant rate, don't look at update() result
+8666ca53bf5b8eebbf60908c16273b711f80a19e Reducing VFR and HUD update rates, we do not need 100 Hz for 30 Hz human vision
+69bc0c8e3998f87358bbf8a5f97f5c31dca43f76 Reduced param rate - as long as we do not have proper QoS (= reducing all rates at once if link becomes lossy) we need to open-loop match the link
+bf69a7b6473adde22b3220b6e72c0d065c897bc5 mavlink: camera mode rate is now correct
+952fd1ec6cbc615d6bd9213061dcce0f9cf8c5f0 mavlink: camera mode with rate multiplier
+c0c54f01cb351afc4184c35a0308686392af1a14 mc_pos_control: operate in local projection instead of global frame
+3317259e798b31ff407e07188f3080f6dbccf478 integrate range finder into fw landing
+76af0970f5220d3a842c4daa353a45ef51df1082 Increased param rate, fixed wrong usage of MAVLink chan.
+290b07920c94df09415ccc1c44850c57d0750fc3 Fixed missing reset of poll rate after test exit in ultrasound driver
+2ee8214244efbe09981e71ea194573daa1c2f5bc sdlog2: move some global variables to local scope, set default log rate to 50 Hz
+2ec4ee6fc08f5368a52028de83f420ffeb249698 mavlink_receiver: split message handlers to separate methods
+0789189c0588ebebd24a523f9639411be89c6a9b - Added JC params to jetdrive control example app. - fixed offboard control mode rates
+2159f948ea81088076b440cd8b673b1ac9f70da3 mavlink: -r (datarate) parameter implemented, minor fixes
+141982a3ac21e7a0437f1d7692e4024daf873c21 mavlink: minor refactoring and cleanup, rate limiter class implemented, new messages added
+18f72f8dd7a3bd4a9af00fe28afd29e0cc65e2e9 mavlink: GPS_GLOBAL_ORIGIN message added, set message rate depending on baudrate
+0656aae3cb46f405888d8130e9db4bb3f9dd529a Now setting flag_external_manual_override_ok to false when in offboard mode,so that fmu has control over outputs. Added handling of OFFBOARD_CONTROL_MODE_DIRECT_RATES.
+52b29cae39a93a0c5218e911e61d1f6cfe6115c1 added poll to 'attitude_rates_setpoint' as requested in TODO
+1afa53a159ee247a1c57ca59912077c5076c3997 Cleanup: Moved sdlog2 file conversion scripts to separate folder.
+2b4af6635708be2248abf53edb65a9223fedcd6a mc_att_control: poll vehicle_rates_setpoint if attitude controller disabled
+55f5f1815f6a8f2efb969cea2eb061bdc2d9b92a mc_att_control: remove rate limiting to run at 250Hz
+d933d523eb74ee2290c56afcd11fe8e85c6e702b mc_att_control: att rate integral fix
+282e0bb6703e6f013eee690bda97e09045837fd3 mc_att_control: separate gains for roll and pitch
+4f78c3e60596d1b596e5ebcf4bb4e101a5b356e7 Disable PX4IO debug - spams console on comms failure. Each command does report the failure separately, so we get a better feedback level without the spam.
+d811b0f0dab95949cc03428379555f0f4d1806e2 mc_att_control: ATTRATE_I / YAWRATE_I implemented
+dae5c838422a6250e1a7e4920d59cb8976a16a8c mc_att_control_vector: support for disabled rate controller flag to handle AUTO_READY mode
+8c518aa23710ba0b9ad0c7ad2c03428ce8ddb290 Useful bits for high-rate logging
+b5fb5f9dbb2d26cea1ab50f005cedff52e992eca Navigator: Moved mission stuff in separate class
+9d4ba6e4f64d631c67a419518a8398debade4641 Navigator: Moved mission stuff in separate class
+72aa171ef982deef1519cc21129024a96d9633db mc_att_control_vector: attitude rate D component implemented
+193692cc0df0c3a4b9905fc18cb04321095b6984 Hex Startup: Set rate of all 8 PWM outputs (6 are not possible because rate can only be changed for channel groups
+3c6f01bea8a65e2c347d1b893b3fe0d152bff69c tecs: speedrate: use p loop instead of pre calculated speed rate for now
+714f5ea634a184ac80254e2a415221f738d2ecd6 Track raw battery voltage and filtered battery voltage separately. Estimate remaining battery as min(voltage_estimate, discharged_estimate). Battery voltage LPF time increased.
+ad133f601bd89156c9cef661cddf684c99ca76cd multirotor_att_control: use PID lib for yaw rate control
+6fefa453810893d5a983e20e0d503f726e07d06b Merge branch 'fw_staging_ouputlimit_master_heightrate' into fw_autoland_att_tecs
+c275f785414121c567523db00def3f76349a218f Merge branch 'tecs_experimental_prate' into fw_staging_ouputlimit_master_heightrate
+c0100b5e17b87b1c721a115bdbe535ab606bd58e heightrate p as parameter
+2e9a383390f1d6456f7258676024ad06ff5af1c6 Merge remote-tracking branch 'upstream/master' into tecs_experimental_prate
+cf862bf810f9c6e86f0b756b71e57796d523bdae Merge branch 'tecs_experimental_prate' into fw_staging_ouputlimit_master_heightrate
+c20aee6327035ab8127bb0f030d0ac3af13e47ea Merge branch 'tecs_experimental_prate' into fw_staging_ouputlimit_master_heightrate
+947207e68da08b7cd14e7da0b44d000b1c435b11 change calc of hgt_rate_dem to use the filtered height setpoint
+b21b9078e2d719bfd7af9580ac3b9b5957ef1d57 wip, fw attitude ctrl: split into attitude and rate, compiles, untested
+cb5e5e914351754356c85e61f2394d1cf91db71f fw att control: also transform rate estimate
+ef6f1f6f808e49ff3aca68aa08001e37093b89ec get_rot_matrix() moved to separate library, accel calibration of rotated board fixed
+9daecd708e2fb24782354ec11a0c9581800ac616 Merge pull request #479 from julianoes/hotfix_baudrate
+5cd675d8cce6a3c35eab1970cfb8668b0a6b24e5 The mavlink baudrate was too high in the custom_io_esc startup script
+b7d8d77c0f3b68430e9683316c41b0d9df4abd7d position_estimator_inav: if flow is inaccurate, but used for correction with less weight
+9d1027162fb5cf32a6ff22d0d52a5a37a780322c position_estimator_inav: use flow even if it's not accurate if GPS is not available to prevent estimation suspending when no GPS available
+ea0aa49b546476ef9ca9904b32dc507d66f0ab44 pwm info provides more information, some fixes for setting rate/min/max/disarmed
+55f7c561efde3af1fcf562f71391a94711480988 Merge pull request #442 from PX4/px4io_rate_fix
+378041ad31794109b2673adab8102faf6806bd96 px4io: make "too high rate" warning consistent with real behavor
+19fdaf2009d41885923b586432cb2506a24ca5b3 Use the generic device::SPI locking strategy.
+e301bb4d9425bbe460384afcc029dac6fa63f3e1 Reset baudrate after px4io update
+d28f5ac03fc9e73cf26c8afa1ed701ca5af0df08 Updated IO firmware upgrade strategy and locations
+d1fd1bbbf7c7fd6bc76137257d6ecb91e8b6f3d4 Fix timestamp on rates_sp
+8083efb60c97ffce5be8dcbf3956ab67cc17d729 Use gyro at correct rate
+3875df2fe07d33d00331efd02394201d684655c7 Workaround to get the HMC5883 default rate right
+658276e1cc5f4639fb09ff41a20b422e6ce33fe3 Add reset and samplerate ioctl to HMC5883 driver
+e5f1a7c2c3a67648829ec0dff5bf290dddc25847 Better transparency in IO mode display, fixes to commander arming, minimum publishing rate for arming
+63af0a80ee19a73a94a3b46bbddffe1b80610a3c multirotor_att_control: run rate controller only if vehicle_control_mode flag set, codestyle fixed
+083cc60acb8b602864d0727e09218eeeca5eb980 Increased logging to 200 Hz in F330 startup for v2, allowed to set up to 333 Hz update rate in IO driver for v2 link
+a2f923b9a3bf403e3a9fcee39d87c7aecc28559d Increased MPU6K poll and sampling rate to 1 KHz
+c2ee4437e0fd362ed8d73203394d34802e9eb48d Rate limit sensors, as the in-sensor lowpass allows us to operate at 200-250 Hz
+36cca7a31b428408eb686df592f092ba5fc24006 Added rate limit in sensors app. Just pending accel filters now
+a9c1882ea01aa0cf00448bc874c97087853bb13c l3gd20: fixed bit definitions for filter rates
+68ab69de010adbe37b37558824ca013ecd0d569a moved commander to C++, preparation for better gyro scale calibration respecting the current attitude for more accurate results
+f4df4a4e081d9eaaa5dbeef013fa6320b0cea3f7 Forgot to add current samplerate to constructor
+0ccf50bca367d39f75a7a4f76f98dec7352ef3d5 ubx: SVINFO parsing optimized and message rate increased, CPU consumption reduced in 6 times, ~0.3% now.
+04fbed493aab1dede6c2200aaab2b990d24a66e7 multirotor_pos_control: use separate PID controllers for position and velocity
+d63730419b7a8ea8696f7518bf24baff149b18a3 Merge branch 'mpu6000_set_sample_rate' of https://github.com/fibr/Firmware into mpu_rate
+88389ea2554c6f56a4fdd86cdd86a1e7b6affc21 Merge branch 'master' into new_state_machine compiling again Conflicts: 	src/modules/fixedwing_att_control/fixedwing_att_control_att.c 	src/modules/fixedwing_att_control/fixedwing_att_control_rate.c 	src/modules/fixedwing_pos_control/fixedwing_pos_control_main.c 	src/modules/mavlink/orb_listener.c 	src/modules/multirotor_att_control/multirotor_attitude_control.c 	src/modules/multirotor_att_control/multirotor_rate_control.c 	src/modules/systemlib/pid/pid.c 	src/modules/systemlib/pid/pid.h 	src/modules/uORB/objects_common.cpp
+1f7f7862ceee827c1c3a6087defb8cb52db3f4c9 Fix the USART6 default baudrate to match the IO bootloader.
+dec1fdbde0c7bb6f3eacae97ab9656f77294cbfc Cleanup: remove useless angular rates from attitude rate controller
+3bfc4ed5174c60de7eb98efbbf3c7729fcaa231e Att rate PID fix
+ece93ab62834be7f46501b1d31733cf58b5b1188 Added integral reset for rate controller
+c1049483a82857bebb012607578add9492446321 Added integral reset for rate controller
+8d6cc86b4f37773c9c4db77b9666fa2a075c1871 Cherry-picked commit e2ff60b0a6dbcd714d57e781d9fe174b110a6237: use rateacc values
+6f108e18d21b61ea6a3bf137f01023c594085494 Just include the rate controls for now
+2b9fa731efd08a01effd87a636ae8e53994944f7 Use the pid library in the rate controller and change de implementation of the D part
+95236c379a3b0a551f5ac26387356ecad0a82d60 sdlog2: ARSP (attitude rates setpoint) message added, attitude rates added to ATT message
+68b884ee6c0112b42c1f90b711892dd791696610 Merge pull request #292 from DrTon/ubx_msg_rate_fix
+1addb9f6c56f68f600acd4bdd609ef14697bda44 Fixed bug in UBX::configure_message_rate()
+496127ca459c603e5de3f8bc83c6113bcf9cbead mpu6000 driver support for setting rate
+b614d2f1eb3b3ddd26fa22a1a0761a5aef52c1a8 adlog2: added options cleanup, updates rate limit added
+f5e405ef5b06f4bf26cf3758d962aa7884a7d94c sdlog2_dump.py now generates customizible CSV output, messages/fields filter added.
+3ec536a876a66f4e56549957e81ed4547c92a0c3 Improved GPS update rate calculation
+27a25b5e172c972e4f9f31c2a30114498346bb08 Improved update rate for velocity estimate, not yet where we want it to be
+3466006735123bfd27c94538d98af5b79f47d5a0 GPS velocity update rate validation for u-blox, WIP
+421253e6db6c5e716c84ac505a8caef679ea97ee px4io: allow set of output rates above 400 and below 50
+1d327c42a6f34f8545940cd8630586726e4d3ae6 Mag sample rate was not actually changed by an ioctl
+eb3d6f228cd96ef2a2b8a33f667dd1cdc2d5fdc5 Added some functions for changing rates etc (WIP)
+60eca61e41bbae8fdcb6f92ecdc130a49e49fd29 HOTFIX: Adjust the FMU update rate adaption logic to avoid constant debug message spew when not in a PWM mode.
+26d45d5e3484ec616238b34be3fa9739d8e30efb Silence MS5611 driver, the perf command still captures the error count / rate. Unfortunately this is necessary as general users are concerned about something that is (at a reasonable rate) not actual safety critical.
+1ae4edab220e93405cd99f105648c4a8f948b41f Merge pull request #224 from PX4/pwm-multirate
+7e4d6133aed20d2724917dc570e4926b18df2b84 Make communication rate between IO and FMU configurable
+688ec090e811ffa5df0a704767f5eb70c635913e Moved trim for fixed wing to standard trim values, can now be calibrated via RC
+7011fe563b583d7940247a7a01265b7f8675fee8 Move PWM rate configuration, etc. into a separate utility and out of the individual drivers.
+57429fd12cc4277c88948c1819b245d9e83523d2 Convert HIL and FMU drivers to the new multirate PWM interface.
+6cf0758b24de1e0e28e1bb65fa33a0b49b1601b9 Changes for multi-rate PWM output; default and alternate rates. ioctl protocol, PX4IO support.
+dc74eeb421bce204a3064bcc60d524bf3fb53ab2 Report the control values from the FMU in the status output. Count them separately from the actuators.
+3494039d9000d211c122d73d5e7ac9cf9109dddb Get a bit fancier with the builtin app specifications, so that we can generate them from apps as well as the config.
+abe48bd7149fee4d18d709e7325cc70ca7230cb8 Auto-generate builtin command prototypes. Tidy up path configuration, etc.
+e9f2197bfa40522d6a58e01888dada4531d9dbcf Move upload functionality out into a separate makefile.
+e692ccc44ec017f79c74a9bab619019007e27cfe Move more functionality into firmware.mk. Now we build the px4 bundles in a way that will let external builders generate them too.
+b80575fcff926fb819adeb1760632586c19cf719 Break up the firmware build into a 'make export' phase for NuttX on a per-board basis, and then a separate per-config phase that allows us to avoid re-building NuttX all the time, and ship more than one firmware config for a given board.
+0eca49a4f6d4a06868770c8b0c36094d889cb846 Checkpoint: Separated all bools in vehicle status into conditions and flags, they should be protected
+cb0fd834ae15c45cf6993f8c9eea9c99b2b153dd Minor polishing, fixed rate and last measurement indication
+12f4cb2dc38303b58750a8f3b120738a291ac8d1 Tuned GPS update rates
+52ff9b7d433fed007a62fe2de375f685aa1b6b8a Use multi-part transactions rather than separate transfers to avoid racing between the ioctl and thread-side interfaces.
+5fe376c7b9bed861768680089bff3c62a030e2b6 Correctness fixes from Tridge.; increased the minimum poll rate to 50Hz, don't set the input RC timestamp unless we get data.
+f14c90c2220fffc51bc6e6e89bac6f9e726ff505 Some timeout needed to be raised for now to make ubx with baudrate 9600 working
+afb69cd05450d6df1bf2233b95030c9b93daaf1e Reducing pos/att correction update rates for debugging.
+28ef7aa1bea97593637537c832b07459a2520b86 Refactored RPos. Increased global pos output rate for debugging.
+5b07efdbeb8b6c6e7c3e5a86a2e55a2de345b579 Automatically generate depdencies for source files as they are compiled, rather than using the NuttX dependency generator tool.
+3bb145f584298de3ac636be38be25d4b1235a8be Enabled and tested ring buffer, logging at full 250 Hz sensor rate
+faced6bfe3826a4fdcfcd72171edbb501226814a Merge James's controllib bits into a separate library module.
+4447282260be0780eb6e36f5e953bf56888a5688 Integrate the interesting parts of the CMSIS 3.01 (r3p1) DSP library
+94fa60fa04d97ba35bee584dd823997588510563 Merge pull request #132 from PX4/#111-px4io-integrated-mixing
+9df2aaf3128a14c49d5f82e624174fc55ff3da0c Merge branch 'master' into #111-px4io-integrated-mixing
+0134186420273170c14b80b8114ccd2474da1792 fixup rate
+219ab05a707d8f2795dc91f5884a42f20dd6a640 added PWM_SERVO_SET_UPDATE_RATE ioctl
+1b82dbb58db9b7a279841714fe64c7830f71e290 Merge branch '#111-px4io-integrated-mixing' of github.com:PX4/Firmware into fixedwing_io_mixing
+36d556256f1ec8a9991d4a76df2833149fd9f02f Merge branch '#111-px4io-integrated-mixing' into fixedwing_io_mixing
+61d7e1d28552ddd7652b1d1b888c51a2eae78967 Reverted changes to multirotor rate controller, changing to a discrete derivative does not help
+c08135ffefcb171fd518e210b88e7e993361fd81 Merged rates setpoints
+56a650461894d8ab541277010e93fd5ca75f9f0d Incorporate address environment interfaces in binfmt/ logic
+fe4bf6f555a1a453c16a7c671cef3625902d2991 Integrate PATH traversal logic and binary format logic
+f81d00594c156c51ab976d3b6d101915377d7afa Made PX4IO FMU timeout based on IOs HRT, updating mixers now on every FMU update and not at fixed rate, this is WIP and currently does not support mixing with RC-only
+03076a72ca75917cf62d7889c6c6d0de36866b04 Added required additional fields: If system is ok to launch (required for LED indicator), if system is ok to override fully by RC (required for multirotors which should not support this), desired PWM output rate in Hz (again required for some multirotors).
+1485a4ec1aa8328cc50d99a1195b20df2b11045e Fix breakage to the DSM parser introduced with the input prioritisation logic.  Back out to a "any input wins" strategy; connecting multiple receivers to I/O at the same time is currently not supported (read: strange things will happen).
+9fa794a8faa2d30023d9943beae55a05ed4e48a0 Rework the PX4IO software architecture:  - Use a separate thread for handing R/C inputs and outputs.  - Remove all PX4IO R/C receiver configuration; it's all automatic now.  - Rework the main loop, dedicate it to PX4FMU communications after startup.  - Fix several issues in the px4io driver that would cause a crash if PX4IO was not responding.
+7d485c117b8930ca0e6c4bcb71199e3ccc8dfeb9 Merge branch 'rates_setpoint' into fixedwing_outdoor
+98657b8ae41dff36839f2022011b672b012a63f9 Added rates setpoints as system outputs
+13000a71212076a515043fb7ca89ce77cf6c36b4 Yaw rate sanity checking for controller
+f0e39397fe5d9b301ad887ad430736397f6403fd fw control: work in progress, heading rate control loop
+722af669fea5dcb6719438326f8272cbb8ca69ee Better integrate calibration check
+ccc5929f33e2867f61fbca1ccf3e04840e9166c1 Fix some mkdeps.c issues; Incorporate mkdeps.c build in Makefiles
+3bf4cd0abd093be0b3f2bac724aa952dc1b1bb60 Generated libraries are now installed in a new lib/ directory
+e7f2c053c241849e3ea035fcd22a0e29945b3415 Quickly separated low-level raw RC from mapped / scaled RC, supports FMU PPM and IO PPM / Spektrum now
+ec43e7b7be69e4445c08ff8821de700e449a8f70 Increased output rates at 115200 baud
+5135e5308b5689794b0497ed6be103d1bc332b7b Hoist the GPIO driver out and integrate it with the px4fmu driver.  Move these pieces into the drivers tree.
+1065118ebc963dbed75da5c7093b1863f0e099a6 Separate config from implementation for the STM32 pwm servo driver.
+3f240a70baac2435cbd543e305ea0c57cb65e7a4 mavlink cleanup, drop rate estimation is finally correct
+ab447ac713b010c090d6e2de85fa5d0d0af5cbbe [work in progess]roll attitude and roll rate loop works
+42c61271ea73be29a21110980764d1a68f8ee530 remove bogus dt from att rate
+d3ae83cb2283591e56ad2999271f7bbd6c756a0d Merge branch 'daregger_rate_control' of github.com:PX4/Firmware into calibration
+6a48b91beae575ad4684151f08c75b079caffe5c Lowering default rates at 57600
+b50bc7798ac463de3e0c3147df46a3f7227df8c3 Wip on inner rate loop
+4dbf7befe369ba00a73945a0193f0a061c271dc3 Disable rate control, disable offset estimation
+bd3f3b10317f58d20f635f4a3e6aee8fca8d9d2b Sensor rate and throttle inversion fixes
+dd50c88f073926a550f0f1f5b08f931116dd4f8f Fixed GPS lost issue, fixed accel scale initialization, fixed code style in rate controller
+4fea0a3fc15346efc366aadf1d80697664b6f3f0 This commit changes the inner loop control structures for fixed wing attitude control.  Nested rate and angle loops are used with limits on both the rate setpoint
+2a06b66845542b05e3cad3d21099e33adc213227 Fixed inner yaw rate loop
+733975ed2d7b5906e35dbdebad52ee8fa9d92fd6 fixed Rate controller
+f3cb2cf8a3b3e002e665c82588e98e502ec3e285 rate controller update
+beca2b072e45fc91ba6c315919abd26ee6814863 Moved from raw gyro to estimated angular rate from EKF for rate control
+5895a2e96619a0c35a4c2383898582bde0ffdb6e Updated update / telemetry rates, updated covariance
+1725069c188fddce7e22026ca77edd5ea980b54a Merge branch 'update_rate' of https://github.com/sjwilks/Firmware into ardrone
+4933d1dbbd8146ec548168fb9b855009107078ca Only provide update rate mod support to modes supporting 4 PWM channels
+7a5ac6892e68c14b77ba6e3db3fd7e0b9f1c79c6 Support custom PWM update rates
+7f153098926bf977609c6efb53fa7cb5093564af Calibration should not freeze anymore, ardrone flying but estimator is not able to use calibrated magnetometer data
+ec3949bf82dbaa50ea866b65cd0fc4630af18001 Fix a bug where the rate controller is always active
+201fdbc42c46bc9146a8cbf2434a98792d6d9f50 ardrone flying now (still workaround of disabled rates controller)
+abbe998506e4ba49bbf6a9a9ae731b1eec521db6 ardrone in the air again (workaround: rate controller disabled)
+37163011fc752e40ee712d4c945c8393538f2708 Use the update rate parameter provided and not the default.
+705172d302b99df7ec3c4172c247c6136adbec88 Untested, but fully implemented attitude and/or inner rate control
+b0b72b11eb6c112d3fb58385f5681af55dd5605a Reworking control infrastructure for inner rate loop, preparing offboard interface
+561bea65a2032c2c510a6dd5e118924f21b3d86e Ignore a turd that the kconfig stuff generates
+3a18a79bd5661307eb4c32834e2daf84ccf02a07 Better log rate balancing
+5dd6cbcb13f4fa3b3490ac8bccb7d1c5cbbc625c Logging rate changes,
+1538247a72f37a2f969aa5c41f7a07da4ae31d35 Sensor sending rate fixes
+eb8e3a2942abbed63bcb3c6336f20bb247f0c6e6 Reduce slightly the rate at which we can be spammed with arming-state change messages.
+b2db45bee3c6915346fb7be8dba064708955549e Separate CVS parsing logic from tools/mksyscall.c; Create tools/mksymtab.c to create symbol tables from CSV files
+ee6cba7a0102a6c26ee1143bc103fe8c99577520 Add lib.csv that may be used to generate C library symbol tables
+cd886ccff11e205ce61ef79e95da5953583ffc8a docu diagrams: removed old inter app communication, updated state machine (is now also in a separate file)
+aaf2a23f18eb802c9fea1e45199106eefbab59f3 Reduced optimistic send rates, better mag scaling
+767f253976746a5533dd1a258373368539b4359e Fixed attitude rate limiting
+dc484c1d21fcb7bc4f4be97853647321e8a147e1 State machine cleanup, introduced variable rates for MAVLink depending on the baud rate
+92a1fab0fd9e95737258c30fc423e839652edb72 Integrated optical flow
+cd3a49c3a2ef24987452f3e65038dcf67c037e5a This file is automatically generated and should not be checked in.
+aa8c93baab849f47c8552e3679ab0abb858fd488 Extend the NSH mount command so that it will enumerate mountpoints if no arguments are provided
+4c2b6c49c91abfb10f554dcf219e01e7a88884fb FreeModBus is now integrated with the Nuttx configuration system
+876ffbd29fcd090094da7be50a9b2f26bb1bab02 Calibrate lpc4330-xplorer delay loops
+db2bfa3e69fee84003a2fe13632c21046a1dc5b4 NxWM: Calibration is now done on a separate thread; Change mechanism for reporting calibration data; add method to determine if the application is full-screen
+7cc9218389c6b2b214759675418629510c1544a9 Integrate the STMPE11 driver into the STM3240G-EVAL board logic
+a16ee47f0e0c64da88b21ad1baadd08f79193af6 Incoporate (more) new ARMv7-M exception handling logic contributed by Mike Smith
+6c02000ba47f08484280da61fb8d384a59eb5c2a Incoporate new ARMv7-M exception handling logic contributed by Mike Smith
+ae529b8648831d3e18679a78689d1ea1890fed94 Incorporate Z80 bugfixes reported by Phillip Klaus Krause
+7de5004f475fe6234e7d4452bdd95d5f527fea8d Add logic to control CAN bit rate via the .config file
+8953e3a370efeb12110d7bf4f6b9b69bb031aa3b Calibrated all PIC32 delay loops

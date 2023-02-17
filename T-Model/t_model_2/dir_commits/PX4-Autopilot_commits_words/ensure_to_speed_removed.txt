@@ -1,0 +1,9 @@
+c904767f1d7f9b3d76fce91a846eedceeac117da Always start airspeed This ensures we get readings in the log and in the telemetry even if the sensor is disabled.
+15ec73629bad9087a3ae52dd95dae87966eb2701 MPC auto - Add MPC_YAW_MODE: towards waypoint (yaw first) mode. This mode ensures that the vehicle yaws towards the next waypoint before accelerating. This is required for drones with front vision and aerodynamic multicopters such as standard vtol planes or highspeed multirotors.
+370371767f32de3d5ec46943be5100128e03b7ad FlightTaskAutoLine: ensure that desired speed along track does not exceed maximum speed at threshold to target
+5ef2a61be56dbc5b0b69db437b9c8633b36ded5a ManualSmoothingXY: ensure that maximum speed is correctly propagated to the smoothing class
+ddf0ecfc3801b63f0849d5ba37a523746c53d8b4 Airspeed calibration: Ensure that the calibration state is stored correctly
+dbed42a72006fbabf56bc5220a14fe5abde89a3c mc_pos_control auto: ensure the order of cruise speeds during mission
+8878be57411a24babec515f96db637ee1b3d1700 MC land speed: Ensure that the difference between land speed and land detection is high enough
+ad21dc3f504f62ae5551f759cc8f8c86b19a75d9 Pixhawk configs: Ensure there is enough TX space on high-speed UART links
+e76bdc3cace535108aa90ca89eadfbaef1f13b01 EKF: Use unfiltered airspeed if airspeed is large enough - rely for better stability on the filtered speed for the threshold. Lower the threshold to 5 m/s to ensure airspeed fusion even on small wings

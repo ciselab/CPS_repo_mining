@@ -1,0 +1,3 @@
+790356ef6ddd54b002e4d887a6872fbd270020e1 NXPHlite-v3:Ensure bin file sizes in mtpl of 8
+07df1be8418538e9f5af12fd6f7be46328db4772 Simulator buffer: Ensure we do not become limited on message size
+11544d27b7629078b6a7a2247f159b535816e019 Hotfix: Enlarge the buffer size for mixers, ensure that reasonable setups with 16 outputs can work

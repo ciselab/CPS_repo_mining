@@ -1,0 +1,215 @@
+63e29b821c15459e6a6e3c66e0edf56bbd5f7494 holybro_can-gps-v1:Ensure sensors are powered
+f01cab3be1afc3d601c6b6f39b240b3565d019ff px4io:Ensure proper lifecycle of registration of cdev
+7925787f62b42c50577aa92d8345326c06ff8062 px4io_serial: ensure TX DMA is stopped if exiting early on stream error
+7144566afe509e0ad8669d4f4690d22b7e176ed3 metadata.cmake: ensure events directory exists & add px4 enums
+e3972d563a4bd6d8c3dbda9837588cdfb273c3cf cmake: ensure generated source files exist before extracting events
+894ecac8dabce7ef4abf3e133c5d7cfab410bb06 px4io: ensure pwm params are loaded before any other module starts
+3e9b295c2276d8c85020c68e21c77d72fdcf4a3d Add watchdog_init to ark boards to ensure watchdog pauses during debugging
+1ad25369e766edfb16bad50ddcecddd3bd3b5879 Makefile: ensure 'clean' does not fail if build directory does not exist
+42a865f34961c325044668a09f9372debed0bc22 param json: ensure category is set to Standard if not set
+629f7ba15bb064999fa10fa1f98cd70e5caf96e9 params: ensure short description is only a single line
+6e9f745809c0c99e7c73efa3e40b87ad39f144e8 PWM out: Robustify initialization This ensures that all PWM outputs get correctly inialized on targets that only support one.
+d35ce21594eddaea55bb2bd7d4f54afee9a684f8 PWM out: Ensure correct loading on single-bank targets
+c904767f1d7f9b3d76fce91a846eedceeac117da Always start airspeed This ensures we get readings in the log and in the telemetry even if the sensor is disabled.
+891b231215ce287de43f76d6c6e7846854699178 Ensure that AUX mixer is loaded when 2nd bank is present
+dd736f854092367c2732cccca4707e4cf9a2906e holybro_can-gps-v1:Ensure yeild is used for FLASH programing
+84b3f51c6b0d10c21fc75ec47ab6d5aab17e4a12 ark_can-flow:Ensure yeild is used for FLASH programing
+d8b9def3f8e5e210e46f2cb6856ef5440b15076b cuav_an-gps-v1:Ensure yeild is used for FLASH programing
+87f98f096fa45aa00c14fbf516bab2f489df26be Commander: Respect position circuit breaker This ensures that commander respects the position check circuit breaker and allows arming without position.
+aacbc04730ae3f759236f81e56fbe33326812611 PX4IO: Robustify upgrade process These changes remove the two code paths to updates (forceupdate and update) and try to reboot and bootload IO independent of its state, wether it is in bootloader mode already, safety switch is off or if it is in "nominal state" (running and safety on). This ensures that there are no conditions where user error or boot sequence can prevent a successful upgrade. The only state where an upgrade will not be done is if the system is fully armed.
+d426dd771fd9209b31a91c450078567959e3140d canbootloader:Ensure common crc is set valid after autobaud
+28030e96e2436a84ecd9ed69a6ab6c7f8bbf8ede cuav_can-gps-v1:UavcanNode app ensure IWDG off in debuger
+d03d46b8a302152dafabfed9a8073aae13abbcee Initialize MAVLink on v5X variants This will ensure that the different baseboard configurations are properly accounted for depending on HW variants.
+0a58482e513bb62684536567f0e27fe2c94bee14 Align message names to avoid CRC mismatch with deployed units This will ensure that the CRCs will match with deployed units to avoid unnecessary incompatibilities while we are figuring out how to best standardize these between stakeholders.
+3606f86518ee594f60a798e8ae22650759f6a332 control_allocator: ensure unused outputs are initialized to min
+03e9e108479d76da7b576b0eaf9cba0abaf87d21 Add CLI tests for basic soak testing This is in no way a complete test suite but is intended as a starting point to get minimal test coverage for CLI handling tests in. This is necessary to QA the CLI handling (e.g. removal of commands) and to ensure that we are exercising these code paths in stack check and alike tests.
+cabb50a67ba1e95069457649f0f8cf1727eea5f5 13001_caipirinha_vtol:Ensure that the max/min pwm changes take effect
+cc34d4601df64fc0864f30e238e05627fabf135a FMUv5: Support passive power controls This ensures that FMU-side power controls are not interfering with IO-side power controls of DSM receivers if they happen to be OR-ed in the schematics
+a63e8cc1498e79c634f3d8d0d1ef7261e18263d6 fix mavlink: ensure vehicle_command topic exists
+9215fb57a28a6f184a0b5f4fba97d640070cf066 ekf2: advertise immediately to ensure consistent uORB instance numbering
+7ecccf01c2456e1c75579d8498a3db6b065f817f tailsitter.cpp:ensure input quaternions are exactly normalized
+025799248c9118e728208d90dc8282bcef0d698c holybro_durandal-v1:Ensure SDMMC power seqensing is clean
+aea68f06f926da105f88c19538c6e2b081aa5302 Commander: Streamline preflight and arming checks The checks did previously only report the first failure (to not overload the radio link). As we are moving to buffered messages and higher bandwidth links this design choice is not any more in the best interest of the drone operator. We are now reporting all detected failures. To ensure architectural consistency more checks have been moved from the commander mainloop into the respective classes.
+8d0402f274f5624c1923829b6293f985003abbad land detector: fix ordering of hysteresis updates to ensure we report LANDED only if also MAYBE LANDED and GROUND CONTACT, and MAYBE LANDED only if also GROUND CONTACT
+adf7aee7626bbcc577f45d81709b076fd301a178 Harden autostart logic for non-existent airframe values This ensures that the user is pushed back to the airframe configuration stage.
+742b1839d517bb4ebc5a4ad9b3d292157bf68fd8 Simulation: Set scheduling policy RR for lockstep This should ensure that all processes do still run at full load.
+2e7221cd22bd86827edee649b1014b6c4422e68e Style check commit hook: Ensure that formatted files need to be re-added.
+06f20ad892a7251681b7bd8dbc1b697fbc7c8425 sensors: ensure angular velocity publication on selected sensor update
+7ebaf9a1cbb147a5406be76e08ce1276fcab0fc3 mission: ensure precland::on_inactivation() is called once landed
+ac5669deb4f1fcf3bc06766dacbe1118503f263e CI: ensure 'git fetch --tags' is executed for all Firmware builds
+15ec73629bad9087a3ae52dd95dae87966eb2701 MPC auto - Add MPC_YAW_MODE: towards waypoint (yaw first) mode. This mode ensures that the vehicle yaws towards the next waypoint before accelerating. This is required for drones with front vision and aerodynamic multicopters such as standard vtol planes or highspeed multirotors.
+fbd3386c394ba42f00eebd87d90caeb4c4ef3a78 Jenkins Hardware ensure buzzer is disabled on test rack
+c92b8b03cd56f6e2786f633e359081696ae9fdd0 Move variable initialization from constructor to declarations in MavlinkReceiver class, alphabetize var lists. Added update_params() method to ensure that parameters subscribed to are updated routinely.
+dd58e695494acab73fb6fcec7074291edb5c226b EKF: Ensure FW yaw alignment method is used on first in-air reset
+708c79eb8f00f5f0265dfbeaad684406cecdcd20 EKF: Ensure mag field state covariance data is always available for re-use
+f21bc89a904c6812a8747fd4c4d8e869218ec424 Unit tests: Retain atomic operation This ensures we get absolutely accurate timing.
+11f9925b029558130245eb31df87eecd52bd0ae6 rcS,rc.serial.jinja:ensure proper unset hygiene
+370371767f32de3d5ec46943be5100128e03b7ad FlightTaskAutoLine: ensure that desired speed along track does not exceed maximum speed at threshold to target
+4657a9cd218e0745057d7fcdc3469cf0d5e1e718 EKF: Ensure yaw gets reset when declination is set
+5a678295b33d93a0650ff2998bb82bc376c53370 added a check to ensure the initialize settings function succeeds. If it does not, the driver fails gracefully. This handles the case that the device is not there.
+4144a53cd665744160a7575e08a8b99497c3c1cc added a check to ensure the current position setpoint is valid
+5ef2a61be56dbc5b0b69db437b9c8633b36ded5a ManualSmoothingXY: ensure that maximum speed is correctly propagated to the smoothing class
+ccd0be82bac2e50fe1666a2b5867bd6a2e3313eb FlightTaskManualAltitude: if flow is on, ensure minimum altitude
+08a89ccdbb0ae3c43ea86416bd1b767928c0d808 FlightTaskAutoLine: if previous type was idle, set thrust to NAN again to ensure thrust is not used. Also, if previous was not a loiter or position type, then reset setpoints to current state. This is needed because during line following, the previous setpoints are requires and cannot be NAN.
+57c7e1a3eb23b12010daecdf6543d9a9c38aac6c Uploader: Ensure that we are not entering windowed mode on USB links
+bda237b3685beb026e94f923af10e99082aa23cb logger: ensure that fsync is called at least every second
+473fa150260b9a5989e967afae1e86262119be64 BlockParam: : ensure result of strncpy is null-terminated
+258b1ea473207a7e4effb74b760bc36d9fb0c61f navigator: ensure result of strncpy is null-terminated
+8c638ac88c7844168c376e8b8070f56d2bf8d78c sdlog2: check result of snprintf and ensure result of strncpy is null-terminated
+63cb895a1de46f299cc151b44bf7127c653db69b MavlinkStream: Ensure that not multiple messages are sent after some time sending nothing
+ff25c7f48abba7f0575b75069e27baf340132534 ensure attitude setpoint initialization before arming
+ddf0ecfc3801b63f0849d5ba37a523746c53d8b4 Airspeed calibration: Ensure that the calibration state is stored correctly
+c0a94cda073ef18aa2bc820e6e01a38e6db11d01 px4-same70xplained-v1:Ensure _ebss will be 4 byte aligned
+23cfef5753944b2019f91ebb0951ee1e4a1baec5 px4-same70xplained-v1:Ensure _ebss will be 4 byte aligned
+c621965a2b45b201e6f58ded775b92201d6fb6f8 zubaxgnss-v1:Ensure _ebss will be 4 byte aligned
+1812d677c54803fb5b04819c6105bbbbbe65aadd tap-v1:Ensure _ebss will be 4 byte aligned
+c4b2f39cf4829401c7da7cf42acd03dc5218cfd4 s2740vc-v1:Ensure _ebss will be 4 byte aligned
+58af82312b10659b92b467f47b7bef4c043f8bdc px4nucleoF767ZI-v1:Ensure _ebss will be 4 byte aligned
+b85fbd496fca63166e2ee197cb1a3b0b26a80dee px4io-v2:Ensure _ebss will be 4 byte aligned
+e9a318e4f7232eb451af591dc64a4c4ed7bdcdf0 px4fmu-v5:Ensure _ebss will be 4 byte aligned
+093563efb060c371115baa8ddc84d66a08c75bfc px4fmu-v4pro:Ensure _ebss will be 4 byte aligned
+c9ed2868748f56df979b2359b0da08ac8797cc88 px4fmu-v4:Ensure _ebss will be 4 byte aligned
+ad687cde624bd1a853695a571ea62f14a8047936 px4fmu-v2:Ensure _ebss will be 4 byte aligned
+096b25550d7f612067f60eb9946b6d851a20edea px4fmu-v2:Ensure _ebss will be 4 byte aligned
+e4f7b762966108f5078202cd3f883f3f5095d838 px4flow-v2:Ensure _ebss will be 4 byte aligned
+c1ae7c76df41103a71e91fc2f5cdfed22e7320ee px4esc-v1:Ensure _ebss will be 4 byte aligned
+6b30a41da26dd4d6e2d7d2fc9fb4aa3f4b4f4a49 px4cannode-v1:Ensure _ebss will be 4 byte aligned
+c76f90f078be4a5880bab633c0aebbcc3d9a0d1b px4-stm32f4discovery:Ensure _ebss will be 4 byte aligned
+e15e9ba5c7f094018cc283199236eab6dab83ce2 px4-same70xplained-v1:Ensure _ebss will be 4 byte aligned
+fea11f1d47eef8df32ac68083e96514822cbc250 nxphlite-v3:Ensure _ebss will be 4 byte aligned
+9879bea6118acc0a2c6c98db5036459f1c87cfd6 mindpx-v2:Ensure _ebss will be 4 byte aligned
+8b6e447875bf065b84c29b2a33baf731e8c7db0c esc35-v1:Ensure _ebss will be 4 byte aligned
+d9cd9183dbea8474606f2d2eb31efdf0e79ea7a4 crazyflie:Ensure _ebss will be 4 byte aligned
+687dbea5720ff455c09941a9424b623af691baf0 auav-x21:Ensure _ebss will be 4 byte aligned
+66d2509670cc20941244037df955803c2331c2ac aerofc-v1:Ensure _ebss will be 4 byte aligned
+db02eac009ce604e96e65965728ff6201bed367f aerocore2:Ensure _ebss will be 4 byte aligned
+1615d5642e7aaf1362ef6a6fefa7acb74706eee5 kinetis:drv_io_timer ensure the Mod register is updated
+63ac56aeb0bc860811c58b2ac3a3eea6de2d3ded smt32 adc:Ensure the the ADC clock is not out of spec
+67679e56d0d2f7aaf5dd802e812640755f68b418 [BACKPORT] stm32:stm32f40xxx I2C ensure proper error handling.
+dbed42a72006fbabf56bc5220a14fe5abde89a3c mc_pos_control auto: ensure the order of cruise speeds during mission
+e51e52f425ec6ea4a4318c655f585abccbd46f62 mc_pos_control: reorder auto logic and ensure that nan gets caught
+8878be57411a24babec515f96db637ee1b3d1700 MC land speed: Ensure that the difference between land speed and land detection is high enough
+6f249472e030162b1136d38c116ea7dbf798b929 FMUv5: Ensure there is enough UART buffer space - since the board has plenty of RAM, all UARTs are treated equally
+235a789a47fdaaaf460684d77307aaf9883bf009 FMUv4 configs: ensure there is enough TX buffer space
+ad21dc3f504f62ae5551f759cc8f8c86b19a75d9 Pixhawk configs: Ensure there is enough TX space on high-speed UART links
+ec2b54fde7a590178483ab9623459109003a4a44 EKF: Ensure normal yaw alignment using mag is performed if GPS method is not
+f7ba70a03276e6e41ce4ea9db5d36d1b437ebd42 MPU6K driver: Ensure that default range is always 16g by default
+071cfc2d31879f8e6c307296d17b6631c41a1d34 Ensure groups have unique names in TOC
+0b43546c6afa28455709d01b6acae118c8924ecb BMI055: Ensure the accel driver sets the device ID in the report
+d12421b9eb9dc3426e1ba27248a80e0f391cf302 BMI055: Ensure gyro device ID gets copied to report
+49b1bd597e57ba7242e25952896400fa775033c0 FMUv4 config: Ensure enough stack space in user main function
+5e1490b8a151e14a55ccfdf87c482e0066cf34a9 BMI055: Ensure that accel and gyro start consistently.
+74b0e485e7336de945b703cf0c91aa023bef84aa MAVLink stream: Ensure the message is not sent again if it was already dispatched.
+cdb8146af5c47a13ea0bfc03c65b62786c4a2043 Land detector: Choose a default alt limit parameter value that ensures regular users are not running into it
+6a38118c736c60d4049f0aea15d812979d56fffb camera_trigger : reset distance counters to ensure consistent triggering after pausing/disabling
+0a1fbef8c8980856967ac42a065df3e40abcf966 pwm:ensure that a rate of 0 will invoke the ioctl
+07834e51b7853281a5afd370c449ee0178c00827 fmu:Ensure work_stop still called work_cancel
+63057d7b60facb2794f58d58661e9d5cef37b9f8 Ensure that manual control is only sent by sensors app if signal is valid and initialized
+61d7f22aba487c47c100cc3d9bd58707fea86e0a Servo test: Ensure we only close an open FD
+2bf7a53d558a240ec979465f54061028448e2a82 FMUv5: Ensure enough IRQ stack
+88a4b5ba07fca9c9720e6ed5d0f957f489be5168 FMUv4: Ensure enough IRQ stack
+0924d8ddcff4e9e834fb8cfdc8e0a8d7c27573a7 FMUv3: Ensure enough IRQ stack
+b6e4b63b0dc4d749de748535c522a5082e076b2b FMUv2: Ensure enough IRQ stack
+bdeabbd02c65bd4b6d55f41f99f6ac43e1cd2ae2 FMUv1: Ensure enough IRQ stack
+535d5b92335ca52df7520ce1a5153f27e8c40df6 Ensure TAP ESC is fully booted
+9e7d5f088e2ae807034c9b857476f08e9b254dbe dataman: Ensure compat field is set and read correctly
+c340974991c03d7474747a3739b2d5b6f9d51e20 Ensure pitch min param is correctly handled
+710a8e8f5664e34625943f5ff88ebcfc59f0bd29 Commander: ensure hysteresis init
+4cfd84b56af76a574c945516b926fb21f84cc7ae FMU driver: Ensure correct binding pulses for Spektrum, time out any receiver which has more than one second no signal.
+ce0d31b7d9c2b5983a70840f4915941039c1277b mavlink log: ensure all critical & emergency msgs are also logged to console & ulog
+25182108f9261b12ef98f752ee06f19387fc1e17 Ensure NuttX build depends on defconfig
+bf0b3c15857f6d9624d9aef5ac569e124d95796d More complete ESC feedback, ensure to include  a timestamp
+574a67b93db0a436c11c8c85d31ff05b673c100c fix px4_getopt: ensure progress in case of unknown options
+aea827aa8ac9732db61c5eb965e8df5e83d733ee EKF: ensure filter fault status is initialised
+c905684c12df94833db3375857b33ed21851cca9 EKF: Ensure bad initial data is flushed from buffers before using data to perform alignment
+ac9b7a3df63bfcbf25d5747b429e3b477566c8cf EKF: Ensure use of EV aiding inhibits use of other height sources
+161ac2e051e9f0f51ceeba3da263b740c309e19c EKF: ensure position co-variances are reset
+2fc6cdd9948bd800712892cea80ce3c3c591a19d Gazebo SITL: Ensure a tightly closed altitude control loop
+b1c6a2c7abf8752714d9dbefdf71a6229d7e6cca ensure PWM_DISARMED value is sent to ESCs if snapdragon does not send anything else
+a7417657c36f4af4f9a30dd7b6ab60eb392b2bcd EKF: ensure fusion timeout counters are reset when required
+b295f9050caf78f63fc90ecba5fd614db62163c8 EKF: ensure GPS check status is correctly initialised
+430d4b1cf8c00efd06097ca9a834a6629025e847 EKF: ensure data in buffers is zero at startup
+400a6e12ba56237c760c3baa033f35082838e8d6 EKF: Ensure all data in buffers is initialised
+c23d72ba298e3432c0558274882b0a2e582f0032 EKF: Ensure filter control modes are correctly initialised
+1fdf252e9619bd1754e21db122c4e39e4b09e6f7 Remove duplicate LAND mode, clean up mode reporting across the board to ensure consistency
+b937618e59a888f653d8f1e1b6b38d5228efdaff Improved CMAKE return value checking and ensured that fresh checkouts initialize the GIT submodules correctly
+8a91ce65e8586eff3a59609bfeaf5ff8ae4976e8 Ensure RC switches get evaluated on first run
+2d2b0a2d43d336b7f7067d282f0dd2b54d8e91ce mc pos: in auto mode reset the position to current position. Velocity controller ensures continuous attitude setpoint
+7d893703d73df879b244b793349112aeb1d87706 ensure suitable PWM min/max/disarmed param values for multirotor and vtol
+3fa3158ca27120ecfe7724e92943db1dd6fc1528 sdlog2: Ensure sensor combined gets written
+168f955e0cd4133417b2f917ac123df71d4924fb IO firmware: Ensure that in case of lockdown only the lockdown code writes servo outputs
+8007a84ab3bd002fca675b808035bd18d5c658ec FMU: Ensure an all-low output set on boot with direct start of the PWM sequence
+6ee8e148a202ad71f707bc279150b5b37aa52bce Camera trigger: ensure it executes with minimal latency
+1474ddbb78553eba8a3851a6b1f8458b426080a4 MS5611: Ensure to set the lockmode at the right location
+401af28b38dd2de5ad59e264c06aefe57ea6f3f5 Ensure that UAVCAN_ENABLE is always present
+1cdb2d3209f46bec0e694b93425495644c137a69 PWM command: Ensure we have enough stack
+c140c2b59c9f1e3eeacb9c4bcdd421572a0feca3 Baro sim: Ensure struct is initialized to zero
+79a030ec5033443aecc9f4b097341de7fbdff518 Work threads: Ensure they have proper names
+4c60f4d98a2c27e5e0393ba6d9cc5cfc66d86df6 Q estimator: Ensure init
+3af906b9a8d5f9c730b984ea9b98c08ce0985c63 Ensure g_hrt_work is zero-initialized
+dbcb226de6ffd41882342eeb65f9bb1745641751 Sensors: Ensure all mag rotations are visible to the GCS
+336ca86117f981377879189265ca93ca7aaa8437 Commander: Ensure primary sensor is present if configured
+51707245bb643a79bec6a75e3a151549ad1093c1 Makefile: Use blunt force to ensure uavcan submodule is up to date
+b799c730f2f063d616f62940aa51dbcb5d268de7 Travis CI: Build FMUv1 image to ensure its operational
+15e17f4a5879198a23212f8caa0c11784600da48 IOv1: Ensure image is aligned.
+dda740b7094454c45e7e1f2d015c688390eab213 MAVLink app: Ensure to report battery status correctly according to MAVLink standards
+d63231a23cdc4eb0b0a6539d7e78b1567d91524d sensors: Ensure safe batt scaling default exists
+e697cabb6ad3c2ac8704aadf22f132b32a095ae5 POSIX: Exit on failure if not running as daemon. This is to ensure errors do not go unnoticed during bench testing
+a7e3232e7fbd87b9e1f2839fd4da24ec34758c4f sensors app: Initialize class count, remove magic numbers, ensure that the sensor combined struct cannot overflow
+e0f203e3daff4c53be643daf187424559b3c0dc1 Sensors: ensure trigger param is present
+09da389558fa82965334c9e699b5c5dd84788482 TECS: Add in-air state and trigger filter state resets when not flying to ensure correct filter state initialization
+adfd1b2579ad786686180505dcb232cf6e3dd1ba sensors: Ensure data is good before publishing
+c28a69fba8873b7551f1031e32f480c4f9a522ab Mixer test: Ensure its not susceptible to timing jitter of the test harness
+e76bdc3cace535108aa90ca89eadfbaef1f13b01 EKF: Use unfiltered airspeed if airspeed is large enough - rely for better stability on the filtered speed for the threshold. Lower the threshold to 5 m/s to ensure airspeed fusion even on small wings
+f9f34078d15281f3edfc0a1e0d49ee1676ee2d33 commander: Ensure RTL can be triggered in all modes
+e8a9c200561fea02f24a97883e6c617d07b251ce EKF: Ensure we start with zero local altitude and zero GPS offset. Since the filter is not publishing any data at this point this is not relevant in operation, but might be important later if we publish a separate altitude estimate topic
+909508f8f9cf1007efd24ab242045faaa16d9995 let mixer sleep a bit before loading to ensure device is set up
+fe09e53b5bb7fe9f7d9734b23f3fa96145139d44 EKF reset handling: Ensure altitude reinitializes correctly
+1fb743412810727d18f2815f541be1f75c11bfeb Navigation capabilites: Ensure regular publication of updated topic
+635b7fa01d5627ef998c01abad4e5cda89f086f0 param API: Ensure info count method is called
+e7c30322187068d76cf6ef9ea9935856134a3c6c Mag calibration: Accept less rotation to start the UI, ensure calibration abort does indeed abort.
+a124bc07aa170b7ea03a901e480157631396d5cb Ensure SYS_AUTOSTART param is always selected
+e09f5d2871f0c23cf8eb8154a2fa8831d9b96062 IO driver: Ensure comms protocol cannot get into integer overflow on bad control outputs. Fixes #2119.
+14247d95dd0b0d1ebc9716d4c94e6dcf9dcb5933 Ensure Eigen is installed as submodule
+06b582f11e2782b07737ab6c75d2dcb14820d705 Accel calibration: Ensure GCC 4.7 compliance
+50a58db7e605c61bb50cfb154cbc43bf9c4c67ae uORB: Ensure correct instance initialization, port complete mag API to new interface
+18d756dd599f93abcd5dc89f323a5df77384ceac USB startup: Ensure that we are not talking to the peripheral too soon. Startup does not take longer due to smart rearrangement of launch calls
+e037b7ae9b361812e99c5985a9c543c2ba503de0 Added delay to ensure the the px4io is in loop waiting for a characterit loop.
+dc7ee4247f3cfee6647876ba1873e0508e29ae00 HMC5883 startup: Ensure sensor configuration is always performed
+aa40c69853be0dc7e79bc3084472b77f9667c1f1 Ensure no SD alarm always plays. Fixes #1500
+ef450cc447a93a5bf4537738fda75d85374e570d Enable examples by default to ensure they get maintained on API changes
+9ac13745f8356db60322fa92ecdff1125c76f172 Adjust MAVLink RX prio to ensure received data can still be processed
+ce1ec430f89e2080ad053115459bf91dd6585d3a Ensure MAVLink app has enough stack space
+ec09f080083fc297228857397eef0651085887d9 mf checker: fix landing check, ensure feedback from all checks is sent
+73aa7d81e31e18a6d1405697856e389a7a7b89af mf checker: fix landing check, ensure feedback from all checks is sent
+2cc5c6e84f2fed508a358d2b2fc9c38085c446db INAV: Add braces to ensure statements are evaluated correctly
+258fb27e146ad175ca89a84ebc9c340a53db0884 Ensure that a failing dataman start does not abort boot
+0cbd943d093f2cb69102e57ef7964b5dbebd9f86 Differentiate between EPH and  EPV. Do not declare position invalid because of EPV (because we use the baro anyway). No fundamental logic change / cleanup to ensure current approach and arming logic remains intact
+3935540c7df0f67946b637af6dc2d3145453c326 Set full voltage correctly to ensure percentage range fits. Force all users to new value by param renaming. Since this will tend to show batteries as more drained than before, this is a change in a safe direction and will not trigger unnoticed discharges.
+5baa3690e02067380f35a551e634b67551ed214f L3GD20: Ensure init and constructors
+f162a3e8d406e52d42ad84ea80ca6678577b9263 LSM303D: Ensure init and constructors
+1ac2b307e4424d3b6555ab3ca21c43d8de19b81e Enable stricter compile mode and ensure the most relevant bits are initialized. Needs more work to avoid the remaining warnings
+9c63aba9a72083afe1e5f818c6559760c5b6b1cc Ensure NaN check is executed before any parts of the filter are run. Fix GPS velocity reset for case of initialized GPS
+5aef22310e0dbec9f758e4cf1df5ad93cbd989ad Ensure states are actually copied in non-error mode
+8deb1c9160ae02828ce5bc810a4262daca94b530 Read out the RC status at the same transfer as the channels to ensure we got synchronized data
+559c62b6bc4923854e106be5987db92197e0bae1 Changed low threshold in px4io firmware to 10% to ensure compatibility with user configured single channel, mode switches
+904ada124baea8ef744535053a0c3b40871565e3 ekf: Put reset statements after variable zero operation to ensure values get initialized correctly
+b8afcf5863fd59d740fd81a77cfc97cc9ecdc07a Ensure that the mavlink start call only returns once the new instance is fully initialized. This avoids race conditions in getopt() and it ensures that the mavlink debug fd is ready when other processes start
+91c55503a860ffc02a2687c141e2cfc68a43b3cc Ensure only either S.BUS1 or S.BUS2 can be active at a time
+57d38bc8cec1362308f632e74e99485f82a35501 Clean up RC related metadata, put everything into the RC data page. This ensures atomic reads, makes the reads more efficient and allows for some headroom for more RC flags. The IO driver side is updated as well, however, these flags are not published yet.
+92a6c7d7344ae0a463e0c04c3b5bc6cf8f4ddc53 Set timeouts back to short, now that we have multiple tries in the uploader. This ensures we try often enough in the 200 ms IO bootloader wait phase to hit it.
+a5e95bde0a77cdd894b926860dba8bc98eaf4dbd Added lots of instrumentation to ensure all data sources are coming in clean
+71ac33596836519a341001bb48a8835b8af75cd3 Small improvements to autoland, ensure that throttle can be shut down close to touch down. Depends on accurate land WP altitude
+1b32ba2436848745e0a78c59fffa0a767cab9d3c Hotfix: Ensure that a minimum of 10 degrees pitch is set on takeoff
+c3bb6960e6f85d07d65fefdfebfdc0650e81aa92 Fixed mavlink start / stop to ensure process is in a sane state once NSH return
+56a35cc8896b077e70226541a43aa0d449e8d9bb Fixed commander start / stop to ensure the state is sane once NSH returns
+0f19de53119e5d89b2520f6906ab50fc9d3a3b28 Ensured correct pointer init
+e19d2e94ec5c38c2800a7001a2a04102734012d4 Hotfix: Ensured there are never two filters running at the same time if auto-magic happens via USB link
+fc572906b7693d910ded443632e8608b200a7933 px4io: ensure upload device is closed after use
+f1d8aa57ce9854920c9408c78be3abdc064b4b9d Ensure that numerator / demoninator <= 1.
+dee0a30e16e3d4d9725eb16f7205cb1dfa1063cd Hotfix: ensure PWM output on IO and FMU stops when disarming
+d4ca6a29a19c96d359aa1458a4e6f3d9c86b01ac Ensured that the mixer output obeys the FMU and IO armed state
+caa11f0bbb7f30679c5c01a64e1d0f6d8627db9d New option to ensure serial stack is always included.
+5ee52138c4ac5c807888e3973099fd0f9a29aa59 px4io: ensure RC_OK status flag is set on good input
+06e18f14e65dd493c4d5215874d8d3cf32440b59 Ensure that sensor drivers are loaded
+4eef4e186437c6b923df7b9dcffdc3723c411560 Ensured startup of USB link, updated port ids to read from

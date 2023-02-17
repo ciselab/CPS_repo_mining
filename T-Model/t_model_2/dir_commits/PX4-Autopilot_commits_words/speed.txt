@@ -1,0 +1,601 @@
+76615f8df3760a7e64746b767835a02cb0af9aa9 VTOL: set HTE horizontal speed sensitivity threshold low
+904ed57abaf0d989711e22e968d0b0a0739b53de HTE: decrease sensitivity with speed
+2b80a6958a1b69f647bd52fc662cb2343acd6bc4 fix disable airspeed check with negative ASPD_FS_INTEG (#18186)
+5b70fd4a1d409d3a35fa7247d7563ddb0b9a4046 airspeed_selector: switch to events
+e6166dfc767d04d0037c35a9591ec9c33c92896b AirspeedSelector: Improve wording of sensor failure message
+6f6d3f98a646c5d3df72d2a17f769faebec8c807 wind_estimator: move from ecl and consolidate airspeed selector
+9c0a52d52a411b983b1835ea2675367678b5169c delay time: potentially reduce delay time if baro/aux velocity/airspeed is not used
+155d3c7d367fced2830ff57031e346c2faa037c8 FW pos control: fix airspeed input constaining
+b06b46b2245784280496e95e8c38a857f70039ed log raw airspeed derivative, pitch setpoint and airspeed innovation for TECS
+4b42a1639b164b66f5766274671e92ce25aad9c5 TECS: in airspeed-less mode, set airspeed estimate to cruise airspeed
+71fc1b81612fa9b5184d5abb93b69d109e9d0e4b airspeed fusion: use yaw from 312 sequence when pitch is close to 90deg
+b7e563bdbeec1a22ea983badb6c3b47b7e1736d9 Airspeed selector: fix in_air_fixed_wing condition
+596da5b7d33673f3e7b646b97cebae62b0647837 Airspeed selector: use module params for FW_AIRSPD_STALL
+c8ec6b3d08a8fc6f4ed94b8e7157920761dfb91a Airspeed selector: remove ASPD_STALL and replace by FW_AIRSPD_STALL
+d3fd03a0149b3ca2ae071dd7b2c4e9076696d0b4 airspeed calibration: instruct to blow into front of pitot
+f16913c175c6c9ed192f7246ad62f535ad472631 mavsdk_tests: fix timeout at 1x speed
+8400f2c9bc8c5c545e27fe59f7cd689d4fb1a62b FW attitude controller: add protection against division by zero in airspeed scaling
+b66ae5f2d4269ff9ddf24e68bda69401579b5ae0 tecs: use raw inertial acceleration for true airspeed complementary filter
+eca4d90a91caa81cf7c50c9a23fc60717b6e1f59 init.d-posix: adjust COM_OBC_LOSS_T when using PX4_SIM_SPEED_FACTOR
+a12442654138c88c796f9a655907f78fc258d04d ecl: apply same GNSS speed accuracy for EKF2 and yaw estimator
+c8c3f57ba158093f36ffadc3b5df1d16971f4916 mc_pos_control_params: correct cruise speed description
+e53e001de1ff6e96093b71f4cea2a347dc086b6f Airspeed Selector: do not run checks during landing
+440e72e69717e5ceb03d2da414710097dcd11d68 boards: cuav nora/x7pro don't have low speed external (LSE) oscillator
+82200fab9e19d80b3182452048de6e29e87546e1 mavsdk_tests: relax MC "Fly straight" speed threshold
+c1de27acf74503c2f2987635781d3f0d4632b939 mavsdk_tests: use more conservative speed_factor
+c524e61b973f6de96fe93edb2a3aee90c5db488f airspeed_selector: fix timeout check
+77884bdd340c86b7a62cac15b7df9a097feefcfd SITL boat: tune L1 and speed controllers (#16784)
+92f2043d8ba1320ff185bdb13274332b649a0ffa TECS: add EAS_sp to tecs_status.msg and rename other airspeeds to TAS
+da7f6d06f3ffd56fae39dbfe5d939be7f8334f5f AirspeedSelector: set default of ASPD_DO_CHECKS to 1 and ASPD_FS_INTEG to 5.
+28f9214e5606a4985e12e78cac084f5f6b7ebeae AirspeedSelector: parameter clean up and disable re-enabling if clear delay negative
+98d057b8c9ad031c9a0557f9db386abc5df904ae AirspeedValidator: change logic for innovation checks
+0c2099e788b9442ac7700b505c21e44d3204afe6 AirspeedSelector: improve messaging on airspeed sensor switches
+aecc0aa0c3acd839ec7063bd275ec43592fca982 AirspeedSelector: do checks for data stopped in airspeed selector, not validator
+7132e674d68f8ea4cb390a9a4e42493dee3c22eb AirspeedValidator: Simplify data missing check
+083cd6f1c1504ade28de6c0eab51e90f547f7bae AirspeedValidator: remove unnecessary _checks_failing
+37a49dbb6a6eafdb18bf388b9dcb0c4d87228ee7 AirspeedValidator: improve readability
+061fb9ac07cf57f59be220cdf3a6e16055976887 AirspeedSelector: add const
+cd2c366e221e7cb5784f1047579bff48a0c46187 AirspeedSelector: remove unnecessary reboot required and Experimental comments in params
+11dbc7e17f2292fbdd16863ee95d1a4938130a45 AirspeedSelector: improve description of ASPD_FALLBACK_GW
+0f1207dd7eb1cb1f384dcb8916590964de158463 AirspeedSelector: improve readability
+cee401666598b54e268d65a79a51fa7841ceba49 Preflight checks: Airspeed checks update
+f05599caffea1690a4f5b5f3b2645463da8742a3 tecs: use speed derivative provided by local position
+fa559aef43c579b33ba11c29de1592726dc36e2b TECS: stop learing integrator if airspeed is not available, but don't zero it
+77627a08ca43c33597f76dc04fe2131215a8e7f1 TECS: don't allow speed height weights to be larger than one
+64ed96bd953e6456a793243c05b47c6b2a6986a1 ekf2: Correct airspeed used by EKF for calibration errors
+c65cf13bb8614b284d5c237cde284ee640a13c36 EKF; Treat combined sideslip and airspeed as a horizontal aiding source
+1e6976234fd89d21fd468ccc424e98c576ed75ac Remove reset_offb_cruising_speed(). Make more explicit that this PR only affects offboard mode.
+9cc9e4f89f43fc6ca3021f0eba73a64490f55835 Handle MAV_CMD_DO_CHANGE_SPEED command for FW Offboard global position control.
+fd18ba649678a8aa5f1b871b2f6b3d770c1d87d3 tiltrotor: allow to finish transition if groundspeed is below cruise speed
+842d98d57297cf7020ec0cba44cd1eb7b95b5d32 AirspeedValidator: fuse true airspeed before sideslip (#742)
+6d255df0a80d421dd01567818833e367d603f28f airspeed selector: disable beta fusion when not in fixed-wing mode
+25c113a5273ab315c511773b23ef81e2a93f0026 StickAccelerationXY: boost low speed brake
+5382d3b8fb75f6218b293051e19c4f1cf3489c04 rc.VTOL_defaults: enable wind estimation in EKF by default and remove MPC_LAND_SPEED being, as it's just set to param default
+651e292d42b64e8d6ab1abd62288b62735b403ea ekf2: move AirspeedSample update to UpdateAirspeedSample()
+5dd14dfd544b0000c08d4d90848a3daaec542863 FW Position Control: re-add wrongly removed airspeed_poll()
+f8d5b09b5666ad5ffdbf411eddbe5a21453cc938 airspeed: remove duplicated comments from cpp (they should only be in header)
+fe6a1ce88242b99335e88a6d4c5880703b8ae329 simulator: fix airspeed temperature
+1eaceb17dc538e930253e87ffcbdb1dd37f19233 mavsdk_tests: adjust timeouts by lockstep speed up
+26bac78eaf274cf58aacbc239cc8f2e865ba864c mixers: Multirotor remove text roll, pitch, yaw scaling and idle speed
+06aa78a291e478cb6613267bfa34db0f7d1acadf EKF: Only record airspeed fusion event when states are updated
+486a461a5eb0a3a69576cb3a87be389036ecc03f EKF: airspeed fusion derivation test comparison cleanup
+ede6204f856789519400cb514cc5ffab8b34b5b9 EKF: airspeed fusion cleanup
+91c0f19121d9dbb80fa284483f4b1f4f79fc7e55 FlightTaskAuto: use new Sticks class for assisted land speed
+6dad4a33591b21a5c69557c28f9f0e2814ef0c54 SITL VTOL tiltrotor disable airspeed
+1efc8c27ebfc8c8414153746c99ea7e118c4e9ca FlightTaskAuto: check yawspeed saturation before constraining
+7a401e5ca3c87b214b04aa95b474337706e6564e FlightTaskAuto: Create artificial yaw speed sp for feedforward
+dd95498379a41045e2b4aa112f2bf4b64563d994 mavsdk_tests: at normal speed RTL can take a while
+7f213648446bf32f86d3813a8ff80795a894157c EKF: use initial wind uncertainty with no airspeed sensor (#823)
+4f82f028e7b7afed43e3900b41afa294149def92 airspeed_calibration: Fix FD leak
+45ebbb895a40eb8c5970edeed6df897316bf6036 Airspeed Selector: do not run it within the first 2s after system boot
+5bd0df422d45c27413912bdb5572b7afbf38bdba Speed up mavsdk sitl tests
+af1a445031f9b3fd5c924944aa9a29dcc0f2e144 Vision test can be speed up
+bcce75e691657e7da06ff1bf88fc878eb026c92b icm20948+mpu9250: add support to configure the high bus speed
+7c533e5a535e48b460dda1a4f148b830155f3e06 commander: Clarify airspeed calibration failure warning msg
+c61cd10db51b3abb6941c80fb85c608dabdb40bb mavsdk_tests: without speedup the VTOL takes time
+ae2032d29ff1929f7d8b52983cbeef10e121ec89 mavsdk_tests: use the min of the speed factors
+b7e8837562174c067a9183b35e2e6bb452fd10ab mavsdk_tests: add max speed factor
+152427ecdcabe4ff87a4ec358a00710130e3898a Ability to disable airspeed scaling (#14334)
+dad9c154a3cc475ca0a5fca04886a8ff9a29b7a5 VTOL Land Detector: move to airspeed_validated
+c80593a144712570f9926f3b6b162d103f381847 FlightTaskManualAltitude: Rename _min_speed_down -> _max_speed_down as it is the maximum allowed downward speed
+230d7f2558a00aa8e4baa9d174de984c9d4cf426 Update EKF airspeed interface
+856961ba8525d32b4a4890a473f02c58c987efda Update airspeed interface
+5b02310f439a64e1dae39dab12b2e91c21d6fd70 Test Airspeed fusion
+7ed6a437c75da9b2157549866c2536fb0cf53bb1 Add airspeed sensor to sensor_simulator
+093a982f49c9d6e50e76025faedd02c89976725d Reduce speed factor in SITL CI tests
+57f3be3a6959bbf98e7184ea676f09312956d9e8 fix bug if speed reach minium during ramp
+7bb952baeddcb83ac0238955dd805624ef07d7e6 update airspeed usage to airspeed_validated (#13710)
+ce9aa119ffb1d5355a90f338b37fb321501a3992 mavsdk_tests: option for speed factor
+2bbe4dac256a3f88adbe6c72aba2208e68cbdeea mavsdk_tests: run test runner, speed up sim
+5f670754813932eac63f86122245cc5f60abca68 mavsdk_tests: raise timeout for realtime sim speed
+acd18adc18ecae9d3363b13be425d062d2a71186 Tests: Speed up boot The previous boot configuration took at minimum one second to boot. This is in particular significant in tests when the system is often started and stopped
+83e51ad1921d9ce61d307f311f1cf536ca8517c5 PositionControl: remove speed_xy constraint since it's anyways unused
+82b4e766a553feee5a9253b5d24a267840948243 AutoMapper2: re-introduce gradual vertical speed limitation during landing between alt1 and alt2
+4ba672a7ba0d2501af7e13181e6ca1cc23a6a955 ManualPosition: Limit horizontal speed during landing
+e2a2654628e7c61aa49fd6c8f219cae28ce625cc level calibration: speedup & check for motion
+4a28c8180b3f0249efc706f712b9ed41ca4f7dec FlightTaskManualAltitude: yawspeed filter remove line with no effect, comments
+cd2b5e7479902eda91b1a7327f1314e28ad5ad12 FlightTaskManualAltitude: Use dedicated member variable for yawspeed filter state insted of using the previous setpoint
+3f92bc26cefb0d59dfc028b0cfd20bff711a0861 airspeed_selector: fix airspeed subscription
+ebdc29bc5f8aed084e524fc7cb33b517f6949a37 Airspeed Selector: enable airspeed_validated in control modules (#12887)
+ff6577ce5f9d98697da56fc5cc3724e95dd7fac6 EKF and AirspeedSelector: publish multiple wind estimate topic instances and log them all
+ac6ee972d350b94dfbcab5266b6018b5e2d29e10 airspeed_validated: move it out of the alias space
+4eb9c7d812c8ac78a6609057466135f47798e8c8 Create TrajMath library and move waypoint speed calculations in it
+b1698b78bc58ea03057f886fe368044ed5cfacc5 AutoSmoothVel - scale down acc_hor using traj_p parameter in the computation of the maximum waypoint entrance speed
+255c911155d15ea0ebf6fef2eb644cd2d2c2825f AutoSmoothVel - Compute desired speed at target based on angle between previous-current and current-next waypoints Also remove crosstrack P controller that produces overshoots when the acceptance radius is large (crosstrack error is suddenly large at waypoint switch).
+07895cd3b6dc7fe2d02b6a1c92a83478fcbf6c73 Airspeed Selector: resolve conflics for wind estimate topic publishing after rebase
+d129fcccd5a3d1ad4a286a60dc757cd44fd9726a Omnibus: take out local_position_estimator from build as was out of flash after ecl update for airspeed selection module
+5bc69797962a84030e293b5d92cc2d01ba51a886 AirspeedSelector: added RTPS ID for airspeed_validated message
+cedf14e2ba453f0eee12da0dcf75bd2fa23cb049 Airspeed Selector: repurpose wind estimator into an airspeed (selection, validation) module.
+970e362e9a5de056ca165ee56f081ea86f9b71ac Increased stack of lp work queue as with new airspeed modudle it was getting low
+50dc8aee7a876248463ba025c227c70eb7a4c68e Airspeed Selector: added airspeed validator class
+248e1818e29028802e1c6e94e7bc8e11d118fd7a Airspeed Selector: changes in airspeed library to account for new EAS state (equivalent airspeed)
+62fa464e4dd6cb5e585d23bd353aa50a469879f7 WindEstimator: added support for pre-set airspeed scale factor
+09f29dbb07aa1dc74540f4c4608f505ae0268bbe added option to fix airspeed scaling to 1
+e43e37cc46ef74da0fa86bfe2a9b470c9c472467 fw_pos_control_l1 add new simple min groundspeed
+834ae3128f62c8111a3f898bfb3e44617b79d063 Implemented reading speed from the Roboclaw
+6df16003570645779f151ab38f368d3da18e0710 Auto - Update velocity setpoint generator to avoid overshoot at high cruise speed. The linear mapping from position error to cruise velocity is changed by a combination of that linear mapping and a nonlinear function containing the maximum acceleration and jerk to avoid overshoots at waypoints due to overoptimistic breaking distance.
+59c555aec36aa5b1c1edac8d0d09fb90a36a3722 Multicopter Auto: Adjustable land speed via RC (#12220)
+e54075abe886c555315243773a99febdef95a23b MC pos control - Force cruise and manual speeds below max speed. (#12404)
+d139bc5a7c7394038260cb553a3eb12040c9be0c Use bc to support floating point PX4_SIM_SPEED_FACTOR
+46c00ca6a44faa542de2cacb176ca1121477cafb vscode: add PX4_SIM_SPEED_FACTOR
+e1671571c8384235a486d6bedace8c95346317e2 jMAVSim: use PX4_SIM_SPEED_FACTOR, not cli arg
+3d22da9cbe91b5b9a51a304f6511c8cd9004f4ba wind_estimator fix true airspeed usage
+9bad61b86b7476967f7e67e18e93c1c093a0c91e Improve robustness to bad and lost airspeed data (#11846)
+4ef59e0a59359c0de6c7609c679773ee73948c9c standard_vtol: transition at airspeed of 16 m/s
+36aeb9defc1a4059e9a7ff7c508649b8c4f95c7d WIP: FW attitude control limit airspeed scaling changes per iteration
+93d52581eff90ccac88b7c8d06f45f48c5e05fa4 Auto - Fix cruise speed. Tested with and without SDK. Before that commit, the drone files at max speed instead of cruise speed if not precised by the SDK
+e88f1b33b2b81b4f886ecef0d5463508c82cfb2e FlightTasks: fix mission DO_CHANGE_SPEED
+dec96b0a3a516ed8a76ebaf0fc2db5227a1669bf revert FlightTasks: fix mission DO_CHANGE_SPEED
+5da57954332d7cc589280532dfd3c9493a71e78e commander: PreflightCheck replace all differential_pressure sensor checks with airspeed checks (#11722)
+a21242b0e351fbb5e1c5e7f0c88dee6fc79f9c60 FlightTasks: fix mission DO_CHANGE_SPEED
+8947cb5841acae5de58716b8933525851db975a9 FlightTaskAuto: removed non used _getMaxCruiseSpeed
+6bb0046407917326ab067a33af42fdd816079510 urtps: fix UART speed setting to work in Linux
+c0dab475547089ae997d6d0a91cf511808d56855 mc_pos_control - reduce smooth_velocity_takeoff default threshold, set initial takeoff speed to 0 and remove useless else
+4cace1bbe9e72f8138e00e565c86d6066c2541a8 Manual vel smooth - use speed_up and speed_down constraints to limit velocity target of the trajectory generator
+34717f7005675e8fea7def742def44eb9c24f19d Merge pull request #11288 from PX4/pr-tiltrotor_noairspeed_transition_check
+45d7165eb33301a68d106ffac50a1bc30b41f5b7 fw_pos_control_l1 skip wind > max airspeed logic if airspeed invalid
+a1fc44d1f03969614a22019ab61af61848a271d7 simulator: fix noise in airspeed
+23acb77e2d52121fc109dfd09852f74b801bad4c Tools: add PX4_SIM_SPEED_FACTOR as env variable
+db6de38b1969459a383b2f644c2d60fd32669f99 Work in progress to support a speed factor in SITL
+21bcc0d2f40d307c3c88009ff5a7f13e8dbbe93e mav_cmd_do_reposition now obeys the ground speed argument
+be4900f61d5f1f9ee24ed10e711150bbaa343dfa FlightTaskAutoMapper2: remove speed_at_target
+deed462e621bb8a338e142b99befdb78f0c0d214 tiltrotor back-transition improvements: - do not set zero throttle during the entire back-transition because otherwise we need to make the back-transition really short - added ramping up of throttle setpoint during backtransition to avoid step inputs - back-transition ends after back-transition time and not when motors are fully rotated updwards. previously the vehicle would enter hover mode at high speed which was not handled well by the mc position controller
+85c2b6307c49571e2d37d669382ae55881c3a30a delete unused IOCTL AIRSPEEDIOCGSCALE
+52fc56a61f09bcba39d45a34c5e0e55f0a6fa8da gps: explicitly set SPI bus speed to 1MHz
+8714b216b0a074b487b72495016a67524d9a71af FlightTaskFailsafe: comments and land with land speed if velocity in z is valid but altitude not
+82ad7d77fa99493311736eebcfe1e245fd2537f7 airspeedsim move to cdev lib
+3f65efe1b01edcdb69ee5e049a886948659558df fxas21002c:Clean and speed up with SW, HW LPF.
+4c4f585ad568bb7db9bf631d87f7dcd508065060 Fixed-wing autoland: 1) The landing configuration (flaps, different airspeed) is now already set during the loiter down instead of at the start of the landing approach. This is done to avoid any mode changes (which can cause altitude/airspeed jumps) so close to the gorund. 2) A scaling factor for the TECS throttle time constant was added which allows tighter throttle control during the landing (i.e. close to the ground) than high up in the air
+2d9bbeb7ed439100e94a500929b2c6b02f67ce50 FlightTaskAuto: use the triplets from navigator and not with the internal ones for obstacle avoidance. Otherwise the vehicle is continuolsy in the offtrack state. Use already comnputed yaw and yaw speed setpoints instead of subscription
+2b6926fe9d7666697efe56d0ff445c630db54ce5 FlightTaskOrbit: speed up stick input to a fixed time frame
+2017e394b34c421d11c17f431c7d21a9354fa083 speed limitation during auto-takoff: remove from legacy and add to FlightTask
+9df337e2437e94b9530fa92d272f3db7a47bdf6c FlightTaskManualPosition: adjust scale based on vehicle maximum allowed speed sent by estimator
+37bfd8e01a69d241c88e69328cc01a841f8209af FlightTaskAuto: always update cruise speed
+1fb8eaf6c645af00fb0d958f8788df2442eba827 mavlink_messages: add yawspeed to local position setpoint sent over mavlink
+558a0f892c3c7e767db9c50aa8f28cbbf1a34569 PositionControl: auto takeoff with constant speed
+50ae8c9c6f8e5d56e91d43604950ab97333a7e17 airspeed.msg update incorrect comments
+3b580514aea72e1d9c52cf3f459b8250ba094c04 delete unused airspeed.true_airspeed_unfiltered_m_s
+9a4de0932520fee1e073a5361855e30cd30ea3e4 sensors remove airspeed negative check
+05936f2ff7c0e77b01c6f970ac815dd8f90e48e5 px_uploader.py:Speed Improvments on Serial
+f3a7886fbf60ade09ca07178b88faa004a760982 trajectory_bezier: remove yaw_speed define
+59c7fc5d96f7b0cd887f13c06b7de55e285e2b64 mc_pos_control: use one method to wrap yaw speed instead of triplicate code
+47f2db67b64919d78a320cad00e9f053574de549 mc_pos_control: execute yaw or yaw speed of the obstacle avoidance waypoint
+29d1226c700271ca3c69b8a32cc3d62a921e1b2d px4fmu-v2 only enable ms4525, ms5525, sd3px airspeed sensors
+84f937a0980c8c57448a997db8be01dff1ae8913 airspeed sensor: use bus_option array from i2c.h instead of one in each driver
+325fe16178672257fe5df154a61c0ba516e4d0eb airspeed drivers: add PX4_I2C_BUS_ONBOARD as possible bus
+82b3e57abbdac5f5795d55a6f9dc83b6223562ed rc.sensors: look for airspeed sensors on all busses
+035f240e76144433c7a75fbe1ec9d7ed8774421c ets_airspeed: add -a flag to scan all i2c busses during start
+670c3cbf4e941ddca94583d944c6d8a771fb51e0 sdp3x_airspeed: add -a flag to scan all i2c busses during start
+fd675084ccd58f21d7e858ad91a00a12acdd4a00 ms5525_airspeed: add -a flag to scan all i2c busses during start
+cf816fe5560e4181ef6b4a307139c7243f3f0c73 ms4525_airspeed: remove i2c_bus parameter from start function (it tries all busses)
+5f3ea2f7ba458b7dee5b9214659e68fb542dff73 ms4525_airspeed: change start_bus from bool to int
+c231b6834d76817a6855bc4bfac709bdf467fe41 ms4525_airspeed: remove PX4_I2C_ALL
+fa35731e02ff54857dc3b0dfdf09765047494446 ms4525_airspeed: add -a flag to scan all i2c busses during start
+20aabd35665e53dedde67064e895127f004da914 move systemlib/airspeed to standalone lib
+61b4b2df886872a819a088b3cb7bcbefe9317a82 ets_airspeed: add argc check and use px4_getopt
+ac55a0de58c0884c3b70726aaf1f7d4889575c92 airspeed calibration log critical when ports are swapped
+35cb2d0a9e56428e5ea9c7116e9356d86aadede7 EKF2 fix airspeed orb_copy check
+79ff1436b89423f5d7e7f8b965c2f826bc8021b7 vtol_att_control: move handling of motor state and idle speed selection to VtolType class
+8f9e8a6282fa372e40f86c2f9470020e2df66847 FixedWingAttitudeControl: use trim airspeed if airspeed is disabled
+d6a86dfa56fc2d7ed566b0c065262acd1af91878 tailsitter: do not condition transition on airspeed if airspeed disabled
+4bf33339dc1b2b94b691adb5daccc2543d5af423 FlightTaskManualStabilized: remove double limit of yawspeed
+4f17fb1303823495ddfe6e504e70e827c43c31d1 ManualSmoothingXY: detect alignement based on body frame; do direction change only if not yawspeed is demanded
+975ac11635b513afffce533dce0f3dc1fa682b11 mc_pos_control: enable yawspeed execution for tasks
+9fdb3ace0cd7d8b37098a29b2614fbb5dd4c9f69 FlightTask: added setter for yawspeed and removed newlines in comments
+919d0d64838c38c1b9bc2841f1cdd0c86adf5dc5 msg: vehicle_local_position_setpoint: add yawspeed as a state you can control
+25300a6b11ae5d363b2eafe24718d44c454a859e VtolLandDetector add airspeed finite check
+fda2edb7c423a5db52f580ddf4160b80a6ab869a sensors only publish airspeed if finite
+cc26c34691db1e622cddac6d330679fe61467d37 airspeed driver: un-advertise differential pressure topic
+7c0f043116699ea469c42d10081403ca22bc638c added module which implements wind & airspeed scale factor estimator via work queue
+95c4777b355bf05b59b69cb97ae131a03cfec564 added airdata module which contains wind & airspeed scale estimator (#405)
+52e5e0df14c13343661403f53f9a7c0ee427babf fw_att_control: schedule trims for airspeed and flap deployment (#8937)
+dbdb2c9c22a59c7376204eca55e56e2a0f3ab27f px4-fmuv5: config fix stm32f7 max SD card speed
+03338935e0df471c01c25e9d360ba6257e264551 vtol_att_control: make sure blending airspeed is smaller than transition airspeed
+6900f97b72abb7816b2e0fec022bf039c0d9eea4 vtol_att_control: use airspeed_disabled flag instead of airspeed mode
+11e3081efd98b2fd714a2c0ca83ae57d7a950df4 ecl: Fixes bug preventing use of GPS reported speed accuracy (#8981)
+eed8b0085750dba4c267e6e91dfc816307ecfc7e mc_pos_control: Release estimator speed limit only when speed demand is significant
+642a4a5fc7afd913661c24b2394497917f5b53da mc_pos_control: respect estimator max speed and min height limits
+f016e66ff822e993c813899a3cce7e2bde342fd9 Revert "EKF: Release flow speed limit with altitude gained" (#382)
+4445ffc70eb5990be1ef9f56f8dbc10aaccfe91d sensors don't store airspeed in class
+e70206f74bc4f77a0e000da3c923f4459006d2b1 EKF: Release flow speed limit with altitude gained
+a5cc4bcd08e8f3fec404528db9280b239a7289cc Update SDP3x Airspeed Correction (#8242)
+bb9f8c3b44f378cd1a00015dada69dbc27b24432 navigator set cruising speed/throttle for reposition (#8096)
+38f45d1a9dc89c78c6bbc3c9c6ee21f8f8d264e7 airspeed sensor startup improvements (#7903)
+7a5f58a607379b5abd9ea53b9e05ab7b16859f7a px4-same70xplained-v1 nsh:Optimize memset for speed
+96b4e5b512ceb203656316ced12cb3d38cbed15c zubaxgnss-v1 nsh:Optimize memset for speed
+17bf776af384f5c62efca3061cddb56c8b2e6110 tap-v1 nsh:Optimize memset for speed
+e53a06429cdaabf1ca51eb09fe038ac017a2b319 s2740vc-v1 nsh:Optimize memset for speed
+3f267a5cb2e927d8762c9593c9b6a204f41c3f50 px4nucleoF767ZI-v1 nsh:Optimize memset for speed
+c71e01bd44fea0907be18047cbf117bf75aeac6f px4fmu-v5 nsh:Optimize memset for speed
+e4f47d4faa84e97baee1db16fac2af413f4b06a2 px4fmu-v4pro nsh:Optimize memset for speed
+68679a3e8ec7bc3be03dffa07679c62493676aeb px4fmu-v4 nsh:Optimize memset for speed
+24446f0c88f5afbef1b7df9f2ad294360918de21 px4fmu-v3 nsh:Optimize memset for speed
+6955a4c0400005fbb5979a5c43a64e9e1bc85284 px4fmu-v2 nsh:Optimize memset for speed
+c760278d0fa6a718f0d6cef14772a1ee86bd56a1 px4esc-v1 nsh:Optimize memset for speed
+c7f3e84bf4086b1da1f85d413b5ffa676078d936 px4cannode-v1 nsh:Optimize memset for speed
+92411e7195b945c9b148df7ca09232d78bee5e16 px4-stm32f4discovery nsh:Optimize memset for speed
+1a98f3c149ba52c458205a66fa99feda69146991 nxphlite-v3 nsh:Optimize memset for speed
+3c25e8d89955a0ef4067453148cf458b70b5c773 mindpx-v2 nsh:Optimize memset for speed
+0d82e807fe6d813193b5dc3385c590db5a55e6de esc35-v1 nsh:Optimize memset for speed
+ad6d0304a996794c4d0a81e5f88ed60464457d2b crazyflie nsh:Optimize memset for speed
+202377dd4eff0eb1526da8d6a35ce1564c40a24e auav-x21 nsh:Optimize memset for speed
+04a61d47cb6713b14bc927648a1c57f6651b8d0a aerofc-v1 nsh:Optimize memset for speed
+e95b76025731c8335f0dd606b043646cf54c415e aerocore2 nsh:Optimize memset for speed
+1880abdac50ceb0b02379948a76886fa6557a524 Airspeed: Base sensor model on device ID from sensor
+9cd915949a3b5932cc98e79cb70301fee9863265 FW raise min airspeed based on commanded bank (#7575)
+947d63fb11e10885253f042ee86ea28fb42ebbaa mc_pos_control auto: replace min_cruise_speed with cruise_speed_90; take care of case when cruise_speed_90 is exactly in the middle of max and min
+0a37d8dc429a30319b96dfd20c6ebc68a8500f19 mc_pos_control: clarify speed params
+c4c18caed41bb58a2a8ef287cf40c76783a1b6d1 mc_pos_control auto: set speed at 90degrees to 1
+fd8a5644e8af36aa0a6eb0982944959376b3399f ets_airspeed posix port
+15407afc6e044eedea07b56e1e23bb35ace25baf ms4525_airspeed update test helpers
+641a90708cae4bdfd1df0854d1476a80209d7ddf sdp3x_airspeed posix port
+9cd25d604b50e2d5a73387775bae95d4f537f309 ms5525_airspeed posix port
+3983ac23fa5278ce9bfda70ccc84e7e839141897 Merge pull request #316 from PX4/pr-ekfTrueAirspeed
+cc5db74d1b8ca5febbfcae0cb3ee479f636934d1 EKF: Add true airspeed accessor
+bc46f13d90adc183b5802c38f2e6dd855dd5aa72 landdetector: use control mode, add minimum speed to detect hit-ground
+fc30f2906fd8b8dc5fe52c38a887e9e4e56b2e0a mpu9250:Use a cpu speed independant _reset_wait generations.
+b804616ad03cacef0b3de360eab2b10e73060876 preflight check airspeed use differential_pressure
+e303c2ad89fe6c8279434b99022da7d754d8fc1e eagle tree airspeed allow negative differential pressure
+1c7833e3b1660cece4d341dfadbae8791e49dba8 airspeed calibration simplify logic
+936f92fd0bd59b5c1985fe1cbc59076dcdb78ca3 airspeed verify using filtered differential pressure
+72969f00d7f17b0a55b107452d5d8d41fc6a8adf airspeed calibration error_count is uint64_t
+85d7c7d16593e3ee612d880cac1c51084096585b add sdp3x_airspeed to px4fmu configs
+73d9358b1de0ec5f2ae949f2629fead0b98fe9ec meas_airspeed rename to ms4525_airspeed
+d5eab23f5361971cac2b25f1c647f6e0895c18d9 airspeed error message clarification (#7497)
+33495e81437113bf301ff6cb5f1d1e5cf50dca0b ekf2: added parameters to specify horizontal speed and absolute altitude thresholds for range aid mode
+19cdbcfd4f4d57a1810d1b915e22d903ec0f5ca7 sdp3x_airspeed: fix shadowing warning for crc
+a25330762a0b70f5adef6ca5d0672b950f7f82fc Commander: Adjust airspeed checks on prearm condition
+d104f984d4a6201680dc9ef1e235d37dd50916f7 Sensors: print airspeed validator status
+fd9f6e9415f25a69784d3c156b76d9a541fe8330 ROMFS: Rework airspeed start to include SDP3X
+c6cece52d3e9ba37cfa3868c896c845f2aa4cd36 Sensirion SDP3X airspeed / differential pressure sensor driver
+833cdc92369e4fec946bf0266e8e70f8f814807f EKF2 update GPS and airspeed delay defaults (#7353)
+0c4719de3ede6f3124e3550cfeb375f932d8801c mc_pos_control: smooth takeoff, fixed gradient of the velocity ramp by takeoff speed parameter because we need a workaround for the broken auto takeoff logic which can start the vehicle with a loiter setpoint in this case the very first moment is still a jump but then it gets taken over by the fix gradient ramp this can basically be reverted after the auto takeoff logic is fixed
+b5820afa1437f258e01914eb2ca0fb6e04437930 mc_pos_control: smooth takeoff, fixed ramp reset bug and takeoff speed limiting condition currently when the vehicle is landed again (not after bootup) the core position controller does not run anymore therefore the velocity limit ramp in some cases did not get reset correctly
+8687d414bfdce24537e45b109888dd6e4b8470eb mc_pos_control: new variable that defines speed in manual controlled mode
+0b8e88f476589b84d071d238bd429a8fca6343c0 fw_pos_control_l1 remove unnecessary ground_speed
+0b0c552deef242f5242b6cd476102cb908addf2b fw_pos_control_l1 remove unused ground_speed arg
+94ef3db4079e52e6d9d541d766c9a7d08acfb6d8 autostart external airspeed sensor on i2c port 2
+1d681b0356f2d71d0b152e6e95a922463f2137fd Update URL in airspeed calibration error message
+fd0efac2b5e2d1c2e9437655f1f20f134f252b8b IO driver: Run attitude control group limited until the device speed gets set
+058bc97c838d9ff3958e95c3ad18098f2d75ef36 commander preflight calibration: accept param6 == 2 for airspeed calibration as well
+80c8130f078d0ea8590f3966a324b073b28430a2 sensors true airspeed fix
+384e3bb6939b1c701bc8b78ff0264e7a908e87c5 meas_airspeed status aspd_com_err
+1d4d57c4db9ed46664d8ef6ac0be11f89e146b9f bebop bus wrapper: log actual and setpoint motor speed
+fa6ad99aba2a99c6e3f981212f59b508293ab811 Enable MEAS Airspeed voltage_correction based on ADC_SCALED_V5_SENSE not CONFIG_ARCH_BOARD_xxx
+7fd06ee913375f6cdc338be0b783fe7f811f54b6 MAVLLink simulator interface: Simulate minimum airspeed noise
+b8598c4407d15133d2d51923ef093a68961831a1 Sensors: Adjust airspeed fail checks
+a13082bfed69d7f05a540aa806f8c945827816cb commander: Widen pre-flight check for airspeed
+b29e0040f1f838c6249a7af29f98f31f939bcaf7 ETS airspeed: Work around weird choice of manufacturer zero level cutoff
+df5d0ba8b9ed368cff4ef664b2415b652260fd91 airspeed cal more descriptive error message (#6324)
+1de7636fad67362210ecc8094034419f6548fc10 Tiltrotor: gradually reduce roll control with time or airspeed instead of simply switching it off
+c416fc3fa00f389932f4dee4267033ab8b3b7ec3 Tiltrotor: - added open-loop transition time for airspeed-less flying - added ramping down the back motors during forwards transition
+9cfd46b87c5a4a748503243cfa4def558a57c715 Airspeed sim: Fix reset function
+6d4579751a0041181a2d3e36b2fab08c52311b72 tests add airspeedsim
+647fafe9bc83612c173125a0b537951965ed9fd6 Allow for immediate cruise speed changes at any time during a mission.
+ef495d26b89b105871c9c8cc882a4821ed85d1ee Airspeed calibration: wait on filter before preflight check
+b531e65f6abf0017949fadfd33424f672ee90991 Airspeed check: updated message and explained test parameters
+f772fc2d021245b9ae274c3205e9d502d5cf1ec0 Airspeed: preflight check for bad offset, fixed calls to preflight checks (vtol & airspeed)
+9e589cef480e82cc5a8bf5c4002bb2bb7ca27bef airspeed calibration fail with any errors
+46a697787fae2b37b90709bd836728c1d93f2e13 log all raw diff pres and airspeed
+0fa79eab5ce2c710363cc0154ecf5c79d8be6884 add differential_pressure to airspeed logging
+eec55a09185069b86262209c22a9db2ce719f81a TECS: run underspeed detection method before calculating speed demand
+352b4ca1771ec8955bd24e6a7592f2bd5c630473 EKF: Allow sideslip fusion with airspeed fusion
+fb6f4be453b1cb95f790ddaf0c698739db03c161 EKF: don't allow sideslip fusion to affect non-airspeed states if not deae-reckoning
+e1d9d503e375681be4d17e6e057adf464de26ad5 updated logic of when to fuse beta. Now synthetic sideslip measurements are fused after 5 seconds of cruise flight with airspeed sensor activated
+79df7e88891fe2651398c8ccb4b6a2d6aa3d3234 EKF: Reduce effect of bad airspeed when other aiding data available
+57d7a002614a251dc6a72388e9101c16981d1e39 Set BMI160 bus speed to 10MHz
+c81a1631ece0be126fd49d3a4850c79c6197b357 simulator_mavlink: init hil_attitude with 0 & set angular speed
+997ae984448442f352681db15d67cd9b12691e08 navigator: reset cruise speed when out of mission (#5494)
+51c8715638245f64b7b01e41414df8c0fb5cc82b fixed issue with airspeed never fused
+a9894d7e8c5adfe515efac6854345ea03c78a3e1 EKF: improve efficiency of airspeed fusion
+c5e11cd16f5be37094a221ef9cfc44ead1326a62 TAP:Added i2c speed setting to init
+a38263b8e7062c2d3240058e919e071e1a2e971d Enforce enough braking power when users set higher horizontal speeds
+ce3749d04fb11ec0407c0ae301e356df4845f9ea Make tecs init airspeed mode dependent
+0cf77a30b1dc4c3ae488e08562d7255ae7dfda82 Init tecs with transition airspeed for vtols without airspeed sensor
+ddc4d70d5196ec912830df346293bb35482956fb airspeed_calibration: remove unused include
+6f6ae78cf2ef095a01f5a3b557df8699c146ca14 ekf_att_pos_estimator: added logic for airspeed modes
+37531c018a7f789949c0d7514bbb2850ad5b48a2 Implement MAV_CMD_DO_CHANGE_SPEED throttle
+7f8c183d99372206e4b0258e2328a1be39d76551 added airspeed mode enum to control state topic
+c2da51ccf5a6a922ce1df7dcd0902c0756e6cce7 use airspeed mode parameter to decide which method used to publish control state airspeed
+099becb3536f1b480bd5ee4b6ee37f36694857e1 added parameter for airspeed mode selection this will enable small planes flying without an airspeed sensor
+d66af65a9265faf6684d0d1909e2c4cfcbda4d14 ekf2: fixed airspeed thr bug
+acea2f98d5df5e1b64da9a38c186f1ff65963ebc log airspeed in rpl mode even if it is not fused
+9c170f7fae5b482db7ee5a27bb52894e772329cb added parameter which defines threshold for airspeed given to the filter remove unnecessary replay fields
+8125717bf5771d6ca32190ac7f95dcc2d78b20f6 EKF: remove un-used airspeed health class variable
+cf489f424875abb999d710b4386042f1e3c99b72 EKF: capture airspeed innovation test failures
+ee33f21303cb66d6ed85a68a33d37ec2fef76aaa added airspeed to ekf2 replay
+5217b73df16f0d9eac26c716423ce613a248934b added bad_airspeed reporting (#123)
+b126921894d000d29eb1b3325bf89de996c4baa1 changed airspeed innovation gate to 5 (#119)
+6b5e77250f3144180cb7a3d90ce8c0906b3f77f4 ekf2: Added airspeed to rpl logging
+3cdf56e57cb4996264e431759a4b2a05bbaf16c8 Merge pull request #122 from CarlOlsson/airspeed_fix
+ee7d7aeb8aed1e9088143b3ebf6f5c112cf4ddc9 fixed_airspeed_healthy_bug
+3f169d9b787fb55addff94dbaeb2911117bde39f Fix instructions for airspeed calibration
+1126048a9350eaa5c212dcaa3663c31abb7a67b4 EKF: Improve protection against bad airspeed fusion
+c942266aa6a5c6ba75057281b91576c2bef4ce79 fix airspeedsim: add missing return
+9b1e4c42de6408da83a3ab72d11cfee706374d74 Multicopter: Clarify speed params
+00c8821006f74a0f7b2ddd9787470b6ee47cd8aa disable airspeed fusion for now. Needs more testing and implementation of side slip fusion
+99fc61c27cafc8a0329d91df76e4bbbb80a7c869 ekf2 airspeed fusion: - finished logic for fusion - fixed bug where previous control status was set in the wrong location
+0231b512b4d1b9690e51c18843563fb630c1e0c0 Plane: Use appropriate idle speed
+b3b22b1c2c9b965ec39b8df80717d719fc6d5bc2 Airspeed driver: Proper start handling
+93fde19c25f13fe9c4000bffa9d95ea16bcb13cc changes some cell notation for speed
+6b3ad034197592b993b13a183f68fbd49d7467dd Merge pull request #86 from CarlOlsson/small_airspeed_fix
+65d491cafc9d94f143aff5265962d245dad7cf0e ekf2: update airspeed fusion (not yet active)
+96b9674cb679332c01f66dabf3557667c2c40d8f Merge pull request #84 from CarlOlsson/change_to_true_airspeed
+1ea26b406a88c173ac4e497ea356c94de82d30bd change name to true_airspeed
+2f48317a9ea7b05d8c61b3d1c44f8229491350b1 ekf2: publish indicated airspeed in control state topic
+27b894540ed9f4a87e02f1958a396664b3c7d6bd put airspeed fusion logic but don't actually call it yet
+0fb1e0578ba0b5dc84067426fdb45696eed6554b added function for fusing airspeed
+924b7efaa2c4ac987165f6a7da745ad12cdd4744 Airspeed: Use shorter perf names
+fc061ea94da198318502a0c4847b19b01a939728 try meas airspeed on I2C bus 2 on fmu rev 3
+2a2dca84bfddef0a5194b85541a6579a8acf2e6d Navigator: Do not interpret DO_SET_SPEED as 3D location, reset speed on negative value.
+36a8f3f45a5085fd7de16fa23f2df4c2389c5f02 Commander: Ignore speed commands
+f73148e98daa508932497f0c2f800aeb2d7020e3 mc pos control: Support do change speed
+7871ab0faef2b9142d1595b943257a2dc2257ffe Fixed wing: support do change speed
+697096511cf25d532cfa8554727c9aa3cc541239 Enable change speed command
+2549505e7b5d5f184443dd3b97379dcde0f7c879 Navigator: Add support to read cruising speed off a mission item
+cc5afdd6b55f5d6b63e27e33dca110e4d8a40b7a Add field for desired cruising speed
+80f3fefcc342e54a8b99d21feecd8c45db341e42 FW adjust throttle to airspeed mapping for ALTCTL
+eb11c9173326961bfec1095db802f151d2c035de Fix airspeed check in simulation
+6eb2e62306e4b55fd78444f26c15ae8e9963d416 temporarily use indicated airspeed for transitions so we're consistent with tecs until we move tecs to true airspeed
+0ccf0ce7472809a2784a9319a0ae25f6377ff612 only run FW posctl in FW mode and ramp up desired airspeed for tecs after transition
+967b404de8fe6d7e434af5a98f8949076fc50242 only run FW posctl in FW mode and ramp up desired airspeed for tecs after transition
+345246953b5c4d68097501eb0a4145715b4647f3 Airspeed pre-flight check: do not arm if sensor data is stuck or bus errors are high
+2aad0c079e902c0a95f2594fffb0f90a2c4d4dc3 airspeed: Populate confidence field
+3f9fc625f90c8fce507e3794cb18e779a951530d Airspeed: Add confidence estimate
+678d6f45cc185afa4ca0c8dc7196d5dc674063f9 Merge pull request #52 from bugobliterator/pr-airspeed-sample-fix
+7455a833d02a82bd96b037b73a6845f268c680fe MC: Split yaw speed limiting between manual and velocity control modes
+bbc03731c78384284a17dd5c71e818459e8e8487 initial implementation of 5 virtual sensors for Bat V,I, Baro alt, Fuel and GPS speed. Voltage and current scaling can be set in OpenTX. Fuel is in percent. Alt in meters. Need to look at what OpenTX wants for speed.
+461451147443356aaca7ad0473e41991607a9092 use set takeoff speed
+cbde246f0a02afb771cccc5e61faed5f7115e22a FMUv4: Remove non-existent airspeed sensing channel
+4ba7408ba0e47a92783086cc1bf4df5035c76235 Speed up Vagrant
+c0070a19a85a2534548e470dcedc26613e1eccd3 VFR_HUD should be indicated airspeed
+27e1aaeea5b4a464f74c51e9418fee8afd50d95e control state: indicate if airspeed is not valid
+2c07668b2fd320bb304cfb83d5b1322253967e20 Merge pull request #3268 from wingtra/airspeed_indicated_q_est
+b83170b7c3e062e377878831aa29173a2467303a use indicated airspeed instead of tas
+7de36b0264e57b2f1574e4199752cf6efc68b00c Merge pull request #3267 from PX4/control_state_airspeed_fix
+e5b2c652e22d174ea4f3b2f3ddd5c5877e359a33 channel airspeed meas over control state for q estimator
+b42bcc48bf1b1453f7d2a67e9c865c38fc3b7027 Merge pull request #3263 from dagar/true_airspeed
+111287f6fbf83b7c6b5bcf334f5e7b20ef6ef4d3 Attitude EKF: Do not limit sensor speed
+719440fe4d01970a574aebcf6f197f14867ef65e Merge pull request #3231 from PX4/airspeed_fix
+333d6ea12f59064d3a45dfc235d76609019a33f2 ekf: use airspeed directly, the other thing was just wrong
+120fd9d5225e1e09a19dc51c0f0ccc27b4a98766 use control state topic for attitude and airspeed
+f3e0d91f24ed30b32647a10b30b82f1bda9b29f5 added airspeed scale parameter for takeoff and landing
+b16e6249e4189e077ce9d82973897a7698842181 more correct groundspeed scaling for wheel controller
+9c70eb0b63e1079f1fd0fcf8714cbd2fd138baed reduce wheel control speed scaling
+515d81b8d65dbab25aadf7543893621c918c9a82 Land detector: Move back to more agile raw airspeed
+092a51426f3cde2e5a04e204a3f3adef82cefeeb Build fix and airspeed console cal
+0509a5a9ea64568faee95bd3763d990a12906611 Enforce airspeed check for VTOLs
+2b50297c2e4b0dd93eb7a883704aa0e56a672db3 vtol: allow switch to fw mode without airspeed reading to facilitate bench testing
+4c47fa70a8c0179f976665bae5f3d6f9b1c1b1b4 Airspeed: No module file
+7c0407d0ef4d6569be0cc1d806841c7b7356c92f ETS airspeed: Fixed code style
+e2e83cd578e51572202d9e1b218e592438e90b70 Airspeed: Fixed code style
+9c26e71ef6014bb983556778899c912f472083c4 Added robust airspeed measurement
+ce70803d250435ae1fc6f103066759b0c49a576b publish control state from ekf - missing:airspeed
+9f90b877456648f0f6f742d50c1b730d8ec2e152 implemented driver for simulated airspeed
+0fe272c9b3fcac06a9f30f9ab19fd94ad9d969c8 support simulated airspeed
+b2bef75bb4e6ef7ac04540883a9c973874f1a0b2 start simulated airspeed sensor driver for fixed wing SITL
+bfef24bf727f72e0f82050276777e000930d3c39 Add airspeed boot workaround. From @kd0aij
+135543f03f95f2860640d4145c01ebfe0480af47 Airspeed MEAS: fix code style
+bac89be4b98869dce6899db2b18da4da52da471b Airspeed ETS: fix code style
+dcf7b81f8321555a9e0c209cfaf59726dea154f1 Airspeed: fix code style
+90e4fa8a33f234bfdf8e5294203f2537e416751f TECS: Weight down speed gain
+006dfbb14f658b23c0a760229bac05e861db48dd Commander: Speed up airspeed calibration
+e1572d3942538994fc65a4ba66cdb0ac8f46c5ad Moved ADC channel defines for battery voltage, battery current, and airspeed voltage to board_config.h. This allows better portabilit of code from one board to another, since it removes the hardcoded #ifdef sections from the Px4 sensors code.
+289ad91bcc2e49c33ae338152d7af19a13c4b64d Fixed wing land detector: Filter GPS speeds more since they are unreliable, leave airspeed filter where it was
+f619c1390e682da13dcda225ec8845c8c317d0f3 Merge pull request #2366 from PX4/ekf_airspeed
+0916e6fc199fee2acbefa924b55082eb483ef3bb sensors app: Populate unfiltered airspeed field
+7deeda726cbeff7259dc671244990b8532146b99 airspeed topic: Add unfiltered airspeed
+dc7471f430ff6edf5a2b132f8d6657b43d0a62c8 Merge pull request #2296 from PX4/attitude_loop_speed
+d40f94bf26a89c349f5d7633434d3721b4720170 fixed wing posctrl: - lock desired yaw once yaw speed is small
+9af8ba49ac6a8c43fb9a782c3bb0a2d91ea75e10 HIL fix: Also publish filtered airspeed
+44cf402c6f35de64381ad67f5560f52daae51777 FX79: Set better default values for airspeed and loiter radius
+aa531aec642f777dd5ea1c38c02f1938e8834c6f airspeed driver: Update topic names
+f7c9e918b1fb933dd431076b53444c1d004099d9 Update airspeed topic to use message generation
+be3551136ab5b81408d28ecadaf21a6d217bc279 Airspeed sim: Use proper constant names
+5c535845ab272fa6f586d319e56294a2c766bac1 Airspeedsim: Add ringbuffer namespace
+e279e8bb2a87e56d5356fc255d800516c8094cc5 Fix param changed count logic, speed up logic for unused params
+26954ece2c51ce54452df519af09678e15bbe704 Merge pull request #2187 from PX4/fixconstrainairspeed
+8a891591a8eee665fe31f5ff4a1d7dfe47ff00a5 make constrain airspeed actually constrain the airspeed
+97b8e7a20e1bf64b7677911e6bbab300ff471358 mavlink FTP: Speed up transfers by longer bursts
+5557ecf3d71fa22eb790fd261a1702d2153e7e72 POSIX: Added airspeed simulator
+668e634bc272b22642074a9c496c41a54ff7022f Merge pull request #2095 from UAVenture/firefly_airspeed
+868b9b33ed6d7f521d20d28429cd8c7d57311409 Make sure we log the airspeed check to the console as well.
+8334073bb99e3da7a5bfdfc24f540f0d0e14a361 USB: Crank up bus speed a bit
+de3888bed75347eb8aefdc6cb7dbeeedff749988 Merge pull request #1991 from philipoe/PR/AirspeedArmCheck
+32012e8aac641ee5a10eec14c79346c148bcce90 fixed elevator wobbling at low airspeed. Removed not applicable if conditions.
+5f326650fd2b83adc86cce6ca5ced4371bd16a60 added max values for airspeed
+d6962de4452a365701a0302a15d448fad68e6092 change FW airspeed defaults
+f0ad98c92c3fa063004f241d590bb96f6be16895 RGB led: Code style and comment on bus speed
+c0d246e8e4130c3df7d16a97f7c749827be18b29 CDEV::I2C: Enforce one speed per bus
+6e4b95e844e0e24c65ee5166d3d214957e3be9e6 Airspeed: Move to 0-based index
+0901d999924012b482a5379854c24eb9f2c6f345 UAVCAN update (speed optimizations)
+3a05b571690ce675f56184cd5c5168f7699f9a03 log total airspeed for vtol
+2e1ac72b598184ef618beceb10de53606929edf7 Speed up stack dumping by looking for freespace 4 bytes at a time
+e16c4ff76e7eff2da88bcbef5d05dd4ba11e7203 read attitude and attitude speed from imu message
+5682526737e9aca75fa30aea8e8f18e49c0b48a7 NuttX: Update version, addresses clock speed error message. Fixes #1510
+51a7fbeee091c20eb52bafade3e2041e26a785cc added sanity checkto prevent false low airspeed readings during transition
+9bf19c8d1e05c8d182a9989061882065504927d1 merged with caipi_airspeed_scale
+945c8df18bfc25650bd01d9358295f1c2102a61f added scaling of mc pitch control with airspeed
+590489d49859c77ef2e919f2ef45e9dc81e28f9f make sure vtol attitude control module is started with idle speed set for multicopter mode
+4724c050478900a0b0b760877f1613e43c0aa97c airspeed: use _retries=2 for I2C retries once initialised
+9bb0ecf0ca6082355072af190018e0b5298b7e59 Airspeed calibration feedback: Improve wording
+beee7a89ed6e7a7c98ee712ab571c58eb6f3a692 Airspeed: less chatty
+e2c0ac3f700f003061e52fd61fd4770c982605c8 airspeed driver: Be less chatty
+47367aeed526e7ca72e9cb7290e745dc0e6e2061 TECS: Fix bug (underspeed-condition did not have any effect on throttle)
+84908f8f3db5179ffff0d96d15756ab112535482 mc_pos_control: AUTO speed limiting bug fixed
+821c06f7cc58b50afe80442ee2258bf99cbe1fd2 Support speed estimate
+c17c585c3e977688ad5ff64812fd499c0410f2da Merge pull request #1335 from PX4/landingtecsunderspeed
+ab022d51338c30207379048c913715a0b8d601c3 disable underspeed protection when landing also in tecs
+9bda573151ae1b5fa87686ee58596ea14e052941 mc pos control: offboard: set yaw and yawspeed depending on valid flags
+ca06c7b4e793e7ae32a5f9aaa38c353a73f113a3 Merge pull request #1312 from PX4/airspeed_fix
+2f5c0cbd133deb492102ea8515563f471531acce Deal with zero airspeed measurements
+ccbd5c09316d9f07eeda3c3f6bc07c729dab6c82 Merge pull request #1308 from PX4/airspeedfabs
+e09bc02c37d5e36a3c7d3feffca83e9ddfe1ed79 meas_airspeed: don't reset the filter below 0
+a1b4d72d1f8bd3cd25f9fcfd4dfd4c4ec5bcad01 airspeed_calibration: stop talking about Pa and and hashtags (now the correct files)
+6480747c69203f70b4f28d3a357f49e05df89c85 Revert "airspeed_calibration: stop talking about Pa and and hashtags"
+c6fb75f66fa94444d07056f271980e3f05008f94 airspeed_calibration: stop talking about Pa and and hashtags
+40fe9ab969247315e3065d0423034554cf66b885 meas_airspeed: don't take the aboslute value
+bcca3cae748ffea2df51907992e4a3c7ca673fd2 Run full update straight after reset, filter wind speed dynamically
+2c0d192944744086905e622f445a523d6650cdc5 Use the wind speed estimate filtered values
+7eb521b6d4643fbf36d20e923faadca4e8f61dc9 Do not perform retries in airspeed driver - this is too much load for the HRT queue
+024c6d572706b3ae7755b5c022e198d7db7c5d34 Airspeed fix attempt
+020ac409be62e6c459e7aa5cb3181941c9bbfd23 Remove airspeed and altitude raw data from TECS log, as we have these quantities already in the system log
+9d7e3feffcfb34708cda5a726b7900101f41b205 airspeed: Filter slightly more, just a touch to not induce phase delay
+2b55eb605ed2216f9f73f5745de7d7a34c851e1c Make airspeed filter a bit smoother, but do not induce a huge phase delay
+54b9698d6560290e386b8dd2a7b9f0b6f4c5f57a circuit_breakers: added param to disable airspeed check
+2313bf7cd5cbf14ffaec61116cce84b9c0c18653 mTECS: Note better filter defaults to get airspeed response a bit smoother. Damp also ACC response with filter more than currently
+7ca184de45a49ca2bde5733a54843975e193a237 MEAS airspeed: Stricter initialization and constructors
+23dd7e752d4760a13e90ec7ed6cf003e56c4baff airspeed driver: better init
+91bedc5c1c84fa79945f32462dbe3fe30c0ff5e4 airspeed drivers: Start handlers stack fixes and start handler review
+ddc8f1fa5f5b88549af5e4f5f46c751a5f3af3ce Merge pull request #1159 from PX4/airspeed_test_fix
+f3549d775cb049bcde93c3e860c3adbad3763364 Airspeed driver: Use the known sensor offset for raw value as well
+9ce7820e419d2ffa379fb7a3cc168f500623fa3d Make instructions in commander more obvious for airspeed calibration
+db0cc845bad26b2adccb757917c997c3d65b185c Merge branch 'master' of github.com:PX4/Firmware into airspeed_test_fix
+d4a867071a2183069d8902292357133856cd2ffd airspeed: Better calibration messages
+07d92c264c34c66b17d45de870b784c9193fb5a1 Merge branch 'master' of github.com:PX4/Firmware into airspeed_test_fix
+91651bf240e0b2f53936f45d59ffae2c970eac9c Merged commander fixes into airspeed_test_fix
+8e2346dd5a061a7eb7f0398c45a8d5838a77755e Merge branch 'master' into airspeed_test_fix
+65409ad2c8ba10d95cbcfa088951abc40eb46774 Airspeed calibration improvements
+34abf5c40cda538f204d313cc49715b5a938d168 airspeed cal: Fix up logic
+80c522b82156c79ce7591225fb1cf577e6e37afd Merge branch 'airspeed_test_fix' of github.com:PX4/Firmware into airspeed_test_fix
+5efba7dca45867b028a01326934ea968ee908836 Merge branch 'master' of github.com:PX4/Firmware into airspeed_test_fix
+67d23253c3b3ec04bfd9d5f7e09d3d405ceba7c6 airspeed cal build fix
+7bf0e6f3e26ee9e10073293677563f6862758557 Better airspeed feedback
+5a22ef1c28abfeb0076532a847a9178f9dc1361e Merge branch 'master' of github.com:PX4/Firmware into airspeed_test_fix
+0d1ac4235411e8f05f96bcbe51558d92f0d86cf6 airspeed calibration: Update and resolve compile errors
+0332b79cdfb99bc2ad8310163d2d44460d1001e3 Merge branch 'master' of github.com:PX4/Firmware into airspeed_test_fix
+1bf293270d57c91046dc6ee7c377226007b7fa27 Merge pull request #1163 from hxxnrx/px4io_i2c_speed_400khz
+45617e9f4385e80846c571b237e220216192d6ce Airspeed calibration improvement, enforce correct pitot order
+899657613e44f0d4bbdb66644b35420d7381ff99 airspeed cal: Improve user feedback
+21ce6676a18d971c48e252bc3f2fe8188f4898de Merged master into airspeed_test_fix
+25f3f6e7f2dd87a831d25a9348a67ed918407d96 airspeed calibration improvements for analog sensors
+8d081a8b0dd002cda075ee9d8e087fdf54722ccf uORB: Remove voltage field from airspeed
+3461d3d215843681b1537256d26b053e3f2b78e1 Introduce analog scaling parameter for analog airspeed sensor
+3402d65948a03d91badde98ef4afdaf10f049333 Merge branch 'master' into airspeed_test_fix
+c97e08bcf05455e9e9b582fe3216250a988890fb Set IO PX4_I2C_BUS_ONBOARD I2C speed to 400KHz
+3157b06fee99b57fe336f7772b293f8689ff8cdf Generalized the airspeed check
+a049f0841d0a68edf2f1e5d10ba2ab24d15aa472 Merged L3GD20 orientation flag while keeping original bus speed
+c6c33142ceb6bf59b8c9b8e32e94ae5ea7959dbd Using proper math library. Corrected speed variance calculation
+f9946c98a809d18e0a037ee45f39195fd92c62fd mtecs: filter airspeed
+7fa5458bc619df427fc29283ff5ff32b933f2906 mtecs: add D gain for speed outer loop
+eb02c6ce4900a3dfe96592219852b2205c5d691d mtecs: disable underspeed mode in takeoff mode (as the comment says)
+c4cf07b1a943b0c4c1ebb553c0322695128c396f fix stupid error in underspeed detection
+718206bd6d4103d8d2b1ad6a111770f65622029a ubx driver: fix unit of speed and position accuracy estimate
+c945693054a15db03414b0446372c7a457fa743a ets airspeed: Support raw field
+d9a7e528b056556112c74d13a86f30bdab88f635 Multirotor mixer: idle_speed (aka deadband) fixed
+ec409a1337a0f9c73cbe54776b254464e3dcd1d3 EKF / Paul Riseborough: Added guards for mag and airspeed innovations
+671c7a115a7c01ed89266a6631fb3929af84ffcf simple underspeed protection for mtecs
+6306644028604411b57deed675d8370841d18e99 airspeed: Let the status check routine handle the initial state
+709d104de44b1cf7e338f4ae25e8b1fdc336a279 airspeed driver: Do not spam the console on error, report the system change only once
+ceb287504c7460b024ecabbcf278462da9e2aca1 Merge pull request #807 from PX4/trust_airspeed
+ab60b13b6dbcf636b1889d2150d96aff8b26cfc9 fw_att_controller: Forcing actuator scaling to at least minimum speed
+4a0c6600887e900932f6888f1b8948816a1f00b4 Do not make minimum airspeed assumptions, as we can trust our digital sensor a bit. A blocked pitot also most likely will result in more than just 6.5 m/s airspeed and so the check is based on a bunch of weak assumptions
+be6c0d2ece235077f067f4db10689b8ad3d9c5b1 Merge pull request #803 from PX4/airspeed_scaling
+6319ec2036c52f39a6fded6480836fe79e3ba35f Add celsius air temperature field to airspeed
+17082db97e493959933073f5c02177bf53256a88 Merge branch 'master' into airspeed_scaling
+188ec9896497e0bc907e164a3936b86cd742baac Merge branch 'airspeed_scaling' of github.com:PX4/Firmware into airspeed_scaling
+fc39af08a1d6673aa727a84b17afd6c4485dff19 airspeed: Prevent the filter from overshooting into the negative airspeed range
+78d50370ad12cc0b5762f4d596301cb8210cae21 Merge branch 'master' of github.com:PX4/Firmware into airspeed_scaling
+62c188408f794698ae804875d077e4f7ef8ac612 Merge branch 'airspeed_scaling' of github.com:PX4/Firmware into testtest
+3da219c3db638e0a57d18e892575df13d8c11f47 Update airspeed calibration routine to account for new signedness options
+00c82f0836388ffa1e1c4a5827eefe28c0521df8 Merged airspeed changes
+a0ceeee9ef9988fa470524462e3097e52c63ed8f Merge branch 'airspeed_filter_fixes' into paul_estimator_numeric
+42bba678939a58e59282d4c63dbdef53f962e0ed Move changes regarding the filtered airspeed consistently across sensors, use actual air temperature instead of board temperature
+d1e2e855a3c4b7ba07b91988238e09fc67d2effa Merged airspeed sensor use
+e5b22810994e8eeda6819041eb02b9f30b258558 Merged airspeed filtering from Thomas Gubler
+398da6a4d6aaba6dc66cb11746b35b51a5294c2b Merge pull request #719 from PX4/hotfix_fw_airspeed
+be349b989a7a716a4e8d5ff4143f79124d7abc76 sensors: use filtered diff pressure to calculate airspeed
+0784ef918925a546e0e4294571859150f0789561 add low pass filter to meas airspeed driver including logging of filtered value
+b6ea38b91a3d161ce01ab3683b0097f45c4e4de3 sensors app: add timestamp in airspeed message
+d9d0e60bd574b135d98bdaa48c4b32056f815217 fw att ctrl: airspeed check: remove unnecessary cast
+a977ff2b6295bd4bac614a854ecc35e1b9b2d75c fw att control: add timestamp dependency in airspeed check
+8267bdf4a5aa857db0f970da750d782f1d8ec369 fw_att_control: airspeed is now used correctly
+75c6706278119e50ce56ecbb1620025a9b9b936d l1_pos_control: set gndspeed_undershoot to 0 in loiter
+387bfad1cacc2f9929e7590130ca93f27c688655 Fixed status printing for airspeed sensor
+0f7483c804226d5557bd4cfd2d46df1533e91c44 Merge pull request #670 from PX4/airspeed_path_fix
+28536682aa664b5dae74b96688cc66b919fccffe Fix airspeed sensor
+e7e3e132adcbc755cd6cc2b97f6c8c827a9140bf FMUv2: push SPI2 GPIO speed up to 50MHz as well
+2dc3cf5e43154a516505d768885e734a5ab25e14 Remove unneeded header and commented out dead code from MEAS airspeed driver
+65118f0c2ef6e4305259a35751c8cb92d751b671 Disable debug in the airspeed sensor driver - prevents console spam if it fails (and on probing during startup)
+ff59aa9a0f856826682eb5099b1ec2525c5f7ba6 mtd: use new MTDIOC_SETSPEED ioctl
+d72c82f66bf6dac8e6d10bf1024641908d3b854c Airspeed does not publish if disabled
+2ed315480e4582c9f223b88e1fee39303fbc9248 fakegps: default to 0 m/s speed
+4fcbe806cef61aa3b8a749602b65da0e5c8d48a4 Cleaned up init config and picked a safe bet on FRAM clock speed
+1f564a95ee89278b3e4eea6c2d4ded378b71542c meas_airspeed: avoid trivial dependency on math lib
+aed7133649276f48e622b544a73d5c64de758450 Merge pull request #552 from PX4/spi_speedup
+f4ac204f4650dedcde52aa9ec001fafb5e7c5284 Cranking up bus speeds for all sensors to achievable 10.4 MHz, will cut the bus lock time to half
+7e309414758d2c526da7ef3bcab7bf75779f6950 ms5611: change bus speed to 5MHz
+ea33a19c8f5b109fd9ba35603b0af56dddef3708 lsm303d: show regs at both high and low bus speed on error
+97af3d22040e67520a835102684a1b2a9575aaaa mpu6000: change bus speed based on registers being accessed
+bc8cfc8d9d29650cc2ec7627cf5cedae0b5ed47d Fix indendation in airspeed driver (no functional change)
+b0bb5a34508c72efbbfc2ec622a2cd8a95e9df1d ms5611: change bus speed to 5MHz
+af47a3d795c01efbaabd60d6a15d48337187d35b mpu6000: change bus speed based on registers being accessed
+8c3e67993e2aa5e434ad1273889ce8f321fb1908 position_estimator_inav: don’t use GPS vertical speed
+37ef10ceead77876108847e31f56ae68015f5784 groundspeed undershoot: take into account altitude difference
+f337d62f2da3c4765acc8b88a4cef3381a89c6e7 fw attitude: fix handling of invalid airspeed
+a1398c991ede8269d27f5798ea137a43846e7c9f Merge pull request #525 from thomasgubler/airspeed_meas_calibration
+ae9fae5aae2aacbdb97aab9a858dccbe39e4d40a fix MEAS airspeed and airspeed calibration
+22ef0c77352e9a60cecc51fc219dbad4b9bd9d0d fix MEAS airspeed and airspeed calibration
+a1b80ec3f356aa19544eaa318bc188d57877f16f fw: att fix initialization and add parameter to disable coordinated turns at low speed
+64c2165e8be17a8309594a0aeacec7f3aedee4c0 Merge pull request #507 from thomasgubler/airspeed_poll
+ef7a425a45397fed510920b98a4ad08e62170f4c fix vehicle_airspeed_poll logic: _tecs.enable_airspeed was not called before on valid airspeed
+2b2a85b75fb49da91055fe2dba9bbdc6695d8c83 Merge pull request #506 from thomasgubler/tecs_airspeedmax_param_fix
+18cfc383e82d722a45f924a2df0fd2943213318f Merge branch 'tecs_airspeedmax_param_fix' into fw_autoland_att_tecs
+3eac9ce1596f90acf2e86f807b1b4efd3904a80b fix usage of wrong value for max airspeed parameter
+b131453443032e1f101ea54254908cf608b71ec1 Merge pull request #482 from thomasgubler/airspeed
+8cffd2b8a33ccb4d556a181d5a6e55111c1b1f53 fix scaling (unit) of airspeed in HIL
+252fc30ca7330dac224e087c2f91531c1d19842e Start digital airspeed sensors as default
+36b7b7bc5f078f373f67cdce3f5c7855c0dcd58b airspeed: convert to using RingBuffer class
+5ee40da720207acde6976d33e721e6bb109617ee airspeed: convert to using RingBuffer class
+61936412f3ccf9aff5a12d47b8c5fe34ff1a04fb Speeded up IO startup, needs review
+b7ee1d34294b536c6a92c8e72455f24684a5db4f Prevented an analog airspeed corner case from happening
+76a9e34e08573ff67ad34eb0251e3a7bdefd0406 I2C airspeed driver needs 2 retries
+935ed2fe49370e5eafe3b5445eda2c5714162216 meas_airspeed: don't use stale/bad data in airspeed reading
+9c58d2c5c6ef96f9ece7f62d5f02d01d8b1e316e airspeed: retry initial I2C probe 4 times
+28fa96e2db8fcf91fa8bb5cb0095b08306985402 Made sure airspeed tests reset the sensors to default state
+901a9c3e35456445465e7008d3c69b0bd3481e9e Hotfix: MEAS Airspeed sensor fixes from Sarthak Kaingade
+5ddbe24d8e5383a19f51957463211a4d8922d366 Fixed code style for meas_airspeed.cpp
+dad76c56c63a358ec2c4ea2248ef617843b48bab ets_airspeed: cope with zero value from ETS airspeed sensor
+edcd25b5ed15502b32c9dadc1fbbbfa552f0b74f Airspeed sensor driver operational, needs cleanup / testing
+17338ca61aa8a58c92ae621de94240ddd22f28a2 Removed unneccesary casts in airspeed calculation to double precision
+08ddbbc23e5ee40c95cc838c08e946c7ac063698 WIP on MEAS bringup, ETS airspeed sensors should be operational
+02d918b46d20d096e54379ea30762be55f8a3da9 Removed airspeed
+290ca1f9bf973a9ef957cb413930f7aac06054e4 Reworked airspeed driver to keep most of it abstract
+dc600e7d65df3d91fc1dabac33b6e264ef9185df First stab at IOCTL driven offset handling (in PA) for all airspeed sensors. Untested
+7cf121472e7ba3d83084083792b0f159f238a8ef Merge pull request #325 from sjwilks/airspeed
+2b41e1a23be3d18e1eac6b906eae6bc030861a89 Merge remote-tracking branch 'upstream/master' into airspeed
+17f9c7d15ccb6301e2be3eaa8cde8b3f710ce085 Crank up the test speed for 'px4io iftest 1'
+3163d7ac0908dfee0978992137500f11f8a42c43 Set the serial port speed before trying to talk to IO
+c240e843aa2ba88fa0c333dd8f099b37f1e1ca13 Merge pull request #305 from sjwilks/sdlog-airspeed
+f1419d4f5f5e7856464e277c7e11e6b58539ca99 Merge pull request #307 from sjwilks/ets-airspeed-fix
+9e26e8de79b7a4d81e88321f5c60a622f1bb33fe Merge pull request #306 from sjwilks/hott-airspeed
+dadac932da6fe2e45cfc6ed135beed9e6adff1b0 Report airspeed over HoTT telemetry
+12ac41802e663e5d9328c294df4117269764ef2a Log airspeed.
+eab8f9b28608f7f91641442e833b2324710147d9 changed control index for speed controller output from 5 to 4
+614bbb15109236c353c02b1d2c2494bc442a699f Merged ETS airspeed driver
+5b60991c63b0c6b87632369fde73236263670448 Style fix: ETS_AIRSPEED > ETSAirspeed
+48f815860b5900f3770486d88aea9084c75441e0 Debugging, cleanup and added airspeed to HoTT telemetry.
+df6976c8d640b395220d46f5b1fd7ecfc8ae3e04 Split diff pressure and airspeed.
+9dbd2695d3b476e8ed0a2001b027329e8600bd29 Hotfix missing yaw deadzone default (leads to continuous turns since zero speed is never commanded)
+a9b933b7e6652ba7d710ffe356a1843329ad9520 Merge pull request #206 from thomasgubler/airspeed
+6f1d7dc7de3609f73367794acc8d625c1ca27d03 commander app sets an airspeed_valid flag in the vehicle status
+c0a852dab48e55aa12c995adc6dc0c32aa9a7ac3 airspeed (pitot) offset calibration
+2707d2c1dde65dfb9ba48258994badb4b57f9627 more fixes for the airspeed readout
+2c2c65d446f991b273ee1f275fd2bc8440f74844 corrected some wrong units (used in airspeed calculation)
+a0780a20b5e10eafa1ddf7e16bce788b94514bba Fixed default airspeed for fixed wing control app
+328af90c9e829229e9ad978fbf752c0c8c656623 Merge pull request #179 from PX4/airspeed
+4baa1821cbf36f6b22636eb79325c9656332fb6b Merge branch 'master' of github.com:PX4/Firmware into airspeed
+2ebb1812f1eea47f06e79650242416493ce279b9 Implemented airspeed measurement. Untested
+edb3871913d4fa7d6ef0f01827a194d6362c3c71 Remove some dependencies of distclean on clean.  This should not be necessary in higher level makefiles and should speed up make distclean
+269bd9f4038189716bd630031c90e98b421e5a79 Force the fade speed to something sensible. Deal better with failed probes.
+7f22811afb3078b1f86b2d462d13e0d06e3a5c88 Fix <termios.h> for c++ use (cannot mark speed const)
+520f335b557fdcfbbcdebf967ee02d71c574b353 fix for ground speed minimum, untested
+129e6d73debca5653911867e9db54990c02591bb Changed yaw position control to yaw speed control for multirotors, tested with ardrone
+2652b16d37f2221dc9dabfa1a278651c2931e5ce Distinction between yaw position and yaw speed control, just messsed around in the code, untested
+aeea27d16a6e7d92f7caf1c6a272a5f4bfa9a721 Increased interface slightly to better match 200 Hz, adjusted led flash speed
+f16ae329fdcd533adc29e035e2184918b3862612 Add a versin of memset() optimized for speed
+860e5f0524a79a3fc7c776d925d1e73066b7f78d The termios c_speed field cannot be 'const'
+b090298b121d8a5dfa02cb06b2ab27ecc3fa0545 Minor cleanups, added more error verbosity, XXX parameters get now read it at maximum sensors speed, needs to be waiting on a param change notice (but not on the vehicle status topic, as before.
+d7280d43821c750e6d8aa35ac6f26f811cc6890b Combine cfset[o|i]speed to cfsetspeed; combine cfget[o|i]speed for cfgetspeed
+ac6f7a722bd9bdb35e738b7fbbd1cd32d68b2373 Ooops.. c_speed is now read-only
+1e15a6d1cff9fe105d094316f06a01e0fc7e4465 Baud definitions (B9600 for example) are again encoded; Now supports the BOTHER settings which allows specifying the baud via c_ispeed and c_ospeed termios fields
