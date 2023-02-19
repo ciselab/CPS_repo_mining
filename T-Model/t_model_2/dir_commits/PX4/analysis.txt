@@ -3,5 +3,5 @@ PX4-Autopilot			1003	wip
 rate		355			?
 size		277			26
 speed		175			7
-timeout		134			?
+timeout		134			38
 unneeded	62			1
