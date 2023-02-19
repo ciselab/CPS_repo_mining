@@ -1,0 +1,277 @@
+		2f99857b0a9c804daac0c252a9f738ff2cd9cd3e systemcmds/bl_update: add CONFIG_ARCH_CHIP_STM32F7 file size limit
+rc		523578d2ce1da879bbb48e46049411d21d9ef67f Increase stack size of wq:manager and worker threads for 64 bit targets
+		733b1e9e678684e6886bdf80ba5b2d9669dc7771 Increase logger stack size for 64 bit targets
+		8cf121fc9d537014bc3bfd840d371a25943ac7bb Increase dataman stack size for 64 bit targets
+rc		9c36236565d11fa3ad97d151a9e1ab3f34332867 ekf2: increase stack size to 3600
+		c9f743049bf4de268d4d76af349355c3d1ca2988 uavcan_v1: Increase _uavcan_heap size
+		39909128ecb09b4493b13d7c67373d59d7bd4f98 micrortps_client: increased stack size by 250B
+		4ac57d3bdee450372ba974a0cca4b63a067a00d1 EKF: increase fault flags value size to fit current flag bits (> 16)
+		f0f16b9cc5be281b84b7c425bc16fff29362dbd9 mavlink: streams fix SCALED_IMU size reporting
+		13e0b747820d2f25afaca25ec55a523a6a23db29 MAVLink: Increased stack size This is needed for MAVLink shell and UAVCAN.
+		ed8f6aa8fe9cccbf6be0ce49a0a2be6660fe441e gyro_fft: fix bucket_index size
+		41b56f20b853c12a944da87ee0dddce77247f561 mavlink_messages: fix raw rpm message size
+rc		90c366f369cec69468e5a05518f7e4b57ed56dc2 uORB::Publication*: template parameter automatically obtains the queue size according to the type
+		68703135c30db477806a9dec02fc9f9f74d9c155 bl_update:Respect page size if it matters
+		c57a48682e527c282041d82129a9f82acb636005 Tools: ecl analysis handle estimator_innovations/estimator_innovation_variances size inconsistencies
+		44c877c603ec51aafcaf40880157c772b61c65de sensors: size sensor error_count consistently (uint32_t)
+		b2845c60d3c8ff93578526f6dbdb24574ae41eee microRTPS: move buffer size to transport
+		9aa7991654b9cae0780195a808578c2971e716bf geo_lookup: upgrade table size (2 bytes per element) and add testing
+		3f19335f085adc0f8ceeb6b154b2f2e2af4a2d31 drivers/imu/invensense: FIFO_MAX_SAMPLES include sensor_accel_fifo in sample size limit
+rc		0becd29b46141db2a2ee479b23b2d162c73b493f fix mpu9250: wrong buffer size
+		f8db9c4f1b336ff0ea60fb2d8316a1d7742f2da6 fix mpu6000: wrong buffer size
+		a96dc9c0c8e3d75c2a84496abecbf160ce8e1919 navio2 adc fix strncpy size
+		9b707eebc728a087842b80c5644bb5d5d66f8068 bmp388: use default stack size of 2048, fixes stack check failure
+		2757647897a6f1c3451180b4c242aec25185523e refactor logger: reduce required size of WrittenFormats
+		6854b14dd6f0d6f7445db97ff5fb31ef00844d54 esc_report: remove unused fields to reduce message size
+		7984c0c91050ccf0136bceaa9547c049fbd2d66f px4_work_queue: stack size rounded to page size on posix
+		617f37afbf828a9dc75a1584cbfe3128fa5f101e mixer_{multicopter,helicopter}: add buffer size check
+		150b5df7cb8852d1305c476140ce51f4a218c9bc change size of reaction angle
+		6d8d8e3c88089f16cd59c4c70d35a06785a5dbfb MC gyro cutoffs - Reduce IMU_GYRO_CUTOFF to 30Hz and disable MC_DTERM_CUTOFF. A low gyro cutoff is needed for most medium/large size drones as the structural natural and blade-pass frequencies are low. A higher value is still desirable for small platforms surch as racers or well isolated autopilots and should be tuned by the user. Specific values for config files are untouched. The cutoff filter for the D term is disabled here as the required cutoff frequency for the default D term of the rate controller is higher than the gyro cutoff. In that case, enabling the D term cutoff would just add some undesired phase lag to the derivative.
+		fb04a611c52af547de4ec27f607d9962fcbaacec gps: reduce stack size
+		746250d86d1d05fce3d416170101e22b62e15cbd use static_assert over covariance matrices URT array size
+		7db57bedb7c8e85d1ee675faa68bd0d3850e5fe6 assert over the covariance matrices URT size matching
+		cac84e14247f06b258099364aa4b5103d0295c22 px_generate_uorb_topic_helper: do not account with the timestamp, so the struct size matches
+		d04aef65d0e32ece55ec57b9b8d3445c114410c5 estimator_status reduce size of n_states
+		e2333d7d5c8e3ebcc1de77115849bb6284af73f1 GPS driver: Keep stack to required size for app boot
+		9bdc9aada28758668bdbbb7fa2a044be3f7ae448 mc_pos_control: use defines for point size and number of points in trajectory_waypoint
+		c84e651edde84ce873fc453e8dd69755ec678d0c trajectory_waypoint: add defines for point size and number of points
+		9386ab6afedc811bdb30b0d5790688b1a1e8082f Breakout rc.thermal_cal from rcS and group set/unset parameters at the beginning and end of the rcS script. Revert commit 2a3d66cf457e9b7879276bd01be7936876b56147 to reduce px4fmu-v2_default flash size. Standardize tabs/whitespaces across all files in the init.d directory.
+		2f553b956d43e407dd3e7a533d4a399cbd270bfe dataman file read fixed size buffer
+		62700046ebc14163ecfa8250ce6f24d1c9fb876a Jenkins bloaty sort output by size properly
+		0baf3e39aa6958e86548ad7c191b63f6e8b5c61f tests clang-tidy ignore eadability-function-size
+		d585218060560af7002ff558b454a2cf02ffca0b tests clang-tidy ignore readability-function-size
+		6d00de7b2567bbb01106c21ae5c020e8b6ebf79e Uploader: Move flash size check into appropriate bootloader version region
+		f561d16334862bead540f993e172777586cba435 fix param_export: off-by-one buffer size
+		f962e9826b099d49a1c22fee0abc74abccea0ff1 param_export: reduce bson buffer size from 512 to 256
+rc		30414381320b907ce9087e986dfb85c2e1fb582c Zubax GNSS: Store maximum flash size
+		e2b2f97d0d7303e93ce816ca1aff68b9b1322e0d TAPv1: Store maximum flash size
+		9a7f99f3cde60a3231571ca97f892715c49b1ae7 S2740VC: Store maximum flash size
+		0bfd2925bfb9393019152022fd78d91ddcbc45c1 Nucleo: Store maximum flash size
+		d1d367011ec9f5fc09b200dfb7fcb91e20f32959 IOv2: Store maximum flash size
+		d26e037df4eae347a7ac8c4a7cc282c6c8566c62 FMUv5: Store maximum flash size
+		3bfa194933ea0a69b9d51ce01d5e3b9c6c2a3558 FMUv4PRO: Store maximum flash size
+		18715ebd80c31352f4a908322c518ab7a188870c FMUv4: Store maximum flash size
+		c0efaa4ca917815d42155049c8535d626d45311b FMUv3: Store maximum flash size
+		6fbfde9ec3a4941b3f9618945e75d532de72536e FMUv2: Store maximum flash size
+		d22398f73363476ae6a33dec860ae122902b9175 PX4 FLOW: Store maximum flash size
+		cd0fbb3cd28df97c31d39a3d25dfaf582cc42a7b PX4 ESC: Store maximum flash size
+		03c5e9172dbd9977c213e34e9de2080d4467d4f5 PX4 CAN Node: Store maximum flash size
+		bb3746e7109aa21a4a4f0e97e0e7125fc884f21d STM32 Disco: Store maximum flash size
+		c3f630ca14409fa367fb3a244e512b5bfb364575 SAMe70: Store maximum flash size
+		18d13498de7e8fdacfa65b97e1208111e6f7e870 NXPPHlite: Store maximum flash size
+		ca472ebfaf6c091905753d51a3437f82dd5c910e MindPX: Store maximum flash size
+		7277d72db50e6892a67305ad17ee4fc19a493812 ESC35: Store maximum flash size
+		5d186f374b6e0c6bd5e4c0a2a2a5e1c2e11cc69f Crazyflie: Store maximum flash size
+		f7b4f13e8100820b19fc0360d877183e1575ac91 AUAV x2.1: Store maximum flash size
+		2ba7b41f5cd47c9b7fd3d643b2f9a66705250481 Aero: Store maximum flash size
+		5072c0b5ae6ec46bc8fa868b05079bf5233313f4 Aerocore: Store maximum flash size
+		21dec52be0e745dfd2f9b301f8f27d956b280218 px4io-v1 nsh add CONFIG_NOARQARG to reduse RAM size
+rc	?	1e42d523da8d8852d52d922a9e9fca75d6a7c122 mavlink main return main loop delay proper size
+		131496ce792f2b1db97ed438ff6903a634dc7aaa Reverted change to stack size for mavlink module
+		7893623d750d8133f82509cccd66e678303f651b fix dumpfile: specify stack size
+		6b3a665e3393f12a8f995a9809d70c8902cb0b6e Backport Upstream SDIO 1-bit and 16G Size Fixes
+		635d861b76d4810382b8cc39bb25fbde89fb08d9 Backport Upstream SDIO 1-bit and 16G Size Fixes
+		f77a9bb897b6b572a3f50829b68e8d02fd57c3ed px4io-v1:Limit CONFIG_USART1_TXBUFSIZE to max debug size
+		3eb909823ee5424e4906b18f94c35ce8b6813e61 px4io-v2:Limit CONFIG_USART1_TXBUFSIZE to max debug size
+		05ceeec1ba4efb0313af059bdb91a5db374f04fa piofirmware:Base the debug message buffer size on the defconfig
+		061bff14c8b3b03ae71f8fc2e462819b505e7296 rpi startup configs: set logger buffer size to 200
+		bb3b26e00fac33a263c80f584a3e841393b73498 logger: adjusted log_writer_file stack size
+		75e7cfcbe833122172c327bfe1cc205b01ac7fe6 modules: flashparams: Change size to uint32_t
+		03dc991188014ba37022a73d92d45c2e0ff03d84 log_writer_file: adjust stack size
+		0eac63787060c6d7eaa0643322f4e72fb0e8c458 clang-tidy relax function-size.LineThreshold
+		9a2ce9a09821cff59a74b2b33a8cfc95ac57d6fb clang-tidy relax function-size.StatementThreshold
+		0f33ca1ecca16379770335f141b8089d671769e3 tap-v1 Increased IRQ Stack Size
+		8bb72d45dcbc526f69bebc2b03c3f3c3d9ce689b px4-stm32f4discovery Increased IRQ Stack Size
+		3d05fa72292d674e935c665314d72cba8300f497 mindpx-v2 Increased IRQ Stack Size
+		214fd04b3c2557bcf4ca9d26a52b2c50fb7f8e79 crazyflie Increased IRQ Stack Size
+		5a7b8e052e2afbf33c8af56327d22020c928eeb9 auav-x21 Increased IRQ Stack Size
+		2fe0f76e2773a6ad44d380b043a707834e39b894 aerofc-v1 Increased IRQ Stack Size
+		57581ddaacf0411266404e621af6399dd6bad016 aerocore Increased IRQ Stack Size
+		4ceba407f2fb831af30cafdf3cfc21e362805806 commander: raise stack size
+		b2113b9abe5491c72c8fb8ce7c3922ae8a8f2239 cmake: Reduce flash size for px4fmu-v2 build
+		11ef348a342c3bdb788d940f5e69c359ec218e5f PWM: Use same stack size as mixer to limit fragmentation
+		cbbee30e483f89350a9207a5684803abd8312fd3 log_writer_file: add include px4_posix.h (needed for stack size macro)
+		09d8e4fd8c58038b1a0fe22fbf034951098cdfcb logger: reduce stack size, which got freed in 05a771152520
+		4da2ae23029ea503527e2a43c33dbc873f99ca4e MavlinkOrbSubscription: optimize fields for size
+		c50e4a6e21c3207dc839284bfc38483447b44171 uORB::DeviceNode: reduce the size of some members
+		3f5f74399e7d252d768ef0c095bf9eb6f9726d8e Increased SBUS buffer size for more reliable SBUS and DSM parsing
+		b1708f3871565f14248fd0080cac239b6aaadc79 cmake: only optimize for size on NuttX
+		8ff237c69f0a0786de39980f936ae4f1d2abb540 Remove size optimization for individual modules
+		4fefe5c6c66844838f3d0923c3403d5ddabeb4fe cmake: stack size args cleanup
+		fd403b733dc2592ed74fcc981c96f122f4eec95b CMakeLists: don't always optimize for size
+		7d7e40f59473ed538c61f8b76020ca505ee52487 UAVCAN: Adjust stack size to platform
+		f815d9fa748141d7ef60ea854ffa96a266772fbc sdlog2: Adjust writer stack size
+		1c2b932cf8f86cf1878913f9a6a30fffc254e436 MAVLink receiver: Adjust stack size
+		bb487878110bd3057219678797d7bb563029b6f6 Logger: Adjust pthread stack size
+		c52c692c4f0bb3959b784fe22f46b87d0d35b4b9 Commander: Adjust pthread stack size for platform
+		41913c4a803a4bd3a1a940a59206108f61da5c6f vmount: fix print status output, adjust stack size, improve error handling
+		3aa66da20f131f8be4e9144d44282cdb157b1e86 Build serdis / sercon with size optimization
+		07966de432b59a3140a04d94e24baf19eadd29e9 Build serdis / sercon with size optimization
+		43f772154ced60424b96de2dca509099722873e4 TAP: adjust ESC buffer size
+		d6d3a56116b066f192300733c76418abeef573d9 tap_esc: add buffer size check for _esc_feedback.esc[]
+		772dc302b6c5036b9de5374e4f4e611b1c900724 sdlog2: raise min write size back
+		ed19d1ff6b607cea1dfb42d5cdf215c3ec1ce07e EKF2 wrapper: Optimize for size
+		f129b86d1b5446d88321efc6838226deba290e0b reduce logbuffer size to 12K due to lack of RAM
+		78d357cb0cb3611b0b693abe52a6b94a96e03ae0 logger: free up ~200B stack size
+		aebe4db52abb2a7d336553584eee1e7c7a47709f Q estimator: Optimize for size
+		761d02d4337e248c038d47a93101d1cdfc5b5e35 Sensors: return stack handler to default stack size
+		e9f257c15ff227273170a2d487645a5504e39664 logger: fix wrong default buffer size in usage string
+		7d64aa80575c348f2086bbd3e9592e42286e3266 ekf2: raise stack size on Snapdragon
+		f62324c8a6a4a82f78f13ff83503132b68209212 mavlink_receiver.cpp: use sizeof(gps_inject_data_topic.data) instead of hardcoded size
+		40776162646a1f0fdc8a3da4c992c6bbcf53b72d Significantly reduce stack size needed for calibration in commander
+		3a209d71afc10265edbeac2b0d7f48209137b7b5 fix clang size error
+		a2c4c094e6fa6a4e2d3915c7183990e1dfbe5e6a HoTT stack size adjustments
+		9f5469ab1f79850a48a578bcdcc8664192b0e91b Workaround for stack size setting on OS X
+		d29a2ecfac835219e0d292ee7e360d5605c6bc82 Set stack size to minimum valid size if less requested
+		ff0618a8ff9faa679d843ad2c157f6b5e4d77299 Set the stack size for qurt
+		d00911843708996883faeb7ad79c163d51c78d61 set stack size for ecl
+		b6c4501d0e221fb2d610c028a2c5f801502d5fad Adjust data size of dataman to force reset of all existing user data
+		07df1be8418538e9f5af12fd6f7be46328db4772 Simulator buffer: Ensure we do not become limited on message size
+		35d8e0bc550645b470af5c8624243b8f3a56d081 Raise frame size
+		327481d749f2042fab121aa3949ca2eb995c17fe Fix EKF frame size flag use
+		96968911e4a246a2d5e700de7132d3a404069a15 Keep size command in ccache path env
+		f78fea2e962eb8bb2466b5d2fd5fc5d607430de1 Revert "Move EKF stack back to same size as on stable"
+		7fd6d2dc4a4fe7a1b439b5cac78ec90fb34aca48 Move EKF stack back to same size as on stable
+		766cb716354e4346d842e299ae050147fec06fef EKF: Push up stack size as the max frame size is already 3.4K
+		88a4d0deca60d52d02daea09ab508eb03e793956 EKF: Reduce excessive stack size
+		21431cf237a3da38004251d66f49082eb15bb60b EKF: Fix output commands, fix stack size for commandline tool so we do not run out of space during debug printing
+		a45fe6343007dc7e0161f4038e460f9c74011757 bin_to_obj.py fix windows regex size match
+		2a7e75043d0017e3462d6a3c305b047180136d67 Reduced logging verbosity; fixed stack size; fixed ESC indexes
+		207d4a0c6b861994f2625335ecb5528480425950 Commander: Fix excessively large stack size
+		4151522902726802b34263670c715a654d4b9a22 only enforce frame size for nuttx
+		e0702ce48d25a57336ef987f8589210c1ac442ac Commander: Build optimized for size
+		673fdd8002ebdf48d2212b143b1940c73e5e8326 sdlog2: Fix stack size
+		4d98bd57b6ae8ac668fe531e1b6bc1f3b2fc530f Attitude estimator Q: Fix frame size warning
+		9d5a2e981504c76b175b3074d7e104085d134038 Launch detection: Fix hard typing in array size calculation, fix use of index variable
+		fa26928e5102aca73f0913d73730cfcff7d4b636 Save RAM on UART buffer size
+		ae83543b63e3e9410dd2a9d6aab93367189fc19e Save RAM on UART buffer size
+		b235420f1700a5b4cddebd29d8aba441b1e340b5 HIL: Limit stack size of HIL app
+		6bb941218caf3d8aa70bcb180b219d85024b8a91 Limit stack size of HIL app launcher
+		72c3f4b815da5ae2a3554d79a866a0336b4a5d43 Flow: Shrink boot handler size
+		251325760e6564ebe645009fe0c29b3a09873eba MC pos ctrl: Fixed frame size guard
+		89f64ab0d31c845a35a6f4fc4d8e65d897af0e3e Fixes stack frame size error when compiling mc_pos_control_m on vagrant
+		381b889526d05567fbba0140b6499cf67defa063 POSIX: don't check stack size for position_estimator_inav
+		f659a3e8cc2ff4216f69ac1c3810c9f84c056d5e POSIX: do not error on stack size warning
+		447b93c090f61f7de24ce941af7424a133b83e19 Add size Makefile target for elf
+		535eb7dbd954cf8eae984d5b347568f966e5dde8 param lib: Fix use of array size
+		bbb27b86352337d5e185386212f87664c568e20e commander: Reduce excessive stack size
+		7aac0e94db50a8be6f03e12f15c76907be0ad3b2 Posix: disable stack size check
+		c8452bb9d668237a84a22805e45feda07281a468 Store parameter xml size
+		49b3906b7827a7f2b5b4e947d080db7496d044da commander: Fix status checks for leds and adjust stack size based on actual use
+		033372cc78a6aba0ae27add14a0fac508429a43f MC position controller: Adjust stack size of handler and app
+		4177078ff0954209ed945172d0df71bcd5c10789 MC attitude controller: Adjust stack size of handler and app
+		ba0a3430908ac9fb5c601e2ed3b61662feb90a7e MAVLink app: Adjust stack size of receiver thread
+		54d2014bd64c106146a69e68c75b271937ab9933 Land detector: Adjust stack size of startup handler
+		110930dc0e52e60f2478e27e6b78dc0d9e3033f7 FW pos control: Adjust stack size to real use
+		d5c59b515b8f6670a45f666bda926f008dc2efd0 FW att control: Adjust stack size to real use
+		7d87da700c39b2daff60aa923bf3743906693e78 commander: Adjust stack size to real use
+		1da2dc7e34d56eeed16bf034358a1e7e18ebcfcc mc pos multi: reduce stack size
+		163c25268b2c41c566d7d99da2fddda719c79d49 mc att multi: reduce stack size
+		b269e5d060e81696ced6af6303e27c936bbffbed multiplatform mc pos control: Allow enough frame size
+		c9eae96cf67ebdf6d202dc7ecac55a5b4a670a50 Frame size fix fix per Lorenz's suggestion
+		9aa7daa86c7f18dcbba4f20cc1a2b3189117f242 PX4IO: Adjust stack size based on real usage of 900 bytes
+		69a7e310774f1df820303346143e5128856723fb Att EKF: Adjust stack size to larger requirement
+		3436abdf0bde16bdda5f4e6600693d6b0f42a01b add multiplatform makefile to work around flash size issues
+rc	?	06879bff38a88e6468c73dbef5cf6c2ecfdd72b2 reduce default queue size
+		ebc4cc3a7dfc6a705a4585c75e92969a6a0e798f sdlog2: Adjust frame size warning limit, cross-checked stack size of app
+		f28e8d6731014afa13bef368d8a58fe7f3579249 sdlog2: Adjust frame size
+		2ab6eefc2966b615f66f3c8b366337fa293bc7a5 reduce manualinput queue size
+		e826187efe6f514a632ab2ef2e0183d17792c0a9 reduce mixer queue size
+		2f6767480b5c88c16ec181b47d194bd9dabdc959 EKF att/pos estimator: Fix warnings (cross-checked stack size already)
+		0a3492fc328280422df9472d3d8a586d92242feb define default queue size
+		d602c9a0c5eff39e0f533411b45f631cae63e486 Controllib: Optimize for size
+		00c7cc019c6f1bc23c8865d0d95403fe8deec029 Optimize size of system lib
+		a7bc52754de52ccbf0f958c20ce31408a8b4372e SDLOG2: Optimize for size
+		42575bbc3763fe2b9e2d3e5b074ec74e4fc57f5a Bottle drop: Optimize for size
+		32313a13dd1f98426f83b99310fc22b5adced37c PX4IO driver: Optimize for size
+		54f296ce9d8245845a7a0bf32f5045a44aab40c7 Sensor drivers: Optimize for size
+		a869105ba23394cfabb0a0000dd3b7fa3dc9fdb1 Systemlib: Optimize for size
+		a12c98ba63c12ba08f1fb0f66df7b7079e444e1d Sensors: Optimize for size
+		f7f54062439f0b1c1208d0778f992f7052e1518b FMU driver: optimize for size
+		c0f34dff2605381afacbec2bc1eba6b648daddd2 STM32 drivers: Optimize for size
+		3d2a5bae51763e5a542506383c9d97f95fc7d1ef Board drivers: Optimize for size
+		75bc8136b1d1d773a5664a226b5b766867fe5ff3 Build NuttX optimized for size
+		a7eaf07f4f9d6df54b7602c07ce7fbdf2db700f9 Motor test: optimize for size
+		8e8dd62fbd9906c980d9e88943a2fda5b90977e0 Let the uploader print the binary size
+		ebc84b9f44dd3d26bc8d26b18f8c059f900e5e1a reduce mavlink message buffer size
+		2766285d56cab6f9916efde535b979bc5475f6a5 mavlink: change message buffer size to 4
+		ed66097ebc4808587301bd569b5bef6c312800c4 FTP: Update unit test for new header size.
+		07c4144cde1026c4d966d043d12e36ba686c0781 mavlink: message buffer size fixed
+		7f0e67522878d1e850c22553fc53e93283ed92f8 Pass over drivers to reduce build size
+		c2f97e628cf060d35db22526b450b919f0c6cf59 L3GD20 driver: stack size adjustments of start handler and start return review / comments
+		f89573a6ed6e43c9e5935b92929b6082089226c9 HMC5883 driver: stack size adjustments of start handler and start return review / comments
+		959bf6a2c8ac656b1536762a2a7aea0c5349f5d5 ll40ls: Optimize for size
+		70d0ff492220371c57f9ee3d1f4fedb2fcf1199f SF0X: optimize for size
+		aaf2652e26106b0850226f25cd12ce1304775522 MKBLCTRL: optimize for size
+		144bb89e027701f0b4c1661685d770a013c100f6 HoTT: optimize for size
+		85301e1172a0ab7cf726ba8ffc5386ab7ede363d frsky: Optimize for size
+		e97161e96b8de4031746556ab4bd4f96d24a30c8 mavlink: stack size for main thread increased
+		d7394c7ef973e34d87187420444baad6fcf9854b mavlink: stack size increased
+		7349fa90376714b00fe920538950b31a46169d60 Beautifications for tab size 8
+		981d61626890e979251a7fb8e0ddbe6678220e2c ardrone interface: reduce stack size
+		66f57f577b043cd263d16425fe154c26893d88fd ardrone interface: reduce stack size of start handler
+		ea99fd84464ba6141f182dece0ae7a60c3ea9377 nshterm: Reduce stack size further after more thorough inspection
+		834a230fcf5d24cacaa16b2a0bb3add2a56ebb46 inav: Reduce stack size of start tool
+		8630d82ea2b27389b686fe191e9b2f2fbd44f235 gps driver: Use correct spawn command, use a smaller start tool size
+		0a6861e98ddb5f25c6564e2251bb05dc0606bfc3 FMUv1: Reduce user main stack slightly, still 2.5K buffer between actual use and size
+		9f097c1858d002eecbcda8cf8272fb8fbde1a31e top: Reduce stack size, but leave some room if it has to print a few more apps
+rcy	hcf	ddbad698bc0708af18505e50b0429564a8cb47fb mavlink start tool: Reduce stack size to 1000 - it is really just the commandline handler
+rc		35e7e375de30c3ce0f830cd99ec22f5250e6d95d reboot command: Reduce stack size to 800 - it really just reboots and does not need stack
+rcy	hcf	b2945fda53839fb70678ea6a1ff286db36ebee8b param command: Reduce stack size to 1800 after careful testing
+rc		ab154c9d3bd2f3034382c82b8613613af80287b3 attitude_estimator_so3: Reduce start tool stack size
+rc		ec5dd5401e9654ec958a8e5eb2b77e9a375e44b0 attitude_estimator_ekf: Reduce start tool stack size
+rc		8e46308fdd65356e4e06ef9a91cc5771b7ac6f34 examples: fixed wing: Reduce start tool stack size
+rcy	hcf	61a3ddb4c202f0e8783c041d772a08a732194885 navigator: Reduce stack size by 50 bytes
+rc		d50ae8bb59635782f35f85f759a25d6f80c40663 Reduce stack size of preflight check tool
+rc		8962c272749108af4163e985109d9e760f0dd0f9 Reduce stack size of perf tool
+rcy	hcf	972cf54c9637f9957f542ba7ca975fe449787946 Reduce stack size of PWM tool
+rc		29ec1f388133a3bb11654b1f5accc9872d6ce6cf Reduce stack size of sensors module start handler
+rc		07890300887319d1e3a85a30151a156f7b181f41 Reduce stack size of navigator startup handler
+rc		25fd20487ec83e4edad7c88082d9283608f34e06 reduce stack size of dataman start handler
+rcy	hcf	7655f3e42556550e6769f6ac4b88304e1932c3ed Reduce mavlink stack size slightly
+rcy	hcf	531ba79e55e9ccf9396ee30f067c933b4ec9c649 Reduce commander stack size mildly
+		63905265ebccd3a2d7fd94d5cf4f2c02102481f3 Save code size on commander, reduce stack size of starting tool (NOT OF THE APP ITSELF!)
+rc		fde2878413141953e30e41aa9689c924c83e207f mavlink: Change to size optimization
+rc		88357c58bde304567f841abc48a495794d4e250c mavlink: Change to size optimization
+rc		09f18408fc5835622a955c80304ce6599ef98090 mavlink: msg buffer size fixed
+rcy	hcf	a6d9b7e864334381a99f4438aeea1173229bc2dd Merged stack size changes
+rcy	hcf	85dc422d9804c894009e37c6eaab67a10c5dca28 mavlink: more streams implemented, stack size returned to 2048
+rcy	hcf	5316741ed40965b837fab77074ff4fbd4fe6f858 Revert "mavlink: revert stack size 2048 to fix suspending in HIL mode"
+rcy	hcf	eb177def141d321b43a4c20819179423e128a92f mavlink: revert stack size 2048 to fix suspending in HIL mode
+rcy	hcf	9cbc31b588f3bac6d3b03870801c97068a4b4ecc mavlink: revert stack size 2048 to fix suspending in HIL mode
+rcy	hcf	1d70a65f40895b0c9e1ee5c65970efa1eae841e8 Stack size reduced to 1280. Max stack size reported as 1020 with UBX GPS with 3d lock. MTK not tested.
+rcy	hcf	0cc311b872c688f2242a4745cd3a6de4933c9e62 Reduced stack size to 2568. Max stack usage reported as 2052 with MARG + GPS with 3d lock - no px4flow, but should be more than enough buffer to accomodate its addition.
+rcy	hcf	70b1037c2ebd38e06a3d12dca7bad295da02e16c Stack size reduced to 2408. Max stack usage reported by top in EASY mode at 1924.
+rcy	hcf	b0f65bb708e2728d562dbef8db04a846170d0ca6 Stack size reduced to 1648. Max stack usage reported top at 1316.
+rcy	hcf	58a1f19d79da8a621454f11055534610921accd6 Stack size reduced to 1816. Max stack reported by top was 1448 under HIL.
+rcy	hcf	338b753a3c56813c5820e54209b4949e04a12ad9 Reduced stack size to 1200. Max stack space used was 956.
+rcy	hcf	0488d5b41c5c91658494242f778c7b9de99bcca4 Reduced commander main task stack size to 2088. The high-water-mark measured at 1668 after calibration and flight. 25% safety margin, but commander is fairly complex. There are surely untested code paths here, but each is relatively shallow.
+rcy	hcf	d1fb7651876236432dc66c5331c60258ff962352 Reduced low priority thread stack size to 1728. Top indicates the high-water-mark is at 1380 during accelerometer calibration. Safety margin ~25%
+rcy	hcf	cb1621005c8e04a72f9d1ecefc069af9718fd9cf Hotfix: Bumping up interrupt stack size, which fixes a number of evil symptoms seen in some test cases. Needs more inspection, but this fix holds for the test cases
+rcy	hcf	42b496178136a398447742f0efc81348845087e4 Reduced excessive IO stack size (had 4k, is using 0.7k, has now 2k)
+rc		1fb4705ab7038fb4b135b49c58f14b48f0cfab48 Add size and flush methods to the ringbuffer class.
+rcy	hcf	6cf24ac106688d70bdeda9d13fa252246f599b5a Increased comm buf size to better deal with higher-speed MAVLink transfers
+rcy	hcf	6b631afaef65ba874373b1dd1652f02a7f6e3612 Reduce the max stack size needed.
+rc		be6ad7af3b65841d2b460e3064c166dc9167401f Rework the FMU<->IO connection to use a simple fixed-size DMA packet; this should let us reduce overall latency and bump the bitrate up.
+		59b26eca48212f13a467724f9445169b78d6c70a sdlog2 -b option (log buffer size) added, minor cleanup
+rcy	hcf	11544d27b7629078b6a7a2247f159b535816e019 Hotfix: Enlarge the buffer size for mixers, ensure that reasonable setups with 16 outputs can work
+rc		2ebcd0fdcc4b743c3a8a32bae0852e9536bf3a6b Switch to optimising some things for size rather than speed.
+		69d9265bc3a9883c3cc180fe54223dd3be9dc36d Adjusted stack size for commander app
+rcy	hcf	f689f0abb0832c3d68e462e291a7a4d6dd43e216 Fixed excessive debug buffer size
+		818e898a7e084d6529da549ca3ea7c7d53fe5c46 Fix the handling of max transfer size to leave room for the page/offset bytes.
+rcy	hcf	f7c31e4d804c81659dcf79684807fbc8bfad5365 Reduced stack size for mavlink receiver.
+		6ede0e2f18f001afb390f3bbb0b989bdd2759c24 Add the ability to reset a mixer group. Report the remaining buffer size from load_from_buf.
+		683e54b85fbd8641998c422eca33227755181f0f Fix DRAM size in STM32f4discovery defconfig files
+		0e190d4cf7f3d151592414d8bc3d3eaf77e0b0e8 lib/math files not follow coding standard; float, double, and long double versions in separate files to reduce size of dumb link
+		77e6375920df67344e895e669dd2a641a7b87b6e Change parameter names in FW control to fit within MAVLink parameter name size limit
+		2c2ba7f0c5f99aef3fac0eaa8a2c7a79c5faa74d Missed one file in last checking; Gran allocator alignment decoupled from granule size
+		137329bfb037aad553221f229e8c5607193ce019 mksymtab: Fix handling of final comma. Some C compilers can't handle them; Also add macro to provide the size of the symbol table
+		45885f15dcd730555a69b592983f22ab263b3baf Fix the readout transfer size.
+		a0925e4703fdcbf3c9eebfbae254bc0d47b96a07 Ramped up MAVLink stack size as real use seems to need it
+		60889d41f6f43ac396d2f7bb71a8bcd166f9ca66 Update NSH documentation; Add option to reduce size of help commnd without completely eliminating it
+		3ec93230f35da971dc988b0f66e8023bb7f6fd51 Fix max filename size report by FAT statfs with long file names; Add missing logic to support fieldwidth and justification for %s format; Add extended help options.  Default help command just shows a short list of commands.  Verbose and single command help options
+		983e72ea391c136624340ea64e19c20adcbf970d Fix packet size calculation in CDC/ACM and PL2303 USB serial drivers
+		d21b932f5ecbedadab9113374d89c6243478ec3e NXWidgets::CNxTkWindow must subtract the height of the toolbar (if any) when reporting the size of the window
+		d4c261ea71bf5a01c1897e0cd67d9dbbfdd5cfa9 NxWM: Correct the calculation of the physical dispaly size
+rc		c3e6ead3395724268b85a5c2316f3b288ebcfbfb Correct a buffer size error in the STM32 ethernet driver
+		fdc72ffb3ee4de0531bff52d025e99af6de583ee Fix starter kit ram size

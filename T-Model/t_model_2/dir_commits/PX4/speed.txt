@@ -1,0 +1,175 @@
+		76615f8df3760a7e64746b767835a02cb0af9aa9 VTOL: set HTE horizontal speed sensitivity threshold low
+		904ed57abaf0d989711e22e968d0b0a0739b53de HTE: decrease sensitivity with speed
+rc	?	f16913c175c6c9ed192f7246ad62f535ad472631 mavsdk_tests: fix timeout at 1x speed
+		a12442654138c88c796f9a655907f78fc258d04d ecl: apply same GNSS speed accuracy for EKF2 and yaw estimator
+		c8c3f57ba158093f36ffadc3b5df1d16971f4916 mc_pos_control_params: correct cruise speed description
+		440e72e69717e5ceb03d2da414710097dcd11d68 boards: cuav nora/x7pro don't have low speed external (LSE) oscillator
+		82200fab9e19d80b3182452048de6e29e87546e1 mavsdk_tests: relax MC "Fly straight" speed threshold
+		77884bdd340c86b7a62cac15b7df9a097feefcfd SITL boat: tune L1 and speed controllers (#16784)
+		f05599caffea1690a4f5b5f3b2645463da8742a3 tecs: use speed derivative provided by local position
+		77627a08ca43c33597f76dc04fe2131215a8e7f1 TECS: don't allow speed height weights to be larger than one
+		fd18ba649678a8aa5f1b871b2f6b3d770c1d87d3 tiltrotor: allow to finish transition if groundspeed is below cruise speed
+		25c113a5273ab315c511773b23ef81e2a93f0026 StickAccelerationXY: boost low speed brake
+		1eaceb17dc538e930253e87ffcbdb1dd37f19233 mavsdk_tests: adjust timeouts by lockstep speed up
+		26bac78eaf274cf58aacbc239cc8f2e865ba864c mixers: Multirotor remove text roll, pitch, yaw scaling and idle speed
+		91c0f19121d9dbb80fa284483f4b1f4f79fc7e55 FlightTaskAuto: use new Sticks class for assisted land speed
+		7a401e5ca3c87b214b04aa95b474337706e6564e FlightTaskAuto: Create artificial yaw speed sp for feedforward
+		dd95498379a41045e2b4aa112f2bf4b64563d994 mavsdk_tests: at normal speed RTL can take a while
+rc	?	5bd0df422d45c27413912bdb5572b7afbf38bdba Speed up mavsdk sitl tests
+		af1a445031f9b3fd5c924944aa9a29dcc0f2e144 Vision test can be speed up
+		bcce75e691657e7da06ff1bf88fc878eb026c92b icm20948+mpu9250: add support to configure the high bus speed
+		ae2032d29ff1929f7d8b52983cbeef10e121ec89 mavsdk_tests: use the min of the speed factors
+		b7e8837562174c067a9183b35e2e6bb452fd10ab mavsdk_tests: add max speed factor
+		c80593a144712570f9926f3b6b162d103f381847 FlightTaskManualAltitude: Rename _min_speed_down -> _max_speed_down as it is the maximum allowed downward speed
+		093a982f49c9d6e50e76025faedd02c89976725d Reduce speed factor in SITL CI tests
+		57f3be3a6959bbf98e7184ea676f09312956d9e8 fix bug if speed reach minium during ramp
+		ce9aa119ffb1d5355a90f338b37fb321501a3992 mavsdk_tests: option for speed factor
+		2bbe4dac256a3f88adbe6c72aba2208e68cbdeea mavsdk_tests: run test runner, speed up sim
+		5f670754813932eac63f86122245cc5f60abca68 mavsdk_tests: raise timeout for realtime sim speed
+rcy	mwn	acd18adc18ecae9d3363b13be425d062d2a71186 Tests: Speed up boot The previous boot configuration took at minimum one second to boot. This is in particular significant in tests when the system is often started and stopped
+		82b4e766a553feee5a9253b5d24a267840948243 AutoMapper2: re-introduce gradual vertical speed limitation during landing between alt1 and alt2
+		4ba672a7ba0d2501af7e13181e6ca1cc23a6a955 ManualPosition: Limit horizontal speed during landing
+		4eb9c7d812c8ac78a6609057466135f47798e8c8 Create TrajMath library and move waypoint speed calculations in it
+		b1698b78bc58ea03057f886fe368044ed5cfacc5 AutoSmoothVel - scale down acc_hor using traj_p parameter in the computation of the maximum waypoint entrance speed
+		255c911155d15ea0ebf6fef2eb644cd2d2c2825f AutoSmoothVel - Compute desired speed at target based on angle between previous-current and current-next waypoints Also remove crosstrack P controller that produces overshoots when the acceptance radius is large (crosstrack error is suddenly large at waypoint switch).
+		834ae3128f62c8111a3f898bfb3e44617b79d063 Implemented reading speed from the Roboclaw
+		6df16003570645779f151ab38f368d3da18e0710 Auto - Update velocity setpoint generator to avoid overshoot at high cruise speed. The linear mapping from position error to cruise velocity is changed by a combination of that linear mapping and a nonlinear function containing the maximum acceleration and jerk to avoid overshoots at waypoints due to overoptimistic breaking distance.
+		59c555aec36aa5b1c1edac8d0d09fb90a36a3722 Multicopter Auto: Adjustable land speed via RC (#12220)
+		e54075abe886c555315243773a99febdef95a23b MC pos control - Force cruise and manual speeds below max speed. (#12404)
+		93d52581eff90ccac88b7c8d06f45f48c5e05fa4 Auto - Fix cruise speed. Tested with and without SDK. Before that commit, the drone files at max speed instead of cruise speed if not precised by the SDK
+rc		6bb0046407917326ab067a33af42fdd816079510 urtps: fix UART speed setting to work in Linux
+		c0dab475547089ae997d6d0a91cf511808d56855 mc_pos_control - reduce smooth_velocity_takeoff default threshold, set initial takeoff speed to 0 and remove useless else
+		db6de38b1969459a383b2f644c2d60fd32669f99 Work in progress to support a speed factor in SITL
+		21bcc0d2f40d307c3c88009ff5a7f13e8dbbe93e mav_cmd_do_reposition now obeys the ground speed argument
+		370371767f32de3d5ec46943be5100128e03b7ad FlightTaskAutoLine: ensure that desired speed along track does not exceed maximum speed at threshold to target
+		deed462e621bb8a338e142b99befdb78f0c0d214 tiltrotor back-transition improvements: - do not set zero throttle during the entire back-transition because otherwise we need to make the back-transition really short - added ramping up of throttle setpoint during backtransition to avoid step inputs - back-transition ends after back-transition time and not when motors are fully rotated updwards. previously the vehicle would enter hover mode at high speed which was not handled well by the mc position controller
+rcy	hcf	52fc56a61f09bcba39d45a34c5e0e55f0a6fa8da gps: explicitly set SPI bus speed to 1MHz
+		8714b216b0a074b487b72495016a67524d9a71af FlightTaskFailsafe: comments and land with land speed if velocity in z is valid but altitude not
+rc	?	3f65efe1b01edcdb69ee5e049a886948659558df fxas21002c:Clean and speed up with SW, HW LPF.
+		2d9bbeb7ed439100e94a500929b2c6b02f67ce50 FlightTaskAuto: use the triplets from navigator and not with the internal ones for obstacle avoidance. Otherwise the vehicle is continuolsy in the offtrack state. Use already comnputed yaw and yaw speed setpoints instead of subscription
+		2b6926fe9d7666697efe56d0ff445c630db54ce5 FlightTaskOrbit: speed up stick input to a fixed time frame
+		2017e394b34c421d11c17f431c7d21a9354fa083 speed limitation during auto-takoff: remove from legacy and add to FlightTask
+		5ef2a61be56dbc5b0b69db437b9c8633b36ded5a ManualSmoothingXY: ensure that maximum speed is correctly propagated to the smoothing class
+		9df337e2437e94b9530fa92d272f3db7a47bdf6c FlightTaskManualPosition: adjust scale based on vehicle maximum allowed speed sent by estimator
+		37bfd8e01a69d241c88e69328cc01a841f8209af FlightTaskAuto: always update cruise speed
+		558a0f892c3c7e767db9c50aa8f28cbbf1a34569 PositionControl: auto takeoff with constant speed
+rc	?	05936f2ff7c0e77b01c6f970ac815dd8f90e48e5 px_uploader.py:Speed Improvments on Serial
+		59c7fc5d96f7b0cd887f13c06b7de55e285e2b64 mc_pos_control: use one method to wrap yaw speed instead of triplicate code
+		47f2db67b64919d78a320cad00e9f053574de549 mc_pos_control: execute yaw or yaw speed of the obstacle avoidance waypoint
+		79ff1436b89423f5d7e7f8b965c2f826bc8021b7 vtol_att_control: move handling of motor state and idle speed selection to VtolType class
+rc		dbdb2c9c22a59c7376204eca55e56e2a0f3ab27f px4-fmuv5: config fix stm32f7 max SD card speed
+		11e3081efd98b2fd714a2c0ca83ae57d7a950df4 ecl: Fixes bug preventing use of GPS reported speed accuracy (#8981)
+		eed8b0085750dba4c267e6e91dfc816307ecfc7e mc_pos_control: Release estimator speed limit only when speed demand is significant
+		642a4a5fc7afd913661c24b2394497917f5b53da mc_pos_control: respect estimator max speed and min height limits
+		f016e66ff822e993c813899a3cce7e2bde342fd9 Revert "EKF: Release flow speed limit with altitude gained" (#382)
+		e70206f74bc4f77a0e000da3c923f4459006d2b1 EKF: Release flow speed limit with altitude gained
+		bb9f8c3b44f378cd1a00015dada69dbc27b24432 navigator set cruising speed/throttle for reposition (#8096)
+		7a5f58a607379b5abd9ea53b9e05ab7b16859f7a px4-same70xplained-v1 nsh:Optimize memset for speed
+		96b4e5b512ceb203656316ced12cb3d38cbed15c zubaxgnss-v1 nsh:Optimize memset for speed
+		17bf776af384f5c62efca3061cddb56c8b2e6110 tap-v1 nsh:Optimize memset for speed
+		e53a06429cdaabf1ca51eb09fe038ac017a2b319 s2740vc-v1 nsh:Optimize memset for speed
+		3f267a5cb2e927d8762c9593c9b6a204f41c3f50 px4nucleoF767ZI-v1 nsh:Optimize memset for speed
+		c71e01bd44fea0907be18047cbf117bf75aeac6f px4fmu-v5 nsh:Optimize memset for speed
+		e4f47d4faa84e97baee1db16fac2af413f4b06a2 px4fmu-v4pro nsh:Optimize memset for speed
+		68679a3e8ec7bc3be03dffa07679c62493676aeb px4fmu-v4 nsh:Optimize memset for speed
+		24446f0c88f5afbef1b7df9f2ad294360918de21 px4fmu-v3 nsh:Optimize memset for speed
+		6955a4c0400005fbb5979a5c43a64e9e1bc85284 px4fmu-v2 nsh:Optimize memset for speed
+		c760278d0fa6a718f0d6cef14772a1ee86bd56a1 px4esc-v1 nsh:Optimize memset for speed
+		c7f3e84bf4086b1da1f85d413b5ffa676078d936 px4cannode-v1 nsh:Optimize memset for speed
+		92411e7195b945c9b148df7ca09232d78bee5e16 px4-stm32f4discovery nsh:Optimize memset for speed
+		1a98f3c149ba52c458205a66fa99feda69146991 nxphlite-v3 nsh:Optimize memset for speed
+		3c25e8d89955a0ef4067453148cf458b70b5c773 mindpx-v2 nsh:Optimize memset for speed
+		0d82e807fe6d813193b5dc3385c590db5a55e6de esc35-v1 nsh:Optimize memset for speed
+		ad6d0304a996794c4d0a81e5f88ed60464457d2b crazyflie nsh:Optimize memset for speed
+		202377dd4eff0eb1526da8d6a35ce1564c40a24e auav-x21 nsh:Optimize memset for speed
+		04a61d47cb6713b14bc927648a1c57f6651b8d0a aerofc-v1 nsh:Optimize memset for speed
+		e95b76025731c8335f0dd606b043646cf54c415e aerocore2 nsh:Optimize memset for speed
+		0a37d8dc429a30319b96dfd20c6ebc68a8500f19 mc_pos_control: clarify speed params
+rcy	hcf	c4c18caed41bb58a2a8ef287cf40c76783a1b6d1 mc_pos_control auto: set speed at 90degrees to 1
+		e39b38ba96971245aaf6d2b1c249868c8717665e landdetector groundcontact: adjust climbrate if landing speed is low
+		bc46f13d90adc183b5802c38f2e6dd855dd5aa72 landdetector: use control mode, add minimum speed to detect hit-ground
+		8878be57411a24babec515f96db637ee1b3d1700 MC land speed: Ensure that the difference between land speed and land detection is high enough
+		ad21dc3f504f62ae5551f759cc8f8c86b19a75d9 Pixhawk configs: Ensure there is enough TX space on high-speed UART links
+rcy	mwn	fc30f2906fd8b8dc5fe52c38a887e9e4e56b2e0a mpu9250:Use a cpu speed independant _reset_wait generations.
+		b511ccd9fe9a3aabac6f896252bc35edf2a57810 mc_pos_control: integrate complete order and limits of velocity setpoint calculation - one warn_rate_limited was missing - vel_sp_slewrate was in the wrong order for smooth slowdown/speedup on takeoff and landing - slow_land_gradual_velocity_limit was replaced by calls to math::gradual - smooth takeoff speed got controllable by user input - comments were corrected - an additional check for the sanity of velocity setpoints was added
+		33495e81437113bf301ff6cb5f1d1e5cf50dca0b ekf2: added parameters to specify horizontal speed and absolute altitude thresholds for range aid mode
+		0c4719de3ede6f3124e3550cfeb375f932d8801c mc_pos_control: smooth takeoff, fixed gradient of the velocity ramp by takeoff speed parameter because we need a workaround for the broken auto takeoff logic which can start the vehicle with a loiter setpoint in this case the very first moment is still a jump but then it gets taken over by the fix gradient ramp this can basically be reverted after the auto takeoff logic is fixed
+		b5820afa1437f258e01914eb2ca0fb6e04437930 mc_pos_control: smooth takeoff, fixed ramp reset bug and takeoff speed limiting condition currently when the vehicle is landed again (not after bootup) the core position controller does not run anymore therefore the velocity limit ramp in some cases did not get reset correctly
+rc		8687d414bfdce24537e45b109888dd6e4b8470eb mc_pos_control: new variable that defines speed in manual controlled mode
+		fd0efac2b5e2d1c2e9437655f1f20f134f252b8b IO driver: Run attitude control group limited until the device speed gets set
+		1d4d57c4db9ed46664d8ef6ac0be11f89e146b9f bebop bus wrapper: log actual and setpoint motor speed
+		647fafe9bc83612c173125a0b537951965ed9fd6 Allow for immediate cruise speed changes at any time during a mission.
+		e0fc0a847c87ade89eda1f33e20d7c690dbac0af Mission: - weathervane on takeoff - separate cruising speeds for VTOL in MC and FW - cruising speed resets - mission work item logic is more clear - fixed double execution of certain work item states - enable cruise speed change on the fly by command - moved VTOL transition target position generation to mission code and set always
+		508c782bab689cd5a2f5a992986332ebb0f5560c mavlink: Add support for high speed baudrates
+		eec55a09185069b86262209c22a9db2ce719f81a TECS: run underspeed detection method before calculating speed demand
+rc	?	57d7a002614a251dc6a72388e9101c16981d1e39 Set BMI160 bus speed to 10MHz
+		c81a1631ece0be126fd49d3a4850c79c6197b357 simulator_mavlink: init hil_attitude with 0 & set angular speed
+		997ae984448442f352681db15d67cd9b12691e08 navigator: reset cruise speed when out of mission (#5494)
+		c5e11cd16f5be37094a221ef9cfc44ead1326a62 TAP:Added i2c speed setting to init
+		9b1e4c42de6408da83a3ab72d11cfee706374d74 Multicopter: Clarify speed params
+		0231b512b4d1b9690e51c18843563fb630c1e0c0 Plane: Use appropriate idle speed
+		93fde19c25f13fe9c4000bffa9d95ea16bcb13cc changes some cell notation for speed
+		2a2dca84bfddef0a5194b85541a6579a8acf2e6d Navigator: Do not interpret DO_SET_SPEED as 3D location, reset speed on negative value.
+		36a8f3f45a5085fd7de16fa23f2df4c2389c5f02 Commander: Ignore speed commands
+		f73148e98daa508932497f0c2f800aeb2d7020e3 mc pos control: Support do change speed
+		7871ab0faef2b9142d1595b943257a2dc2257ffe Fixed wing: support do change speed
+		697096511cf25d532cfa8554727c9aa3cc541239 Enable change speed command
+		2549505e7b5d5f184443dd3b97379dcde0f7c879 Navigator: Add support to read cruising speed off a mission item
+		cc5afdd6b55f5d6b63e27e33dca110e4d8a40b7a Add field for desired cruising speed
+		7455a833d02a82bd96b037b73a6845f268c680fe MC: Split yaw speed limiting between manual and velocity control modes
+		bbc03731c78384284a17dd5c71e818459e8e8487 initial implementation of 5 virtual sensors for Bat V,I, Baro alt, Fuel and GPS speed. Voltage and current scaling can be set in OpenTX. Fuel is in percent. Alt in meters. Need to look at what OpenTX wants for speed.
+		461451147443356aaca7ad0473e41991607a9092 use set takeoff speed
+		4ba7408ba0e47a92783086cc1bf4df5035c76235 Speed up Vagrant
+		111287f6fbf83b7c6b5bcf334f5e7b20ef6ef4d3 Attitude EKF: Do not limit sensor speed
+		9c70eb0b63e1079f1fd0fcf8714cbd2fd138baed reduce wheel control speed scaling
+		90e4fa8a33f234bfdf8e5294203f2537e416751f TECS: Weight down speed gain
+		006dfbb14f658b23c0a760229bac05e861db48dd Commander: Speed up airspeed calibration
+rcy	hcf	e76bdc3cace535108aa90ca89eadfbaef1f13b01 EKF: Use unfiltered airspeed if airspeed is large enough - rely for better stability on the filtered speed for the threshold. Lower the threshold to 5 m/s to ensure airspeed fusion even on small wings
+		d40f94bf26a89c349f5d7633434d3721b4720170 fixed wing posctrl: - lock desired yaw once yaw speed is small
+rc		e279e8bb2a87e56d5356fc255d800516c8094cc5 Fix param changed count logic, speed up logic for unused params
+rc	?	97b8e7a20e1bf64b7677911e6bbab300ff471358 mavlink FTP: Speed up transfers by longer bursts
+rc	hcf	8334073bb99e3da7a5bfdfc24f540f0d0e14a361 USB: Crank up bus speed a bit
+		f0ad98c92c3fa063004f241d590bb96f6be16895 RGB led: Code style and comment on bus speed
+rc		c0d246e8e4130c3df7d16a97f7c749827be18b29 CDEV::I2C: Enforce one speed per bus
+rc		0901d999924012b482a5379854c24eb9f2c6f345 UAVCAN update (speed optimizations)
+rc		2e1ac72b598184ef618beceb10de53606929edf7 Speed up stack dumping by looking for freespace 4 bytes at a time
+		e16c4ff76e7eff2da88bcbef5d05dd4ba11e7203 read attitude and attitude speed from imu message
+		5682526737e9aca75fa30aea8e8f18e49c0b48a7 NuttX: Update version, addresses clock speed error message. Fixes #1510
+		590489d49859c77ef2e919f2ef45e9dc81e28f9f make sure vtol attitude control module is started with idle speed set for multicopter mode
+		84908f8f3db5179ffff0d96d15756ab112535482 mc_pos_control: AUTO speed limiting bug fixed
+		821c06f7cc58b50afe80442ee2258bf99cbe1fd2 Support speed estimate
+		bcca3cae748ffea2df51907992e4a3c7ca673fd2 Run full update straight after reset, filter wind speed dynamically
+		2c0d192944744086905e622f445a523d6650cdc5 Use the wind speed estimate filtered values
+rc	hcf	c97e08bcf05455e9e9b582fe3216250a988890fb Set IO PX4_I2C_BUS_ONBOARD I2C speed to 400KHz
+		a049f0841d0a68edf2f1e5d10ba2ab24d15aa472 Merged L3GD20 orientation flag while keeping original bus speed
+		c6c33142ceb6bf59b8c9b8e32e94ae5ea7959dbd Using proper math library. Corrected speed variance calculation
+		7fa5458bc619df427fc29283ff5ff32b933f2906 mtecs: add D gain for speed outer loop
+		718206bd6d4103d8d2b1ad6a111770f65622029a ubx driver: fix unit of speed and position accuracy estimate
+		ab60b13b6dbcf636b1889d2150d96aff8b26cfc9 fw_att_controller: Forcing actuator scaling to at least minimum speed
+rc		e7e3e132adcbc755cd6cc2b97f6c8c827a9140bf FMUv2: push SPI2 GPIO speed up to 50MHz as well
+		2ed315480e4582c9f223b88e1fee39303fbc9248 fakegps: default to 0 m/s speed
+rc		4fcbe806cef61aa3b8a749602b65da0e5c8d48a4 Cleaned up init config and picked a safe bet on FRAM clock speed
+rcy	hcf	7e309414758d2c526da7ef3bcab7bf75779f6950 ms5611: change bus speed to 5MHz
+		ea33a19c8f5b109fd9ba35603b0af56dddef3708 lsm303d: show regs at both high and low bus speed on error
+rc		97af3d22040e67520a835102684a1b2a9575aaaa mpu6000: change bus speed based on registers being accessed
+rc	hcf	b0bb5a34508c72efbbfc2ec622a2cd8a95e9df1d ms5611: change bus speed to 5MHz
+		af47a3d795c01efbaabd60d6a15d48337187d35b mpu6000: change bus speed based on registers being accessed
+		3c6f01bea8a65e2c347d1b893b3fe0d152bff69c tecs: speedrate: use p loop instead of pre calculated speed rate for now
+		8c3e67993e2aa5e434ad1273889ce8f321fb1908 position_estimator_inav: don’t use GPS vertical speed
+		a1b80ec3f356aa19544eaa318bc188d57877f16f fw: att fix initialization and add parameter to disable coordinated turns at low speed
+		6cf24ac106688d70bdeda9d13fa252246f599b5a Increased comm buf size to better deal with higher-speed MAVLink transfers
+		17f9c7d15ccb6301e2be3eaa8cde8b3f710ce085 Crank up the test speed for 'px4io iftest 1'
+		3163d7ac0908dfee0978992137500f11f8a42c43 Set the serial port speed before trying to talk to IO
+		eab8f9b28608f7f91641442e833b2324710147d9 changed control index for speed controller output from 5 to 4
+		9dbd2695d3b476e8ed0a2001b027329e8600bd29 Hotfix missing yaw deadzone default (leads to continuous turns since zero speed is never commanded)
+		2ebcd0fdcc4b743c3a8a32bae0852e9536bf3a6b Switch to optimising some things for size rather than speed.
+		edb3871913d4fa7d6ef0f01827a194d6362c3c71 Remove some dependencies of distclean on clean.  This should not be necessary in higher level makefiles and should speed up make distclean
+		269bd9f4038189716bd630031c90e98b421e5a79 Force the fade speed to something sensible. Deal better with failed probes.
+		7f22811afb3078b1f86b2d462d13e0d06e3a5c88 Fix <termios.h> for c++ use (cannot mark speed const)
+		520f335b557fdcfbbcdebf967ee02d71c574b353 fix for ground speed minimum, untested
+		129e6d73debca5653911867e9db54990c02591bb Changed yaw position control to yaw speed control for multirotors, tested with ardrone
+		2652b16d37f2221dc9dabfa1a278651c2931e5ce Distinction between yaw position and yaw speed control, just messsed around in the code, untested
+rcy	mwn	aeea27d16a6e7d92f7caf1c6a272a5f4bfa9a721 Increased interface slightly to better match 200 Hz, adjusted led flash speed
+		f16ae329fdcd533adc29e035e2184918b3862612 Add a versin of memset() optimized for speed
+		b090298b121d8a5dfa02cb06b2ab27ecc3fa0545 Minor cleanups, added more error verbosity, XXX parameters get now read it at maximum sensors speed, needs to be waiting on a param change notice (but not on the vehicle status topic, as before.
+		d7280d43821c750e6d8aa35ac6f26f811cc6890b Combine cfset[o|i]speed to cfsetspeed; combine cfget[o|i]speed for cfgetspeed

@@ -1,0 +1,62 @@
+		9fe2f84db5f9f918a9d961890e448c700a242d97 CUAV X7 Pro: Remove unneeded drivers.
+		6c16a29d26b2c79d63f1459be361c8972399d9ce mavlink: remove unneeded TIMESYNC stream from MAVLINK_MODE_EXTVISION
+		aea139bc1bc2bf243cfe9b9a094a894375a7ebad Correct the LeddarOne FOV and deprecate the unneeded _distance_sensor_topic after migrating to PX4RangeFinder.
+		d4fedca1ee06e8ca2d180305b0a28c71f9d04d5c Rename _accel_horz_lp -> _xy_accel_filtered to standardize naming, use time literal, and delete unneeded #includes in the FixedwingLandDetector class.
+		2a3b98a463b0690b58a0cd98cbcd0bb3f684c0a2 Deprecate unneeded #includes from the camera_capture driver.
+		d1e46737a3060ada016363f26375285747fe8764 Organize, alphabetize, and deprecate unneeded #includes from the barometer drivers.
+rc	?	8e4296d00018da181eafa3705c4e9b17f7319d03 parameters: remove unneeded usleep
+rc		2e732b9c0b917e549c2e33bf574e86094c1189c3 removed unneeded file, some more clean up
+		0bee156e8f0e743e22b1916a8e9b8f580994a649 remove unneeded condition verfication for the package
+		47094aa1f843e109a34b5234376c38916e52ea29 cmake configs: remove unneeded sitl files
+		9712f6b02a34e75d7ab1416b6fff0fcfb2fe7b62 mixers: remove unneeded README
+		97fe5f928a32ae8463f4a5e5ff92a7f5803abddc mavlink_orb_subscription: remove unneeded checks
+		28d70f5f793b8eac05e9f358bb6169a9cb30465c logger: remove unneeded topics from the default set
+		d4faaff8542f4e317af38f6e3183a9ed7cbd5a68 logger: remove some unneeded SITL topics
+		2577eb7527bc1d6ed05da3fa1f751da4ad81a451 sensors: adc_poll: remove unneeded argument
+		051822eee1329558bf565f8b37418cc3cfeb754b lpe: remove unneeded subscriber to manual_control_setpoint
+		7a409cf843592265719caababb23b44a8e778de9 vdev: remove unneeded devList & topicList methods
+		c4cdaa48e01e00886deb9d4d7932f24937ed5d72 dataman, mission_feasibility_checker: remove unneeded uorb includes
+		89a8c656f2d6d034e9a772e1d61a7e8a609c1289 Unneeded includes
+		62c1a23ea3a600c078ea072827a52c76ff221783 Tools/px4airframes: refactor & remove some unneeded code
+rcy	mwn	644d237ce6de6ad55bd12d69d41bd635f5f93ec8 posix-configs scripts: remove unneeded 'sleep 1'
+		32995a5bc17500dd0915cf7dd55d4362674cf4c9 state_machine_helper: remove unneeded code to disable sensor publication
+		cf21d8f55449a6d03f487429efb356e8ea179f94 cmake: remove unneeded file build_git_version.h.in
+		78f19fccce06474240efc29f8be074d7e4310773 replay: remove unneeded include <logger/logger.h>
+		b4ecc5a8d961d31ef7eb66b8f5ea097568e914f0 sensor_combined cleanup: remove many unneeded fields
+		872b08f677f497cd9a30da15409e5225b1e5071f commander: remove unneeded include
+		8d491077cef680e5e470e71a69ac110fbbda57b0 adc: removed unneeded printf
+		51defb9de291422bca29570da71a9c5eb24c8a32 px4.config: remove unneeded commands
+		ff5a481c34ce4d5af28cde627a5ca30a286c0bba Remove unneeded EKF2 configs
+		9d0c5469a066e51ca699470f169e2073aa181bac gps: remove unneeded comment
+		9da2eac3d33c4639fca92b8700db7e4285f4606e logger: remove unneeded start parameters (-x & -a)
+		7ef718912ac6be956c6bb684518e91cfbb2d0891 drv_gps.h: cleanup the file, remove unneeded stuff
+		3cfb6ba4a7bfcf2d491b20f85032ea3324c1fe2b Do not send unneeded NSH command any more
+		8cc37db5950c329edc39f7aa8ecf4d55da8762d9 Removing unneeded debug statements.
+		39daea103be549681161c6c9396a757b4dddcc5c Removing unneeded debug statements.
+		57ce3cfd0107279b91bde03ac00911ba7ec43a2f FMUv2: Remove unneeded code
+		f8ccac69bc4c6dd18c15e6edbb14501f2cd7444f FMUv1: Remove unneeded code
+		4e6bb353924728c7df5f9d0ae357622f33f2bb91 sensors: Remove unneeded orb_set_interval() call
+		a690fd12e0babdd09a3ce784fb88827d94a247bb Removed unneeded dep from makefile.
+		a4e06654ff3d80d016c6352870bc105ddc8fa4f7 Eigen: Remove unneeded config option
+		fbc4ca61aca54176deee6082f35ba60558571047 ll40ls: removed unneeded comments
+		ba10e18ffb418d223931809402e5487bc6b1dc0d Remove unneeded cast in GPS driver
+		2979d146422908e108cecfe37094c191521810ed remove unneeded include
+		8dbb1fc8d443b1f8e2e454d4b82051fa63a48398 remove unneeded include
+		67a35eb0b509b2394f82773c460a6492471efd37 remove unneeded files
+		57569482ad5739bb4471826014818c92bdb33c6d remove unneeded friend
+		632a0866ef16723dd6e1f0a2f7c575706b9e10cc remove unneeded functionality in template
+		eab9ddb21273234fce7c610f664a35d2dae64a55 ROMFS: Set unneeded string during startup
+		0aaabaee0974aaca354e95f403cca3317fd1a83e VTOL: Remove unneeded headers
+		d4a5f345aabc83506b05277b9dcf71e24700c70d Remove unneeded apps from build
+		780451dd65db72aa28b75ddad2effbbba8db8626 Remove unneeded file
+		760e72cc721c6a2b90515d37eba705c30be4928e Remove unnecessary commands, unneeded output / resets
+		ae4339ce1e3046e44387f9c9e7a66827b859a653 Update MAVLink version, remove unneeded INT frames
+		76f7960d77046c33a771be49b57e32c957e7a2ef Mavlink text feedback: Remove now unneeded audio tag for critical messages, make overall printing more efficient. Remove buffers where no buffers are needed.
+		055e45935534b409cd3ed68c837399461e448b3e Remove unneeded headers
+		783a2403969032e8c0119196cb94c092847965d1 Function naming and remove unneeded sprintf
+		b1539d8a74a1874abcb5e64f1813bd6ba9f0353f Removed further unneeded commands and other things eating space
+		2dc3cf5e43154a516505d768885e734a5ab25e14 Remove unneeded header and commented out dead code from MEAS airspeed driver
+rc		a4ecdc95828484370e0e399d2f3c8b0e28f5c585 Removed unneeded flush
+rc		35369471db820ba79e9803d4a48ea74ad6843e86 working on better status reporting, removed unneeded fake PWM generation from FMU
+		9f15f38e5705d73e1dfdf381c8d3b458a8a1557b Merged, removed unneeded line
+		9f35de51a60fcbe207974be43648aa523926f115 Removed unneeded header

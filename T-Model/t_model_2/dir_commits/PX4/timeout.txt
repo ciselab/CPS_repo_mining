@@ -1,0 +1,134 @@
+rc	?	f3a904c1096665a3baa157ebcf77e10bea2a1c47 Jenkins: HIL increase timeout
+rc		c39a21aa54d52338459e37dcc12dced8084fb72a ekf2: selector remove special timeout condition
+		682db4b8ac8cbf326cc4e957f676bcfe2eac9312 dshot: timeout if commands are not processed
+		c35293107de41e1f2ee41901d2f574d28f22a34f tailsitter.cpp:If transition timeout,abort transition
+rcy	mwn	a5a457d7440c41544c86ff628aa40ad6b19611be sensors: relax default data_validator timeout 20->40ms
+rcy	hcf	c6dd03a8aaba78d29bd8ac4a8e78a848a1dae189 Tools/HIL/run_nsh_cmd.py - raise timeout slightly
+rcy	hcf	375b014444f5ff9cbd94f28a391ebc522ab09840 protocol_splitter: reduce poll timeout from 100ms to 10ms
+rcy	mwn	e33d2141ec1eb86bbcf61300b6887d1ce94b510c px4io: Changing the timeout time description (NFC)
+rcy	mwn	847b3b5b64538e6d3c27fdcde50adee6f7510637 Tools/HIL/nsh_param_set.py bump timeout slightly
+		9b7170551c2b2b23ae3bc587c365ecbef8160a84 ModuleBase: allow configurable timeout for wait_until_running()
+rcy	mwn	ac2b38603c2cd361741cdeabb49ad3d9cbc6c535 microRTPS: client: add missing "-p" option for the UART poll timeout and use microsecs for the send/rcv thread sleeps
+rcy	hcf	d9e31d67aa0d742e709616c349f3fc958598c9e2 gps: Updated timeout time for the rover with moving base
+rc		29730e30fa45e703b296c188405b7173b1a55e49 ekf2: don't timeout in HITL mode
+rcd	?	f16913c175c6c9ed192f7246ad62f535ad472631 mavsdk_tests: fix timeout at 1x speed
+rc		8b3aa46c01c78852e6dbc9bca398abec93116426 [UAVCANv1] Publisher default timeout, has to be tuned further for all publishers
+		ab69681744a51ecf77620cc1ecbfc3bb139bcc56 Add parameter for terrain timeout
+		2f39651f77ff6e37adf4a6c44ac2b47455578a1c ManualControl: use current sample for timeout check
+		b79553862e220a20db129298f85511697f343306 mavsdk_tests: remove timeout for mission upload
+		40a452dcd2f470541d923ff8a9556fc9a40916ca ekf2: selector improve timeout handling and reporting
+		c3172a91d906a9e052944dc7d4206500b18fc499 ekf2: try reselecting distance_sensor on timeout
+		c524e61b973f6de96fe93edb2a3aee90c5db488f airspeed_selector: fix timeout check
+		3cc53f551d724c215302fe9a76671eeb5e7d6ab4 MAVSDK tests: Use full system timeout off Depending on loop iterations for timeouts is not accurate, as usleep behavior depends on the system load and asking for a 0 ms sleep can potentially return immediately.
+		fb1f360724476c65115dc78ae3118f27accbbe91 mavsdk_tests: consistent 180s disarm timeout
+		b491929ad68932d87506f8fcf99e2e933b88e04b Jenkins: HIL tests only finish on PASSED, FAILED, or timeout
+		6579544fca2ecce4d56644c116372841c36e8e0c arm_auth: use ack reception timestamp to compute authorization timeout
+		2ccf664e9507513b079ea706387f6e0bf8b4f65b commander: disarm from safety relax land detector timeout
+		a3d1c94aa4b648c2d2cde70646263cbb0a524d39 logger: reduce poll timeout to 20ms
+		9b2527549bf61a68cd94c0cdce51628fdc2bc788 mavsdk_tests: relax timeout for offboard goto
+		ae219c3272364a4742d4bcc15cdf8f2da81ae670 esc_battery: fix timeout check
+		be9f125c3d618d269c3488849e2998faba1f11e5 mavsdk_tests: raise timeout for czspawn
+		0edc2aa334378fdd883461706a38ea6b52c53876 mavsdk_tests: don't stall on timeout
+		9d124c2b1ad0f29e93ae62fa9fb04a9bf5166758 mavsdk_tests: a timeout of 5min should be enough
+		93be6ea49a22b08a4bc42010a7c537640eae09fc EKF: dont print wrong reset message on baro timeout
+		55372d7cbeff7821c99a10428cdf2a1f0178f9fc Parameterize timeout for radio status
+		dde7530df6681785e8c283315b0666d59e16e8f3 mavsdk_tests: properly handle timeout
+		5f670754813932eac63f86122245cc5f60abca68 mavsdk_tests: raise timeout for realtime sim speed
+		b943bd72ab20ecab155976d74986926d1c0349ea commander: Added a parameter to control the timeout period for disarming after the kill switch is engaged. (#13325)
+		b1d38ee050c446a04b23b1039810b7cf6b03e1fd Navigator: VTOL: fix  mission yawing timeout (MIS_YAW_TMT)
+		aae16cc5943f1ff8128f67f1d18b3407114809d7 uavcan esc: use time literals for timeout checks.
+		d06c679252b7c63cf966198bda4f4353b269dcdb uavcan esc: added timeout checks to escs.
+		43d006aff26e32bbd442649de3cb627be710facc mavlink command sender: give channels more time to request command - if a channel receives an ack for a command, do not immediately remove the command item from the send queue but wait until the next ack timeout occurs. This gives other mavlink channels time to try to put identical commands into the send queue.
+		807cfc8aac30d57093f54f633aea1b813663d00b mavlink: fix race condition in mavlink_command_sender - if we receive an ack for a command through a specific mavlink channel then do not drop the corresponding command in the queue if this specific mavlink channel did not issue the command. If we don't do this we can end up in a situation where we associate an ack coming through a specific mavlink channel to a command in the queue which was not requested by this mavlink channel. Moreover, the actual command for which the ack was meant remains in the queue and eventually triggers a timeout.
+		ffe505b76bdfa166c14abb6af13e1650aff465a3 Fixed timeout error handling
+		71067a7e2de13c7860c18633b012b686840fc1a2 Fixed timeout handling
+		776b1a28dec462041aedf7fef9d332bf030d589f IO mixer - cleanup FMU timeout check (comments and indentation)
+		3f691891c48f4e87ae038a485a5f0de39039f0f7 EKF: control: stop vision yaw fusion on timeout
+		be8ad46fc966f526be3d164df9ecb257fc0ea06f px_uploader.py: write timeout workaround
+		7a8002fdabacffbd2db9388e2df2d99f63b61871 Commander: increased hardcoded timeout time for avoidance to start.
+		13634e6757284ce49c049e49fa854776bba66aad Jenkins compile mac: double timeout (#11416)
+		2e3fa30c83dc65b4d00992d15411b07c3819ab86 sitl_gazebo: update to revision that doesn't abort on timeout (#11196)
+		1b685de70dad358a56b25e7bb9d106d6fbe503f4 simulator: raise timeout
+		1165739a561bb234d51a4e32a69c1aa50e32305b sensors: check other gyros on timeout
+		9b7857315c0b6a3c7936733e7ecc926ebe117822 sensors: handle timeout
+		342c3ab202b62ef0d0ea45e6c98535934ac2674a EKF: Fix timeout parameter documentation and name
+		7e12815f81275df8596c176c467643a6db01c424 Mavlink add RADIO_STATUS timeout and reset
+		0c6bffb66a063b428959f1379e03f9c2f081b3b2 commander: make auto disarm timeout float
+		628079719f9afdc54b8cdc54a05df3eebaf5401d EKF: Fix inconsistency in timeout for terrain validity
+		58c8c50174516759e83a0123bfc620b44ac225ac frsky_telemetry: add scanning timeout parameter, and set it to 15s
+		9d1fa8cee2238199694e6b5a38d2a34ea3d4626d esc_calibration: adjust timeout when waiting for user to connect battery to 20 seconds
+		26dcf05d80ff98f72c79099901d84bd3986b9291 keep ev timeout sign always positive
+		477a42e6f67d88b382dd535a6d5bfb0e887055cb ekf2: Enable adjustment of nav validity timeout
+		99c9e09624427e4ab0dd1a6b20e393919bb3d8c8 vmount mavlink input: continue to poll for vehicle_command until reaching the timeout
+		cf55901ac9c1f6bc66ff0f5f2a3e018d819f6be2 Calibration timeout: Triple to 90 seconds as the user can now cancel the routine
+		9e312e8dba385be00fecff315d595077642db4f3 Uploader: Do not show timeout for larger binaries when everything is still as expected.
+		2193afd0a009008a5331a86db2e76a359c2d291e fix fmu: lower polling timeout to 5ms when running as task
+		fbebec5d0f0709a8e10cd7d71120ee6279844ddb navigator log RTL messages and don't print global timeout
+		341bd6e8360f38336e4b1bba4031deb30560f5a9 commander: add timeout test for global position data
+		040639837eaa4f1fb9180039eca88ce04cd53ed5 EKF: Use common timeout test for reporting deadreckoning
+		fb42db41d26ff89da7ab5160adb117a278dda546 spektrum_rc: raise poll timeout to 50ms/20Hz
+		e9737d6f7a78d2f0ccc2e0dba2344647a813c01c Preflight checks: made sure pre-flight check results are always reported first thing on the console and always on new or re-established telemetry links AFTER waiting for the hotplug timeout (leads to double publishing on the console when a new link is established, but this is the best compromise between fixing and completely restructuring)
+		b870f92e1cf0eb0999dc17c2fd12def4b8bb717b DataValidator: use 32bit timeout instead of 64bit, saves memory
+		c5f750dcca156ce84d1156ba66f7d25b797c3f45 ekf reset: more granular reset / timeout strategy for gps fusion
+		c4eb65862f307de4b679e24f44fab0c565d7c2a3 Reduce esc calibration pwm timeout (#5011)
+		056f73f5d279435a6bb2f77174bb8bfa1e556416 Changed LPE distance sensor timeout logic. (#4996)
+		de675845afe69e5d1e622382cd5db6ed645bc90c Fix navigator timeout logic
+		ced83762689d900a448074b65b25e2344a17f1e9 added offboard lost actions with additional timeout
+		87e5499ad2fea2329a9a40ddfcfe49b2b454687d stop spamming console with timeout warnings
+		afefa4d2a0abf51bc9766e070d99c7b324649de9 gps: use a max poll timeout of 50ms to check for orb msgs more often
+		a7417657c36f4af4f9a30dd7b6ab60eb392b2bcd EKF: ensure fusion timeout counters are reset when required
+		9259406a2981083e08d6497376251eb0aa7c5e81 generate_listener.py: add a timeout of 2 seconds
+		3981f06d4239155e65751de6f0bcb4ba7c8d295a Reject arming timeout
+		e5dfda6d46464d8d1331bb1337c6d90cde22db47 uart_esc: remove timeout printf
+		f5e0c72ea0b3487b2385f5f7c269b54e14400b31 FixedwingLandDetector: timeout fixes
+		2f69afb738aba6f542aa71e20b5437063a1f76f5 Temporarily quiet a noisy timeout warning on pixracer board.
+		9e77f554d222308c37cecf15b17c738695825ba1 px4_qurt_tasks: fix timeout calculation
+		570fb97163e4a9c798c9f5d9db2109d874903879 updated timeout logic to work only on waypoints with forced headings, updated param docs accordingly
+		bb4decfa8b6cbf03ee4408ec6554f72565277de7 implemented basic heading timeout for waypoint acceptance, added parameter for yaw error on waypoint heading acceptance, set yaw timeout for vtol default
+		2fa73802464ed7e3ff6ef9a2efdde3ec0c50f72c Front transition timeout
+		a402b3beeb51f56d6bde5f6f92a65a1e7a28b020 change frsky_telemetry default port to USART8 for pixracer add a 50msec timeout to poll calls in sPort_telemetry to prevent hangs
+		66bc96f4b3dd50ac35693ca8401767f825c163dd S.BUS: Adjust timeout interval
+		4b319d2fc6044cfc245f8431a81bc8f19399e148 PWM out sim: Fix corner cases in startup and timeout handling
+		4fa0123652a3f99009aea1ca1f71b1f7436131cb Navigator: Only indicate timeout if we really time out
+		d97ead81aa249ba82f518e6f7c59bd50e5f0d5d3 set talt timeout to 10sec
+		11c6ee2b5a9115b0b0e6727bd6f2df574ad447f3 make terrain estimate invalid after range sensor timeout
+		635bfb6a7b4df37add20af8f5582b23ed992e03d CAN driver RX queue reduced to 21 frames per interface; poll() timeout set to 3 ms
+		7d2ba975115baf9a901d23e8baab83e4ec5e8a47 Fixed poll timeout bug
+		293bd026d0197f87896b3941651340cfcc10a4ca EKF: Set mag timeout
+		46f7404078c7e6cc1ef0f51ce3ea40a1a7ebd3e3 Q estimator: Set mag timeout
+		dee7f1d956460b8391713aeeccf9aff773af0a9c Data validator: Add option to configure timeout
+		425d4316d1bb18b930aa324e50754673c26927f6 Data validator: Increase timeout interval
+		1198a79a71286098aa1f7ed6f0b1617086ab128d Data validation: Initial concept of RMS + timeout based data validators and validation groups of N sensors
+		a1fd088e8f29d6803404ab6b1e12c525cdb95c79 MAVLink app: Rely on booted state, not on timeout for parameters. This fixes any param timing issues for good.
+		8f4b9c02f0f68ddc69b11c5045dac672ccb886b3 EKF: Fix for the GPS timeout logic
+		cd67609da5755dae6cd81e60bb611e498ff2d180 PreflightCheck: Reduce GPS timeout to 2 sec
+		a098ca4ec68b8737243d8e7aab5bdb2db4d842a1 Move autosave into the 1-second timeout check.
+		ee6da71efaad4ef9935803494201a47ace6d8e2a Commander: Timeout position estimates if we receive none for 1 full second
+		c1e13e5afba251723cec51539ae08840d1fe3b29 AttPosEKF: Fix GPS loss timeout not resetting properly
+		552ff809693d340ba6f5fed6837b99effe8bf2c3 Fix NSH timeout logic
+		be269520382adbd4bea59c439599897a53109ad7 px4 nodehandle: nuttx: call spin once also after timeout
+		676cb91a1d973313e15597280121c52cc2d84e43 Hotfix for PX4IO comms: Raise timeout to 10 ms.
+		d18f3ee70d5fbeb150c6b37ccafa4f622494ec19 make rc loss timeout a param
+		1d9c99956f3f84e4350734f1eef41df4c03411f8 make rc loss timeout a param
+		a35814d15b1317f73f325e98f0500f5fd1233583 dl loss: correct timeout, add hysteresis also for regain
+		dcf114aa65273d5d5ce522565fc364fc347ba3fe data link loss timeout as param
+		d4eae37e478860a59e21f3caceb3d8fc28f9fa7c Commander: Only consider latest active data link heartbeat for timeout.
+		3195eb100516b7a4aabadd3e2640434678dbc7ad estimator: Remove bogus timeout flag, do not reset states not in need of a reset. Do not alter baro offset or GPS positions.
+		3015f2e7af94e684c666689aa70c602f79810218 mavlink: retry timeout moved to define
+		33067373614e50e3be068d30f3ad3b718d16df5f mavlink: send MISSION_REQUEST after short timeout when receiving mission, remove all "target id mismatch" warnings
+		ca77c380b5ce9094d58b23ac73f3b0c1cec3d046 sensors: Keep looping in sensors app even if gyros do not update any more. There are lots of other reasons we might want to keep clocking the system. This resolves the RC timeout dependency in HIL.
+		88cf841f00b499792780195de63018b3bd49f683 Bump RC timeout for all cases to half a second
+		b1d39e65a61ec17d2da30ad37068758ab23d3ba3 commander: position timeout increased to 30ms
+		4124417934932907d4663d23e44ab2f436064b58 position_estimator_inav: GPS topic timeout detection fixed, messages about GPS signal state in mavlink added
+		57769ec4371df6ceabacf11aa130c4e8f4eb0240 Reducing timeout to 0.5 seconds
+		1f800edc7676a6ea13127746ce38787a1e98b935 Still threshold increased to 0.1m/s^2, and orientation error threshold to 5m/s^2. Timeout increased to 30s.
+		e7df439ea1f99f26969b6b741a239c722599f194 Hotfix: Extend GPS lost timeout by a small delta to prevent timeout aliasing, GPS app does not report any more losses
+		cc628fbc27794fee52e3a6f33d091758ca1cb51a Add missing mixer ok check in override mode, clear FMU lost alarm when setting FMU_OK flag, print AP RX timeout in production mode as well
+		f14c90c2220fffc51bc6e6e89bac6f9e726ff505 Some timeout needed to be raised for now to make ubx with baudrate 9600 working
+		bc35bb23dd8cb035c080f8ef8b4cd7a30d5184c2 HOTFIX: disable interrupt-driven I2C mode, configure pessimistic I2C timeout, correct handling of the NAK generation for I2C master reads.
+		5c60ed9a9457e3ab0c51584e7e0db59bdbe4fd87 Fix up FMU input timeout handling. Fix the FMU auto OK LED status. Strip out unused fields from the system state structure.
+		f81d00594c156c51ab976d3b6d101915377d7afa Made PX4IO FMU timeout based on IOs HRT, updating mixers now on every FMU update and not at fixed rate, this is WIP and currently does not support mixing with RC-only
+		b871d28c6df1ff9ed7c640d5d0147083e91cac5e Avoid trying to adjust the port timeout once it's open; Windows apparently doesn't like this.
+		a9c4fabda6cccb15912348ac5061827a6cb38304 Change the EEPROM read/write timeout behavior so that we can get actual errors rather than just hanging forever.
+		be85f895a0fbb90aa3b0628c8173574375ac1c07 Use a much shorter timeout for normal communication, and stretch it only when we are waiting for erase.
+		702c78383eb73b12503cd51ec80a22f6185e9de8 Add a timeout to the STMPE11 touchscreen driver to catch missing pen up events
