@@ -1,355 +1,355 @@
-		9a3fa6199bf079cc105bc93f3a0590fc0dafb1c2 uorb top report total publication rate
-		810dbbd25b5a1e3a27918d1cd51f3c1059335cc4 AFBR mode switching, rate switching, and test
-		1e2877cedf561dc229485dfe318e82360310ba73 Tune down solo roll rate controller
-		6d5f12d2a2ab97f17070179cf3ccc94c3cbb4845 microRTPS: client: add TX rate limiter
-		ad9288536b39183c6ec69e05c70b69de58073acf TECS: enable direct height-rate control
-		f6de99d42ee631bb67c1fac6233a7dae19e2d232 FixedWingPositionControl: control only height rate when using pitch stick in manual altitude controlled modes
-		19449a4e75a045f5601748d46f60a863bbdbf30f FixedWingPositionControl: use target climb/sink rate parameters as maximum rates in manual altitude controlled modes
-		a5cc449e69b8e0cade8471f6b33b386c71b11bba tecs: propagate altitude setpoint based on target climb/sink rate
-		4b7416c05bb10155c308922d33d96daad73b7d10 FixedWingPosControlL1: added target climb and sink rate parameters
-		d430e13401040464885795a9a986c1369c1d0eca sensors: wait for real sample rate to initialize LowPassFilter2p
-		b264577daaed7c28efc16475568378aef43114c0 sensors/vehicle_acceleration: require valid sample rate before running
-		b898aabfed4926b75786b951215c5bd10768a9a9 Fix the repeated configuration of PWM rate after initialization
-		3664d9e4ceb787e9915a748875488fb865f05827 rover: publish actuator controls with rate of gyro
-		76e15b4a2150ca00a9d126a4cefc24344d9fdfac RTPS client get baudrate parameter if requested, and mark the device baud rate parameter as used so it shows up in QGC
-		bf09089a26b9b7672efc12a467fe6795cb81d471 PWM out: Collect settings for all outputs There are settings that have to be the same for a split output across multiple instances, like for example the PWM mask and rate configurations. This change collects them for all outputs of the same underlying driver structure and applies the complete set.
-		6bc11596fe72771210ff5a6aa205c3a8004a19ab VTOL mixer: Correct alt rate channels The baby shark config did mark main rate outputs (50 Hz) as alt rate, resulting in the alt rate being set to 50 Hz.
-		82a2126f97b9c769d8e8bb2c7f8f89cbba4c7a28 TECS: add feedforward gain for total energy balance rate
-		893eee4cb8a55dee2e971ffca3b1857c3bf34fee logger: double sensor_gyro_fft logging rate
-		6b4ccaa53e4e1c7ff45fe057bc2d1745dc7597f7 Handle invalid yaw rate setpoints
-		06e3d38bbdb889a196ecfe9138a8c5ab4dc623ce Fix yaw rate ignore flag for attitude setpoints
-		a1be55997874fc6a7ae059239a81d838251c9a0c canbootloader:Remove Rate limiting on FW update
-		5f3e883f2c1bb59fe5bc9c89d5662f38a1c87495 sensors/vehicle_imu: vehicle_imu_status include accel/gyro full raw FIFO sample rate
-		cc11fb281854a1f9154cac9d8258262e60898c99 Multicopter rate controller: Protect for full throttle scaling PX4 supports -1 to 1 as input and this module was not protected against the input range.
-		d1a3590aacfa9f706aca091d0727aa31ce16a94c PWM: transition PWM_{MIN,MAX,DISARMED,RATE} -> PWM_MAIN
-		ce76c84ce2b9ea5fcc21b9177324cf73de57eb24 sensors: vehicle_magnetometer respect publication rate limit SENS_MAG_RATE
-		d0e8b882a23a009fc1fefd2f579376f6a0fff495 TECS: added alpha filter classes to energy rate and tas derivative
-		7c727edc3fc9ecdf4b51b4219ef44335ff5afba5 Simple mixer: add output slew rate
-		bf5ee99952c72d3f18b368ec78e40af10cd2f167 sensors: acceleration always get accel rate from vehicle_imu_status
-		7038cb8518ea12844c4f9d49d5236493abc8ebfe sensors: angular_velocity always get gyro rate from vehicle_imu_status
-		ab43a942249091eb325a968610d162fd2294173a gps: keep track of RX data rate
-		8435742dd51e13f2a2bef1ec7c54ff24a27f5df6 logger: double actuator_controls_0 and vehicle_attitude_setpoint default log rate
-		4ed3ecea415dfad230fbc42a6ed84561c985598e lis2mdl: reduce update rate from 50Hz to 20Hz to reduce spikes
-		98c8cbb27fca8a2e3876e1eee7defd68df136721 ekf2: fix odom body rate sign bug
-		5e739f66d69372eec94050b39194f8792f858555 mc_att_control: inline control attitude call and rate publication
-		c01bcd41f793f39eab10dbed8667d3956f6cb38e microRTPS: minor adjustements so to improve the readings; add more baud rate options
-		8020d6407f1045f6f40c3142c80056ed6a2cd450 load_mon: remove obsolete rate comment in description
-		ff4be5d81582e5f4bb5dda616f44fa1fa1c1b0ca Set rate when subscribing to velocity, specify units
-		6c78c62d9d3a016634a6f32d5190c2a679272adf BMI088: accel get max rate from PX4Accelerometer
-		ab060cdab076fb6934a86a75349cd9330c873432 bmi088 accel: use IMU_GYRO_RATEMAX to configure sampling rate (with 800 max)
-		0fcb873636ec2b8c7abcb9587f582d3f79db86a5 logger: add raw FIFO high-rate IMU logging profiles
-		39a33a35ae0f02a58b45e33de5cc8cb844b52755 sensors/vehicle_imu: pause computing publication update rate
-		5d6a72e383f36557a3381ec31b952ccc0ab2eae3 sensor_simulator: add possibility to set GPS position rate
-		61a2dd8ec65aaaec3a09462fab5c1cae96580b60 Hex CubeOrange: limit slew rate so IMU works with DMA
-		acdc15e2cdfc9fc25bddefe0a4b5a0d0323e873c mavlink: create stream even if rate is 0
-		62e15cbacf865e7ea32623fa6dda87185b4f3a5e sensor_simulator: set IMU rate to 200Hz as this is the new value used in the Firmware
-		6126c190b221fd6890bb9ea3214b63a83f2d23f4 sensor_simulator: update EKF at IMU rate
-		73bb18a05355d3789d34f37dc609927c6af4ae4e px4_fmu-v6x: Limit Slew rate So IMU works with DMA
-		e577c3b610894df3763b282a42aa3d354bee3a35 fxos8701cq: sample at nyquist rate, drop duplicates, throttle temperature updates
-		e73380f726510585638e4e3ea487b9e8bfcbdc2b fxas21002c: sample at nyquist rate, drop duplicates, throttle temperature updates
-		b5e23f544e7ec59ec431b4ab684736ad898e28ea Tune down solo attitude rate controller
-		b461066ac529dc45c0462685a42b6ac68c3398f7 bmi055/bmi088: remove TIMER_REDUCTION, sample at Nyquist rate
-		3d44077f2cd54f506ff152bbdeadbc28fc7c6135 camera_trigger: lower the polling rate from 200Hz to 20Hz to reduce the CPU load
-		336745f9f7d617a9bc88ffe29674386d0d308930 tfmini: reduce sampling rate from 10kHz to 143Hz
-		b4ecfb77237669942686afa6edbb5a9234b99d75 EKF: Fix sign error in earth rotation rate correction (#763)
-		bcb6056a12ae88c2bc04425e3fae8992997b5cab simulator: make sensor update rate dependent of the HIL_SENSOR bitmask
-		d386591d0cf5d86108f55e20d55fc60036d577b9 logger: reduce rate_ctrl_status rate to 50 Hz for high-rate logging
-		6c8f39c5d8b28be77cd5f4b59064fb9bfa274f78 MC rate controller: limit K and P values of PID controller to in pitch and roll (#14210)
-		8df22541ef4b4e334a14ad900e1d70601620c0e1 sensors: filter sample rate calculate with simple interval average instead of perf count
-		b2f4dae2c41a2900b45d0f8e2136ac4cea92bcbe boards: fmu-v2/v3 limit rate loop by default
-		d1260aa28c1f5815739cc5cfe8f8c8ebc070e022 logger: add safety (switch) at minimal rate
-		66300876542dcc74fa268ff9c3611b3efef844ee TECS: remove height rate complementary filter
-		250d5b8acc4de26269f9805794bb36e6d5b6bee9 TECS: remove height rate complementary filter
-		156cf16265606b2f7fe75c0e4e0f6c3e4a42b052 logger: log all raw sensor data at a minimal rate
-		84fe64b1c20a4ae8067f04b1e21a961263bac4db create new multicopter rate controller module (mc_rate_control) split out of mc_att_control
-		fc59414a2547963224e8dd5393e843dd58929c0d set_attitude_target: set rate thrust according to VTOL mode
-		1a4ab069c9f3bb595fad80de8a2c0a40b48a26e3 rate controller: add override specifiers whenever needed
-		bde36f0f4a27b7cbfa9916175a27d84205a3328b ROMFS: rc.vtol_defaults limit inner loop rate (#13196)
-		9f639d1f3be72b2e265e6376c33100bfdbee80e9 mc_att_control: move rate control to RateControl class
-		bfbc9dda91ae94d5a7815148af23109c0bb5cbe6 VTOL: fix front transition rate publication (enable FW attitude controller to run instantly when transition is started). For that the vehicle_status_poll is moved before vehicle_control_module_poll in FW att C
-		e9ab6a75bada21ff907ce7b76c9fe42a59b87585 MC rate control - Scale the integrator with K during the integration part to avoid having to scale its saturation separately. This is required to avoid premature saturation of the integrator when using the K term. Also remove double saturation of the integrator
-		4d9f2bf7764dde0545044b977b971d49b498e2bf add IMU_GYRO_RATEMAX to optionally limit gyro control publication rate
-		a5d3e10c67240df50403f01cf21a099499c28e94 MPC_MAN_Y_MAX: changed default from 200 to 150 deg/s - we have set the maximum yaw-rate MC_YAWRATE_MAX to 200 degrees and it makes senses to leave a bit of margin between what the user can demand and what the limits of the vehicle are
-		d24c415fd7a8f63351c903bada8e9ad9f372799a PID rate controller - Add controller gain to support Ideal PID form (ISA standard)
-		423219c60ed2a9e4f97484634e2e4f4adc218d5b pga460: Change variable initialization to uniform initialization style, format whitespace, and change baud rate unsigned to speed_t type. (#11861)
-		6d8d8e3c88089f16cd59c4c70d35a06785a5dbfb MC gyro cutoffs - Reduce IMU_GYRO_CUTOFF to 30Hz and disable MC_DTERM_CUTOFF. A low gyro cutoff is needed for most medium/large size drones as the structural natural and blade-pass frequencies are low. A higher value is still desirable for small platforms surch as racers or well isolated autopilots and should be tuned by the user. Specific values for config files are untouched. The cutoff filter for the D term is disabled here as the required cutoff frequency for the default D term of the rate controller is higher than the gyro cutoff. In that case, enabling the D term cutoff would just add some undesired phase lag to the derivative.
-		21194239c7f4fb460f3cb8a03a4ce5b3da08cc6a FlightTaskAuto: revisit yaw rate limit
-		581d25f77f005f7250e4c4819550b2fb82f5c70e Auto mode traj - limit yaw setpoint rate of change when generated in the flight task instead of clamping the yaw rate in the controller
-		42d0522cddf191c66a14f7e9d7661f9c95a64be6 FixedWingAttitudeControl: removed check for negative airspeed and slew rate on airspeed scaling
-		d9f8e37288d8e34baac79b32d71862045946534b omnibus: use default clock rate of 20 MHz for SD card (CONFIG_MMCSD_SPICLOCK)
-		463d5512d92cf30b2bad05c5576a0c7c1fb2aff2 mc_att_control: only adapt yaw rate limit on control mode change
-		32ca6f7030a60f8144aab07afe99928947f455e2 ekf: scale wind process noise with low pass filtered height rate
-		53a127beb922325a5e39d37c3fba006ac7b40e86 Oversampling rate for MPL3115A2 pressure sensor (#11332)
-		dd300dca0adbdbe01f6d5aadd099fc4f3ebfef20 Solved frequency rate issue. Now driver publish at ~10Hz.
-		d295320e8285b659799d2122ffd8363faf1bad07 sitl_run.sh: lower rate for jMAVSim to 250 Hz
-		e485885344dfc59bcf81ffec0192ed81fc82ed84 platforms: remove unused Rate class
-		33a9eb946a8a727c54aaace7c30d48bf011b690b Mavlink: Reduce rate of UTM_GLOBAL_POSITION stream
-		90bfdb6f0a2832268baa4d91f88a9e3130a335ff VTOL rate control architecture improvements (#10819)
-		bba475aca19ecbcf83db1ea9c4fd3f5c919012c8 logger limit trajectory_setpoint rate
-		6038c22174cecf6b84af2bd03be5cf58f86eb7f6 added a weathervane library - computes a yaw-rate setpoint that tries to rotate the nose of the vehicle into the relative wind.
-		e17f0802cce17d3e241d4c239c41a44e806ce9e8 tecs msg: changed flight_path_angle to height rate as clearly we are looking at height rates
-		5500dfc55035cd3992c8693c3b3814e9c571b599 px4iofirmware: moved the simple register updates down to the fall-through block, moved the sbus rate update up so it doesn't get called on each of the other updates which would set the wrong value
-		2302c6400458c0de22b1029e457fb5d90d64e010 listener: add optional rate and cleanup existing arguments
-		8b1381ead9803f8fdcbae6fc2f79087a0cbbef3b update ecl l1 and usage for new roll angle setpoint slew rate limit (#10005)
-		4a8a3a4079cc3e032219947ca32cff5dfd6be21c l1 controller: simpler way of doing slew rate limiting
-		fe4e6779f3b248af9c992f6a514022efb0bfe25e l1 position control: added roll angle setpoint slew rate limiting
-		72a213aff71af09b21db0b14295107a99843837d FlightTaskManualAltitude: valid altitude/climb-rate is required
-		5dd981a7be453ae6016d0371ba8a52fcb186f44f GPS driver: Initialize baud rate and improve output
-		9fa882119d8309b79a39f9d7114956188266e197 fw_pos_ctrl_l1 remove unnecessary orb rate limits
-		6579b7254a78618641acc296a7f9780374fc46de Change TECS max sink rate minimum value, because very fragile aircraft might not be able to sustain higher max sink rates
-		77d4554e6d38358d489cde76b725a41493001aea Modified comment about feed forward of yaw setpoint rate.
-		d177e96508d2572f6fa8eb7ff41852749c882548 EKF: Fix bug causing slow drift when high rate flow data is used
-		7f1686171b3a2dafa7d88a0ec864b5755913ea3b sensors : add parameter for maximum flow rate
-		533f42adb8bc3f40d6751f2c916cf64c6b6248c9 crazyflie: add probe() to vl53lxx driver and set imu sampling rate to 200 Hz for this board
-		4098d50ff9e48935bcf38adcb5658e514acc4e15 pmw3901 driver: remove integrator and publish data at sampling rate (about 10ms)
-		e33da0a821b54be098eae0f794adde328060733f fw_att_control set default yaw rate max and update parameter descriptions
-		868bc010878adaf5a124fc0c9d6cef4045fa06ac EKF: Relax minimum required range finder measurement rate
-		2a5c7efd8df5a93234d738ffb410dbbd9558b2f6 Mavlink: Use filtered update rate for HIGH_LATENCY2 stream instead of main loop delay
-		e01763a7c7d0b47c11f7b9124efdf15c1456bbc9 Set the HIGH_LATENCY2 stream to a constant rate
-		00f6ef1d2f35043d84ba3d070efe7b463c0a4821 Style fix and iridium signal check rate fix
-		ab8527cc8faf125e1e6878ae915be4cc8eb8373c FlightTaskManualStabilized: limit manual yaw rate in flighttask
-		64b97cb18e0dd420eaca0a6a9b6f52657696f33f fw_att_control: in acro use thrust from rate setpoint topic
-		74730273c17ad84a56459b6e11d0795e5a268dde fw_att_control move angular rate limits to body angular rates (#9023)
-		041886a28957c17505b19367eb8703444123a4c3 attitude_fw: move angular rate limits to body angular rates (#404)
-		f346b00ee0b975fcea9d1d826f523192f498c0e8 mc_att_control rate controller: use a butterworth lowpass filter on the D-term
-		83133b1bcae2eae59383dad7d1b6070657e9d279 This commit fixes the way baud rate is generated from the program argument in the FTPS client and agent.
-		f866698fb26defbe0262106f2a7260f89b7276f0 ekf2: Update parameter description for max optical flow rate
-		d53c5319791945130f8cfedee9337f29853c5445 mpu9250 wrapper: set autopublish rate
-		2bea09a997d953c7ee61ae39dd8363c4bca0d992 rate controller status include rates
-		98441ac1004c937eb9c065f710b004ba9e8378e5 Log rate controller integrators (FW + MC)
-		5a189f3c4a8b2f599c10d9277f5d11e77c01b367 vmount mavlink input: rate-limit vehicle_command topic
-		48edaa7ef63c360d3d94f7e655756f9da999ade2 vmount: remove output rate-limiting
-		dac2a93ea2edfb4998121b9610f27523794e265a logger: add sensor_combined at full rate to high rate profile
-		b21af471ac9b1505871e76ece6368e17351ce892 QuadChute monitor tecs height rate (#8395)
-		be6079bc52fac0b3423094f7f377325662f55201 logger: add high rate & debug profiles
-		e58766c3942ae773d1d2f6d78855eae43be30fd0 MC pos controller: log exceptions but rate-limit them
-		7a3a9a75d50d11f527cddc69a4fe160810d1ce78 Add command line options to PX4Flow app for I2C address and sampling rate
-		560e9e88dc0977bbecd53386fa5572347d5fd43e Apply slew rate to reverse thrust
-		73d23742ea5c297f262c0e03caec61ee482977b1 vmount: rate-limit the update of the outputs
-		c1f5feac831776b5721c0f400782faf7b784c848 MAVLink: Queue transponder reports and send them at full data rate
-		3c42c8f7fab5c9d7fbeaec52071f8130da081f90 mpu9520:Use maximum clock rate
-		c84611f0f5a76f459f46999a93a1c405e35c8b3e MAVLink: Fix rate handling for camera trigger messages
-		a89980f440a16352adf0b0d90f005b401e8112b0 MavlinkParametersManager: update sending rate
-		0a1fbef8c8980856967ac42a065df3e40abcf966 pwm:ensure that a rate of 0 will invoke the ioctl
-		ade6336fd0ee86a0357bc10057266245ffe575b1 ist8310: lower sample rate
-		a5cdff06d5630a769e9f6b1306ca16fc10f0857c param: implement rate-limited autosave
-		d21c44704d691bb47efe38b752f34941f3cd3001 Propgate any errors in setting the rate up.
-		2d5588ae02560aae029844410212aab38785d671 simplify oneshot mode selection; use zero PWM rate as indicator
-		f7e4d8453db823a69f81e75e518042dd3b4012ff Logger: Drop position_setpoint_triplet to 5 Hz since its not required at such a high rate in analysis
-		4811ab6b137784a84c67c64bffa4917a7b7f0702 logger: reduce rate of some topics
-		b2d47adf56cc2157659945afd241aeffdec320b3 jmavsim_run.sh: add -r option to set the update rate
-		3e88b2f2b102b9ae22539422e03396e8ab112b04 Rate-limit navigator update rate
-		f300877db40bc0ee2848ed203a6e505f2c58ebee yaw controller: computed desired yaw rate based on coordinated turn constraint
-		aaa24b0cc877e60bdb421574f9357f664dc786b7 Reduce attitude rate but add Quaternion
-		9e80a6c9d68661df1246daefcef44e895161cef3 sensors: rc filter no unstable cutoff, better initialisation, reset filter on change, constrain output Filter gets unstable if cutoff is above sample rate/2. Filter initial frequencies do not matter a lot because they get replaced by parameters anyways. Filter delay values get reset to 0 when the filter is reconfigured otherwise there can be some weird spikes in the output. Filter output gets constrained to the range again because of possible overshoot.
-		d991285406fad2d4b39ecdbd2337b0fb773ed16a sensors: rc filter: added sample rate of 33.3Hz and lowpass cutoff 5Hz hardcoded for testing
-		967197adeea1a9f051c06a851ed64130a079cbb9 update sitl_gazebo to used flow with limited ouput rate
-		64449883928182ca5abb516b91cf9818bd74bb18 MAVLink app: Send messages on average at a more correct rate and send on first call
-		42101671f4a7509c238ed584ea22d1ad8004def1 Drop rate gains for H480
-		10c6ae77aeeffd5f1ef45e96c86d8ed6dc9f1e4a Attitude fw yaw: Initialize yaw rate properly
-		8e8336a83f3ceda0e27c3980c2ec2a0f112a7f7b gps drivers submodule: updated after removing unnecessary baud rate
-		0acdf32ed571fd5c4dbfb09dfae8ba7941620a4c gps driver: removed unnecessary baud rate
-		bf9a1c5a1881f3992269f8e9b271736b68445d0c Removing alternative io timer rate for CF2
-		318c970477394d61445276b818a3867cf72e4cc6 mavlink ulog streaming: add rate limiting
-		71e87cf2876553b769aea9779389f3a2e45a7e21 Set maximum publishing rate to match MPU6000
-		fde165b4f1679a6f65fffdf7f55028f99fb4edff Fix 2000dps gyro rate setbits
-		cf8f48486898835dcbb55dcbe8c54a4427349022 mixer class: updated comments on slew rate limit method
-		c2a511d81d2356191ee812e8b4d192d397a3295c multirotor mixer slew rate limiting: naming and fixes
-		8b889caa3323b1b4809f1bce052bbfe9e7ce5d1f slew rate limiting: implemented for fmu
-		2607769470450074cddd73c8c516874c20bfe1df slew rate limiting: moved logic to multirotor mixer
-		66ddea01d144aff29a6f815c9cedeb29947b7289 implemented slew-rate
-		cf5338df02c52af1bbdf4f4fae9b3326f0ee6d45 accelsim: lower publisher rate to 250Hz
-		e42ff72d6a2a24c3fde35a7096d02fbe4a47f948 Standard VTOL configs: Limit yaw rate
-		3b58caa32a15f371dff1c11b2a0dc10b332ea75a Updated motor RAMP timing to match slew rate limiter
-		d5c96ec66ac7f27d446496cb3b3b1781fa189218 LPE rate and stddev changes for mocap/vision. (#5467)
-		3163cf90c9916855e56a64a1692694443f85f2b9 FW: simplified flap/flaperon logic and always move them at the same rate (don't jump)
-		a1b710025b9c686b4ce4ccb6e96889239fe8f122 Improve new logger update rate (#5073)
-		71d150f6ec0789d36d4f7af85a2e44c225846d51 MAVLink app: Fix rate handling
-		5de19500c2e0cb0acb20ab36ce26372862f10de9 TAP-v1 set Console Baud Rate to 57600
-		c4e77cf41113ae775b87078104b239d88bd28603 logger: fix '-r 0' parameter: should be unlimited rate instead of 1Hz
-		998579befc22d15c22c9c5b78ff612dd4de06f56 mc pos control: zero yaw setpoint move rate in attitude setpoint topic
-		2f113a4ce3138d3ec9b595636aa0656b47a31ebf MAVLink: Allow data rate updates
-		3ef6ee056f5fbae679417897e9da3d32c17a48b7 Sync rate control gains
-		afa3429bdbcf09c4104461bc789fc4a851d6e453 210qc: Fix sample rate
-		aa355d86d08a2198273f09ef21aff442ef68aa9c 200qx: Fix sample rate
-		2c6a8c0ce619a7ba57fb55a474e7f6ac35b682ef MS5611: Drop readout rate to 25 Hz to alleviate self-heating.
-		f1b7e7714e39626d2ddc1aed5d25d925558ef71f EKF: Make average update rate of EKF closer to target
-		58a7db51c373416bab894e8f55582c616c4d41a0 gps: add RTCM message rate to the 'gps status' command
-		630146686ed73f64545f16ee48ed32ad8181df19 Comment out line which checks for attempt to set sampling rate beyond that supported by device.
-		fde635ef5ab2fbf45a576719406095481a3b5d43 px4iofirmware: fixed display of sbus rate in px4io status
-		c5f5b9f53c0c65cca0b0ca5c4069f7d0159b189f drv_pwm_output: added IOCTL for SBUS rate
-		30ce7fdd48fed3143a71a8294b44483f275493e0 px4io: display SBUS rate in px4io status
-		6290e621d4c60136cea16f902247095fbae60ea6 px4io: added control for setting SBUS rate
-		f19761d278bc725289615983564169f4801e74e1 px4iofirmware: support setting the SBUS output frame rate
-		58122ed33d0534626c13c063c2088317c0fc84d9 sbus: added support for changing SBUS output rate
-		7acd5fda22b05797d1d9f985b78807ea96c6f075 ekf2: send flow sensor yaw rate data
-		4bdfb8a10775ab2f8feeade1c622de259234052c Drop Wifi rate to 20K
-		13967975c1de26c37a9dbc4db388eb02edfe64ad Wifi link: Drop rate further to relieve pressure on ESP8266
-		d3f5cf5d936efce10907e858fe83de4fe3970fee MAVLink app via Wifi: Drop max data rate
-		eb41d25ff6972d1a443d9c63bc369313f2dac746 reduces update rate of progress display, stores message time (not TIME message) as floating point seconds, automatically extracts TIME message, updates usage samples accordingly
-		76a9ee261890416e8ad8ff2a60656ce527a1a491 MAVLink app: Limit to max updaate rate
-		ff338d8920a40ffd8aff111eb50951d124598379 set mavlink data rate for snapdragon
-		1b7115dec9d91d4b9868b640cb2fc389b3f23b5f increased airspeed fusion rate to 12.5Hz
-		122dd9c53125242c84d1946c15726df481b8f626 EKF: Add source file for optical flow LOS rate fusion
-		68e45057a05d24e87e3fcd7aea2b571be0a1434f sdlog: compute logging rate correctly
-		5aaf74bbe6a7eb841f7dded9da93df762fb92f04 MC pos control: Allow higher yaw rate by default
-		44e885f3c3d48c67379a7561ae5095d1e055a91d Att control: Allow higher yaw rate by default
-		c6a30d74c1a8750cc099fb4597bce428f8fec609 Bump VFR HUD  rate for OSD
-		1d0c968a888b7395a8dc67f2c59d56187d2bf4fe Widen rate gains
-		4123da4963904f6db8ce5132c346a5460a2c6a0f SF10a: Run driver at the default max rate
-		9eb46fa7a06126416fb3e0b05c414e078415116c Conversion rate comment added
-		bf03b8cb18ff6404911ea172e673428efac329b9 Yaw rate limit: use a lower limit for less twitching
-		e17f3441190bbd3b8437e000550feb13d6edc929 MAVLink: Enable 4 streams and fix OSD rate configuration
-		19b81b9ab26e4576450d6cb946ee06a127b2c6ce Commander: Rate-limit preflight check
-		a4018bcbc1d554a2f06a1a0bc2a9872e40bf3f11 Update to higher jMAVSim update rate
-		989b65912bcf7bde040d12aea6c7e1e0058f7f73 jMAVSim: Drop sim rate to 400 Hz
-		76c479170a3fdb61e21b302f20e0d3f2fa08e01e add transition back throttle value and angular rate
-		719881b4a473d8be66a00be17bfc740637891a08 EKF: Run vehicle status updates at full rate
-		17653113d53c7c70451daca4efa62ff102c6b39a FW att control: Run all topics at full rate
-		4b56587188d9b990809dd15f045e8103038adb17 Gyrosim: fix rate and device id, also output of info command
-		e41c3cf87676e64a1cadb42840998791a3bd1981 Missing Close es and poll rate reset
-		6200cf6d869d1eb452519834f24557cfa346f4b3 reduce gyro update rate to 400 Hz
-		8a6e9d17bad1348682c8e6f727c4261f4530df07 MAVLink: Do a better job at receive rate limiting
-		d4a19163bb49b20612643b4fd531cf10e0496892 Added switching from attitude control generated rate setpoints to manual rate setpoints when in rattitude mode
-		c4a82d78c880b9de3800b3c6983e827890f9ec8a Added commander support for rattitude mode.  Still need to incorporate attitude/rate switching in multicopter control
-		4d7cc41921101cf9ee91793cf12e21c3d94a7c19 EKF: Retain minimum Kalman update rate
-		5c52efece4b988ca8f13fc12c3975e32705f927a Sensors app: Rate limit new sensor discovery
-		d5e152f2cddaab6ace64f656baef7569c9b7c44d Attitude estimator Q: Add output filter for rate outputs to bring noise level into manageable range
-		dce31a76a82ceffd42c510b1ae2487ae80d05110 EKF: Set correct interval / update rate
-		4143c9402972c28aba55a3c0376fb8d4dabf0d45 sensors app: Re-introduce sensor rate limiting
-		bf9bbfa27fc5f2b5ea909600d7dc983998f2ec4d Handle turn pitch rate compensation in pitch rate controller instead of pitch controller.  Also set inverted flag to true if rolled more than 90 degrees
-		c826451ac187321368711106d20c98759ccaa973 MAVLink app: Do not rate-limit trigger messages
-		8b7f1cf560220f649001d2927e4831dd9504be31 MC multi attitude control: Limit yaw rate to avoid mixer saturation.
-		ebb061764a23d075dfd22a7d6fc3a8e03f048ae9 MC attitude control: Limit yaw rate further to avoid mixer saturation in the first place
-		e0870d09cd98a5329f45c279142e14abd20018e6 TBS disco config: Yaw rate looking good
-		fbc1b78b3819beeec9f5327ef40fc3de1d599808 Attitude control: Enforce rate limits by default to prevent jittery control outputs / steps
-		0d9d5d1fa5d443cb397a14751105213304b173ba TECS: Limit rate demands
-		482641e40313eb1a7e810021c72b0610d3b7882c MAVLink: Crank onboard attitude rate up to 250 Hz
-		fd63ba7b898b95469b62f6f3f42f12e042aae619 FW pos control: Widen acceptance range for yaw rate to re-engage heading hold
-		f0e9817f2b2cd2eef15af1c4b6c00cc94fd5d39e ROMFS: Adjust onboard data rate
-		5b354b96310fb5fed71bfa944db00052c3ad5bfa PWM driver: Fix _IOC to _PX4_IOC for getting servo rate
-		28d3729acd202d8bac131ac98e59534e8d08f25a Backport of Fixes mavlink_if0: invalid data rate '(null)' bug
-		dabcf63c506f5ead7978d49df039e4e193cc3a15 mavlink FTP: Drop rate to realistic value
-		542dc9f65d05291b8b9661374044f8c51a4dd209 added default rate I gain for multicopters. added default gains for FireFly6 in mc mode (from Simon Wilks)
-		0ebf626632675dc5d54d08164be04d37ec1d74d2 MAVLink app: Allow higher max data rate
-		77771b2bbf2ed784fee48d535bbac2e8ea717c49 fix comment on MC att controller rate limits
-		7f418445f2a2108b1026a31b3763da5e6d960fe1 add new parameters for roll and pitch angular rate limits
-		93eff2bb956e920b99b2058550fdbc3f23ec6155 px4io firmware: Allow actuator update rates down to 25Hz. This allows to set the same update rate on PX4IO as on many commercial RC systems (e.g. Spektrum, which works at 45Hz servo update rate).
-		6ccfc222d38ef0f409e7d9d237aeb4c6e80bfeb3 fix comment on MC att controller rate limits
-		b356508f6b05504af745dd1ee2ba2ab00816057d add new parameters for roll and pitch angular rate limits
-		a184aebf0f27a77d528921d66965ab1304c4fca0 mavlink: Crank up param transmission rate
-		e191958ce656dbc31bc0029b9d0e1ed2fd4db72c Made aux output pwm rate, min, max, disarmed and failsafe values configurable the same way as for the main outputs
-		7bf6c3bae867e3ed350043a89e7e1ad4b87b9236 Increased update rate to get rid of glitches in servo movements
-		a77420ede84b293e41855ddc7b23b647cc64da96 corrected rate offset calculation such that units match
-		3a2256dfe72b519fb0ee5225fa179d4a46a3cb76 Set up ACTUATOR_CONTROL_TARGET message and stream rate correctly
-		004118f929a03e0d42e363dd2b74330ccf6b82fe LandDetector: Change rotation rate in rads/s to deg/s (more similar to mpc params)
-		a4961092af2d0e09a3dbe04e8c2f0a362476d21d mpu6000: check for default sample rate
-		dedba4307de2b99ee3a9fd2d6c31c031bd4524ed lsm303d: check for default sample rate
-		90b29efebf846da195af53492ee2ee0c50b6d7fa l3gd20: check for default sample rate
-		b795705640c6a14ba359e381c935351f9377aea9 improve efficiency of non-uniform rate LPFs
-		ea57dec24b14d94ec82f04b67bc31775b1f4a9cf revert to original ms5611 temperature sample rate
-		fa8ca2fc107ccd0a8e74dc3798bc27f8422f0a56 set correct number of PWM outputs and PWM Rate for caipirinha VTOL
-		c7f7de352d7e0f2921526e33077c6da6a46b404a revert some of the OBC rate changes
-		964fddb387b8e635d2cd13fb2248643791304489 make geofence update rate independent from positon update rate
-		21009e89a4c748d8a61174058bb378c1d6306b8d flight termination mavlink outtput: limit rate
-		e3cac1999a0b4398e669f90cd28279ec2a0784a7 navigator: geofence with global pos: reduce update rate
-		808cc60cdad5c085d74e583d967cd86126ba1fca navigator: geofence with global pos: reduce update rate
-		9608e7adeb069878d5cedd3ece9edc7f4ac40ce4 flight termination mavlink outtput: limit rate
-		32e32d92bdad3eb4e92e9e53c112fcdcf848c7e6 Add throttle slew rate param
-		e3bc5571556d043ad5c8c4fcabd1f9b371599397 rc.usb: set RC_CHANNELS_RAW rate to 5Hz
-		2cf688312a83d3c8ad5b813de0643901891886c0 mavlink: show 'rate mult' in 'mavlink status' output
-		ef363edfcd810e3b153609f0a723f53db0cd3885 mavlink: TX/RX rate counters added
-		41003a243793e465a71e9b142e7c9aac132d3923 mavlink: TX/RX rate counters added
-		28a31708f98eefa4ceb04617f2da3dd7892c99fa Merged estimator fixes and mavlink rate config bits
-		194aa491107ca10a65065edef3977c20c02a507c Merged rate config changes
-		44481e3773b7a576b31727c64931216112d953e0 mavlink: sign of climb rate fixed in VFR_HUD message
-		3538773b99d4231bf8a64e9c257cfe0299a93021 Initialize rate values
-		ef6af184aa7858a9124de13c958f02b140b0f712 sdlog2: Logging wind estimate at low rate
-		ffe095646c5984236731c88fabfe2b2b0cedf983 sdlog2: Set logging rate and extended logging based on parameters (overwrites commandline if non-standard)
-		e72a7a7dd78cde4a93d42a53328553e71560fc27 fw att: robustify main loop against non finite numbers and limit error output rate
-		ab5e76e3d9da5a76d6520e166d5370c6bdfc4a53 Fixed printing of bit rate
-		b96669a5314198b88e406fc02940ed2ced291f2b Logging changes, baud rate changes.
-		a66dcbf7e92a1028765f6c5c9a545945ce1a5dc3 mavlink: publish SYS_STATUS at constant rate, don't look at update() result
-		b1e4b34a56bfaaa98adb253195d9751f960d5a94 Logging changes, baud rate changes.
-		de3efc0975f1b84cf556bae11bbebe95609dbcdc mavlink: publish SYS_STATUS at constant rate, don't look at update() result
-		69bc0c8e3998f87358bbf8a5f97f5c31dca43f76 Reduced param rate - as long as we do not have proper QoS (= reducing all rates at once if link becomes lossy) we need to open-loop match the link
-		bf69a7b6473adde22b3220b6e72c0d065c897bc5 mavlink: camera mode rate is now correct
-		952fd1ec6cbc615d6bd9213061dcce0f9cf8c5f0 mavlink: camera mode with rate multiplier
-		76af0970f5220d3a842c4daa353a45ef51df1082 Increased param rate, fixed wrong usage of MAVLink chan.
-		290b07920c94df09415ccc1c44850c57d0750fc3 Fixed missing reset of poll rate after test exit in ultrasound driver
-		2ee8214244efbe09981e71ea194573daa1c2f5bc sdlog2: move some global variables to local scope, set default log rate to 50 Hz
-		141982a3ac21e7a0437f1d7692e4024daf873c21 mavlink: minor refactoring and cleanup, rate limiter class implemented, new messages added
-		18f72f8dd7a3bd4a9af00fe28afd29e0cc65e2e9 mavlink: GPS_GLOBAL_ORIGIN message added, set message rate depending on baudrate
-		55f5f1815f6a8f2efb969cea2eb061bdc2d9b92a mc_att_control: remove rate limiting to run at 250Hz
-		d933d523eb74ee2290c56afcd11fe8e85c6e702b mc_att_control: att rate integral fix
-		dae5c838422a6250e1a7e4920d59cb8976a16a8c mc_att_control_vector: support for disabled rate controller flag to handle AUTO_READY mode
-		8c518aa23710ba0b9ad0c7ad2c03428ce8ddb290 Useful bits for high-rate logging
-		72aa171ef982deef1519cc21129024a96d9633db mc_att_control_vector: attitude rate D component implemented
-		193692cc0df0c3a4b9905fc18cb04321095b6984 Hex Startup: Set rate of all 8 PWM outputs (6 are not possible because rate can only be changed for channel groups
-		3c6f01bea8a65e2c347d1b893b3fe0d152bff69c tecs: speedrate: use p loop instead of pre calculated speed rate for now
-		ad133f601bd89156c9cef661cddf684c99ca76cd multirotor_att_control: use PID lib for yaw rate control
-		b21b9078e2d719bfd7af9580ac3b9b5957ef1d57 wip, fw attitude ctrl: split into attitude and rate, compiles, untested
-		cb5e5e914351754356c85e61f2394d1cf91db71f fw att control: also transform rate estimate
-		ea0aa49b546476ef9ca9904b32dc507d66f0ab44 pwm info provides more information, some fixes for setting rate/min/max/disarmed
-		378041ad31794109b2673adab8102faf6806bd96 px4io: make "too high rate" warning consistent with real behavor
-		8083efb60c97ffce5be8dcbf3956ab67cc17d729 Use gyro at correct rate
-		3875df2fe07d33d00331efd02394201d684655c7 Workaround to get the HMC5883 default rate right
-		e5f1a7c2c3a67648829ec0dff5bf290dddc25847 Better transparency in IO mode display, fixes to commander arming, minimum publishing rate for arming
-		63af0a80ee19a73a94a3b46bbddffe1b80610a3c multirotor_att_control: run rate controller only if vehicle_control_mode flag set, codestyle fixed
-		083cc60acb8b602864d0727e09218eeeca5eb980 Increased logging to 200 Hz in F330 startup for v2, allowed to set up to 333 Hz update rate in IO driver for v2 link
-		a2f923b9a3bf403e3a9fcee39d87c7aecc28559d Increased MPU6K poll and sampling rate to 1 KHz
-		c2ee4437e0fd362ed8d73203394d34802e9eb48d Rate limit sensors, as the in-sensor lowpass allows us to operate at 200-250 Hz
-		36cca7a31b428408eb686df592f092ba5fc24006 Added rate limit in sensors app. Just pending accel filters now
-		0ccf50bca367d39f75a7a4f76f98dec7352ef3d5 ubx: SVINFO parsing optimized and message rate increased, CPU consumption reduced in 6 times, ~0.3% now.
-		dec1fdbde0c7bb6f3eacae97ab9656f77294cbfc Cleanup: remove useless angular rates from attitude rate controller
-		3bfc4ed5174c60de7eb98efbbf3c7729fcaa231e Att rate PID fix
-		ece93ab62834be7f46501b1d31733cf58b5b1188 Added integral reset for rate controller
-		c1049483a82857bebb012607578add9492446321 Added integral reset for rate controller
-		6f108e18d21b61ea6a3bf137f01023c594085494 Just include the rate controls for now
-		2b9fa731efd08a01effd87a636ae8e53994944f7 Use the pid library in the rate controller and change de implementation of the D part
-		496127ca459c603e5de3f8bc83c6113bcf9cbead mpu6000 driver support for setting rate
-		b614d2f1eb3b3ddd26fa22a1a0761a5aef52c1a8 adlog2: added options cleanup, updates rate limit added
-		3ec536a876a66f4e56549957e81ed4547c92a0c3 Improved GPS update rate calculation
-		27a25b5e172c972e4f9f31c2a30114498346bb08 Improved update rate for velocity estimate, not yet where we want it to be
-		3466006735123bfd27c94538d98af5b79f47d5a0 GPS velocity update rate validation for u-blox, WIP
-		1d327c42a6f34f8545940cd8630586726e4d3ae6 Mag sample rate was not actually changed by an ioctl
-		60eca61e41bbae8fdcb6f92ecdc130a49e49fd29 HOTFIX: Adjust the FMU update rate adaption logic to avoid constant debug message spew when not in a PWM mode.
-		26d45d5e3484ec616238b34be3fa9739d8e30efb Silence MS5611 driver, the perf command still captures the error count / rate. Unfortunately this is necessary as general users are concerned about something that is (at a reasonable rate) not actual safety critical.
-		7e4d6133aed20d2724917dc570e4926b18df2b84 Make communication rate between IO and FMU configurable
-		7011fe563b583d7940247a7a01265b7f8675fee8 Move PWM rate configuration, etc. into a separate utility and out of the individual drivers.
-		6cf0758b24de1e0e28e1bb65fa33a0b49b1601b9 Changes for multi-rate PWM output; default and alternate rates. ioctl protocol, PX4IO support.
-		cb0fd834ae15c45cf6993f8c9eea9c99b2b153dd Minor polishing, fixed rate and last measurement indication
-		5fe376c7b9bed861768680089bff3c62a030e2b6 Correctness fixes from Tridge.; increased the minimum poll rate to 50Hz, don't set the input RC timestamp unless we get data.
-		28ef7aa1bea97593637537c832b07459a2520b86 Refactored RPos. Increased global pos output rate for debugging.
-		3bb145f584298de3ac636be38be25d4b1235a8be Enabled and tested ring buffer, logging at full 250 Hz sensor rate
-		0134186420273170c14b80b8114ccd2474da1792 fixup rate
-		61d7e1d28552ddd7652b1d1b888c51a2eae78967 Reverted changes to multirotor rate controller, changing to a discrete derivative does not help
-		f81d00594c156c51ab976d3b6d101915377d7afa Made PX4IO FMU timeout based on IOs HRT, updating mixers now on every FMU update and not at fixed rate, this is WIP and currently does not support mixing with RC-only
-		03076a72ca75917cf62d7889c6c6d0de36866b04 Added required additional fields: If system is ok to launch (required for LED indicator), if system is ok to override fully by RC (required for multirotors which should not support this), desired PWM output rate in Hz (again required for some multirotors).
-		13000a71212076a515043fb7ca89ce77cf6c36b4 Yaw rate sanity checking for controller
-		f0e39397fe5d9b301ad887ad430736397f6403fd fw control: work in progress, heading rate control loop
-		3f240a70baac2435cbd543e305ea0c57cb65e7a4 mavlink cleanup, drop rate estimation is finally correct
-		ab447ac713b010c090d6e2de85fa5d0d0af5cbbe [work in progess]roll attitude and roll rate loop works
-		42c61271ea73be29a21110980764d1a68f8ee530 remove bogus dt from att rate
-		b50bc7798ac463de3e0c3147df46a3f7227df8c3 Wip on inner rate loop
-		4dbf7befe369ba00a73945a0193f0a061c271dc3 Disable rate control, disable offset estimation
-		bd3f3b10317f58d20f635f4a3e6aee8fca8d9d2b Sensor rate and throttle inversion fixes
-		dd50c88f073926a550f0f1f5b08f931116dd4f8f Fixed GPS lost issue, fixed accel scale initialization, fixed code style in rate controller
-		4fea0a3fc15346efc366aadf1d80697664b6f3f0 This commit changes the inner loop control structures for fixed wing attitude control.  Nested rate and angle loops are used with limits on both the rate setpoint
-		2a06b66845542b05e3cad3d21099e33adc213227 Fixed inner yaw rate loop
-		733975ed2d7b5906e35dbdebad52ee8fa9d92fd6 fixed Rate controller
-		f3cb2cf8a3b3e002e665c82588e98e502ec3e285 rate controller update
-		beca2b072e45fc91ba6c315919abd26ee6814863 Moved from raw gyro to estimated angular rate from EKF for rate control
-		4933d1dbbd8146ec548168fb9b855009107078ca Only provide update rate mod support to modes supporting 4 PWM channels
-		ec3949bf82dbaa50ea866b65cd0fc4630af18001 Fix a bug where the rate controller is always active
-		abbe998506e4ba49bbf6a9a9ae731b1eec521db6 ardrone in the air again (workaround: rate controller disabled)
-		37163011fc752e40ee712d4c945c8393538f2708 Use the update rate parameter provided and not the default.
-		705172d302b99df7ec3c4172c247c6136adbec88 Untested, but fully implemented attitude and/or inner rate control
-		b0b72b11eb6c112d3fb58385f5681af55dd5605a Reworking control infrastructure for inner rate loop, preparing offboard interface
-		3a18a79bd5661307eb4c32834e2daf84ccf02a07 Better log rate balancing
-		5dd6cbcb13f4fa3b3490ac8bccb7d1c5cbbc625c Logging rate changes,
-		1538247a72f37a2f969aa5c41f7a07da4ae31d35 Sensor sending rate fixes
-		eb8e3a2942abbed63bcb3c6336f20bb247f0c6e6 Reduce slightly the rate at which we can be spammed with arming-state change messages.
-		767f253976746a5533dd1a258373368539b4359e Fixed attitude rate limiting
-		dc484c1d21fcb7bc4f4be97853647321e8a147e1 State machine cleanup, introduced variable rates for MAVLink depending on the baud rate
-		7de5004f475fe6234e7d4452bdd95d5f527fea8d Add logic to control CAN bit rate via the .config file
+					9a3fa6199bf079cc105bc93f3a0590fc0dafb1c2 uorb top report total publication rate
+rcy	hcf, mwn, fcr	810dbbd25b5a1e3a27918d1cd51f3c1059335cc4 AFBR mode switching, rate switching, and test
+rcy	hcf				1e2877cedf561dc229485dfe318e82360310ba73 Tune down solo roll rate controller
+rcy	mwn				6d5f12d2a2ab97f17070179cf3ccc94c3cbb4845 microRTPS: client: add TX rate limiter
+rc					ad9288536b39183c6ec69e05c70b69de58073acf TECS: enable direct height-rate control
+					f6de99d42ee631bb67c1fac6233a7dae19e2d232 FixedWingPositionControl: control only height rate when using pitch stick in manual altitude controlled modes
+					19449a4e75a045f5601748d46f60a863bbdbf30f FixedWingPositionControl: use target climb/sink rate parameters as maximum rates in manual altitude controlled modes
+					a5cc449e69b8e0cade8471f6b33b386c71b11bba tecs: propagate altitude setpoint based on target climb/sink rate
+					4b7416c05bb10155c308922d33d96daad73b7d10 FixedWingPosControlL1: added target climb and sink rate parameters
+rc	?				d430e13401040464885795a9a986c1369c1d0eca sensors: wait for real sample rate to initialize LowPassFilter2p
+					b264577daaed7c28efc16475568378aef43114c0 sensors/vehicle_acceleration: require valid sample rate before running
+					b898aabfed4926b75786b951215c5bd10768a9a9 Fix the repeated configuration of PWM rate after initialization
+					3664d9e4ceb787e9915a748875488fb865f05827 rover: publish actuator controls with rate of gyro
+					76e15b4a2150ca00a9d126a4cefc24344d9fdfac RTPS client get baudrate parameter if requested, and mark the device baud rate parameter as used so it shows up in QGC
+rc	?				bf09089a26b9b7672efc12a467fe6795cb81d471 PWM out: Collect settings for all outputs There are settings that have to be the same for a split output across multiple instances, like for example the PWM mask and rate configurations. This change collects them for all outputs of the same underlying driver structure and applies the complete set.
+rc	hcf				6bc11596fe72771210ff5a6aa205c3a8004a19ab VTOL mixer: Correct alt rate channels The baby shark config did mark main rate outputs (50 Hz) as alt rate, resulting in the alt rate being set to 50 Hz.
+					82a2126f97b9c769d8e8bb2c7f8f89cbba4c7a28 TECS: add feedforward gain for total energy balance rate
+rc	hcf				893eee4cb8a55dee2e971ffca3b1857c3bf34fee logger: double sensor_gyro_fft logging rate
+					6b4ccaa53e4e1c7ff45fe057bc2d1745dc7597f7 Handle invalid yaw rate setpoints
+					06e3d38bbdb889a196ecfe9138a8c5ab4dc623ce Fix yaw rate ignore flag for attitude setpoints
+rc	?				a1be55997874fc6a7ae059239a81d838251c9a0c canbootloader:Remove Rate limiting on FW update
+					5f3e883f2c1bb59fe5bc9c89d5662f38a1c87495 sensors/vehicle_imu: vehicle_imu_status include accel/gyro full raw FIFO sample rate
+					cc11fb281854a1f9154cac9d8258262e60898c99 Multicopter rate controller: Protect for full throttle scaling PX4 supports -1 to 1 as input and this module was not protected against the input range.
+					d1a3590aacfa9f706aca091d0727aa31ce16a94c PWM: transition PWM_{MIN,MAX,DISARMED,RATE} -> PWM_MAIN
+rc					ce76c84ce2b9ea5fcc21b9177324cf73de57eb24 sensors: vehicle_magnetometer respect publication rate limit SENS_MAG_RATE
+					d0e8b882a23a009fc1fefd2f579376f6a0fff495 TECS: added alpha filter classes to energy rate and tas derivative
+					7c727edc3fc9ecdf4b51b4219ef44335ff5afba5 Simple mixer: add output slew rate
+					bf5ee99952c72d3f18b368ec78e40af10cd2f167 sensors: acceleration always get accel rate from vehicle_imu_status
+					7038cb8518ea12844c4f9d49d5236493abc8ebfe sensors: angular_velocity always get gyro rate from vehicle_imu_status
+					ab43a942249091eb325a968610d162fd2294173a gps: keep track of RX data rate
+rcy	hcf				8435742dd51e13f2a2bef1ec7c54ff24a27f5df6 logger: double actuator_controls_0 and vehicle_attitude_setpoint default log rate
+rcy	hcf				4ed3ecea415dfad230fbc42a6ed84561c985598e lis2mdl: reduce update rate from 50Hz to 20Hz to reduce spikes
+					98c8cbb27fca8a2e3876e1eee7defd68df136721 ekf2: fix odom body rate sign bug
+					5e739f66d69372eec94050b39194f8792f858555 mc_att_control: inline control attitude call and rate publication
+					c01bcd41f793f39eab10dbed8667d3956f6cb38e microRTPS: minor adjustements so to improve the readings; add more baud rate options
+					8020d6407f1045f6f40c3142c80056ed6a2cd450 load_mon: remove obsolete rate comment in description
+					ff4be5d81582e5f4bb5dda616f44fa1fa1c1b0ca Set rate when subscribing to velocity, specify units
+					6c78c62d9d3a016634a6f32d5190c2a679272adf BMI088: accel get max rate from PX4Accelerometer
+rc	?				ab060cdab076fb6934a86a75349cd9330c873432 bmi088 accel: use IMU_GYRO_RATEMAX to configure sampling rate (with 800 max)
+					0fcb873636ec2b8c7abcb9587f582d3f79db86a5 logger: add raw FIFO high-rate IMU logging profiles
+					39a33a35ae0f02a58b45e33de5cc8cb844b52755 sensors/vehicle_imu: pause computing publication update rate
+					5d6a72e383f36557a3381ec31b952ccc0ab2eae3 sensor_simulator: add possibility to set GPS position rate
+					61a2dd8ec65aaaec3a09462fab5c1cae96580b60 Hex CubeOrange: limit slew rate so IMU works with DMA
+rc					acdc15e2cdfc9fc25bddefe0a4b5a0d0323e873c mavlink: create stream even if rate is 0
+rcy	hcf				62e15cbacf865e7ea32623fa6dda87185b4f3a5e sensor_simulator: set IMU rate to 200Hz as this is the new value used in the Firmware
+					6126c190b221fd6890bb9ea3214b63a83f2d23f4 sensor_simulator: update EKF at IMU rate
+					73bb18a05355d3789d34f37dc609927c6af4ae4e px4_fmu-v6x: Limit Slew rate So IMU works with DMA
+					e577c3b610894df3763b282a42aa3d354bee3a35 fxos8701cq: sample at nyquist rate, drop duplicates, throttle temperature updates
+					e73380f726510585638e4e3ea487b9e8bfcbdc2b fxas21002c: sample at nyquist rate, drop duplicates, throttle temperature updates
+					b5e23f544e7ec59ec431b4ab684736ad898e28ea Tune down solo attitude rate controller
+					b461066ac529dc45c0462685a42b6ac68c3398f7 bmi055/bmi088: remove TIMER_REDUCTION, sample at Nyquist rate
+rcy	hcf				3d44077f2cd54f506ff152bbdeadbc28fc7c6135 camera_trigger: lower the polling rate from 200Hz to 20Hz to reduce the CPU load
+rcy	hcf				336745f9f7d617a9bc88ffe29674386d0d308930 tfmini: reduce sampling rate from 10kHz to 143Hz
+					b4ecfb77237669942686afa6edbb5a9234b99d75 EKF: Fix sign error in earth rotation rate correction (#763)
+					bcb6056a12ae88c2bc04425e3fae8992997b5cab simulator: make sensor update rate dependent of the HIL_SENSOR bitmask
+rc	?				d386591d0cf5d86108f55e20d55fc60036d577b9 logger: reduce rate_ctrl_status rate to 50 Hz for high-rate logging
+					6c8f39c5d8b28be77cd5f4b59064fb9bfa274f78 MC rate controller: limit K and P values of PID controller to in pitch and roll (#14210)
+					8df22541ef4b4e334a14ad900e1d70601620c0e1 sensors: filter sample rate calculate with simple interval average instead of perf count
+					b2f4dae2c41a2900b45d0f8e2136ac4cea92bcbe boards: fmu-v2/v3 limit rate loop by default
+					d1260aa28c1f5815739cc5cfe8f8c8ebc070e022 logger: add safety (switch) at minimal rate
+					66300876542dcc74fa268ff9c3611b3efef844ee TECS: remove height rate complementary filter
+					250d5b8acc4de26269f9805794bb36e6d5b6bee9 TECS: remove height rate complementary filter
+					156cf16265606b2f7fe75c0e4e0f6c3e4a42b052 logger: log all raw sensor data at a minimal rate
+					84fe64b1c20a4ae8067f04b1e21a961263bac4db create new multicopter rate controller module (mc_rate_control) split out of mc_att_control
+					fc59414a2547963224e8dd5393e843dd58929c0d set_attitude_target: set rate thrust according to VTOL mode
+					1a4ab069c9f3bb595fad80de8a2c0a40b48a26e3 rate controller: add override specifiers whenever needed
+					bde36f0f4a27b7cbfa9916175a27d84205a3328b ROMFS: rc.vtol_defaults limit inner loop rate (#13196)
+					9f639d1f3be72b2e265e6376c33100bfdbee80e9 mc_att_control: move rate control to RateControl class
+					bfbc9dda91ae94d5a7815148af23109c0bb5cbe6 VTOL: fix front transition rate publication (enable FW attitude controller to run instantly when transition is started). For that the vehicle_status_poll is moved before vehicle_control_module_poll in FW att C
+					e9ab6a75bada21ff907ce7b76c9fe42a59b87585 MC rate control - Scale the integrator with K during the integration part to avoid having to scale its saturation separately. This is required to avoid premature saturation of the integrator when using the K term. Also remove double saturation of the integrator
+					4d9f2bf7764dde0545044b977b971d49b498e2bf add IMU_GYRO_RATEMAX to optionally limit gyro control publication rate
+rcy	hcf				a5d3e10c67240df50403f01cf21a099499c28e94 MPC_MAN_Y_MAX: changed default from 200 to 150 deg/s - we have set the maximum yaw-rate MC_YAWRATE_MAX to 200 degrees and it makes senses to leave a bit of margin between what the user can demand and what the limits of the vehicle are
+					d24c415fd7a8f63351c903bada8e9ad9f372799a PID rate controller - Add controller gain to support Ideal PID form (ISA standard)
+					423219c60ed2a9e4f97484634e2e4f4adc218d5b pga460: Change variable initialization to uniform initialization style, format whitespace, and change baud rate unsigned to speed_t type. (#11861)
+rcy	hcf				6d8d8e3c88089f16cd59c4c70d35a06785a5dbfb MC gyro cutoffs - Reduce IMU_GYRO_CUTOFF to 30Hz and disable MC_DTERM_CUTOFF. A low gyro cutoff is needed for most medium/large size drones as the structural natural and blade-pass frequencies are low. A higher value is still desirable for small platforms surch as racers or well isolated autopilots and should be tuned by the user. Specific values for config files are untouched. The cutoff filter for the D term is disabled here as the required cutoff frequency for the default D term of the rate controller is higher than the gyro cutoff. In that case, enabling the D term cutoff would just add some undesired phase lag to the derivative.
+					21194239c7f4fb460f3cb8a03a4ce5b3da08cc6a FlightTaskAuto: revisit yaw rate limit
+					581d25f77f005f7250e4c4819550b2fb82f5c70e Auto mode traj - limit yaw setpoint rate of change when generated in the flight task instead of clamping the yaw rate in the controller
+					42d0522cddf191c66a14f7e9d7661f9c95a64be6 FixedWingAttitudeControl: removed check for negative airspeed and slew rate on airspeed scaling
+rcy	hcf				d9f8e37288d8e34baac79b32d71862045946534b omnibus: use default clock rate of 20 MHz for SD card (CONFIG_MMCSD_SPICLOCK)
+					463d5512d92cf30b2bad05c5576a0c7c1fb2aff2 mc_att_control: only adapt yaw rate limit on control mode change
+					32ca6f7030a60f8144aab07afe99928947f455e2 ekf: scale wind process noise with low pass filtered height rate
+					53a127beb922325a5e39d37c3fba006ac7b40e86 Oversampling rate for MPL3115A2 pressure sensor (#11332)
+rcy	hcf				dd300dca0adbdbe01f6d5aadd099fc4f3ebfef20 Solved frequency rate issue. Now driver publish at ~10Hz.
+rcy	hcf				d295320e8285b659799d2122ffd8363faf1bad07 sitl_run.sh: lower rate for jMAVSim to 250 Hz
+					e485885344dfc59bcf81ffec0192ed81fc82ed84 platforms: remove unused Rate class
+rcy	hcf				33a9eb946a8a727c54aaace7c30d48bf011b690b Mavlink: Reduce rate of UTM_GLOBAL_POSITION stream
+					90bfdb6f0a2832268baa4d91f88a9e3130a335ff VTOL rate control architecture improvements (#10819)
+rcy	hcf				bba475aca19ecbcf83db1ea9c4fd3f5c919012c8 logger limit trajectory_setpoint rate
+					6038c22174cecf6b84af2bd03be5cf58f86eb7f6 added a weathervane library - computes a yaw-rate setpoint that tries to rotate the nose of the vehicle into the relative wind.
+					e17f0802cce17d3e241d4c239c41a44e806ce9e8 tecs msg: changed flight_path_angle to height rate as clearly we are looking at height rates
+					5500dfc55035cd3992c8693c3b3814e9c571b599 px4iofirmware: moved the simple register updates down to the fall-through block, moved the sbus rate update up so it doesn't get called on each of the other updates which would set the wrong value
+rc					2302c6400458c0de22b1029e457fb5d90d64e010 listener: add optional rate and cleanup existing arguments
+					8b1381ead9803f8fdcbae6fc2f79087a0cbbef3b update ecl l1 and usage for new roll angle setpoint slew rate limit (#10005)
+					4a8a3a4079cc3e032219947ca32cff5dfd6be21c l1 controller: simpler way of doing slew rate limiting
+					fe4e6779f3b248af9c992f6a514022efb0bfe25e l1 position control: added roll angle setpoint slew rate limiting
+					72a213aff71af09b21db0b14295107a99843837d FlightTaskManualAltitude: valid altitude/climb-rate is required
+					5dd981a7be453ae6016d0371ba8a52fcb186f44f GPS driver: Initialize baud rate and improve output
+					9fa882119d8309b79a39f9d7114956188266e197 fw_pos_ctrl_l1 remove unnecessary orb rate limits
+					6579b7254a78618641acc296a7f9780374fc46de Change TECS max sink rate minimum value, because very fragile aircraft might not be able to sustain higher max sink rates
+					77d4554e6d38358d489cde76b725a41493001aea Modified comment about feed forward of yaw setpoint rate.
+					d177e96508d2572f6fa8eb7ff41852749c882548 EKF: Fix bug causing slow drift when high rate flow data is used
+					7f1686171b3a2dafa7d88a0ec864b5755913ea3b sensors : add parameter for maximum flow rate
+rc	?				533f42adb8bc3f40d6751f2c916cf64c6b6248c9 crazyflie: add probe() to vl53lxx driver and set imu sampling rate to 200 Hz for this board
+rc					4098d50ff9e48935bcf38adcb5658e514acc4e15 pmw3901 driver: remove integrator and publish data at sampling rate (about 10ms)
+					e33da0a821b54be098eae0f794adde328060733f fw_att_control set default yaw rate max and update parameter descriptions
+rcy	hcf				868bc010878adaf5a124fc0c9d6cef4045fa06ac EKF: Relax minimum required range finder measurement rate
+rc					2a5c7efd8df5a93234d738ffb410dbbd9558b2f6 Mavlink: Use filtered update rate for HIGH_LATENCY2 stream instead of main loop delay
+rc					e01763a7c7d0b47c11f7b9124efdf15c1456bbc9 Set the HIGH_LATENCY2 stream to a constant rate
+rcy	hcf				00f6ef1d2f35043d84ba3d070efe7b463c0a4821 Style fix and iridium signal check rate fix
+					ab8527cc8faf125e1e6878ae915be4cc8eb8373c FlightTaskManualStabilized: limit manual yaw rate in flighttask
+					64b97cb18e0dd420eaca0a6a9b6f52657696f33f fw_att_control: in acro use thrust from rate setpoint topic
+					74730273c17ad84a56459b6e11d0795e5a268dde fw_att_control move angular rate limits to body angular rates (#9023)
+					041886a28957c17505b19367eb8703444123a4c3 attitude_fw: move angular rate limits to body angular rates (#404)
+					f346b00ee0b975fcea9d1d826f523192f498c0e8 mc_att_control rate controller: use a butterworth lowpass filter on the D-term
+					83133b1bcae2eae59383dad7d1b6070657e9d279 This commit fixes the way baud rate is generated from the program argument in the FTPS client and agent.
+					f866698fb26defbe0262106f2a7260f89b7276f0 ekf2: Update parameter description for max optical flow rate
+rc	?				d53c5319791945130f8cfedee9337f29853c5445 mpu9250 wrapper: set autopublish rate
+					2bea09a997d953c7ee61ae39dd8363c4bca0d992 rate controller status include rates
+					98441ac1004c937eb9c065f710b004ba9e8378e5 Log rate controller integrators (FW + MC)
+					5a189f3c4a8b2f599c10d9277f5d11e77c01b367 vmount mavlink input: rate-limit vehicle_command topic
+					48edaa7ef63c360d3d94f7e655756f9da999ade2 vmount: remove output rate-limiting
+					dac2a93ea2edfb4998121b9610f27523794e265a logger: add sensor_combined at full rate to high rate profile
+					b21af471ac9b1505871e76ece6368e17351ce892 QuadChute monitor tecs height rate (#8395)
+					be6079bc52fac0b3423094f7f377325662f55201 logger: add high rate & debug profiles
+					e58766c3942ae773d1d2f6d78855eae43be30fd0 MC pos controller: log exceptions but rate-limit them
+					7a3a9a75d50d11f527cddc69a4fe160810d1ce78 Add command line options to PX4Flow app for I2C address and sampling rate
+					560e9e88dc0977bbecd53386fa5572347d5fd43e Apply slew rate to reverse thrust
+rc	?				73d23742ea5c297f262c0e03caec61ee482977b1 vmount: rate-limit the update of the outputs
+rc					c1f5feac831776b5721c0f400782faf7b784c848 MAVLink: Queue transponder reports and send them at full data rate
+rcy	hcf				3c42c8f7fab5c9d7fbeaec52071f8130da081f90 mpu9520:Use maximum clock rate
+rc					c84611f0f5a76f459f46999a93a1c405e35c8b3e MAVLink: Fix rate handling for camera trigger messages
+					a89980f440a16352adf0b0d90f005b401e8112b0 MavlinkParametersManager: update sending rate
+					0a1fbef8c8980856967ac42a065df3e40abcf966 pwm:ensure that a rate of 0 will invoke the ioctl
+rcy	hcf				ade6336fd0ee86a0357bc10057266245ffe575b1 ist8310: lower sample rate
+					a5cdff06d5630a769e9f6b1306ca16fc10f0857c param: implement rate-limited autosave
+					d21c44704d691bb47efe38b752f34941f3cd3001 Propgate any errors in setting the rate up.
+					2d5588ae02560aae029844410212aab38785d671 simplify oneshot mode selection; use zero PWM rate as indicator
+rcy	hcf				f7e4d8453db823a69f81e75e518042dd3b4012ff Logger: Drop position_setpoint_triplet to 5 Hz since its not required at such a high rate in analysis
+rcy hcf				4811ab6b137784a84c67c64bffa4917a7b7f0702 logger: reduce rate of some topics
+					b2d47adf56cc2157659945afd241aeffdec320b3 jmavsim_run.sh: add -r option to set the update rate
+					3e88b2f2b102b9ae22539422e03396e8ab112b04 Rate-limit navigator update rate
+					f300877db40bc0ee2848ed203a6e505f2c58ebee yaw controller: computed desired yaw rate based on coordinated turn constraint
+rcy	hcf				aaa24b0cc877e60bdb421574f9357f664dc786b7 Reduce attitude rate but add Quaternion
+rcy	hcf				9e80a6c9d68661df1246daefcef44e895161cef3 sensors: rc filter no unstable cutoff, better initialisation, reset filter on change, constrain output Filter gets unstable if cutoff is above sample rate/2. Filter initial frequencies do not matter a lot because they get replaced by parameters anyways. Filter delay values get reset to 0 when the filter is reconfigured otherwise there can be some weird spikes in the output. Filter output gets constrained to the range again because of possible overshoot.
+rc					d991285406fad2d4b39ecdbd2337b0fb773ed16a sensors: rc filter: added sample rate of 33.3Hz and lowpass cutoff 5Hz hardcoded for testing
+rc					967197adeea1a9f051c06a851ed64130a079cbb9 update sitl_gazebo to used flow with limited ouput rate
+rc	?				64449883928182ca5abb516b91cf9818bd74bb18 MAVLink app: Send messages on average at a more correct rate and send on first call
+rcy	hcf				42101671f4a7509c238ed584ea22d1ad8004def1 Drop rate gains for H480
+					10c6ae77aeeffd5f1ef45e96c86d8ed6dc9f1e4a Attitude fw yaw: Initialize yaw rate properly
+					8e8336a83f3ceda0e27c3980c2ec2a0f112a7f7b gps drivers submodule: updated after removing unnecessary baud rate
+					0acdf32ed571fd5c4dbfb09dfae8ba7941620a4c gps driver: removed unnecessary baud rate
+rcy	hcf				bf9a1c5a1881f3992269f8e9b271736b68445d0c Removing alternative io timer rate for CF2
+					318c970477394d61445276b818a3867cf72e4cc6 mavlink ulog streaming: add rate limiting
+rc					71e87cf2876553b769aea9779389f3a2e45a7e21 Set maximum publishing rate to match MPU6000
+rcy	hcf				fde165b4f1679a6f65fffdf7f55028f99fb4edff Fix 2000dps gyro rate setbits
+					cf8f48486898835dcbb55dcbe8c54a4427349022 mixer class: updated comments on slew rate limit method
+					c2a511d81d2356191ee812e8b4d192d397a3295c multirotor mixer slew rate limiting: naming and fixes
+					8b889caa3323b1b4809f1bce052bbfe9e7ce5d1f slew rate limiting: implemented for fmu
+					2607769470450074cddd73c8c516874c20bfe1df slew rate limiting: moved logic to multirotor mixer
+					66ddea01d144aff29a6f815c9cedeb29947b7289 implemented slew-rate
+rcy	hcf				cf5338df02c52af1bbdf4f4fae9b3326f0ee6d45 accelsim: lower publisher rate to 250Hz
+					e42ff72d6a2a24c3fde35a7096d02fbe4a47f948 Standard VTOL configs: Limit yaw rate
+					3b58caa32a15f371dff1c11b2a0dc10b332ea75a Updated motor RAMP timing to match slew rate limiter
+					d5c96ec66ac7f27d446496cb3b3b1781fa189218 LPE rate and stddev changes for mocap/vision. (#5467)
+					3163cf90c9916855e56a64a1692694443f85f2b9 FW: simplified flap/flaperon logic and always move them at the same rate (don't jump)
+rc					a1b710025b9c686b4ce4ccb6e96889239fe8f122 Improve new logger update rate (#5073)
+					71d150f6ec0789d36d4f7af85a2e44c225846d51 MAVLink app: Fix rate handling
+					5de19500c2e0cb0acb20ab36ce26372862f10de9 TAP-v1 set Console Baud Rate to 57600
+					c4e77cf41113ae775b87078104b239d88bd28603 logger: fix '-r 0' parameter: should be unlimited rate instead of 1Hz
+					998579befc22d15c22c9c5b78ff612dd4de06f56 mc pos control: zero yaw setpoint move rate in attitude setpoint topic
+					2f113a4ce3138d3ec9b595636aa0656b47a31ebf MAVLink: Allow data rate updates
+rc					3ef6ee056f5fbae679417897e9da3d32c17a48b7 Sync rate control gains
+					afa3429bdbcf09c4104461bc789fc4a851d6e453 210qc: Fix sample rate
+					aa355d86d08a2198273f09ef21aff442ef68aa9c 200qx: Fix sample rate
+rcy	hcf				2c6a8c0ce619a7ba57fb55a474e7f6ac35b682ef MS5611: Drop readout rate to 25 Hz to alleviate self-heating.
+					f1b7e7714e39626d2ddc1aed5d25d925558ef71f EKF: Make average update rate of EKF closer to target
+					58a7db51c373416bab894e8f55582c616c4d41a0 gps: add RTCM message rate to the 'gps status' command
+					630146686ed73f64545f16ee48ed32ad8181df19 Comment out line which checks for attempt to set sampling rate beyond that supported by device.
+					fde635ef5ab2fbf45a576719406095481a3b5d43 px4iofirmware: fixed display of sbus rate in px4io status
+					c5f5b9f53c0c65cca0b0ca5c4069f7d0159b189f drv_pwm_output: added IOCTL for SBUS rate
+					30ce7fdd48fed3143a71a8294b44483f275493e0 px4io: display SBUS rate in px4io status
+					6290e621d4c60136cea16f902247095fbae60ea6 px4io: added control for setting SBUS rate
+					f19761d278bc725289615983564169f4801e74e1 px4iofirmware: support setting the SBUS output frame rate
+					58122ed33d0534626c13c063c2088317c0fc84d9 sbus: added support for changing SBUS output rate
+					7acd5fda22b05797d1d9f985b78807ea96c6f075 ekf2: send flow sensor yaw rate data
+rc	?				4bdfb8a10775ab2f8feeade1c622de259234052c Drop Wifi rate to 20K
+rc	?				13967975c1de26c37a9dbc4db388eb02edfe64ad Wifi link: Drop rate further to relieve pressure on ESP8266
+rc	?				d3f5cf5d936efce10907e858fe83de4fe3970fee MAVLink app via Wifi: Drop max data rate
+					eb41d25ff6972d1a443d9c63bc369313f2dac746 reduces update rate of progress display, stores message time (not TIME message) as floating point seconds, automatically extracts TIME message, updates usage samples accordingly
+					76a9ee261890416e8ad8ff2a60656ce527a1a491 MAVLink app: Limit to max updaate rate
+rc	?				ff338d8920a40ffd8aff111eb50951d124598379 set mavlink data rate for snapdragon
+rcy	hcf				1b7115dec9d91d4b9868b640cb2fc389b3f23b5f increased airspeed fusion rate to 12.5Hz
+					122dd9c53125242c84d1946c15726df481b8f626 EKF: Add source file for optical flow LOS rate fusion
+					68e45057a05d24e87e3fcd7aea2b571be0a1434f sdlog: compute logging rate correctly
+					5aaf74bbe6a7eb841f7dded9da93df762fb92f04 MC pos control: Allow higher yaw rate by default
+					44e885f3c3d48c67379a7561ae5095d1e055a91d Att control: Allow higher yaw rate by default
+					c6a30d74c1a8750cc099fb4597bce428f8fec609 Bump VFR HUD  rate for OSD
+					1d0c968a888b7395a8dc67f2c59d56187d2bf4fe Widen rate gains
+					4123da4963904f6db8ce5132c346a5460a2c6a0f SF10a: Run driver at the default max rate
+					9eb46fa7a06126416fb3e0b05c414e078415116c Conversion rate comment added
+					bf03b8cb18ff6404911ea172e673428efac329b9 Yaw rate limit: use a lower limit for less twitching
+					e17f3441190bbd3b8437e000550feb13d6edc929 MAVLink: Enable 4 streams and fix OSD rate configuration
+					19b81b9ab26e4576450d6cb946ee06a127b2c6ce Commander: Rate-limit preflight check
+					a4018bcbc1d554a2f06a1a0bc2a9872e40bf3f11 Update to higher jMAVSim update rate
+					989b65912bcf7bde040d12aea6c7e1e0058f7f73 jMAVSim: Drop sim rate to 400 Hz
+rcy	hcf				76c479170a3fdb61e21b302f20e0d3f2fa08e01e add transition back throttle value and angular rate
+rcy	hcf				719881b4a473d8be66a00be17bfc740637891a08 EKF: Run vehicle status updates at full rate
+rcy	hcf				17653113d53c7c70451daca4efa62ff102c6b39a FW att control: Run all topics at full rate
+					4b56587188d9b990809dd15f045e8103038adb17 Gyrosim: fix rate and device id, also output of info command
+					e41c3cf87676e64a1cadb42840998791a3bd1981 Missing Close es and poll rate reset
+rcy	hcf				6200cf6d869d1eb452519834f24557cfa346f4b3 reduce gyro update rate to 400 Hz
+					8a6e9d17bad1348682c8e6f727c4261f4530df07 MAVLink: Do a better job at receive rate limiting
+					d4a19163bb49b20612643b4fd531cf10e0496892 Added switching from attitude control generated rate setpoints to manual rate setpoints when in rattitude mode
+					c4a82d78c880b9de3800b3c6983e827890f9ec8a Added commander support for rattitude mode.  Still need to incorporate attitude/rate switching in multicopter control
+					4d7cc41921101cf9ee91793cf12e21c3d94a7c19 EKF: Retain minimum Kalman update rate
+rc					5c52efece4b988ca8f13fc12c3975e32705f927a Sensors app: Rate limit new sensor discovery
+					d5e152f2cddaab6ace64f656baef7569c9b7c44d Attitude estimator Q: Add output filter for rate outputs to bring noise level into manageable range
+rcy	hcf				dce31a76a82ceffd42c510b1ae2487ae80d05110 EKF: Set correct interval / update rate
+rc					4143c9402972c28aba55a3c0376fb8d4dabf0d45 sensors app: Re-introduce sensor rate limiting
+rc					bf9bbfa27fc5f2b5ea909600d7dc983998f2ec4d Handle turn pitch rate compensation in pitch rate controller instead of pitch controller.  Also set inverted flag to true if rolled more than 90 degrees
+rcy	hcf				c826451ac187321368711106d20c98759ccaa973 MAVLink app: Do not rate-limit trigger messages
+					8b7f1cf560220f649001d2927e4831dd9504be31 MC multi attitude control: Limit yaw rate to avoid mixer saturation.
+					ebb061764a23d075dfd22a7d6fc3a8e03f048ae9 MC attitude control: Limit yaw rate further to avoid mixer saturation in the first place
+					e0870d09cd98a5329f45c279142e14abd20018e6 TBS disco config: Yaw rate looking good
+					fbc1b78b3819beeec9f5327ef40fc3de1d599808 Attitude control: Enforce rate limits by default to prevent jittery control outputs / steps
+					0d9d5d1fa5d443cb397a14751105213304b173ba TECS: Limit rate demands
+rcy	hcf				482641e40313eb1a7e810021c72b0610d3b7882c MAVLink: Crank onboard attitude rate up to 250 Hz
+					fd63ba7b898b95469b62f6f3f42f12e042aae619 FW pos control: Widen acceptance range for yaw rate to re-engage heading hold
+rc	?				f0e9817f2b2cd2eef15af1c4b6c00cc94fd5d39e ROMFS: Adjust onboard data rate
+					5b354b96310fb5fed71bfa944db00052c3ad5bfa PWM driver: Fix _IOC to _PX4_IOC for getting servo rate
+					28d3729acd202d8bac131ac98e59534e8d08f25a Backport of Fixes mavlink_if0: invalid data rate '(null)' bug
+rc	?				dabcf63c506f5ead7978d49df039e4e193cc3a15 mavlink FTP: Drop rate to realistic value
+					542dc9f65d05291b8b9661374044f8c51a4dd209 added default rate I gain for multicopters. added default gains for FireFly6 in mc mode (from Simon Wilks)
+					0ebf626632675dc5d54d08164be04d37ec1d74d2 MAVLink app: Allow higher max data rate
+					77771b2bbf2ed784fee48d535bbac2e8ea717c49 fix comment on MC att controller rate limits
+					7f418445f2a2108b1026a31b3763da5e6d960fe1 add new parameters for roll and pitch angular rate limits
+rcy	hcf				93eff2bb956e920b99b2058550fdbc3f23ec6155 px4io firmware: Allow actuator update rates down to 25Hz. This allows to set the same update rate on PX4IO as on many commercial RC systems (e.g. Spektrum, which works at 45Hz servo update rate).
+					6ccfc222d38ef0f409e7d9d237aeb4c6e80bfeb3 fix comment on MC att controller rate limits
+					b356508f6b05504af745dd1ee2ba2ab00816057d add new parameters for roll and pitch angular rate limits
+rcy	hcf				a184aebf0f27a77d528921d66965ab1304c4fca0 mavlink: Crank up param transmission rate
+					e191958ce656dbc31bc0029b9d0e1ed2fd4db72c Made aux output pwm rate, min, max, disarmed and failsafe values configurable the same way as for the main outputs
+rcy	hcf				7bf6c3bae867e3ed350043a89e7e1ad4b87b9236 Increased update rate to get rid of glitches in servo movements
+rc					a77420ede84b293e41855ddc7b23b647cc64da96 corrected rate offset calculation such that units match
+					3a2256dfe72b519fb0ee5225fa179d4a46a3cb76 Set up ACTUATOR_CONTROL_TARGET message and stream rate correctly
+					004118f929a03e0d42e363dd2b74330ccf6b82fe LandDetector: Change rotation rate in rads/s to deg/s (more similar to mpc params)
+rc					a4961092af2d0e09a3dbe04e8c2f0a362476d21d mpu6000: check for default sample rate
+					dedba4307de2b99ee3a9fd2d6c31c031bd4524ed lsm303d: check for default sample rate
+					90b29efebf846da195af53492ee2ee0c50b6d7fa l3gd20: check for default sample rate
+					b795705640c6a14ba359e381c935351f9377aea9 improve efficiency of non-uniform rate LPFs
+					ea57dec24b14d94ec82f04b67bc31775b1f4a9cf revert to original ms5611 temperature sample rate
+					fa8ca2fc107ccd0a8e74dc3798bc27f8422f0a56 set correct number of PWM outputs and PWM Rate for caipirinha VTOL
+					c7f7de352d7e0f2921526e33077c6da6a46b404a revert some of the OBC rate changes
+					964fddb387b8e635d2cd13fb2248643791304489 make geofence update rate independent from positon update rate
+					21009e89a4c748d8a61174058bb378c1d6306b8d flight termination mavlink outtput: limit rate
+rcy	hcf				e3cac1999a0b4398e669f90cd28279ec2a0784a7 navigator: geofence with global pos: reduce update rate
+rcy	hcf				808cc60cdad5c085d74e583d967cd86126ba1fca navigator: geofence with global pos: reduce update rate
+rc					9608e7adeb069878d5cedd3ece9edc7f4ac40ce4 flight termination mavlink outtput: limit rate
+					32e32d92bdad3eb4e92e9e53c112fcdcf848c7e6 Add throttle slew rate param
+rcy	mwn				e3bc5571556d043ad5c8c4fcabd1f9b371599397 rc.usb: set RC_CHANNELS_RAW rate to 5Hz
+					2cf688312a83d3c8ad5b813de0643901891886c0 mavlink: show 'rate mult' in 'mavlink status' output
+					ef363edfcd810e3b153609f0a723f53db0cd3885 mavlink: TX/RX rate counters added
+					41003a243793e465a71e9b142e7c9aac132d3923 mavlink: TX/RX rate counters added
+rcy	mwn				28a31708f98eefa4ceb04617f2da3dd7892c99fa Merged estimator fixes and mavlink rate config bits
+rc					194aa491107ca10a65065edef3977c20c02a507c Merged rate config changes
+					44481e3773b7a576b31727c64931216112d953e0 mavlink: sign of climb rate fixed in VFR_HUD message
+rc					3538773b99d4231bf8a64e9c257cfe0299a93021 Initialize rate values
+rcy	hcf				ef6af184aa7858a9124de13c958f02b140b0f712 sdlog2: Logging wind estimate at low rate
+					ffe095646c5984236731c88fabfe2b2b0cedf983 sdlog2: Set logging rate and extended logging based on parameters (overwrites commandline if non-standard)
+					e72a7a7dd78cde4a93d42a53328553e71560fc27 fw att: robustify main loop against non finite numbers and limit error output rate
+					ab5e76e3d9da5a76d6520e166d5370c6bdfc4a53 Fixed printing of bit rate
+					b96669a5314198b88e406fc02940ed2ced291f2b Logging changes, baud rate changes.
+					a66dcbf7e92a1028765f6c5c9a545945ce1a5dc3 mavlink: publish SYS_STATUS at constant rate, don't look at update() result
+					b1e4b34a56bfaaa98adb253195d9751f960d5a94 Logging changes, baud rate changes.
+					de3efc0975f1b84cf556bae11bbebe95609dbcdc mavlink: publish SYS_STATUS at constant rate, don't look at update() result
+					69bc0c8e3998f87358bbf8a5f97f5c31dca43f76 Reduced param rate - as long as we do not have proper QoS (= reducing all rates at once if link becomes lossy) we need to open-loop match the link
+					bf69a7b6473adde22b3220b6e72c0d065c897bc5 mavlink: camera mode rate is now correct
+					952fd1ec6cbc615d6bd9213061dcce0f9cf8c5f0 mavlink: camera mode with rate multiplier
+					76af0970f5220d3a842c4daa353a45ef51df1082 Increased param rate, fixed wrong usage of MAVLink chan.
+					290b07920c94df09415ccc1c44850c57d0750fc3 Fixed missing reset of poll rate after test exit in ultrasound driver
+					2ee8214244efbe09981e71ea194573daa1c2f5bc sdlog2: move some global variables to local scope, set default log rate to 50 Hz
+					141982a3ac21e7a0437f1d7692e4024daf873c21 mavlink: minor refactoring and cleanup, rate limiter class implemented, new messages added
+					18f72f8dd7a3bd4a9af00fe28afd29e0cc65e2e9 mavlink: GPS_GLOBAL_ORIGIN message added, set message rate depending on baudrate
+rc	?				55f5f1815f6a8f2efb969cea2eb061bdc2d9b92a mc_att_control: remove rate limiting to run at 250Hz
+					d933d523eb74ee2290c56afcd11fe8e85c6e702b mc_att_control: att rate integral fix
+					dae5c838422a6250e1a7e4920d59cb8976a16a8c mc_att_control_vector: support for disabled rate controller flag to handle AUTO_READY mode
+					8c518aa23710ba0b9ad0c7ad2c03428ce8ddb290 Useful bits for high-rate logging
+					72aa171ef982deef1519cc21129024a96d9633db mc_att_control_vector: attitude rate D component implemented
+					193692cc0df0c3a4b9905fc18cb04321095b6984 Hex Startup: Set rate of all 8 PWM outputs (6 are not possible because rate can only be changed for channel groups
+					3c6f01bea8a65e2c347d1b893b3fe0d152bff69c tecs: speedrate: use p loop instead of pre calculated speed rate for now
+					ad133f601bd89156c9cef661cddf684c99ca76cd multirotor_att_control: use PID lib for yaw rate control
+					b21b9078e2d719bfd7af9580ac3b9b5957ef1d57 wip, fw attitude ctrl: split into attitude and rate, compiles, untested
+					cb5e5e914351754356c85e61f2394d1cf91db71f fw att control: also transform rate estimate
+					ea0aa49b546476ef9ca9904b32dc507d66f0ab44 pwm info provides more information, some fixes for setting rate/min/max/disarmed
+					378041ad31794109b2673adab8102faf6806bd96 px4io: make "too high rate" warning consistent with real behavor
+					8083efb60c97ffce5be8dcbf3956ab67cc17d729 Use gyro at correct rate
+					3875df2fe07d33d00331efd02394201d684655c7 Workaround to get the HMC5883 default rate right
+					e5f1a7c2c3a67648829ec0dff5bf290dddc25847 Better transparency in IO mode display, fixes to commander arming, minimum publishing rate for arming
+					63af0a80ee19a73a94a3b46bbddffe1b80610a3c multirotor_att_control: run rate controller only if vehicle_control_mode flag set, codestyle fixed
+rcy	hcf				083cc60acb8b602864d0727e09218eeeca5eb980 Increased logging to 200 Hz in F330 startup for v2, allowed to set up to 333 Hz update rate in IO driver for v2 link
+rcy	hcf				a2f923b9a3bf403e3a9fcee39d87c7aecc28559d Increased MPU6K poll and sampling rate to 1 KHz
+rc					c2ee4437e0fd362ed8d73203394d34802e9eb48d Rate limit sensors, as the in-sensor lowpass allows us to operate at 200-250 Hz
+					36cca7a31b428408eb686df592f092ba5fc24006 Added rate limit in sensors app. Just pending accel filters now
+					0ccf50bca367d39f75a7a4f76f98dec7352ef3d5 ubx: SVINFO parsing optimized and message rate increased, CPU consumption reduced in 6 times, ~0.3% now.
+					dec1fdbde0c7bb6f3eacae97ab9656f77294cbfc Cleanup: remove useless angular rates from attitude rate controller
+					3bfc4ed5174c60de7eb98efbbf3c7729fcaa231e Att rate PID fix
+					ece93ab62834be7f46501b1d31733cf58b5b1188 Added integral reset for rate controller
+					c1049483a82857bebb012607578add9492446321 Added integral reset for rate controller
+					6f108e18d21b61ea6a3bf137f01023c594085494 Just include the rate controls for now
+					2b9fa731efd08a01effd87a636ae8e53994944f7 Use the pid library in the rate controller and change de implementation of the D part
+rcy	hcf				496127ca459c603e5de3f8bc83c6113bcf9cbead mpu6000 driver support for setting rate
+					b614d2f1eb3b3ddd26fa22a1a0761a5aef52c1a8 adlog2: added options cleanup, updates rate limit added
+					3ec536a876a66f4e56549957e81ed4547c92a0c3 Improved GPS update rate calculation
+					27a25b5e172c972e4f9f31c2a30114498346bb08 Improved update rate for velocity estimate, not yet where we want it to be
+					3466006735123bfd27c94538d98af5b79f47d5a0 GPS velocity update rate validation for u-blox, WIP
+					1d327c42a6f34f8545940cd8630586726e4d3ae6 Mag sample rate was not actually changed by an ioctl
+					60eca61e41bbae8fdcb6f92ecdc130a49e49fd29 HOTFIX: Adjust the FMU update rate adaption logic to avoid constant debug message spew when not in a PWM mode.
+					26d45d5e3484ec616238b34be3fa9739d8e30efb Silence MS5611 driver, the perf command still captures the error count / rate. Unfortunately this is necessary as general users are concerned about something that is (at a reasonable rate) not actual safety critical.
+					7e4d6133aed20d2724917dc570e4926b18df2b84 Make communication rate between IO and FMU configurable
+					7011fe563b583d7940247a7a01265b7f8675fee8 Move PWM rate configuration, etc. into a separate utility and out of the individual drivers.
+					6cf0758b24de1e0e28e1bb65fa33a0b49b1601b9 Changes for multi-rate PWM output; default and alternate rates. ioctl protocol, PX4IO support.
+					cb0fd834ae15c45cf6993f8c9eea9c99b2b153dd Minor polishing, fixed rate and last measurement indication
+rcy	mwn				5fe376c7b9bed861768680089bff3c62a030e2b6 Correctness fixes from Tridge.; increased the minimum poll rate to 50Hz, don't set the input RC timestamp unless we get data.
+					28ef7aa1bea97593637537c832b07459a2520b86 Refactored RPos. Increased global pos output rate for debugging.
+rcy	mwn				3bb145f584298de3ac636be38be25d4b1235a8be Enabled and tested ring buffer, logging at full 250 Hz sensor rate
+rc					0134186420273170c14b80b8114ccd2474da1792 fixup rate
+					61d7e1d28552ddd7652b1d1b888c51a2eae78967 Reverted changes to multirotor rate controller, changing to a discrete derivative does not help
+					f81d00594c156c51ab976d3b6d101915377d7afa Made PX4IO FMU timeout based on IOs HRT, updating mixers now on every FMU update and not at fixed rate, this is WIP and currently does not support mixing with RC-only
+					03076a72ca75917cf62d7889c6c6d0de36866b04 Added required additional fields: If system is ok to launch (required for LED indicator), if system is ok to override fully by RC (required for multirotors which should not support this), desired PWM output rate in Hz (again required for some multirotors).
+					13000a71212076a515043fb7ca89ce77cf6c36b4 Yaw rate sanity checking for controller
+					f0e39397fe5d9b301ad887ad430736397f6403fd fw control: work in progress, heading rate control loop
+					3f240a70baac2435cbd543e305ea0c57cb65e7a4 mavlink cleanup, drop rate estimation is finally correct
+					ab447ac713b010c090d6e2de85fa5d0d0af5cbbe [work in progess]roll attitude and roll rate loop works
+					42c61271ea73be29a21110980764d1a68f8ee530 remove bogus dt from att rate
+					b50bc7798ac463de3e0c3147df46a3f7227df8c3 Wip on inner rate loop
+					4dbf7befe369ba00a73945a0193f0a061c271dc3 Disable rate control, disable offset estimation
+					bd3f3b10317f58d20f635f4a3e6aee8fca8d9d2b Sensor rate and throttle inversion fixes
+					dd50c88f073926a550f0f1f5b08f931116dd4f8f Fixed GPS lost issue, fixed accel scale initialization, fixed code style in rate controller
+					4fea0a3fc15346efc366aadf1d80697664b6f3f0 This commit changes the inner loop control structures for fixed wing attitude control.  Nested rate and angle loops are used with limits on both the rate setpoint
+					2a06b66845542b05e3cad3d21099e33adc213227 Fixed inner yaw rate loop
+					733975ed2d7b5906e35dbdebad52ee8fa9d92fd6 fixed Rate controller
+					f3cb2cf8a3b3e002e665c82588e98e502ec3e285 rate controller update
+					beca2b072e45fc91ba6c315919abd26ee6814863 Moved from raw gyro to estimated angular rate from EKF for rate control
+					4933d1dbbd8146ec548168fb9b855009107078ca Only provide update rate mod support to modes supporting 4 PWM channels
+					ec3949bf82dbaa50ea866b65cd0fc4630af18001 Fix a bug where the rate controller is always active
+					abbe998506e4ba49bbf6a9a9ae731b1eec521db6 ardrone in the air again (workaround: rate controller disabled)
+					37163011fc752e40ee712d4c945c8393538f2708 Use the update rate parameter provided and not the default.
+					705172d302b99df7ec3c4172c247c6136adbec88 Untested, but fully implemented attitude and/or inner rate control
+					b0b72b11eb6c112d3fb58385f5681af55dd5605a Reworking control infrastructure for inner rate loop, preparing offboard interface
+					3a18a79bd5661307eb4c32834e2daf84ccf02a07 Better log rate balancing
+rc	?				5dd6cbcb13f4fa3b3490ac8bccb7d1c5cbbc625c Logging rate changes,
+rcy	hcf				1538247a72f37a2f969aa5c41f7a07da4ae31d35 Sensor sending rate fixes
+					eb8e3a2942abbed63bcb3c6336f20bb247f0c6e6 Reduce slightly the rate at which we can be spammed with arming-state change messages.
+					767f253976746a5533dd1a258373368539b4359e Fixed attitude rate limiting
+					dc484c1d21fcb7bc4f4be97853647321e8a147e1 State machine cleanup, introduced variable rates for MAVLink depending on the baud rate
+					7de5004f475fe6234e7d4452bdd95d5f527fea8d Add logic to control CAN bit rate via the .config file
