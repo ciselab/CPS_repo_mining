@@ -24,6 +24,7 @@ rt = Read connected ticket.
 mwn = Magical Waiting Number AP
 hcf = Hard Coded Fine Tuning
 fcr = Fixed Communication Rate
+re = Rounded Numbers
 x = Commit has already been analysed and contained an AP. Will not add again.
 ==============================================
 Project: robonomics_contracts
@@ -776,7 +777,7 @@ cleaned			1, 2, 8
 		91d6de90bdb75c9a73efb6c2acc4c5d3d1314f8b Updated documentation. Cleaned up a bit.
 		24ce518fdac4e25b0e16d63d739d74b2313f9137 Cleaned-up limit pin reporting and comments.
 		8b5f30685108fa6b0e196f50c26a11670f68a1a5 Cleaned up variable spindle output (PWM). Code and config comments.
-rc	hcf	f8dd8fa54d21c17b9aaddb5836b6a8d73d59640d Fix for M7/8/9 modal group checks. Updated AMASS frequency cutoffs and code cleaned.
+rcy	hcf	f8dd8fa54d21c17b9aaddb5836b6a8d73d59640d Fix for M7/8/9 modal group checks. Updated AMASS frequency cutoffs and code cleaned.
 		a87f25773cfe551509f1f82c9bd997ae33c87aa5 Pushed limits active high option. Updated defaults.h. Misc bug fixes. Cleaned up codebase.
 rc		f7429ec79b621d1a4fb4486eac5bd03f6258589e Cleaned up stepper and planner code.
 rc	?	9488cb329c72dffc6d48d0b14d4f6c908fc0400a cleaned up function definitions for serial and print modules and added a comment about the deeply flawed printFloat method
@@ -788,7 +789,7 @@ rc	?	9488cb329c72dffc6d48d0b14d4f6c908fc0400a cleaned up function definitions fo
 		bf4f75d6320404c097290b8122bd2aa9de6f0393 cleaned up formatting gcode.c
 		c8f71cf0332cf592518a3311ab6c3bda49cbac48 cleaned up stepper.c
 rc		db193f4336efee8c4d7e48a55dfd1dae34d66330 cleaned up stepper signal in junctions between short line segments
-rc	hcf	a42c03601d6ee7dc4267fce5293ad53c0500cffa Fixed a number of bugs caused by using abs() on floats and long ints. Added support for selectively inverting bits of the stepping port. Debugged, optimized and cleaned up timing code for the step-pulses.
+rcy	hcf	a42c03601d6ee7dc4267fce5293ad53c0500cffa Fixed a number of bugs caused by using abs() on floats and long ints. Added support for selectively inverting bits of the stepping port. Debugged, optimized and cleaned up timing code for the step-pulses.
 Results: 2/16
 
 reflect			1, 19
@@ -987,7 +988,7 @@ rc		e6ad15b548c65bf64c5fc733329e0ed9ebfc0e27 Tweaks. Seek rate updates when set.
 		49a16cb777e8ca4e5c62665436ac29b7021c0bf9 refactored block buffer into separate module motion_plan pending the addition of the actual look ahead planner
 		f93d0e8132b6eef2e18bf13c0521b7e0cb9d7508 completed support for separate feed-rate for G0-operations
 rc		960444fb9780d150b7a8277e03d0ec51e626b9cf fixed feed rate calculation
-rc	hcf	ed400693b3e58373743e00b0e2f1051817605a1b fixed feed rate calculation
+rcy	hcf	ed400693b3e58373743e00b0e2f1051817605a1b fixed feed rate calculation
 rc	?	d012440518695d44ad410adfe905b12d385b1a20 presumably fixed the feed rate computation
 Results: 1/17
 
@@ -1024,7 +1025,7 @@ clean			7
 rc	.	d0f64d8f65923be9abd16139f185ce2d374ecaba fixed the inches->mm conversion bug and some general cleanup
 		db193f4336efee8c4d7e48a55dfd1dae34d66330 cleaned up stepper signal in junctions between short line segments
 		7e152851cca82ffa59d8d4a9cfa3f0b66f2df92b general clean up after refactoring
-rc	hcf	a42c03601d6ee7dc4267fce5293ad53c0500cffa Fixed a number of bugs caused by using abs() on floats and long ints. Added support for selectively inverting bits of the stepping port. Debugged, optimized and cleaned up timing code for the step-pulses.
+rcy	hcf	a42c03601d6ee7dc4267fce5293ad53c0500cffa Fixed a number of bugs caused by using abs() on floats and long ints. Added support for selectively inverting bits of the stepping port. Debugged, optimized and cleaned up timing code for the step-pulses.
 rc	?	c07a32258950da2de2bb0c809e14ab9d491b67aa fixed buffering of pace changes and general cleaning
 Results: 1/29
 
@@ -1042,7 +1043,7 @@ rc	x	a42c03601d6ee7dc4267fce5293ad53c0500cffa Fixed a number of bugs caused by u
 		2992683c8dd68546ac85bd7d475bff9df1578622 optimized for size and did some housekeeping
 		05bacc436e7ede1a760aac4f064d81e74af8b7c1 optimized for size, shaved 2k
 		0c8004357aa01487687ea804bf79c1b8b906d3db optimized arc code for size and speed
-Results: 1/5
+Results: 0/5 [1/5]
 
 corrected		13
 rc		8c103d09eb5e7be5211c3156558725926253b5a7 Corrected units of default acceleration values
