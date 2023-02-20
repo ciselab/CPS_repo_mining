@@ -1,5 +1,7 @@
-PX4-Autopilot			1003	wip
-			commits		#AP
+PX4-Autopilot			1003 total commits
+
+word		commits		#AP
+------------------------------
 rate		355			50
 size		277			26
 speed		175			7

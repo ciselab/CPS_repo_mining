@@ -2,11 +2,13 @@ Project: PX4-Autopilot
 
 Words			Topics
 size			2
-ensure			2
 rate			3, 10
 speed			7
-unneeded		15
 timeout			18
+unneeded		15
+
+Removed from list after consideration:
+ensure			2
 
 ==============================================================================================================================     
       Topic 1      Topic 2    Topic 3      Topic 4      Topic 5           Topic 6          Topic 7        Topic 8      
