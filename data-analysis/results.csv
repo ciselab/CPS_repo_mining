@@ -9272,7 +9272,7 @@ https://github.com/Hypfer/Valetudo/pull/198",Limit memory allocation,Smith:Gener
 
 "Valetudo
 "," #7
-",,More attempts to prevent Valetudo from going out of memory,General:recreate_objects,memory
+",[a9fa64fcec23639b7367a0d3fa61b84cd07eaebe](https://github.com/Hypfer/Valetudo/commit/a9fa64fcec23639b7367a0d3fa61b84cd07eaebe),More attempts to prevent Valetudo from going out of memory,General:recreate_objects,memory
 
 "Valetudo
 "," #8
