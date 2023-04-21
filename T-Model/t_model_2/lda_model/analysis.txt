@@ -1,19 +1,19 @@
 TOTAL
-Projects				Commits	#AP
-robonomics_contracts	5		0
-dronekit-android		61		2
-cylon					20		0
-android_app_manager		5		0
-turtlebot				19		0
-stofzuigerrobot			2		0
-robonomics-js			-		-
-turtlebot3				27		17
-Valetudo				93		1
-arduino-esp32			101		4
-johnny-five				135		10
-node_ar_drone			51		2
-grbl					217		5
-PX4-Autopilot			1003	122
+Projects			Total Commits	TP	FP	mwn	hcf	fcr	re	Total APs
+robonomics_contracts		5		0	5	-	-	-	-	0
+dronekit-android		60		2	58	-	2	-	-	2
+cylon				20		0	20	-	-	-	-	0
+android_app_manager		5		0	5	-	-	-	-	0
+turtlebot			19		0	19	-	-	-	-	0
+stofzuigerrobot			2		0	2	-	-	-	-	0
+robonomics-js			-		-	-	-	-	-	-	0
+turtlebot3			27		17	10	1	8	12	-	21
+Valetudo			68		1	67	1	-	-	-	1
+arduino-esp32			97		4	93	2	2	-	-	4
+johnny-five			133		10	123	5	4	-	1	10
+node_ar_drone			45		1	44	1	-	-	-	1
+grbl				156		3	153	-	3	-	-	3
+PX4-Autopilot			1003		122	881	39	89	2	-	130
 ==============================================
 Legend
 rc = Read the Code: from this commit the code was read (beside reading the commit message).
@@ -26,6 +26,8 @@ hcf = Hard Coded Fine Tuning
 fcr = Fixed Communication Rate
 re = Rounded Numbers
 x = Commit has already been analysed and contained an AP. Will not add again.
+Table above are non-duplicated in their category.
+Total APs are the total number of antipattern instances found, in one commit there can be multiple antipatterns.
 ==============================================
 Project: robonomics_contracts
 
@@ -522,8 +524,8 @@ rc	.	933043ba776328307d511f8d96ab1e0962b483a5 Fixed scaling factors (#1284)
 rc	.	211a6ace02e540c87d0218809db417e25b877b8e FIX: Correct scaling in gyro to represent default state of device ADD: Clarifications to some things around default values.
 rc	.	6e2cedbff86a840d0bde84b71efa875440839115 FIX: Correct scaling in gyro to represent default state of device ADD: Clarifications to some things around default values.
 rc	.	c7c2a43d8114473697460176d0ce4a6553857efd Light: fix analog scaling
-rc	mwn	add19d16351839f90a2151f2327f5116ed5ad445 Compass: combine scaling and heading calculation; conform to predominate controller pattern.
-rc	hcf	e387f14da5b0b8c83842522a5d4d3443dc3b6d26 Fix esc-dualshock scaling values
+rcy	mwn	add19d16351839f90a2151f2327f5116ed5ad445 Compass: combine scaling and heading calculation; conform to predominate controller pattern.
+rcy	hcf	e387f14da5b0b8c83842522a5d4d3443dc3b6d26 Fix esc-dualshock scaling values
 rc	?	912f7ff070a7fcef8577bf4885315793030b39ed Implement customizable "Boolean Barrier" settings to allow scaling any sensor value directly to a boolean value
 rc		1af3ef3445cf15c6a78bb993d444cb57368a0fa6 Add hard scaling (TODO: make user settable)
 Results: 2/8
@@ -546,7 +548,7 @@ improved		9
 		2a62407ede5fedf4c199d46f130bbe25215237d3 Improved titles in titles.json
 rc		29ef091024396fdd46731dc0f9580e09c122d84f v0.6.5 Improved multi-board support (initial API implementation)
 		2a1cbca8e3fcdfd57c28dd6980d4d45ffa1d1d49 Fixes #130. Improved Multi-board support
-rc	mwn	caf95b073569cdc3dc541db735d05bea8771e783 Complete LCD rewrite, supports 4 and 8 bit writing modes; Improved 'sleep'; drops 'tobinary' dep. Closes #38
+rcy	mwn	caf95b073569cdc3dc541db735d05bea8771e783 Complete LCD rewrite, supports 4 and 8 bit writing modes; Improved 'sleep'; drops 'tobinary' dep. Closes #38
 		1ba41ba1338697797bab4a53fecdf8f1b8a56799 Improved Radar app
 		e86fe2aecfd1145234f2b9610fa16e6b77382801 Improved logging messages from primary Board constructor
 		959e99e0b50fe4bd14bd9981cfacd9684f5f82d3 Improved handling of serial detection errors
@@ -573,7 +575,7 @@ Results: 0/11
 sensitivity		15
 rc	?	0a157fe31ef3d320b9f0ec7cc87a2782ad84d1bc use full-resolution sensitivity for every range
 rc	?	0e7e9dd15be9a0f60de42250bd23c0c87e6e95bf use full-resolution sensitivity for every range
-rc	re	3a5e2616f0f05b3e802dd41070110ced236e10de Accelerometer: ADXL345 use typical sensitivity (#1300)
+rcy	re	3a5e2616f0f05b3e802dd41070110ced236e10de Accelerometer: ADXL345 use typical sensitivity (#1300)
 rc		8e3dc90c031c152571f3ff8fc707780cd70d0746 Keypad: invert sensitivity, higher s -> more sensitive.
 rc		98d88873d57afc8adb9de38fdbddcb8611a6ddc8 Soft-reset board to support new sensitivity setting.
 		c17b5835b3478ef54e2db7e64c8132bba51c2cac Soft-reset board to support new sensitivity setting.
@@ -599,7 +601,7 @@ rc		.	398e6b67fab6658c2b0222158cd40a8c976732b9 Altimeter: add BMP280 fractional 
 rc			010d49635864e784d8f341b4d01c3eed9fe1a56a Offset was being applied twice when to() was called with a time
 			68cde2889e3eeab5e5f2d4ad2e9bb25a9bd9d574 Servo values were being inverted twice when to was called with a time
 			841d69bc243550c9cb00ca7c0aaf138e54e2629d ci: run test and coverage check at same time
-rc		mwn	291a1dbf29870fd1d590725f420d169b1a77806f Multi: implement standby time for BME280 start up. Fixes gh-1274
+rcy		mwn	291a1dbf29870fd1d590725f420d169b1a77806f Multi: implement standby time for BME280 start up. Fixes gh-1274
 			44ed81aeb225d5efa196965439773db3c418091f Altimeter: adds generic Board.Controller call enforcement test
 rc			ace218d63363893726c3876e4f7d5ad9ba69efde Altimeter: enforced resolution for meters and feet values
 			2de3c7c91aa25a93320eea608d9742608afce9db Altimeter: 100% coverage
@@ -615,14 +617,14 @@ rc			ee2f739d7596d9df11dbed0f865e1a6085c4ac02 IMU/Altimeter: Finesse elevations 
 			9ba3e907608ef65f4aa6ed44f8bb27e6320ecb9b Altimeter: improved elevation requirement warning message
 			52376582f5df5019aada7cd5880f75387398daa6 Adding altimeter support
 			66a7d80b5ed343de6b9e9bedf35c185ba1109ace Adding altimeter support
-rc, rt	hcf	7941d817e4bfa7914940e7a66ebc28acbac74a94 Restrict pingRead requests to 65ms periods (+ request and response time). Fixes gh-896
+rcy	 rt	hcf	7941d817e4bfa7914940e7a66ebc28acbac74a94 Restrict pingRead requests to 65ms periods (+ request and response time). Fixes gh-896
 			85fa2c06397cccdd33d6873bdaea9a49009f965a Update nanotimer and piezo tests to stop failing on iojs. Fixes gh-890
 			84ede7b3aeada1d7425a6e505ff86eec243843a3 Fix bug in node 0.12.x where clearTimeout expects argument to have an id property.
 			489f19ec28db75c1f27de1328f8a92163ec5eadf Merge pull request #733 from Resseguie/servo-time
 			8c7bc21eb88fa01393c61709bd87616acce9f852 support time/rate in min/max/center
 rc			d4b402b11ccc16a74d09d946d137678456935506 Getting DS18B20 to work with multiple sensors at the same time
 			4587ed9146e1ff70640011b7f81041e6e03e8176 Fix Servo.to(degrees, time, rate) so that if you enter in the same value for degree it returns this
-rc		mwn	e5ac3f30493bf02f883681b65f5f12042993b7e3 ten second timeout
+rcy		mwn	e5ac3f30493bf02f883681b65f5f12042993b7e3 ten second timeout
 			b5cbf4739af5b41c6504db00b9ac5b9cd3585536 Remove the race condition with clearing the timers.  Because stopping the tone was based on a timeout.  Two consecutive notes could cause the first timer to clear, but then the callback would clear the next (wrong) timer.
 			8cef9b3ba79050a91cb4b7f1dc5e2a39b257e62e Make sure that existing timers get cleared when new tones are played
 			e065515a36a35dd34a6e43ddb0761a2033f318af reworking the test so that the nanotimer can fire and we can test that tones get destroyed
@@ -645,13 +647,13 @@ rc			aa6da741bcd0f5c72b16f52881309404a5e4933f Clearing potential hold timeout co
 Results: 3/56
 
 speed			20
-rc	mwn	5f94bb571036f19461e6cb747ff962f9df54698d ESC: Removes speed because there is no safe reason to continue supporting it.
+rcy	mwn	5f94bb571036f19461e6cb747ff962f9df54698d ESC: Removes speed because there is no safe reason to continue supporting it.
 rc		f7f1eabb1a4978e020bbb86972f2dad8c9ea8c9f Remove superfluous speed param
 rc		fc388cc39b274f98459f83df6a32dda7f9148f86 ESC: Bidirectional speed controller (Forward/Reverse) support. Fixes gh-530
 		56c21c615497873fec71324339cf1ad30e639565 added comment mentioning optional speed parameter in Motor.start
 		5b49e811afa86ddf9a61221cd6c57427154c9e7b Revert "added comment for Motor.start to mention optional speed argument"
 		fe02bde772b4e6614f6bbb7b810892199de3ac4d added comment for Motor.start to mention optional speed argument
-rc	hcf	d558abba2450047654b0560335f33e5ce7094ec4 Speed up ESC writes
+rcy	hcf	d558abba2450047654b0560335f33e5ce7094ec4 Speed up ESC writes
 rc		bd44207cc5a58954b92c56b93533a7996f870052 ESC.prototype.speed(0-100%): additional fixes and tests
 		60cc0dd419200a6941cd7400e1e262c79e76f19f Merge branch 'master' of https://github.com/rwaldron/johnny-five into right-rpm-speed
 		23546d0556bd9268974568428f58ce9518e37d0e right rpm to speed to rpm conversions
@@ -663,7 +665,7 @@ rc		76d6da1ce61ce7a8d49fa2c74ddfd24403ad369f Update motor.speed
 		3fe5e1dbfed744c52697e8dec121a929beeefbc0 Default to max speed when leaving out the speed on servo.cw or servo.ccw
 rc	?	d1d9dc8b7b4b5eb5330ade4b2423713ac6f6bbec Allow custom Ping pulse loop speed.
 		b73b752644942a4974254f38e22d97ea5e317bb2 Note the default speed of Led.prototype.strobe() in readme example
-rc	hcf	00d8d93a60268e6575dfd09b6f50e26f418c229f Reduce the default speed of Led.prototype.strobe()
+rcy	hcf	00d8d93a60268e6575dfd09b6f50e26f418c229f Reduce the default speed of Led.prototype.strobe()
 		06c09b47820d1ac5579f715d36107c25c3e8be3b Servo: switch to use Board.Pin.is__(); Document continuous speeds
 Results: 3/20
 
@@ -695,7 +697,7 @@ Results: 0/2
 
 timeout			3, 4, 18, 20
 		3cd3037551c6f26b9b6f61a9a2e94e85f54ebae5 Increased delay in test to trigger timeout.
-rc	mwn	9495035c4345448e4ae182fde4439ca6d48efcc5 Increased default timeout to 500 ms.
+rcy	mwn	9495035c4345448e4ae182fde4439ca6d48efcc5 Increased default timeout to 500 ms.
 		538e61fc94f464ae920b551ac489bb46abe7df0b Handle navdata re-requesting after timeout
 rc	.	c8196ef3fb7628a16a555e1267b02625fc700240 TcpVideoStream timeout handling
 Results: 1/4
@@ -740,7 +742,7 @@ Results: 0/2
 
 increased		7, 8
 		3cd3037551c6f26b9b6f61a9a2e94e85f54ebae5 Increased delay in test to trigger timeout.
-rc	mwn	9495035c4345448e4ae182fde4439ca6d48efcc5 Increased default timeout to 500 ms.
+rcy	mwn	9495035c4345448e4ae182fde4439ca6d48efcc5 Increased default timeout to 500 ms.
 Results: 1/2
 
 broken			12, 20
