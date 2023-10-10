@@ -1,5 +1,5 @@
 pydriller==1.15.5
-gitpython==3.1.18
+gitpython==3.1.37
 attrs==20.2.0
 coverage==5.3
 flake8==3.8.3
